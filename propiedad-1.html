@@ -1,25 +1,27 @@
 <!DOCTYPE html>
-
 <html lang="es">
 <head>
 
   <meta charset="UTF-8">
 
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
-
->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>
-    Habitación en Arriendo | Sotofrau Propiedades
+    Habitación en Arriendo en Valparaíso | Sotofrau Propiedades
   </title>
 
-<meta
-name="description"
-content="Habitación en arriendo en Valparaíso, sector Yungay. Gestionada por Sotofrau Propiedades."
+  <meta
+    name="description"
+    content="Habitación amoblada en arriendo en Valparaíso, sector Yungay. Sotofrau Propiedades."
+  >
 
->
+  <meta
+    name="theme-color"
+    content="#0d2f49"
+  >
 
   <style>
 
@@ -42,13 +44,13 @@ content="Habitación en arriendo en Valparaíso, sector Yungay. Gestionada por S
       --verde: #238b57;
       --rojo: #b44a48;
 
-      --radio: 16px;
-
       --sombra:
         0 12px 35px rgba(13,47,73,.08);
 
+      --radio: 16px;
       --ancho: 1180px;
     }
+
 
     * {
       box-sizing: border-box;
@@ -56,9 +58,11 @@ content="Habitación en arriendo en Valparaíso, sector Yungay. Gestionada por S
       padding: 0;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
+
 
     body {
       font-family:
@@ -71,28 +75,38 @@ content="Habitación en arriendo en Valparaíso, sector Yungay. Gestionada por S
 
       color: var(--gris-700);
 
-      background:
-        var(--gris-50);
+      background: var(--gris-50);
 
       line-height: 1.6;
     }
+
+
+    img {
+      max-width: 100%;
+    }
+
 
     a {
       text-decoration: none;
       color: inherit;
     }
 
-    img {
-      display: block;
-      width: 100%;
+
+    button {
+      font: inherit;
     }
+
 
     .container {
       width: min(var(--ancho), 92%);
       margin: auto;
     }
 
-    /* HEADER */
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
 
     header {
       position: sticky;
@@ -109,6 +123,7 @@ content="Habitación en arriendo en Valparaíso, sector Yungay. Gestionada por S
         1px solid rgba(13,47,73,.08);
     }
 
+
     .nav {
       min-height: 78px;
 
@@ -118,6 +133,7 @@ content="Habitación en arriendo en Valparaíso, sector Yungay. Gestionada por S
 
       gap: 30px;
     }
+
 
     .logo {
       display: inline-flex;
@@ -129,175 +145,464 @@ content="Habitación en arriendo en Valparaíso, sector Yungay. Gestionada por S
       font-weight: 800;
 
       letter-spacing: -.5px;
+
+      white-space: nowrap;
     }
+
 
     .logo span {
       color: var(--naranja);
+
       margin-left: 5px;
     }
 
-    .back {
-      color: var(--azul);
+
+    nav {
+      display: flex;
+      align-items: center;
+
+      gap: 26px;
 
       font-size: 14px;
-
-      font-weight: 700;
+      font-weight: 650;
     }
 
-    .back:hover {
-      color: var(--naranja);
-    }
 
-    /* MAIN */
-
-    main {
-      padding:
-        60px 0 90px;
-    }
-
-    .property-header {
-      margin-bottom: 30px;
-    }
-
-    .operation {
-      color: var(--naranja);
-
-      font-size: 12px;
-
-      font-weight: 800;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1.5px;
-
-      margin-bottom: 8px;
-    }
-
-    .property-header h1 {
+    nav a {
       color: var(--azul);
 
-      font-size:
-        clamp(34px,5vw,52px);
-
-      line-height: 1.1;
-
-      letter-spacing: -1.5px;
-
-      margin-bottom: 10px;
+      transition: .2s ease;
     }
 
-    .location {
-      color: var(--gris-500);
 
-      font-size: 15px;
+    nav a:hover {
+      color: var(--naranja);
     }
 
-    /* GALERÍA */
 
-    .gallery {
-      display: grid;
+    .nav-contact {
+      background: var(--azul);
 
-      grid-template-columns:
-        2fr 1fr 1fr;
+      color: white !important;
 
-      grid-template-rows:
-        250px 250px;
+      padding: 11px 18px;
 
-      gap: 12px;
-
-      margin-bottom: 35px;
+      border-radius: 9px;
     }
 
-    .gallery-item {
-      position: relative;
+
+    .nav-contact:hover {
+      background: var(--azul-2);
+    }
+
+
+
+    /* =====================================================
+       MAIN
+    ===================================================== */
+
+    main {
+      padding: 45px 0 80px;
+    }
+
+
+    .property {
+      background: white;
+
+      border-radius: var(--radio);
 
       overflow: hidden;
 
-      border-radius: 12px;
+      box-shadow: var(--sombra);
+    }
+
+
+
+    /* =====================================================
+       GALERÍA
+    ===================================================== */
+
+    .gallery {
+      padding: 22px;
+    }
+
+
+    .main-photo {
+      position: relative;
+
+      width: 100%;
+
+      max-width: 900px;
+
+      margin: 0 auto;
 
       background:
-        #dce6ec;
+        #eef2f5;
+
+      border-radius: 12px;
+
+      overflow: hidden;
     }
 
-    .gallery-item:first-child {
-      grid-row:
-        span 2;
-    }
 
-    .gallery-item img {
+    .main-photo img {
+      display: block;
+
       width: 100%;
+
+      height: auto;
+
+      max-height: 650px;
+
+      margin: 0 auto;
+
+      object-fit: contain;
+    }
+
+
+    .gallery-button {
+      position: absolute;
+
+      top: 50%;
+
+      transform:
+        translateY(-50%);
+
+      width: 48px;
+      height: 48px;
+
+      border: none;
+
+      border-radius: 50%;
+
+      background:
+        rgba(0,0,0,.55);
+
+      color: white;
+
+      font-size: 29px;
+
+      cursor: pointer;
+
+      z-index: 5;
+
+      transition: .2s ease;
+    }
+
+
+    .gallery-button:hover {
+      background:
+        rgba(0,0,0,.78);
+
+      transform:
+        translateY(-50%) scale(1.05);
+    }
+
+
+    .prev {
+      left: 18px;
+    }
+
+
+    .next {
+      right: 18px;
+    }
+
+
+    .photo-counter {
+      position: absolute;
+
+      right: 18px;
+
+      bottom: 18px;
+
+      background:
+        rgba(0,0,0,.68);
+
+      color: white;
+
+      padding: 7px 12px;
+
+      border-radius: 20px;
+
+      font-size: 13px;
+
+      font-weight: 750;
+    }
+
+
+    .thumbnails {
+      display: grid;
+
+      grid-template-columns:
+        repeat(9,1fr);
+
+      gap: 8px;
+
+      max-width: 900px;
+
+      margin: 14px auto 0;
+    }
+
+
+    .thumbnail {
+      height: 78px;
+
+      border:
+        3px solid transparent;
+
+      border-radius: 8px;
+
+      overflow: hidden;
+
+      cursor: pointer;
+
+      background:
+        #e4e9ed;
+
+      padding: 0;
+
+      transition: .2s ease;
+    }
+
+
+    .thumbnail:hover {
+      transform:
+        translateY(-2px);
+    }
+
+
+    .thumbnail.active {
+      border-color:
+        var(--naranja);
+    }
+
+
+    .thumbnail img {
+      width: 100%;
+
       height: 100%;
 
       object-fit: cover;
 
-      transition:
-        transform .4s ease;
+      display: block;
     }
 
-    .gallery-item:hover img {
-      transform:
-        scale(1.04);
+
+
+    /* =====================================================
+       CONTENIDO
+    ===================================================== */
+
+    .content {
+      max-width: 1000px;
+
+      margin: auto;
+
+      padding: 40px 45px 50px;
     }
 
-    /* CONTENIDO */
 
-    .content-grid {
-      display: grid;
+    .status {
+      display: inline-block;
 
-      grid-template-columns:
-        1.35fr .65fr;
+      background:
+        var(--rojo);
 
-      gap: 35px;
+      color: white;
 
-      align-items: start;
+      padding: 7px 12px;
+
+      border-radius: 6px;
+
+      font-size: 11px;
+
+      font-weight: 850;
+
+      text-transform: uppercase;
+
+      letter-spacing: .5px;
+
+      margin-bottom: 16px;
     }
 
-    .info-box {
-      background: white;
 
-      border:
-        1px solid var(--gris-200);
+    .operation {
+      color:
+        var(--naranja);
 
-      border-radius:
-        var(--radio);
+      font-size: 12px;
 
-      padding: 32px;
+      font-weight: 850;
 
-      box-shadow:
-        var(--sombra);
+      text-transform:
+        uppercase;
 
-      margin-bottom: 22px;
+      letter-spacing:
+        1.2px;
+
+      margin-bottom:
+        8px;
     }
 
-    .info-box h2 {
-      color: var(--azul);
 
-      font-size: 25px;
+    h1 {
+      color:
+        var(--azul);
 
-      margin-bottom: 17px;
+      font-size:
+        clamp(
+          31px,
+          5vw,
+          48px
+        );
+
+      line-height:
+        1.1;
+
+      letter-spacing:
+        -1px;
+
+      margin-bottom:
+        8px;
     }
 
-    .info-box p {
-      color: var(--gris-500);
 
-      font-size: 15px;
+    .location {
+      color:
+        var(--gris-500);
 
-      line-height: 1.75;
+      font-size:
+        15px;
+
+      margin-bottom:
+        22px;
     }
+
+
+    .price {
+      color:
+        var(--azul);
+
+      font-size:
+        34px;
+
+      font-weight:
+        850;
+
+      margin-bottom:
+        28px;
+    }
+
+
+
+    /* =====================================================
+       FEATURES
+    ===================================================== */
 
     .features {
-      display: grid;
+      display:
+        flex;
 
-      grid-template-columns:
-        repeat(2,1fr);
+      flex-wrap:
+        wrap;
 
-      gap: 12px;
+      gap:
+        10px;
 
-      margin-top: 25px;
+      padding:
+        22px 0;
+
+      border-top:
+        1px solid var(--gris-200);
+
+      border-bottom:
+        1px solid var(--gris-200);
+
+      margin-bottom:
+        30px;
     }
 
+
     .feature {
-      padding: 16px;
+      background:
+        var(--gris-100);
+
+      color:
+        var(--gris-700);
+
+      padding:
+        10px 14px;
+
+      border-radius:
+        8px;
+
+      font-size:
+        13px;
+
+      font-weight:
+        650;
+    }
+
+
+
+    /* =====================================================
+       DESCRIPCIÓN
+    ===================================================== */
+
+    .description {
+      max-width:
+        800px;
+    }
+
+
+    .description h2 {
+      color:
+        var(--azul);
+
+      font-size:
+        25px;
+
+      margin-bottom:
+        13px;
+    }
+
+
+    .description p {
+      color:
+        var(--gris-500);
+
+      font-size:
+        15px;
+
+      margin-bottom:
+        17px;
+    }
+
+
+
+    /* =====================================================
+       DESTACADOS
+    ===================================================== */
+
+    .highlights {
+      display:
+        grid;
+
+      grid-template-columns:
+        repeat(3,1fr);
+
+      gap:
+        14px;
+
+      margin:
+        28px 0;
+    }
+
+
+    .highlight {
+      padding:
+        18px;
 
       background:
         var(--gris-50);
@@ -305,276 +610,257 @@ content="Habitación en arriendo en Valparaíso, sector Yungay. Gestionada por S
       border:
         1px solid var(--gris-200);
 
-      border-radius: 10px;
-    }
-
-    .feature strong {
-      display: block;
-
-      color: var(--azul);
-
-      font-size: 15px;
-
-      margin-bottom: 2px;
-    }
-
-    .feature span {
-      color: var(--gris-500);
-
-      font-size: 12px;
-    }
-
-    /* PRECIO */
-
-    .price-box {
-      position: sticky;
-
-      top: 105px;
-
-      background: white;
-
-      border:
-        1px solid var(--gris-200);
-
       border-radius:
-        var(--radio);
-
-      padding: 30px;
-
-      box-shadow:
-        var(--sombra);
+        10px;
     }
 
-    .status {
-      display: inline-block;
 
-      margin-bottom: 18px;
+    .highlight strong {
+      display:
+        block;
 
-      padding: 7px 11px;
-
-      border-radius: 6px;
-
-      background:
-        var(--rojo);
-
-      color: white;
-
-      font-size: 11px;
-
-      font-weight: 800;
-
-      text-transform: uppercase;
-
-      letter-spacing: .5px;
-    }
-
-    .price-label {
-      color: var(--gris-500);
-
-      font-size: 13px;
-
-      margin-bottom: 3px;
-    }
-
-    .price {
-      color: var(--azul);
-
-      font-size: 34px;
-
-      font-weight: 850;
-
-      line-height: 1.1;
-
-      margin-bottom: 23px;
-    }
-
-    .contact-button {
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      width: 100%;
-
-      padding: 14px;
-
-      border-radius: 9px;
-
-      background:
-        var(--naranja);
-
-      color: white;
-
-      font-size: 14px;
-
-      font-weight: 800;
-
-      transition: .2s ease;
-    }
-
-    .contact-button:hover {
-      background:
-        var(--naranja-hover);
-
-      transform:
-        translateY(-2px);
-    }
-
-    .back-button {
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      width: 100%;
-
-      margin-top: 10px;
-
-      padding: 13px;
-
-      border-radius: 9px;
-
-      background:
+      color:
         var(--azul);
 
-      color: white;
+      font-size:
+        14px;
 
-      font-size: 13px;
-
-      font-weight: 750;
+      margin-bottom:
+        4px;
     }
 
-    .back-button:hover {
+
+    .highlight span {
+      color:
+        var(--gris-500);
+
+      font-size:
+        13px;
+    }
+
+
+
+    /* =====================================================
+       WHATSAPP
+    ===================================================== */
+
+    .whatsapp {
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
       background:
-        var(--azul-oscuro);
-    }
+        #25D366;
 
-    /* WHATSAPP */
+      color:
+        white;
 
-    .whatsapp-floating {
-      position: fixed;
+      padding:
+        15px 24px;
 
-      right: 22px;
-      bottom: 22px;
+      border-radius:
+        9px;
 
-      z-index: 1500;
+      font-size:
+        14px;
 
-      display: flex;
+      font-weight:
+        800;
 
-      align-items: center;
-
-      justify-content: center;
-
-      width: 56px;
-      height: 56px;
-
-      border-radius: 50%;
-
-      background: #25D366;
-
-      color: white;
-
-      font-size: 25px;
+      margin-top:
+        8px;
 
       box-shadow:
-        0 8px 25px rgba(0,0,0,.18);
+        0 8px 22px
+        rgba(37,211,102,.18);
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
     }
 
-    /* FOOTER */
+
+    .whatsapp:hover {
+      transform:
+        translateY(-2px);
+
+      box-shadow:
+        0 12px 28px
+        rgba(37,211,102,.25);
+    }
+
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
     footer {
-      padding: 40px 0;
-
       background:
         var(--azul-oscuro);
 
       color:
-        #cbdbe4;
+        #dceaf1;
 
-      text-align: center;
+      padding:
+        42px 0;
+
+      text-align:
+        center;
     }
+
 
     footer strong {
-      color: white;
+      color:
+        white;
 
-      font-size: 20px;
+      font-size:
+        20px;
     }
+
 
     footer p {
-      margin-top: 8px;
+      margin-top:
+        8px;
 
-      font-size: 13px;
+      font-size:
+        13px;
     }
 
-    /* MOBILE */
 
-    @media (max-width: 850px) {
 
-      .gallery {
-        grid-template-columns:
-          1fr 1fr;
+    /* =====================================================
+       MOBILE
+    ===================================================== */
 
-        grid-template-rows:
-          300px 200px 200px;
-      }
-
-      .gallery-item:first-child {
-        grid-column:
-          span 2;
-
-        grid-row:
-          auto;
-      }
-
-      .content-grid {
-        grid-template-columns:
-          1fr;
-      }
-
-      .price-box {
-        position: static;
-      }
-
-    }
-
-    @media (max-width: 600px) {
+    @media (max-width: 800px) {
 
       .nav {
-        min-height: 68px;
+        min-height:
+          68px;
       }
+
 
       .logo {
-        font-size: 20px;
+        font-size:
+          20px;
       }
 
-      .gallery {
-        grid-template-columns:
-          1fr;
 
-        grid-template-rows:
-          repeat(5,220px);
+      nav {
+        display:
+          none;
       }
 
-      .gallery-item:first-child {
-        grid-column:
-          auto;
-      }
-
-      .features {
-        grid-template-columns:
-          1fr;
-      }
 
       main {
         padding:
-          40px 0 70px;
+          20px 0 50px;
       }
 
-      .info-box,
-      .price-box {
-        padding: 24px;
+
+      .gallery {
+        padding:
+          10px;
+      }
+
+
+      .main-photo img {
+        max-height:
+          none;
+      }
+
+
+      .thumbnails {
+        grid-template-columns:
+          repeat(5,1fr);
+
+        gap:
+          7px;
+      }
+
+
+      .thumbnail {
+        height:
+          65px;
+      }
+
+
+      .content {
+        padding:
+          30px 22px 38px;
+      }
+
+
+      .price {
+        font-size:
+          29px;
+      }
+
+
+      .highlights {
+        grid-template-columns:
+          1fr;
+      }
+
+
+      .gallery-button {
+        width:
+          42px;
+
+        height:
+          42px;
+
+        font-size:
+          25px;
+      }
+
+    }
+
+
+    @media (max-width: 500px) {
+
+      .nav {
+        gap:
+          10px;
+      }
+
+
+      .logo {
+        font-size:
+          18px;
+      }
+
+
+      h1 {
+        font-size:
+          32px;
+      }
+
+
+      .features {
+        gap:
+          7px;
+      }
+
+
+      .feature {
+        font-size:
+          12px;
+
+        padding:
+          9px 11px;
+      }
+
+
+      .whatsapp {
+        width:
+          100%;
       }
 
     }
@@ -583,268 +869,579 @@ content="Habitación en arriendo en Valparaíso, sector Yungay. Gestionada por S
 
 </head>
 
+
 <body>
+
 
 <header>
 
   <div class="container nav">
 
-```
-<a
-  href="index.html"
-  class="logo"
->
-  Sotofrau
-  <span>Propiedades</span>
-</a>
+    <a
+      href="index.html"
+      class="logo"
+    >
+      Sotofrau
+      <span>Propiedades</span>
+    </a>
 
-<a
-  href="index.html#propiedades"
-  class="back"
->
-  ← Volver a propiedades
-</a>
-```
+
+    <nav>
+
+      <a href="index.html#propiedades">
+        Propiedades
+      </a>
+
+      <a href="index.html#servicios">
+        Servicios
+      </a>
+
+      <a href="index.html#administracion">
+        Administración
+      </a>
+
+      <a href="index.html#captacion">
+        Vende / Arrienda
+      </a>
+
+      <a
+        href="index.html#contacto"
+        class="nav-contact"
+      >
+        Contacto
+      </a>
+
+    </nav>
 
   </div>
 
 </header>
 
+
+
 <main>
 
   <div class="container">
 
-```
-<div class="property-header">
 
-  <div class="operation">
-    Arriendo
-  </div>
+    <article class="property">
 
-  <h1>
-    Habitación en arriendo
-  </h1>
 
-  <div class="location">
-    Valparaíso · Sector Yungay
-  </div>
+      <!-- =================================================
+           GALERÍA
+      ================================================== -->
 
-</div>
+      <div class="gallery">
 
-<!-- GALERÍA -->
+        <div class="main-photo">
 
-<div class="gallery">
+          <img
+            id="mainImage"
+            src="propiedades/1/1.jpeg"
+            alt="Habitación en arriendo en Valparaíso"
+          >
 
-  <div class="gallery-item">
 
-    <img
-      src="propiedades/1/1.jpeg"
-      alt="Habitación en arriendo en Valparaíso"
-    >
+          <button
+            class="gallery-button prev"
+            onclick="anterior()"
+            aria-label="Foto anterior"
+            type="button"
+          >
+            ‹
+          </button>
 
-  </div>
 
-  <div class="gallery-item">
+          <button
+            class="gallery-button next"
+            onclick="siguiente()"
+            aria-label="Foto siguiente"
+            type="button"
+          >
+            ›
+          </button>
 
-    <img
-      src="propiedades/1/2.jpeg"
-      alt="Habitación en arriendo"
-    >
 
-  </div>
+          <div class="photo-counter">
 
-  <div class="gallery-item">
+            <span id="currentPhoto">
+              1
+            </span>
 
-    <img
-      src="propiedades/1/3.jpeg"
-      alt="Habitación en arriendo"
-    >
+            / 9
 
-  </div>
+          </div>
 
-  <div class="gallery-item">
+        </div>
 
-    <img
-      src="propiedades/1/4.jpeg"
-      alt="Habitación en arriendo"
-    >
 
-  </div>
 
-  <div class="gallery-item">
+        <div class="thumbnails">
 
-    <img
-      src="propiedades/1/5.jpeg"
-      alt="Habitación en arriendo"
-    >
 
-  </div>
+          <button
+            class="thumbnail active"
+            onclick="mostrarFoto(1)"
+            type="button"
+          >
 
-</div>
+            <img
+              src="propiedades/1/1.jpeg"
+              alt="Foto 1"
+            >
 
-<div class="content-grid">
+          </button>
 
-  <div>
 
-    <div class="info-box">
+          <button
+            class="thumbnail"
+            onclick="mostrarFoto(2)"
+            type="button"
+          >
 
-      <h2>
-        Descripción
-      </h2>
+            <img
+              src="propiedades/1/2.jpeg"
+              alt="Foto 2"
+            >
 
-      <p>
-        Habitación en arriendo ubicada en el sector Yungay
-        de Valparaíso. Una alternativa cómoda y amoblada
-        para quienes buscan vivir en una ubicación conectada
-        dentro de la ciudad.
-      </p>
+          </button>
 
-      <div class="features">
 
-        <div class="feature">
+          <button
+            class="thumbnail"
+            onclick="mostrarFoto(3)"
+            type="button"
+          >
 
-          <strong>
+            <img
+              src="propiedades/1/3.jpeg"
+              alt="Foto 3"
+            >
+
+          </button>
+
+
+          <button
+            class="thumbnail"
+            onclick="mostrarFoto(4)"
+            type="button"
+          >
+
+            <img
+              src="propiedades/1/4.jpeg"
+              alt="Foto 4"
+            >
+
+          </button>
+
+
+          <button
+            class="thumbnail"
+            onclick="mostrarFoto(5)"
+            type="button"
+          >
+
+            <img
+              src="propiedades/1/5.jpeg"
+              alt="Foto 5"
+            >
+
+          </button>
+
+
+          <button
+            class="thumbnail"
+            onclick="mostrarFoto(6)"
+            type="button"
+          >
+
+            <img
+              src="propiedades/1/6.jpeg"
+              alt="Foto 6"
+            >
+
+          </button>
+
+
+          <button
+            class="thumbnail"
+            onclick="mostrarFoto(7)"
+            type="button"
+          >
+
+            <img
+              src="propiedades/1/7.jpeg"
+              alt="Foto 7"
+            >
+
+          </button>
+
+
+          <button
+            class="thumbnail"
+            onclick="mostrarFoto(8)"
+            type="button"
+          >
+
+            <img
+              src="propiedades/1/8.jpeg"
+              alt="Foto 8"
+            >
+
+          </button>
+
+
+          <button
+            class="thumbnail"
+            onclick="mostrarFoto(9)"
+            type="button"
+          >
+
+            <img
+              src="propiedades/1/9.jpeg"
+              alt="Foto 9"
+            >
+
+          </button>
+
+
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           INFORMACIÓN
+      ================================================== -->
+
+      <div class="content">
+
+
+        <span class="status">
+          Arrendada
+        </span>
+
+
+        <div class="operation">
+          Arriendo
+        </div>
+
+
+        <h1>
+          Habitación en arriendo
+        </h1>
+
+
+        <div class="location">
+          Valparaíso · Sector Yungay
+        </div>
+
+
+        <div class="price">
+          $260.000
+        </div>
+
+
+
+        <!-- CARACTERÍSTICAS -->
+
+        <div class="features">
+
+
+          <div class="feature">
             🛏 1 dormitorio
-          </strong>
+          </div>
 
-          <span>
-            Dormitorio
-          </span>
 
-        </div>
-
-        <div class="feature">
-
-          <strong>
+          <div class="feature">
             🚿 1 baño
-          </strong>
+          </div>
 
-          <span>
-            Baño
-          </span>
 
-        </div>
-
-        <div class="feature">
-
-          <strong>
+          <div class="feature">
             📐 72 m²
-          </strong>
+          </div>
 
-          <span>
-            Superficie
-          </span>
 
-        </div>
-
-        <div class="feature">
-
-          <strong>
+          <div class="feature">
             🛋 Amoblado
-          </strong>
+          </div>
 
-          <span>
-            Equipamiento
-          </span>
+
+          <div class="feature">
+            Gastos comunes incluidos
+          </div>
+
+
+          <div class="feature">
+            🚫 No acepta mascotas
+          </div>
+
 
         </div>
 
+
+
+        <!-- DESCRIPCIÓN -->
+
+        <div class="description">
+
+
+          <h2>
+            Sobre esta propiedad
+          </h2>
+
+
+          <p>
+            Habitación en arriendo ubicada en el sector de
+            calle Yungay, Valparaíso. La propiedad se encuentra
+            amoblada y cuenta con 1 dormitorio y 1 baño,
+            con una superficie informada de 72 m².
+          </p>
+
+
+          <p>
+            El arriendo es de $260.000 mensuales e incluye
+            los gastos comunes. Los gastos correspondientes
+            a servicios básicos se distribuyen entre los
+            arrendatarios.
+          </p>
+
+
+          <p>
+            Una alternativa para quienes buscan una habitación
+            amoblada en Valparaíso. Para conocer disponibilidad,
+            condiciones y coordinar una visita, puedes
+            contactarnos directamente por WhatsApp.
+          </p>
+
+
+        </div>
+
+
+
+        <!-- DESTACADOS -->
+
+        <div class="highlights">
+
+
+          <div class="highlight">
+
+            <strong>
+              Ubicación
+            </strong>
+
+            <span>
+              Valparaíso · Sector Yungay
+            </span>
+
+          </div>
+
+
+          <div class="highlight">
+
+            <strong>
+              Gastos comunes
+            </strong>
+
+            <span>
+              Incluidos en el arriendo
+            </span>
+
+          </div>
+
+
+          <div class="highlight">
+
+            <strong>
+              Servicios básicos
+            </strong>
+
+            <span>
+              Distribuidos entre arrendatarios
+            </span>
+
+          </div>
+
+
+        </div>
+
+
+
+        <!-- WHATSAPP -->
+
+        <a
+          class="whatsapp"
+          href="https://wa.me/56944844983?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20la%20habitaci%C3%B3n%20en%20arriendo%20en%20Valpara%C3%ADso%2C%20sector%20Yungay."
+          target="_blank"
+          rel="noopener"
+        >
+          Consultar por WhatsApp
+        </a>
+
+
       </div>
 
-    </div>
 
-    <div class="info-box">
-
-      <h2>
-        Información
-      </h2>
-
-      <p>
-        Propiedad gestionada por Sotofrau Propiedades.
-        Para conocer disponibilidad, condiciones de arriendo
-        y requisitos, puedes contactarnos directamente.
-      </p>
-
-    </div>
-
-  </div>
-
-  <aside>
-
-    <div class="price-box">
-
-      <span class="status">
-        Arrendada
-      </span>
-
-      <div class="price-label">
-        Canon de arriendo
-      </div>
-
-      <div class="price">
-        $260.000
-      </div>
-
-      <a
-        href="https://wa.me/56944844983?text=Hola%2C%20quiero%20consultar%20por%20la%20habitaci%C3%B3n%20en%20arriendo%20del%20sector%20Yungay."
-        target="_blank"
-        rel="noopener"
-        class="contact-button"
-      >
-        Consultar por WhatsApp
-      </a>
-
-      <a
-        href="index.html#propiedades"
-        class="back-button"
-      >
-        ← Volver a propiedades
-      </a>
-
-    </div>
-
-  </aside>
-
-</div>
-```
+    </article>
 
   </div>
 
 </main>
 
+
+
 <footer>
 
   <div class="container">
 
-```
-<strong>
-  Sotofrau Propiedades
-</strong>
 
-<p>
-  Compra · Venta · Arriendo · Administración
-</p>
+    <strong>
+      Sotofrau Propiedades
+    </strong>
 
-<p>
-  © 2026 Sotofrau Propiedades ·
-  Todos los derechos reservados.
-</p>
-```
+
+    <p>
+      Compra · Venta · Arriendo · Administración
+    </p>
+
+
+    <p>
+      © 2026 Sotofrau Propiedades ·
+      Todos los derechos reservados.
+    </p>
+
 
   </div>
 
 </footer>
 
-<a
-class="whatsapp-floating"
-href="https://wa.me/56944844983?text=Hola%2C%20quiero%20consultar%20por%20una%20propiedad."
-target="_blank"
-rel="noopener"
-aria-label="Contactar por WhatsApp"
 
->
 
-☎ </a>
+<script>
+
+
+  const fotos = [
+
+    "propiedades/1/1.jpeg",
+
+    "propiedades/1/2.jpeg",
+
+    "propiedades/1/3.jpeg",
+
+    "propiedades/1/4.jpeg",
+
+    "propiedades/1/5.jpeg",
+
+    "propiedades/1/6.jpeg",
+
+    "propiedades/1/7.jpeg",
+
+    "propiedades/1/8.jpeg",
+
+    "propiedades/1/9.jpeg"
+
+  ];
+
+
+  let fotoActual = 1;
+
+
+  function mostrarFoto(numero) {
+
+    fotoActual = numero;
+
+
+    document.getElementById(
+      "mainImage"
+    ).src =
+      fotos[numero - 1];
+
+
+    document.getElementById(
+      "currentPhoto"
+    ).textContent =
+      numero;
+
+
+    const thumbnails =
+      document.querySelectorAll(
+        ".thumbnail"
+      );
+
+
+    thumbnails.forEach(
+      function(
+        thumbnail,
+        index
+      ) {
+
+        thumbnail.classList.remove(
+          "active"
+        );
+
+
+        if (
+          index ===
+          numero - 1
+        ) {
+
+          thumbnail.classList.add(
+            "active"
+          );
+
+        }
+
+      }
+    );
+
+  }
+
+
+  function siguiente() {
+
+    if (
+      fotoActual ===
+      fotos.length
+    ) {
+
+      mostrarFoto(1);
+
+    } else {
+
+      mostrarFoto(
+        fotoActual + 1
+      );
+
+    }
+
+  }
+
+
+  function anterior() {
+
+    if (
+      fotoActual === 1
+    ) {
+
+      mostrarFoto(
+        fotos.length
+      );
+
+    } else {
+
+      mostrarFoto(
+        fotoActual - 1
+      );
+
+    }
+
+  }
+
+
+</script>
+
 
 </body>
 </html>
