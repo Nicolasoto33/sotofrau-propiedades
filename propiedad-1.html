@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Habitación en arriendo | Sotofrau Propiedades</title>
+
+  <meta name="description" content="Habitación en arriendo en Valparaíso. Sotofrau Propiedades.">
+
+  <style>
+    :root {
+      --azul: #123b5d;
+      --azul-oscuro: #0b2941;
+      --naranja: #f28c28;
+      --gris: #f5f7f9;
+      --texto: #24313d;
+      --blanco: #ffffff;
+      --rojo: #b94a48;
+      --sombra: 0 10px 30px rgba(0,0,0,.08);
+      --radio: 14px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--texto);
+      background: var(--gris);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1100px, 92%);
+      margin: auto;
+    }
+
+    header {
+      background: white;
+      border-bottom: 1px solid #e8edf1;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav {
+      min-height: 76px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--azul);
+    }
+
+    .logo span {
+      color: var(--naranja);
+    }
+
+    .back {
+      color: var(--azul);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .back:hover {
+      color: var(--naranja);
+    }
+
+    main {
+      padding: 45px 0 80px;
+    }
+
+    .property {
+      background: white;
+      border-radius: var(--radio);
+      box-shadow: var(--sombra);
+      overflow: hidden;
+    }
+
+    .gallery {
+      padding: 20px;
+    }
+
+    .main-photo {
+      position: relative;
+      width: 100%;
+      height: min(600px, 65vw);
+      min-height: 320px;
+      background: #e4e9ed;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .main-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .gallery-button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 45px;
+      height: 45px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(0,0,0,.55);
+      color: white;
+      font-size: 25px;
+      cursor: pointer;
+      z-index: 5;
+    }
+
+    .gallery-button:hover {
+      background: rgba(0,0,0,.75);
+    }
+
+    .prev {
+      left: 15px;
+    }
+
+    .next {
+      right: 15px;
+    }
+
+    .photo-counter {
+      position: absolute;
+      bottom: 15px;
+      right: 15px;
+      background: rgba(0,0,0,.65);
+      color: white;
+      padding: 6px 11px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .thumbnails {
+      display: grid;
+      grid-template-columns: repeat(9, 1fr);
+      gap: 8px;
+      margin-top: 12px;
+    }
+
+    .thumbnail {
+      height: 75px;
+      border: 3px solid transparent;
+      border-radius: 7px;
+      overflow: hidden;
+      cursor: pointer;
+      background: #e4e9ed;
+      padding: 0;
+    }
+
+    .thumbnail.active {
+      border-color: var(--naranja);
+    }
+
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .content {
+      padding: 35px;
+    }
+
+    .status {
+      display: inline-block;
+      background: var(--rojo);
+      color: white;
+      padding: 7px 12px;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 15px;
+    }
+
+    .operation {
+      color: var(--naranja);
+      font-size: 13px;
+      font-weight: 800;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      color: var(--azul);
+      font-size: clamp(30px, 5vw, 44px);
+      line-height: 1.15;
+      margin-bottom: 8px;
+    }
+
+    .location {
+      color: #687580;
+      margin-bottom: 22px;
+    }
+
+    .price {
+      color: var(--azul);
+      font-size: 32px;
+      font-weight: 800;
+      margin-bottom: 25px;
+    }
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      padding: 20px 0;
+      border-top: 1px solid #edf0f2;
+      border-bottom: 1px solid #edf0f2;
+      margin-bottom: 25px;
+    }
+
+    .feature {
+      background: var(--gris);
+      padding: 10px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .description h2 {
+      color: var(--azul);
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .description p {
+      color: #687580;
+      max-width: 750px;
+      margin-bottom: 25px;
+    }
+
+    .whatsapp {
+      display: inline-block;
+      background: #25D366;
+      color: white;
+      padding: 15px 24px;
+      border-radius: 9px;
+      font-weight: 800;
+      margin-top: 5px;
+    }
+
+    .whatsapp:hover {
+      transform: translateY(-2px);
+    }
+
+    footer {
+      background: var(--azul-oscuro);
+      color: #dceaf1;
+      padding: 35px 0;
+      text-align: center;
+    }
+
+    footer strong {
+      color: white;
+      font-size: 19px;
+    }
+
+    footer p {
+      margin-top: 7px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 700px) {
+
+      .nav {
+        min-height: 65px;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      main {
+        padding: 20px 0 50px;
+      }
+
+      .gallery {
+        padding: 10px;
+      }
+
+      .main-photo {
+        height: 70vw;
+        min-height: 260px;
+      }
+
+      .thumbnails {
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      .thumbnail {
+        height: 60px;
+      }
+
+      .content {
+        padding: 25px 20px;
+      }
+
+      .price {
+        font-size: 27px;
+      }
+
+      .gallery-button {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+
+    <a href="index.html" class="logo">
+      Sotofrau <span>Propiedades</span>
+    </a>
+
+    <a href="index.html#propiedades" class="back">
+      ← Volver a propiedades
+    </a>
+
+  </div>
+</header>
+
+<main>
+
+  <div class="container">
+
+    <article class="property">
+
+      <!-- GALERÍA -->
+
+      <div class="gallery">
+
+        <div class="main-photo">
+
+          <img
+            id="mainImage"
+            src="propiedades/1/1.jpeg"
+            alt="Habitación en arriendo en Valparaíso"
+          >
+
+          <button
+            class="gallery-button prev"
+            onclick="anterior()"
+            aria-label="Foto anterior"
+          >
+            ‹
+          </button>
+
+          <button
+            class="gallery-button next"
+            onclick="siguiente()"
+            aria-label="Foto siguiente"
+          >
+            ›
+          </button>
+
+          <div class="photo-counter">
+            <span id="currentPhoto">1</span> / 9
+          </div>
+
+        </div>
+
+        <div class="thumbnails">
+
+          <button class="thumbnail active" onclick="mostrarFoto(1)">
+            <img src="propiedades/1/1.jpeg" alt="Foto 1">
+          </button>
+
+          <button class="thumbnail" onclick="mostrarFoto(2)">
+            <img src="propiedades/1/2.jpeg" alt="Foto 2">
+          </button>
+
+          <button class="thumbnail" onclick="mostrarFoto(3)">
+            <img src="propiedades/1/3.jpeg" alt="Foto 3">
+          </button>
+
+          <button class="thumbnail" onclick="mostrarFoto(4)">
+            <img src="propiedades/1/4.jpeg" alt="Foto 4">
+          </button>
+
+          <button class="thumbnail" onclick="mostrarFoto(5)">
+            <img src="propiedades/1/5.jpeg" alt="Foto 5">
+          </button>
+
+          <button class="thumbnail" onclick="mostrarFoto(6)">
+            <img src="propiedades/1/6.jpeg" alt="Foto 6">
+          </button>
+
+          <button class="thumbnail" onclick="mostrarFoto(7)">
+            <img src="propiedades/1/7.jpeg" alt="Foto 7">
+          </button>
+
+          <button class="thumbnail" onclick="mostrarFoto(8)">
+            <img src="propiedades/1/8.jpeg" alt="Foto 8">
+          </button>
+
+          <button class="thumbnail" onclick="mostrarFoto(9)">
+            <img src="propiedades/1/9.jpeg" alt="Foto 9">
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <!-- INFORMACIÓN -->
+
+      <div class="content">
+
+        <span class="status">
+          Arrendada
+        </span>
+
+        <div class="operation">
+          Arriendo
+        </div>
+
+        <h1>
+          Habitación en arriendo
+        </h1>
+
+        <div class="location">
+          Valparaíso, Valparaíso
+        </div>
+
+        <div class="price">
+          $260.000
+        </div>
+
+
+        <div class="features">
+
+          <div class="feature">
+            🛏 1 dormitorio
+          </div>
+
+          <div class="feature">
+            🚿 1 baño
+          </div>
+
+          <div class="feature">
+            📐 72 m²
+          </div>
+
+          <div class="feature">
+            🛋 Amoblado
+          </div>
+
+          <div class="feature">
+            Gastos comunes incluidos
+          </div>
+
+          <div class="feature">
+            🚫 No acepta mascotas
+          </div>
+
+        </div>
+
+
+        <div class="description">
+
+          <h2>
+            Sobre esta propiedad
+          </h2>
+
+          <p>
+            Habitación en arriendo ubicada en Valparaíso.
+            Propiedad amoblada, con 1 dormitorio y 1 baño.
+            Para conocer disponibilidad, condiciones y más
+            información, puedes contactarnos directamente.
+          </p>
+
+        </div>
+
+
+        <a
+          class="whatsapp"
+          href="https://wa.me/56944844983?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20la%20propiedad%20%22Habitaci%C3%B3n%20en%20arriendo%22."
+          target="_blank"
+        >
+          Consultar por WhatsApp
+        </a>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</main>
+
+
+<footer>
+
+  <div class="container">
+
+    <strong>
+      Sotofrau Propiedades
+    </strong>
+
+    <p>
+      Compra · Venta · Arriendo · Administración
+    </p>
+
+    <p>
+      © 2026 Sotofrau Propiedades
+    </p>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+  const fotos = [
+    "propiedades/1/1.jpeg",
+    "propiedades/1/2.jpeg",
+    "propiedades/1/3.jpeg",
+    "propiedades/1/4.jpeg",
+    "propiedades/1/5.jpeg",
+    "propiedades/1/6.jpeg",
+    "propiedades/1/7.jpeg",
+    "propiedades/1/8.jpeg",
+    "propiedades/1/9.jpeg"
+  ];
+
+  let fotoActual = 1;
+
+  function mostrarFoto(numero) {
+
+    fotoActual = numero;
+
+    document.getElementById("mainImage").src = fotos[numero - 1];
+
+    document.getElementById("currentPhoto").textContent = numero;
+
+    const thumbnails = document.querySelectorAll(".thumbnail");
+
+    thumbnails.forEach((thumbnail, index) => {
+
+      thumbnail.classList.remove("active");
+
+      if (index === numero - 1) {
+        thumbnail.classList.add("active");
+      }
+
+    });
+
+  }
+
+  function siguiente() {
+
+    if (fotoActual === fotos.length) {
+      mostrarFoto(1);
+    } else {
+      mostrarFoto(fotoActual + 1);
+    }
+
+  }
+
+  function anterior() {
+
+    if (fotoActual === 1) {
+      mostrarFoto(fotos.length);
+    } else {
+      mostrarFoto(fotoActual - 1);
+    }
+
+  }
+
+</script>
+
+</body>
+</html>
