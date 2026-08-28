@@ -1,25 +1,47 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Habitación en arriendo | Sotofrau Propiedades</title>
+  <title>Habitación en arriendo en Valparaíso | Sotofrau Propiedades</title>
 
-  <meta name="description" content="Habitación en arriendo en Valparaíso. Sotofrau Propiedades.">
+  <meta
+    name="description"
+    content="Habitación amoblada en arriendo en Valparaíso, sector Yungay. Consulta disponibilidad y condiciones con Sotofrau Propiedades."
+  >
+
+  <meta name="theme-color" content="#0d2f49">
 
   <style>
+
     :root {
-      --azul: #123b5d;
-      --azul-oscuro: #0b2941;
-      --naranja: #f28c28;
-      --gris: #f5f7f9;
-      --texto: #24313d;
+      --azul: #0d2f49;
+      --azul-2: #164968;
+      --azul-oscuro: #081f31;
+      --naranja: #e88925;
+      --naranja-hover: #d97818;
+
+      --verde: #238b57;
+      --rojo: #b44a48;
+
       --blanco: #ffffff;
-      --rojo: #b94a48;
-      --sombra: 0 10px 30px rgba(0,0,0,.08);
-      --radio: 14px;
+
+      --gris-50: #fafbfc;
+      --gris-100: #f3f5f7;
+      --gris-200: #e6eaee;
+      --gris-400: #8b969e;
+      --gris-500: #6b7781;
+      --gris-700: #37444e;
+
+      --sombra: 0 12px 35px rgba(13,47,73,.08);
+      --sombra-hover: 0 18px 45px rgba(13,47,73,.13);
+
+      --radio: 16px;
+      --ancho: 1180px;
     }
+
 
     * {
       box-sizing: border-box;
@@ -27,338 +49,1114 @@
       padding: 0;
     }
 
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--texto);
-      background: var(--gris);
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      color: var(--gris-700);
+      background: var(--gris-50);
+
       line-height: 1.6;
     }
+
+
+    img {
+      max-width: 100%;
+    }
+
 
     a {
       text-decoration: none;
       color: inherit;
     }
 
+
+    button {
+      font: inherit;
+    }
+
+
     .container {
-      width: min(1100px, 92%);
+      width: min(var(--ancho), 92%);
       margin: auto;
     }
 
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
     header {
-      background: white;
-      border-bottom: 1px solid #e8edf1;
       position: sticky;
       top: 0;
-      z-index: 100;
+      z-index: 1000;
+
+      background: rgba(255,255,255,.97);
+
+      backdrop-filter: blur(12px);
+
+      border-bottom: 1px solid var(--gris-200);
     }
+
 
     .nav {
       min-height: 76px;
+
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      gap: 20px;
     }
 
+
     .logo {
-      font-size: 24px;
-      font-weight: 800;
       color: var(--azul);
+
+      font-size: 23px;
+      font-weight: 850;
+
+      letter-spacing: -.5px;
     }
+
 
     .logo span {
       color: var(--naranja);
     }
 
+
     .back {
       color: var(--azul);
-      font-weight: 700;
+
       font-size: 14px;
+      font-weight: 750;
+
+      transition: .2s ease;
     }
+
 
     .back:hover {
       color: var(--naranja);
     }
 
+
+
+    /* =====================================================
+       MAIN
+    ===================================================== */
+
     main {
-      padding: 45px 0 80px;
+      padding: 35px 0 80px;
     }
+
+
+
+    /* =====================================================
+       PROPERTY HEADER
+    ===================================================== */
+
+    .property-header {
+      display: flex;
+
+      justify-content: space-between;
+      align-items: flex-end;
+
+      gap: 25px;
+
+      margin-bottom: 25px;
+    }
+
+
+    .property-label {
+      color: var(--naranja);
+
+      font-size: 12px;
+      font-weight: 850;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.4px;
+
+      margin-bottom: 7px;
+    }
+
+
+    .property-header h1 {
+      color: var(--azul);
+
+      font-size: clamp(32px, 5vw, 48px);
+
+      line-height: 1.08;
+
+      letter-spacing: -1.3px;
+
+      margin-bottom: 8px;
+    }
+
+
+    .location {
+      color: var(--gris-500);
+
+      font-size: 15px;
+    }
+
+
+    .header-price {
+      flex-shrink: 0;
+
+      text-align: right;
+    }
+
+
+    .header-price small {
+      display: block;
+
+      color: var(--gris-400);
+
+      font-size: 12px;
+
+      margin-bottom: 2px;
+    }
+
+
+    .header-price strong {
+      color: var(--azul);
+
+      font-size: 29px;
+      font-weight: 850;
+    }
+
+
+
+    /* =====================================================
+       PROPERTY CARD
+    ===================================================== */
 
     .property {
       background: white;
+
+      border: 1px solid var(--gris-200);
+
       border-radius: var(--radio);
+
       box-shadow: var(--sombra);
+
       overflow: hidden;
     }
+
+
+
+    /* =====================================================
+       GALLERY
+    ===================================================== */
 
     .gallery {
       padding: 20px;
     }
 
-.main-photo {
-  position: relative;
-  width: 100%;
-  max-width: 520px;
-  margin: 0 auto;
-  background: #f1f3f5;
-  border-radius: 10px;
-  overflow: hidden;
-}
 
-.main-photo img {
-  display: block;
-  width: 100%;
-  height: auto;
-  max-height: none;
-  object-fit: initial;
-}
+    .main-photo {
+      position: relative;
+
+      width: 100%;
+
+      max-width: 620px;
+
+      margin: 0 auto;
+
+      background: var(--gris-100);
+
+      border-radius: 12px;
+
+      overflow: hidden;
+    }
+
+
+    .main-photo img {
+      display: block;
+
+      width: 100%;
+
+      height: auto;
+
+      object-fit: contain;
+    }
+
 
     .gallery-button {
       position: absolute;
+
       top: 50%;
+
       transform: translateY(-50%);
-      width: 45px;
-      height: 45px;
+
+      width: 48px;
+      height: 48px;
+
       border: none;
+
       border-radius: 50%;
-      background: rgba(0,0,0,.55);
+
+      background: rgba(13,47,73,.75);
+
       color: white;
-      font-size: 25px;
+
+      font-size: 28px;
+
+      line-height: 1;
+
       cursor: pointer;
+
       z-index: 5;
+
+      transition: .2s ease;
     }
+
 
     .gallery-button:hover {
-      background: rgba(0,0,0,.75);
+      background: var(--azul);
+
+      transform:
+        translateY(-50%)
+        scale(1.05);
     }
+
 
     .prev {
-      left: 15px;
+      left: 16px;
     }
 
+
     .next {
-      right: 15px;
+      right: 16px;
     }
+
 
     .photo-counter {
       position: absolute;
-      bottom: 15px;
-      right: 15px;
-      background: rgba(0,0,0,.65);
+
+      right: 16px;
+      bottom: 16px;
+
+      background: rgba(0,0,0,.68);
+
       color: white;
+
       padding: 6px 11px;
+
       border-radius: 20px;
-      font-size: 13px;
-      font-weight: 700;
+
+      font-size: 12px;
+      font-weight: 750;
     }
+
+
+
+    /* =====================================================
+       THUMBNAILS
+    ===================================================== */
 
     .thumbnails {
       display: grid;
-      grid-template-columns: repeat(9, 1fr);
+
+      grid-template-columns:
+        repeat(9, 1fr);
+
       gap: 8px;
-      margin-top: 12px;
+
+      max-width: 620px;
+
+      margin: 13px auto 0;
     }
 
+
     .thumbnail {
-      height: 75px;
-      border: 3px solid transparent;
-      border-radius: 7px;
-      overflow: hidden;
-      cursor: pointer;
-      background: #e4e9ed;
+      height: 65px;
+
       padding: 0;
+
+      border: 3px solid transparent;
+
+      border-radius: 7px;
+
+      overflow: hidden;
+
+      cursor: pointer;
+
+      background: var(--gris-200);
+
+      transition: .2s ease;
     }
+
+
+    .thumbnail:hover {
+      transform: translateY(-2px);
+    }
+
 
     .thumbnail.active {
       border-color: var(--naranja);
     }
 
+
     .thumbnail img {
       width: 100%;
       height: 100%;
+
       object-fit: cover;
+
       display: block;
     }
 
-    .content {
+
+
+    /* =====================================================
+       INFORMATION
+    ===================================================== */
+
+    .information {
       padding: 35px;
     }
 
+
     .status {
-      display: inline-block;
-      background: var(--rojo);
-      color: white;
+      display: inline-flex;
+
+      align-items: center;
+
       padding: 7px 12px;
+
+      margin-bottom: 20px;
+
       border-radius: 6px;
-      font-size: 12px;
-      font-weight: 800;
+
+      color: white;
+
+      background: var(--rojo);
+
+      font-size: 11px;
+      font-weight: 850;
+
       text-transform: uppercase;
-      margin-bottom: 15px;
+
+      letter-spacing: .5px;
     }
 
-    .operation {
-      color: var(--naranja);
-      font-size: 13px;
-      font-weight: 800;
-      text-transform: uppercase;
-      margin-bottom: 8px;
+
+    .status::before {
+      content: "";
+
+      width: 6px;
+      height: 6px;
+
+      margin-right: 7px;
+
+      border-radius: 50%;
+
+      background: white;
     }
 
-    h1 {
+
+
+    /* =====================================================
+       PRICE MOBILE / INFORMATION
+    ===================================================== */
+
+    .mobile-price {
+      display: none;
+
       color: var(--azul);
-      font-size: clamp(30px, 5vw, 44px);
-      line-height: 1.15;
-      margin-bottom: 8px;
-    }
 
-    .location {
-      color: #687580;
+      font-size: 29px;
+      font-weight: 850;
+
       margin-bottom: 22px;
     }
 
-    .price {
-      color: var(--azul);
-      font-size: 32px;
-      font-weight: 800;
-      margin-bottom: 25px;
-    }
+
+
+    /* =====================================================
+       FEATURES
+    ===================================================== */
 
     .features {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      padding: 20px 0;
-      border-top: 1px solid #edf0f2;
-      border-bottom: 1px solid #edf0f2;
-      margin-bottom: 25px;
+      display: grid;
+
+      grid-template-columns:
+        repeat(6, 1fr);
+
+      gap: 10px;
+
+      padding: 22px 0;
+
+      margin-bottom: 32px;
+
+      border-top: 1px solid var(--gris-200);
+
+      border-bottom: 1px solid var(--gris-200);
     }
+
 
     .feature {
-      background: var(--gris);
-      padding: 10px 14px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: 600;
-    }
+      padding: 14px 10px;
 
-    .description h2 {
-      color: var(--azul);
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
+      border-radius: 10px;
 
-    .description p {
-      color: #687580;
-      max-width: 750px;
-      margin-bottom: 25px;
-    }
+      background: var(--gris-50);
 
-   .whatsapp {
-  display: inline-block;
-  background: #25D366;
-  color: white;
-  padding: 15px 24px;
-  border-radius: 9px;
-  font-weight: 800;
-  margin-top: 15px;
-  margin-bottom: 30px;
-  position: relative;
-  z-index: 10;
-  transition: transform .2s;
-}
-
-.whatsapp:hover {
-  transform: translateY(-2px);
-}
-
-    footer {
-      background: var(--azul-oscuro);
-      color: #dceaf1;
-      padding: 35px 0;
       text-align: center;
     }
 
-    footer strong {
-      color: white;
-      font-size: 19px;
+
+    .feature-icon {
+      display: block;
+
+      color: var(--naranja);
+
+      font-size: 21px;
+
+      margin-bottom: 5px;
     }
 
-    footer p {
-      margin-top: 7px;
+
+    .feature strong {
+      display: block;
+
+      color: var(--azul);
+
+      font-size: 13px;
+    }
+
+
+    .feature span {
+      display: block;
+
+      color: var(--gris-500);
+
+      font-size: 11px;
+    }
+
+
+
+    /* =====================================================
+       TWO COLUMNS
+    ===================================================== */
+
+    .details-grid {
+      display: grid;
+
+      grid-template-columns:
+        minmax(0, 1.45fr)
+        minmax(280px, .55fr);
+
+      gap: 55px;
+
+      align-items: start;
+    }
+
+
+
+    /* =====================================================
+       DESCRIPTION
+    ===================================================== */
+
+    .section-title {
+      color: var(--azul);
+
+      font-size: 24px;
+
+      line-height: 1.2;
+
+      margin-bottom: 17px;
+    }
+
+
+    .description p {
+      color: var(--gris-500);
+
+      font-size: 15px;
+
+      line-height: 1.75;
+
+      margin-bottom: 18px;
+    }
+
+
+
+    /* =====================================================
+       CONDITIONS
+    ===================================================== */
+
+    .conditions {
+      margin-top: 35px;
+
+      padding-top: 30px;
+
+      border-top: 1px solid var(--gris-200);
+    }
+
+
+    .conditions-list {
+      list-style: none;
+
+      display: grid;
+
+      gap: 12px;
+    }
+
+
+    .conditions-list li {
+      display: flex;
+
+      align-items: flex-start;
+
+      gap: 11px;
+
+      color: var(--gris-500);
+
       font-size: 14px;
     }
 
-    @media (max-width: 700px) {
+
+    .conditions-list li::before {
+      content: "✓";
+
+      flex-shrink: 0;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      width: 21px;
+      height: 21px;
+
+      border-radius: 50%;
+
+      background: #edf7f1;
+
+      color: var(--verde);
+
+      font-size: 12px;
+
+      font-weight: 900;
+    }
+
+
+
+    /* =====================================================
+       CONTACT BOX
+    ===================================================== */
+
+    .contact-box {
+      position: sticky;
+
+      top: 105px;
+
+      padding: 27px;
+
+      border: 1px solid var(--gris-200);
+
+      border-radius: 14px;
+
+      background: var(--gris-50);
+    }
+
+
+    .contact-box h3 {
+      color: var(--azul);
+
+      font-size: 21px;
+
+      line-height: 1.25;
+
+      margin-bottom: 9px;
+    }
+
+
+    .contact-box p {
+      color: var(--gris-500);
+
+      font-size: 13px;
+
+      margin-bottom: 20px;
+    }
+
+
+    .contact-price {
+      padding: 17px 0;
+
+      margin-bottom: 20px;
+
+      border-top: 1px solid var(--gris-200);
+
+      border-bottom: 1px solid var(--gris-200);
+    }
+
+
+    .contact-price small {
+      display: block;
+
+      color: var(--gris-400);
+
+      font-size: 11px;
+    }
+
+
+    .contact-price strong {
+      color: var(--azul);
+
+      font-size: 25px;
+    }
+
+
+    .whatsapp {
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      width: 100%;
+
+      padding: 14px 18px;
+
+      border-radius: 9px;
+
+      background: #25D366;
+
+      color: white;
+
+      font-size: 14px;
+      font-weight: 800;
+
+      transition: .2s ease;
+    }
+
+
+    .whatsapp:hover {
+      background: #20bd5b;
+
+      transform: translateY(-2px);
+    }
+
+
+    .contact-note {
+      margin-top: 13px;
+
+      color: var(--gris-400);
+
+      font-size: 11px;
+
+      text-align: center;
+    }
+
+
+
+    /* =====================================================
+       LOCATION
+    ===================================================== */
+
+    .location-section {
+      margin-top: 40px;
+
+      padding-top: 30px;
+
+      border-top: 1px solid var(--gris-200);
+    }
+
+
+    .location-card {
+      padding: 22px;
+
+      border-radius: 12px;
+
+      background: var(--gris-50);
+
+      border: 1px solid var(--gris-200);
+    }
+
+
+    .location-card strong {
+      display: block;
+
+      color: var(--azul);
+
+      font-size: 15px;
+
+      margin-bottom: 5px;
+    }
+
+
+    .location-card p {
+      color: var(--gris-500);
+
+      font-size: 13px;
+    }
+
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+      padding: 42px 0;
+
+      background: var(--azul-oscuro);
+
+      color: #cbdbe4;
+
+      text-align: center;
+    }
+
+
+    footer strong {
+      color: white;
+
+      font-size: 20px;
+    }
+
+
+    footer p {
+      margin-top: 8px;
+
+      font-size: 13px;
+    }
+
+
+
+    /* =====================================================
+       FLOATING WHATSAPP
+    ===================================================== */
+
+    .whatsapp-floating {
+      position: fixed;
+
+      right: 22px;
+      bottom: 22px;
+
+      z-index: 1500;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+      width: 56px;
+      height: 56px;
+
+      border-radius: 50%;
+
+      background: #25D366;
+
+      color: white;
+
+      font-size: 25px;
+
+      box-shadow:
+        0 8px 25px rgba(0,0,0,.18);
+
+      transition: .2s ease;
+    }
+
+
+    .whatsapp-floating:hover {
+      transform:
+        translateY(-3px)
+        scale(1.03);
+    }
+
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 900px) {
+
+      .property-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 8px;
+      }
+
+
+      .header-price {
+        display: none;
+      }
+
+
+      .mobile-price {
+        display: block;
+      }
+
+
+      .features {
+        grid-template-columns:
+          repeat(3, 1fr);
+      }
+
+
+      .details-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+      }
+
+
+      .contact-box {
+        position: static;
+      }
+
+    }
+
+
+
+    @media (max-width: 600px) {
+
+      .container {
+        width: 94%;
+      }
+
 
       .nav {
-        min-height: 65px;
+        min-height: 68px;
       }
+
 
       .logo {
-        font-size: 20px;
+        font-size: 19px;
       }
 
-      main {
-        padding: 20px 0 50px;
+
+      .back {
+        font-size: 12px;
       }
+
+
+      main {
+        padding: 20px 0 55px;
+      }
+
+
+      .property-header {
+        margin-bottom: 18px;
+      }
+
+
+      .property-header h1 {
+        font-size: 32px;
+      }
+
+
+      .location {
+        font-size: 13px;
+      }
+
 
       .gallery {
         padding: 10px;
       }
 
+
       .main-photo {
-        height: 70vw;
-        min-height: 260px;
+        max-width: 100%;
       }
 
-      .thumbnails {
-        grid-template-columns: repeat(5, 1fr);
-      }
-
-      .thumbnail {
-        height: 60px;
-      }
-
-      .content {
-        padding: 25px 20px;
-      }
-
-      .price {
-        font-size: 27px;
-      }
 
       .gallery-button {
         width: 40px;
         height: 40px;
+
+        font-size: 23px;
       }
+
+
+      .prev {
+        left: 10px;
+      }
+
+
+      .next {
+        right: 10px;
+      }
+
+
+      .photo-counter {
+        right: 10px;
+        bottom: 10px;
+      }
+
+
+      .thumbnails {
+        grid-template-columns:
+          repeat(5, 1fr);
+
+        gap: 6px;
+      }
+
+
+      .thumbnail {
+        height: 58px;
+      }
+
+
+      .information {
+        padding: 25px 18px;
+      }
+
+
+      .features {
+        grid-template-columns:
+          repeat(2, 1fr);
+
+        gap: 8px;
+
+        padding: 18px 0;
+
+        margin-bottom: 27px;
+      }
+
+
+      .feature {
+        padding: 12px 8px;
+      }
+
+
+      .section-title {
+        font-size: 22px;
+      }
+
+
+      .description p {
+        font-size: 14px;
+      }
+
+
+      .contact-box {
+        padding: 22px;
+      }
+
+
+      .whatsapp-floating {
+        right: 17px;
+        bottom: 17px;
+
+        width: 52px;
+        height: 52px;
+      }
+
     }
+
   </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
 <header>
+
   <div class="container nav">
 
-    <a href="index.html" class="logo">
+    <a href="../../index.html" class="logo">
       Sotofrau <span>Propiedades</span>
     </a>
 
-    <a href="index.html#propiedades" class="back">
+
+    <a
+      href="../../index.html#propiedades"
+      class="back"
+    >
       ← Volver a propiedades
     </a>
 
   </div>
+
 </header>
+
+
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
 
 <main>
 
   <div class="container">
 
+
+    <!-- =================================================
+         TITULO
+    ================================================== -->
+
+    <div class="property-header">
+
+      <div>
+
+        <div class="property-label">
+          Arriendo
+        </div>
+
+        <h1>
+          Habitación en arriendo
+        </h1>
+
+        <div class="location">
+          Valparaíso · Sector Yungay
+        </div>
+
+      </div>
+
+
+      <div class="header-price">
+
+        <small>
+          Arriendo mensual
+        </small>
+
+        <strong>
+          $260.000
+        </strong>
+
+      </div>
+
+    </div>
+
+
+
+    <!-- =================================================
+         PROPERTY
+    ================================================== -->
+
     <article class="property">
 
-      <!-- GALERÍA -->
+
+      <!-- =================================================
+           GALERÍA
+      ================================================== -->
 
       <div class="gallery">
+
 
         <div class="main-photo">
 
@@ -368,6 +1166,7 @@
             alt="Habitación en arriendo en Valparaíso"
           >
 
+
           <button
             class="gallery-button prev"
             onclick="anterior()"
@@ -375,6 +1174,7 @@
           >
             ‹
           </button>
+
 
           <button
             class="gallery-button next"
@@ -384,144 +1184,454 @@
             ›
           </button>
 
+
           <div class="photo-counter">
-            <span id="currentPhoto">1</span> / 9
+
+            <span id="currentPhoto">
+              1
+            </span>
+
+            / 9
+
           </div>
 
         </div>
 
+
+
+        <!-- =================================================
+             MINIATURAS
+        ================================================== -->
+
         <div class="thumbnails">
 
-          <button class="thumbnail active" onclick="mostrarFoto(1)">
-            <img src="propiedades/1/1.jpeg" alt="Foto 1">
+
+          <button
+            class="thumbnail active"
+            onclick="mostrarFoto(1)"
+          >
+            <img
+              src="propiedades/1/1.jpeg"
+              alt="Foto 1"
+            >
           </button>
 
-          <button class="thumbnail" onclick="mostrarFoto(2)">
-            <img src="propiedades/1/2.jpeg" alt="Foto 2">
+
+          <button
+            class="thumbnail"
+            onclick="mostrarFoto(2)"
+          >
+            <img
+              src="propiedades/1/2.jpeg"
+              alt="Foto 2"
+            >
           </button>
 
-          <button class="thumbnail" onclick="mostrarFoto(3)">
-            <img src="propiedades/1/3.jpeg" alt="Foto 3">
+
+          <button
+            class="thumbnail"
+            onclick="mostrarFoto(3)"
+          >
+            <img
+              src="propiedades/1/3.jpeg"
+              alt="Foto 3"
+            >
           </button>
 
-          <button class="thumbnail" onclick="mostrarFoto(4)">
-            <img src="propiedades/1/4.jpeg" alt="Foto 4">
+
+          <button
+            class="thumbnail"
+            onclick="mostrarFoto(4)"
+          >
+            <img
+              src="propiedades/1/4.jpeg"
+              alt="Foto 4"
+            >
           </button>
 
-          <button class="thumbnail" onclick="mostrarFoto(5)">
-            <img src="propiedades/1/5.jpeg" alt="Foto 5">
+
+          <button
+            class="thumbnail"
+            onclick="mostrarFoto(5)"
+          >
+            <img
+              src="propiedades/1/5.jpeg"
+              alt="Foto 5"
+            >
           </button>
 
-          <button class="thumbnail" onclick="mostrarFoto(6)">
-            <img src="propiedades/1/6.jpeg" alt="Foto 6">
+
+          <button
+            class="thumbnail"
+            onclick="mostrarFoto(6)"
+          >
+            <img
+              src="propiedades/1/6.jpeg"
+              alt="Foto 6"
+            >
           </button>
 
-          <button class="thumbnail" onclick="mostrarFoto(7)">
-            <img src="propiedades/1/7.jpeg" alt="Foto 7">
+
+          <button
+            class="thumbnail"
+            onclick="mostrarFoto(7)"
+          >
+            <img
+              src="propiedades/1/7.jpeg"
+              alt="Foto 7"
+            >
           </button>
 
-          <button class="thumbnail" onclick="mostrarFoto(8)">
-            <img src="propiedades/1/8.jpeg" alt="Foto 8">
+
+          <button
+            class="thumbnail"
+            onclick="mostrarFoto(8)"
+          >
+            <img
+              src="propiedades/1/8.jpeg"
+              alt="Foto 8"
+            >
           </button>
 
-          <button class="thumbnail" onclick="mostrarFoto(9)">
-            <img src="propiedades/1/9.jpeg" alt="Foto 9">
+
+          <button
+            class="thumbnail"
+            onclick="mostrarFoto(9)"
+          >
+            <img
+              src="propiedades/1/9.jpeg"
+              alt="Foto 9"
+            >
           </button>
+
 
         </div>
 
       </div>
 
 
-      <!-- INFORMACIÓN -->
 
-      <div class="content">
+      <!-- =================================================
+           INFORMATION
+      ================================================== -->
+
+      <div class="information">
+
 
         <span class="status">
           Arrendada
         </span>
 
-        <div class="operation">
-          Arriendo
-        </div>
 
-        <h1>
-          Habitación en arriendo
-        </h1>
-
-        <div class="location">
-          Valparaíso, Valparaíso
-        </div>
-
-        <div class="price">
+        <div class="mobile-price">
           $260.000
         </div>
 
 
+
+        <!-- =================================================
+             FEATURES
+        ================================================== -->
+
         <div class="features">
 
-          <div class="feature">
-            🛏 1 dormitorio
-          </div>
 
           <div class="feature">
-            🚿 1 baño
+
+            <span class="feature-icon">
+              🛏
+            </span>
+
+            <strong>
+              1
+            </strong>
+
+            <span>
+              Dormitorio
+            </span>
+
           </div>
 
-          <div class="feature">
-            📐 72 m²
-          </div>
 
           <div class="feature">
-            🛋 Amoblado
+
+            <span class="feature-icon">
+              🚿
+            </span>
+
+            <strong>
+              1
+            </strong>
+
+            <span>
+              Baño
+            </span>
+
           </div>
 
-          <div class="feature">
-            Gastos comunes incluidos
-          </div>
 
           <div class="feature">
-            🚫 No acepta mascotas
+
+            <span class="feature-icon">
+              📐
+            </span>
+
+            <strong>
+              72 m²
+            </strong>
+
+            <span>
+              Superficie
+            </span>
+
           </div>
+
+
+          <div class="feature">
+
+            <span class="feature-icon">
+              🛋
+            </span>
+
+            <strong>
+              Sí
+            </strong>
+
+            <span>
+              Amoblada
+            </span>
+
+          </div>
+
+
+          <div class="feature">
+
+            <span class="feature-icon">
+              💰
+            </span>
+
+            <strong>
+              Incluidos
+            </strong>
+
+            <span>
+              Gastos comunes
+            </span>
+
+          </div>
+
+
+          <div class="feature">
+
+            <span class="feature-icon">
+              🐾
+            </span>
+
+            <strong>
+              No
+            </strong>
+
+            <span>
+              Mascotas
+            </span>
+
+          </div>
+
 
         </div>
 
 
-        <div class="description">
 
-  <h2>
-    Sobre esta propiedad
-  </h2>
+        <!-- =================================================
+             DETAILS
+        ================================================== -->
 
-  <p>
-    Habitación en arriendo ubicada en el sector de calle Yungay,
-    Valparaíso. La propiedad se encuentra amoblada y cuenta con
-    1 dormitorio y 1 baño, con una superficie informada de 72 m².
-  </p>
+        <div class="details-grid">
 
-  <p>
-    El arriendo es de $260.000 mensuales e incluye los gastos comunes.
-    Los gastos correspondientes a servicios básicos se distribuyen
-    entre los arrendatarios.
-  </p>
 
-  <p>
-    Una alternativa para quienes buscan una habitación amoblada
-    en Valparaíso. Para conocer disponibilidad, condiciones y
-    coordinar una visita, puedes contactarnos directamente por WhatsApp.
-  </p>
+          <!-- =================================================
+               DESCRIPCIÓN
+          ================================================== -->
 
-</div>
+          <div>
 
-        <a
-  class="whatsapp"
-  href="https://wa.me/56944844983?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20la%20propiedad%20%22Habitaci%C3%B3n%20en%20arriendo%22."
-  target="_blank"
->
-  Consultar por WhatsApp
-</a>
+
+            <section class="description">
+
+              <h2 class="section-title">
+                Sobre esta propiedad
+              </h2>
+
+
+              <p>
+                Habitación en arriendo ubicada en el
+                sector de calle Yungay, Valparaíso.
+                La propiedad se encuentra amoblada y
+                cuenta con 1 dormitorio y 1 baño,
+                con una superficie informada de 72 m².
+              </p>
+
+
+              <p>
+                El arriendo mensual es de
+                <strong>$260.000</strong> e incluye los
+                gastos comunes.
+              </p>
+
+
+              <p>
+                Los gastos correspondientes a los
+                servicios básicos se distribuyen entre
+                los arrendatarios de la propiedad.
+              </p>
+
+
+              <p>
+                Una alternativa para quienes buscan
+                una habitación amoblada en Valparaíso,
+                en un sector con conectividad hacia
+                distintos puntos de la ciudad.
+              </p>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 CONDICIONES
+            ================================================== -->
+
+            <section class="conditions">
+
+              <h2 class="section-title">
+                Condiciones
+              </h2>
+
+
+              <ul class="conditions-list">
+
+
+                <li>
+                  Arriendo mensual:
+                  <strong>$260.000</strong>
+                </li>
+
+
+                <li>
+                  Gastos comunes incluidos
+                  en el valor del arriendo.
+                </li>
+
+
+                <li>
+                  Servicios básicos distribuidos
+                  entre los arrendatarios.
+                </li>
+
+
+                <li>
+                  Propiedad amoblada.
+                </li>
+
+
+                <li>
+                  No se aceptan mascotas.
+                </li>
+
+
+              </ul>
+
+            </section>
+
+
+
+            <!-- =================================================
+                 UBICACIÓN
+            ================================================== -->
+
+            <section class="location-section">
+
+              <h2 class="section-title">
+                Ubicación
+              </h2>
+
+
+              <div class="location-card">
+
+                <strong>
+                  Valparaíso · Sector Yungay
+                </strong>
+
+                <p>
+                  La dirección exacta se entrega
+                  directamente a los interesados
+                  al momento de coordinar la visita.
+                </p>
+
+              </div>
+
+            </section>
+
+
+          </div>
+
+
+
+          <!-- =================================================
+               CONTACTO
+          ================================================== -->
+
+          <aside class="contact-box">
+
+
+            <h3>
+              ¿Te interesa esta propiedad?
+            </h3>
+
+
+            <p>
+              Escríbeme directamente por WhatsApp
+              para consultar condiciones,
+              disponibilidad o coordinar una visita.
+            </p>
+
+
+            <div class="contact-price">
+
+              <small>
+                Arriendo mensual
+              </small>
+
+              <strong>
+                $260.000
+              </strong>
+
+            </div>
+
+
+            <a
+              class="whatsapp"
+              href="https://wa.me/56944844983?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20la%20habitaci%C3%B3n%20en%20arriendo%20en%20Valpara%C3%ADso%2C%20sector%20Yungay."
+              target="_blank"
+              rel="noopener"
+            >
+              Consultar por WhatsApp
+            </a>
+
+
+            <div class="contact-note">
+              Sotofrau Propiedades
+            </div>
+
+
+          </aside>
+
+
+        </div>
+
 
       </div>
+
 
     </article>
 
@@ -529,6 +1639,11 @@
 
 </main>
 
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
@@ -538,12 +1653,15 @@
       Sotofrau Propiedades
     </strong>
 
+
     <p>
       Compra · Venta · Arriendo · Administración
     </p>
 
+
     <p>
-      © 2026 Sotofrau Propiedades
+      © 2026 Sotofrau Propiedades ·
+      Todos los derechos reservados.
     </p>
 
   </div>
@@ -551,65 +1669,125 @@
 </footer>
 
 
+
+<!-- =====================================================
+     WHATSAPP FLOTANTE
+===================================================== -->
+
+<a
+  class="whatsapp-floating"
+  href="https://wa.me/56944844983?text=Hola%2C%20quiero%20consultar%20por%20una%20propiedad."
+  target="_blank"
+  rel="noopener"
+  aria-label="Contactar por WhatsApp"
+>
+  ☎
+</a>
+
+
+
+<!-- =====================================================
+     JAVASCRIPT GALERÍA
+===================================================== -->
+
 <script>
 
+
   const fotos = [
+
     "propiedades/1/1.jpeg",
+
     "propiedades/1/2.jpeg",
+
     "propiedades/1/3.jpeg",
+
     "propiedades/1/4.jpeg",
+
     "propiedades/1/5.jpeg",
+
     "propiedades/1/6.jpeg",
+
     "propiedades/1/7.jpeg",
+
     "propiedades/1/8.jpeg",
+
     "propiedades/1/9.jpeg"
+
   ];
 
+
   let fotoActual = 1;
+
 
   function mostrarFoto(numero) {
 
     fotoActual = numero;
 
-    document.getElementById("mainImage").src = fotos[numero - 1];
 
-    document.getElementById("currentPhoto").textContent = numero;
+    document
+      .getElementById("mainImage")
+      .src = fotos[numero - 1];
 
-    const thumbnails = document.querySelectorAll(".thumbnail");
 
-    thumbnails.forEach((thumbnail, index) => {
+    document
+      .getElementById("currentPhoto")
+      .textContent = numero;
+
+
+    const thumbnails =
+      document.querySelectorAll(".thumbnail");
+
+
+    thumbnails.forEach(function(thumbnail, index) {
 
       thumbnail.classList.remove("active");
 
+
       if (index === numero - 1) {
+
         thumbnail.classList.add("active");
+
       }
 
     });
 
   }
 
+
+
   function siguiente() {
 
     if (fotoActual === fotos.length) {
+
       mostrarFoto(1);
+
     } else {
+
       mostrarFoto(fotoActual + 1);
+
     }
 
   }
+
+
 
   function anterior() {
 
     if (fotoActual === 1) {
+
       mostrarFoto(fotos.length);
+
     } else {
+
       mostrarFoto(fotoActual - 1);
+
     }
 
   }
 
+
 </script>
+
 
 </body>
 </html>
