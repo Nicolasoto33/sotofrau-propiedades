@@ -23,11 +23,9 @@
     content="#0d2f49"
   >
 
-
   <style>
 
     :root {
-
       --azul: #0d2f49;
       --azul-2: #164968;
       --azul-oscuro: #081f31;
@@ -71,7 +69,6 @@
 
 
     body {
-
       font-family:
         Inter,
         -apple-system,
@@ -105,32 +102,20 @@
 
 
     .container {
-
-      width:
-        min(
-          var(--ancho),
-          92%
-        );
-
+      width: min(var(--ancho), 92%);
       margin: auto;
     }
 
 
-
-    /* =====================================================
-       HEADER
-    ===================================================== */
+    /* HEADER */
 
     header {
-
       position: sticky;
-
       top: 0;
-
       z-index: 1000;
 
       background:
-        rgba(255,255,255,.96);
+        rgba(255,255,255,.97);
 
       backdrop-filter:
         blur(14px);
@@ -141,13 +126,10 @@
 
 
     .nav {
-
       min-height: 78px;
 
       display: flex;
-
       align-items: center;
-
       justify-content: space-between;
 
       gap: 30px;
@@ -155,15 +137,12 @@
 
 
     .logo {
-
       display: inline-flex;
-
       align-items: center;
 
       color: var(--azul);
 
       font-size: 23px;
-
       font-weight: 800;
 
       letter-spacing: -.5px;
@@ -173,29 +152,23 @@
 
 
     .logo span {
-
       color: var(--naranja);
-
       margin-left: 5px;
     }
 
 
     nav {
-
       display: flex;
-
       align-items: center;
 
       gap: 26px;
 
       font-size: 14px;
-
       font-weight: 650;
     }
 
 
     nav a {
-
       color: var(--azul);
 
       transition: .2s ease;
@@ -203,13 +176,11 @@
 
 
     nav a:hover {
-
       color: var(--naranja);
     }
 
 
     .nav-contact {
-
       background: var(--azul);
 
       color: white !important;
@@ -221,24 +192,18 @@
 
 
     .nav-contact:hover {
-
       background: var(--azul-2);
     }
 
 
-
-    /* =====================================================
-       HERO
-    ===================================================== */
+    /* HERO */
 
     .hero {
-
       position: relative;
 
       min-height: 650px;
 
       display: flex;
-
       align-items: center;
 
       overflow: hidden;
@@ -248,9 +213,9 @@
       background:
         linear-gradient(
           90deg,
-          rgba(6,25,40,.97) 0%,
-          rgba(8,34,53,.88) 45%,
-          rgba(8,34,53,.52) 100%
+          rgba(6,25,40,.97),
+          rgba(8,34,53,.88),
+          rgba(8,34,53,.52)
         ),
         linear-gradient(
           135deg,
@@ -261,7 +226,6 @@
 
 
     .hero::after {
-
       content: "";
 
       position: absolute;
@@ -270,7 +234,6 @@
       height: 500px;
 
       right: -180px;
-
       bottom: -230px;
 
       border-radius: 50%;
@@ -281,7 +244,6 @@
 
 
     .hero-content {
-
       position: relative;
 
       z-index: 2;
@@ -293,7 +255,6 @@
 
 
     .hero-label {
-
       display: inline-flex;
 
       align-items: center;
@@ -315,21 +276,19 @@
 
 
     .hero-label::before {
-
       content: "";
 
       width: 28px;
-
       height: 2px;
 
-      background: var(--naranja);
+      background:
+        var(--naranja);
     }
 
 
     .hero h1 {
-
       font-size:
-        clamp(43px, 6vw, 70px);
+        clamp(43px,6vw,70px);
 
       line-height: 1.02;
 
@@ -340,13 +299,11 @@
 
 
     .hero h1 span {
-
       color: #f3a04b;
     }
 
 
     .hero p {
-
       max-width: 650px;
 
       color: #e4eef3;
@@ -360,7 +317,6 @@
 
 
     .buttons {
-
       display: flex;
 
       flex-wrap: wrap;
@@ -370,7 +326,6 @@
 
 
     .btn {
-
       display: inline-flex;
 
       align-items: center;
@@ -385,24 +340,17 @@
 
       font-weight: 750;
 
-      transition:
-        transform .2s ease,
-        background .2s ease,
-        box-shadow .2s ease;
+      transition: .2s ease;
     }
 
 
     .btn:hover {
-
-      transform:
-        translateY(-2px);
+      transform: translateY(-2px);
     }
 
 
     .btn-primary {
-
-      background:
-        var(--naranja);
+      background: var(--naranja);
 
       color: white;
 
@@ -412,33 +360,26 @@
 
 
     .btn-primary:hover {
-
       background:
         var(--naranja-hover);
     }
 
 
     .btn-light {
-
       background: white;
 
       color: var(--azul);
     }
 
 
-
-    /* =====================================================
-       SECCIONES
-    ===================================================== */
+    /* SECCIONES */
 
     section {
-
       padding: 90px 0;
     }
 
 
     .section-header {
-
       max-width: 680px;
 
       margin:
@@ -449,12 +390,12 @@
 
 
     .section-label {
-
       display: block;
 
       margin-bottom: 9px;
 
-      color: var(--naranja);
+      color:
+        var(--naranja);
 
       font-size: 12px;
 
@@ -467,11 +408,11 @@
 
 
     .section-header h2 {
-
-      color: var(--azul);
+      color:
+        var(--azul);
 
       font-size:
-        clamp(30px, 4vw, 40px);
+        clamp(30px,4vw,40px);
 
       line-height: 1.15;
 
@@ -482,27 +423,22 @@
 
 
     .section-header p {
-
-      color: var(--gris-500);
+      color:
+        var(--gris-500);
 
       font-size: 16px;
     }
 
 
-
-    /* =====================================================
-       PROPIEDADES
-    ===================================================== */
+    /* PROPIEDADES */
 
     .properties-section {
-
       background:
         var(--gris-50);
     }
 
 
     .filters {
-
       display: flex;
 
       justify-content: center;
@@ -516,7 +452,6 @@
 
 
     .filter {
-
       border:
         1px solid var(--gris-200);
 
@@ -540,28 +475,27 @@
 
     .filter:hover,
     .filter.active {
+      background:
+        var(--azul);
 
-      background: var(--azul);
-
-      border-color: var(--azul);
+      border-color:
+        var(--azul);
 
       color: white;
     }
 
 
     .property-grid {
-
       display: grid;
 
       grid-template-columns:
-        repeat(3, 1fr);
+        repeat(3,1fr);
 
       gap: 25px;
     }
 
 
     .property-card {
-
       background: white;
 
       border:
@@ -582,7 +516,6 @@
 
 
     .property-card:hover {
-
       transform:
         translateY(-5px);
 
@@ -592,13 +525,11 @@
 
 
     .property-card.hidden {
-
       display: none;
     }
 
 
     .property-image {
-
       position: relative;
 
       height: 245px;
@@ -615,13 +546,11 @@
 
 
     .property-image img {
-
       position: absolute;
 
       inset: 0;
 
       width: 100%;
-
       height: 100%;
 
       object-fit: cover;
@@ -635,42 +564,15 @@
 
     .property-card:hover
     .property-image img {
-
       transform:
         scale(1.03);
     }
 
 
-    .image-placeholder {
-
-      position: absolute;
-
-      inset: 0;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      color: #61727d;
-
-      font-size: 13px;
-
-      text-align: center;
-
-      padding: 20px;
-
-      pointer-events: none;
-    }
-
-
     .status {
-
       position: absolute;
 
       top: 15px;
-
       left: 15px;
 
       z-index: 5;
@@ -692,34 +594,29 @@
 
 
     .status-arrendada {
-
       background:
         var(--rojo);
     }
 
 
     .status-disponible {
-
       background:
         var(--verde);
     }
 
 
     .status-vendida {
-
       background:
         #59656d;
     }
 
 
     .property-content {
-
       padding: 23px;
     }
 
 
     .operation {
-
       margin-bottom: 7px;
 
       color:
@@ -736,8 +633,8 @@
 
 
     .property-content h3 {
-
-      color: var(--azul);
+      color:
+        var(--azul);
 
       font-size: 21px;
 
@@ -748,7 +645,6 @@
 
 
     .location {
-
       color:
         var(--gris-500);
 
@@ -759,8 +655,8 @@
 
 
     .price {
-
-      color: var(--azul);
+      color:
+        var(--azul);
 
       font-size: 24px;
 
@@ -771,7 +667,6 @@
 
 
     .features {
-
       display: flex;
 
       flex-wrap: wrap;
@@ -791,7 +686,6 @@
 
 
     .property-button {
-
       display: flex;
 
       align-items: center;
@@ -820,30 +714,24 @@
 
 
     .property-button:hover {
-
       background:
         var(--azul-oscuro);
     }
 
 
-
-    /* =====================================================
-       SERVICIOS
-    ===================================================== */
+    /* SERVICIOS */
 
     .service-grid {
-
       display: grid;
 
       grid-template-columns:
-        repeat(3, 1fr);
+        repeat(3,1fr);
 
       gap: 22px;
     }
 
 
     .service {
-
       position: relative;
 
       padding: 34px;
@@ -864,17 +752,14 @@
 
 
     .service::after {
-
       content: "";
 
       position: absolute;
 
       width: 90px;
-
       height: 90px;
 
       right: -45px;
-
       top: -45px;
 
       border-radius: 50%;
@@ -885,7 +770,6 @@
 
 
     .service-number {
-
       margin-bottom: 20px;
 
       color:
@@ -900,7 +784,6 @@
 
 
     .service h3 {
-
       color:
         var(--azul);
 
@@ -911,7 +794,6 @@
 
 
     .service p {
-
       color:
         var(--gris-500);
 
@@ -919,13 +801,9 @@
     }
 
 
-
-    /* =====================================================
-       ADMINISTRACIÓN
-    ===================================================== */
+    /* ADMINISTRACIÓN */
 
     .administration {
-
       background:
         var(--azul);
 
@@ -934,7 +812,6 @@
 
 
     .admin-grid {
-
       display: grid;
 
       grid-template-columns:
@@ -946,18 +823,11 @@
     }
 
 
-    .administration .section-label {
-
-      color: #f2a053;
-    }
-
-
     .administration h2 {
-
       max-width: 650px;
 
       font-size:
-        clamp(32px, 4vw, 46px);
+        clamp(32px,4vw,46px);
 
       line-height: 1.1;
 
@@ -967,11 +837,17 @@
     }
 
 
-    .admin-text {
+    .administration .section-label {
+      color:
+        #f2a053;
+    }
 
+
+    .admin-text {
       max-width: 620px;
 
-      color: #d5e3eb;
+      color:
+        #d5e3eb;
 
       font-size: 16px;
 
@@ -980,7 +856,6 @@
 
 
     .admin-list {
-
       list-style: none;
 
       display: grid;
@@ -990,33 +865,32 @@
 
 
     .admin-list li {
-
       position: relative;
 
       padding-left: 26px;
 
-      color: #eef5f8;
+      color:
+        #eef5f8;
 
       font-size: 14px;
     }
 
 
     .admin-list li::before {
-
       content: "✓";
 
       position: absolute;
 
       left: 0;
 
-      color: #f2a053;
+      color:
+        #f2a053;
 
       font-weight: 900;
     }
 
 
     .admin-box {
-
       background: white;
 
       color:
@@ -1033,7 +907,6 @@
 
 
     .admin-box h3 {
-
       color:
         var(--azul);
 
@@ -1046,7 +919,6 @@
 
 
     .admin-box p {
-
       color:
         var(--gris-500);
 
@@ -1056,13 +928,9 @@
     }
 
 
-
-    /* =====================================================
-       CAPTACIÓN
-    ===================================================== */
+    /* CAPTACIÓN */
 
     .capture {
-
       background:
         var(--gris-50);
 
@@ -1071,7 +939,6 @@
 
 
     .capture-box {
-
       max-width: 850px;
 
       margin: auto;
@@ -1091,23 +958,19 @@
 
 
     .capture-box h2 {
-
       color:
         var(--azul);
 
       font-size:
-        clamp(31px, 4vw, 42px);
+        clamp(31px,4vw,42px);
 
       line-height: 1.15;
-
-      letter-spacing: -.8px;
 
       margin-bottom: 14px;
     }
 
 
     .capture-box p {
-
       max-width: 650px;
 
       margin:
@@ -1120,30 +983,24 @@
     }
 
 
-
-    /* =====================================================
-       CONTACTO
-    ===================================================== */
+    /* CONTACTO */
 
     .contact {
-
       background: white;
     }
 
 
     .contact-grid {
-
       display: grid;
 
       grid-template-columns:
-        repeat(3, 1fr);
+        repeat(3,1fr);
 
       gap: 20px;
     }
 
 
     .contact-item {
-
       padding: 30px;
 
       border:
@@ -1159,7 +1016,6 @@
 
 
     .contact-item h3 {
-
       color:
         var(--azul);
 
@@ -1170,7 +1026,6 @@
 
 
     .contact-item p {
-
       color:
         var(--gris-500);
 
@@ -1179,19 +1034,14 @@
 
 
     .contact-item a:hover {
-
       color:
         var(--naranja);
     }
 
 
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
+    /* FOOTER */
 
     footer {
-
       padding: 42px 0;
 
       background:
@@ -1205,7 +1055,6 @@
 
 
     footer strong {
-
       color: white;
 
       font-size: 20px;
@@ -1213,24 +1062,18 @@
 
 
     footer p {
-
       margin-top: 8px;
 
       font-size: 13px;
     }
 
 
-
-    /* =====================================================
-       WHATSAPP
-    ===================================================== */
+    /* WHATSAPP */
 
     .whatsapp-floating {
-
       position: fixed;
 
       right: 22px;
-
       bottom: 22px;
 
       z-index: 1500;
@@ -1242,7 +1085,6 @@
       justify-content: center;
 
       width: 56px;
-
       height: 56px;
 
       border-radius: 50%;
@@ -1261,17 +1103,13 @@
 
 
     .whatsapp-floating:hover {
-
       transform:
         translateY(-3px)
         scale(1.03);
     }
 
 
-
-    /* =====================================================
-       MOBILE
-    ===================================================== */
+    /* MOBILE */
 
     @media (max-width: 900px) {
 
@@ -1298,13 +1136,11 @@
       .property-grid,
       .service-grid,
       .contact-grid {
-
         grid-template-columns: 1fr;
       }
 
 
       .admin-grid {
-
         grid-template-columns: 1fr;
 
         gap: 38px;
@@ -1319,11 +1155,6 @@
 
 
     @media (max-width: 600px) {
-
-      .container {
-        width: 94%;
-      }
-
 
       .nav {
         min-height: 68px;
@@ -1373,7 +1204,6 @@
 
 
       .whatsapp-floating {
-
         right: 17px;
 
         bottom: 17px;
@@ -1392,10 +1222,6 @@
 
 <body>
 
-
-<!-- =====================================================
-     HEADER
-===================================================== -->
 
 <header>
 
@@ -1442,10 +1268,6 @@
 </header>
 
 
-
-<!-- =====================================================
-     HERO
-===================================================== -->
 
 <section
   class="hero"
@@ -1499,10 +1321,6 @@
 </section>
 
 
-
-<!-- =====================================================
-     PROPIEDADES
-===================================================== -->
 
 <section
   class="properties-section"
@@ -1575,10 +1393,264 @@
     </div>
 
 
-    <div
-      class="property-grid"
-      id="propertyGrid"
-    >
+    <div class="property-grid">
+
+
+      <!-- ==========================
+           PROPIEDAD 1
+      ========================== -->
+
+      <article
+        class="property-card"
+        data-operation="arriendo"
+        data-status="gestionada"
+      >
+
+        <div class="property-image">
+
+          <span
+            class="status status-arrendada"
+          >
+            Arrendada
+          </span>
+
+
+          <img
+            src="propiedades/1/1.jpeg"
+            alt="Habitación en arriendo en Valparaíso"
+          >
+
+        </div>
+
+
+        <div class="property-content">
+
+          <div class="operation">
+            Arriendo
+          </div>
+
+
+          <h3>
+            Habitación en arriendo
+          </h3>
+
+
+          <div class="location">
+            Valparaíso · Sector Yungay
+          </div>
+
+
+          <div class="price">
+            $260.000
+          </div>
+
+
+          <div class="features">
+
+            <span>
+              🛏 1 dormitorio
+            </span>
+
+            <span>
+              🚿 1 baño
+            </span>
+
+            <span>
+              📐 72 m²
+            </span>
+
+            <span>
+              🛋 Amoblado
+            </span>
+
+          </div>
+
+
+          <a
+            href="propiedad.html?id=1"
+            class="property-button"
+          >
+            Ver propiedad
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- ==========================
+           PROPIEDAD 2
+      ========================== -->
+
+      <article
+        class="property-card"
+        data-operation="arriendo"
+        data-status="gestionada"
+      >
+
+        <div class="property-image">
+
+          <span
+            class="status status-arrendada"
+          >
+            Arrendada
+          </span>
+
+
+          <img
+            src="propiedades/2/1.jpeg"
+            alt="2° Piso Independiente en Arriendo en Quilpué"
+          >
+
+        </div>
+
+
+        <div class="property-content">
+
+          <div class="operation">
+            Arriendo
+          </div>
+
+
+          <h3>
+            2° Piso Independiente en Arriendo
+          </h3>
+
+
+          <div class="location">
+            Quilpué · Sector Teniente Serrano
+          </div>
+
+
+          <div class="price">
+            $400.000
+          </div>
+
+
+          <div class="features">
+
+            <span>
+              🛏 2 dormitorios
+            </span>
+
+            <span>
+              🚿 1 baño
+            </span>
+
+            <span>
+              📐 45 m²
+            </span>
+
+            <span>
+              🚗 Estacionamiento
+            </span>
+
+          </div>
+
+
+          <a
+            href="propiedad.html?id=2"
+            class="property-button"
+          >
+            Ver propiedad
+          </a>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- ==========================
+           PROPIEDAD 3
+      ========================== -->
+
+      <article
+        class="property-card"
+        data-operation="arriendo"
+        data-status="gestionada"
+      >
+
+        <div class="property-image">
+
+          <span
+            class="status status-arrendada"
+          >
+            Arrendada
+          </span>
+
+
+          <img
+            src="propiedades/3/foto-01.jpg"
+            alt="Departamento amoblado en Reñaca"
+            onerror="
+              this.style.display='none';
+            "
+          >
+
+        </div>
+
+
+        <div class="property-content">
+
+          <div class="operation">
+            Arriendo
+          </div>
+
+
+          <h3>
+            Departamento amoblado Reñaca
+          </h3>
+
+
+          <div class="location">
+            Reñaca · Viña del Mar
+          </div>
+
+
+          <div class="price">
+            $500.000
+          </div>
+
+
+          <div class="features">
+
+            <span>
+              🛏 1 dormitorio
+            </span>
+
+            <span>
+              🚿 1 baño
+            </span>
+
+            <span>
+              📐 52 m²
+            </span>
+
+            <span>
+              🚗 Estacionamiento
+            </span>
+
+            <span>
+              📦 Bodega
+            </span>
+
+          </div>
+
+
+          <a
+            href="propiedad.html?id=3"
+            class="property-button"
+          >
+            Ver propiedad
+          </a>
+
+        </div>
+
+      </article>
+
+
     </div>
 
   </div>
@@ -1586,10 +1658,6 @@
 </section>
 
 
-
-<!-- =====================================================
-     SERVICIOS
-===================================================== -->
 
 <section id="servicios">
 
@@ -1685,10 +1753,6 @@
 
 
 
-<!-- =====================================================
-     ADMINISTRACIÓN
-===================================================== -->
-
 <section
   class="administration"
   id="administracion"
@@ -1778,10 +1842,6 @@
 
 
 
-<!-- =====================================================
-     CAPTACIÓN
-===================================================== -->
-
 <section
   class="capture"
   id="captacion"
@@ -1845,10 +1905,6 @@
 </section>
 
 
-
-<!-- =====================================================
-     CONTACTO
-===================================================== -->
 
 <section
   class="contact"
@@ -1946,10 +2002,6 @@
 
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
 <footer>
 
   <div class="container">
@@ -1975,10 +2027,6 @@
 
 
 
-<!-- =====================================================
-     WHATSAPP
-===================================================== -->
-
 <a
   class="whatsapp-floating"
   href="https://wa.me/56944844983?text=Hola%2C%20quiero%20consultar%20por%20una%20propiedad."
@@ -1991,483 +2039,110 @@
 
 
 
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
-
 <script>
 
+  function filtrar(tipo, boton) {
 
-/*
-  ========================================================
-  DATOS DE PROPIEDADES
+    const tarjetas =
+      document.querySelectorAll(
+        ".property-card"
+      );
 
-  PARA AGREGAR UNA NUEVA PROPIEDAD MÁS ADELANTE:
 
-  1. Copia uno de los bloques.
-  2. Cambia sus datos.
-  3. Pon sus fotos en propiedades/N/
-  4. Usa como foto principal propiedades/N/1.jpeg
-  5. No cambies nada del diseño.
+    const botones =
+      document.querySelectorAll(
+        ".filter"
+      );
 
-  IMPORTANTE:
-  El campo "id" debe ser único.
-  ========================================================
-*/
 
+    botones.forEach(
+      function(b) {
 
-const propiedades = [
-
-
-  /* ====================================================
-     PROPIEDAD 1
-  ==================================================== */
-
-  {
-
-    id: 1,
-
-    titulo:
-      "Habitación en arriendo",
-
-    operacion:
-      "arriendo",
-
-    estado:
-      "gestionada",
-
-    estadoTexto:
-      "Arrendada",
-
-    ubicacion:
-      "Valparaíso · Sector Yungay",
-
-    precio:
-      "$260.000",
-
-    foto:
-      "propiedades/1/1.jpeg",
-
-    alt:
-      "Habitación en arriendo en Valparaíso",
-
-    dormitorios:
-      "1 dormitorio",
-
-    banos:
-      "1 baño",
-
-    metros:
-      "72 m²",
-
-    extra:
-      "Amoblado"
-
-  },
-
-
-  /* ====================================================
-     PROPIEDAD 2
-  ==================================================== */
-
-  {
-
-    id: 2,
-
-    titulo:
-      "2° Piso Independiente en Arriendo",
-
-    operacion:
-      "arriendo",
-
-    estado:
-      "gestionada",
-
-    estadoTexto:
-      "Arrendada",
-
-    ubicacion:
-      "Quilpué · Sector Teniente Serrano",
-
-    precio:
-      "$400.000",
-
-    /*
-      CORREGIDO:
-      La foto realmente está en propiedades/2/1.jpeg
-    */
-
-    foto:
-      "propiedades/2/1.jpeg",
-
-    alt:
-      "2° Piso Independiente en Arriendo en Quilpué",
-
-    dormitorios:
-      "2 dormitorios",
-
-    banos:
-      "1 baño",
-
-    metros:
-      "45 m²",
-
-    extra:
-      "Estacionamiento"
-
-  },
-
-
-  /* ====================================================
-     PROPIEDAD 3
-  ==================================================== */
-
-  {
-
-    id: 3,
-
-    titulo:
-      "Departamento amoblado Reñaca",
-
-    operacion:
-      "arriendo",
-
-    estado:
-      "gestionada",
-
-    estadoTexto:
-      "Arrendada",
-
-    ubicacion:
-      "Reñaca · Viña del Mar",
-
-    precio:
-      "$500.000",
-
-    /*
-      La dejamos con la ruta que tenías configurada.
-      Cuando subas la foto a esa ubicación aparecerá
-      automáticamente.
-    */
-
-    foto:
-      "propiedades/3/1.jpeg",
-
-    alt:
-      "Departamento amoblado en Reñaca",
-
-    dormitorios:
-      "1 dormitorio",
-
-    banos:
-      "1 baño",
-
-    metros:
-      "52 m²",
-
-    extra:
-      "Estacionamiento · Bodega"
-
-  }
-
-];
-
-
-
-/*
-  ========================================================
-  GENERAR TARJETAS
-  ========================================================
-*/
-
-
-function mostrarPropiedades() {
-
-  const grid =
-    document.getElementById(
-      "propertyGrid"
-    );
-
-
-  grid.innerHTML = "";
-
-
-  propiedades.forEach(
-    function(propiedad) {
-
-
-      let claseEstado =
-        "status-disponible";
-
-
-      if (
-        propiedad.estado ===
-        "gestionada"
-      ) {
-
-        claseEstado =
-          "status-arrendada";
-
-      }
-
-
-      if (
-        propiedad.estado ===
-        "vendida"
-      ) {
-
-        claseEstado =
-          "status-vendida";
-
-      }
-
-
-      const tarjeta =
-        document.createElement(
-          "article"
+        b.classList.remove(
+          "active"
         );
 
-
-      tarjeta.className =
-        "property-card";
-
-
-      tarjeta.dataset.operation =
-        propiedad.operacion;
-
-
-      tarjeta.dataset.status =
-        propiedad.estado;
-
-
-      tarjeta.innerHTML = `
-
-        <div class="property-image">
-
-          <span
-            class="status ${claseEstado}"
-          >
-            ${propiedad.estadoTexto}
-          </span>
-
-
-          <img
-            src="${propiedad.foto}"
-            alt="${propiedad.alt}"
-            onerror="
-              this.style.display='none';
-            "
-          >
-
-
-          <span
-            class="image-placeholder"
-          >
-            Fotografía de la propiedad
-          </span>
-
-        </div>
-
-
-        <div class="property-content">
-
-          <div class="operation">
-            ${
-              propiedad.operacion ===
-              "arriendo"
-                ? "Arriendo"
-                : "Venta"
-            }
-          </div>
-
-
-          <h3>
-            ${propiedad.titulo}
-          </h3>
-
-
-          <div class="location">
-            ${propiedad.ubicacion}
-          </div>
-
-
-          <div class="price">
-            ${propiedad.precio}
-          </div>
-
-
-          <div class="features">
-
-            <span>
-              🛏 ${propiedad.dormitorios}
-            </span>
-
-
-            <span>
-              🚿 ${propiedad.banos}
-            </span>
-
-
-            <span>
-              📐 ${propiedad.metros}
-            </span>
-
-
-            <span>
-              🚗 ${propiedad.extra}
-            </span>
-
-          </div>
-
-
-          <a
-            href="propiedad.html?id=${propiedad.id}"
-            class="property-button"
-          >
-            Ver propiedad
-          </a>
-
-        </div>
-
-      `;
-
-
-      grid.appendChild(
-        tarjeta
-      );
-
-    }
-  );
-
-}
-
-
-/*
-  ========================================================
-  FILTROS
-  ========================================================
-*/
-
-
-function filtrar(
-  tipo,
-  boton
-) {
-
-
-  const tarjetas =
-    document.querySelectorAll(
-      ".property-card"
+      }
     );
 
 
-  const botones =
-    document.querySelectorAll(
-      ".filter"
+    boton.classList.add(
+      "active"
     );
 
 
-  botones.forEach(
-    function(botonFiltro) {
+    tarjetas.forEach(
+      function(tarjeta) {
 
-      botonFiltro.classList.remove(
-        "active"
-      );
-
-    }
-  );
+        const operacion =
+          tarjeta.dataset.operation;
 
 
-  boton.classList.add(
-    "active"
-  );
+        const estado =
+          tarjeta.dataset.status;
 
 
-  tarjetas.forEach(
-    function(tarjeta) {
+        let mostrar = false;
 
 
-      const operacion =
-        tarjeta.dataset.operation;
+        if (
+          tipo === "todas"
+        ) {
+
+          mostrar = true;
+
+        }
 
 
-      const estado =
-        tarjeta.dataset.status;
+        if (
+          tipo === "venta" &&
+          operacion === "venta"
+        ) {
+
+          mostrar = true;
+
+        }
 
 
-      let mostrar =
-        false;
+        if (
+          tipo === "arriendo" &&
+          operacion === "arriendo"
+        ) {
+
+          mostrar = true;
+
+        }
 
 
-      if (
-        tipo === "todas"
-      ) {
+        if (
+          tipo === "disponible" &&
+          estado === "disponible"
+        ) {
 
-        mostrar = true;
+          mostrar = true;
 
-      }
-
-
-      if (
-        tipo === "venta" &&
-        operacion === "venta"
-      ) {
-
-        mostrar = true;
-
-      }
+        }
 
 
-      if (
-        tipo === "arriendo" &&
-        operacion === "arriendo"
-      ) {
+        if (
+          tipo === "gestionada" &&
+          estado === "gestionada"
+        ) {
 
-        mostrar = true;
+          mostrar = true;
 
-      }
-
-
-      if (
-        tipo === "disponible" &&
-        estado === "disponible"
-      ) {
-
-        mostrar = true;
-
-      }
+        }
 
 
-      if (
-        tipo === "gestionada" &&
-        estado === "gestionada"
-      ) {
-
-        mostrar = true;
+        tarjeta.classList.toggle(
+          "hidden",
+          !mostrar
+        );
 
       }
+    );
 
-
-      tarjeta.classList.toggle(
-        "hidden",
-        !mostrar
-      );
-
-    }
-  );
-
-}
-
-
-/*
-  ========================================================
-  INICIAR
-  ========================================================
-*/
-
-
-mostrarPropiedades();
-
+  }
 
 </script>
 
