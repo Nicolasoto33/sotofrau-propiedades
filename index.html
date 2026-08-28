@@ -39,15 +39,18 @@
       --ancho: 1180px;
     }
 
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
+
 
     body {
       font-family:
@@ -63,18 +66,22 @@
       line-height: 1.6;
     }
 
+
     img {
       max-width: 100%;
     }
+
 
     a {
       text-decoration: none;
       color: inherit;
     }
 
+
     button {
       font: inherit;
     }
+
 
     .container {
       width: min(var(--ancho), 92%);
@@ -97,6 +104,7 @@
       border-bottom: 1px solid rgba(13,47,73,.08);
     }
 
+
     .nav {
       min-height: 78px;
 
@@ -106,6 +114,7 @@
 
       gap: 30px;
     }
+
 
     .logo {
       display: inline-flex;
@@ -121,10 +130,12 @@
       white-space: nowrap;
     }
 
+
     .logo span {
       color: var(--naranja);
       margin-left: 5px;
     }
+
 
     nav {
       display: flex;
@@ -135,14 +146,17 @@
       font-weight: 650;
     }
 
+
     nav a {
       color: var(--azul);
       transition: .2s ease;
     }
 
+
     nav a:hover {
       color: var(--naranja);
     }
+
 
     .nav-contact {
       background: var(--azul);
@@ -152,6 +166,7 @@
 
       border-radius: 9px;
     }
+
 
     .nav-contact:hover {
       background: var(--azul-2);
@@ -187,6 +202,7 @@
         );
     }
 
+
     .hero::after {
       content: "";
 
@@ -203,6 +219,7 @@
       background: rgba(232,137,37,.14);
     }
 
+
     .hero-content {
       position: relative;
       z-index: 2;
@@ -211,6 +228,7 @@
 
       padding: 100px 0;
     }
+
 
     .hero-label {
       display: inline-flex;
@@ -229,6 +247,7 @@
       letter-spacing: 1.6px;
     }
 
+
     .hero-label::before {
       content: "";
 
@@ -237,6 +256,7 @@
 
       background: var(--naranja);
     }
+
 
     .hero h1 {
       font-size: clamp(43px, 6vw, 70px);
@@ -248,9 +268,11 @@
       margin-bottom: 25px;
     }
 
+
     .hero h1 span {
       color: #f3a04b;
     }
+
 
     .hero p {
       max-width: 650px;
@@ -264,11 +286,13 @@
       margin-bottom: 36px;
     }
 
+
     .buttons {
       display: flex;
       flex-wrap: wrap;
       gap: 12px;
     }
+
 
     .btn {
       display: inline-flex;
@@ -289,9 +313,11 @@
         box-shadow .2s ease;
     }
 
+
     .btn:hover {
       transform: translateY(-2px);
     }
+
 
     .btn-primary {
       background: var(--naranja);
@@ -300,9 +326,11 @@
       box-shadow: 0 8px 22px rgba(232,137,37,.22);
     }
 
+
     .btn-primary:hover {
       background: var(--naranja-hover);
     }
+
 
     .btn-light {
       background: white;
@@ -318,6 +346,7 @@
       padding: 90px 0;
     }
 
+
     .section-header {
       max-width: 680px;
 
@@ -325,6 +354,7 @@
 
       text-align: center;
     }
+
 
     .section-label {
       display: block;
@@ -340,6 +370,7 @@
       letter-spacing: 1.6px;
     }
 
+
     .section-header h2 {
       color: var(--azul);
 
@@ -351,6 +382,7 @@
 
       margin-bottom: 12px;
     }
+
 
     .section-header p {
       color: var(--gris-500);
@@ -367,6 +399,7 @@
       background: var(--gris-50);
     }
 
+
     .filters {
       display: flex;
 
@@ -377,6 +410,7 @@
 
       margin-bottom: 38px;
     }
+
 
     .filter {
       border: 1px solid var(--gris-200);
@@ -397,6 +431,7 @@
       transition: .2s ease;
     }
 
+
     .filter:hover,
     .filter.active {
       background: var(--azul);
@@ -405,6 +440,7 @@
       color: white;
     }
 
+
     .property-grid {
       display: grid;
 
@@ -412,6 +448,7 @@
 
       gap: 25px;
     }
+
 
     .property-card {
       background: white;
@@ -429,15 +466,18 @@
         box-shadow .25s ease;
     }
 
+
     .property-card:hover {
       transform: translateY(-5px);
 
       box-shadow: var(--sombra-hover);
     }
 
+
     .property-card.hidden {
       display: none;
     }
+
 
     .property-image {
       position: relative;
@@ -454,6 +494,7 @@
       overflow: hidden;
     }
 
+
     .property-image img {
       position: absolute;
 
@@ -469,9 +510,11 @@
       transition: transform .5s ease;
     }
 
+
     .property-card:hover .property-image img {
       transform: scale(1.03);
     }
+
 
     .image-placeholder {
       position: absolute;
@@ -491,6 +534,7 @@
 
       padding: 20px;
     }
+
 
     .status {
       position: absolute;
@@ -513,21 +557,26 @@
       letter-spacing: .4px;
     }
 
+
     .status-arrendada {
       background: var(--rojo);
     }
+
 
     .status-disponible {
       background: var(--verde);
     }
 
+
     .status-vendida {
       background: #59656d;
     }
 
+
     .property-content {
       padding: 23px;
     }
+
 
     .operation {
       margin-bottom: 7px;
@@ -541,6 +590,7 @@
       letter-spacing: 1px;
     }
 
+
     .property-content h3 {
       color: var(--azul);
 
@@ -551,6 +601,7 @@
       margin-bottom: 7px;
     }
 
+
     .location {
       color: var(--gris-500);
 
@@ -558,6 +609,7 @@
 
       margin-bottom: 15px;
     }
+
 
     .price {
       color: var(--azul);
@@ -567,6 +619,7 @@
 
       margin-bottom: 15px;
     }
+
 
     .features {
       display: flex;
@@ -583,6 +636,7 @@
 
       font-size: 12px;
     }
+
 
     .property-button {
       display: flex;
@@ -608,6 +662,7 @@
       transition: .2s ease;
     }
 
+
     .property-button:hover {
       background: var(--azul-oscuro);
     }
@@ -621,6 +676,7 @@
       background: white;
     }
 
+
     .service-grid {
       display: grid;
 
@@ -628,6 +684,7 @@
 
       gap: 22px;
     }
+
 
     .service {
       position: relative;
@@ -645,6 +702,7 @@
       overflow: hidden;
     }
 
+
     .service::after {
       content: "";
 
@@ -661,6 +719,7 @@
       background: rgba(232,137,37,.08);
     }
 
+
     .service-number {
       margin-bottom: 20px;
 
@@ -672,6 +731,7 @@
       letter-spacing: 1px;
     }
 
+
     .service h3 {
       color: var(--azul);
 
@@ -679,6 +739,7 @@
 
       margin-bottom: 11px;
     }
+
 
     .service p {
       color: var(--gris-500);
@@ -697,6 +758,7 @@
       color: white;
     }
 
+
     .admin-grid {
       display: grid;
 
@@ -707,9 +769,11 @@
       align-items: center;
     }
 
+
     .administration .section-label {
       color: #f2a053;
     }
+
 
     .administration h2 {
       max-width: 650px;
@@ -723,6 +787,7 @@
       margin-bottom: 20px;
     }
 
+
     .administration > .container > .admin-grid > div:first-child p {
       max-width: 620px;
 
@@ -733,6 +798,7 @@
       margin-bottom: 25px;
     }
 
+
     .admin-list {
       list-style: none;
 
@@ -740,6 +806,7 @@
 
       gap: 12px;
     }
+
 
     .admin-list li {
       position: relative;
@@ -750,6 +817,7 @@
 
       font-size: 14px;
     }
+
 
     .admin-list li::before {
       content: "✓";
@@ -763,6 +831,7 @@
       font-weight: 900;
     }
 
+
     .admin-box {
       background: white;
 
@@ -775,6 +844,7 @@
       box-shadow: 0 18px 45px rgba(0,0,0,.18);
     }
 
+
     .admin-box h3 {
       color: var(--azul);
 
@@ -784,6 +854,7 @@
 
       margin-bottom: 12px;
     }
+
 
     .admin-box p {
       color: var(--gris-500);
@@ -804,6 +875,7 @@
       text-align: center;
     }
 
+
     .capture-box {
       max-width: 850px;
 
@@ -820,9 +892,11 @@
       box-shadow: var(--sombra);
     }
 
+
     .capture-box .section-label {
       margin-bottom: 10px;
     }
+
 
     .capture-box h2 {
       color: var(--azul);
@@ -835,6 +909,7 @@
 
       margin-bottom: 14px;
     }
+
 
     .capture-box p {
       max-width: 650px;
@@ -855,6 +930,7 @@
       background: white;
     }
 
+
     .contact-grid {
       display: grid;
 
@@ -862,6 +938,7 @@
 
       gap: 20px;
     }
+
 
     .contact-item {
       padding: 30px;
@@ -875,6 +952,7 @@
       background: white;
     }
 
+
     .contact-item h3 {
       color: var(--azul);
 
@@ -883,11 +961,13 @@
       margin-bottom: 7px;
     }
 
+
     .contact-item p {
       color: var(--gris-500);
 
       font-size: 14px;
     }
+
 
     .contact-item a:hover {
       color: var(--naranja);
@@ -908,11 +988,13 @@
       text-align: center;
     }
 
+
     footer strong {
       color: white;
 
       font-size: 20px;
     }
+
 
     footer p {
       margin-top: 8px;
@@ -955,6 +1037,7 @@
       transition: .2s ease;
     }
 
+
     .whatsapp-floating:hover {
       transform: translateY(-3px) scale(1.03);
     }
@@ -970,17 +1053,21 @@
         display: none;
       }
 
+
       .hero {
         min-height: 570px;
       }
+
 
       .hero-content {
         padding: 75px 0;
       }
 
+
       .hero h1 {
         font-size: 47px;
       }
+
 
       .property-grid,
       .service-grid,
@@ -988,11 +1075,13 @@
         grid-template-columns: 1fr;
       }
 
+
       .admin-grid {
         grid-template-columns: 1fr;
 
         gap: 38px;
       }
+
 
       section {
         padding: 70px 0;
@@ -1007,13 +1096,16 @@
         min-height: 68px;
       }
 
+
       .logo {
         font-size: 20px;
       }
 
+
       .hero {
         min-height: 560px;
       }
+
 
       .hero h1 {
         font-size: 43px;
@@ -1021,25 +1113,31 @@
         letter-spacing: -1.5px;
       }
 
+
       .hero p {
         font-size: 16px;
       }
+
 
       .buttons {
         width: 100%;
       }
 
+
       .btn {
         width: 100%;
       }
+
 
       .property-image {
         height: 250px;
       }
 
+
       .capture-box {
         padding: 45px 22px;
       }
+
 
       .whatsapp-floating {
         right: 17px;
@@ -1058,10 +1156,6 @@
 <body>
 
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
 <header>
 
   <div class="container nav">
@@ -1069,6 +1163,7 @@
     <a href="#inicio" class="logo">
       Sotofrau <span>Propiedades</span>
     </a>
+
 
     <nav>
 
@@ -1099,10 +1194,6 @@
 </header>
 
 
-<!-- =====================================================
-     HERO
-===================================================== -->
-
 <section class="hero" id="inicio">
 
   <div class="container">
@@ -1113,15 +1204,18 @@
         Sotofrau Propiedades
       </div>
 
+
       <h1>
         Tu propiedad,<br>
         <span>en buenas manos.</span>
       </h1>
 
+
       <p>
         Compra, vende, arrienda o administra tu propiedad
         con una atención cercana, transparente y personalizada.
       </p>
+
 
       <div class="buttons">
 
@@ -1131,6 +1225,7 @@
         >
           Ver propiedades
         </a>
+
 
         <a
           href="#captacion"
@@ -1148,10 +1243,6 @@
 </section>
 
 
-<!-- =====================================================
-     PROPIEDADES
-===================================================== -->
-
 <section
   class="properties-section"
   id="propiedades"
@@ -1165,9 +1256,11 @@
         Nuestra cartera
       </span>
 
+
       <h2>
         Propiedades
       </h2>
+
 
       <p>
         Conoce las propiedades que hemos gestionado
@@ -1186,12 +1279,14 @@
         Todas
       </button>
 
+
       <button
         class="filter"
         onclick="filtrar('venta', this)"
       >
         Venta
       </button>
+
 
       <button
         class="filter"
@@ -1200,12 +1295,14 @@
         Arriendo
       </button>
 
+
       <button
         class="filter"
         onclick="filtrar('disponible', this)"
       >
         Disponibles
       </button>
+
 
       <button
         class="filter"
@@ -1236,11 +1333,13 @@
             Arrendada
           </span>
 
+
           <img
             src="propiedades/1/1.jpeg"
             alt="Habitación en arriendo en Valparaíso"
             onerror="this.style.display='none';"
           >
+
 
           <span class="image-placeholder">
             Fotografías de la propiedad
@@ -1255,17 +1354,21 @@
             Arriendo
           </div>
 
+
           <h3>
             Habitación en arriendo
           </h3>
+
 
           <div class="location">
             Valparaíso · Sector Yungay
           </div>
 
+
           <div class="price">
             $260.000
           </div>
+
 
           <div class="features">
 
@@ -1289,11 +1392,11 @@
 
 
           <a
-  href="propiedad-1.html"
-  class="property-button"
->
-  Ver propiedad
-</a>
+            href="propiedad-1.html"
+            class="property-button"
+          >
+            Ver propiedad
+          </a>
 
         </div>
 
@@ -1316,11 +1419,13 @@
             Arrendada
           </span>
 
-         <img
-  src="propiedades/2/1.jpeg"
-  alt="Piso independiente en Quilpué"
-  onerror="this.style.display='none';"
->
+
+          <img
+            src="propiedades/2/1.jpeg"
+            alt="2° Piso Independiente en Arriendo en Quilpué"
+            onerror="this.style.display='none';"
+          >
+
 
           <span class="image-placeholder">
             Fotografías de la propiedad
@@ -1335,17 +1440,21 @@
             Arriendo
           </div>
 
+
           <h3>
-            Piso independiente
+            2° Piso Independiente en Arriendo
           </h3>
+
 
           <div class="location">
             Quilpué · Sector Teniente Serrano
           </div>
 
+
           <div class="price">
             $400.000
           </div>
+
 
           <div class="features">
 
@@ -1369,9 +1478,9 @@
 
 
           <a
-  href="propiedad-2.html"
-  class="property-button"
->
+            href="propiedad-2.html"
+            class="property-button"
+          >
             Ver propiedad
           </a>
 
@@ -1396,11 +1505,13 @@
             Arrendada
           </span>
 
+
           <img
             src="propiedades/3/foto-01.jpg"
             alt="Departamento amoblado en Reñaca"
             onerror="this.style.display='none';"
           >
+
 
           <span class="image-placeholder">
             Fotografías de la propiedad
@@ -1415,17 +1526,21 @@
             Arriendo
           </div>
 
+
           <h3>
             Departamento amoblado Reñaca
           </h3>
+
 
           <div class="location">
             Reñaca · Viña del Mar
           </div>
 
+
           <div class="price">
             $500.000
           </div>
+
 
           <div class="features">
 
@@ -1471,10 +1586,6 @@
 </section>
 
 
-<!-- =====================================================
-     SERVICIOS
-===================================================== -->
-
 <section id="servicios">
 
   <div class="container">
@@ -1485,9 +1596,11 @@
         ¿Qué hacemos?
       </span>
 
+
       <h2>
         Servicios inmobiliarios
       </h2>
+
 
       <p>
         Te acompañamos en cada etapa de tu operación inmobiliaria,
@@ -1506,9 +1619,11 @@
           01
         </div>
 
+
         <h3>
           Compra
         </h3>
+
 
         <p>
           Te ayudamos a encontrar una propiedad que se ajuste
@@ -1524,9 +1639,11 @@
           02
         </div>
 
+
         <h3>
           Venta
         </h3>
+
 
         <p>
           Comercializamos tu propiedad, gestionamos los interesados
@@ -1542,9 +1659,11 @@
           03
         </div>
 
+
         <h3>
           Arriendo
         </h3>
+
 
         <p>
           Publicamos y gestionamos tu propiedad buscando
@@ -1560,10 +1679,6 @@
 
 </section>
 
-
-<!-- =====================================================
-     ADMINISTRACIÓN
-===================================================== -->
 
 <section
   class="administration"
@@ -1581,10 +1696,12 @@
           Administración de propiedades
         </span>
 
+
         <h2>
           Tu propiedad sigue siendo tuya.
           Nosotros nos encargamos de gestionarla.
         </h2>
+
 
         <p>
           Simplificamos la administración de tu propiedad para
@@ -1625,11 +1742,13 @@
           ¿Tienes una propiedad arrendada?
         </h3>
 
+
         <p>
           Si administrar tu propiedad te quita tiempo,
           podemos encargarnos de la gestión y mantenerte
           informado de todo lo que ocurre.
         </p>
+
 
         <a
           href="https://wa.me/56944844983?text=Hola%2C%20quiero%20consultar%20por%20el%20servicio%20de%20administraci%C3%B3n%20de%20propiedades."
@@ -1649,10 +1768,6 @@
 </section>
 
 
-<!-- =====================================================
-     CAPTACIÓN
-===================================================== -->
-
 <section
   class="capture"
   id="captacion"
@@ -1666,9 +1781,11 @@
         ¿Tienes una propiedad?
       </span>
 
+
       <h2>
         Podemos ayudarte.
       </h2>
+
 
       <p>
         Si quieres vender o arrendar tu propiedad,
@@ -1712,10 +1829,6 @@
 </section>
 
 
-<!-- =====================================================
-     CONTACTO
-===================================================== -->
-
 <section
   class="contact"
   id="contacto"
@@ -1729,9 +1842,11 @@
         Hablemos
       </span>
 
+
       <h2>
         Contacto
       </h2>
+
 
       <p>
         Si tienes una consulta inmobiliaria,
@@ -1750,13 +1865,16 @@
           WhatsApp
         </h3>
 
+
         <p>
+
           <a
             href="https://wa.me/56944844983"
             target="_blank"
           >
             +56 9 4484 4983
           </a>
+
         </p>
 
       </div>
@@ -1768,13 +1886,16 @@
           Instagram
         </h3>
 
+
         <p>
+
           <a
             href="https://www.instagram.com/sotofrau_propiedades/"
             target="_blank"
           >
             @sotofrau_propiedades
           </a>
+
         </p>
 
       </div>
@@ -1785,6 +1906,7 @@
         <h3>
           Zona de atención
         </h3>
+
 
         <p>
           Viña del Mar · Concón · Reñaca ·
@@ -1801,10 +1923,6 @@
 </section>
 
 
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
 <footer>
 
   <div class="container">
@@ -1813,9 +1931,11 @@
       Sotofrau Propiedades
     </strong>
 
+
     <p>
       Compra · Venta · Arriendo · Administración
     </p>
+
 
     <p>
       © 2026 Sotofrau Propiedades · Todos los derechos reservados.
@@ -1826,10 +1946,6 @@
 </footer>
 
 
-<!-- =====================================================
-     WHATSAPP FLOTANTE
-===================================================== -->
-
 <a
   class="whatsapp-floating"
   href="https://wa.me/56944844983?text=Hola%2C%20quiero%20consultar%20por%20una%20propiedad."
@@ -1839,10 +1955,6 @@
   ☎
 </a>
 
-
-<!-- =====================================================
-     JAVASCRIPT
-===================================================== -->
 
 <script>
 
@@ -1878,9 +1990,7 @@
 
 
       if (tipo === "todas") {
-
         mostrar = true;
-
       }
 
 
@@ -1888,9 +1998,7 @@
         tipo === "venta" &&
         operacion === "venta"
       ) {
-
         mostrar = true;
-
       }
 
 
@@ -1898,9 +2006,7 @@
         tipo === "arriendo" &&
         operacion === "arriendo"
       ) {
-
         mostrar = true;
-
       }
 
 
@@ -1908,9 +2014,7 @@
         tipo === "disponible" &&
         estado === "disponible"
       ) {
-
         mostrar = true;
-
       }
 
 
@@ -1918,21 +2022,12 @@
         tipo === "gestionada" &&
         estado === "gestionada"
       ) {
-
         mostrar = true;
-
       }
 
 
-      if (mostrar) {
-
-        tarjeta.classList.remove("hidden");
-
-      } else {
-
-        tarjeta.classList.add("hidden");
-
-      }
+      tarjeta.style.display =
+        mostrar ? "block" : "none";
 
     });
 
