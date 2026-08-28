@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Habitación en arriendo en Valparaíso | Sotofrau Propiedades</title>
+  <title>Habitación en arriendo | Sotofrau Propiedades</title>
 
   <meta
     name="description"
-    content="Habitación amoblada en arriendo en Valparaíso, sector Yungay. Consulta disponibilidad y condiciones con Sotofrau Propiedades."
+    content="Habitación amoblada en arriendo en Valparaíso, sector Yungay. Sotofrau Propiedades."
   >
 
   <meta name="theme-color" content="#0d2f49">
@@ -27,21 +26,24 @@
       --rojo: #b44a48;
 
       --blanco: #ffffff;
-
       --gris-50: #fafbfc;
       --gris-100: #f3f5f7;
       --gris-200: #e6eaee;
-      --gris-400: #8b969e;
+      --gris-400: #98a4ad;
       --gris-500: #6b7781;
       --gris-700: #37444e;
 
       --sombra: 0 12px 35px rgba(13,47,73,.08);
-      --sombra-hover: 0 18px 45px rgba(13,47,73,.13);
+      --sombra-hover: 0 18px 45px rgba(13,47,73,.14);
 
       --radio: 16px;
       --ancho: 1180px;
     }
 
+
+    /* ==============================
+       BASE
+    ============================== */
 
     * {
       box-sizing: border-box;
@@ -49,11 +51,9 @@
       padding: 0;
     }
 
-
     html {
       scroll-behavior: smooth;
     }
-
 
     body {
       font-family:
@@ -66,26 +66,21 @@
 
       color: var(--gris-700);
       background: var(--gris-50);
-
       line-height: 1.6;
     }
-
 
     img {
       max-width: 100%;
     }
-
 
     a {
       text-decoration: none;
       color: inherit;
     }
 
-
     button {
       font: inherit;
     }
-
 
     .container {
       width: min(var(--ancho), 92%);
@@ -93,10 +88,9 @@
     }
 
 
-
-    /* =====================================================
+    /* ==============================
        HEADER
-    ===================================================== */
+    ============================== */
 
     header {
       position: sticky;
@@ -104,12 +98,10 @@
       z-index: 1000;
 
       background: rgba(255,255,255,.97);
-
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(14px);
 
       border-bottom: 1px solid var(--gris-200);
     }
-
 
     .nav {
       min-height: 76px;
@@ -118,134 +110,78 @@
       align-items: center;
       justify-content: space-between;
 
-      gap: 20px;
+      gap: 25px;
     }
-
 
     .logo {
       color: var(--azul);
 
       font-size: 23px;
-      font-weight: 850;
+      font-weight: 800;
 
       letter-spacing: -.5px;
     }
 
-
     .logo span {
       color: var(--naranja);
+      margin-left: 4px;
     }
-
 
     .back {
       color: var(--azul);
 
       font-size: 14px;
-      font-weight: 750;
+      font-weight: 700;
 
       transition: .2s ease;
     }
-
 
     .back:hover {
       color: var(--naranja);
     }
 
 
-
-    /* =====================================================
+    /* ==============================
        MAIN
-    ===================================================== */
+    ============================== */
 
     main {
       padding: 35px 0 80px;
     }
 
 
+    /* ==============================
+       BREADCRUMB
+    ============================== */
 
-    /* =====================================================
-       PROPERTY HEADER
-    ===================================================== */
-
-    .property-header {
+    .breadcrumb {
       display: flex;
+      align-items: center;
+      gap: 8px;
 
-      justify-content: space-between;
-      align-items: flex-end;
+      margin-bottom: 20px;
 
-      gap: 25px;
-
-      margin-bottom: 25px;
-    }
-
-
-    .property-label {
-      color: var(--naranja);
-
-      font-size: 12px;
-      font-weight: 850;
-
-      text-transform: uppercase;
-
-      letter-spacing: 1.4px;
-
-      margin-bottom: 7px;
-    }
-
-
-    .property-header h1 {
-      color: var(--azul);
-
-      font-size: clamp(32px, 5vw, 48px);
-
-      line-height: 1.08;
-
-      letter-spacing: -1.3px;
-
-      margin-bottom: 8px;
-    }
-
-
-    .location {
       color: var(--gris-500);
 
-      font-size: 15px;
+      font-size: 13px;
     }
 
-
-    .header-price {
-      flex-shrink: 0;
-
-      text-align: right;
-    }
-
-
-    .header-price small {
-      display: block;
-
-      color: var(--gris-400);
-
-      font-size: 12px;
-
-      margin-bottom: 2px;
-    }
-
-
-    .header-price strong {
+    .breadcrumb a {
       color: var(--azul);
+      font-weight: 650;
+    }
 
-      font-size: 29px;
-      font-weight: 850;
+    .breadcrumb a:hover {
+      color: var(--naranja);
     }
 
 
-
-    /* =====================================================
-       PROPERTY CARD
-    ===================================================== */
+    /* ==============================
+       PROPERTY
+    ============================== */
 
     .property {
-      background: white;
+      background: var(--blanco);
 
       border: 1px solid var(--gris-200);
 
@@ -257,22 +193,19 @@
     }
 
 
-
-    /* =====================================================
+    /* ==============================
        GALLERY
-    ===================================================== */
+    ============================== */
 
     .gallery {
       padding: 20px;
     }
 
-
     .main-photo {
       position: relative;
 
       width: 100%;
-
-      max-width: 620px;
+      max-width: 720px;
 
       margin: 0 auto;
 
@@ -283,17 +216,14 @@
       overflow: hidden;
     }
 
-
     .main-photo img {
       display: block;
 
       width: 100%;
-
       height: auto;
 
       object-fit: contain;
     }
-
 
     .gallery-button {
       position: absolute;
@@ -302,20 +232,18 @@
 
       transform: translateY(-50%);
 
-      width: 48px;
-      height: 48px;
+      width: 46px;
+      height: 46px;
 
       border: none;
 
       border-radius: 50%;
 
-      background: rgba(13,47,73,.75);
+      background: rgba(13,47,73,.78);
 
       color: white;
 
       font-size: 28px;
-
-      line-height: 1;
 
       cursor: pointer;
 
@@ -324,112 +252,100 @@
       transition: .2s ease;
     }
 
-
     .gallery-button:hover {
       background: var(--azul);
-
-      transform:
-        translateY(-50%)
-        scale(1.05);
+      transform: translateY(-50%) scale(1.05);
     }
-
 
     .prev {
       left: 16px;
     }
 
-
     .next {
       right: 16px;
     }
 
-
     .photo-counter {
       position: absolute;
 
-      right: 16px;
-      bottom: 16px;
+      right: 15px;
+      bottom: 15px;
 
-      background: rgba(0,0,0,.68);
-
-      color: white;
-
-      padding: 6px 11px;
+      padding: 7px 12px;
 
       border-radius: 20px;
 
+      background: rgba(0,0,0,.65);
+
+      color: white;
+
       font-size: 12px;
-      font-weight: 750;
+      font-weight: 700;
     }
 
 
-
-    /* =====================================================
+    /* ==============================
        THUMBNAILS
-    ===================================================== */
+    ============================== */
 
     .thumbnails {
       display: grid;
 
-      grid-template-columns:
-        repeat(9, 1fr);
+      grid-template-columns: repeat(9, 1fr);
 
       gap: 8px;
 
-      max-width: 620px;
-
-      margin: 13px auto 0;
+      margin-top: 12px;
     }
 
-
     .thumbnail {
-      height: 65px;
+      height: 72px;
 
       padding: 0;
 
       border: 3px solid transparent;
 
-      border-radius: 7px;
+      border-radius: 8px;
 
       overflow: hidden;
 
-      cursor: pointer;
+      background: var(--gris-100);
 
-      background: var(--gris-200);
+      cursor: pointer;
 
       transition: .2s ease;
     }
-
 
     .thumbnail:hover {
       transform: translateY(-2px);
     }
 
-
     .thumbnail.active {
       border-color: var(--naranja);
     }
-
 
     .thumbnail img {
       width: 100%;
       height: 100%;
 
-      object-fit: cover;
-
       display: block;
+
+      object-fit: cover;
     }
 
 
+    /* ==============================
+       CONTENT
+    ============================== */
 
-    /* =====================================================
-       INFORMATION
-    ===================================================== */
-
-    .information {
-      padding: 35px;
+    .content {
+      padding: 42px 45px 48px;
     }
 
+
+    /* ==============================
+       STATUS
+    ============================== */
 
     .status {
       display: inline-flex;
@@ -438,16 +354,16 @@
 
       padding: 7px 12px;
 
-      margin-bottom: 20px;
+      margin-bottom: 15px;
 
       border-radius: 6px;
 
-      color: white;
-
       background: var(--rojo);
 
+      color: white;
+
       font-size: 11px;
-      font-weight: 850;
+      font-weight: 800;
 
       text-transform: uppercase;
 
@@ -455,282 +371,271 @@
     }
 
 
-    .status::before {
-      content: "";
+    /* ==============================
+       OPERATION
+    ============================== */
 
-      width: 6px;
-      height: 6px;
+    .operation {
+      margin-bottom: 7px;
 
-      margin-right: 7px;
+      color: var(--naranja);
 
-      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 800;
 
-      background: white;
+      text-transform: uppercase;
+
+      letter-spacing: 1.2px;
     }
 
 
+    /* ==============================
+       TITLE
+    ============================== */
 
-    /* =====================================================
-       PRICE MOBILE / INFORMATION
-    ===================================================== */
-
-    .mobile-price {
-      display: none;
+    h1 {
+      max-width: 800px;
 
       color: var(--azul);
 
-      font-size: 29px;
-      font-weight: 850;
+      font-size: clamp(32px, 5vw, 48px);
 
-      margin-bottom: 22px;
+      line-height: 1.08;
+
+      letter-spacing: -1.5px;
+
+      margin-bottom: 10px;
     }
 
 
+    /* ==============================
+       LOCATION
+    ============================== */
 
-    /* =====================================================
+    .location {
+      display: flex;
+
+      align-items: center;
+
+      gap: 7px;
+
+      margin-bottom: 22px;
+
+      color: var(--gris-500);
+
+      font-size: 15px;
+    }
+
+    .location strong {
+      color: var(--gris-700);
+    }
+
+
+    /* ==============================
+       PRICE
+    ============================== */
+
+    .price {
+      color: var(--azul);
+
+      font-size: 34px;
+      font-weight: 850;
+
+      line-height: 1.2;
+
+      margin-bottom: 25px;
+    }
+
+    .price small {
+      color: var(--gris-500);
+
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+
+    /* ==============================
        FEATURES
-    ===================================================== */
+    ============================== */
 
     .features {
       display: grid;
 
-      grid-template-columns:
-        repeat(6, 1fr);
-
-      gap: 10px;
-
-      padding: 22px 0;
-
-      margin-bottom: 32px;
+      grid-template-columns: repeat(3, 1fr);
 
       border-top: 1px solid var(--gris-200);
-
       border-bottom: 1px solid var(--gris-200);
-    }
 
+      margin-bottom: 35px;
+    }
 
     .feature {
-      padding: 14px 10px;
+      padding: 18px 15px;
 
-      border-radius: 10px;
-
-      background: var(--gris-50);
+      border-right: 1px solid var(--gris-200);
 
       text-align: center;
+
+      color: var(--gris-700);
+
+      font-size: 13px;
+      font-weight: 650;
     }
 
+    .feature:nth-child(3n) {
+      border-right: none;
+    }
 
     .feature-icon {
       display: block;
 
+      margin-bottom: 4px;
+
       color: var(--naranja);
 
-      font-size: 21px;
-
-      margin-bottom: 5px;
+      font-size: 19px;
     }
 
 
-    .feature strong {
-      display: block;
+    /* ==============================
+       INFORMATION GRID
+    ============================== */
 
-      color: var(--azul);
-
-      font-size: 13px;
-    }
-
-
-    .feature span {
-      display: block;
-
-      color: var(--gris-500);
-
-      font-size: 11px;
-    }
-
-
-
-    /* =====================================================
-       TWO COLUMNS
-    ===================================================== */
-
-    .details-grid {
+    .information-grid {
       display: grid;
 
-      grid-template-columns:
-        minmax(0, 1.45fr)
-        minmax(280px, .55fr);
+      grid-template-columns: 1.5fr .8fr;
 
-      gap: 55px;
+      gap: 45px;
 
       align-items: start;
     }
 
 
-
-    /* =====================================================
+    /* ==============================
        DESCRIPTION
-    ===================================================== */
+    ============================== */
 
-    .section-title {
+    .description h2,
+    .important h2 {
       color: var(--azul);
 
-      font-size: 24px;
+      font-size: 25px;
 
       line-height: 1.2;
 
-      margin-bottom: 17px;
+      margin-bottom: 16px;
     }
 
-
     .description p {
+      max-width: 760px;
+
       color: var(--gris-500);
 
       font-size: 15px;
 
       line-height: 1.75;
 
-      margin-bottom: 18px;
+      margin-bottom: 17px;
     }
 
 
+    /* ==============================
+       IMPORTANT BOX
+    ============================== */
 
-    /* =====================================================
-       CONDITIONS
-    ===================================================== */
+    .important {
+      padding: 25px;
 
-    .conditions {
-      margin-top: 35px;
+      background: var(--gris-50);
 
-      padding-top: 30px;
+      border: 1px solid var(--gris-200);
 
-      border-top: 1px solid var(--gris-200);
+      border-radius: 13px;
     }
 
+    .important h2 {
+      font-size: 20px;
+      margin-bottom: 17px;
+    }
 
-    .conditions-list {
+    .important-list {
       list-style: none;
 
       display: grid;
 
-      gap: 12px;
+      gap: 13px;
     }
 
+    .important-list li {
+      position: relative;
 
-    .conditions-list li {
-      display: flex;
-
-      align-items: flex-start;
-
-      gap: 11px;
+      padding-left: 25px;
 
       color: var(--gris-500);
 
-      font-size: 14px;
+      font-size: 13px;
     }
 
-
-    .conditions-list li::before {
+    .important-list li::before {
       content: "✓";
 
-      flex-shrink: 0;
+      position: absolute;
 
-      display: flex;
+      left: 0;
 
-      align-items: center;
-      justify-content: center;
-
-      width: 21px;
-      height: 21px;
-
-      border-radius: 50%;
-
-      background: #edf7f1;
-
-      color: var(--verde);
-
-      font-size: 12px;
+      color: var(--naranja);
 
       font-weight: 900;
     }
 
 
-
-    /* =====================================================
+    /* ==============================
        CONTACT BOX
-    ===================================================== */
+    ============================== */
 
     .contact-box {
-      position: sticky;
+      display: flex;
 
-      top: 105px;
+      align-items: center;
+      justify-content: space-between;
 
-      padding: 27px;
+      gap: 25px;
 
-      border: 1px solid var(--gris-200);
+      margin-top: 40px;
 
-      border-radius: 14px;
+      padding: 28px 30px;
 
-      background: var(--gris-50);
+      border-radius: 13px;
+
+      background: var(--azul);
+
+      color: white;
     }
 
-
-    .contact-box h3 {
-      color: var(--azul);
-
-      font-size: 21px;
+    .contact-box h2 {
+      font-size: 22px;
 
       line-height: 1.25;
 
-      margin-bottom: 9px;
+      margin-bottom: 5px;
     }
-
 
     .contact-box p {
-      color: var(--gris-500);
+      color: #d8e6ed;
 
       font-size: 13px;
-
-      margin-bottom: 20px;
     }
-
-
-    .contact-price {
-      padding: 17px 0;
-
-      margin-bottom: 20px;
-
-      border-top: 1px solid var(--gris-200);
-
-      border-bottom: 1px solid var(--gris-200);
-    }
-
-
-    .contact-price small {
-      display: block;
-
-      color: var(--gris-400);
-
-      font-size: 11px;
-    }
-
-
-    .contact-price strong {
-      color: var(--azul);
-
-      font-size: 25px;
-    }
-
 
     .whatsapp {
-      display: flex;
+      display: inline-flex;
 
       align-items: center;
       justify-content: center;
 
-      width: 100%;
+      flex-shrink: 0;
 
-      padding: 14px 18px;
+      padding: 14px 22px;
 
       border-radius: 9px;
 
@@ -744,72 +649,16 @@
       transition: .2s ease;
     }
 
-
     .whatsapp:hover {
-      background: #20bd5b;
+      background: #1fbd5b;
 
       transform: translateY(-2px);
     }
 
 
-    .contact-note {
-      margin-top: 13px;
-
-      color: var(--gris-400);
-
-      font-size: 11px;
-
-      text-align: center;
-    }
-
-
-
-    /* =====================================================
-       LOCATION
-    ===================================================== */
-
-    .location-section {
-      margin-top: 40px;
-
-      padding-top: 30px;
-
-      border-top: 1px solid var(--gris-200);
-    }
-
-
-    .location-card {
-      padding: 22px;
-
-      border-radius: 12px;
-
-      background: var(--gris-50);
-
-      border: 1px solid var(--gris-200);
-    }
-
-
-    .location-card strong {
-      display: block;
-
-      color: var(--azul);
-
-      font-size: 15px;
-
-      margin-bottom: 5px;
-    }
-
-
-    .location-card p {
-      color: var(--gris-500);
-
-      font-size: 13px;
-    }
-
-
-
-    /* =====================================================
+    /* ==============================
        FOOTER
-    ===================================================== */
+    ============================== */
 
     footer {
       padding: 42px 0;
@@ -821,13 +670,11 @@
       text-align: center;
     }
 
-
     footer strong {
       color: white;
 
       font-size: 20px;
     }
-
 
     footer p {
       margin-top: 8px;
@@ -836,243 +683,146 @@
     }
 
 
-
-    /* =====================================================
-       FLOATING WHATSAPP
-    ===================================================== */
-
-    .whatsapp-floating {
-      position: fixed;
-
-      right: 22px;
-      bottom: 22px;
-
-      z-index: 1500;
-
-      display: flex;
-
-      align-items: center;
-      justify-content: center;
-
-      width: 56px;
-      height: 56px;
-
-      border-radius: 50%;
-
-      background: #25D366;
-
-      color: white;
-
-      font-size: 25px;
-
-      box-shadow:
-        0 8px 25px rgba(0,0,0,.18);
-
-      transition: .2s ease;
-    }
-
-
-    .whatsapp-floating:hover {
-      transform:
-        translateY(-3px)
-        scale(1.03);
-    }
-
-
-
-    /* =====================================================
-       MOBILE
-    ===================================================== */
+    /* ==============================
+       RESPONSIVE
+    ============================== */
 
     @media (max-width: 900px) {
 
-      .property-header {
+      .information-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+      }
+
+      .features {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .feature:nth-child(3n) {
+        border-right: 1px solid var(--gris-200);
+      }
+
+      .feature:nth-child(2n) {
+        border-right: none;
+      }
+
+      .contact-box {
         align-items: flex-start;
 
         flex-direction: column;
-
-        gap: 8px;
       }
 
-
-      .header-price {
-        display: none;
-      }
-
-
-      .mobile-price {
-        display: block;
-      }
-
-
-      .features {
-        grid-template-columns:
-          repeat(3, 1fr);
-      }
-
-
-      .details-grid {
-        grid-template-columns: 1fr;
-
-        gap: 35px;
-      }
-
-
-      .contact-box {
-        position: static;
+      .whatsapp {
+        width: 100%;
       }
 
     }
 
 
-
-    @media (max-width: 600px) {
+    @media (max-width: 650px) {
 
       .container {
         width: 94%;
       }
 
-
       .nav {
         min-height: 68px;
       }
-
 
       .logo {
         font-size: 19px;
       }
 
-
       .back {
         font-size: 12px;
       }
 
-
       main {
-        padding: 20px 0 55px;
+        padding: 20px 0 50px;
       }
 
-
-      .property-header {
-        margin-bottom: 18px;
+      .breadcrumb {
+        font-size: 12px;
       }
-
-
-      .property-header h1 {
-        font-size: 32px;
-      }
-
-
-      .location {
-        font-size: 13px;
-      }
-
 
       .gallery {
         padding: 10px;
       }
 
-
       .main-photo {
         max-width: 100%;
       }
-
 
       .gallery-button {
         width: 40px;
         height: 40px;
 
-        font-size: 23px;
+        font-size: 24px;
       }
-
 
       .prev {
         left: 10px;
       }
 
-
       .next {
         right: 10px;
       }
 
-
-      .photo-counter {
-        right: 10px;
-        bottom: 10px;
-      }
-
-
       .thumbnails {
-        grid-template-columns:
-          repeat(5, 1fr);
+        grid-template-columns: repeat(5, 1fr);
 
         gap: 6px;
       }
-
 
       .thumbnail {
         height: 58px;
       }
 
-
-      .information {
-        padding: 25px 18px;
+      .content {
+        padding: 28px 20px 35px;
       }
 
+      h1 {
+        font-size: 34px;
+
+        letter-spacing: -1px;
+      }
+
+      .price {
+        font-size: 29px;
+      }
 
       .features {
-        grid-template-columns:
-          repeat(2, 1fr);
-
-        gap: 8px;
-
-        padding: 18px 0;
-
-        margin-bottom: 27px;
+        grid-template-columns: repeat(2, 1fr);
       }
-
 
       .feature {
-        padding: 12px 8px;
+        padding: 15px 8px;
+
+        font-size: 12px;
       }
-
-
-      .section-title {
-        font-size: 22px;
-      }
-
-
-      .description p {
-        font-size: 14px;
-      }
-
 
       .contact-box {
-        padding: 22px;
+        padding: 24px 20px;
       }
 
-
-      .whatsapp-floating {
-        right: 17px;
-        bottom: 17px;
-
-        width: 52px;
-        height: 52px;
+      .contact-box h2 {
+        font-size: 20px;
       }
 
     }
 
   </style>
-
 </head>
 
 
 <body>
 
 
-<!-- =====================================================
+<!-- ======================================================
      HEADER
-===================================================== -->
+====================================================== -->
 
 <header>
 
@@ -1082,11 +832,7 @@
       Sotofrau <span>Propiedades</span>
     </a>
 
-
-    <a
-      <a href="index.html#propiedades" class="back">
-      class="back"
-    >
+    <a href="index.html#propiedades" class="back">
       ← Volver a propiedades
     </a>
 
@@ -1096,67 +842,47 @@
 
 
 
-<!-- =====================================================
+<!-- ======================================================
      MAIN
-===================================================== -->
+====================================================== -->
 
 <main>
 
   <div class="container">
 
 
-    <!-- =================================================
-         TITULO
-    ================================================== -->
+    <!-- BREADCRUMB -->
 
-    <div class="property-header">
+    <div class="breadcrumb">
 
-      <div>
+      <a href="index.html">
+        Inicio
+      </a>
 
-        <div class="property-label">
-          Arriendo
-        </div>
+      <span>›</span>
 
-        <h1>
-          Habitación en arriendo
-        </h1>
+      <a href="index.html#propiedades">
+        Propiedades
+      </a>
 
-        <div class="location">
-          Valparaíso · Sector Yungay
-        </div>
+      <span>›</span>
 
-      </div>
-
-
-      <div class="header-price">
-
-        <small>
-          Arriendo mensual
-        </small>
-
-        <strong>
-          $260.000
-        </strong>
-
-      </div>
+      <span>
+        Habitación en arriendo
+      </span>
 
     </div>
 
 
 
-    <!-- =================================================
-         PROPERTY
-    ================================================== -->
-
     <article class="property">
 
 
-      <!-- =================================================
+      <!-- ==================================================
            GALERÍA
       ================================================== -->
 
       <div class="gallery">
-
 
         <div class="main-photo">
 
@@ -1166,7 +892,6 @@
             alt="Habitación en arriendo en Valparaíso"
           >
 
-
           <button
             class="gallery-button prev"
             onclick="anterior()"
@@ -1175,7 +900,6 @@
             ‹
           </button>
 
-
           <button
             class="gallery-button next"
             onclick="siguiente()"
@@ -1183,7 +907,6 @@
           >
             ›
           </button>
-
 
           <div class="photo-counter">
 
@@ -1199,12 +922,9 @@
 
 
 
-        <!-- =================================================
-             MINIATURAS
-        ================================================== -->
+        <!-- MINIATURAS -->
 
         <div class="thumbnails">
-
 
           <button
             class="thumbnail active"
@@ -1216,7 +936,6 @@
             >
           </button>
 
-
           <button
             class="thumbnail"
             onclick="mostrarFoto(2)"
@@ -1226,7 +945,6 @@
               alt="Foto 2"
             >
           </button>
-
 
           <button
             class="thumbnail"
@@ -1238,7 +956,6 @@
             >
           </button>
 
-
           <button
             class="thumbnail"
             onclick="mostrarFoto(4)"
@@ -1248,7 +965,6 @@
               alt="Foto 4"
             >
           </button>
-
 
           <button
             class="thumbnail"
@@ -1260,7 +976,6 @@
             >
           </button>
 
-
           <button
             class="thumbnail"
             onclick="mostrarFoto(6)"
@@ -1270,7 +985,6 @@
               alt="Foto 6"
             >
           </button>
-
 
           <button
             class="thumbnail"
@@ -1282,7 +996,6 @@
             >
           </button>
 
-
           <button
             class="thumbnail"
             onclick="mostrarFoto(8)"
@@ -1292,7 +1005,6 @@
               alt="Foto 8"
             >
           </button>
-
 
           <button
             class="thumbnail"
@@ -1304,18 +1016,17 @@
             >
           </button>
 
-
         </div>
 
       </div>
 
 
 
-      <!-- =================================================
-           INFORMATION
+      <!-- ==================================================
+           INFORMACIÓN
       ================================================== -->
 
-      <div class="information">
+      <div class="content">
 
 
         <span class="status">
@@ -1323,14 +1034,41 @@
         </span>
 
 
-        <div class="mobile-price">
+        <div class="operation">
+          Arriendo
+        </div>
+
+
+        <h1>
+          Habitación en arriendo
+        </h1>
+
+
+        <div class="location">
+
+          <span>📍</span>
+
+          <span>
+            <strong>Valparaíso</strong> · Sector Yungay
+          </span>
+
+        </div>
+
+
+        <div class="price">
+
           $260.000
+
+          <small>
+            / mensual
+          </small>
+
         </div>
 
 
 
-        <!-- =================================================
-             FEATURES
+        <!-- ==================================================
+             CARACTERÍSTICAS
         ================================================== -->
 
         <div class="features">
@@ -1342,13 +1080,7 @@
               🛏
             </span>
 
-            <strong>
-              1
-            </strong>
-
-            <span>
-              Dormitorio
-            </span>
+            1 dormitorio
 
           </div>
 
@@ -1359,13 +1091,7 @@
               🚿
             </span>
 
-            <strong>
-              1
-            </strong>
-
-            <span>
-              Baño
-            </span>
+            1 baño
 
           </div>
 
@@ -1376,13 +1102,7 @@
               📐
             </span>
 
-            <strong>
-              72 m²
-            </strong>
-
-            <span>
-              Superficie
-            </span>
+            72 m²
 
           </div>
 
@@ -1393,13 +1113,7 @@
               🛋
             </span>
 
-            <strong>
-              Sí
-            </strong>
-
-            <span>
-              Amoblada
-            </span>
+            Amoblado
 
           </div>
 
@@ -1407,16 +1121,10 @@
           <div class="feature">
 
             <span class="feature-icon">
-              💰
+              ✓
             </span>
 
-            <strong>
-              Incluidos
-            </strong>
-
-            <span>
-              Gastos comunes
-            </span>
+            Gastos comunes incluidos
 
           </div>
 
@@ -1424,16 +1132,10 @@
           <div class="feature">
 
             <span class="feature-icon">
-              🐾
+              🚫
             </span>
 
-            <strong>
-              No
-            </strong>
-
-            <span>
-              Mascotas
-            </span>
+            No acepta mascotas
 
           </div>
 
@@ -1442,187 +1144,90 @@
 
 
 
-        <!-- =================================================
-             DETAILS
+        <!-- ==================================================
+             DESCRIPCIÓN + INFORMACIÓN
         ================================================== -->
 
-        <div class="details-grid">
+        <div class="information-grid">
 
 
-          <!-- =================================================
-               DESCRIPCIÓN
-          ================================================== -->
+          <!-- DESCRIPCIÓN -->
 
-          <div>
+          <div class="description">
 
-
-            <section class="description">
-
-              <h2 class="section-title">
-                Sobre esta propiedad
-              </h2>
+            <h2>
+              Sobre esta propiedad
+            </h2>
 
 
-              <p>
-                Habitación en arriendo ubicada en el
-                sector de calle Yungay, Valparaíso.
-                La propiedad se encuentra amoblada y
-                cuenta con 1 dormitorio y 1 baño,
-                con una superficie informada de 72 m².
-              </p>
+            <p>
+              Habitación en arriendo ubicada en el sector de
+              calle Yungay, Valparaíso. La propiedad se encuentra
+              amoblada y cuenta con 1 dormitorio y 1 baño, con
+              una superficie informada de 72 m².
+            </p>
 
 
-              <p>
-                El arriendo mensual es de
-                <strong>$260.000</strong> e incluye los
-                gastos comunes.
-              </p>
+            <p>
+              El arriendo es de $260.000 mensuales e incluye
+              los gastos comunes. Los gastos correspondientes
+              a servicios básicos se distribuyen entre los
+              arrendatarios.
+            </p>
 
 
-              <p>
-                Los gastos correspondientes a los
-                servicios básicos se distribuyen entre
-                los arrendatarios de la propiedad.
-              </p>
+            <p>
+              Una alternativa para quienes buscan una habitación
+              amoblada en Valparaíso, con una ubicación cercana
+              a los principales servicios y conectividad del sector.
+            </p>
 
 
-              <p>
-                Una alternativa para quienes buscan
-                una habitación amoblada en Valparaíso,
-                en un sector con conectividad hacia
-                distintos puntos de la ciudad.
-              </p>
-
-            </section>
-
-
-
-            <!-- =================================================
-                 CONDICIONES
-            ================================================== -->
-
-            <section class="conditions">
-
-              <h2 class="section-title">
-                Condiciones
-              </h2>
-
-
-              <ul class="conditions-list">
-
-
-                <li>
-                  Arriendo mensual:
-                  <strong>$260.000</strong>
-                </li>
-
-
-                <li>
-                  Gastos comunes incluidos
-                  en el valor del arriendo.
-                </li>
-
-
-                <li>
-                  Servicios básicos distribuidos
-                  entre los arrendatarios.
-                </li>
-
-
-                <li>
-                  Propiedad amoblada.
-                </li>
-
-
-                <li>
-                  No se aceptan mascotas.
-                </li>
-
-
-              </ul>
-
-            </section>
-
-
-
-            <!-- =================================================
-                 UBICACIÓN
-            ================================================== -->
-
-            <section class="location-section">
-
-              <h2 class="section-title">
-                Ubicación
-              </h2>
-
-
-              <div class="location-card">
-
-                <strong>
-                  Valparaíso · Sector Yungay
-                </strong>
-
-                <p>
-                  La dirección exacta se entrega
-                  directamente a los interesados
-                  al momento de coordinar la visita.
-                </p>
-
-              </div>
-
-            </section>
-
+            <p>
+              Para conocer disponibilidad, condiciones de arriendo
+              y coordinar una visita, puedes contactarnos directamente.
+            </p>
 
           </div>
 
 
 
-          <!-- =================================================
-               CONTACTO
-          ================================================== -->
+          <!-- INFORMACIÓN IMPORTANTE -->
 
-          <aside class="contact-box">
+          <aside class="important">
 
-
-            <h3>
-              ¿Te interesa esta propiedad?
-            </h3>
+            <h2>
+              Información importante
+            </h2>
 
 
-            <p>
-              Escríbeme directamente por WhatsApp
-              para consultar condiciones,
-              disponibilidad o coordinar una visita.
-            </p>
+            <ul class="important-list">
 
+              <li>
+                Arriendo mensual: $260.000
+              </li>
 
-            <div class="contact-price">
+              <li>
+                Gastos comunes incluidos
+              </li>
 
-              <small>
-                Arriendo mensual
-              </small>
+              <li>
+                Servicios básicos compartidos entre arrendatarios
+              </li>
 
-              <strong>
-                $260.000
-              </strong>
+              <li>
+                Propiedad amoblada
+              </li>
 
-            </div>
+              <li>
+                No se aceptan mascotas
+              </li>
 
+              <li>
+                Ubicación referencial: sector Yungay, Valparaíso
+              </li>
 
-            <a
-              class="whatsapp"
-              href="https://wa.me/56944844983?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20la%20habitaci%C3%B3n%20en%20arriendo%20en%20Valpara%C3%ADso%2C%20sector%20Yungay."
-              target="_blank"
-              rel="noopener"
-            >
-              Consultar por WhatsApp
-            </a>
-
-
-            <div class="contact-note">
-              Sotofrau Propiedades
-            </div>
-
+            </ul>
 
           </aside>
 
@@ -1630,8 +1235,42 @@
         </div>
 
 
-      </div>
 
+        <!-- ==================================================
+             CONTACTO
+        ================================================== -->
+
+        <div class="contact-box">
+
+
+          <div>
+
+            <h2>
+              ¿Te interesa esta propiedad?
+            </h2>
+
+            <p>
+              Escríbenos para consultar condiciones
+              y coordinar una visita.
+            </p>
+
+          </div>
+
+
+          <a
+            class="whatsapp"
+            href="https://wa.me/56944844983?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20la%20propiedad%20%22Habitaci%C3%B3n%20en%20arriendo%22."
+            target="_blank"
+            rel="noopener"
+          >
+            Consultar por WhatsApp
+          </a>
+
+
+        </div>
+
+
+      </div>
 
     </article>
 
@@ -1641,9 +1280,9 @@
 
 
 
-<!-- =====================================================
+<!-- ======================================================
      FOOTER
-===================================================== -->
+====================================================== -->
 
 <footer>
 
@@ -1653,15 +1292,12 @@
       Sotofrau Propiedades
     </strong>
 
-
     <p>
       Compra · Venta · Arriendo · Administración
     </p>
 
-
     <p>
-      © 2026 Sotofrau Propiedades ·
-      Todos los derechos reservados.
+      © 2026 Sotofrau Propiedades · Todos los derechos reservados.
     </p>
 
   </div>
@@ -1670,47 +1306,22 @@
 
 
 
-<!-- =====================================================
-     WHATSAPP FLOTANTE
-===================================================== -->
-
-<a
-  class="whatsapp-floating"
-  href="https://wa.me/56944844983?text=Hola%2C%20quiero%20consultar%20por%20una%20propiedad."
-  target="_blank"
-  rel="noopener"
-  aria-label="Contactar por WhatsApp"
->
-  ☎
-</a>
-
-
-
-<!-- =====================================================
-     JAVASCRIPT GALERÍA
-===================================================== -->
+<!-- ======================================================
+     GALERÍA JAVASCRIPT
+====================================================== -->
 
 <script>
-
 
   const fotos = [
 
     "propiedades/1/1.jpeg",
-
     "propiedades/1/2.jpeg",
-
     "propiedades/1/3.jpeg",
-
     "propiedades/1/4.jpeg",
-
     "propiedades/1/5.jpeg",
-
     "propiedades/1/6.jpeg",
-
     "propiedades/1/7.jpeg",
-
     "propiedades/1/8.jpeg",
-
     "propiedades/1/9.jpeg"
 
   ];
@@ -1724,14 +1335,12 @@
     fotoActual = numero;
 
 
-    document
-      .getElementById("mainImage")
-      .src = fotos[numero - 1];
+    document.getElementById("mainImage").src =
+      fotos[numero - 1];
 
 
-    document
-      .getElementById("currentPhoto")
-      .textContent = numero;
+    document.getElementById("currentPhoto").textContent =
+      numero;
 
 
     const thumbnails =
@@ -1754,7 +1363,6 @@
   }
 
 
-
   function siguiente() {
 
     if (fotoActual === fotos.length) {
@@ -1770,7 +1378,6 @@
   }
 
 
-
   function anterior() {
 
     if (fotoActual === 1) {
@@ -1784,6 +1391,25 @@
     }
 
   }
+
+
+  /* Navegación con teclado */
+
+  document.addEventListener("keydown", function(event) {
+
+    if (event.key === "ArrowRight") {
+
+      siguiente();
+
+    }
+
+    if (event.key === "ArrowLeft") {
+
+      anterior();
+
+    }
+
+  });
 
 
 </script>
