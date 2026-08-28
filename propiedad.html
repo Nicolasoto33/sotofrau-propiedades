@@ -1,1 +1,1226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
 
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Propiedad | Sotofrau Propiedades</title>
+
+  <meta
+    name="description"
+    content="Propiedad gestionada por Sotofrau Propiedades."
+  >
+
+  <meta name="theme-color" content="#0d2f49">
+
+
+  <style>
+
+    :root {
+      --azul: #0d2f49;
+      --azul-2: #164968;
+      --azul-oscuro: #081f31;
+
+      --naranja: #e88925;
+      --naranja-hover: #d97818;
+
+      --blanco: #ffffff;
+
+      --gris-50: #fafbfc;
+      --gris-100: #f3f5f7;
+      --gris-200: #e6eaee;
+      --gris-500: #6b7781;
+      --gris-700: #37444e;
+
+      --verde: #238b57;
+      --rojo: #b44a48;
+
+      --radio: 16px;
+
+      --sombra:
+        0 12px 35px rgba(13,47,73,.08);
+    }
+
+
+    * {
+      box-sizing: border-box;
+
+      margin: 0;
+      padding: 0;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+
+    body {
+
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      color: var(--gris-700);
+
+      background: var(--gris-50);
+
+      line-height: 1.6;
+
+    }
+
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+
+    img {
+      max-width: 100%;
+    }
+
+
+    .container {
+
+      width: min(1180px, 92%);
+
+      margin: auto;
+
+    }
+
+
+    /* HEADER */
+
+
+    header {
+
+      position: sticky;
+
+      top: 0;
+
+      z-index: 1000;
+
+      background:
+        rgba(255,255,255,.96);
+
+      backdrop-filter:
+        blur(14px);
+
+      border-bottom:
+        1px solid rgba(13,47,73,.08);
+
+    }
+
+
+    .nav {
+
+      min-height: 78px;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: space-between;
+
+    }
+
+
+    .logo {
+
+      font-size: 23px;
+
+      font-weight: 800;
+
+      color: var(--azul);
+
+    }
+
+
+    .logo span {
+
+      color: var(--naranja);
+
+      margin-left: 5px;
+
+    }
+
+
+    .back {
+
+      color: var(--azul);
+
+      font-size: 14px;
+
+      font-weight: 700;
+
+    }
+
+
+    .back:hover {
+
+      color: var(--naranja);
+
+    }
+
+
+    /* PROPERTY */
+
+
+    .property-page {
+
+      padding: 65px 0 90px;
+
+    }
+
+
+    .property-layout {
+
+      display: grid;
+
+      grid-template-columns:
+        1.25fr .75fr;
+
+      gap: 40px;
+
+      align-items: start;
+
+    }
+
+
+    /* GALLERY */
+
+
+    .gallery {
+
+      background: white;
+
+      border-radius: var(--radio);
+
+      overflow: hidden;
+
+      box-shadow: var(--sombra);
+
+      border:
+        1px solid var(--gris-200);
+
+    }
+
+
+    .main-photo {
+
+      position: relative;
+
+      height: 520px;
+
+      background:
+        linear-gradient(
+          135deg,
+          #dce6ec,
+          #b9cbd5
+        );
+
+      overflow: hidden;
+
+    }
+
+
+    .main-photo img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+
+    }
+
+
+    .photo-placeholder {
+
+      position: absolute;
+
+      inset: 0;
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      color: #61727d;
+
+      font-size: 14px;
+
+      text-align: center;
+
+    }
+
+
+    .status {
+
+      position: absolute;
+
+      top: 20px;
+
+      left: 20px;
+
+      z-index: 5;
+
+      padding: 8px 13px;
+
+      border-radius: 6px;
+
+      color: white;
+
+      font-size: 11px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing: .5px;
+
+    }
+
+
+    .status-arrendada {
+
+      background: var(--rojo);
+
+    }
+
+
+    .status-disponible {
+
+      background: var(--verde);
+
+    }
+
+
+    .status-vendida {
+
+      background: #59656d;
+
+    }
+
+
+    /* THUMBNAILS */
+
+
+    .thumbnails {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
+      gap: 10px;
+
+      padding: 12px;
+
+    }
+
+
+    .thumbnail {
+
+      height: 90px;
+
+      border-radius: 8px;
+
+      overflow: hidden;
+
+      cursor: pointer;
+
+      border:
+        2px solid transparent;
+
+      background: var(--gris-100);
+
+    }
+
+
+    .thumbnail.active {
+
+      border-color:
+        var(--naranja);
+
+    }
+
+
+    .thumbnail img {
+
+      width: 100%;
+
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+
+    }
+
+
+    /* INFO */
+
+
+    .property-info {
+
+      background: white;
+
+      padding: 35px;
+
+      border-radius: var(--radio);
+
+      border:
+        1px solid var(--gris-200);
+
+      box-shadow: var(--sombra);
+
+    }
+
+
+    .operation {
+
+      color: var(--naranja);
+
+      font-size: 12px;
+
+      font-weight: 800;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.4px;
+
+      margin-bottom: 10px;
+
+    }
+
+
+    .property-info h1 {
+
+      color: var(--azul);
+
+      font-size: 38px;
+
+      line-height: 1.12;
+
+      letter-spacing: -.8px;
+
+      margin-bottom: 10px;
+
+    }
+
+
+    .location {
+
+      color: var(--gris-500);
+
+      font-size: 14px;
+
+      margin-bottom: 22px;
+
+    }
+
+
+    .price {
+
+      color: var(--azul);
+
+      font-size: 30px;
+
+      font-weight: 800;
+
+      margin-bottom: 25px;
+
+    }
+
+
+    .features {
+
+      display: grid;
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
+      gap: 12px;
+
+      padding: 20px 0;
+
+      border-top:
+        1px solid var(--gris-200);
+
+      border-bottom:
+        1px solid var(--gris-200);
+
+      margin-bottom: 25px;
+
+    }
+
+
+    .feature {
+
+      color: var(--gris-500);
+
+      font-size: 13px;
+
+    }
+
+
+    .description {
+
+      color: var(--gris-700);
+
+      font-size: 15px;
+
+      margin-bottom: 28px;
+
+    }
+
+
+    .whatsapp {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      width: 100%;
+
+      padding: 15px;
+
+      border-radius: 9px;
+
+      background: #25D366;
+
+      color: white;
+
+      font-size: 14px;
+
+      font-weight: 800;
+
+      transition: .2s ease;
+
+    }
+
+
+    .whatsapp:hover {
+
+      transform:
+        translateY(-2px);
+
+    }
+
+
+    .back-button {
+
+      display: flex;
+
+      align-items: center;
+
+      justify-content: center;
+
+      width: 100%;
+
+      margin-top: 10px;
+
+      padding: 13px;
+
+      border-radius: 9px;
+
+      background: var(--azul);
+
+      color: white;
+
+      font-size: 13px;
+
+      font-weight: 750;
+
+    }
+
+
+    .back-button:hover {
+
+      background: var(--azul-oscuro);
+
+    }
+
+
+    /* FOOTER */
+
+
+    footer {
+
+      padding: 42px 0;
+
+      background:
+        var(--azul-oscuro);
+
+      color: #cbdbe4;
+
+      text-align: center;
+
+    }
+
+
+    footer strong {
+
+      color: white;
+
+      font-size: 20px;
+
+    }
+
+
+    footer p {
+
+      margin-top: 8px;
+
+      font-size: 13px;
+
+    }
+
+
+    /* MOBILE */
+
+
+    @media (max-width: 900px) {
+
+      .property-layout {
+
+        grid-template-columns: 1fr;
+
+      }
+
+      .main-photo {
+
+        height: 430px;
+
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .nav {
+
+        min-height: 68px;
+
+      }
+
+      .logo {
+
+        font-size: 20px;
+
+      }
+
+      .property-page {
+
+        padding:
+          35px 0 60px;
+
+      }
+
+      .property-info {
+
+        padding: 25px;
+
+      }
+
+      .property-info h1 {
+
+        font-size: 30px;
+
+      }
+
+      .price {
+
+        font-size: 26px;
+
+      }
+
+      .main-photo {
+
+        height: 300px;
+
+      }
+
+      .thumbnail {
+
+        height: 65px;
+
+      }
+
+    }
+
+  </style>
+
+</head>
+
+
+<body>
+
+
+<header>
+
+  <div class="container nav">
+
+    <a
+      href="index.html"
+      class="logo"
+    >
+      Sotofrau
+      <span>Propiedades</span>
+    </a>
+
+
+    <a
+      href="index.html#propiedades"
+      class="back"
+    >
+      ← Volver a propiedades
+    </a>
+
+  </div>
+
+</header>
+
+
+<main class="property-page">
+
+  <div class="container">
+
+
+    <div
+      class="property-layout"
+      id="propertyContent"
+    >
+
+    </div>
+
+
+  </div>
+
+</main>
+
+
+<footer>
+
+  <div class="container">
+
+    <strong>
+      Sotofrau Propiedades
+    </strong>
+
+    <p>
+      Compra · Venta · Arriendo · Administración
+    </p>
+
+    <p>
+      © 2026 Sotofrau Propiedades ·
+      Todos los derechos reservados.
+    </p>
+
+  </div>
+
+</footer>
+
+
+<script>
+
+/* =====================================================
+   DATOS DE TODAS LAS PROPIEDADES
+
+   AQUÍ TAMBIÉN AGREGARÁS LAS NUEVAS PROPIEDADES.
+===================================================== */
+
+const propiedades = [
+
+  {
+    id: 1,
+
+    titulo:
+      "Habitación en arriendo",
+
+    operacion:
+      "Arriendo",
+
+    estado:
+      "gestionada",
+
+    estadoTexto:
+      "Arrendada",
+
+    ubicacion:
+      "Valparaíso · Sector Yungay",
+
+    precio:
+      "$260.000",
+
+    fotos: [
+      "propiedades/1/1.jpeg"
+    ],
+
+    dormitorios:
+      "1 dormitorio",
+
+    banos:
+      "1 baño",
+
+    metros:
+      "72 m²",
+
+    estacionamiento:
+      "No informado",
+
+    bodega:
+      "No informado",
+
+    amoblado:
+      "Sí",
+
+    descripcion:
+      "Habitación en arriendo ubicada en Valparaíso, sector Yungay. Propiedad gestionada por Sotofrau Propiedades."
+
+  },
+
+
+  {
+    id: 2,
+
+    titulo:
+      "Piso independiente",
+
+    operacion:
+      "Arriendo",
+
+    estado:
+      "gestionada",
+
+    estadoTexto:
+      "Arrendada",
+
+    ubicacion:
+      "Quilpué · Sector Teniente Serrano",
+
+    precio:
+      "$400.000",
+
+    fotos: [
+      "propiedades/2/foto-01.jpg"
+    ],
+
+    dormitorios:
+      "2 dormitorios",
+
+    banos:
+      "1 baño",
+
+    metros:
+      "45 m²",
+
+    estacionamiento:
+      "Sí",
+
+    bodega:
+      "No informado",
+
+    amoblado:
+      "No",
+
+    descripcion:
+      "Piso independiente en Quilpué, sector Teniente Serrano. Propiedad gestionada por Sotofrau Propiedades."
+
+  },
+
+
+  {
+    id: 3,
+
+    titulo:
+      "Departamento amoblado Reñaca",
+
+    operacion:
+      "Arriendo",
+
+    estado:
+      "gestionada",
+
+    estadoTexto:
+      "Arrendada",
+
+    ubicacion:
+      "Reñaca · Viña del Mar",
+
+    precio:
+      "$500.000",
+
+    fotos: [
+      "propiedades/3/foto-01.jpg"
+    ],
+
+    dormitorios:
+      "1 dormitorio",
+
+    banos:
+      "1 baño",
+
+    metros:
+      "52 m²",
+
+    estacionamiento:
+      "Sí",
+
+    bodega:
+      "Sí",
+
+    amoblado:
+      "Sí",
+
+    descripcion:
+      "Departamento amoblado ubicado en Reñaca, Viña del Mar. Cuenta con estacionamiento y bodega."
+
+  }
+
+];
+
+
+/* =====================================================
+   OBTENER ID DESDE LA URL
+===================================================== */
+
+const parametros =
+  new URLSearchParams(
+    window.location.search
+  );
+
+const id =
+  Number(
+    parametros.get("id")
+  );
+
+
+/* =====================================================
+   BUSCAR PROPIEDAD
+===================================================== */
+
+const propiedad =
+  propiedades.find(
+    function(item) {
+      return item.id === id;
+    }
+  );
+
+
+/* =====================================================
+   MOSTRAR PROPIEDAD
+===================================================== */
+
+const contenedor =
+  document.getElementById(
+    "propertyContent"
+  );
+
+
+if (!propiedad) {
+
+  contenedor.innerHTML = `
+
+    <div
+      style="
+        grid-column:1/-1;
+        background:white;
+        padding:50px;
+        border-radius:16px;
+        text-align:center;
+      "
+    >
+
+      <h1
+        style="
+          color:#0d2f49;
+          margin-bottom:15px;
+        "
+      >
+        Propiedad no encontrada
+      </h1>
+
+      <p
+        style="
+          color:#6b7781;
+          margin-bottom:25px;
+        "
+      >
+        La propiedad que buscas no existe
+        o el enlace es incorrecto.
+      </p>
+
+      <a
+        href="index.html#propiedades"
+        style="
+          display:inline-block;
+          padding:13px 20px;
+          background:#0d2f49;
+          color:white;
+          border-radius:8px;
+          font-weight:700;
+        "
+      >
+        Volver a propiedades
+      </a>
+
+    </div>
+
+  `;
+
+} else {
+
+
+  let claseEstado =
+    "status-disponible";
+
+
+  if (
+    propiedad.estado === "gestionada"
+  ) {
+
+    claseEstado =
+      "status-arrendada";
+
+  }
+
+
+  if (
+    propiedad.estado === "vendida"
+  ) {
+
+    claseEstado =
+      "status-vendida";
+
+  }
+
+
+  /* GALERÍA */
+
+  let galeria = "";
+
+  propiedad.fotos.forEach(
+    function(foto, indice) {
+
+      galeria += `
+
+        <div
+          class="thumbnail ${
+            indice === 0
+              ? "active"
+              : ""
+          }"
+          onclick="cambiarFoto(
+            '${foto}',
+            this
+          )"
+        >
+
+          <img
+            src="${foto}"
+            alt="${propiedad.titulo}"
+          >
+
+        </div>
+
+      `;
+
+    }
+  );
+
+
+  contenedor.innerHTML = `
+
+    <div class="gallery">
+
+      <div class="main-photo">
+
+        <span
+          class="status ${claseEstado}"
+        >
+          ${propiedad.estadoTexto}
+        </span>
+
+
+        <img
+          id="mainImage"
+          src="${propiedad.fotos[0]}"
+          alt="${propiedad.titulo}"
+          onerror="
+            this.style.display='none';
+            document
+              .getElementById('photoPlaceholder')
+              .style.display='flex';
+          "
+        >
+
+
+        <div
+          id="photoPlaceholder"
+          class="photo-placeholder"
+          style="display:none;"
+        >
+          Fotografías de la propiedad
+        </div>
+
+      </div>
+
+
+      <div class="thumbnails">
+
+        ${galeria}
+
+      </div>
+
+    </div>
+
+
+    <div class="property-info">
+
+      <div class="operation">
+        ${propiedad.operacion}
+      </div>
+
+
+      <h1>
+        ${propiedad.titulo}
+      </h1>
+
+
+      <div class="location">
+        ${propiedad.ubicacion}
+      </div>
+
+
+      <div class="price">
+        ${propiedad.precio}
+      </div>
+
+
+      <div class="features">
+
+        <div class="feature">
+          🛏 ${propiedad.dormitorios}
+        </div>
+
+        <div class="feature">
+          🚿 ${propiedad.banos}
+        </div>
+
+        <div class="feature">
+          📐 ${propiedad.metros}
+        </div>
+
+        <div class="feature">
+          🚗 Estacionamiento:
+          ${propiedad.estacionamiento}
+        </div>
+
+        <div class="feature">
+          📦 Bodega:
+          ${propiedad.bodega}
+        </div>
+
+        <div class="feature">
+          🛋 Amoblado:
+          ${propiedad.amoblado}
+        </div>
+
+      </div>
+
+
+      <div class="description">
+
+        ${propiedad.descripcion}
+
+      </div>
+
+
+      <a
+        class="whatsapp"
+        href="https://wa.me/56944844983?text=${encodeURIComponent(
+          "Hola, quiero consultar por la propiedad: "
+          + propiedad.titulo
+        )}"
+        target="_blank"
+      >
+        Consultar por WhatsApp
+      </a>
+
+
+      <a
+        href="index.html#propiedades"
+        class="back-button"
+      >
+        ← Volver a propiedades
+      </a>
+
+    </div>
+
+  `;
+
+}
+
+
+/* =====================================================
+   CAMBIAR FOTO
+===================================================== */
+
+function cambiarFoto(
+  foto,
+  elemento
+) {
+
+  const imagen =
+    document.getElementById(
+      "mainImage"
+    );
+
+
+  imagen.src = foto;
+
+
+  document
+    .querySelectorAll(
+      ".thumbnail"
+    )
+    .forEach(
+      function(item) {
+
+        item.classList.remove(
+          "active"
+        );
+
+      }
+    );
+
+
+  elemento.classList.add(
+    "active"
+  );
+
+}
+
+</script>
+
+
+</body>
+</html>
