@@ -59,15 +59,18 @@ content="#0d2f49"
       --ancho: 1180px;
     }
 
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
+
     html {
       scroll-behavior: smooth;
     }
+
 
     body {
       font-family:
@@ -79,33 +82,52 @@ content="#0d2f49"
         sans-serif;
 
       color: var(--gris-700);
+
       background: var(--blanco);
+
       line-height: 1.6;
     }
+
 
     img {
       max-width: 100%;
     }
 
+
     a {
       text-decoration: none;
+
       color: inherit;
     }
+
 
     button {
       font: inherit;
     }
 
+
     .container {
-      width: min(var(--ancho), 92%);
+      width:
+        min(
+          var(--ancho),
+          92%
+        );
+
       margin: auto;
     }
 
-    /* HEADER */
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
 
     header {
+
       position: sticky;
+
       top: 0;
+
       z-index: 1000;
 
       background:
@@ -118,23 +140,32 @@ content="#0d2f49"
         1px solid rgba(13,47,73,.08);
     }
 
+
     .nav {
+
       min-height: 78px;
 
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
 
       gap: 30px;
     }
 
+
     .logo {
+
       display: inline-flex;
+
       align-items: center;
 
-      color: var(--azul);
+      color:
+        var(--azul);
 
       font-size: 23px;
+
       font-weight: 800;
 
       letter-spacing: -.5px;
@@ -142,53 +173,80 @@ content="#0d2f49"
       white-space: nowrap;
     }
 
+
     .logo span {
-      color: var(--naranja);
+
+      color:
+        var(--naranja);
+
       margin-left: 5px;
     }
 
+
     nav {
+
       display: flex;
+
       align-items: center;
 
       gap: 26px;
 
       font-size: 14px;
+
       font-weight: 650;
     }
 
+
     nav a {
-      color: var(--azul);
+
+      color:
+        var(--azul);
 
       transition: .2s ease;
     }
 
+
     nav a:hover {
-      color: var(--naranja);
+
+      color:
+        var(--naranja);
     }
 
+
     .nav-contact {
-      background: var(--azul);
+
+      background:
+        var(--azul);
 
       color: white !important;
 
-      padding: 11px 18px;
+      padding:
+        11px 18px;
 
       border-radius: 9px;
     }
 
+
     .nav-contact:hover {
-      background: var(--azul-2);
+
+      background:
+        var(--azul-2);
     }
 
-    /* HERO */
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
 
     .hero {
+
       position: relative;
 
       min-height: 650px;
 
       display: flex;
+
       align-items: center;
 
       overflow: hidden;
@@ -198,9 +256,9 @@ content="#0d2f49"
       background:
         linear-gradient(
           90deg,
-          rgba(6,25,40,.97),
-          rgba(8,34,53,.88),
-          rgba(8,34,53,.52)
+          rgba(6,25,40,.97) 0%,
+          rgba(8,34,53,.88) 45%,
+          rgba(8,34,53,.52) 100%
         ),
         linear-gradient(
           135deg,
@@ -209,15 +267,19 @@ content="#0d2f49"
         );
     }
 
+
     .hero::after {
+
       content: "";
 
       position: absolute;
 
       width: 500px;
+
       height: 500px;
 
       right: -180px;
+
       bottom: -230px;
 
       border-radius: 50%;
@@ -226,7 +288,9 @@ content="#0d2f49"
         rgba(232,137,37,.14);
     }
 
+
     .hero-content {
+
       position: relative;
 
       z-index: 2;
@@ -236,7 +300,9 @@ content="#0d2f49"
       padding: 100px 0;
     }
 
+
     .hero-label {
+
       display: inline-flex;
 
       align-items: center;
@@ -245,7 +311,8 @@ content="#0d2f49"
 
       margin-bottom: 22px;
 
-      color: #d9e9f2;
+      color:
+        #d9e9f2;
 
       font-size: 13px;
 
@@ -256,19 +323,28 @@ content="#0d2f49"
       letter-spacing: 1.6px;
     }
 
+
     .hero-label::before {
+
       content: "";
 
       width: 28px;
+
       height: 2px;
 
       background:
         var(--naranja);
     }
 
+
     .hero h1 {
+
       font-size:
-        clamp(43px,6vw,70px);
+        clamp(
+          43px,
+          6vw,
+          70px
+        );
 
       line-height: 1.02;
 
@@ -277,14 +353,20 @@ content="#0d2f49"
       margin-bottom: 25px;
     }
 
+
     .hero h1 span {
-      color: #f3a04b;
+
+      color:
+        #f3a04b;
     }
 
+
     .hero p {
+
       max-width: 650px;
 
-      color: #e4eef3;
+      color:
+        #e4eef3;
 
       font-size: 18px;
 
@@ -293,7 +375,9 @@ content="#0d2f49"
       margin-bottom: 36px;
     }
 
+
     .buttons {
+
       display: flex;
 
       flex-wrap: wrap;
@@ -301,14 +385,17 @@ content="#0d2f49"
       gap: 12px;
     }
 
+
     .btn {
+
       display: inline-flex;
 
       align-items: center;
 
       justify-content: center;
 
-      padding: 14px 22px;
+      padding:
+        14px 22px;
 
       border-radius: 9px;
 
@@ -319,46 +406,70 @@ content="#0d2f49"
       transition: .2s ease;
     }
 
+
     .btn:hover {
-      transform: translateY(-2px);
+
+      transform:
+        translateY(-2px);
     }
 
+
     .btn-primary {
-      background: var(--naranja);
+
+      background:
+        var(--naranja);
 
       color: white;
 
       box-shadow:
-        0 8px 22px rgba(232,137,37,.22);
+        0 8px 22px
+        rgba(232,137,37,.22);
     }
 
+
     .btn-primary:hover {
+
       background:
         var(--naranja-hover);
     }
 
-    .btn-light {
-      background: white;
 
-      color: var(--azul);
+    .btn-light {
+
+      background:
+        white;
+
+      color:
+        var(--azul);
     }
 
-    /* SECCIONES */
+
+
+    /* =====================================================
+       SECCIONES
+    ===================================================== */
 
     section {
-      padding: 90px 0;
+
+      padding:
+        90px 0;
     }
 
+
     .section-header {
+
       max-width: 680px;
 
       margin:
         0 auto 48px;
 
-      text-align: center;
+      text-align:
+        center;
     }
 
+
     .section-label {
+
       display: block;
 
       margin-bottom: 9px;
@@ -370,17 +481,25 @@ content="#0d2f49"
 
       font-weight: 800;
 
-      text-transform: uppercase;
+      text-transform:
+        uppercase;
 
-      letter-spacing: 1.6px;
+      letter-spacing:
+        1.6px;
     }
 
+
     .section-header h2 {
+
       color:
         var(--azul);
 
       font-size:
-        clamp(30px,4vw,40px);
+        clamp(
+          30px,
+          4vw,
+          40px
+        );
 
       line-height: 1.15;
 
@@ -389,21 +508,30 @@ content="#0d2f49"
       margin-bottom: 12px;
     }
 
+
     .section-header p {
+
       color:
         var(--gris-500);
 
       font-size: 16px;
     }
 
-    /* PROPIEDADES */
+
+
+    /* =====================================================
+       PROPIEDADES
+    ===================================================== */
 
     .properties-section {
+
       background:
         var(--gris-50);
     }
 
+
     .filters {
+
       display: flex;
 
       justify-content: center;
@@ -415,49 +543,69 @@ content="#0d2f49"
       margin-bottom: 38px;
     }
 
+
     .filter {
+
       border:
         1px solid var(--gris-200);
 
-      background: white;
+      background:
+        white;
 
-      color: var(--gris-700);
+      color:
+        var(--gris-700);
 
-      padding: 10px 19px;
+      padding:
+        10px 19px;
 
-      border-radius: 30px;
+      border-radius:
+        30px;
 
-      cursor: pointer;
+      cursor:
+        pointer;
 
-      font-size: 13px;
+      font-size:
+        13px;
 
-      font-weight: 700;
+      font-weight:
+        700;
 
-      transition: .2s ease;
+      transition:
+        .2s ease;
     }
+
 
     .filter:hover,
     .filter.active {
+
       background:
         var(--azul);
 
       border-color:
         var(--azul);
 
-      color: white;
+      color:
+        white;
     }
 
+
     .property-grid {
-      display: grid;
+
+      display:
+        grid;
 
       grid-template-columns:
         repeat(3,1fr);
 
-      gap: 25px;
+      gap:
+        25px;
     }
 
+
     .property-card {
-      background: white;
+
+      background:
+        white;
 
       border:
         1px solid var(--gris-200);
@@ -465,7 +613,8 @@ content="#0d2f49"
       border-radius:
         var(--radio);
 
-      overflow: hidden;
+      overflow:
+        hidden;
 
       box-shadow:
         var(--sombra);
@@ -475,7 +624,9 @@ content="#0d2f49"
         box-shadow .25s ease;
     }
 
+
     .property-card:hover {
+
       transform:
         translateY(-5px);
 
@@ -483,16 +634,24 @@ content="#0d2f49"
         var(--sombra-hover);
     }
 
+
     .property-card.hidden {
-      display: none;
+
+      display:
+        none;
     }
 
+
     .property-image {
-      position: relative;
 
-      height: 245px;
+      position:
+        relative;
 
-      overflow: hidden;
+      height:
+        245px;
+
+      overflow:
+        hidden;
 
       background:
         linear-gradient(
@@ -502,124 +661,185 @@ content="#0d2f49"
         );
     }
 
+
     .property-image img {
-      position: absolute;
 
-      inset: 0;
+      position:
+        absolute;
 
-      width: 100%;
-      height: 100%;
+      inset:
+        0;
 
-      object-fit: cover;
+      width:
+        100%;
 
-      display: block;
+      height:
+        100%;
+
+      object-fit:
+        cover;
+
+      display:
+        block;
 
       transition:
         transform .5s ease;
     }
 
+
     .property-card:hover
     .property-image img {
+
       transform:
         scale(1.03);
     }
 
+
     .status {
-      position: absolute;
 
-      top: 15px;
-      left: 15px;
+      position:
+        absolute;
 
-      z-index: 5;
+      top:
+        15px;
 
-      padding: 7px 11px;
+      left:
+        15px;
 
-      border-radius: 6px;
+      z-index:
+        5;
 
-      color: white;
+      padding:
+        7px 11px;
 
-      font-size: 11px;
+      border-radius:
+        6px;
 
-      font-weight: 800;
+      color:
+        white;
 
-      text-transform: uppercase;
+      font-size:
+        11px;
 
-      letter-spacing: .4px;
+      font-weight:
+        800;
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        .4px;
     }
 
+
     .status-arrendada {
+
       background:
         var(--rojo);
     }
 
+
     .status-disponible {
+
       background:
         var(--verde);
     }
 
+
     .status-vendida {
+
       background:
         #59656d;
     }
 
+
     .property-content {
-      padding: 23px;
+
+      padding:
+        23px;
     }
 
+
     .operation {
-      margin-bottom: 7px;
+
+      margin-bottom:
+        7px;
 
       color:
         var(--naranja);
 
-      font-size: 11px;
+      font-size:
+        11px;
 
-      font-weight: 800;
+      font-weight:
+        800;
 
-      text-transform: uppercase;
+      text-transform:
+        uppercase;
 
-      letter-spacing: 1px;
+      letter-spacing:
+        1px;
     }
 
+
     .property-content h3 {
+
       color:
         var(--azul);
 
-      font-size: 21px;
+      font-size:
+        21px;
 
-      line-height: 1.25;
+      line-height:
+        1.25;
 
-      margin-bottom: 7px;
+      margin-bottom:
+        7px;
     }
 
+
     .location {
+
       color:
         var(--gris-500);
 
-      font-size: 13px;
+      font-size:
+        13px;
 
-      margin-bottom: 15px;
+      margin-bottom:
+        15px;
     }
 
+
     .price {
+
       color:
         var(--azul);
 
-      font-size: 24px;
+      font-size:
+        24px;
 
-      font-weight: 800;
+      font-weight:
+        800;
 
-      margin-bottom: 15px;
+      margin-bottom:
+        15px;
     }
 
+
     .features {
-      display: flex;
 
-      flex-wrap: wrap;
+      display:
+        flex;
 
-      gap: 7px 11px;
+      flex-wrap:
+        wrap;
 
-      padding-top: 15px;
+      gap:
+        7px 11px;
+
+      padding-top:
+        15px;
 
       border-top:
         1px solid var(--gris-200);
@@ -627,58 +847,86 @@ content="#0d2f49"
       color:
         var(--gris-500);
 
-      font-size: 12px;
+      font-size:
+        12px;
     }
 
+
     .property-button {
-      display: flex;
 
-      align-items: center;
+      display:
+        flex;
 
-      justify-content: center;
+      align-items:
+        center;
 
-      width: 100%;
+      justify-content:
+        center;
 
-      margin-top: 19px;
+      width:
+        100%;
 
-      padding: 11px;
+      margin-top:
+        19px;
 
-      border-radius: 8px;
+      padding:
+        11px;
+
+      border-radius:
+        8px;
 
       background:
         var(--azul);
 
-      color: white;
+      color:
+        white;
 
-      font-size: 13px;
+      font-size:
+        13px;
 
-      font-weight: 750;
+      font-weight:
+        750;
 
-      transition: .2s ease;
+      transition:
+        .2s ease;
     }
 
+
     .property-button:hover {
+
       background:
         var(--azul-oscuro);
     }
 
-    /* SERVICIOS */
+
+
+    /* =====================================================
+       SERVICIOS
+    ===================================================== */
 
     .service-grid {
-      display: grid;
+
+      display:
+        grid;
 
       grid-template-columns:
         repeat(3,1fr);
 
-      gap: 22px;
+      gap:
+        22px;
     }
 
+
     .service {
-      position: relative;
 
-      padding: 34px;
+      position:
+        relative;
 
-      background: white;
+      padding:
+        34px;
+
+      background:
+        white;
 
       border:
         1px solid var(--gris-200);
@@ -689,212 +937,322 @@ content="#0d2f49"
       box-shadow:
         var(--sombra);
 
-      overflow: hidden;
+      overflow:
+        hidden;
     }
 
+
     .service::after {
-      content: "";
 
-      position: absolute;
+      content:
+        "";
 
-      width: 90px;
-      height: 90px;
+      position:
+        absolute;
 
-      right: -45px;
-      top: -45px;
+      width:
+        90px;
 
-      border-radius: 50%;
+      height:
+        90px;
+
+      right:
+        -45px;
+
+      top:
+        -45px;
+
+      border-radius:
+        50%;
 
       background:
         rgba(232,137,37,.08);
     }
 
+
     .service-number {
-      margin-bottom: 20px;
+
+      margin-bottom:
+        20px;
 
       color:
         var(--naranja);
 
-      font-size: 12px;
+      font-size:
+        12px;
 
-      font-weight: 850;
+      font-weight:
+        850;
 
-      letter-spacing: 1px;
+      letter-spacing:
+        1px;
     }
 
+
     .service h3 {
+
       color:
         var(--azul);
 
-      font-size: 22px;
+      font-size:
+        22px;
 
-      margin-bottom: 11px;
+      margin-bottom:
+        11px;
     }
 
+
     .service p {
+
       color:
         var(--gris-500);
 
-      font-size: 14px;
+      font-size:
+        14px;
     }
 
-    /* ADMINISTRACIÓN */
+
+
+    /* =====================================================
+       ADMINISTRACIÓN
+    ===================================================== */
 
     .administration {
+
       background:
         var(--azul);
 
-      color: white;
+      color:
+        white;
     }
 
+
     .admin-grid {
-      display: grid;
+
+      display:
+        grid;
 
       grid-template-columns:
         1.15fr .85fr;
 
-      gap: 70px;
+      gap:
+        70px;
 
-      align-items: center;
+      align-items:
+        center;
     }
 
-    .administration h2 {
-      max-width: 650px;
-
-      font-size:
-        clamp(32px,4vw,46px);
-
-      line-height: 1.1;
-
-      letter-spacing: -1px;
-
-      margin-bottom: 20px;
-    }
 
     .administration .section-label {
+
       color:
         #f2a053;
     }
 
+
+    .administration h2 {
+
+      max-width:
+        650px;
+
+      font-size:
+        clamp(
+          32px,
+          4vw,
+          46px
+        );
+
+      line-height:
+        1.1;
+
+      letter-spacing:
+        -1px;
+
+      margin-bottom:
+        20px;
+    }
+
+
     .admin-text {
-      max-width: 620px;
+
+      max-width:
+        620px;
 
       color:
         #d5e3eb;
 
-      font-size: 16px;
+      font-size:
+        16px;
 
-      margin-bottom: 25px;
+      margin-bottom:
+        25px;
     }
+
 
     .admin-list {
-      list-style: none;
 
-      display: grid;
+      list-style:
+        none;
 
-      gap: 12px;
+      display:
+        grid;
+
+      gap:
+        12px;
     }
 
-    .admin-list li {
-      position: relative;
 
-      padding-left: 26px;
+    .admin-list li {
+
+      position:
+        relative;
+
+      padding-left:
+        26px;
 
       color:
         #eef5f8;
 
-      font-size: 14px;
+      font-size:
+        14px;
     }
 
+
     .admin-list li::before {
-      content: "✓";
 
-      position: absolute;
+      content:
+        "✓";
 
-      left: 0;
+      position:
+        absolute;
+
+      left:
+        0;
 
       color:
         #f2a053;
 
-      font-weight: 900;
+      font-weight:
+        900;
     }
 
+
     .admin-box {
-      background: white;
+
+      background:
+        white;
 
       color:
         var(--gris-700);
 
-      padding: 35px;
+      padding:
+        35px;
 
       border-radius:
         var(--radio);
 
       box-shadow:
-        0 18px 45px rgba(0,0,0,.18);
+        0 18px 45px
+        rgba(0,0,0,.18);
     }
 
+
     .admin-box h3 {
+
       color:
         var(--azul);
 
-      font-size: 24px;
+      font-size:
+        24px;
 
-      line-height: 1.25;
+      line-height:
+        1.25;
 
-      margin-bottom: 12px;
+      margin-bottom:
+        12px;
     }
 
+
     .admin-box p {
+
       color:
         var(--gris-500);
 
-      font-size: 14px;
+      font-size:
+        14px;
 
-      margin-bottom: 23px;
+      margin-bottom:
+        23px;
     }
 
-    /* CAPTACIÓN */
+
+
+    /* =====================================================
+       CAPTACIÓN
+    ===================================================== */
 
     .capture {
+
       background:
         var(--gris-50);
 
-      text-align: center;
+      text-align:
+        center;
     }
 
+
     .capture-box {
-      max-width: 850px;
 
-      margin: auto;
+      max-width:
+        850px;
 
-      padding: 60px 40px;
+      margin:
+        auto;
+
+      padding:
+        60px 40px;
 
       border:
         1px solid var(--gris-200);
 
-      border-radius: 20px;
+      border-radius:
+        20px;
 
-      background: white;
+      background:
+        white;
 
       box-shadow:
         var(--sombra);
     }
 
+
     .capture-box h2 {
+
       color:
         var(--azul);
 
       font-size:
-        clamp(31px,4vw,42px);
+        clamp(
+          31px,
+          4vw,
+          42px
+        );
 
-      line-height: 1.15;
+      line-height:
+        1.15;
 
-      margin-bottom: 14px;
+      letter-spacing:
+        -.8px;
+
+      margin-bottom:
+        14px;
     }
 
+
     .capture-box p {
-      max-width: 650px;
+
+      max-width:
+        650px;
 
       margin:
         0 auto 28px;
@@ -902,26 +1260,40 @@ content="#0d2f49"
       color:
         var(--gris-500);
 
-      font-size: 15px;
+      font-size:
+        15px;
     }
 
-    /* CONTACTO */
+
+
+    /* =====================================================
+       CONTACTO
+    ===================================================== */
 
     .contact {
-      background: white;
+
+      background:
+        white;
     }
 
+
     .contact-grid {
-      display: grid;
+
+      display:
+        grid;
 
       grid-template-columns:
         repeat(3,1fr);
 
-      gap: 20px;
+      gap:
+        20px;
     }
 
+
     .contact-item {
-      padding: 30px;
+
+      padding:
+        30px;
 
       border:
         1px solid var(--gris-200);
@@ -929,36 +1301,53 @@ content="#0d2f49"
       border-radius:
         var(--radio);
 
-      text-align: center;
+      text-align:
+        center;
 
-      background: white;
+      background:
+        white;
     }
 
+
     .contact-item h3 {
+
       color:
         var(--azul);
 
-      font-size: 18px;
+      font-size:
+        18px;
 
-      margin-bottom: 7px;
+      margin-bottom:
+        7px;
     }
 
+
     .contact-item p {
+
       color:
         var(--gris-500);
 
-      font-size: 14px;
+      font-size:
+        14px;
     }
 
+
     .contact-item a:hover {
+
       color:
         var(--naranja);
     }
 
-    /* FOOTER */
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
     footer {
-      padding: 42px 0;
+
+      padding:
+        42px 0;
 
       background:
         var(--azul-oscuro);
@@ -966,61 +1355,98 @@ content="#0d2f49"
       color:
         #cbdbe4;
 
-      text-align: center;
+      text-align:
+        center;
     }
+
 
     footer strong {
-      color: white;
 
-      font-size: 20px;
+      color:
+        white;
+
+      font-size:
+        20px;
     }
+
 
     footer p {
-      margin-top: 8px;
 
-      font-size: 13px;
+      margin-top:
+        8px;
+
+      font-size:
+        13px;
     }
 
-    /* WHATSAPP */
+
+
+    /* =====================================================
+       WHATSAPP
+    ===================================================== */
 
     .whatsapp-floating {
-      position: fixed;
 
-      right: 22px;
-      bottom: 22px;
+      position:
+        fixed;
 
-      z-index: 1500;
+      right:
+        22px;
 
-      display: flex;
+      bottom:
+        22px;
 
-      align-items: center;
+      z-index:
+        1500;
 
-      justify-content: center;
+      display:
+        flex;
 
-      width: 56px;
-      height: 56px;
+      align-items:
+        center;
 
-      border-radius: 50%;
+      justify-content:
+        center;
 
-      background: #25D366;
+      width:
+        56px;
 
-      color: white;
+      height:
+        56px;
 
-      font-size: 25px;
+      border-radius:
+        50%;
+
+      background:
+        #25D366;
+
+      color:
+        white;
+
+      font-size:
+        25px;
 
       box-shadow:
-        0 8px 25px rgba(0,0,0,.18);
+        0 8px 25px
+        rgba(0,0,0,.18);
 
-      transition: .2s ease;
+      transition:
+        .2s ease;
     }
 
+
     .whatsapp-floating:hover {
+
       transform:
         translateY(-3px)
         scale(1.03);
     }
 
-    /* MOBILE */
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
 
     @media (max-width: 900px) {
 
@@ -1028,84 +1454,134 @@ content="#0d2f49"
         display: none;
       }
 
+
       .hero {
-        min-height: 570px;
+        min-height:
+          570px;
       }
+
 
       .hero-content {
-        padding: 75px 0;
+        padding:
+          75px 0;
       }
 
+
       .hero h1 {
-        font-size: 47px;
+        font-size:
+          47px;
       }
+
 
       .property-grid,
       .service-grid,
       .contact-grid {
-        grid-template-columns: 1fr;
+
+        grid-template-columns:
+          1fr;
       }
+
 
       .admin-grid {
-        grid-template-columns: 1fr;
 
-        gap: 38px;
+        grid-template-columns:
+          1fr;
+
+        gap:
+          38px;
       }
 
+
       section {
-        padding: 70px 0;
+
+        padding:
+          70px 0;
       }
 
     }
 
+
     @media (max-width: 600px) {
 
       .nav {
-        min-height: 68px;
+
+        min-height:
+          68px;
       }
+
 
       .logo {
-        font-size: 20px;
+
+        font-size:
+          20px;
       }
+
 
       .hero {
-        min-height: 560px;
+
+        min-height:
+          560px;
       }
+
 
       .hero h1 {
-        font-size: 43px;
 
-        letter-spacing: -1.5px;
+        font-size:
+          43px;
+
+        letter-spacing:
+          -1.5px;
       }
+
 
       .hero p {
-        font-size: 16px;
+
+        font-size:
+          16px;
       }
+
 
       .buttons {
-        width: 100%;
+
+        width:
+          100%;
       }
+
 
       .btn {
-        width: 100%;
+
+        width:
+          100%;
       }
+
 
       .property-image {
-        height: 250px;
+
+        height:
+          250px;
       }
+
 
       .capture-box {
-        padding: 45px 22px;
+
+        padding:
+          45px 22px;
       }
 
+
       .whatsapp-floating {
-        right: 17px;
 
-        bottom: 17px;
+        right:
+          17px;
 
-        width: 52px;
+        bottom:
+          17px;
 
-        height: 52px;
+        width:
+          52px;
+
+        height:
+          52px;
       }
 
     }
@@ -1115,6 +1591,10 @@ content="#0d2f49"
 </head>
 
 <body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
 
@@ -1128,6 +1608,7 @@ content="#0d2f49"
   Sotofrau
   <span>Propiedades</span>
 </a>
+
 
 <nav>
 
@@ -1161,6 +1642,10 @@ content="#0d2f49"
 
 </header>
 
+<!-- =====================================================
+     HERO
+===================================================== -->
+
 <section
   class="hero"
   id="inicio"
@@ -1175,15 +1660,18 @@ content="#0d2f49"
     Sotofrau Propiedades
   </div>
 
+
   <h1>
     Tu propiedad,<br>
     <span>en buenas manos.</span>
   </h1>
 
+
   <p>
     Compra, vende, arrienda o administra tu propiedad
     con una atención cercana, transparente y personalizada.
   </p>
+
 
   <div class="buttons">
 
@@ -1193,6 +1681,7 @@ content="#0d2f49"
     >
       Ver propiedades
     </a>
+
 
     <a
       href="#captacion"
@@ -1210,6 +1699,10 @@ content="#0d2f49"
 
 </section>
 
+<!-- =====================================================
+     PROPIEDADES
+===================================================== -->
+
 <section
   class="properties-section"
   id="propiedades"
@@ -1224,9 +1717,11 @@ content="#0d2f49"
     Nuestra cartera
   </span>
 
+
   <h2>
     Propiedades
   </h2>
+
 
   <p>
     Conoce las propiedades que hemos gestionado
@@ -1234,6 +1729,7 @@ content="#0d2f49"
   </p>
 
 </div>
+
 
 <div class="filters">
 
@@ -1244,12 +1740,14 @@ content="#0d2f49"
     Todas
   </button>
 
+
   <button
     class="filter"
     onclick="filtrar('venta', this)"
   >
     Venta
   </button>
+
 
   <button
     class="filter"
@@ -1258,12 +1756,14 @@ content="#0d2f49"
     Arriendo
   </button>
 
+
   <button
     class="filter"
     onclick="filtrar('disponible', this)"
   >
     Disponibles
   </button>
+
 
   <button
     class="filter"
@@ -1274,9 +1774,14 @@ content="#0d2f49"
 
 </div>
 
+
+
 <div class="property-grid">
 
-  <!-- PROPIEDAD 1 -->
+
+  <!-- =================================================
+       PROPIEDAD 1
+  ================================================== -->
 
   <article
     class="property-card"
@@ -1286,9 +1791,12 @@ content="#0d2f49"
 
     <div class="property-image">
 
-      <span class="status status-arrendada">
+      <span
+        class="status status-arrendada"
+      >
         Arrendada
       </span>
+
 
       <img
         src="propiedades/1/1.jpeg"
@@ -1297,23 +1805,28 @@ content="#0d2f49"
 
     </div>
 
+
     <div class="property-content">
 
       <div class="operation">
         Arriendo
       </div>
 
+
       <h3>
         Habitación en arriendo
       </h3>
+
 
       <div class="location">
         Valparaíso · Sector Yungay
       </div>
 
+
       <div class="price">
         $260.000
       </div>
+
 
       <div class="features">
 
@@ -1321,19 +1834,23 @@ content="#0d2f49"
           🛏 1 dormitorio
         </span>
 
+
         <span>
           🚿 1 baño
         </span>
 
+
         <span>
           📐 72 m²
         </span>
+
 
         <span>
           🛋 Amoblado
         </span>
 
       </div>
+
 
       <a
         href="propiedad-1.html"
@@ -1346,7 +1863,11 @@ content="#0d2f49"
 
   </article>
 
-  <!-- PROPIEDAD 2 -->
+
+
+  <!-- =================================================
+       PROPIEDAD 2
+  ================================================== -->
 
   <article
     class="property-card"
@@ -1356,9 +1877,12 @@ content="#0d2f49"
 
     <div class="property-image">
 
-      <span class="status status-arrendada">
+      <span
+        class="status status-arrendada"
+      >
         Arrendada
       </span>
+
 
       <img
         src="propiedades/2/1.jpeg"
@@ -1367,23 +1891,28 @@ content="#0d2f49"
 
     </div>
 
+
     <div class="property-content">
 
       <div class="operation">
         Arriendo
       </div>
 
+
       <h3>
         2° Piso Independiente en Arriendo
       </h3>
+
 
       <div class="location">
         Quilpué · Sector Teniente Serrano
       </div>
 
+
       <div class="price">
         $400.000
       </div>
+
 
       <div class="features">
 
@@ -1391,24 +1920,27 @@ content="#0d2f49"
           🛏 2 dormitorios
         </span>
 
+
         <span>
           🚿 1 baño
         </span>
+
 
         <span>
           📐 45 m²
         </span>
 
+
         <span>
-          🚗 Estacionamiento
+          🚗 1 estacionamiento
         </span>
 
       </div>
 
+
       <a
-        href="#"
+        href="propiedad-2.html"
         class="property-button"
-        onclick="alert('Próximamente disponible'); return false;"
       >
         Ver propiedad
       </a>
@@ -1417,6 +1949,7 @@ content="#0d2f49"
 
   </article>
 
+
 </div>
 ```
 
@@ -1424,7 +1957,13 @@ content="#0d2f49"
 
 </section>
 
-<section id="servicios">
+<!-- =====================================================
+     SERVICIOS
+===================================================== -->
+
+<section
+  id="servicios"
+>
 
   <div class="container">
 
@@ -1435,9 +1974,11 @@ content="#0d2f49"
     ¿Qué hacemos?
   </span>
 
+
   <h2>
     Servicios inmobiliarios
   </h2>
+
 
   <p>
     Te acompañamos en cada etapa de tu operación inmobiliaria,
@@ -1446,7 +1987,9 @@ content="#0d2f49"
 
 </div>
 
+
 <div class="service-grid">
+
 
   <div class="service">
 
@@ -1454,9 +1997,11 @@ content="#0d2f49"
       01
     </div>
 
+
     <h3>
       Compra
     </h3>
+
 
     <p>
       Te ayudamos a encontrar una propiedad que se ajuste
@@ -1465,15 +2010,18 @@ content="#0d2f49"
 
   </div>
 
+
   <div class="service">
 
     <div class="service-number">
       02
     </div>
 
+
     <h3>
       Venta
     </h3>
+
 
     <p>
       Comercializamos tu propiedad, gestionamos los interesados
@@ -1482,15 +2030,18 @@ content="#0d2f49"
 
   </div>
 
+
   <div class="service">
 
     <div class="service-number">
       03
     </div>
 
+
     <h3>
       Arriendo
     </h3>
+
 
     <p>
       Publicamos y gestionamos tu propiedad buscando
@@ -1506,6 +2057,10 @@ content="#0d2f49"
 
 </section>
 
+<!-- =====================================================
+     ADMINISTRACIÓN
+===================================================== -->
+
 <section
   class="administration"
   id="administracion"
@@ -1516,21 +2071,25 @@ content="#0d2f49"
 ```
 <div class="admin-grid">
 
+
   <div>
 
     <span class="section-label">
       Administración de propiedades
     </span>
 
+
     <h2>
       Tu propiedad sigue siendo tuya.
       Nosotros nos encargamos de gestionarla.
     </h2>
 
+
     <p class="admin-text">
       Simplificamos la administración de tu propiedad para
       que tengas mayor tranquilidad y claridad sobre su gestión.
     </p>
+
 
     <ul class="admin-list">
 
@@ -1538,17 +2097,21 @@ content="#0d2f49"
         Cobro y seguimiento del arriendo
       </li>
 
+
       <li>
         Coordinación de mantenciones
       </li>
+
 
       <li>
         Atención y comunicación con el arrendatario
       </li>
 
+
       <li>
         Apoyo administrativo y legal
       </li>
+
 
       <li>
         Reporte mensual de la gestión
@@ -1558,17 +2121,20 @@ content="#0d2f49"
 
   </div>
 
+
   <div class="admin-box">
 
     <h3>
       ¿Tienes una propiedad arrendada?
     </h3>
 
+
     <p>
       Si administrar tu propiedad te quita tiempo,
       podemos encargarnos de la gestión y mantenerte
       informado de todo lo que ocurre.
     </p>
+
 
     <a
       href="https://wa.me/56944844983?text=Hola%2C%20quiero%20consultar%20por%20el%20servicio%20de%20administraci%C3%B3n%20de%20propiedades."
@@ -1588,6 +2154,10 @@ content="#0d2f49"
 
 </section>
 
+<!-- =====================================================
+     CAPTACIÓN
+===================================================== -->
+
 <section
   class="capture"
   id="captacion"
@@ -1602,15 +2172,18 @@ content="#0d2f49"
     ¿Tienes una propiedad?
   </span>
 
+
   <h2>
     Podemos ayudarte.
   </h2>
+
 
   <p>
     Si quieres vender o arrendar tu propiedad,
     cuéntanos sobre ella y conversemos sobre
     la mejor estrategia para comercializarla.
   </p>
+
 
   <div
     class="buttons"
@@ -1625,6 +2198,7 @@ content="#0d2f49"
     >
       Quiero vender
     </a>
+
 
     <a
       href="https://wa.me/56944844983?text=Hola%2C%20quiero%20arrendar%20mi%20propiedad%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n."
@@ -1648,6 +2222,10 @@ content="#0d2f49"
 
 </section>
 
+<!-- =====================================================
+     CONTACTO
+===================================================== -->
+
 <section
   class="contact"
   id="contacto"
@@ -1662,9 +2240,11 @@ content="#0d2f49"
     Hablemos
   </span>
 
+
   <h2>
     Contacto
   </h2>
+
 
   <p>
     Si tienes una consulta inmobiliaria,
@@ -1673,13 +2253,16 @@ content="#0d2f49"
 
 </div>
 
+
 <div class="contact-grid">
+
 
   <div class="contact-item">
 
     <h3>
       WhatsApp
     </h3>
+
 
     <p>
 
@@ -1695,11 +2278,13 @@ content="#0d2f49"
 
   </div>
 
+
   <div class="contact-item">
 
     <h3>
       Instagram
     </h3>
+
 
     <p>
 
@@ -1715,11 +2300,13 @@ content="#0d2f49"
 
   </div>
 
+
   <div class="contact-item">
 
     <h3>
       Zona de atención
     </h3>
+
 
     <p>
       Viña del Mar · Concón · Reñaca ·
@@ -1728,12 +2315,17 @@ content="#0d2f49"
 
   </div>
 
+
 </div>
 ```
 
   </div>
 
 </section>
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
@@ -1744,9 +2336,11 @@ content="#0d2f49"
   Sotofrau Propiedades
 </strong>
 
+
 <p>
   Compra · Venta · Arriendo · Administración
 </p>
+
 
 <p>
   © 2026 Sotofrau Propiedades ·
@@ -1757,6 +2351,10 @@ content="#0d2f49"
   </div>
 
 </footer>
+
+<!-- =====================================================
+     WHATSAPP FLOTANTE
+===================================================== -->
 
 <a
 class="whatsapp-floating"
@@ -1769,19 +2367,28 @@ aria-label="Contactar por WhatsApp"
 
 ☎ </a>
 
+<!-- =====================================================
+     JAVASCRIPT
+===================================================== -->
+
 <script>
 
-  function filtrar(tipo, boton) {
+  function filtrar(
+    tipo,
+    boton
+  ) {
 
     const tarjetas =
       document.querySelectorAll(
         ".property-card"
       );
 
+
     const botones =
       document.querySelectorAll(
         ".filter"
       );
+
 
     botones.forEach(
       function(b) {
@@ -1793,9 +2400,11 @@ aria-label="Contactar por WhatsApp"
       }
     );
 
+
     boton.classList.add(
       "active"
     );
+
 
     tarjetas.forEach(
       function(tarjeta) {
@@ -1803,10 +2412,14 @@ aria-label="Contactar por WhatsApp"
         const operacion =
           tarjeta.dataset.operation;
 
+
         const estado =
           tarjeta.dataset.status;
 
-        let mostrar = false;
+
+        let mostrar =
+          false;
+
 
         if (
           tipo === "todas"
@@ -1815,6 +2428,7 @@ aria-label="Contactar por WhatsApp"
           mostrar = true;
 
         }
+
 
         if (
           tipo === "venta" &&
@@ -1825,6 +2439,7 @@ aria-label="Contactar por WhatsApp"
 
         }
 
+
         if (
           tipo === "arriendo" &&
           operacion === "arriendo"
@@ -1833,6 +2448,7 @@ aria-label="Contactar por WhatsApp"
           mostrar = true;
 
         }
+
 
         if (
           tipo === "disponible" &&
@@ -1843,6 +2459,7 @@ aria-label="Contactar por WhatsApp"
 
         }
 
+
         if (
           tipo === "gestionada" &&
           estado === "gestionada"
@@ -1851,6 +2468,7 @@ aria-label="Contactar por WhatsApp"
           mostrar = true;
 
         }
+
 
         tarjeta.classList.toggle(
           "hidden",
