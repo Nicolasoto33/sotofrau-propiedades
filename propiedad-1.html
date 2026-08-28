@@ -95,20 +95,25 @@
     }
 
     .main-photo {
-      position: relative;
-      width: 100%;
-      height: min(600px, 65vw);
-      min-height: 320px;
-      background: #e4e9ed;
-      border-radius: 10px;
-      overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 850px;
+  height: 560px;
+  margin: 0 auto;
+  background: #e4e9ed;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
     }
 
     .main-photo img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
     }
 
     .gallery-button {
