@@ -1,1 +1,1114 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>2° Piso Independiente en Arriendo en Quilpué | Sotofrau Propiedades</title>
+
+<meta
+name="description"
+content="2° piso independiente en arriendo en Teniente Serrano, Quilpué. 2 dormitorios, 1 baño, estacionamiento y patio."
+
+>
+
+  <meta name="theme-color" content="#0d2f49">
+
+  <style>
+
+    :root {
+      --azul: #0d2f49;
+      --azul-2: #164968;
+      --azul-oscuro: #081f31;
+      --naranja: #e88925;
+      --naranja-hover: #d97818;
+
+      --blanco: #ffffff;
+      --gris-50: #fafbfc;
+      --gris-100: #f3f5f7;
+      --gris-200: #e6eaee;
+      --gris-500: #6b7781;
+      --gris-700: #37444e;
+
+      --verde: #238b57;
+      --rojo: #b44a48;
+
+      --sombra: 0 12px 35px rgba(13, 47, 73, .08);
+      --sombra-hover: 0 18px 45px rgba(13, 47, 73, .14);
+
+      --radio: 16px;
+      --ancho: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+      color: var(--gris-700);
+      background: var(--gris-50);
+      line-height: 1.6;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(var(--ancho), 92%);
+      margin: auto;
+    }
+
+
+    /* =====================================================
+       HEADER
+    ===================================================== */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+
+      background: rgba(255,255,255,.97);
+      backdrop-filter: blur(14px);
+
+      border-bottom: 1px solid rgba(13,47,73,.08);
+    }
+
+    .nav {
+      min-height: 78px;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      gap: 25px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+
+      font-size: 23px;
+      font-weight: 800;
+
+      letter-spacing: -.5px;
+
+      color: var(--azul);
+
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--naranja);
+      margin-left: 5px;
+    }
+
+    .back {
+      color: var(--azul);
+
+      font-size: 14px;
+      font-weight: 750;
+
+      transition: .2s ease;
+    }
+
+    .back:hover {
+      color: var(--naranja);
+    }
+
+
+    /* =====================================================
+       MAIN
+    ===================================================== */
+
+    main {
+      padding: 45px 0 80px;
+    }
+
+    .property {
+      background: white;
+
+      border-radius: var(--radio);
+
+      overflow: hidden;
+
+      box-shadow: var(--sombra);
+    }
+
+
+    /* =====================================================
+       GALERÍA
+    ===================================================== */
+
+    .gallery {
+      padding: 22px;
+    }
+
+    .main-photo {
+      position: relative;
+
+      width: 100%;
+      max-width: 900px;
+
+      margin: 0 auto;
+
+      background: #eef2f5;
+
+      border-radius: 12px;
+
+      overflow: hidden;
+    }
+
+    .main-photo img {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      max-height: 650px;
+
+      margin: auto;
+
+      object-fit: contain;
+    }
+
+    .gallery-button {
+      position: absolute;
+
+      top: 50%;
+
+      transform: translateY(-50%);
+
+      width: 48px;
+      height: 48px;
+
+      border: none;
+
+      border-radius: 50%;
+
+      background: rgba(0,0,0,.55);
+
+      color: white;
+
+      font-size: 29px;
+
+      cursor: pointer;
+
+      z-index: 5;
+
+      transition: .2s ease;
+    }
+
+    .gallery-button:hover {
+      background: rgba(0,0,0,.78);
+
+      transform: translateY(-50%) scale(1.05);
+    }
+
+    .prev {
+      left: 18px;
+    }
+
+    .next {
+      right: 18px;
+    }
+
+    .photo-counter {
+      position: absolute;
+
+      right: 18px;
+      bottom: 18px;
+
+      background: rgba(0,0,0,.68);
+
+      color: white;
+
+      padding: 7px 12px;
+
+      border-radius: 20px;
+
+      font-size: 13px;
+      font-weight: 750;
+    }
+
+    .thumbnails {
+      display: grid;
+
+      grid-template-columns: repeat(8, 1fr);
+
+      gap: 9px;
+
+      max-width: 900px;
+
+      margin: 14px auto 0;
+    }
+
+    .thumbnail {
+      height: 78px;
+
+      border: 3px solid transparent;
+
+      border-radius: 8px;
+
+      overflow: hidden;
+
+      cursor: pointer;
+
+      background: #e4e9ed;
+
+      padding: 0;
+
+      transition: .2s ease;
+    }
+
+    .thumbnail:hover {
+      transform: translateY(-2px);
+    }
+
+    .thumbnail.active {
+      border-color: var(--naranja);
+    }
+
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+
+      display: block;
+    }
+
+
+    /* =====================================================
+       CONTENT
+    ===================================================== */
+
+    .content {
+      max-width: 1000px;
+
+      margin: auto;
+
+      padding: 40px 45px 50px;
+    }
+
+    .status {
+      display: inline-block;
+
+      background: var(--rojo);
+
+      color: white;
+
+      padding: 7px 12px;
+
+      border-radius: 6px;
+
+      font-size: 11px;
+      font-weight: 850;
+
+      text-transform: uppercase;
+
+      letter-spacing: .5px;
+
+      margin-bottom: 16px;
+    }
+
+    .operation {
+      color: var(--naranja);
+
+      font-size: 12px;
+      font-weight: 850;
+
+      text-transform: uppercase;
+
+      letter-spacing: 1.2px;
+
+      margin-bottom: 8px;
+    }
+
+    h1 {
+      color: var(--azul);
+
+      font-size: clamp(31px, 5vw, 48px);
+
+      line-height: 1.1;
+
+      letter-spacing: -1px;
+
+      margin-bottom: 8px;
+    }
+
+    .location {
+      color: var(--gris-500);
+
+      font-size: 15px;
+
+      margin-bottom: 22px;
+    }
+
+    .price {
+      color: var(--azul);
+
+      font-size: 34px;
+      font-weight: 850;
+
+      margin-bottom: 28px;
+    }
+
+
+    /* =====================================================
+       FEATURES
+    ===================================================== */
+
+    .features {
+      display: flex;
+
+      flex-wrap: wrap;
+
+      gap: 10px;
+
+      padding: 22px 0;
+
+      border-top: 1px solid var(--gris-200);
+      border-bottom: 1px solid var(--gris-200);
+
+      margin-bottom: 30px;
+    }
+
+    .feature {
+      background: var(--gris-100);
+
+      color: var(--gris-700);
+
+      padding: 10px 14px;
+
+      border-radius: 8px;
+
+      font-size: 13px;
+
+      font-weight: 650;
+    }
+
+
+    /* =====================================================
+       DESCRIPTION
+    ===================================================== */
+
+    .description {
+      max-width: 800px;
+    }
+
+    .description h2 {
+      color: var(--azul);
+
+      font-size: 25px;
+
+      margin-bottom: 13px;
+    }
+
+    .description p {
+      color: var(--gris-500);
+
+      font-size: 15px;
+
+      margin-bottom: 17px;
+    }
+
+
+    /* =====================================================
+       HIGHLIGHTS
+    ===================================================== */
+
+    .highlights {
+      display: grid;
+
+      grid-template-columns: repeat(3, 1fr);
+
+      gap: 14px;
+
+      margin: 28px 0;
+    }
+
+    .highlight {
+      padding: 18px;
+
+      background: var(--gris-50);
+
+      border: 1px solid var(--gris-200);
+
+      border-radius: 10px;
+    }
+
+    .highlight strong {
+      display: block;
+
+      color: var(--azul);
+
+      font-size: 14px;
+
+      margin-bottom: 4px;
+    }
+
+    .highlight span {
+      color: var(--gris-500);
+
+      font-size: 13px;
+    }
+
+
+    /* =====================================================
+       WHATSAPP
+    ===================================================== */
+
+    .whatsapp {
+      display: inline-flex;
+
+      align-items: center;
+      justify-content: center;
+
+      background: #25D366;
+
+      color: white;
+
+      padding: 15px 24px;
+
+      border-radius: 9px;
+
+      font-size: 14px;
+
+      font-weight: 800;
+
+      margin-top: 8px;
+
+      box-shadow: 0 8px 22px rgba(37,211,102,.18);
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
+    }
+
+    .whatsapp:hover {
+      transform: translateY(-2px);
+
+      box-shadow: 0 12px 28px rgba(37,211,102,.25);
+    }
+
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+
+    footer {
+      background: var(--azul-oscuro);
+
+      color: #dceaf1;
+
+      padding: 42px 0;
+
+      text-align: center;
+    }
+
+    footer strong {
+      color: white;
+
+      font-size: 20px;
+    }
+
+    footer p {
+      margin-top: 8px;
+
+      font-size: 13px;
+    }
+
+
+    /* =====================================================
+       MOBILE
+    ===================================================== */
+
+    @media (max-width: 800px) {
+
+      main {
+        padding: 20px 0 50px;
+      }
+
+      .nav {
+        min-height: 68px;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      .back {
+        font-size: 12px;
+      }
+
+      .gallery {
+        padding: 10px;
+      }
+
+      .main-photo img {
+        max-height: none;
+      }
+
+      .thumbnails {
+        grid-template-columns: repeat(4, 1fr);
+
+        gap: 7px;
+      }
+
+      .thumbnail {
+        height: 65px;
+      }
+
+      .content {
+        padding: 30px 22px 38px;
+      }
+
+      .price {
+        font-size: 29px;
+      }
+
+      .highlights {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-button {
+        width: 42px;
+        height: 42px;
+
+        font-size: 25px;
+      }
+
+    }
+
+
+    @media (max-width: 500px) {
+
+      .nav {
+        gap: 10px;
+      }
+
+      .logo {
+        font-size: 18px;
+      }
+
+      .back {
+        font-size: 11px;
+      }
+
+      h1 {
+        font-size: 32px;
+      }
+
+      .features {
+        gap: 7px;
+      }
+
+      .feature {
+        font-size: 12px;
+
+        padding: 9px 11px;
+      }
+
+      .whatsapp {
+        width: 100%;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
+<header>
+
+  <div class="container nav">
+
+```
+<a href="index.html" class="logo">
+  Sotofrau <span>Propiedades</span>
+</a>
+
+<a
+  href="index.html#propiedades"
+  class="back"
+>
+  ← Volver a propiedades
+</a>
+```
+
+  </div>
+
+</header>
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
+
+  <div class="container">
+
+```
+<article class="property">
+
+
+  <!-- =================================================
+       GALERÍA
+  ================================================== -->
+
+  <div class="gallery">
+
+    <div class="main-photo">
+
+      <img
+        id="mainImage"
+        src="propiedades/2/1.jpeg"
+        alt="2° piso independiente en arriendo en Quilpué"
+      >
+
+      <button
+        class="gallery-button prev"
+        onclick="anterior()"
+        aria-label="Foto anterior"
+      >
+        ‹
+      </button>
+
+      <button
+        class="gallery-button next"
+        onclick="siguiente()"
+        aria-label="Foto siguiente"
+      >
+        ›
+      </button>
+
+      <div class="photo-counter">
+
+        <span id="currentPhoto">
+          1
+        </span>
+
+        / 8
+
+      </div>
+
+    </div>
+
+
+    <div class="thumbnails">
+
+      <button
+        class="thumbnail active"
+        onclick="mostrarFoto(1)"
+      >
+        <img
+          src="propiedades/2/1.jpeg"
+          alt="Foto 1 del inmueble"
+        >
+      </button>
+
+      <button
+        class="thumbnail"
+        onclick="mostrarFoto(2)"
+      >
+        <img
+          src="propiedades/2/2.jpeg"
+          alt="Foto 2 del inmueble"
+        >
+      </button>
+
+      <button
+        class="thumbnail"
+        onclick="mostrarFoto(3)"
+      >
+        <img
+          src="propiedades/2/3.jpeg"
+          alt="Foto 3 del inmueble"
+        >
+      </button>
+
+      <button
+        class="thumbnail"
+        onclick="mostrarFoto(4)"
+      >
+        <img
+          src="propiedades/2/4.jpeg"
+          alt="Foto 4 del inmueble"
+        >
+      </button>
+
+      <button
+        class="thumbnail"
+        onclick="mostrarFoto(5)"
+      >
+        <img
+          src="propiedades/2/5.jpeg"
+          alt="Foto 5 del inmueble"
+        >
+      </button>
+
+      <button
+        class="thumbnail"
+        onclick="mostrarFoto(6)"
+      >
+        <img
+          src="propiedades/2/6.jpeg"
+          alt="Foto 6 del inmueble"
+        >
+      </button>
+
+      <button
+        class="thumbnail"
+        onclick="mostrarFoto(7)"
+      >
+        <img
+          src="propiedades/2/7.jpeg"
+          alt="Foto 7 del inmueble"
+        >
+      </button>
+
+      <button
+        class="thumbnail"
+        onclick="mostrarFoto(8)"
+      >
+        <img
+          src="propiedades/2/8.jpeg"
+          alt="Foto 8 del inmueble"
+        >
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <!-- =================================================
+       INFORMACIÓN
+  ================================================== -->
+
+  <div class="content">
+
+    <span class="status">
+      Arrendada
+    </span>
+
+    <div class="operation">
+      Arriendo
+    </div>
+
+    <h1>
+      2° Piso Independiente en Arriendo
+    </h1>
+
+    <div class="location">
+      Teniente Serrano · Quilpué · Valparaíso
+    </div>
+
+    <div class="price">
+      $400.000
+      <span style="
+        font-size:14px;
+        font-weight:600;
+        color:var(--gris-500);
+      ">
+        / mes
+      </span>
+    </div>
+
+
+    <!-- =================================================
+         CARACTERÍSTICAS
+    ================================================== -->
+
+    <div class="features">
+
+      <div class="feature">
+        🛏 2 dormitorios
+      </div>
+
+      <div class="feature">
+        🚿 1 baño
+      </div>
+
+      <div class="feature">
+        📐 45 m²
+      </div>
+
+      <div class="feature">
+        🏠 Casa
+      </div>
+
+      <div class="feature">
+        🚗 1 estacionamiento
+      </div>
+
+      <div class="feature">
+        🍳 Cocina amoblada
+      </div>
+
+      <div class="feature">
+        🌿 Patio
+      </div>
+
+      <div class="feature">
+        🚫 Sin gastos comunes
+      </div>
+
+    </div>
+
+
+    <!-- =================================================
+         DESCRIPCIÓN
+    ================================================== -->
+
+    <div class="description">
+
+      <h2>
+        Sobre esta propiedad
+      </h2>
+
+      <p>
+        Se arrienda segundo piso independiente de una casa,
+        ubicado en el sector de Teniente Serrano, Quilpué.
+      </p>
+
+      <p>
+        La propiedad cuenta con dos habitaciones, un baño,
+        living-comedor amplio y cocina amoblada.
+      </p>
+
+      <p>
+        Además, dispone de logia techada, patio abierto y
+        derecho a patio, junto con estacionamiento para
+        un vehículo.
+      </p>
+
+      <p>
+        La propiedad no tiene gastos comunes. Los servicios
+        básicos se dividen entre los residentes.
+      </p>
+
+      <p>
+        Cuenta con locomoción a la puerta y se encuentra
+        cerca de supermercados y a pocos minutos del centro
+        de Quilpué.
+      </p>
+
+    </div>
+
+
+    <!-- =================================================
+         DESTACADOS
+    ================================================== -->
+
+    <div class="highlights">
+
+      <div class="highlight">
+
+        <strong>
+          Ubicación
+        </strong>
+
+        <span>
+          Teniente Serrano, Quilpué
+        </span>
+
+      </div>
+
+
+      <div class="highlight">
+
+        <strong>
+          Locomoción
+        </strong>
+
+        <span>
+          Locomoción a la puerta
+        </span>
+
+      </div>
+
+
+      <div class="highlight">
+
+        <strong>
+          Servicios
+        </strong>
+
+        <span>
+          Servicios básicos divididos
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <!-- =================================================
+         WHATSAPP
+    ================================================== -->
+
+    <a
+      class="whatsapp"
+      href="https://wa.me/56944844983?text=Hola%2C%20me%20gustar%C3%ADa%20consultar%20por%20el%202%C2%B0%20piso%20independiente%20en%20arriendo%20en%20Teniente%20Serrano%2C%20Quilpu%C3%A9."
+      target="_blank"
+      rel="noopener"
+    >
+      Consultar por WhatsApp
+    </a>
+
+  </div>
+
+</article>
+```
+
+  </div>
+
+</main>
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
+
+<footer>
+
+  <div class="container">
+
+```
+<strong>
+  Sotofrau Propiedades
+</strong>
+
+<p>
+  Compra · Venta · Arriendo · Administración
+</p>
+
+<p>
+  © 2026 Sotofrau Propiedades · Todos los derechos reservados.
+</p>
+```
+
+  </div>
+
+</footer>
+
+<!-- =====================================================
+     JAVASCRIPT GALERÍA
+===================================================== -->
+
+<script>
+
+  const fotos = [
+
+    "propiedades/2/1.jpeg",
+    "propiedades/2/2.jpeg",
+    "propiedades/2/3.jpeg",
+    "propiedades/2/4.jpeg",
+    "propiedades/2/5.jpeg",
+    "propiedades/2/6.jpeg",
+    "propiedades/2/7.jpeg",
+    "propiedades/2/8.jpeg"
+
+  ];
+
+
+  let fotoActual = 1;
+
+
+  function mostrarFoto(numero) {
+
+    fotoActual = numero;
+
+    document.getElementById("mainImage").src =
+      fotos[numero - 1];
+
+    document.getElementById("currentPhoto").textContent =
+      numero;
+
+
+    const thumbnails =
+      document.querySelectorAll(".thumbnail");
+
+
+    thumbnails.forEach(function(thumbnail, index) {
+
+      thumbnail.classList.remove("active");
+
+
+      if (index === numero - 1) {
+
+        thumbnail.classList.add("active");
+
+      }
+
+    });
+
+  }
+
+
+  function siguiente() {
+
+    if (fotoActual === fotos.length) {
+
+      mostrarFoto(1);
+
+    } else {
+
+      mostrarFoto(fotoActual + 1);
+
+    }
+
+  }
+
+
+  function anterior() {
+
+    if (fotoActual === 1) {
+
+      mostrarFoto(fotos.length);
+
+    } else {
+
+      mostrarFoto(fotoActual - 1);
+
+    }
+
+  }
+
+</script>
+
+</body>
+</html>
 
