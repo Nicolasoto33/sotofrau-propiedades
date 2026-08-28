@@ -1,27 +1,31 @@
 <!DOCTYPE html>
+
 <html lang="es">
 <head>
 
   <meta charset="UTF-8">
 
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
-  >
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+
+>
 
   <title>
     Sotofrau Propiedades | Venta, Arriendo y Administración
   </title>
 
-  <meta
-    name="description"
-    content="Sotofrau Propiedades. Compra, vende, arrienda y administra tu propiedad con atención cercana y personalizada en la Región de Valparaíso."
-  >
+<meta
+name="description"
+content="Sotofrau Propiedades. Compra, vende, arrienda y administra tu propiedad con atención cercana y personalizada en la Región de Valparaíso."
 
-  <meta
-    name="theme-color"
-    content="#0d2f49"
-  >
+>
+
+<meta
+name="theme-color"
+content="#0d2f49"
+
+>
 
   <style>
 
@@ -55,18 +59,15 @@
       --ancho: 1180px;
     }
 
-
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
 
-
     html {
       scroll-behavior: smooth;
     }
-
 
     body {
       font-family:
@@ -78,34 +79,27 @@
         sans-serif;
 
       color: var(--gris-700);
-
       background: var(--blanco);
-
       line-height: 1.6;
     }
-
 
     img {
       max-width: 100%;
     }
-
 
     a {
       text-decoration: none;
       color: inherit;
     }
 
-
     button {
       font: inherit;
     }
-
 
     .container {
       width: min(var(--ancho), 92%);
       margin: auto;
     }
-
 
     /* HEADER */
 
@@ -124,7 +118,6 @@
         1px solid rgba(13,47,73,.08);
     }
 
-
     .nav {
       min-height: 78px;
 
@@ -134,7 +127,6 @@
 
       gap: 30px;
     }
-
 
     .logo {
       display: inline-flex;
@@ -150,12 +142,10 @@
       white-space: nowrap;
     }
 
-
     .logo span {
       color: var(--naranja);
       margin-left: 5px;
     }
-
 
     nav {
       display: flex;
@@ -167,18 +157,15 @@
       font-weight: 650;
     }
 
-
     nav a {
       color: var(--azul);
 
       transition: .2s ease;
     }
 
-
     nav a:hover {
       color: var(--naranja);
     }
-
 
     .nav-contact {
       background: var(--azul);
@@ -190,11 +177,9 @@
       border-radius: 9px;
     }
 
-
     .nav-contact:hover {
       background: var(--azul-2);
     }
-
 
     /* HERO */
 
@@ -224,7 +209,6 @@
         );
     }
 
-
     .hero::after {
       content: "";
 
@@ -242,7 +226,6 @@
         rgba(232,137,37,.14);
     }
 
-
     .hero-content {
       position: relative;
 
@@ -252,7 +235,6 @@
 
       padding: 100px 0;
     }
-
 
     .hero-label {
       display: inline-flex;
@@ -274,7 +256,6 @@
       letter-spacing: 1.6px;
     }
 
-
     .hero-label::before {
       content: "";
 
@@ -284,7 +265,6 @@
       background:
         var(--naranja);
     }
-
 
     .hero h1 {
       font-size:
@@ -297,11 +277,9 @@
       margin-bottom: 25px;
     }
 
-
     .hero h1 span {
       color: #f3a04b;
     }
-
 
     .hero p {
       max-width: 650px;
@@ -315,7 +293,6 @@
       margin-bottom: 36px;
     }
 
-
     .buttons {
       display: flex;
 
@@ -323,7 +300,6 @@
 
       gap: 12px;
     }
-
 
     .btn {
       display: inline-flex;
@@ -343,11 +319,9 @@
       transition: .2s ease;
     }
 
-
     .btn:hover {
       transform: translateY(-2px);
     }
-
 
     .btn-primary {
       background: var(--naranja);
@@ -358,12 +332,10 @@
         0 8px 22px rgba(232,137,37,.22);
     }
 
-
     .btn-primary:hover {
       background:
         var(--naranja-hover);
     }
-
 
     .btn-light {
       background: white;
@@ -371,13 +343,11 @@
       color: var(--azul);
     }
 
-
     /* SECCIONES */
 
     section {
       padding: 90px 0;
     }
-
 
     .section-header {
       max-width: 680px;
@@ -387,7 +357,6 @@
 
       text-align: center;
     }
-
 
     .section-label {
       display: block;
@@ -406,7 +375,6 @@
       letter-spacing: 1.6px;
     }
 
-
     .section-header h2 {
       color:
         var(--azul);
@@ -421,7 +389,6 @@
       margin-bottom: 12px;
     }
 
-
     .section-header p {
       color:
         var(--gris-500);
@@ -429,14 +396,12 @@
       font-size: 16px;
     }
 
-
     /* PROPIEDADES */
 
     .properties-section {
       background:
         var(--gris-50);
     }
-
 
     .filters {
       display: flex;
@@ -449,7 +414,6 @@
 
       margin-bottom: 38px;
     }
-
 
     .filter {
       border:
@@ -472,7 +436,6 @@
       transition: .2s ease;
     }
 
-
     .filter:hover,
     .filter.active {
       background:
@@ -484,7 +447,6 @@
       color: white;
     }
 
-
     .property-grid {
       display: grid;
 
@@ -493,7 +455,6 @@
 
       gap: 25px;
     }
-
 
     .property-card {
       background: white;
@@ -514,7 +475,6 @@
         box-shadow .25s ease;
     }
 
-
     .property-card:hover {
       transform:
         translateY(-5px);
@@ -523,11 +483,9 @@
         var(--sombra-hover);
     }
 
-
     .property-card.hidden {
       display: none;
     }
-
 
     .property-image {
       position: relative;
@@ -543,7 +501,6 @@
           #b9cbd5
         );
     }
-
 
     .property-image img {
       position: absolute;
@@ -561,13 +518,11 @@
         transform .5s ease;
     }
 
-
     .property-card:hover
     .property-image img {
       transform:
         scale(1.03);
     }
-
 
     .status {
       position: absolute;
@@ -592,29 +547,24 @@
       letter-spacing: .4px;
     }
 
-
     .status-arrendada {
       background:
         var(--rojo);
     }
-
 
     .status-disponible {
       background:
         var(--verde);
     }
 
-
     .status-vendida {
       background:
         #59656d;
     }
 
-
     .property-content {
       padding: 23px;
     }
-
 
     .operation {
       margin-bottom: 7px;
@@ -631,7 +581,6 @@
       letter-spacing: 1px;
     }
 
-
     .property-content h3 {
       color:
         var(--azul);
@@ -643,7 +592,6 @@
       margin-bottom: 7px;
     }
 
-
     .location {
       color:
         var(--gris-500);
@@ -652,7 +600,6 @@
 
       margin-bottom: 15px;
     }
-
 
     .price {
       color:
@@ -664,7 +611,6 @@
 
       margin-bottom: 15px;
     }
-
 
     .features {
       display: flex;
@@ -683,7 +629,6 @@
 
       font-size: 12px;
     }
-
 
     .property-button {
       display: flex;
@@ -712,12 +657,10 @@
       transition: .2s ease;
     }
 
-
     .property-button:hover {
       background:
         var(--azul-oscuro);
     }
-
 
     /* SERVICIOS */
 
@@ -729,7 +672,6 @@
 
       gap: 22px;
     }
-
 
     .service {
       position: relative;
@@ -750,7 +692,6 @@
       overflow: hidden;
     }
 
-
     .service::after {
       content: "";
 
@@ -768,7 +709,6 @@
         rgba(232,137,37,.08);
     }
 
-
     .service-number {
       margin-bottom: 20px;
 
@@ -782,7 +722,6 @@
       letter-spacing: 1px;
     }
 
-
     .service h3 {
       color:
         var(--azul);
@@ -792,14 +731,12 @@
       margin-bottom: 11px;
     }
 
-
     .service p {
       color:
         var(--gris-500);
 
       font-size: 14px;
     }
-
 
     /* ADMINISTRACIÓN */
 
@@ -809,7 +746,6 @@
 
       color: white;
     }
-
 
     .admin-grid {
       display: grid;
@@ -821,7 +757,6 @@
 
       align-items: center;
     }
-
 
     .administration h2 {
       max-width: 650px;
@@ -836,12 +771,10 @@
       margin-bottom: 20px;
     }
 
-
     .administration .section-label {
       color:
         #f2a053;
     }
-
 
     .admin-text {
       max-width: 620px;
@@ -854,7 +787,6 @@
       margin-bottom: 25px;
     }
 
-
     .admin-list {
       list-style: none;
 
@@ -862,7 +794,6 @@
 
       gap: 12px;
     }
-
 
     .admin-list li {
       position: relative;
@@ -874,7 +805,6 @@
 
       font-size: 14px;
     }
-
 
     .admin-list li::before {
       content: "✓";
@@ -888,7 +818,6 @@
 
       font-weight: 900;
     }
-
 
     .admin-box {
       background: white;
@@ -905,7 +834,6 @@
         0 18px 45px rgba(0,0,0,.18);
     }
 
-
     .admin-box h3 {
       color:
         var(--azul);
@@ -917,7 +845,6 @@
       margin-bottom: 12px;
     }
 
-
     .admin-box p {
       color:
         var(--gris-500);
@@ -927,7 +854,6 @@
       margin-bottom: 23px;
     }
 
-
     /* CAPTACIÓN */
 
     .capture {
@@ -936,7 +862,6 @@
 
       text-align: center;
     }
-
 
     .capture-box {
       max-width: 850px;
@@ -956,7 +881,6 @@
         var(--sombra);
     }
 
-
     .capture-box h2 {
       color:
         var(--azul);
@@ -968,7 +892,6 @@
 
       margin-bottom: 14px;
     }
-
 
     .capture-box p {
       max-width: 650px;
@@ -982,13 +905,11 @@
       font-size: 15px;
     }
 
-
     /* CONTACTO */
 
     .contact {
       background: white;
     }
-
 
     .contact-grid {
       display: grid;
@@ -998,7 +919,6 @@
 
       gap: 20px;
     }
-
 
     .contact-item {
       padding: 30px;
@@ -1014,7 +934,6 @@
       background: white;
     }
 
-
     .contact-item h3 {
       color:
         var(--azul);
@@ -1024,7 +943,6 @@
       margin-bottom: 7px;
     }
 
-
     .contact-item p {
       color:
         var(--gris-500);
@@ -1032,12 +950,10 @@
       font-size: 14px;
     }
 
-
     .contact-item a:hover {
       color:
         var(--naranja);
     }
-
 
     /* FOOTER */
 
@@ -1053,20 +969,17 @@
       text-align: center;
     }
 
-
     footer strong {
       color: white;
 
       font-size: 20px;
     }
 
-
     footer p {
       margin-top: 8px;
 
       font-size: 13px;
     }
-
 
     /* WHATSAPP */
 
@@ -1101,13 +1014,11 @@
       transition: .2s ease;
     }
 
-
     .whatsapp-floating:hover {
       transform:
         translateY(-3px)
         scale(1.03);
     }
-
 
     /* MOBILE */
 
@@ -1117,21 +1028,17 @@
         display: none;
       }
 
-
       .hero {
         min-height: 570px;
       }
-
 
       .hero-content {
         padding: 75px 0;
       }
 
-
       .hero h1 {
         font-size: 47px;
       }
-
 
       .property-grid,
       .service-grid,
@@ -1139,13 +1046,11 @@
         grid-template-columns: 1fr;
       }
 
-
       .admin-grid {
         grid-template-columns: 1fr;
 
         gap: 38px;
       }
-
 
       section {
         padding: 70px 0;
@@ -1153,23 +1058,19 @@
 
     }
 
-
     @media (max-width: 600px) {
 
       .nav {
         min-height: 68px;
       }
 
-
       .logo {
         font-size: 20px;
       }
 
-
       .hero {
         min-height: 560px;
       }
-
 
       .hero h1 {
         font-size: 43px;
@@ -1177,31 +1078,25 @@
         letter-spacing: -1.5px;
       }
 
-
       .hero p {
         font-size: 16px;
       }
-
 
       .buttons {
         width: 100%;
       }
 
-
       .btn {
         width: 100%;
       }
-
 
       .property-image {
         height: 250px;
       }
 
-
       .capture-box {
         padding: 45px 22px;
       }
-
 
       .whatsapp-floating {
         right: 17px;
@@ -1219,55 +1114,52 @@
 
 </head>
 
-
 <body>
-
 
 <header>
 
   <div class="container nav">
 
-    <a
-      href="#inicio"
-      class="logo"
-    >
-      Sotofrau
-      <span>Propiedades</span>
-    </a>
+```
+<a
+  href="#inicio"
+  class="logo"
+>
+  Sotofrau
+  <span>Propiedades</span>
+</a>
 
+<nav>
 
-    <nav>
+  <a href="#propiedades">
+    Propiedades
+  </a>
 
-      <a href="#propiedades">
-        Propiedades
-      </a>
+  <a href="#servicios">
+    Servicios
+  </a>
 
-      <a href="#servicios">
-        Servicios
-      </a>
+  <a href="#administracion">
+    Administración
+  </a>
 
-      <a href="#administracion">
-        Administración
-      </a>
+  <a href="#captacion">
+    Vende / Arrienda
+  </a>
 
-      <a href="#captacion">
-        Vende / Arrienda
-      </a>
+  <a
+    href="#contacto"
+    class="nav-contact"
+  >
+    Contacto
+  </a>
 
-      <a
-        href="#contacto"
-        class="nav-contact"
-      >
-        Contacto
-      </a>
-
-    </nav>
+</nav>
+```
 
   </div>
 
 </header>
-
-
 
 <section
   class="hero"
@@ -1276,51 +1168,47 @@
 
   <div class="container">
 
-    <div class="hero-content">
+```
+<div class="hero-content">
 
-      <div class="hero-label">
-        Sotofrau Propiedades
-      </div>
+  <div class="hero-label">
+    Sotofrau Propiedades
+  </div>
 
+  <h1>
+    Tu propiedad,<br>
+    <span>en buenas manos.</span>
+  </h1>
 
-      <h1>
-        Tu propiedad,<br>
-        <span>en buenas manos.</span>
-      </h1>
+  <p>
+    Compra, vende, arrienda o administra tu propiedad
+    con una atención cercana, transparente y personalizada.
+  </p>
 
+  <div class="buttons">
 
-      <p>
-        Compra, vende, arrienda o administra tu propiedad
-        con una atención cercana, transparente y personalizada.
-      </p>
+    <a
+      href="#propiedades"
+      class="btn btn-primary"
+    >
+      Ver propiedades
+    </a>
 
+    <a
+      href="#captacion"
+      class="btn btn-light"
+    >
+      Quiero vender o arrendar
+    </a>
 
-      <div class="buttons">
+  </div>
 
-        <a
-          href="#propiedades"
-          class="btn btn-primary"
-        >
-          Ver propiedades
-        </a>
-
-
-        <a
-          href="#captacion"
-          class="btn btn-light"
-        >
-          Quiero vender o arrendar
-        </a>
-
-      </div>
-
-    </div>
+</div>
+```
 
   </div>
 
 </section>
-
-
 
 <section
   class="properties-section"
@@ -1329,429 +1217,294 @@
 
   <div class="container">
 
-    <div class="section-header">
+```
+<div class="section-header">
 
-      <span class="section-label">
-        Nuestra cartera
+  <span class="section-label">
+    Nuestra cartera
+  </span>
+
+  <h2>
+    Propiedades
+  </h2>
+
+  <p>
+    Conoce las propiedades que hemos gestionado
+    y las oportunidades actualmente disponibles.
+  </p>
+
+</div>
+
+<div class="filters">
+
+  <button
+    class="filter active"
+    onclick="filtrar('todas', this)"
+  >
+    Todas
+  </button>
+
+  <button
+    class="filter"
+    onclick="filtrar('venta', this)"
+  >
+    Venta
+  </button>
+
+  <button
+    class="filter"
+    onclick="filtrar('arriendo', this)"
+  >
+    Arriendo
+  </button>
+
+  <button
+    class="filter"
+    onclick="filtrar('disponible', this)"
+  >
+    Disponibles
+  </button>
+
+  <button
+    class="filter"
+    onclick="filtrar('gestionada', this)"
+  >
+    Gestionadas
+  </button>
+
+</div>
+
+<div class="property-grid">
+
+  <!-- PROPIEDAD 1 -->
+
+  <article
+    class="property-card"
+    data-operation="arriendo"
+    data-status="gestionada"
+  >
+
+    <div class="property-image">
+
+      <span class="status status-arrendada">
+        Arrendada
       </span>
 
-
-      <h2>
-        Propiedades
-      </h2>
-
-
-      <p>
-        Conoce las propiedades que hemos gestionado
-        y las oportunidades actualmente disponibles.
-      </p>
+      <img
+        src="propiedades/1/1.jpeg"
+        alt="Habitación en arriendo en Valparaíso"
+      >
 
     </div>
 
+    <div class="property-content">
 
-    <div class="filters">
-
-      <button
-        class="filter active"
-        onclick="filtrar('todas', this)"
-      >
-        Todas
-      </button>
-
-
-      <button
-        class="filter"
-        onclick="filtrar('venta', this)"
-      >
-        Venta
-      </button>
-
-
-      <button
-        class="filter"
-        onclick="filtrar('arriendo', this)"
-      >
+      <div class="operation">
         Arriendo
-      </button>
+      </div>
 
+      <h3>
+        Habitación en arriendo
+      </h3>
 
-      <button
-        class="filter"
-        onclick="filtrar('disponible', this)"
+      <div class="location">
+        Valparaíso · Sector Yungay
+      </div>
+
+      <div class="price">
+        $260.000
+      </div>
+
+      <div class="features">
+
+        <span>
+          🛏 1 dormitorio
+        </span>
+
+        <span>
+          🚿 1 baño
+        </span>
+
+        <span>
+          📐 72 m²
+        </span>
+
+        <span>
+          🛋 Amoblado
+        </span>
+
+      </div>
+
+      <a
+        href="propiedad-1.html"
+        class="property-button"
       >
-        Disponibles
-      </button>
-
-
-      <button
-        class="filter"
-        onclick="filtrar('gestionada', this)"
-      >
-        Gestionadas
-      </button>
+        Ver propiedad
+      </a>
 
     </div>
 
+  </article>
 
-    <div class="property-grid">
+  <!-- PROPIEDAD 2 -->
 
+  <article
+    class="property-card"
+    data-operation="arriendo"
+    data-status="gestionada"
+  >
 
-      <!-- ==========================
-           PROPIEDAD 1
-      ========================== -->
+    <div class="property-image">
 
-      <article
-        class="property-card"
-        data-operation="arriendo"
-        data-status="gestionada"
+      <span class="status status-arrendada">
+        Arrendada
+      </span>
+
+      <img
+        src="propiedades/2/1.jpeg"
+        alt="2° Piso Independiente en Arriendo en Quilpué"
       >
-
-        <div class="property-image">
-
-          <span
-            class="status status-arrendada"
-          >
-            Arrendada
-          </span>
-
-
-          <img
-            src="propiedades/1/1.jpeg"
-            alt="Habitación en arriendo en Valparaíso"
-          >
-
-        </div>
-
-
-        <div class="property-content">
-
-          <div class="operation">
-            Arriendo
-          </div>
-
-
-          <h3>
-            Habitación en arriendo
-          </h3>
-
-
-          <div class="location">
-            Valparaíso · Sector Yungay
-          </div>
-
-
-          <div class="price">
-            $260.000
-          </div>
-
-
-          <div class="features">
-
-            <span>
-              🛏 1 dormitorio
-            </span>
-
-            <span>
-              🚿 1 baño
-            </span>
-
-            <span>
-              📐 72 m²
-            </span>
-
-            <span>
-              🛋 Amoblado
-            </span>
-
-          </div>
-
-
-          <a
-            href="propiedad.html?id=1"
-            class="property-button"
-          >
-            Ver propiedad
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <!-- ==========================
-           PROPIEDAD 2
-      ========================== -->
-
-      <article
-        class="property-card"
-        data-operation="arriendo"
-        data-status="gestionada"
-      >
-
-        <div class="property-image">
-
-          <span
-            class="status status-arrendada"
-          >
-            Arrendada
-          </span>
-
-
-          <img
-            src="propiedades/2/1.jpeg"
-            alt="2° Piso Independiente en Arriendo en Quilpué"
-          >
-
-        </div>
-
-
-        <div class="property-content">
-
-          <div class="operation">
-            Arriendo
-          </div>
-
-
-          <h3>
-            2° Piso Independiente en Arriendo
-          </h3>
-
-
-          <div class="location">
-            Quilpué · Sector Teniente Serrano
-          </div>
-
-
-          <div class="price">
-            $400.000
-          </div>
-
-
-          <div class="features">
-
-            <span>
-              🛏 2 dormitorios
-            </span>
-
-            <span>
-              🚿 1 baño
-            </span>
-
-            <span>
-              📐 45 m²
-            </span>
-
-            <span>
-              🚗 Estacionamiento
-            </span>
-
-          </div>
-
-
-          <a
-            href="propiedad.html?id=2"
-            class="property-button"
-          >
-            Ver propiedad
-          </a>
-
-        </div>
-
-      </article>
-
-
-
-      <!-- ==========================
-           PROPIEDAD 3
-      ========================== -->
-
-      <article
-        class="property-card"
-        data-operation="arriendo"
-        data-status="gestionada"
-      >
-
-        <div class="property-image">
-
-          <span
-            class="status status-arrendada"
-          >
-            Arrendada
-          </span>
-
-
-          <img
-            src="propiedades/3/foto-01.jpg"
-            alt="Departamento amoblado en Reñaca"
-            onerror="
-              this.style.display='none';
-            "
-          >
-
-        </div>
-
-
-        <div class="property-content">
-
-          <div class="operation">
-            Arriendo
-          </div>
-
-
-          <h3>
-            Departamento amoblado Reñaca
-          </h3>
-
-
-          <div class="location">
-            Reñaca · Viña del Mar
-          </div>
-
-
-          <div class="price">
-            $500.000
-          </div>
-
-
-          <div class="features">
-
-            <span>
-              🛏 1 dormitorio
-            </span>
-
-            <span>
-              🚿 1 baño
-            </span>
-
-            <span>
-              📐 52 m²
-            </span>
-
-            <span>
-              🚗 Estacionamiento
-            </span>
-
-            <span>
-              📦 Bodega
-            </span>
-
-          </div>
-
-
-          <a
-            href="propiedad.html?id=3"
-            class="property-button"
-          >
-            Ver propiedad
-          </a>
-
-        </div>
-
-      </article>
-
 
     </div>
+
+    <div class="property-content">
+
+      <div class="operation">
+        Arriendo
+      </div>
+
+      <h3>
+        2° Piso Independiente en Arriendo
+      </h3>
+
+      <div class="location">
+        Quilpué · Sector Teniente Serrano
+      </div>
+
+      <div class="price">
+        $400.000
+      </div>
+
+      <div class="features">
+
+        <span>
+          🛏 2 dormitorios
+        </span>
+
+        <span>
+          🚿 1 baño
+        </span>
+
+        <span>
+          📐 45 m²
+        </span>
+
+        <span>
+          🚗 Estacionamiento
+        </span>
+
+      </div>
+
+      <a
+        href="#"
+        class="property-button"
+        onclick="alert('Próximamente disponible'); return false;"
+      >
+        Ver propiedad
+      </a>
+
+    </div>
+
+  </article>
+
+</div>
+```
 
   </div>
 
 </section>
-
-
 
 <section id="servicios">
 
   <div class="container">
 
-    <div class="section-header">
+```
+<div class="section-header">
 
-      <span class="section-label">
-        ¿Qué hacemos?
-      </span>
+  <span class="section-label">
+    ¿Qué hacemos?
+  </span>
 
+  <h2>
+    Servicios inmobiliarios
+  </h2>
 
-      <h2>
-        Servicios inmobiliarios
-      </h2>
+  <p>
+    Te acompañamos en cada etapa de tu operación inmobiliaria,
+    desde la primera consulta hasta el cierre.
+  </p>
 
+</div>
 
-      <p>
-        Te acompañamos en cada etapa de tu operación inmobiliaria,
-        desde la primera consulta hasta el cierre.
-      </p>
+<div class="service-grid">
 
+  <div class="service">
+
+    <div class="service-number">
+      01
     </div>
 
+    <h3>
+      Compra
+    </h3>
 
-    <div class="service-grid">
+    <p>
+      Te ayudamos a encontrar una propiedad que se ajuste
+      a tus necesidades y te acompañamos durante el proceso.
+    </p>
 
+  </div>
 
-      <div class="service">
+  <div class="service">
 
-        <div class="service-number">
-          01
-        </div>
-
-
-        <h3>
-          Compra
-        </h3>
-
-
-        <p>
-          Te ayudamos a encontrar una propiedad que se ajuste
-          a tus necesidades y te acompañamos durante el proceso.
-        </p>
-
-      </div>
-
-
-      <div class="service">
-
-        <div class="service-number">
-          02
-        </div>
-
-
-        <h3>
-          Venta
-        </h3>
-
-
-        <p>
-          Comercializamos tu propiedad, gestionamos los interesados
-          y te acompañamos durante todo el proceso de venta.
-        </p>
-
-      </div>
-
-
-      <div class="service">
-
-        <div class="service-number">
-          03
-        </div>
-
-
-        <h3>
-          Arriendo
-        </h3>
-
-
-        <p>
-          Publicamos y gestionamos tu propiedad buscando
-          arrendatarios adecuados y facilitando todo el proceso.
-        </p>
-
-      </div>
-
+    <div class="service-number">
+      02
     </div>
+
+    <h3>
+      Venta
+    </h3>
+
+    <p>
+      Comercializamos tu propiedad, gestionamos los interesados
+      y te acompañamos durante todo el proceso de venta.
+    </p>
+
+  </div>
+
+  <div class="service">
+
+    <div class="service-number">
+      03
+    </div>
+
+    <h3>
+      Arriendo
+    </h3>
+
+    <p>
+      Publicamos y gestionamos tu propiedad buscando
+      arrendatarios adecuados y facilitando todo el proceso.
+    </p>
+
+  </div>
+
+</div>
+```
 
   </div>
 
 </section>
-
-
 
 <section
   class="administration"
@@ -1760,87 +1513,80 @@
 
   <div class="container">
 
-    <div class="admin-grid">
+```
+<div class="admin-grid">
 
+  <div>
 
-      <div>
+    <span class="section-label">
+      Administración de propiedades
+    </span>
 
-        <span class="section-label">
-          Administración de propiedades
-        </span>
+    <h2>
+      Tu propiedad sigue siendo tuya.
+      Nosotros nos encargamos de gestionarla.
+    </h2>
 
+    <p class="admin-text">
+      Simplificamos la administración de tu propiedad para
+      que tengas mayor tranquilidad y claridad sobre su gestión.
+    </p>
 
-        <h2>
-          Tu propiedad sigue siendo tuya.
-          Nosotros nos encargamos de gestionarla.
-        </h2>
+    <ul class="admin-list">
 
+      <li>
+        Cobro y seguimiento del arriendo
+      </li>
 
-        <p class="admin-text">
-          Simplificamos la administración de tu propiedad para
-          que tengas mayor tranquilidad y claridad sobre su gestión.
-        </p>
+      <li>
+        Coordinación de mantenciones
+      </li>
 
+      <li>
+        Atención y comunicación con el arrendatario
+      </li>
 
-        <ul class="admin-list">
+      <li>
+        Apoyo administrativo y legal
+      </li>
 
-          <li>
-            Cobro y seguimiento del arriendo
-          </li>
+      <li>
+        Reporte mensual de la gestión
+      </li>
 
-          <li>
-            Coordinación de mantenciones
-          </li>
+    </ul>
 
-          <li>
-            Atención y comunicación con el arrendatario
-          </li>
+  </div>
 
-          <li>
-            Apoyo administrativo y legal
-          </li>
+  <div class="admin-box">
 
-          <li>
-            Reporte mensual de la gestión
-          </li>
+    <h3>
+      ¿Tienes una propiedad arrendada?
+    </h3>
 
-        </ul>
+    <p>
+      Si administrar tu propiedad te quita tiempo,
+      podemos encargarnos de la gestión y mantenerte
+      informado de todo lo que ocurre.
+    </p>
 
-      </div>
+    <a
+      href="https://wa.me/56944844983?text=Hola%2C%20quiero%20consultar%20por%20el%20servicio%20de%20administraci%C3%B3n%20de%20propiedades."
+      target="_blank"
+      rel="noopener"
+      class="btn btn-primary"
+    >
+      Quiero conversar
+    </a>
 
+  </div>
 
-      <div class="admin-box">
-
-        <h3>
-          ¿Tienes una propiedad arrendada?
-        </h3>
-
-
-        <p>
-          Si administrar tu propiedad te quita tiempo,
-          podemos encargarnos de la gestión y mantenerte
-          informado de todo lo que ocurre.
-        </p>
-
-
-        <a
-          href="https://wa.me/56944844983?text=Hola%2C%20quiero%20consultar%20por%20el%20servicio%20de%20administraci%C3%B3n%20de%20propiedades."
-          target="_blank"
-          rel="noopener"
-          class="btn btn-primary"
-        >
-          Quiero conversar
-        </a>
-
-      </div>
-
-    </div>
+</div>
+```
 
   </div>
 
 </section>
-
-
 
 <section
   class="capture"
@@ -1849,62 +1595,58 @@
 
   <div class="container">
 
-    <div class="capture-box">
+```
+<div class="capture-box">
 
-      <span class="section-label">
-        ¿Tienes una propiedad?
-      </span>
+  <span class="section-label">
+    ¿Tienes una propiedad?
+  </span>
 
+  <h2>
+    Podemos ayudarte.
+  </h2>
 
-      <h2>
-        Podemos ayudarte.
-      </h2>
+  <p>
+    Si quieres vender o arrendar tu propiedad,
+    cuéntanos sobre ella y conversemos sobre
+    la mejor estrategia para comercializarla.
+  </p>
 
+  <div
+    class="buttons"
+    style="justify-content:center;"
+  >
 
-      <p>
-        Si quieres vender o arrendar tu propiedad,
-        cuéntanos sobre ella y conversemos sobre
-        la mejor estrategia para comercializarla.
-      </p>
+    <a
+      href="https://wa.me/56944844983?text=Hola%2C%20quiero%20vender%20mi%20propiedad%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n."
+      target="_blank"
+      rel="noopener"
+      class="btn btn-primary"
+    >
+      Quiero vender
+    </a>
 
+    <a
+      href="https://wa.me/56944844983?text=Hola%2C%20quiero%20arrendar%20mi%20propiedad%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n."
+      target="_blank"
+      rel="noopener"
+      class="btn"
+      style="
+        background:var(--azul);
+        color:white;
+      "
+    >
+      Quiero arrendar
+    </a>
 
-      <div
-        class="buttons"
-        style="justify-content:center;"
-      >
+  </div>
 
-        <a
-          href="https://wa.me/56944844983?text=Hola%2C%20quiero%20vender%20mi%20propiedad%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n."
-          target="_blank"
-          rel="noopener"
-          class="btn btn-primary"
-        >
-          Quiero vender
-        </a>
-
-
-        <a
-          href="https://wa.me/56944844983?text=Hola%2C%20quiero%20arrendar%20mi%20propiedad%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n."
-          target="_blank"
-          rel="noopener"
-          class="btn"
-          style="
-            background:var(--azul);
-            color:white;
-          "
-        >
-          Quiero arrendar
-        </a>
-
-      </div>
-
-    </div>
+</div>
+```
 
   </div>
 
 </section>
-
-
 
 <section
   class="contact"
@@ -1913,131 +1655,119 @@
 
   <div class="container">
 
-    <div class="section-header">
+```
+<div class="section-header">
 
-      <span class="section-label">
-        Hablemos
-      </span>
+  <span class="section-label">
+    Hablemos
+  </span>
 
+  <h2>
+    Contacto
+  </h2>
 
-      <h2>
-        Contacto
-      </h2>
+  <p>
+    Si tienes una consulta inmobiliaria,
+    escríbeme directamente.
+  </p>
 
+</div>
 
-      <p>
-        Si tienes una consulta inmobiliaria,
-        escríbeme directamente.
-      </p>
+<div class="contact-grid">
 
-    </div>
+  <div class="contact-item">
 
+    <h3>
+      WhatsApp
+    </h3>
 
-    <div class="contact-grid">
+    <p>
 
+      <a
+        href="https://wa.me/56944844983"
+        target="_blank"
+        rel="noopener"
+      >
+        +56 9 4484 4983
+      </a>
 
-      <div class="contact-item">
+    </p>
 
-        <h3>
-          WhatsApp
-        </h3>
+  </div>
 
+  <div class="contact-item">
 
-        <p>
+    <h3>
+      Instagram
+    </h3>
 
-          <a
-            href="https://wa.me/56944844983"
-            target="_blank"
-            rel="noopener"
-          >
-            +56 9 4484 4983
-          </a>
+    <p>
 
-        </p>
+      <a
+        href="https://www.instagram.com/sotofrau_propiedades/"
+        target="_blank"
+        rel="noopener"
+      >
+        @sotofrau_propiedades
+      </a>
 
-      </div>
+    </p>
 
+  </div>
 
-      <div class="contact-item">
+  <div class="contact-item">
 
-        <h3>
-          Instagram
-        </h3>
+    <h3>
+      Zona de atención
+    </h3>
 
+    <p>
+      Viña del Mar · Concón · Reñaca ·
+      Valparaíso · Quilpué · Villa Alemana
+    </p>
 
-        <p>
+  </div>
 
-          <a
-            href="https://www.instagram.com/sotofrau_propiedades/"
-            target="_blank"
-            rel="noopener"
-          >
-            @sotofrau_propiedades
-          </a>
-
-        </p>
-
-      </div>
-
-
-      <div class="contact-item">
-
-        <h3>
-          Zona de atención
-        </h3>
-
-
-        <p>
-          Viña del Mar · Concón · Reñaca ·
-          Valparaíso · Quilpué · Villa Alemana
-        </p>
-
-      </div>
-
-    </div>
+</div>
+```
 
   </div>
 
 </section>
 
-
-
 <footer>
 
   <div class="container">
 
-    <strong>
-      Sotofrau Propiedades
-    </strong>
+```
+<strong>
+  Sotofrau Propiedades
+</strong>
 
+<p>
+  Compra · Venta · Arriendo · Administración
+</p>
 
-    <p>
-      Compra · Venta · Arriendo · Administración
-    </p>
-
-
-    <p>
-      © 2026 Sotofrau Propiedades ·
-      Todos los derechos reservados.
-    </p>
+<p>
+  © 2026 Sotofrau Propiedades ·
+  Todos los derechos reservados.
+</p>
+```
 
   </div>
 
 </footer>
 
-
-
 <a
-  class="whatsapp-floating"
-  href="https://wa.me/56944844983?text=Hola%2C%20quiero%20consultar%20por%20una%20propiedad."
-  target="_blank"
-  rel="noopener"
-  aria-label="Contactar por WhatsApp"
+class="whatsapp-floating"
+href="https://wa.me/56944844983?text=Hola%2C%20quiero%20consultar%20por%20una%20propiedad."
+target="_blank"
+rel="noopener"
+aria-label="Contactar por WhatsApp"
+
 >
-  ☎
-</a>
 
-
+☎ </a>
 
 <script>
 
@@ -2048,12 +1778,10 @@
         ".property-card"
       );
 
-
     const botones =
       document.querySelectorAll(
         ".filter"
       );
-
 
     botones.forEach(
       function(b) {
@@ -2065,11 +1793,9 @@
       }
     );
 
-
     boton.classList.add(
       "active"
     );
-
 
     tarjetas.forEach(
       function(tarjeta) {
@@ -2077,13 +1803,10 @@
         const operacion =
           tarjeta.dataset.operation;
 
-
         const estado =
           tarjeta.dataset.status;
 
-
         let mostrar = false;
-
 
         if (
           tipo === "todas"
@@ -2092,7 +1815,6 @@
           mostrar = true;
 
         }
-
 
         if (
           tipo === "venta" &&
@@ -2103,7 +1825,6 @@
 
         }
 
-
         if (
           tipo === "arriendo" &&
           operacion === "arriendo"
@@ -2112,7 +1833,6 @@
           mostrar = true;
 
         }
-
 
         if (
           tipo === "disponible" &&
@@ -2123,7 +1843,6 @@
 
         }
 
-
         if (
           tipo === "gestionada" &&
           estado === "gestionada"
@@ -2132,7 +1851,6 @@
           mostrar = true;
 
         }
-
 
         tarjeta.classList.toggle(
           "hidden",
@@ -2145,7 +1863,6 @@
   }
 
 </script>
-
 
 </body>
 </html>
