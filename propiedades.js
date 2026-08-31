@@ -285,7 +285,7 @@ fotos: [
       "🛏 3 dormitorios",
       "🚿 1 baño",
       "📐 90 m²",
-      "🚗 1 estacionamiento",
+      "🚗 Estacionamientos comunitarios",
       "🛋 Amoblado",
       "🐾 Mascotas: consultar"
     ],
@@ -306,7 +306,7 @@ fotos: [
       "3 dormitorios",
       "1 baño",
       "90 m²",
-      "1 estacionamiento",
+      "Estacionamientos ilimitados",
       "Sin bodega",
       "Departamento amoblado",
       "Mascotas: consultar"
