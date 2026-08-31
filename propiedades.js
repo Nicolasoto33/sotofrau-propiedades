@@ -238,7 +238,7 @@ fotos: [
 
     whatsapp:
       "Hola, me gustaría consultar por el departamento amoblado con vista al mar en Reñaca, Las Golondrinas 1731."
-  }
+  },
  /* =====================================================
      PROPIEDAD 4 — BORRADOR DE PRUEBA
   ===================================================== */
