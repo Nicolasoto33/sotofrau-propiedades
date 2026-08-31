@@ -219,7 +219,7 @@
         var(--naranja);
 
       margin-left:
-        5px;
+        4px;
 
     }
 
@@ -280,6 +280,14 @@
     }
 
 
+    .nav-contact:hover {
+
+      background:
+        var(--azul-2);
+
+    }
+
+
 
     /* =====================================================
        MAIN
@@ -292,6 +300,11 @@
 
     }
 
+
+
+    /* =====================================================
+       BREADCRUMB
+    ===================================================== */
 
     .breadcrumb {
 
@@ -335,6 +348,11 @@
     }
 
 
+
+    /* =====================================================
+       PROPERTY
+    ===================================================== */
+
     .property {
 
       background:
@@ -358,7 +376,7 @@
 
 
     /* =====================================================
-       GALERÍA
+       GALLERY
     ===================================================== */
 
     .gallery {
@@ -450,6 +468,9 @@
       z-index:
         5;
 
+      transition:
+        .2s ease;
+
     }
 
 
@@ -457,6 +478,10 @@
 
       background:
         var(--azul);
+
+      transform:
+        translateY(-50%)
+        scale(1.05);
 
     }
 
@@ -511,7 +536,7 @@
 
 
     /* =====================================================
-       MINIATURAS
+       THUMBNAILS
     ===================================================== */
 
     .thumbnails {
@@ -598,7 +623,7 @@
 
 
     /* =====================================================
-       CONTENIDO
+       CONTENT
     ===================================================== */
 
     .content {
@@ -738,6 +763,9 @@
       font-weight:
         850;
 
+      line-height:
+        1.2;
+
       margin-bottom:
         8px;
 
@@ -760,7 +788,7 @@
 
 
     /* =====================================================
-       CARACTERÍSTICAS
+       FEATURES
     ===================================================== */
 
     .features {
@@ -797,6 +825,9 @@
       text-align:
         center;
 
+      color:
+        var(--gris-700);
+
       font-size:
         13px;
 
@@ -822,6 +853,9 @@
       margin-bottom:
         4px;
 
+      color:
+        var(--naranja);
+
       font-size:
         19px;
 
@@ -830,7 +864,7 @@
 
 
     /* =====================================================
-       INFORMACIÓN
+       INFORMATION GRID
     ===================================================== */
 
     .information-grid {
@@ -911,6 +945,9 @@
       font-size:
         20px;
 
+      margin-bottom:
+        17px;
+
     }
 
 
@@ -967,7 +1004,92 @@
 
 
     /* =====================================================
-       CONTACTO
+       EXTRA INFORMATION
+    ===================================================== */
+
+    .extra-information {
+
+      margin-top:
+        35px;
+
+    }
+
+
+    .extra-information h2 {
+
+      color:
+        var(--azul);
+
+      font-size:
+        25px;
+
+      line-height:
+        1.2;
+
+      margin-bottom:
+        16px;
+
+    }
+
+
+    .extra-grid {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        1.5fr .8fr;
+
+      gap:
+        45px;
+
+      align-items:
+        start;
+
+    }
+
+
+    .extra-list {
+
+      display:
+        flex;
+
+      flex-wrap:
+        wrap;
+
+      gap:
+        10px;
+
+    }
+
+
+    .extra-item {
+
+      padding:
+        10px 14px;
+
+      border:
+        1px solid
+        var(--gris-200);
+
+      border-radius:
+        9px;
+
+      background:
+        white;
+
+      color:
+        var(--gris-500);
+
+      font-size:
+        13px;
+
+    }
+
+
+
+    /* =====================================================
+       CONTACT BOX
     ===================================================== */
 
     .contact-box {
@@ -1059,6 +1181,9 @@
       font-weight:
         800;
 
+      transition:
+        .2s ease;
+
     }
 
 
@@ -1066,6 +1191,9 @@
 
       background:
         #1fbd5b;
+
+      transform:
+        translateY(-2px);
 
     }
 
@@ -1129,7 +1257,8 @@
       }
 
 
-      .information-grid {
+      .information-grid,
+      .extra-grid {
 
         grid-template-columns:
           1fr;
@@ -1220,9 +1349,47 @@
       }
 
 
+      .breadcrumb {
+
+        font-size:
+          12px;
+
+      }
+
+
       .gallery {
 
         padding:
+          10px;
+
+      }
+
+
+      .gallery-button {
+
+        width:
+          40px;
+
+        height:
+          40px;
+
+        font-size:
+          24px;
+
+      }
+
+
+      .prev {
+
+        left:
+          10px;
+
+      }
+
+
+      .next {
+
+        right:
           10px;
 
       }
@@ -1232,6 +1399,9 @@
 
         grid-template-columns:
           repeat(4,1fr);
+
+        gap:
+          6px;
 
       }
 
@@ -1256,6 +1426,9 @@
 
         font-size:
           34px;
+
+        letter-spacing:
+          -1px;
 
       }
 
@@ -1286,6 +1459,14 @@
 
       }
 
+
+      .contact-box h2 {
+
+        font-size:
+          20px;
+
+      }
+
     }
 
   </style>
@@ -1308,8 +1489,10 @@
       href="index.html"
       class="logo"
     >
+
       Sotofrau
       <span>Propiedades</span>
+
     </a>
 
 
@@ -1390,6 +1573,7 @@
 
       <div class="gallery">
 
+
         <div class="main-photo">
 
           <img
@@ -1447,7 +1631,7 @@
 
 
       <!-- =================================================
-           INFORMACIÓN
+           CONTENT
       ================================================== -->
 
       <div class="content">
@@ -1508,8 +1692,8 @@
 
 
         <!-- =================================================
-             DESCRIPCIÓN
-        ================================================== -->
+             INFORMACIÓN PRINCIPAL
+        ================================================= -->
 
         <div class="information-grid">
 
@@ -1520,7 +1704,9 @@
               Sobre esta propiedad
             </h2>
 
-            <div id="descripcion">
+            <div
+              id="descripcion"
+            >
             </div>
 
           </div>
@@ -1546,16 +1732,71 @@
 
 
         <!-- =================================================
+             ÁREAS COMUNES / CONECTIVIDAD
+        ================================================= -->
+
+        <div
+          class="extra-information"
+          id="extraInformation"
+        >
+
+          <div class="extra-grid">
+
+
+            <div>
+
+              <h2 id="extraTitulo">
+                Información adicional
+              </h2>
+
+
+              <div
+                class="extra-list"
+                id="extraLista"
+              >
+              </div>
+
+            </div>
+
+
+            <aside
+              class="important"
+              id="connectivityBox"
+            >
+
+              <h2>
+                Conectividad
+              </h2>
+
+
+              <ul
+                class="important-list"
+                id="conectividad"
+              >
+              </ul>
+
+            </aside>
+
+
+          </div>
+
+        </div>
+
+
+
+        <!-- =================================================
              CONTACTO
         ================================================== -->
 
         <div class="contact-box">
+
 
           <div>
 
             <h2>
               ¿Te interesa esta propiedad?
             </h2>
+
 
             <p>
               Escríbeme para consultar condiciones
@@ -1574,6 +1815,7 @@
           >
             Consultar por WhatsApp
           </a>
+
 
         </div>
 
@@ -1607,7 +1849,8 @@
 
 
     <p>
-      © 2026 Sotofrau Propiedades · Todos los derechos reservados.
+      © 2026 Sotofrau Propiedades ·
+      Todos los derechos reservados.
     </p>
 
   </div>
@@ -1617,14 +1860,15 @@
 
 
 <!-- =====================================================
-     DATOS DE PROPIEDADES
+     CARGAR DATOS
 ===================================================== -->
 
 <script src="propiedades.js"></script>
 
 
+
 <!-- =====================================================
-     PLANTILLA UNIVERSAL
+     LÓGICA DE LA PLANTILLA
 ===================================================== -->
 
 <script>
@@ -1638,7 +1882,7 @@
 
 
   /* =====================================================
-     LEER ID DE LA URL
+     OBTENER ID
   ===================================================== */
 
   const parametros =
@@ -1683,8 +1927,8 @@
           display:flex;
           align-items:center;
           justify-content:center;
-          text-align:center;
           padding:30px;
+          text-align:center;
           font-family:Arial,sans-serif;
           background:#fafbfc;
         "
@@ -1692,16 +1936,24 @@
 
         <div>
 
-          <h1 style="color:#0d2f49;">
+          <h1
+            style="
+              color:#0d2f49;
+              margin-bottom:10px;
+            "
+          >
             Propiedad no encontrada
           </h1>
 
-          <p style="
-            color:#6b7781;
-            margin-top:10px;
-          ">
+
+          <p
+            style="
+              color:#6b7781;
+            "
+          >
             La propiedad que buscas no existe.
           </p>
+
 
           <a
             href="index.html#propiedades"
@@ -1709,11 +1961,11 @@
               display:inline-block;
               margin-top:20px;
               padding:12px 20px;
+              border-radius:8px;
               background:#0d2f49;
               color:white;
-              border-radius:8px;
+              font-weight:bold;
               text-decoration:none;
-              font-weight:700;
             "
           >
             Volver a propiedades
@@ -1736,7 +1988,7 @@
   if (propiedadActual) {
 
 
-    /* TÍTULO */
+    /* TÍTULO DE LA PÁGINA */
 
     document.title =
       propiedadActual.titulo +
@@ -1785,8 +2037,13 @@
     document.getElementById(
       "ubicacion"
     ).textContent =
-      "📍 " +
-      propiedadActual.ubicacion;
+      propiedadActual.direccion
+        ? "📍 " +
+          propiedadActual.direccion +
+          " · " +
+          propiedadActual.ubicacion
+        : "📍 " +
+          propiedadActual.ubicacion;
 
 
 
@@ -1799,7 +2056,64 @@
 
 
 
-    /* ESTADO */
+    /* GASTOS COMUNES */
+
+    const mensual =
+      document.getElementById(
+        "mensual"
+      );
+
+
+    if (
+      propiedadActual.gastosComunes ||
+      propiedadActual.totalMensual
+    ) {
+
+      let texto =
+        "";
+
+      if (
+        propiedadActual.gastosComunes
+      ) {
+
+        texto +=
+          "Gastos comunes: " +
+          propiedadActual.gastosComunes;
+
+      }
+
+      if (
+        propiedadActual.totalMensual
+      ) {
+
+        if (texto) {
+
+          texto +=
+            " · ";
+
+        }
+
+        texto +=
+          "Total mensual: " +
+          propiedadActual.totalMensual;
+
+      }
+
+      mensual.textContent =
+        texto;
+
+    } else {
+
+      mensual.style.display =
+        "none";
+
+    }
+
+
+
+    /* =================================================
+       ESTADO
+    ================================================= */
 
     const estado =
       document.getElementById(
@@ -1808,13 +2122,13 @@
 
 
     estado.textContent =
-      propiedadActual.estado === "disponible"
-        ? "Disponible"
-        : propiedadActual.estadoTexto;
+      propiedadActual.estadoTexto ||
+      propiedadActual.estado;
 
 
     if (
-      propiedadActual.estado === "disponible"
+      propiedadActual.estado ===
+      "disponible"
     ) {
 
       estado.classList.add(
@@ -1825,7 +2139,8 @@
 
 
     if (
-      propiedadActual.estado === "vendida"
+      propiedadActual.estado ===
+      "vendida"
     ) {
 
       estado.classList.add(
@@ -1837,72 +2152,72 @@
 
 
     /* =================================================
-       FOTOS ACTUALES
+       FOTOS
     ================================================= */
 
+    fotos =
+      propiedadActual.fotos || [];
+
+
     if (
-      propiedadActual.id === 1
+      fotos.length === 0 &&
+      propiedadActual.imagen
     ) {
 
       fotos = [
-        "propiedades/1/1.jpeg"
+        propiedadActual.imagen
       ];
 
     }
 
-
-    if (
-      propiedadActual.id === 2
-    ) {
-
-      fotos = [
-
-        "propiedades/2/1.jpeg"
-
-      ];
-
-    }
-
-
-    if (
-      propiedadActual.id === 3
-    ) {
-
-      fotos = [
-
-        "propiedades/3/1.jpg",
-        "propiedades/3/2.jpg",
-        "propiedades/3/3.jpg",
-        "propiedades/3/4.jpg",
-        "propiedades/3/5.jpg",
-        "propiedades/3/6.jpg",
-        "propiedades/3/7.jpg"
-
-      ];
-
-    }
-
-
-
-    /* GALERÍA */
 
     cargarGaleria();
 
 
 
-    /* CARACTERÍSTICAS */
+    /* =================================================
+       CARACTERÍSTICAS
+    ================================================= */
 
     cargarCaracteristicas();
 
 
 
-    /* INFORMACIÓN */
+    /* =================================================
+       DESCRIPCIÓN
+    ================================================= */
 
-    cargarInformacion();
+    cargarDescripcion();
 
 
 
-    /* WHATSAPP */
+    /* =================================================
+       INFORMACIÓN IMPORTANTE
+    ================================================= */
+
+    cargarInformacionImportante();
+
+
+
+    /* =================================================
+       ÁREAS COMUNES
+    ================================================= */
+
+    cargarAreasComunes();
+
+
+
+    /* =================================================
+       CONECTIVIDAD
+    ================================================= */
+
+    cargarConectividad();
+
+
+
+    /* =================================================
+       WHATSAPP
+    ================================================= */
 
     cargarWhatsApp();
 
@@ -1922,13 +2237,15 @@
       );
 
 
-    thumbnails.innerHTML = "";
+    thumbnails.innerHTML =
+      "";
 
 
     document.getElementById(
       "totalPhotos"
     ).textContent =
-      fotos.length;
+      fotos.length || 1;
+
 
 
     if (
@@ -1946,7 +2263,29 @@
       ).style.display =
         "none";
 
+
+      thumbnails.style.display =
+        "none";
+
+    } else {
+
+      document.getElementById(
+        "previousButton"
+      ).style.display =
+        "";
+
+
+      document.getElementById(
+        "nextButton"
+      ).style.display =
+        "";
+
+
+      thumbnails.style.display =
+        "grid";
+
     }
+
 
 
     fotos.forEach(
@@ -1954,7 +2293,6 @@
         foto,
         index
       ) {
-
 
         const boton =
           document.createElement(
@@ -1981,15 +2319,28 @@
         }
 
 
-        boton.innerHTML = `
+        const imagen =
+          document.createElement(
+            "img"
+          );
 
-          <img
-            src="${foto}"
-            alt="Foto ${index + 1}"
-            loading="lazy"
-          >
 
-        `;
+        imagen.src =
+          foto;
+
+
+        imagen.alt =
+          "Foto " +
+          (index + 1);
+
+
+        imagen.loading =
+          "lazy";
+
+
+        boton.appendChild(
+          imagen
+        );
 
 
         boton.addEventListener(
@@ -2012,7 +2363,14 @@
     );
 
 
-    mostrarFoto(1);
+
+    if (
+      fotos.length > 0
+    ) {
+
+      mostrarFoto(1);
+
+    }
 
   }
 
@@ -2027,6 +2385,26 @@
     ) {
 
       return;
+
+    }
+
+
+    if (
+      numero < 1
+    ) {
+
+      numero =
+        1;
+
+    }
+
+
+    if (
+      numero > fotos.length
+    ) {
+
+      numero =
+        fotos.length;
 
     }
 
@@ -2082,6 +2460,15 @@
   function siguiente() {
 
     if (
+      fotos.length <= 1
+    ) {
+
+      return;
+
+    }
+
+
+    if (
       fotoActual >=
       fotos.length
     ) {
@@ -2101,6 +2488,15 @@
 
 
   function anterior() {
+
+    if (
+      fotos.length <= 1
+    ) {
+
+      return;
+
+    }
+
 
     if (
       fotoActual <= 1
@@ -2144,7 +2540,8 @@
     function(event) {
 
       if (
-        event.key === "ArrowRight"
+        event.key ===
+        "ArrowRight"
       ) {
 
         siguiente();
@@ -2153,7 +2550,8 @@
 
 
       if (
-        event.key === "ArrowLeft"
+        event.key ===
+        "ArrowLeft"
       ) {
 
         anterior();
@@ -2177,12 +2575,15 @@
       );
 
 
-    contenedor.innerHTML = "";
+    contenedor.innerHTML =
+      "";
 
 
     propiedadActual.caracteristicas
       .forEach(
-        function(caracteristica) {
+        function(
+          caracteristica
+        ) {
 
           const partes =
             caracteristica.match(
@@ -2235,29 +2636,227 @@
 
 
   /* =====================================================
-     INFORMACIÓN
+     DESCRIPCIÓN
   ===================================================== */
 
-  function cargarInformacion() {
+  function cargarDescripcion() {
 
-    const descripcion =
+    const contenedor =
       document.getElementById(
         "descripcion"
       );
 
 
-    const importante =
+    contenedor.innerHTML =
+      "";
+
+
+    if (
+      propiedadActual.descripcion &&
+      propiedadActual.descripcion.length
+    ) {
+
+      propiedadActual.descripcion
+        .forEach(
+          function(parrafo) {
+
+            const p =
+              document.createElement(
+                "p"
+              );
+
+
+            p.textContent =
+              parrafo;
+
+
+            contenedor.appendChild(
+              p
+            );
+
+          }
+        );
+
+    } else {
+
+      const p =
+        document.createElement(
+          "p"
+        );
+
+
+      p.textContent =
+        "Para conocer todos los detalles de esta propiedad, sus condiciones y coordinar una visita, puedes contactarnos directamente.";
+
+
+      contenedor.appendChild(
+        p
+      );
+
+    }
+
+  }
+
+
+
+  /* =====================================================
+     INFORMACIÓN IMPORTANTE
+  ===================================================== */
+
+  function cargarInformacionImportante() {
+
+    const lista =
       document.getElementById(
         "importante"
       );
 
 
-    importante.innerHTML = "";
+    lista.innerHTML =
+      "";
 
 
-    propiedadActual.caracteristicas
-      .forEach(
-        function(caracteristica) {
+    const informacion =
+      propiedadActual.informacionImportante ||
+      propiedadActual.caracteristicas ||
+      [];
+
+
+    informacion.forEach(
+      function(item) {
+
+        const li =
+          document.createElement(
+            "li"
+          );
+
+
+        li.textContent =
+          item;
+
+
+        lista.appendChild(
+          li
+        );
+
+      }
+    );
+
+  }
+
+
+
+  /* =====================================================
+     ÁREAS COMUNES
+  ===================================================== */
+
+  function cargarAreasComunes() {
+
+    const contenedor =
+      document.getElementById(
+        "extraInformation"
+      );
+
+
+    const titulo =
+      document.getElementById(
+        "extraTitulo"
+      );
+
+
+    const lista =
+      document.getElementById(
+        "extraLista"
+      );
+
+
+    lista.innerHTML =
+      "";
+
+
+    const areas =
+      propiedadActual.areasComunes ||
+      [];
+
+
+    if (
+      areas.length
+    ) {
+
+      titulo.textContent =
+        "Áreas comunes del edificio";
+
+
+      areas.forEach(
+        function(area) {
+
+          const item =
+            document.createElement(
+              "div"
+            );
+
+
+          item.className =
+            "extra-item";
+
+
+          item.textContent =
+            area;
+
+
+          lista.appendChild(
+            item
+          );
+
+        }
+      );
+
+    } else {
+
+      titulo.textContent =
+        "Información adicional";
+
+      contenedor.style.display =
+        "none";
+
+    }
+
+  }
+
+
+
+  /* =====================================================
+     CONECTIVIDAD
+  ===================================================== */
+
+  function cargarConectividad() {
+
+    const box =
+      document.getElementById(
+        "connectivityBox"
+      );
+
+
+    const lista =
+      document.getElementById(
+        "conectividad"
+      );
+
+
+    lista.innerHTML =
+      "";
+
+
+    const conectividad =
+      propiedadActual.conectividad ||
+      [];
+
+
+    if (
+      conectividad.length
+    ) {
+
+      conectividad.forEach(
+        function(item) {
 
           const li =
             document.createElement(
@@ -2266,44 +2865,22 @@
 
 
           li.textContent =
-            caracteristica;
+            item;
 
 
-          importante.appendChild(
+          lista.appendChild(
             li
           );
 
         }
       );
 
+    } else {
 
-    descripcion.innerHTML = `
+      box.style.display =
+        "none";
 
-      <p>
-        ${propiedadActual.titulo}
-        ubicada en
-        ${propiedadActual.ubicacion}.
-      </p>
-
-      <p>
-        Esta propiedad forma parte de la
-        cartera de Sotofrau Propiedades.
-        Para conocer todos sus detalles,
-        condiciones y coordinar una visita,
-        puedes contactarnos directamente.
-      </p>
-
-    `;
-
-
-    const mensual =
-      document.getElementById(
-        "mensual"
-      );
-
-
-    mensual.textContent =
-      "Consulta por gastos comunes y condiciones.";
+    }
 
   }
 
@@ -2315,28 +2892,33 @@
 
   function cargarWhatsApp() {
 
-    const mensaje =
-      encodeURIComponent(
+    let mensaje =
+      propiedadActual.whatsapp;
 
+
+    if (
+      !mensaje
+    ) {
+
+      mensaje =
         "Hola, me gustaría consultar por la propiedad: " +
-
         propiedadActual.titulo +
+        ".";
 
-        ", ubicada en " +
+    }
 
-        propiedadActual.ubicacion +
 
-        "."
-
+    const enlace =
+      "https://wa.me/56944844983?text=" +
+      encodeURIComponent(
+        mensaje
       );
 
 
     document.getElementById(
       "whatsapp"
     ).href =
-
-      "https://wa.me/56944844983?text=" +
-      mensaje;
+      enlace;
 
   }
 
