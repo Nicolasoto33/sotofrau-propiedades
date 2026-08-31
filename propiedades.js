@@ -27,9 +27,17 @@ const propiedades = [
 
     totalMensual: "",
 
-    fotos: [
-      "propiedades/1/1.jpeg"
-    ],
+fotos: [
+  "propiedades/1/1.jpeg",
+  "propiedades/1/2.jpeg",
+  "propiedades/1/3.jpeg",
+  "propiedades/1/4.jpeg",
+  "propiedades/1/5.jpeg",
+  "propiedades/1/6.jpeg",
+  "propiedades/1/7.jpeg",
+  "propiedades/1/8.jpeg",
+  "propiedades/1/9.jpeg"
+],
 
     caracteristicas: [
       "🛏 1 dormitorio",
@@ -87,8 +95,15 @@ const propiedades = [
     totalMensual: "$400.000",
 
     fotos: [
-      "propiedades/2/1.jpeg"
-    ],
+  "propiedades/2/1.jpeg",
+  "propiedades/2/2.jpeg",
+  "propiedades/2/3.jpeg",
+  "propiedades/2/4.jpeg",
+  "propiedades/2/5.jpeg",
+  "propiedades/2/6.jpeg",
+  "propiedades/2/7.jpeg",
+  "propiedades/2/8.jpeg"
+],
 
     caracteristicas: [
       "🛏 2 dormitorios",
