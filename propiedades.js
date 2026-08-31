@@ -246,7 +246,7 @@ fotos: [
   {
     id: 4,
 
-    publicada: false,
+    publicada: true,
 
     operacion: "Arriendo",
 
