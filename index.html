@@ -1,35 +1,34 @@
 <!DOCTYPE html>
 
 <html lang="es">
+
 <head>
 
   <meta charset="UTF-8">
 
-<meta
-name="viewport"
-content="width=device-width, initial-scale=1.0"
-
->
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
 
   <title>
     Sotofrau Propiedades | Venta, Arriendo y Administración
   </title>
 
-<meta
-name="description"
-content="Sotofrau Propiedades. Compra, vende, arrienda y administra tu propiedad con atención cercana y personalizada en la Región de Valparaíso."
+  <meta
+    name="description"
+    content="Sotofrau Propiedades. Compra, vende, arrienda y administra tu propiedad con atención cercana y personalizada en la Región de Valparaíso."
+  >
 
->
-
-<meta
-name="theme-color"
-content="#0d2f49"
-
->
+  <meta
+    name="theme-color"
+    content="#0d2f49"
+  >
 
   <style>
 
     :root {
+
       --azul: #0d2f49;
       --azul-2: #164968;
       --azul-oscuro: #081f31;
@@ -57,22 +56,30 @@ content="#0d2f49"
       --radio: 16px;
 
       --ancho: 1180px;
+
     }
 
 
     * {
+
       box-sizing: border-box;
+
       margin: 0;
+
       padding: 0;
+
     }
 
 
     html {
+
       scroll-behavior: smooth;
+
     }
 
 
     body {
+
       font-family:
         Inter,
         -apple-system,
@@ -81,39 +88,56 @@ content="#0d2f49"
         Arial,
         sans-serif;
 
-      color: var(--gris-700);
+      color:
+        var(--gris-700);
 
-      background: var(--blanco);
+      background:
+        var(--blanco);
 
-      line-height: 1.6;
+      line-height:
+        1.6;
+
     }
 
 
     img {
-      max-width: 100%;
+
+      max-width:
+        100%;
+
     }
 
 
     a {
-      text-decoration: none;
 
-      color: inherit;
+      text-decoration:
+        none;
+
+      color:
+        inherit;
+
     }
 
 
     button {
-      font: inherit;
+
+      font:
+        inherit;
+
     }
 
 
     .container {
+
       width:
         min(
           var(--ancho),
           92%
         );
 
-      margin: auto;
+      margin:
+        auto;
+
     }
 
 
@@ -124,11 +148,14 @@ content="#0d2f49"
 
     header {
 
-      position: sticky;
+      position:
+        sticky;
 
-      top: 0;
+      top:
+        0;
 
-      z-index: 1000;
+      z-index:
+        1000;
 
       background:
         rgba(255,255,255,.97);
@@ -138,39 +165,53 @@ content="#0d2f49"
 
       border-bottom:
         1px solid rgba(13,47,73,.08);
+
     }
 
 
     .nav {
 
-      min-height: 78px;
+      min-height:
+        78px;
 
-      display: flex;
+      display:
+        flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      justify-content: space-between;
+      justify-content:
+        space-between;
 
-      gap: 30px;
+      gap:
+        30px;
+
     }
 
 
     .logo {
 
-      display: inline-flex;
+      display:
+        inline-flex;
 
-      align-items: center;
+      align-items:
+        center;
 
       color:
         var(--azul);
 
-      font-size: 23px;
+      font-size:
+        23px;
 
-      font-weight: 800;
+      font-weight:
+        800;
 
-      letter-spacing: -.5px;
+      letter-spacing:
+        -.5px;
 
-      white-space: nowrap;
+      white-space:
+        nowrap;
+
     }
 
 
@@ -179,21 +220,29 @@ content="#0d2f49"
       color:
         var(--naranja);
 
-      margin-left: 5px;
+      margin-left:
+        5px;
+
     }
 
 
     nav {
 
-      display: flex;
+      display:
+        flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      gap: 26px;
+      gap:
+        26px;
 
-      font-size: 14px;
+      font-size:
+        14px;
 
-      font-weight: 650;
+      font-weight:
+        650;
+
     }
 
 
@@ -202,7 +251,9 @@ content="#0d2f49"
       color:
         var(--azul);
 
-      transition: .2s ease;
+      transition:
+        .2s ease;
+
     }
 
 
@@ -210,6 +261,7 @@ content="#0d2f49"
 
       color:
         var(--naranja);
+
     }
 
 
@@ -218,12 +270,15 @@ content="#0d2f49"
       background:
         var(--azul);
 
-      color: white !important;
+      color:
+        white !important;
 
       padding:
         11px 18px;
 
-      border-radius: 9px;
+      border-radius:
+        9px;
+
     }
 
 
@@ -231,6 +286,7 @@ content="#0d2f49"
 
       background:
         var(--azul-2);
+
     }
 
 
@@ -241,99 +297,143 @@ content="#0d2f49"
 
     .hero {
 
-      position: relative;
+      position:
+        relative;
 
-      min-height: 650px;
+      min-height:
+        650px;
 
-      display: flex;
+      display:
+        flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      overflow: hidden;
+      overflow:
+        hidden;
 
-      color: white;
+      color:
+        white;
 
       background:
+
         linear-gradient(
+
           90deg,
+
           rgba(6,25,40,.97) 0%,
+
           rgba(8,34,53,.88) 45%,
+
           rgba(8,34,53,.52) 100%
+
         ),
+
         linear-gradient(
+
           135deg,
+
           var(--azul),
+
           var(--azul-2)
+
         );
+
     }
 
 
     .hero::after {
 
-      content: "";
+      content:
+        "";
 
-      position: absolute;
+      position:
+        absolute;
 
-      width: 500px;
+      width:
+        500px;
 
-      height: 500px;
+      height:
+        500px;
 
-      right: -180px;
+      right:
+        -180px;
 
-      bottom: -230px;
+      bottom:
+        -230px;
 
-      border-radius: 50%;
+      border-radius:
+        50%;
 
       background:
         rgba(232,137,37,.14);
+
     }
 
 
     .hero-content {
 
-      position: relative;
+      position:
+        relative;
 
-      z-index: 2;
+      z-index:
+        2;
 
-      max-width: 730px;
+      max-width:
+        730px;
 
-      padding: 100px 0;
+      padding:
+        100px 0;
+
     }
 
 
     .hero-label {
 
-      display: inline-flex;
+      display:
+        inline-flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      gap: 9px;
+      gap:
+        9px;
 
-      margin-bottom: 22px;
+      margin-bottom:
+        22px;
 
       color:
         #d9e9f2;
 
-      font-size: 13px;
+      font-size:
+        13px;
 
-      font-weight: 750;
+      font-weight:
+        750;
 
-      text-transform: uppercase;
+      text-transform:
+        uppercase;
 
-      letter-spacing: 1.6px;
+      letter-spacing:
+        1.6px;
+
     }
 
 
     .hero-label::before {
 
-      content: "";
+      content:
+        "";
 
-      width: 28px;
+      width:
+        28px;
 
-      height: 2px;
+      height:
+        2px;
 
       background:
         var(--naranja);
+
     }
 
 
@@ -346,11 +446,15 @@ content="#0d2f49"
           70px
         );
 
-      line-height: 1.02;
+      line-height:
+        1.02;
 
-      letter-spacing: -2.5px;
+      letter-spacing:
+        -2.5px;
 
-      margin-bottom: 25px;
+      margin-bottom:
+        25px;
+
     }
 
 
@@ -358,52 +462,70 @@ content="#0d2f49"
 
       color:
         #f3a04b;
+
     }
 
 
     .hero p {
 
-      max-width: 650px;
+      max-width:
+        650px;
 
       color:
         #e4eef3;
 
-      font-size: 18px;
+      font-size:
+        18px;
 
-      line-height: 1.7;
+      line-height:
+        1.7;
 
-      margin-bottom: 36px;
+      margin-bottom:
+        36px;
+
     }
 
 
     .buttons {
 
-      display: flex;
+      display:
+        flex;
 
-      flex-wrap: wrap;
+      flex-wrap:
+        wrap;
 
-      gap: 12px;
+      gap:
+        12px;
+
     }
 
 
     .btn {
 
-      display: inline-flex;
+      display:
+        inline-flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      justify-content: center;
+      justify-content:
+        center;
 
       padding:
         14px 22px;
 
-      border-radius: 9px;
+      border-radius:
+        9px;
 
-      font-size: 14px;
+      font-size:
+        14px;
 
-      font-weight: 750;
+      font-weight:
+        750;
 
-      transition: .2s ease;
+      transition:
+        .2s ease;
+
     }
 
 
@@ -411,6 +533,7 @@ content="#0d2f49"
 
       transform:
         translateY(-2px);
+
     }
 
 
@@ -419,11 +542,13 @@ content="#0d2f49"
       background:
         var(--naranja);
 
-      color: white;
+      color:
+        white;
 
       box-shadow:
         0 8px 22px
         rgba(232,137,37,.22);
+
     }
 
 
@@ -431,6 +556,7 @@ content="#0d2f49"
 
       background:
         var(--naranja-hover);
+
     }
 
 
@@ -441,6 +567,7 @@ content="#0d2f49"
 
       color:
         var(--azul);
+
     }
 
 
@@ -453,39 +580,47 @@ content="#0d2f49"
 
       padding:
         90px 0;
+
     }
 
 
     .section-header {
 
-      max-width: 680px;
+      max-width:
+        680px;
 
       margin:
         0 auto 48px;
 
       text-align:
         center;
+
     }
 
 
     .section-label {
 
-      display: block;
+      display:
+        block;
 
-      margin-bottom: 9px;
+      margin-bottom:
+        9px;
 
       color:
         var(--naranja);
 
-      font-size: 12px;
+      font-size:
+        12px;
 
-      font-weight: 800;
+      font-weight:
+        800;
 
       text-transform:
         uppercase;
 
       letter-spacing:
         1.6px;
+
     }
 
 
@@ -501,11 +636,15 @@ content="#0d2f49"
           40px
         );
 
-      line-height: 1.15;
+      line-height:
+        1.15;
 
-      letter-spacing: -.8px;
+      letter-spacing:
+        -.8px;
 
-      margin-bottom: 12px;
+      margin-bottom:
+        12px;
+
     }
 
 
@@ -514,7 +653,9 @@ content="#0d2f49"
       color:
         var(--gris-500);
 
-      font-size: 16px;
+      font-size:
+        16px;
+
     }
 
 
@@ -527,20 +668,27 @@ content="#0d2f49"
 
       background:
         var(--gris-50);
+
     }
 
 
     .filters {
 
-      display: flex;
+      display:
+        flex;
 
-      justify-content: center;
+      justify-content:
+        center;
 
-      flex-wrap: wrap;
+      flex-wrap:
+        wrap;
 
-      gap: 9px;
+      gap:
+        9px;
 
-      margin-bottom: 38px;
+      margin-bottom:
+        38px;
+
     }
 
 
@@ -572,6 +720,7 @@ content="#0d2f49"
 
       transition:
         .2s ease;
+
     }
 
 
@@ -586,6 +735,7 @@ content="#0d2f49"
 
       color:
         white;
+
     }
 
 
@@ -595,10 +745,11 @@ content="#0d2f49"
         grid;
 
       grid-template-columns:
-        repeat(3,1fr);
+        repeat(3, 1fr);
 
       gap:
         25px;
+
     }
 
 
@@ -622,6 +773,7 @@ content="#0d2f49"
       transition:
         transform .25s ease,
         box-shadow .25s ease;
+
     }
 
 
@@ -632,6 +784,7 @@ content="#0d2f49"
 
       box-shadow:
         var(--sombra-hover);
+
     }
 
 
@@ -639,6 +792,7 @@ content="#0d2f49"
 
       display:
         none;
+
     }
 
 
@@ -659,6 +813,7 @@ content="#0d2f49"
           #dce6ec,
           #b9cbd5
         );
+
     }
 
 
@@ -684,6 +839,7 @@ content="#0d2f49"
 
       transition:
         transform .5s ease;
+
     }
 
 
@@ -692,6 +848,7 @@ content="#0d2f49"
 
       transform:
         scale(1.03);
+
     }
 
 
@@ -729,6 +886,7 @@ content="#0d2f49"
 
       letter-spacing:
         .4px;
+
     }
 
 
@@ -736,6 +894,7 @@ content="#0d2f49"
 
       background:
         var(--rojo);
+
     }
 
 
@@ -743,6 +902,7 @@ content="#0d2f49"
 
       background:
         var(--verde);
+
     }
 
 
@@ -750,6 +910,7 @@ content="#0d2f49"
 
       background:
         #59656d;
+
     }
 
 
@@ -757,6 +918,7 @@ content="#0d2f49"
 
       padding:
         23px;
+
     }
 
 
@@ -779,6 +941,7 @@ content="#0d2f49"
 
       letter-spacing:
         1px;
+
     }
 
 
@@ -795,6 +958,7 @@ content="#0d2f49"
 
       margin-bottom:
         7px;
+
     }
 
 
@@ -808,6 +972,7 @@ content="#0d2f49"
 
       margin-bottom:
         15px;
+
     }
 
 
@@ -824,6 +989,7 @@ content="#0d2f49"
 
       margin-bottom:
         15px;
+
     }
 
 
@@ -849,6 +1015,7 @@ content="#0d2f49"
 
       font-size:
         12px;
+
     }
 
 
@@ -889,6 +1056,7 @@ content="#0d2f49"
 
       transition:
         .2s ease;
+
     }
 
 
@@ -896,6 +1064,7 @@ content="#0d2f49"
 
       background:
         var(--azul-oscuro);
+
     }
 
 
@@ -910,10 +1079,11 @@ content="#0d2f49"
         grid;
 
       grid-template-columns:
-        repeat(3,1fr);
+        repeat(3, 1fr);
 
       gap:
         22px;
+
     }
 
 
@@ -939,6 +1109,7 @@ content="#0d2f49"
 
       overflow:
         hidden;
+
     }
 
 
@@ -967,6 +1138,7 @@ content="#0d2f49"
 
       background:
         rgba(232,137,37,.08);
+
     }
 
 
@@ -986,6 +1158,7 @@ content="#0d2f49"
 
       letter-spacing:
         1px;
+
     }
 
 
@@ -999,6 +1172,7 @@ content="#0d2f49"
 
       margin-bottom:
         11px;
+
     }
 
 
@@ -1009,6 +1183,7 @@ content="#0d2f49"
 
       font-size:
         14px;
+
     }
 
 
@@ -1024,6 +1199,7 @@ content="#0d2f49"
 
       color:
         white;
+
     }
 
 
@@ -1040,6 +1216,7 @@ content="#0d2f49"
 
       align-items:
         center;
+
     }
 
 
@@ -1047,6 +1224,7 @@ content="#0d2f49"
 
       color:
         #f2a053;
+
     }
 
 
@@ -1070,6 +1248,7 @@ content="#0d2f49"
 
       margin-bottom:
         20px;
+
     }
 
 
@@ -1086,6 +1265,7 @@ content="#0d2f49"
 
       margin-bottom:
         25px;
+
     }
 
 
@@ -1099,6 +1279,7 @@ content="#0d2f49"
 
       gap:
         12px;
+
     }
 
 
@@ -1115,6 +1296,7 @@ content="#0d2f49"
 
       font-size:
         14px;
+
     }
 
 
@@ -1134,6 +1316,7 @@ content="#0d2f49"
 
       font-weight:
         900;
+
     }
 
 
@@ -1154,6 +1337,7 @@ content="#0d2f49"
       box-shadow:
         0 18px 45px
         rgba(0,0,0,.18);
+
     }
 
 
@@ -1170,6 +1354,7 @@ content="#0d2f49"
 
       margin-bottom:
         12px;
+
     }
 
 
@@ -1183,6 +1368,7 @@ content="#0d2f49"
 
       margin-bottom:
         23px;
+
     }
 
 
@@ -1198,6 +1384,7 @@ content="#0d2f49"
 
       text-align:
         center;
+
     }
 
 
@@ -1223,6 +1410,7 @@ content="#0d2f49"
 
       box-shadow:
         var(--sombra);
+
     }
 
 
@@ -1246,6 +1434,7 @@ content="#0d2f49"
 
       margin-bottom:
         14px;
+
     }
 
 
@@ -1262,6 +1451,7 @@ content="#0d2f49"
 
       font-size:
         15px;
+
     }
 
 
@@ -1274,6 +1464,7 @@ content="#0d2f49"
 
       background:
         white;
+
     }
 
 
@@ -1287,6 +1478,7 @@ content="#0d2f49"
 
       gap:
         20px;
+
     }
 
 
@@ -1306,6 +1498,7 @@ content="#0d2f49"
 
       background:
         white;
+
     }
 
 
@@ -1319,6 +1512,7 @@ content="#0d2f49"
 
       margin-bottom:
         7px;
+
     }
 
 
@@ -1329,6 +1523,7 @@ content="#0d2f49"
 
       font-size:
         14px;
+
     }
 
 
@@ -1336,6 +1531,7 @@ content="#0d2f49"
 
       color:
         var(--naranja);
+
     }
 
 
@@ -1357,6 +1553,7 @@ content="#0d2f49"
 
       text-align:
         center;
+
     }
 
 
@@ -1367,6 +1564,7 @@ content="#0d2f49"
 
       font-size:
         20px;
+
     }
 
 
@@ -1377,6 +1575,7 @@ content="#0d2f49"
 
       font-size:
         13px;
+
     }
 
 
@@ -1432,6 +1631,7 @@ content="#0d2f49"
 
       transition:
         .2s ease;
+
     }
 
 
@@ -1440,6 +1640,7 @@ content="#0d2f49"
       transform:
         translateY(-3px)
         scale(1.03);
+
     }
 
 
@@ -1451,25 +1652,34 @@ content="#0d2f49"
     @media (max-width: 900px) {
 
       nav {
-        display: none;
+
+        display:
+          none;
+
       }
 
 
       .hero {
+
         min-height:
           570px;
+
       }
 
 
       .hero-content {
+
         padding:
           75px 0;
+
       }
 
 
       .hero h1 {
+
         font-size:
           47px;
+
       }
 
 
@@ -1479,6 +1689,7 @@ content="#0d2f49"
 
         grid-template-columns:
           1fr;
+
       }
 
 
@@ -1489,6 +1700,7 @@ content="#0d2f49"
 
         gap:
           38px;
+
       }
 
 
@@ -1496,6 +1708,7 @@ content="#0d2f49"
 
         padding:
           70px 0;
+
       }
 
     }
@@ -1507,6 +1720,7 @@ content="#0d2f49"
 
         min-height:
           68px;
+
       }
 
 
@@ -1514,6 +1728,7 @@ content="#0d2f49"
 
         font-size:
           20px;
+
       }
 
 
@@ -1521,6 +1736,7 @@ content="#0d2f49"
 
         min-height:
           560px;
+
       }
 
 
@@ -1531,6 +1747,7 @@ content="#0d2f49"
 
         letter-spacing:
           -1.5px;
+
       }
 
 
@@ -1538,6 +1755,7 @@ content="#0d2f49"
 
         font-size:
           16px;
+
       }
 
 
@@ -1545,6 +1763,7 @@ content="#0d2f49"
 
         width:
           100%;
+
       }
 
 
@@ -1552,6 +1771,7 @@ content="#0d2f49"
 
         width:
           100%;
+
       }
 
 
@@ -1559,6 +1779,7 @@ content="#0d2f49"
 
         height:
           250px;
+
       }
 
 
@@ -1566,6 +1787,7 @@ content="#0d2f49"
 
         padding:
           45px 22px;
+
       }
 
 
@@ -1582,6 +1804,7 @@ content="#0d2f49"
 
         height:
           52px;
+
       }
 
     }
@@ -1590,7 +1813,9 @@ content="#0d2f49"
 
 </head>
 
+
 <body>
+
 
 <!-- =====================================================
      HEADER
@@ -1600,47 +1825,47 @@ content="#0d2f49"
 
   <div class="container nav">
 
-```
-<a
-  href="#inicio"
-  class="logo"
->
-  Sotofrau
-  <span>Propiedades</span>
-</a>
+    <a
+      href="#inicio"
+      class="logo"
+    >
+      Sotofrau
+      <span>Propiedades</span>
+    </a>
 
 
-<nav>
+    <nav>
 
-  <a href="#propiedades">
-    Propiedades
-  </a>
+      <a href="#propiedades">
+        Propiedades
+      </a>
 
-  <a href="#servicios">
-    Servicios
-  </a>
+      <a href="#servicios">
+        Servicios
+      </a>
 
-  <a href="#administracion">
-    Administración
-  </a>
+      <a href="#administracion">
+        Administración
+      </a>
 
-  <a href="#captacion">
-    Vende / Arrienda
-  </a>
+      <a href="#captacion">
+        Vende / Arrienda
+      </a>
 
-  <a
-    href="#contacto"
-    class="nav-contact"
-  >
-    Contacto
-  </a>
+      <a
+        href="#contacto"
+        class="nav-contact"
+      >
+        Contacto
+      </a>
 
-</nav>
-```
+    </nav>
 
   </div>
 
 </header>
+
+
 
 <!-- =====================================================
      HERO
@@ -1653,51 +1878,51 @@ content="#0d2f49"
 
   <div class="container">
 
-```
-<div class="hero-content">
+    <div class="hero-content">
 
-  <div class="hero-label">
-    Sotofrau Propiedades
-  </div>
-
-
-  <h1>
-    Tu propiedad,<br>
-    <span>en buenas manos.</span>
-  </h1>
+      <div class="hero-label">
+        Sotofrau Propiedades
+      </div>
 
 
-  <p>
-    Compra, vende, arrienda o administra tu propiedad
-    con una atención cercana, transparente y personalizada.
-  </p>
+      <h1>
+        Tu propiedad,<br>
+        <span>en buenas manos.</span>
+      </h1>
 
 
-  <div class="buttons">
-
-    <a
-      href="#propiedades"
-      class="btn btn-primary"
-    >
-      Ver propiedades
-    </a>
+      <p>
+        Compra, vende, arrienda o administra tu propiedad
+        con una atención cercana, transparente y personalizada.
+      </p>
 
 
-    <a
-      href="#captacion"
-      class="btn btn-light"
-    >
-      Quiero vender o arrendar
-    </a>
+      <div class="buttons">
 
-  </div>
+        <a
+          href="#propiedades"
+          class="btn btn-primary"
+        >
+          Ver propiedades
+        </a>
 
-</div>
-```
+
+        <a
+          href="#captacion"
+          class="btn btn-light"
+        >
+          Quiero vender o arrendar
+        </a>
+
+      </div>
+
+    </div>
 
   </div>
 
 </section>
+
+
 
 <!-- =====================================================
      PROPIEDADES
@@ -1710,347 +1935,91 @@ content="#0d2f49"
 
   <div class="container">
 
-```
-<div class="section-header">
+    <div class="section-header">
 
-  <span class="section-label">
-    Nuestra cartera
-  </span>
-
-
-  <h2>
-    Propiedades
-  </h2>
-
-
-  <p>
-    Conoce las propiedades que hemos gestionado
-    y las oportunidades actualmente disponibles.
-  </p>
-
-</div>
-
-
-<div class="filters">
-
-  <button
-    class="filter active"
-    onclick="filtrar('todas', this)"
-  >
-    Todas
-  </button>
-
-
-  <button
-    class="filter"
-    onclick="filtrar('venta', this)"
-  >
-    Venta
-  </button>
-
-
-  <button
-    class="filter"
-    onclick="filtrar('arriendo', this)"
-  >
-    Arriendo
-  </button>
-
-
-  <button
-    class="filter"
-    onclick="filtrar('disponible', this)"
-  >
-    Disponibles
-  </button>
-
-
-  <button
-    class="filter"
-    onclick="filtrar('gestionada', this)"
-  >
-    Gestionadas
-  </button>
-
-</div>
-
-
-
-<div class="property-grid">
-
-
-  <!-- =================================================
-       PROPIEDAD 1
-  ================================================== -->
-
-  <article
-    class="property-card"
-    data-operation="arriendo"
-    data-status="gestionada"
-  >
-
-    <div class="property-image">
-
-      <span
-        class="status status-arrendada"
-      >
-        Arrendada
+      <span class="section-label">
+        Nuestra cartera
       </span>
 
 
-      <img
-        src="propiedades/1/1.jpeg"
-        alt="Habitación en arriendo en Valparaíso"
-      >
+      <h2>
+        Propiedades
+      </h2>
+
+
+      <p>
+        Conoce las propiedades que hemos gestionado
+        y las oportunidades actualmente disponibles.
+      </p>
 
     </div>
 
 
-    <div class="property-content">
+    <div class="filters">
 
-      <div class="operation">
+      <button
+        class="filter active"
+        onclick="filtrar('todas', this)"
+        type="button"
+      >
+        Todas
+      </button>
+
+
+      <button
+        class="filter"
+        onclick="filtrar('venta', this)"
+        type="button"
+      >
+        Venta
+      </button>
+
+
+      <button
+        class="filter"
+        onclick="filtrar('arriendo', this)"
+        type="button"
+      >
         Arriendo
-      </div>
+      </button>
 
 
-      <h3>
-        Habitación en arriendo
-      </h3>
-
-
-      <div class="location">
-        Valparaíso · Sector Yungay
-      </div>
-
-
-      <div class="price">
-        $260.000
-      </div>
-
-
-      <div class="features">
-
-        <span>
-          🛏 1 dormitorio
-        </span>
-
-
-        <span>
-          🚿 1 baño
-        </span>
-
-
-        <span>
-          📐 72 m²
-        </span>
-
-
-        <span>
-          🛋 Amoblado
-        </span>
-
-      </div>
-
-
-      <a
-        href="propiedad-1.html"
-        class="property-button"
+      <button
+        class="filter"
+        onclick="filtrar('disponible', this)"
+        type="button"
       >
-        Ver propiedad
-      </a>
-
-    </div>
-
-  </article>
+        Disponibles
+      </button>
 
 
-
-  <!-- =================================================
-       PROPIEDAD 2
-  ================================================== -->
-
-  <article
-    class="property-card"
-    data-operation="arriendo"
-    data-status="gestionada"
-  >
-
-    <div class="property-image">
-
-      <span
-        class="status status-arrendada"
+      <button
+        class="filter"
+        onclick="filtrar('gestionada', this)"
+        type="button"
       >
-        Arrendada
-      </span>
-
-
-      <img
-        src="propiedades/2/1.jpeg"
-        alt="2° Piso Independiente en Arriendo en Quilpué"
-      >
+        Gestionadas
+      </button>
 
     </div>
 
 
-    <div class="property-content">
+    <!--
+      LAS TARJETAS SE GENERAN AUTOMÁTICAMENTE
+      DESDE propiedades.js
+    -->
 
-      <div class="operation">
-        Arriendo
-      </div>
-
-
-      <h3>
-        2° Piso Independiente en Arriendo
-      </h3>
-
-
-      <div class="location">
-        Quilpué · Sector Teniente Serrano
-      </div>
-
-
-      <div class="price">
-        $400.000
-      </div>
-
-
-      <div class="features">
-
-        <span>
-          🛏 2 dormitorios
-        </span>
-
-
-        <span>
-          🚿 1 baño
-        </span>
-
-
-        <span>
-          📐 45 m²
-        </span>
-
-
-        <span>
-          🚗 1 estacionamiento
-        </span>
-
-      </div>
-
-
-      <a
-        href="propiedad-2.html"
-        class="property-button"
-      >
-        Ver propiedad
-      </a>
-
+    <div
+      class="property-grid"
+      id="propertyGrid"
+    >
     </div>
-
-    </article>
-
-
-  <!-- =================================================
-       PROPIEDAD 3
-  ================================================== -->
-
-  <article
-    class="property-card"
-    data-operation="arriendo"
-    data-status="gestionada"
-  >
-
-    <div class="property-image">
-
-      <span
-        class="status status-arrendada"
-      >
-        Arrendada
-      </span>
-
-
-      <img
-        src="propiedades/3/1.jpg"
-        alt="Departamento Amoblado con Vista al Mar en Reñaca"
-      >
-
-    </div>
-
-
-    <div class="property-content">
-
-      <div class="operation">
-        Arriendo
-      </div>
-
-
-      <h3>
-        Departamento Amoblado con Vista al Mar en Reñaca
-      </h3>
-
-
-      <div class="location">
-        Reñaca · Viña del Mar
-      </div>
-
-
-      <div class="price">
-        $500.000
-      </div>
-
-
-      <div class="features">
-
-        <span>
-          🛏 1 dormitorio
-        </span>
-
-
-        <span>
-          🚿 1 baño
-        </span>
-
-
-        <span>
-          📐 52 m²
-        </span>
-
-
-        <span>
-          🚗 1 estacionamiento
-        </span>
-
-
-        <span>
-          📦 1 bodega
-        </span>
-
-
-        <span>
-          🌅 Vista al mar
-        </span>
-
-      </div>
-
-
-      <a
-        href="propiedad-3.html"
-        class="property-button"
-      >
-        Ver propiedad
-      </a>
-
-    </div>
-
-  </article>
-
-
-</div>
-```
 
   </div>
 
 </section>
+
+
 
 <!-- =====================================================
      SERVICIOS
@@ -2062,95 +2031,95 @@ content="#0d2f49"
 
   <div class="container">
 
-```
-<div class="section-header">
+    <div class="section-header">
 
-  <span class="section-label">
-    ¿Qué hacemos?
-  </span>
-
-
-  <h2>
-    Servicios inmobiliarios
-  </h2>
+      <span class="section-label">
+        ¿Qué hacemos?
+      </span>
 
 
-  <p>
-    Te acompañamos en cada etapa de tu operación inmobiliaria,
-    desde la primera consulta hasta el cierre.
-  </p>
-
-</div>
+      <h2>
+        Servicios inmobiliarios
+      </h2>
 
 
-<div class="service-grid">
+      <p>
+        Te acompañamos en cada etapa de tu operación inmobiliaria,
+        desde la primera consulta hasta el cierre.
+      </p>
 
-
-  <div class="service">
-
-    <div class="service-number">
-      01
     </div>
 
 
-    <h3>
-      Compra
-    </h3>
+    <div class="service-grid">
 
 
-    <p>
-      Te ayudamos a encontrar una propiedad que se ajuste
-      a tus necesidades y te acompañamos durante el proceso.
-    </p>
+      <div class="service">
 
-  </div>
+        <div class="service-number">
+          01
+        </div>
 
 
-  <div class="service">
+        <h3>
+          Compra
+        </h3>
 
-    <div class="service-number">
-      02
+
+        <p>
+          Te ayudamos a encontrar una propiedad que se ajuste
+          a tus necesidades y te acompañamos durante el proceso.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="service-number">
+          02
+        </div>
+
+
+        <h3>
+          Venta
+        </h3>
+
+
+        <p>
+          Comercializamos tu propiedad, gestionamos los interesados
+          y te acompañamos durante todo el proceso de venta.
+        </p>
+
+      </div>
+
+
+      <div class="service">
+
+        <div class="service-number">
+          03
+        </div>
+
+
+        <h3>
+          Arriendo
+        </h3>
+
+
+        <p>
+          Publicamos y gestionamos tu propiedad buscando
+          arrendatarios adecuados y facilitando todo el proceso.
+        </p>
+
+      </div>
+
     </div>
-
-
-    <h3>
-      Venta
-    </h3>
-
-
-    <p>
-      Comercializamos tu propiedad, gestionamos los interesados
-      y te acompañamos durante todo el proceso de venta.
-    </p>
-
-  </div>
-
-
-  <div class="service">
-
-    <div class="service-number">
-      03
-    </div>
-
-
-    <h3>
-      Arriendo
-    </h3>
-
-
-    <p>
-      Publicamos y gestionamos tu propiedad buscando
-      arrendatarios adecuados y facilitando todo el proceso.
-    </p>
-
-  </div>
-
-</div>
-```
 
   </div>
 
 </section>
+
+
 
 <!-- =====================================================
      ADMINISTRACIÓN
@@ -2163,91 +2132,91 @@ content="#0d2f49"
 
   <div class="container">
 
-```
-<div class="admin-grid">
+    <div class="admin-grid">
 
 
-  <div>
+      <div>
 
-    <span class="section-label">
-      Administración de propiedades
-    </span>
-
-
-    <h2>
-      Tu propiedad sigue siendo tuya.
-      Nosotros nos encargamos de gestionarla.
-    </h2>
+        <span class="section-label">
+          Administración de propiedades
+        </span>
 
 
-    <p class="admin-text">
-      Simplificamos la administración de tu propiedad para
-      que tengas mayor tranquilidad y claridad sobre su gestión.
-    </p>
+        <h2>
+          Tu propiedad sigue siendo tuya.
+          Nosotros nos encargamos de gestionarla.
+        </h2>
 
 
-    <ul class="admin-list">
-
-      <li>
-        Cobro y seguimiento del arriendo
-      </li>
-
-
-      <li>
-        Coordinación de mantenciones
-      </li>
+        <p class="admin-text">
+          Simplificamos la administración de tu propiedad para
+          que tengas mayor tranquilidad y claridad sobre su gestión.
+        </p>
 
 
-      <li>
-        Atención y comunicación con el arrendatario
-      </li>
+        <ul class="admin-list">
+
+          <li>
+            Cobro y seguimiento del arriendo
+          </li>
 
 
-      <li>
-        Apoyo administrativo y legal
-      </li>
+          <li>
+            Coordinación de mantenciones
+          </li>
 
 
-      <li>
-        Reporte mensual de la gestión
-      </li>
-
-    </ul>
-
-  </div>
+          <li>
+            Atención y comunicación con el arrendatario
+          </li>
 
 
-  <div class="admin-box">
-
-    <h3>
-      ¿Tienes una propiedad arrendada?
-    </h3>
+          <li>
+            Apoyo administrativo y legal
+          </li>
 
 
-    <p>
-      Si administrar tu propiedad te quita tiempo,
-      podemos encargarnos de la gestión y mantenerte
-      informado de todo lo que ocurre.
-    </p>
+          <li>
+            Reporte mensual de la gestión
+          </li>
+
+        </ul>
+
+      </div>
 
 
-    <a
-      href="https://wa.me/56944844983?text=Hola%2C%20quiero%20consultar%20por%20el%20servicio%20de%20administraci%C3%B3n%20de%20propiedades."
-      target="_blank"
-      rel="noopener"
-      class="btn btn-primary"
-    >
-      Quiero conversar
-    </a>
+      <div class="admin-box">
 
-  </div>
+        <h3>
+          ¿Tienes una propiedad arrendada?
+        </h3>
 
-</div>
-```
+
+        <p>
+          Si administrar tu propiedad te quita tiempo,
+          podemos encargarnos de la gestión y mantenerte
+          informado de todo lo que ocurre.
+        </p>
+
+
+        <a
+          href="https://wa.me/56944844983?text=Hola%2C%20quiero%20consultar%20por%20el%20servicio%20de%20administraci%C3%B3n%20de%20propiedades."
+          target="_blank"
+          rel="noopener"
+          class="btn btn-primary"
+        >
+          Quiero conversar
+        </a>
+
+      </div>
+
+    </div>
 
   </div>
 
 </section>
+
+
 
 <!-- =====================================================
      CAPTACIÓN
@@ -2260,62 +2229,62 @@ content="#0d2f49"
 
   <div class="container">
 
-```
-<div class="capture-box">
+    <div class="capture-box">
 
-  <span class="section-label">
-    ¿Tienes una propiedad?
-  </span>
-
-
-  <h2>
-    Podemos ayudarte.
-  </h2>
+      <span class="section-label">
+        ¿Tienes una propiedad?
+      </span>
 
 
-  <p>
-    Si quieres vender o arrendar tu propiedad,
-    cuéntanos sobre ella y conversemos sobre
-    la mejor estrategia para comercializarla.
-  </p>
+      <h2>
+        Podemos ayudarte.
+      </h2>
 
 
-  <div
-    class="buttons"
-    style="justify-content:center;"
-  >
-
-    <a
-      href="https://wa.me/56944844983?text=Hola%2C%20quiero%20vender%20mi%20propiedad%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n."
-      target="_blank"
-      rel="noopener"
-      class="btn btn-primary"
-    >
-      Quiero vender
-    </a>
+      <p>
+        Si quieres vender o arrendar tu propiedad,
+        cuéntanos sobre ella y conversemos sobre
+        la mejor estrategia para comercializarla.
+      </p>
 
 
-    <a
-      href="https://wa.me/56944844983?text=Hola%2C%20quiero%20arrendar%20mi%20propiedad%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n."
-      target="_blank"
-      rel="noopener"
-      class="btn"
-      style="
-        background:var(--azul);
-        color:white;
-      "
-    >
-      Quiero arrendar
-    </a>
+      <div
+        class="buttons"
+        style="justify-content:center;"
+      >
 
-  </div>
+        <a
+          href="https://wa.me/56944844983?text=Hola%2C%20quiero%20vender%20mi%20propiedad%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n."
+          target="_blank"
+          rel="noopener"
+          class="btn btn-primary"
+        >
+          Quiero vender
+        </a>
 
-</div>
-```
+
+        <a
+          href="https://wa.me/56944844983?text=Hola%2C%20quiero%20arrendar%20mi%20propiedad%20y%20me%20gustar%C3%ADa%20recibir%20informaci%C3%B3n."
+          target="_blank"
+          rel="noopener"
+          class="btn"
+          style="
+            background:var(--azul);
+            color:white;
+          "
+        >
+          Quiero arrendar
+        </a>
+
+      </div>
+
+    </div>
 
   </div>
 
 </section>
+
+
 
 <!-- =====================================================
      CONTACTO
@@ -2328,95 +2297,94 @@ content="#0d2f49"
 
   <div class="container">
 
-```
-<div class="section-header">
+    <div class="section-header">
 
-  <span class="section-label">
-    Hablemos
-  </span>
-
-
-  <h2>
-    Contacto
-  </h2>
+      <span class="section-label">
+        Hablemos
+      </span>
 
 
-  <p>
-    Si tienes una consulta inmobiliaria,
-    escríbeme directamente.
-  </p>
-
-</div>
+      <h2>
+        Contacto
+      </h2>
 
 
-<div class="contact-grid">
+      <p>
+        Si tienes una consulta inmobiliaria,
+        escríbeme directamente.
+      </p>
+
+    </div>
 
 
-  <div class="contact-item">
-
-    <h3>
-      WhatsApp
-    </h3>
+    <div class="contact-grid">
 
 
-    <p>
+      <div class="contact-item">
 
-      <a
-        href="https://wa.me/56944844983"
-        target="_blank"
-        rel="noopener"
-      >
-        +56 9 4484 4983
-      </a>
-
-    </p>
-
-  </div>
+        <h3>
+          WhatsApp
+        </h3>
 
 
-  <div class="contact-item">
+        <p>
 
-    <h3>
-      Instagram
-    </h3>
+          <a
+            href="https://wa.me/56944844983"
+            target="_blank"
+            rel="noopener"
+          >
+            +56 9 4484 4983
+          </a>
 
+        </p>
 
-    <p>
-
-      <a
-        href="https://www.instagram.com/sotofrau_propiedades/"
-        target="_blank"
-        rel="noopener"
-      >
-        @sotofrau_propiedades
-      </a>
-
-    </p>
-
-  </div>
+      </div>
 
 
-  <div class="contact-item">
+      <div class="contact-item">
 
-    <h3>
-      Zona de atención
-    </h3>
-
-
-    <p>
-      Viña del Mar · Concón · Reñaca ·
-      Valparaíso · Quilpué · Villa Alemana
-    </p>
-
-  </div>
+        <h3>
+          Instagram
+        </h3>
 
 
-</div>
-```
+        <p>
+
+          <a
+            href="https://www.instagram.com/sotofrau_propiedades/"
+            target="_blank"
+            rel="noopener"
+          >
+            @sotofrau_propiedades
+          </a>
+
+        </p>
+
+      </div>
+
+
+      <div class="contact-item">
+
+        <h3>
+          Zona de atención
+        </h3>
+
+
+        <p>
+          Viña del Mar · Concón · Reñaca ·
+          Valparaíso · Quilpué · Villa Alemana
+        </p>
+
+      </div>
+
+    </div>
 
   </div>
 
 </section>
+
+
 
 <!-- =====================================================
      FOOTER
@@ -2426,156 +2394,50 @@ content="#0d2f49"
 
   <div class="container">
 
-```
-<strong>
-  Sotofrau Propiedades
-</strong>
+    <strong>
+      Sotofrau Propiedades
+    </strong>
 
 
-<p>
-  Compra · Venta · Arriendo · Administración
-</p>
+    <p>
+      Compra · Venta · Arriendo · Administración
+    </p>
 
 
-<p>
-  © 2026 Sotofrau Propiedades ·
-  Todos los derechos reservados.
-</p>
-```
+    <p>
+      © 2026 Sotofrau Propiedades ·
+      Todos los derechos reservados.
+    </p>
 
   </div>
 
 </footer>
+
+
 
 <!-- =====================================================
      WHATSAPP FLOTANTE
 ===================================================== -->
 
 <a
-class="whatsapp-floating"
-href="https://wa.me/56944844983?text=Hola%2C%20quiero%20consultar%20por%20una%20propiedad."
-target="_blank"
-rel="noopener"
-aria-label="Contactar por WhatsApp"
-
+  class="whatsapp-floating"
+  href="https://wa.me/56944844983?text=Hola%2C%20quiero%20consultar%20por%20una%20propiedad."
+  target="_blank"
+  rel="noopener"
+  aria-label="Contactar por WhatsApp"
 >
+  ☎
+</a>
 
-☎ </a>
+
 
 <!-- =====================================================
-     JAVASCRIPT
+     PROPIEDADES JAVASCRIPT
 ===================================================== -->
 
-<script>
+<script src="propiedades.js"></script>
 
-  function filtrar(
-    tipo,
-    boton
-  ) {
-
-    const tarjetas =
-      document.querySelectorAll(
-        ".property-card"
-      );
-
-
-    const botones =
-      document.querySelectorAll(
-        ".filter"
-      );
-
-
-    botones.forEach(
-      function(b) {
-
-        b.classList.remove(
-          "active"
-        );
-
-      }
-    );
-
-
-    boton.classList.add(
-      "active"
-    );
-
-
-    tarjetas.forEach(
-      function(tarjeta) {
-
-        const operacion =
-          tarjeta.dataset.operation;
-
-
-        const estado =
-          tarjeta.dataset.status;
-
-
-        let mostrar =
-          false;
-
-
-        if (
-          tipo === "todas"
-        ) {
-
-          mostrar = true;
-
-        }
-
-
-        if (
-          tipo === "venta" &&
-          operacion === "venta"
-        ) {
-
-          mostrar = true;
-
-        }
-
-
-        if (
-          tipo === "arriendo" &&
-          operacion === "arriendo"
-        ) {
-
-          mostrar = true;
-
-        }
-
-
-        if (
-          tipo === "disponible" &&
-          estado === "disponible"
-        ) {
-
-          mostrar = true;
-
-        }
-
-
-        if (
-          tipo === "gestionada" &&
-          estado === "gestionada"
-        ) {
-
-          mostrar = true;
-
-        }
-
-
-        tarjeta.classList.toggle(
-          "hidden",
-          !mostrar
-        );
-
-      }
-    );
-
-  }
-
-</script>
 
 </body>
+
 </html>
