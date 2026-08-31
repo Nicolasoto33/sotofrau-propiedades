@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="es">
+
 <head>
 
   <meta charset="UTF-8">
@@ -9,19 +11,24 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>Propiedad | Sotofrau Propiedades</title>
+  <title>Sotofrau Propiedades</title>
 
   <meta
+    id="metaDescription"
     name="description"
-    content="Propiedad gestionada por Sotofrau Propiedades."
+    content="Propiedad publicada por Sotofrau Propiedades."
   >
 
-  <meta name="theme-color" content="#0d2f49">
+  <meta
+    name="theme-color"
+    content="#0d2f49"
+  >
 
 
   <style>
 
     :root {
+
       --azul: #0d2f49;
       --azul-2: #164968;
       --azul-oscuro: #081f31;
@@ -40,23 +47,31 @@
       --verde: #238b57;
       --rojo: #b44a48;
 
-      --radio: 16px;
-
       --sombra:
         0 12px 35px rgba(13,47,73,.08);
+
+      --radio: 16px;
+
+      --ancho: 1180px;
+
     }
 
 
     * {
+
       box-sizing: border-box;
 
       margin: 0;
+
       padding: 0;
+
     }
 
 
     html {
+
       scroll-behavior: smooth;
+
     }
 
 
@@ -70,283 +85,488 @@
         Arial,
         sans-serif;
 
-      color: var(--gris-700);
+      color:
+        var(--gris-700);
 
-      background: var(--gris-50);
+      background:
+        var(--gris-50);
 
-      line-height: 1.6;
+      line-height:
+        1.6;
+
+    }
+
+
+    img {
+
+      max-width:
+        100%;
 
     }
 
 
     a {
-      text-decoration: none;
-      color: inherit;
+
+      text-decoration:
+        none;
+
+      color:
+        inherit;
+
     }
 
 
-    img {
-      max-width: 100%;
+    button {
+
+      font:
+        inherit;
+
     }
 
 
     .container {
 
-      width: min(1180px, 92%);
+      width:
+        min(
+          var(--ancho),
+          92%
+        );
 
-      margin: auto;
+      margin:
+        auto;
 
     }
 
 
-    /* HEADER */
 
+    /* =====================================================
+       HEADER
+    ===================================================== */
 
     header {
 
-      position: sticky;
+      position:
+        sticky;
 
-      top: 0;
+      top:
+        0;
 
-      z-index: 1000;
+      z-index:
+        1000;
 
       background:
-        rgba(255,255,255,.96);
+        rgba(255,255,255,.97);
 
       backdrop-filter:
         blur(14px);
 
       border-bottom:
-        1px solid rgba(13,47,73,.08);
+        1px solid
+        rgba(13,47,73,.08);
 
     }
 
 
     .nav {
 
-      min-height: 78px;
+      min-height:
+        76px;
 
-      display: flex;
+      display:
+        flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      justify-content: space-between;
+      justify-content:
+        space-between;
+
+      gap:
+        25px;
 
     }
 
 
     .logo {
 
-      font-size: 23px;
+      display:
+        inline-flex;
 
-      font-weight: 800;
+      align-items:
+        center;
 
-      color: var(--azul);
+      color:
+        var(--azul);
+
+      font-size:
+        23px;
+
+      font-weight:
+        800;
+
+      letter-spacing:
+        -.5px;
+
+      white-space:
+        nowrap;
 
     }
 
 
     .logo span {
 
-      color: var(--naranja);
+      color:
+        var(--naranja);
 
-      margin-left: 5px;
-
-    }
-
-
-    .back {
-
-      color: var(--azul);
-
-      font-size: 14px;
-
-      font-weight: 700;
+      margin-left:
+        5px;
 
     }
 
 
-    .back:hover {
+    nav {
 
-      color: var(--naranja);
+      display:
+        flex;
 
-    }
+      align-items:
+        center;
 
+      gap:
+        26px;
 
-    /* PROPERTY */
+      font-size:
+        14px;
 
-
-    .property-page {
-
-      padding: 65px 0 90px;
-
-    }
-
-
-    .property-layout {
-
-      display: grid;
-
-      grid-template-columns:
-        1.25fr .75fr;
-
-      gap: 40px;
-
-      align-items: start;
+      font-weight:
+        650;
 
     }
 
 
-    /* GALLERY */
+    nav a {
 
+      color:
+        var(--azul);
+
+      transition:
+        .2s ease;
+
+    }
+
+
+    nav a:hover {
+
+      color:
+        var(--naranja);
+
+    }
+
+
+    .nav-contact {
+
+      background:
+        var(--azul);
+
+      color:
+        white !important;
+
+      padding:
+        11px 18px;
+
+      border-radius:
+        9px;
+
+    }
+
+
+
+    /* =====================================================
+       MAIN
+    ===================================================== */
+
+    main {
+
+      padding:
+        35px 0 80px;
+
+    }
+
+
+    .breadcrumb {
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      gap:
+        8px;
+
+      margin-bottom:
+        20px;
+
+      color:
+        var(--gris-500);
+
+      font-size:
+        13px;
+
+    }
+
+
+    .breadcrumb a {
+
+      color:
+        var(--azul);
+
+      font-weight:
+        650;
+
+    }
+
+
+    .breadcrumb a:hover {
+
+      color:
+        var(--naranja);
+
+    }
+
+
+    .property {
+
+      background:
+        var(--blanco);
+
+      border:
+        1px solid
+        var(--gris-200);
+
+      border-radius:
+        var(--radio);
+
+      box-shadow:
+        var(--sombra);
+
+      overflow:
+        hidden;
+
+    }
+
+
+
+    /* =====================================================
+       GALERÍA
+    ===================================================== */
 
     .gallery {
 
-      background: white;
-
-      border-radius: var(--radio);
-
-      overflow: hidden;
-
-      box-shadow: var(--sombra);
-
-      border:
-        1px solid var(--gris-200);
+      padding:
+        20px;
 
     }
 
 
     .main-photo {
 
-      position: relative;
+      position:
+        relative;
 
-      height: 520px;
+      width:
+        100%;
+
+      max-width:
+        720px;
+
+      margin:
+        0 auto;
 
       background:
-        linear-gradient(
-          135deg,
-          #dce6ec,
-          #b9cbd5
-        );
+        var(--gris-100);
 
-      overflow: hidden;
+      border-radius:
+        12px;
+
+      overflow:
+        hidden;
 
     }
 
 
     .main-photo img {
 
-      width: 100%;
+      display:
+        block;
 
-      height: 100%;
+      width:
+        100%;
 
-      object-fit: cover;
+      height:
+        auto;
 
-      display: block;
-
-    }
-
-
-    .photo-placeholder {
-
-      position: absolute;
-
-      inset: 0;
-
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      color: #61727d;
-
-      font-size: 14px;
-
-      text-align: center;
+      object-fit:
+        contain;
 
     }
 
 
-    .status {
+    .gallery-button {
 
-      position: absolute;
+      position:
+        absolute;
 
-      top: 20px;
+      top:
+        50%;
 
-      left: 20px;
+      transform:
+        translateY(-50%);
 
-      z-index: 5;
+      width:
+        46px;
 
-      padding: 8px 13px;
+      height:
+        46px;
 
-      border-radius: 6px;
+      border:
+        none;
 
-      color: white;
+      border-radius:
+        50%;
 
-      font-size: 11px;
+      background:
+        rgba(13,47,73,.78);
 
-      font-weight: 800;
+      color:
+        white;
 
-      text-transform: uppercase;
+      font-size:
+        28px;
 
-      letter-spacing: .5px;
+      cursor:
+        pointer;
 
-    }
-
-
-    .status-arrendada {
-
-      background: var(--rojo);
-
-    }
-
-
-    .status-disponible {
-
-      background: var(--verde);
-
-    }
-
-
-    .status-vendida {
-
-      background: #59656d;
+      z-index:
+        5;
 
     }
 
 
-    /* THUMBNAILS */
+    .gallery-button:hover {
 
+      background:
+        var(--azul);
+
+    }
+
+
+    .prev {
+
+      left:
+        16px;
+
+    }
+
+
+    .next {
+
+      right:
+        16px;
+
+    }
+
+
+    .photo-counter {
+
+      position:
+        absolute;
+
+      right:
+        15px;
+
+      bottom:
+        15px;
+
+      padding:
+        7px 12px;
+
+      border-radius:
+        20px;
+
+      background:
+        rgba(0,0,0,.65);
+
+      color:
+        white;
+
+      font-size:
+        12px;
+
+      font-weight:
+        700;
+
+    }
+
+
+
+    /* =====================================================
+       MINIATURAS
+    ===================================================== */
 
     .thumbnails {
 
-      display: grid;
+      display:
+        grid;
 
       grid-template-columns:
-        repeat(4, 1fr);
+        repeat(7,1fr);
 
-      gap: 10px;
+      gap:
+        8px;
 
-      padding: 12px;
+      max-width:
+        720px;
+
+      margin:
+        12px auto 0;
 
     }
 
 
     .thumbnail {
 
-      height: 90px;
+      height:
+        72px;
 
-      border-radius: 8px;
-
-      overflow: hidden;
-
-      cursor: pointer;
+      padding:
+        0;
 
       border:
-        2px solid transparent;
+        3px solid transparent;
 
-      background: var(--gris-100);
+      border-radius:
+        8px;
+
+      overflow:
+        hidden;
+
+      background:
+        var(--gris-100);
+
+      cursor:
+        pointer;
+
+      transition:
+        .2s ease;
+
+    }
+
+
+    .thumbnail:hover {
+
+      transform:
+        translateY(-2px);
 
     }
 
@@ -361,306 +581,708 @@
 
     .thumbnail img {
 
-      width: 100%;
+      width:
+        100%;
 
-      height: 100%;
+      height:
+        100%;
 
-      object-fit: cover;
+      display:
+        block;
 
-      display: block;
+      object-fit:
+        cover;
 
     }
 
 
-    /* INFO */
+
+    /* =====================================================
+       CONTENIDO
+    ===================================================== */
+
+    .content {
+
+      padding:
+        42px 45px 48px;
+
+    }
 
 
-    .property-info {
+    .status {
 
-      background: white;
+      display:
+        inline-flex;
 
-      padding: 35px;
+      align-items:
+        center;
 
-      border-radius: var(--radio);
+      padding:
+        7px 12px;
 
-      border:
-        1px solid var(--gris-200);
+      margin-bottom:
+        15px;
 
-      box-shadow: var(--sombra);
+      border-radius:
+        6px;
+
+      background:
+        var(--rojo);
+
+      color:
+        white;
+
+      font-size:
+        11px;
+
+      font-weight:
+        800;
+
+      text-transform:
+        uppercase;
+
+      letter-spacing:
+        .5px;
+
+    }
+
+
+    .status.disponible {
+
+      background:
+        var(--verde);
+
+    }
+
+
+    .status.vendida {
+
+      background:
+        #59656d;
 
     }
 
 
     .operation {
 
-      color: var(--naranja);
+      margin-bottom:
+        7px;
 
-      font-size: 12px;
+      color:
+        var(--naranja);
 
-      font-weight: 800;
+      font-size:
+        12px;
 
-      text-transform: uppercase;
+      font-weight:
+        800;
 
-      letter-spacing: 1.4px;
+      text-transform:
+        uppercase;
 
-      margin-bottom: 10px;
+      letter-spacing:
+        1.2px;
 
     }
 
 
-    .property-info h1 {
+    h1 {
 
-      color: var(--azul);
+      max-width:
+        900px;
 
-      font-size: 38px;
+      color:
+        var(--azul);
 
-      line-height: 1.12;
+      font-size:
+        clamp(
+          32px,
+          5vw,
+          48px
+        );
 
-      letter-spacing: -.8px;
+      line-height:
+        1.08;
 
-      margin-bottom: 10px;
+      letter-spacing:
+        -1.5px;
+
+      margin-bottom:
+        10px;
 
     }
 
 
     .location {
 
-      color: var(--gris-500);
+      margin-bottom:
+        22px;
 
-      font-size: 14px;
+      color:
+        var(--gris-500);
 
-      margin-bottom: 22px;
+      font-size:
+        15px;
 
     }
 
 
     .price {
 
-      color: var(--azul);
+      color:
+        var(--azul);
 
-      font-size: 30px;
+      font-size:
+        34px;
 
-      font-weight: 800;
+      font-weight:
+        850;
 
-      margin-bottom: 25px;
+      margin-bottom:
+        8px;
 
     }
 
 
+    .monthly {
+
+      color:
+        var(--gris-500);
+
+      font-size:
+        13px;
+
+      margin-bottom:
+        25px;
+
+    }
+
+
+
+    /* =====================================================
+       CARACTERÍSTICAS
+    ===================================================== */
+
     .features {
 
-      display: grid;
+      display:
+        grid;
 
       grid-template-columns:
-        repeat(2, 1fr);
-
-      gap: 12px;
-
-      padding: 20px 0;
+        repeat(3,1fr);
 
       border-top:
-        1px solid var(--gris-200);
+        1px solid
+        var(--gris-200);
 
       border-bottom:
-        1px solid var(--gris-200);
+        1px solid
+        var(--gris-200);
 
-      margin-bottom: 25px;
+      margin-bottom:
+        35px;
 
     }
 
 
     .feature {
 
-      color: var(--gris-500);
+      padding:
+        18px 15px;
 
-      font-size: 13px;
+      border-right:
+        1px solid
+        var(--gris-200);
+
+      text-align:
+        center;
+
+      font-size:
+        13px;
+
+      font-weight:
+        650;
 
     }
 
 
-    .description {
+    .feature:nth-child(3n) {
 
-      color: var(--gris-700);
+      border-right:
+        none;
 
-      font-size: 15px;
+    }
 
-      margin-bottom: 28px;
+
+    .feature-icon {
+
+      display:
+        block;
+
+      margin-bottom:
+        4px;
+
+      font-size:
+        19px;
+
+    }
+
+
+
+    /* =====================================================
+       INFORMACIÓN
+    ===================================================== */
+
+    .information-grid {
+
+      display:
+        grid;
+
+      grid-template-columns:
+        1.5fr .8fr;
+
+      gap:
+        45px;
+
+      align-items:
+        start;
+
+    }
+
+
+    .description h2,
+    .important h2 {
+
+      color:
+        var(--azul);
+
+      font-size:
+        25px;
+
+      line-height:
+        1.2;
+
+      margin-bottom:
+        16px;
+
+    }
+
+
+    .description p {
+
+      max-width:
+        760px;
+
+      color:
+        var(--gris-500);
+
+      font-size:
+        15px;
+
+      line-height:
+        1.75;
+
+      margin-bottom:
+        17px;
+
+    }
+
+
+    .important {
+
+      padding:
+        25px;
+
+      background:
+        var(--gris-50);
+
+      border:
+        1px solid
+        var(--gris-200);
+
+      border-radius:
+        13px;
+
+    }
+
+
+    .important h2 {
+
+      font-size:
+        20px;
+
+    }
+
+
+    .important-list {
+
+      list-style:
+        none;
+
+      display:
+        grid;
+
+      gap:
+        13px;
+
+    }
+
+
+    .important-list li {
+
+      position:
+        relative;
+
+      padding-left:
+        25px;
+
+      color:
+        var(--gris-500);
+
+      font-size:
+        13px;
+
+    }
+
+
+    .important-list li::before {
+
+      content:
+        "✓";
+
+      position:
+        absolute;
+
+      left:
+        0;
+
+      color:
+        var(--naranja);
+
+      font-weight:
+        900;
+
+    }
+
+
+
+    /* =====================================================
+       CONTACTO
+    ===================================================== */
+
+    .contact-box {
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        space-between;
+
+      gap:
+        25px;
+
+      margin-top:
+        40px;
+
+      padding:
+        28px 30px;
+
+      border-radius:
+        13px;
+
+      background:
+        var(--azul);
+
+      color:
+        white;
+
+    }
+
+
+    .contact-box h2 {
+
+      font-size:
+        22px;
+
+      line-height:
+        1.25;
+
+      margin-bottom:
+        5px;
+
+    }
+
+
+    .contact-box p {
+
+      color:
+        #d8e6ed;
+
+      font-size:
+        13px;
 
     }
 
 
     .whatsapp {
 
-      display: flex;
+      display:
+        inline-flex;
 
-      align-items: center;
+      align-items:
+        center;
 
-      justify-content: center;
+      justify-content:
+        center;
 
-      width: 100%;
+      flex-shrink:
+        0;
 
-      padding: 15px;
+      padding:
+        14px 22px;
 
-      border-radius: 9px;
+      border-radius:
+        9px;
 
-      background: #25D366;
+      background:
+        #25D366;
 
-      color: white;
+      color:
+        white;
 
-      font-size: 14px;
+      font-size:
+        14px;
 
-      font-weight: 800;
-
-      transition: .2s ease;
+      font-weight:
+        800;
 
     }
 
 
     .whatsapp:hover {
 
-      transform:
-        translateY(-2px);
+      background:
+        #1fbd5b;
 
     }
 
 
-    .back-button {
 
-      display: flex;
-
-      align-items: center;
-
-      justify-content: center;
-
-      width: 100%;
-
-      margin-top: 10px;
-
-      padding: 13px;
-
-      border-radius: 9px;
-
-      background: var(--azul);
-
-      color: white;
-
-      font-size: 13px;
-
-      font-weight: 750;
-
-    }
-
-
-    .back-button:hover {
-
-      background: var(--azul-oscuro);
-
-    }
-
-
-    /* FOOTER */
-
+    /* =====================================================
+       FOOTER
+    ===================================================== */
 
     footer {
 
-      padding: 42px 0;
+      padding:
+        42px 0;
 
       background:
         var(--azul-oscuro);
 
-      color: #cbdbe4;
+      color:
+        #cbdbe4;
 
-      text-align: center;
+      text-align:
+        center;
 
     }
 
 
     footer strong {
 
-      color: white;
+      color:
+        white;
 
-      font-size: 20px;
+      font-size:
+        20px;
 
     }
 
 
     footer p {
 
-      margin-top: 8px;
+      margin-top:
+        8px;
 
-      font-size: 13px;
+      font-size:
+        13px;
 
     }
 
 
-    /* MOBILE */
 
+    /* =====================================================
+       MOBILE
+    ===================================================== */
 
     @media (max-width: 900px) {
 
-      .property-layout {
+      nav {
 
-        grid-template-columns: 1fr;
+        display:
+          none;
 
       }
 
-      .main-photo {
 
-        height: 430px;
+      .information-grid {
+
+        grid-template-columns:
+          1fr;
+
+        gap:
+          30px;
+
+      }
+
+
+      .features {
+
+        grid-template-columns:
+          repeat(2,1fr);
+
+      }
+
+
+      .feature:nth-child(3n) {
+
+        border-right:
+          1px solid
+          var(--gris-200);
+
+      }
+
+
+      .feature:nth-child(2n) {
+
+        border-right:
+          none;
+
+      }
+
+
+      .contact-box {
+
+        align-items:
+          flex-start;
+
+        flex-direction:
+          column;
+
+      }
+
+
+      .whatsapp {
+
+        width:
+          100%;
 
       }
 
     }
 
 
-    @media (max-width: 600px) {
+    @media (max-width: 650px) {
+
+      .container {
+
+        width:
+          94%;
+
+      }
+
 
       .nav {
 
-        min-height: 68px;
+        min-height:
+          68px;
 
       }
+
 
       .logo {
 
-        font-size: 20px;
+        font-size:
+          19px;
 
       }
 
-      .property-page {
+
+      main {
 
         padding:
-          35px 0 60px;
+          20px 0 50px;
 
       }
 
-      .property-info {
 
-        padding: 25px;
+      .gallery {
 
-      }
-
-      .property-info h1 {
-
-        font-size: 30px;
+        padding:
+          10px;
 
       }
 
-      .price {
 
-        font-size: 26px;
+      .thumbnails {
 
-      }
-
-      .main-photo {
-
-        height: 300px;
+        grid-template-columns:
+          repeat(4,1fr);
 
       }
+
 
       .thumbnail {
 
-        height: 65px;
+        height:
+          58px;
+
+      }
+
+
+      .content {
+
+        padding:
+          28px 20px 35px;
+
+      }
+
+
+      h1 {
+
+        font-size:
+          34px;
+
+      }
+
+
+      .price {
+
+        font-size:
+          29px;
+
+      }
+
+
+      .feature {
+
+        padding:
+          15px 8px;
+
+        font-size:
+          12px;
+
+      }
+
+
+      .contact-box {
+
+        padding:
+          24px 20px;
 
       }
 
@@ -673,6 +1295,10 @@
 
 <body>
 
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
 
 <header>
 
@@ -687,35 +1313,284 @@
     </a>
 
 
-    <a
-      href="index.html#propiedades"
-      class="back"
-    >
-      ← Volver a propiedades
-    </a>
+    <nav>
+
+      <a href="index.html#propiedades">
+        Propiedades
+      </a>
+
+      <a href="index.html#servicios">
+        Servicios
+      </a>
+
+      <a href="index.html#administracion">
+        Administración
+      </a>
+
+      <a href="index.html#captacion">
+        Vende / Arrienda
+      </a>
+
+      <a
+        href="index.html#contacto"
+        class="nav-contact"
+      >
+        Contacto
+      </a>
+
+    </nav>
 
   </div>
 
 </header>
 
 
-<main class="property-page">
+
+<!-- =====================================================
+     MAIN
+===================================================== -->
+
+<main>
 
   <div class="container">
 
 
-    <div
-      class="property-layout"
-      id="propertyContent"
-    >
+    <div class="breadcrumb">
+
+      <a href="index.html">
+        Inicio
+      </a>
+
+      <span>
+        ›
+      </span>
+
+      <a href="index.html#propiedades">
+        Propiedades
+      </a>
+
+      <span>
+        ›
+      </span>
+
+      <span id="breadcrumbTitulo">
+        Propiedad
+      </span>
 
     </div>
 
+
+
+    <article class="property">
+
+
+      <!-- =================================================
+           GALERÍA
+      ================================================== -->
+
+      <div class="gallery">
+
+        <div class="main-photo">
+
+          <img
+            id="mainImage"
+            src=""
+            alt=""
+          >
+
+
+          <button
+            class="gallery-button prev"
+            id="previousButton"
+            type="button"
+            aria-label="Foto anterior"
+          >
+            ‹
+          </button>
+
+
+          <button
+            class="gallery-button next"
+            id="nextButton"
+            type="button"
+            aria-label="Foto siguiente"
+          >
+            ›
+          </button>
+
+
+          <div class="photo-counter">
+
+            <span id="currentPhoto">
+              1
+            </span>
+
+            /
+
+            <span id="totalPhotos">
+              1
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div
+          class="thumbnails"
+          id="thumbnails"
+        >
+        </div>
+
+      </div>
+
+
+
+      <!-- =================================================
+           INFORMACIÓN
+      ================================================== -->
+
+      <div class="content">
+
+
+        <span
+          class="status"
+          id="status"
+        >
+        </span>
+
+
+        <div
+          class="operation"
+          id="operation"
+        >
+        </div>
+
+
+        <h1
+          id="titulo"
+        >
+        </h1>
+
+
+        <div
+          class="location"
+          id="ubicacion"
+        >
+        </div>
+
+
+        <div
+          class="price"
+          id="precio"
+        >
+        </div>
+
+
+        <div
+          class="monthly"
+          id="mensual"
+        >
+        </div>
+
+
+
+        <!-- =================================================
+             CARACTERÍSTICAS
+        ================================================== -->
+
+        <div
+          class="features"
+          id="features"
+        >
+        </div>
+
+
+
+        <!-- =================================================
+             DESCRIPCIÓN
+        ================================================== -->
+
+        <div class="information-grid">
+
+
+          <div class="description">
+
+            <h2>
+              Sobre esta propiedad
+            </h2>
+
+            <div id="descripcion">
+            </div>
+
+          </div>
+
+
+          <aside class="important">
+
+            <h2>
+              Información importante
+            </h2>
+
+            <ul
+              class="important-list"
+              id="importante"
+            >
+            </ul>
+
+          </aside>
+
+
+        </div>
+
+
+
+        <!-- =================================================
+             CONTACTO
+        ================================================== -->
+
+        <div class="contact-box">
+
+          <div>
+
+            <h2>
+              ¿Te interesa esta propiedad?
+            </h2>
+
+            <p>
+              Escríbeme para consultar condiciones
+              y coordinar una visita.
+            </p>
+
+          </div>
+
+
+          <a
+            id="whatsapp"
+            class="whatsapp"
+            href="#"
+            target="_blank"
+            rel="noopener"
+          >
+            Consultar por WhatsApp
+          </a>
+
+        </div>
+
+
+      </div>
+
+    </article>
 
   </div>
 
 </main>
 
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
@@ -725,13 +1600,14 @@
       Sotofrau Propiedades
     </strong>
 
+
     <p>
       Compra · Venta · Arriendo · Administración
     </p>
 
+
     <p>
-      © 2026 Sotofrau Propiedades ·
-      Todos los derechos reservados.
+      © 2026 Sotofrau Propiedades · Todos los derechos reservados.
     </p>
 
   </div>
@@ -739,488 +1615,734 @@
 </footer>
 
 
+
+<!-- =====================================================
+     DATOS DE PROPIEDADES
+===================================================== -->
+
+<script src="propiedades.js"></script>
+
+
+<!-- =====================================================
+     PLANTILLA UNIVERSAL
+===================================================== -->
+
 <script>
 
-/* =====================================================
-   DATOS DE TODAS LAS PROPIEDADES
+  let propiedadActual = null;
 
-   AQUÍ TAMBIÉN AGREGARÁS LAS NUEVAS PROPIEDADES.
-===================================================== */
+  let fotos = [];
 
-const propiedades = [
+  let fotoActual = 1;
 
-  {
-    id: 1,
 
-    titulo:
-      "Habitación en arriendo",
 
-    operacion:
-      "Arriendo",
+  /* =====================================================
+     LEER ID DE LA URL
+  ===================================================== */
 
-    estado:
-      "gestionada",
-
-    estadoTexto:
-      "Arrendada",
-
-    ubicacion:
-      "Valparaíso · Sector Yungay",
-
-    precio:
-      "$260.000",
-
-    fotos: [
-      "propiedades/1/1.jpeg"
-    ],
-
-    dormitorios:
-      "1 dormitorio",
-
-    banos:
-      "1 baño",
-
-    metros:
-      "72 m²",
-
-    estacionamiento:
-      "No informado",
-
-    bodega:
-      "No informado",
-
-    amoblado:
-      "Sí",
-
-    descripcion:
-      "Habitación en arriendo ubicada en Valparaíso, sector Yungay. Propiedad gestionada por Sotofrau Propiedades."
-
-  },
-
-
-  {
-    id: 2,
-
-    titulo:
-      "Piso independiente",
-
-    operacion:
-      "Arriendo",
-
-    estado:
-      "gestionada",
-
-    estadoTexto:
-      "Arrendada",
-
-    ubicacion:
-      "Quilpué · Sector Teniente Serrano",
-
-    precio:
-      "$400.000",
-
-    fotos: [
-      "propiedades/2/foto-01.jpg"
-    ],
-
-    dormitorios:
-      "2 dormitorios",
-
-    banos:
-      "1 baño",
-
-    metros:
-      "45 m²",
-
-    estacionamiento:
-      "Sí",
-
-    bodega:
-      "No informado",
-
-    amoblado:
-      "No",
-
-    descripcion:
-      "Piso independiente en Quilpué, sector Teniente Serrano. Propiedad gestionada por Sotofrau Propiedades."
-
-  },
-
-
-  {
-    id: 3,
-
-    titulo:
-      "Departamento amoblado Reñaca",
-
-    operacion:
-      "Arriendo",
-
-    estado:
-      "gestionada",
-
-    estadoTexto:
-      "Arrendada",
-
-    ubicacion:
-      "Reñaca · Viña del Mar",
-
-    precio:
-      "$500.000",
-
-    fotos: [
-      "propiedades/3/foto-01.jpg"
-    ],
-
-    dormitorios:
-      "1 dormitorio",
-
-    banos:
-      "1 baño",
-
-    metros:
-      "52 m²",
-
-    estacionamiento:
-      "Sí",
-
-    bodega:
-      "Sí",
-
-    amoblado:
-      "Sí",
-
-    descripcion:
-      "Departamento amoblado ubicado en Reñaca, Viña del Mar. Cuenta con estacionamiento y bodega."
-
-  }
-
-];
-
-
-/* =====================================================
-   OBTENER ID DESDE LA URL
-===================================================== */
-
-const parametros =
-  new URLSearchParams(
-    window.location.search
-  );
-
-const id =
-  Number(
-    parametros.get("id")
-  );
-
-
-/* =====================================================
-   BUSCAR PROPIEDAD
-===================================================== */
-
-const propiedad =
-  propiedades.find(
-    function(item) {
-      return item.id === id;
-    }
-  );
-
-
-/* =====================================================
-   MOSTRAR PROPIEDAD
-===================================================== */
-
-const contenedor =
-  document.getElementById(
-    "propertyContent"
-  );
-
-
-if (!propiedad) {
-
-  contenedor.innerHTML = `
-
-    <div
-      style="
-        grid-column:1/-1;
-        background:white;
-        padding:50px;
-        border-radius:16px;
-        text-align:center;
-      "
-    >
-
-      <h1
-        style="
-          color:#0d2f49;
-          margin-bottom:15px;
-        "
-      >
-        Propiedad no encontrada
-      </h1>
-
-      <p
-        style="
-          color:#6b7781;
-          margin-bottom:25px;
-        "
-      >
-        La propiedad que buscas no existe
-        o el enlace es incorrecto.
-      </p>
-
-      <a
-        href="index.html#propiedades"
-        style="
-          display:inline-block;
-          padding:13px 20px;
-          background:#0d2f49;
-          color:white;
-          border-radius:8px;
-          font-weight:700;
-        "
-      >
-        Volver a propiedades
-      </a>
-
-    </div>
-
-  `;
-
-} else {
-
-
-  let claseEstado =
-    "status-disponible";
-
-
-  if (
-    propiedad.estado === "gestionada"
-  ) {
-
-    claseEstado =
-      "status-arrendada";
-
-  }
-
-
-  if (
-    propiedad.estado === "vendida"
-  ) {
-
-    claseEstado =
-      "status-vendida";
-
-  }
-
-
-  /* GALERÍA */
-
-  let galeria = "";
-
-  propiedad.fotos.forEach(
-    function(foto, indice) {
-
-      galeria += `
-
-        <div
-          class="thumbnail ${
-            indice === 0
-              ? "active"
-              : ""
-          }"
-          onclick="cambiarFoto(
-            '${foto}',
-            this
-          )"
-        >
-
-          <img
-            src="${foto}"
-            alt="${propiedad.titulo}"
-          >
-
-        </div>
-
-      `;
-
-    }
-  );
-
-
-  contenedor.innerHTML = `
-
-    <div class="gallery">
-
-      <div class="main-photo">
-
-        <span
-          class="status ${claseEstado}"
-        >
-          ${propiedad.estadoTexto}
-        </span>
-
-
-        <img
-          id="mainImage"
-          src="${propiedad.fotos[0]}"
-          alt="${propiedad.titulo}"
-          onerror="
-            this.style.display='none';
-            document
-              .getElementById('photoPlaceholder')
-              .style.display='flex';
-          "
-        >
-
-
-        <div
-          id="photoPlaceholder"
-          class="photo-placeholder"
-          style="display:none;"
-        >
-          Fotografías de la propiedad
-        </div>
-
-      </div>
-
-
-      <div class="thumbnails">
-
-        ${galeria}
-
-      </div>
-
-    </div>
-
-
-    <div class="property-info">
-
-      <div class="operation">
-        ${propiedad.operacion}
-      </div>
-
-
-      <h1>
-        ${propiedad.titulo}
-      </h1>
-
-
-      <div class="location">
-        ${propiedad.ubicacion}
-      </div>
-
-
-      <div class="price">
-        ${propiedad.precio}
-      </div>
-
-
-      <div class="features">
-
-        <div class="feature">
-          🛏 ${propiedad.dormitorios}
-        </div>
-
-        <div class="feature">
-          🚿 ${propiedad.banos}
-        </div>
-
-        <div class="feature">
-          📐 ${propiedad.metros}
-        </div>
-
-        <div class="feature">
-          🚗 Estacionamiento:
-          ${propiedad.estacionamiento}
-        </div>
-
-        <div class="feature">
-          📦 Bodega:
-          ${propiedad.bodega}
-        </div>
-
-        <div class="feature">
-          🛋 Amoblado:
-          ${propiedad.amoblado}
-        </div>
-
-      </div>
-
-
-      <div class="description">
-
-        ${propiedad.descripcion}
-
-      </div>
-
-
-      <a
-        class="whatsapp"
-        href="https://wa.me/56944844983?text=${encodeURIComponent(
-          "Hola, quiero consultar por la propiedad: "
-          + propiedad.titulo
-        )}"
-        target="_blank"
-      >
-        Consultar por WhatsApp
-      </a>
-
-
-      <a
-        href="index.html#propiedades"
-        class="back-button"
-      >
-        ← Volver a propiedades
-      </a>
-
-    </div>
-
-  `;
-
-}
-
-
-/* =====================================================
-   CAMBIAR FOTO
-===================================================== */
-
-function cambiarFoto(
-  foto,
-  elemento
-) {
-
-  const imagen =
-    document.getElementById(
-      "mainImage"
+  const parametros =
+    new URLSearchParams(
+      window.location.search
     );
 
 
-  imagen.src = foto;
+  const id =
+    Number(
+      parametros.get("id")
+    );
 
 
-  document
-    .querySelectorAll(
-      ".thumbnail"
-    )
-    .forEach(
-      function(item) {
 
-        item.classList.remove(
-          "active"
+  /* =====================================================
+     BUSCAR PROPIEDAD
+  ===================================================== */
+
+  propiedadActual =
+    propiedades.find(
+      function(propiedad) {
+
+        return propiedad.id === id;
+
+      }
+    );
+
+
+
+  /* =====================================================
+     PROPIEDAD NO ENCONTRADA
+  ===================================================== */
+
+  if (!propiedadActual) {
+
+    document.body.innerHTML = `
+
+      <div
+        style="
+          min-height:100vh;
+          display:flex;
+          align-items:center;
+          justify-content:center;
+          text-align:center;
+          padding:30px;
+          font-family:Arial,sans-serif;
+          background:#fafbfc;
+        "
+      >
+
+        <div>
+
+          <h1 style="color:#0d2f49;">
+            Propiedad no encontrada
+          </h1>
+
+          <p style="
+            color:#6b7781;
+            margin-top:10px;
+          ">
+            La propiedad que buscas no existe.
+          </p>
+
+          <a
+            href="index.html#propiedades"
+            style="
+              display:inline-block;
+              margin-top:20px;
+              padding:12px 20px;
+              background:#0d2f49;
+              color:white;
+              border-radius:8px;
+              text-decoration:none;
+              font-weight:700;
+            "
+          >
+            Volver a propiedades
+          </a>
+
+        </div>
+
+      </div>
+
+    `;
+
+  }
+
+
+
+  /* =====================================================
+     CARGAR PROPIEDAD
+  ===================================================== */
+
+  if (propiedadActual) {
+
+
+    /* TÍTULO */
+
+    document.title =
+      propiedadActual.titulo +
+      " | Sotofrau Propiedades";
+
+
+    document.getElementById(
+      "metaDescription"
+    ).setAttribute(
+      "content",
+      propiedadActual.titulo +
+      " | Sotofrau Propiedades"
+    );
+
+
+
+    /* BREADCRUMB */
+
+    document.getElementById(
+      "breadcrumbTitulo"
+    ).textContent =
+      propiedadActual.titulo;
+
+
+
+    /* TÍTULO */
+
+    document.getElementById(
+      "titulo"
+    ).textContent =
+      propiedadActual.titulo;
+
+
+
+    /* OPERACIÓN */
+
+    document.getElementById(
+      "operation"
+    ).textContent =
+      propiedadActual.operacion;
+
+
+
+    /* UBICACIÓN */
+
+    document.getElementById(
+      "ubicacion"
+    ).textContent =
+      "📍 " +
+      propiedadActual.ubicacion;
+
+
+
+    /* PRECIO */
+
+    document.getElementById(
+      "precio"
+    ).textContent =
+      propiedadActual.precio;
+
+
+
+    /* ESTADO */
+
+    const estado =
+      document.getElementById(
+        "status"
+      );
+
+
+    estado.textContent =
+      propiedadActual.estado === "disponible"
+        ? "Disponible"
+        : propiedadActual.estadoTexto;
+
+
+    if (
+      propiedadActual.estado === "disponible"
+    ) {
+
+      estado.classList.add(
+        "disponible"
+      );
+
+    }
+
+
+    if (
+      propiedadActual.estado === "vendida"
+    ) {
+
+      estado.classList.add(
+        "vendida"
+      );
+
+    }
+
+
+
+    /* =================================================
+       FOTOS ACTUALES
+    ================================================= */
+
+    if (
+      propiedadActual.id === 1
+    ) {
+
+      fotos = [
+        "propiedades/1/1.jpeg"
+      ];
+
+    }
+
+
+    if (
+      propiedadActual.id === 2
+    ) {
+
+      fotos = [
+
+        "propiedades/2/1.jpeg"
+
+      ];
+
+    }
+
+
+    if (
+      propiedadActual.id === 3
+    ) {
+
+      fotos = [
+
+        "propiedades/3/1.jpg",
+        "propiedades/3/2.jpg",
+        "propiedades/3/3.jpg",
+        "propiedades/3/4.jpg",
+        "propiedades/3/5.jpg",
+        "propiedades/3/6.jpg",
+        "propiedades/3/7.jpg"
+
+      ];
+
+    }
+
+
+
+    /* GALERÍA */
+
+    cargarGaleria();
+
+
+
+    /* CARACTERÍSTICAS */
+
+    cargarCaracteristicas();
+
+
+
+    /* INFORMACIÓN */
+
+    cargarInformacion();
+
+
+
+    /* WHATSAPP */
+
+    cargarWhatsApp();
+
+  }
+
+
+
+  /* =====================================================
+     GALERÍA
+  ===================================================== */
+
+  function cargarGaleria() {
+
+    const thumbnails =
+      document.getElementById(
+        "thumbnails"
+      );
+
+
+    thumbnails.innerHTML = "";
+
+
+    document.getElementById(
+      "totalPhotos"
+    ).textContent =
+      fotos.length;
+
+
+    if (
+      fotos.length <= 1
+    ) {
+
+      document.getElementById(
+        "previousButton"
+      ).style.display =
+        "none";
+
+
+      document.getElementById(
+        "nextButton"
+      ).style.display =
+        "none";
+
+    }
+
+
+    fotos.forEach(
+      function(
+        foto,
+        index
+      ) {
+
+
+        const boton =
+          document.createElement(
+            "button"
+          );
+
+
+        boton.type =
+          "button";
+
+
+        boton.className =
+          "thumbnail";
+
+
+        if (
+          index === 0
+        ) {
+
+          boton.classList.add(
+            "active"
+          );
+
+        }
+
+
+        boton.innerHTML = `
+
+          <img
+            src="${foto}"
+            alt="Foto ${index + 1}"
+            loading="lazy"
+          >
+
+        `;
+
+
+        boton.addEventListener(
+          "click",
+          function() {
+
+            mostrarFoto(
+              index + 1
+            );
+
+          }
+        );
+
+
+        thumbnails.appendChild(
+          boton
         );
 
       }
     );
 
 
-  elemento.classList.add(
-    "active"
+    mostrarFoto(1);
+
+  }
+
+
+
+  function mostrarFoto(
+    numero
+  ) {
+
+    if (
+      !fotos.length
+    ) {
+
+      return;
+
+    }
+
+
+    fotoActual =
+      numero;
+
+
+    document.getElementById(
+      "mainImage"
+    ).src =
+      fotos[
+        numero - 1
+      ];
+
+
+    document.getElementById(
+      "mainImage"
+    ).alt =
+      propiedadActual.titulo;
+
+
+    document.getElementById(
+      "currentPhoto"
+    ).textContent =
+      numero;
+
+
+    const thumbnails =
+      document.querySelectorAll(
+        ".thumbnail"
+      );
+
+
+    thumbnails.forEach(
+      function(
+        thumbnail,
+        index
+      ) {
+
+        thumbnail.classList.toggle(
+          "active",
+          index === numero - 1
+        );
+
+      }
+    );
+
+  }
+
+
+
+  function siguiente() {
+
+    if (
+      fotoActual >=
+      fotos.length
+    ) {
+
+      mostrarFoto(1);
+
+    } else {
+
+      mostrarFoto(
+        fotoActual + 1
+      );
+
+    }
+
+  }
+
+
+
+  function anterior() {
+
+    if (
+      fotoActual <= 1
+    ) {
+
+      mostrarFoto(
+        fotos.length
+      );
+
+    } else {
+
+      mostrarFoto(
+        fotoActual - 1
+      );
+
+    }
+
+  }
+
+
+
+  document.getElementById(
+    "previousButton"
+  ).addEventListener(
+    "click",
+    anterior
   );
 
-}
+
+  document.getElementById(
+    "nextButton"
+  ).addEventListener(
+    "click",
+    siguiente
+  );
+
+
+
+  document.addEventListener(
+    "keydown",
+    function(event) {
+
+      if (
+        event.key === "ArrowRight"
+      ) {
+
+        siguiente();
+
+      }
+
+
+      if (
+        event.key === "ArrowLeft"
+      ) {
+
+        anterior();
+
+      }
+
+    }
+  );
+
+
+
+  /* =====================================================
+     CARACTERÍSTICAS
+  ===================================================== */
+
+  function cargarCaracteristicas() {
+
+    const contenedor =
+      document.getElementById(
+        "features"
+      );
+
+
+    contenedor.innerHTML = "";
+
+
+    propiedadActual.caracteristicas
+      .forEach(
+        function(caracteristica) {
+
+          const partes =
+            caracteristica.match(
+              /^(\S+)\s*(.*)$/
+            );
+
+
+          const icono =
+            partes
+              ? partes[1]
+              : "";
+
+
+          const texto =
+            partes
+              ? partes[2]
+              : caracteristica;
+
+
+          const feature =
+            document.createElement(
+              "div"
+            );
+
+
+          feature.className =
+            "feature";
+
+
+          feature.innerHTML = `
+
+            <span class="feature-icon">
+              ${icono}
+            </span>
+
+            ${texto}
+
+          `;
+
+
+          contenedor.appendChild(
+            feature
+          );
+
+        }
+      );
+
+  }
+
+
+
+  /* =====================================================
+     INFORMACIÓN
+  ===================================================== */
+
+  function cargarInformacion() {
+
+    const descripcion =
+      document.getElementById(
+        "descripcion"
+      );
+
+
+    const importante =
+      document.getElementById(
+        "importante"
+      );
+
+
+    importante.innerHTML = "";
+
+
+    propiedadActual.caracteristicas
+      .forEach(
+        function(caracteristica) {
+
+          const li =
+            document.createElement(
+              "li"
+            );
+
+
+          li.textContent =
+            caracteristica;
+
+
+          importante.appendChild(
+            li
+          );
+
+        }
+      );
+
+
+    descripcion.innerHTML = `
+
+      <p>
+        ${propiedadActual.titulo}
+        ubicada en
+        ${propiedadActual.ubicacion}.
+      </p>
+
+      <p>
+        Esta propiedad forma parte de la
+        cartera de Sotofrau Propiedades.
+        Para conocer todos sus detalles,
+        condiciones y coordinar una visita,
+        puedes contactarnos directamente.
+      </p>
+
+    `;
+
+
+    const mensual =
+      document.getElementById(
+        "mensual"
+      );
+
+
+    mensual.textContent =
+      "Consulta por gastos comunes y condiciones.";
+
+  }
+
+
+
+  /* =====================================================
+     WHATSAPP
+  ===================================================== */
+
+  function cargarWhatsApp() {
+
+    const mensaje =
+      encodeURIComponent(
+
+        "Hola, me gustaría consultar por la propiedad: " +
+
+        propiedadActual.titulo +
+
+        ", ubicada en " +
+
+        propiedadActual.ubicacion +
+
+        "."
+
+      );
+
+
+    document.getElementById(
+      "whatsapp"
+    ).href =
+
+      "https://wa.me/56944844983?text=" +
+      mensaje;
+
+  }
 
 </script>
 
 
 </body>
+
 </html>
