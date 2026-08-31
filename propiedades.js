@@ -239,7 +239,55 @@ fotos: [
     whatsapp:
       "Hola, me gustaría consultar por el departamento amoblado con vista al mar en Reñaca, Las Golondrinas 1731."
   }
+ /* =====================================================
+     PROPIEDAD 4 — BORRADOR DE PRUEBA
+  ===================================================== */
 
+  {
+    id: 4,
+
+    publicada: false,
+
+    operacion: "Arriendo",
+
+    estado: "disponible",
+
+    estadoTexto: "Disponible",
+
+    titulo: "Propiedad 4 - En preparación",
+
+    direccion: "",
+
+    ubicacion: "Viña del Mar",
+
+    precio: "$0",
+
+    gastosComunes: "",
+
+    totalMensual: "",
+
+    fotos: [],
+
+    caracteristicas: [
+      "🛏 Por definir",
+      "🚿 Por definir"
+    ],
+
+    descripcion: [
+      "Esta propiedad está en preparación y todavía no ha sido publicada."
+    ],
+
+    informacionImportante: [
+      "Propiedad en preparación"
+    ],
+
+    areasComunes: [],
+
+    conectividad: [],
+
+    whatsapp:
+      "Hola, me gustaría consultar por esta propiedad."
+  },
 ];
 
 
