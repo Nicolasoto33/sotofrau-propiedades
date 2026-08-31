@@ -239,54 +239,90 @@ fotos: [
     whatsapp:
       "Hola, me gustaría consultar por el departamento amoblado con vista al mar en Reñaca, Las Golondrinas 1731."
   },
- /* =====================================================
-     PROPIEDAD 4 — BORRADOR DE PRUEBA
+  /* =====================================================
+     PROPIEDAD 4
   ===================================================== */
 
   {
     id: 4,
 
-    publicada: true,
+    publicada: false,
 
     operacion: "Arriendo",
 
-    estado: "disponible",
+    estado: "gestionada",
 
-    estadoTexto: "Disponible",
+    estadoTexto: "Arrendada",
 
-    titulo: "Propiedad 4 - En preparación",
+    titulo: "Departamento Amoblado Quinta Claude",
 
-    direccion: "",
+    direccion: "Jackson · Torre Z",
 
-    ubicacion: "Viña del Mar",
+    ubicacion: "Quinta Claude · Viña del Mar",
 
-    precio: "$0",
+    precio: "$550.000",
 
-    gastosComunes: "",
+    gastosComunes: "GGCC incluidos",
 
-    totalMensual: "",
+    totalMensual: "$550.000",
 
-    fotos: [],
+    fotos: [
+      "propiedades/4/1.jpeg",
+      "propiedades/4/2.jpeg",
+      "propiedades/4/3.jpeg",
+      "propiedades/4/4.jpeg",
+      "propiedades/4/5.jpeg",
+      "propiedades/4/6.jpeg",
+      "propiedades/4/7.jpeg",
+      "propiedades/4/8.jpeg",
+      "propiedades/4/9.jpeg",
+      "propiedades/4/10.jpeg",
+      "propiedades/4/11.jpeg",
+      "propiedades/4/12.jpeg"
+    ],
 
     caracteristicas: [
-      "🛏 Por definir",
-      "🚿 Por definir"
+      "🛏 3 dormitorios",
+      "🚿 1 baño",
+      "📐 90 m²",
+      "🚗 1 estacionamiento",
+      "🛋 Amoblado",
+      "🐾 Mascotas: consultar"
     ],
 
     descripcion: [
-      "Esta propiedad está en preparación y todavía no ha sido publicada."
+      "Departamento amoblado de 3 dormitorios ubicado en Quinta Claude, Viña del Mar.",
+      "La propiedad cuenta con 90 m², 1 baño y se entrega amoblada.",
+      "Dispone de 1 estacionamiento y no cuenta con bodega.",
+      "Los gastos comunes están incluidos en el canon de arriendo de $550.000 mensuales.",
+      "El conjunto cuenta con estacionamientos comunitarios.",
+      "Presenta buena conectividad hacia Viña del Mar y Quilpué.",
+      "Para consultar las condiciones de arriendo y la posibilidad de mascotas, puedes contactarnos directamente."
     ],
 
     informacionImportante: [
-      "Propiedad en preparación"
+      "Arriendo mensual: $550.000",
+      "Gastos comunes incluidos",
+      "3 dormitorios",
+      "1 baño",
+      "90 m²",
+      "1 estacionamiento",
+      "Sin bodega",
+      "Departamento amoblado",
+      "Mascotas: consultar"
     ],
 
-    areasComunes: [],
+    areasComunes: [
+      "🚗 Estacionamientos comunitarios"
+    ],
 
-    conectividad: [],
+    conectividad: [
+      "Buena conectividad hacia Viña del Mar",
+      "Buena conectividad hacia Quilpué"
+    ],
 
     whatsapp:
-      "Hola, me gustaría consultar por esta propiedad."
+      "Hola, me gustaría consultar por el departamento amoblado en Quinta Claude, Viña del Mar, Jackson Torre Z."
   },
 ];
 
