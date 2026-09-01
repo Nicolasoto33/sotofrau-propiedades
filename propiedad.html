@@ -44,6 +44,12 @@
   >
 
   <meta
+    id="ogImageAlt"
+    property="og:image:alt"
+    content="Sotofrau Propiedades"
+  >
+
+  <meta
     id="ogUrl"
     property="og:url"
     content="https://sotofraupropiedades.cl/propiedad.html"
@@ -56,6 +62,40 @@
 
   <meta
     property="og:site_name"
+    content="Sotofrau Propiedades"
+  >
+
+  <meta
+    property="og:locale"
+    content="es_CL"
+  >
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    id="twitterTitle"
+    name="twitter:title"
+    content="Sotofrau Propiedades"
+  >
+
+  <meta
+    id="twitterDescription"
+    name="twitter:description"
+    content="Propiedad publicada por Sotofrau Propiedades."
+  >
+
+  <meta
+    id="twitterImage"
+    name="twitter:image"
+    content="https://sotofraupropiedades.cl/android-chrome-512x512.png"
+  >
+
+  <meta
+    id="twitterImageAlt"
+    name="twitter:image:alt"
     content="Sotofrau Propiedades"
   >
 
@@ -1741,7 +1781,7 @@
 
         <!-- =================================================
              INFORMACIÓN PRINCIPAL
-        ================================================= -->
+        ================================================== -->
 
         <div class="information-grid">
 
@@ -2037,53 +2077,174 @@
 
 
     /* =================================================
-       SEO
+       PREPARAR DATOS SEO
     ================================================= */
 
-    const descripcionPrincipal =
-      propiedadActual.descripcion &&
-      propiedadActual.descripcion.length
-        ? propiedadActual.descripcion[0]
-        : "Consulta disponibilidad, condiciones y detalles de esta propiedad.";
+    const dominio =
+      "https://sotofraupropiedades.cl";
 
+
+    const urlCanonica =
+      dominio +
+      "/propiedad.html?id=" +
+      encodeURIComponent(
+        propiedadActual.id
+      );
+
+
+    /* =================================================
+       DESCRIPCIÓN PRINCIPAL
+    ================================================= */
+
+    let descripcionPrincipal =
+      "";
+
+
+    if (
+      Array.isArray(
+        propiedadActual.descripcion
+      )
+    ) {
+
+      descripcionPrincipal =
+        propiedadActual.descripcion.join(" ");
+
+    } else if (
+      typeof propiedadActual.descripcion ===
+      "string"
+    ) {
+
+      descripcionPrincipal =
+        propiedadActual.descripcion;
+
+    }
+
+
+    if (!descripcionPrincipal) {
+
+      descripcionPrincipal =
+        "Consulta disponibilidad, condiciones y detalles de esta propiedad.";
+
+    }
+
+
+    descripcionPrincipal =
+      descripcionPrincipal
+        .replace(/\s+/g, " ")
+        .trim();
+
+
+
+    /* =================================================
+       DESCRIPCIÓN SEO
+    ================================================= */
 
     const descripcionSEO =
       (
         propiedadActual.titulo +
         ". " +
-        propiedadActual.ubicacion +
+        (
+          propiedadActual.operacion
+            ? propiedadActual.operacion +
+              " en "
+            : ""
+        ) +
+        (
+          propiedadActual.ubicacion ||
+          ""
+        ) +
         ". " +
-        propiedadActual.precio +
+        (
+          propiedadActual.precio ||
+          ""
+        ) +
         ". " +
         descripcionPrincipal
       )
       .replace(/\s+/g, " ")
-      .trim();
+      .trim()
+      .substring(0, 160);
 
 
-    /* TÍTULO DE LA PÁGINA */
+
+    /* =================================================
+       IMAGEN SEO
+    ================================================= */
+
+    let imagenSEO =
+      "";
+
+
+    if (
+      Array.isArray(
+        propiedadActual.fotos
+      ) &&
+      propiedadActual.fotos.length > 0
+    ) {
+
+      imagenSEO =
+        propiedadActual.fotos[0];
+
+    } else if (
+      propiedadActual.imagen
+    ) {
+
+      imagenSEO =
+        propiedadActual.imagen;
+
+    } else {
+
+      imagenSEO =
+        dominio +
+        "/android-chrome-512x512.png";
+
+    }
+
+
+    try {
+
+      imagenSEO =
+        new URL(
+          imagenSEO,
+          dominio
+        ).href;
+
+    } catch (error) {
+
+      imagenSEO =
+        dominio +
+        "/android-chrome-512x512.png";
+
+    }
+
+
+
+    /* =================================================
+       TÍTULO DE LA PÁGINA
+    ================================================= */
 
     document.title =
       propiedadActual.titulo +
       " | Sotofrau Propiedades";
 
 
-    /* META DESCRIPTION */
+
+    /* =================================================
+       META DESCRIPTION
+    ================================================= */
 
     document.getElementById(
       "metaDescription"
     ).setAttribute(
       "content",
-      descripcionSEO.substring(0, 160)
+      descripcionSEO
     );
 
 
-    /* URL CANÓNICA */
 
-    const urlCanonica =
-      "https://sotofraupropiedades.cl/propiedad.html?id=" +
-      propiedadActual.id;
-
+    /* =================================================
+       URL CANÓNICA
+    ================================================= */
 
     document.getElementById(
       "canonicalLink"
@@ -2093,14 +2254,21 @@
     );
 
 
-    /* OPEN GRAPH */
+
+    /* =================================================
+       OPEN GRAPH
+    ================================================= */
+
+    const tituloSEO =
+      propiedadActual.titulo +
+      " | Sotofrau Propiedades";
+
 
     document.getElementById(
       "ogTitle"
     ).setAttribute(
       "content",
-      propiedadActual.titulo +
-      " | Sotofrau Propiedades"
+      tituloSEO
     );
 
 
@@ -2108,7 +2276,23 @@
       "ogDescription"
     ).setAttribute(
       "content",
-      descripcionSEO.substring(0, 160)
+      descripcionSEO
+    );
+
+
+    document.getElementById(
+      "ogImage"
+    ).setAttribute(
+      "content",
+      imagenSEO
+    );
+
+
+    document.getElementById(
+      "ogImageAlt"
+    ).setAttribute(
+      "content",
+      propiedadActual.titulo
     );
 
 
@@ -2120,20 +2304,41 @@
     );
 
 
-    if (
-      propiedadActual.fotos &&
-      propiedadActual.fotos.length
-    ) {
 
-      document.getElementById(
-        "ogImage"
-      ).setAttribute(
-        "content",
-        "https://sotofraupropiedades.cl/" +
-        propiedadActual.fotos[0]
-      );
+    /* =================================================
+       TWITTER
+    ================================================= */
 
-    }
+    document.getElementById(
+      "twitterTitle"
+    ).setAttribute(
+      "content",
+      tituloSEO
+    );
+
+
+    document.getElementById(
+      "twitterDescription"
+    ).setAttribute(
+      "content",
+      descripcionSEO
+    );
+
+
+    document.getElementById(
+      "twitterImage"
+    ).setAttribute(
+      "content",
+      imagenSEO
+    );
+
+
+    document.getElementById(
+      "twitterImageAlt"
+    ).setAttribute(
+      "content",
+      propiedadActual.titulo
+    );
 
 
 
@@ -2141,7 +2346,9 @@
        DATOS ESTRUCTURADOS
     ================================================= */
 
-    let precioNumerico = null;
+    let precioNumerico =
+      null;
+
 
     let moneda =
       "CLP";
@@ -2152,6 +2359,10 @@
         propiedadActual.precio || ""
       );
 
+
+    /* =================================================
+       PRECIO UF
+    ================================================= */
 
     if (
       precioTexto
@@ -2165,22 +2376,29 @@
 
       const coincidenciaUF =
         precioTexto.match(
-          /(?:^|\s|\$)(\d+(?:[.,]\d+)?)\s*UF/i
+          /(?:^|\s|\$)([\d.]+(?:,\d+)?)\s*UF/i
         );
 
 
       if (coincidenciaUF) {
 
+        const valorUF =
+          coincidenciaUF[1]
+            .replace(/\./g, "")
+            .replace(",", ".");
+
+
         precioNumerico =
-          Number(
-            coincidenciaUF[1]
-              .replace(/\./g, "")
-              .replace(",", ".")
-          );
+          Number(valorUF);
 
       }
 
     } else {
+
+
+      /* =================================================
+         PRECIO CLP
+      ================================================= */
 
       moneda =
         "CLP";
@@ -2205,6 +2423,55 @@
     }
 
 
+
+    /* =================================================
+       IMÁGENES ESTRUCTURADAS
+    ================================================= */
+
+    const imagenesStructuredData =
+      (
+        Array.isArray(
+          propiedadActual.fotos
+        )
+          ? propiedadActual.fotos
+          : (
+              propiedadActual.imagen
+                ? [propiedadActual.imagen]
+                : []
+            )
+      )
+      .map(
+        function(foto) {
+
+          try {
+
+            return new URL(
+              foto,
+              dominio
+            ).href;
+
+          } catch (error) {
+
+            return null;
+
+          }
+
+        }
+      )
+      .filter(
+        function(url) {
+
+          return Boolean(url);
+
+        }
+      );
+
+
+
+    /* =================================================
+       DATOS ESTRUCTURADOS
+    ================================================= */
+
     const structuredData = {
 
       "@context":
@@ -2223,17 +2490,7 @@
         urlCanonica,
 
       "image":
-        (propiedadActual.fotos || [])
-          .map(
-            function(foto) {
-
-              return (
-                "https://sotofraupropiedades.cl/" +
-                foto
-              );
-
-            }
-          ),
+        imagenesStructuredData,
 
       "address": {
 
@@ -2262,7 +2519,7 @@
             "Operación",
 
           "value":
-            propiedadActual.operacion
+            propiedadActual.operacion || ""
 
         },
 
@@ -2276,7 +2533,8 @@
 
           "value":
             propiedadActual.estadoTexto ||
-            propiedadActual.estado
+            propiedadActual.estado ||
+            ""
 
         }
 
@@ -2284,6 +2542,11 @@
 
     };
 
+
+
+    /* =================================================
+       OFERTA
+    ================================================= */
 
     if (
       precioNumerico !== null &&
@@ -2319,6 +2582,11 @@
 
     }
 
+
+
+    /* =================================================
+       INSERTAR JSON-LD
+    ================================================= */
 
     document.getElementById(
       "propertyStructuredData"
@@ -2496,7 +2764,11 @@
     ================================================= */
 
     fotos =
-      propiedadActual.fotos || [];
+      Array.isArray(
+        propiedadActual.fotos
+      )
+        ? propiedadActual.fotos
+        : [];
 
 
     if (
@@ -2920,57 +3192,66 @@
       "";
 
 
-    propiedadActual.caracteristicas
-      .forEach(
-        function(
-          caracteristica
-        ) {
-
-          const partes =
-            caracteristica.match(
-              /^(\S+)\s*(.*)$/
-            );
+    const caracteristicas =
+      Array.isArray(
+        propiedadActual.caracteristicas
+      )
+        ? propiedadActual.caracteristicas
+        : [];
 
 
-          const icono =
-            partes
-              ? partes[1]
-              : "";
+    caracteristicas.forEach(
+      function(
+        caracteristica
+      ) {
 
-
-          const texto =
-            partes
-              ? partes[2]
-              : caracteristica;
-
-
-          const feature =
-            document.createElement(
-              "div"
-            );
-
-
-          feature.className =
-            "feature";
-
-
-          feature.innerHTML = `
-
-            <span class="feature-icon">
-              ${icono}
-            </span>
-
-            ${texto}
-
-          `;
-
-
-          contenedor.appendChild(
-            feature
+        const partes =
+          String(
+            caracteristica
+          ).match(
+            /^(\S+)\s*(.*)$/
           );
 
-        }
-      );
+
+        const icono =
+          partes
+            ? partes[1]
+            : "";
+
+
+        const texto =
+          partes
+            ? partes[2]
+            : caracteristica;
+
+
+        const feature =
+          document.createElement(
+            "div"
+          );
+
+
+        feature.className =
+          "feature";
+
+
+        feature.innerHTML = `
+
+          <span class="feature-icon">
+            ${icono}
+          </span>
+
+          ${texto}
+
+        `;
+
+
+        contenedor.appendChild(
+          feature
+        );
+
+      }
+    );
 
   }
 
@@ -2993,7 +3274,9 @@
 
 
     if (
-      propiedadActual.descripcion &&
+      Array.isArray(
+        propiedadActual.descripcion
+      ) &&
       propiedadActual.descripcion.length
     ) {
 
@@ -3017,6 +3300,26 @@
 
           }
         );
+
+    } else if (
+      typeof propiedadActual.descripcion ===
+      "string" &&
+      propiedadActual.descripcion.trim()
+    ) {
+
+      const p =
+        document.createElement(
+          "p"
+        );
+
+
+      p.textContent =
+        propiedadActual.descripcion;
+
+
+      contenedor.appendChild(
+        p
+      );
 
     } else {
 
@@ -3057,9 +3360,17 @@
 
 
     const informacion =
-      propiedadActual.informacionImportante ||
-      propiedadActual.caracteristicas ||
-      [];
+      Array.isArray(
+        propiedadActual.informacionImportante
+      )
+        ? propiedadActual.informacionImportante
+        : (
+            Array.isArray(
+              propiedadActual.caracteristicas
+            )
+              ? propiedadActual.caracteristicas
+              : []
+          );
 
 
     informacion.forEach(
@@ -3115,8 +3426,11 @@
 
 
     const areas =
-      propiedadActual.areasComunes ||
-      [];
+      Array.isArray(
+        propiedadActual.areasComunes
+      )
+        ? propiedadActual.areasComunes
+        : [];
 
 
     if (
@@ -3188,8 +3502,11 @@
 
 
     const conectividad =
-      propiedadActual.conectividad ||
-      [];
+      Array.isArray(
+        propiedadActual.conectividad
+      )
+        ? propiedadActual.conectividad
+        : [];
 
 
     if (
