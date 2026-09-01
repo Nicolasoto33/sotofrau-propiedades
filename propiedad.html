@@ -11,54 +11,61 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-<title>Sotofrau Propiedades</title>
+  <title>Sotofrau Propiedades</title>
 
-<meta
-  id="metaDescription"
-  name="description"
-  content="Propiedad publicada por Sotofrau Propiedades."
->
+  <meta
+    id="metaDescription"
+    name="description"
+    content="Propiedad publicada por Sotofrau Propiedades."
+  >
 
-<link
-  id="canonicalLink"
-  rel="canonical"
-  href="https://sotofraupropiedades.cl/propiedad.html"
->
+  <link
+    id="canonicalLink"
+    rel="canonical"
+    href="https://sotofraupropiedades.cl/propiedad.html"
+  >
 
-<meta
-  id="ogTitle"
-  property="og:title"
-  content="Sotofrau Propiedades"
->
+  <meta
+    id="ogTitle"
+    property="og:title"
+    content="Sotofrau Propiedades"
+  >
 
-<meta
-  id="ogDescription"
-  property="og:description"
-  content="Propiedad publicada por Sotofrau Propiedades."
->
+  <meta
+    id="ogDescription"
+    property="og:description"
+    content="Propiedad publicada por Sotofrau Propiedades."
+  >
 
-<meta
-  id="ogImage"
-  property="og:image"
-  content="https://sotofraupropiedades.cl/android-chrome-512x512.png"
->
+  <meta
+    id="ogImage"
+    property="og:image"
+    content="https://sotofraupropiedades.cl/android-chrome-512x512.png"
+  >
 
-<meta
-  property="og:type"
-  content="website"
->
+  <meta
+    id="ogUrl"
+    property="og:url"
+    content="https://sotofraupropiedades.cl/propiedad.html"
+  >
 
-<meta
-  property="og:site_name"
-  content="Sotofrau Propiedades"
->
+  <meta
+    property="og:type"
+    content="website"
+  >
 
-<script
-  id="propertyStructuredData"
-  type="application/ld+json"
->
-{}
-</script>
+  <meta
+    property="og:site_name"
+    content="Sotofrau Propiedades"
+  >
+
+  <script
+    id="propertyStructuredData"
+    type="application/ld+json"
+  >
+  {}
+  </script>
+
 
   <meta
     name="theme-color"
@@ -1774,7 +1781,7 @@
 
         <!-- =================================================
              ÁREAS COMUNES / CONECTIVIDAD
-        ================================================= -->
+        ================================================== -->
 
         <div
           class="extra-information"
@@ -2029,6 +2036,31 @@
   if (propiedadActual) {
 
 
+    /* =================================================
+       SEO
+    ================================================= */
+
+    const descripcionPrincipal =
+      propiedadActual.descripcion &&
+      propiedadActual.descripcion.length
+        ? propiedadActual.descripcion[0]
+        : "Consulta disponibilidad, condiciones y detalles de esta propiedad.";
+
+
+    const descripcionSEO =
+      (
+        propiedadActual.titulo +
+        ". " +
+        propiedadActual.ubicacion +
+        ". " +
+        propiedadActual.precio +
+        ". " +
+        descripcionPrincipal
+      )
+      .replace(/\s+/g, " ")
+      .trim();
+
+
     /* TÍTULO DE LA PÁGINA */
 
     document.title =
@@ -2036,8 +2068,35 @@
       " | Sotofrau Propiedades";
 
 
+    /* META DESCRIPTION */
+
     document.getElementById(
       "metaDescription"
+    ).setAttribute(
+      "content",
+      descripcionSEO.substring(0, 160)
+    );
+
+
+    /* URL CANÓNICA */
+
+    const urlCanonica =
+      "https://sotofraupropiedades.cl/propiedad.html?id=" +
+      propiedadActual.id;
+
+
+    document.getElementById(
+      "canonicalLink"
+    ).setAttribute(
+      "href",
+      urlCanonica
+    );
+
+
+    /* OPEN GRAPH */
+
+    document.getElementById(
+      "ogTitle"
     ).setAttribute(
       "content",
       propiedadActual.titulo +
@@ -2045,8 +2104,234 @@
     );
 
 
+    document.getElementById(
+      "ogDescription"
+    ).setAttribute(
+      "content",
+      descripcionSEO.substring(0, 160)
+    );
 
-    /* BREADCRUMB */
+
+    document.getElementById(
+      "ogUrl"
+    ).setAttribute(
+      "content",
+      urlCanonica
+    );
+
+
+    if (
+      propiedadActual.fotos &&
+      propiedadActual.fotos.length
+    ) {
+
+      document.getElementById(
+        "ogImage"
+      ).setAttribute(
+        "content",
+        "https://sotofraupropiedades.cl/" +
+        propiedadActual.fotos[0]
+      );
+
+    }
+
+
+
+    /* =================================================
+       DATOS ESTRUCTURADOS
+    ================================================= */
+
+    let precioNumerico = null;
+
+    let moneda =
+      "CLP";
+
+
+    const precioTexto =
+      String(
+        propiedadActual.precio || ""
+      );
+
+
+    if (
+      precioTexto
+        .toUpperCase()
+        .includes("UF")
+    ) {
+
+      moneda =
+        "CLF";
+
+
+      const coincidenciaUF =
+        precioTexto.match(
+          /(?:^|\s|\$)(\d+(?:[.,]\d+)?)\s*UF/i
+        );
+
+
+      if (coincidenciaUF) {
+
+        precioNumerico =
+          Number(
+            coincidenciaUF[1]
+              .replace(/\./g, "")
+              .replace(",", ".")
+          );
+
+      }
+
+    } else {
+
+      moneda =
+        "CLP";
+
+
+      const coincidenciaCLP =
+        precioTexto.match(
+          /\$?\s*([\d.]+)/
+        );
+
+
+      if (coincidenciaCLP) {
+
+        precioNumerico =
+          Number(
+            coincidenciaCLP[1]
+              .replace(/\./g, "")
+          );
+
+      }
+
+    }
+
+
+    const structuredData = {
+
+      "@context":
+        "https://schema.org",
+
+      "@type":
+        "RealEstateListing",
+
+      "name":
+        propiedadActual.titulo,
+
+      "description":
+        descripcionSEO,
+
+      "url":
+        urlCanonica,
+
+      "image":
+        (propiedadActual.fotos || [])
+          .map(
+            function(foto) {
+
+              return (
+                "https://sotofraupropiedades.cl/" +
+                foto
+              );
+
+            }
+          ),
+
+      "address": {
+
+        "@type":
+          "PostalAddress",
+
+        "streetAddress":
+          propiedadActual.direccion || "",
+
+        "addressLocality":
+          propiedadActual.ubicacion || "",
+
+        "addressCountry":
+          "CL"
+
+      },
+
+      "additionalProperty": [
+
+        {
+
+          "@type":
+            "PropertyValue",
+
+          "name":
+            "Operación",
+
+          "value":
+            propiedadActual.operacion
+
+        },
+
+        {
+
+          "@type":
+            "PropertyValue",
+
+          "name":
+            "Estado",
+
+          "value":
+            propiedadActual.estadoTexto ||
+            propiedadActual.estado
+
+        }
+
+      ]
+
+    };
+
+
+    if (
+      precioNumerico !== null &&
+      !Number.isNaN(precioNumerico)
+    ) {
+
+      structuredData.offers = {
+
+        "@type":
+          "Offer",
+
+        "price":
+          precioNumerico,
+
+        "priceCurrency":
+          moneda,
+
+        "url":
+          urlCanonica
+
+      };
+
+
+      if (
+        propiedadActual.estado ===
+        "disponible"
+      ) {
+
+        structuredData.offers.availability =
+          "https://schema.org/InStock";
+
+      }
+
+    }
+
+
+    document.getElementById(
+      "propertyStructuredData"
+    ).textContent =
+      JSON.stringify(
+        structuredData
+      );
+
+
+
+    /* =================================================
+       BREADCRUMB
+    ================================================= */
 
     document.getElementById(
       "breadcrumbTitulo"
@@ -2055,7 +2340,9 @@
 
 
 
-    /* TÍTULO */
+    /* =================================================
+       TÍTULO
+    ================================================= */
 
     document.getElementById(
       "titulo"
@@ -2064,7 +2351,9 @@
 
 
 
-    /* OPERACIÓN */
+    /* =================================================
+       OPERACIÓN
+    ================================================= */
 
     document.getElementById(
       "operation"
@@ -2073,7 +2362,9 @@
 
 
 
-    /* UBICACIÓN */
+    /* =================================================
+       UBICACIÓN
+    ================================================= */
 
     document.getElementById(
       "ubicacion"
@@ -2088,7 +2379,9 @@
 
 
 
-    /* PRECIO */
+    /* =================================================
+       PRECIO
+    ================================================= */
 
     document.getElementById(
       "precio"
@@ -2097,7 +2390,9 @@
 
 
 
-    /* GASTOS COMUNES */
+    /* =================================================
+       GASTOS COMUNES
+    ================================================= */
 
     const mensual =
       document.getElementById(
@@ -2113,6 +2408,7 @@
       let texto =
         "";
 
+
       if (
         propiedadActual.gastosComunes
       ) {
@@ -2122,6 +2418,7 @@
           propiedadActual.gastosComunes;
 
       }
+
 
       if (
         propiedadActual.totalMensual
@@ -2134,11 +2431,13 @@
 
         }
 
+
         texto +=
           "Total mensual: " +
           propiedadActual.totalMensual;
 
       }
+
 
       mensual.textContent =
         texto;
@@ -2371,7 +2670,8 @@
 
 
         imagen.alt =
-          "Foto " +
+          propiedadActual.titulo +
+          " - Foto " +
           (index + 1);
 
 
