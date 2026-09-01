@@ -27,17 +27,17 @@ const propiedades = [
 
     totalMensual: "",
 
-fotos: [
-  "propiedades/1/1.jpeg",
-  "propiedades/1/2.jpeg",
-  "propiedades/1/3.jpeg",
-  "propiedades/1/4.jpeg",
-  "propiedades/1/5.jpeg",
-  "propiedades/1/6.jpeg",
-  "propiedades/1/7.jpeg",
-  "propiedades/1/8.jpeg",
-  "propiedades/1/9.jpeg"
-],
+    fotos: [
+      "propiedades/1/1.jpeg",
+      "propiedades/1/2.jpeg",
+      "propiedades/1/3.jpeg",
+      "propiedades/1/4.jpeg",
+      "propiedades/1/5.jpeg",
+      "propiedades/1/6.jpeg",
+      "propiedades/1/7.jpeg",
+      "propiedades/1/8.jpeg",
+      "propiedades/1/9.jpeg"
+    ],
 
     caracteristicas: [
       "🛏 1 dormitorio",
@@ -95,15 +95,15 @@ fotos: [
     totalMensual: "$400.000",
 
     fotos: [
-  "propiedades/2/1.jpeg",
-  "propiedades/2/2.jpeg",
-  "propiedades/2/3.jpeg",
-  "propiedades/2/4.jpeg",
-  "propiedades/2/5.jpeg",
-  "propiedades/2/6.jpeg",
-  "propiedades/2/7.jpeg",
-  "propiedades/2/8.jpeg"
-],
+      "propiedades/2/1.jpeg",
+      "propiedades/2/2.jpeg",
+      "propiedades/2/3.jpeg",
+      "propiedades/2/4.jpeg",
+      "propiedades/2/5.jpeg",
+      "propiedades/2/6.jpeg",
+      "propiedades/2/7.jpeg",
+      "propiedades/2/8.jpeg"
+    ],
 
     caracteristicas: [
       "🛏 2 dormitorios",
@@ -239,6 +239,8 @@ fotos: [
     whatsapp:
       "Hola, me gustaría consultar por el departamento amoblado con vista al mar en Reñaca, Las Golondrinas 1731."
   },
+
+
   /* =====================================================
      PROPIEDAD 4
   ===================================================== */
@@ -324,6 +326,8 @@ fotos: [
     whatsapp:
       "Hola, me gustaría consultar por el departamento amoblado en Quinta Claude, Viña del Mar, Jackson Torre Z."
   },
+
+
   /* =====================================================
      PROPIEDAD 5
   ===================================================== */
@@ -2595,8 +2599,9 @@ fotos: [
 
     whatsapp:
       "Hola, me gustaría consultar por el departamento en venta en Costa de Montemar, Av. Concón Reñaca 4357."
-  },];
+  }
 
+];
 
 
 /* =====================================================
@@ -2620,14 +2625,68 @@ function cargarPropiedades() {
   contenedor.innerHTML = "";
 
 
+  /*
+    FILTRAR SOLO LAS PROPIEDADES PUBLICADAS
+    Y ORDENAR AUTOMÁTICAMENTE:
+    
+    1. DISPONIBLES PRIMERO
+    2. DENTRO DE CADA GRUPO, ID MÁS ALTO PRIMERO
+    
+    De esta forma, cuando agregues una nueva
+    propiedad disponible con un ID mayor,
+    aparecerá automáticamente arriba.
+  */
+
   const propiedadesPublicadas =
-    propiedades.filter(
-      function(propiedad) {
+    propiedades
+      .filter(
+        function(propiedad) {
 
-        return propiedad.publicada === true;
+          return propiedad.publicada === true;
 
-      }
-    );
+        }
+      )
+      .sort(
+        function(a, b) {
+
+          const prioridadA =
+            a.estado === "disponible"
+              ? 0
+              : 1;
+
+
+          const prioridadB =
+            b.estado === "disponible"
+              ? 0
+              : 1;
+
+
+          /*
+            Primero se comparan los estados.
+            0 = disponible
+            1 = gestionada / arrendada / vendida
+          */
+
+          if (
+            prioridadA !== prioridadB
+          ) {
+
+            return prioridadA -
+              prioridadB;
+
+          }
+
+
+          /*
+            Si ambas tienen el mismo estado,
+            la de ID más alto aparece primero.
+          */
+
+          return b.id -
+            a.id;
+
+        }
+      );
 
 
   propiedadesPublicadas.forEach(
