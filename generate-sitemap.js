@@ -121,14 +121,22 @@ const propiedadesDisponibles =
 
 /* =====================================================
    GENERAR URLs
+
+   PÁGINAS SEO FIJAS
 ===================================================== */
 
 const urls = [
 
-  `${BASE_URL}/`
+  `${BASE_URL}/`,
+
+  `${BASE_URL}/corredor-propiedades-vina-del-mar.html`
 
 ];
 
+
+/* =====================================================
+   AGREGAR PROPIEDADES DISPONIBLES
+===================================================== */
 
 propiedadesDisponibles.forEach(
   function(propiedad) {
