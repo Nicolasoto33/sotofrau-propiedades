@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>
+    Administración de Propiedades en Viña del Mar | Sotofrau Propiedades
+  </title>
+
+  <meta
+    name="description"
+    content="Administración de propiedades en Viña del Mar y la Región de Valparaíso. Gestión de arriendos, coordinación de mantenciones, comunicación con arrendatarios y reportes al propietario."
+  >
+
+  <link
+    rel="canonical"
+    href="https://sotofraupropiedades.cl/administracion-propiedades.html"
+  >
+
+  <meta
+    property="og:title"
+    content="Administración de Propiedades en Viña del Mar | Sotofrau Propiedades"
+  >
+
+  <meta
+    property="og:description"
+    content="Delegue la administración de su propiedad con Sotofrau Propiedades. Gestión cercana y seguimiento de la propiedad arrendada."
+  >
+
+  <meta
+    property="og:image"
+    content="https://sotofraupropiedades.cl/android-chrome-512x512.png"
+  >
+
+  <meta
+    property="og:image:alt"
+    content="Sotofrau Propiedades"
+  >
+
+  <meta
+    property="og:url"
+    content="https://sotofraupropiedades.cl/administracion-propiedades.html"
+  >
+
+  <meta
+    property="og:type"
+    content="website"
+  >
+
+  <meta
+    property="og:site_name"
+    content="Sotofrau Propiedades"
+  >
+
+  <meta
+    property="og:locale"
+    content="es_CL"
+  >
+
+  <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Administración de Propiedades en Viña del Mar | Sotofrau Propiedades"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Servicio de administración de propiedades arrendadas en Viña del Mar, Concón y la Región de Valparaíso."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://sotofraupropiedades.cl/android-chrome-512x512.png"
+  >
+
+  <meta
+    name="theme-color"
+    content="#0d2f49"
+  >
+
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/apple-touch-icon.png"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/favicon-32x32.png"
+  >
+
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/favicon-16x16.png"
+  >
+
+  <link
+    rel="icon"
+    href="/favicon.ico"
+  >
+
+  <link
+    rel="manifest"
+    href="/site.webmanifest"
+  >
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "RealEstateAgent",
+    "name": "Sotofrau Propiedades",
+    "url": "https://sotofraupropiedades.cl/",
+    "telephone": "+56 9 4484 4983",
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Viña del Mar"
+      },
+      {
+        "@type": "City",
+        "name": "Concón"
+      },
+      {
+        "@type": "Place",
+        "name": "Reñaca"
+      },
+      {
+        "@type": "City",
+        "name": "Valparaíso"
+      },
+      {
+        "@type": "City",
+        "name": "Quilpué"
+      },
+      {
+        "@type": "City",
+        "name": "Villa Alemana"
+      }
+    ],
+    "sameAs": [
+      "https://www.instagram.com/sotofrau_propiedades/"
+    ]
+  }
+  </script>
+
+  <style>
+
+    :root {
+      --azul: #0d2f49;
+      --azul-2: #164968;
+      --azul-oscuro: #081f31;
+      --naranja: #e88925;
+      --naranja-hover: #d97818;
+      --blanco: #ffffff;
+      --gris-50: #fafbfc;
+      --gris-200: #e6eaee;
+      --gris-500: #6b7781;
+      --gris-700: #37444e;
+      --sombra: 0 12px 35px rgba(13,47,73,.08);
+      --radio: 16px;
+      --ancho: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+      color: var(--gris-700);
+      background: var(--blanco);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(var(--ancho), 92%);
+      margin: auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,.97);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(13,47,73,.08);
+    }
+
+    .nav {
+      min-height: 78px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      color: var(--azul);
+      font-size: 23px;
+      font-weight: 800;
+      letter-spacing: -.5px;
+      white-space: nowrap;
+    }
+
+    .logo span {
+      color: var(--naranja);
+      margin-left: 5px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      font-size: 14px;
+      font-weight: 650;
+    }
+
+    nav a {
+      color: var(--azul);
+      transition: .2s ease;
+    }
+
+    nav a:hover {
+      color: var(--naranja);
+    }
+
+    .nav-contact {
+      background: var(--azul);
+      color: white !important;
+      padding: 11px 18px;
+      border-radius: 9px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      color: white;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(6,25,40,.97) 0%,
+          rgba(8,34,53,.90) 48%,
+          rgba(8,34,53,.72) 100%
+        ),
+        linear-gradient(
+          135deg,
+          var(--azul),
+          var(--azul-2)
+        );
+    }
+
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      right: -180px;
+      bottom: -240px;
+      border-radius: 50%;
+      background: rgba(232,137,37,.14);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 110px 0 100px;
+    }
+
+    .hero-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 22px;
+      color: #d9e9f2;
+      font-size: 13px;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+    }
+
+    .hero-label::before {
+      content: "";
+      width: 28px;
+      height: 2px;
+      background: var(--naranja);
+    }
+
+    .hero h1 {
+      font-size: clamp(40px,5.5vw,66px);
+      line-height: 1.04;
+      letter-spacing: -2.3px;
+      margin-bottom: 25px;
+    }
+
+    .hero h1 span {
+      color: #f3a04b;
+    }
+
+    .hero p {
+      max-width: 700px;
+      color: #e4eef3;
+      font-size: 18px;
+      line-height: 1.75;
+      margin-bottom: 34px;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 22px;
+      border-radius: 9px;
+      font-size: 14px;
+      font-weight: 750;
+      transition: .2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--naranja);
+      color: white;
+      box-shadow: 0 8px 22px rgba(232,137,37,.22);
+    }
+
+    .btn-light {
+      background: white;
+      color: var(--azul);
+    }
+
+    section {
+      padding: 90px 0;
+    }
+
+    .section-header {
+      max-width: 760px;
+      margin: 0 auto 48px;
+      text-align: center;
+    }
+
+    .section-label {
+      display: block;
+      margin-bottom: 9px;
+      color: var(--naranja);
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.6px;
+    }
+
+    .section-header h2 {
+      color: var(--azul);
+      font-size: clamp(30px,4vw,40px);
+      line-height: 1.15;
+      letter-spacing: -.8px;
+      margin-bottom: 15px;
+    }
+
+    .section-header p {
+      color: var(--gris-500);
+      font-size: 16px;
+    }
+
+    .intro {
+      background: white;
+    }
+
+    .intro-grid {
+      display: grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .intro-content h2 {
+      color: var(--azul);
+      font-size: clamp(31px,4vw,44px);
+      line-height: 1.12;
+      letter-spacing: -1px;
+      margin-bottom: 20px;
+    }
+
+    .intro-content p {
+      color: var(--gris-500);
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 16px;
+    }
+
+    .highlight-box {
+      padding: 30px;
+      border: 1px solid var(--gris-200);
+      border-radius: var(--radio);
+      background: var(--gris-50);
+      box-shadow: var(--sombra);
+    }
+
+    .highlight-box strong {
+      display: block;
+      margin-bottom: 10px;
+      color: var(--azul);
+      font-size: 18px;
+    }
+
+    .highlight-box p {
+      color: var(--gris-500);
+      font-size: 14px;
+    }
+
+    .services {
+      background: var(--gris-50);
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 22px;
+    }
+
+    .service {
+      padding: 32px;
+      background: white;
+      border: 1px solid var(--gris-200);
+      border-radius: var(--radio);
+      box-shadow: var(--sombra);
+    }
+
+    .service-number {
+      margin-bottom: 18px;
+      color: var(--naranja);
+      font-size: 12px;
+      font-weight: 850;
+      letter-spacing: 1px;
+    }
+
+    .service h3 {
+      color: var(--azul);
+      font-size: 21px;
+      margin-bottom: 11px;
+    }
+
+    .service p {
+      color: var(--gris-500);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .benefits {
+      background: white;
+    }
+
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 18px;
+    }
+
+    .benefit {
+      padding: 28px;
+      border: 1px solid var(--gris-200);
+      border-radius: var(--radio);
+      box-shadow: var(--sombra);
+    }
+
+    .benefit h3 {
+      color: var(--azul);
+      margin-bottom: 9px;
+      font-size: 18px;
+    }
+
+    .benefit p {
+      color: var(--gris-500);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .zones {
+      background: var(--azul);
+      color: white;
+    }
+
+    .zones .section-header h2 {
+      color: white;
+    }
+
+    .zones .section-header p {
+      color: #d5e3eb;
+    }
+
+    .zone-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 16px;
+    }
+
+    .zone {
+      padding: 22px;
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 12px;
+      background: rgba(255,255,255,.05);
+    }
+
+    .zone strong {
+      display: block;
+      color: white;
+      font-size: 17px;
+      margin-bottom: 5px;
+    }
+
+    .zone span {
+      color: #d5e3eb;
+      font-size: 13px;
+    }
+
+    .cta {
+      background: var(--gris-50);
+      text-align: center;
+    }
+
+    .cta-box {
+      max-width: 900px;
+      margin: auto;
+      padding: 55px 40px;
+      border: 1px solid var(--gris-200);
+      border-radius: 20px;
+      background: white;
+      box-shadow: var(--sombra);
+    }
+
+    .cta-box h2 {
+      color: var(--azul);
+      font-size: clamp(30px,4vw,42px);
+      line-height: 1.15;
+      margin-bottom: 14px;
+    }
+
+    .cta-box p {
+      max-width: 680px;
+      margin: 0 auto 28px;
+      color: var(--gris-500);
+      font-size: 15px;
+    }
+
+    footer {
+      padding: 42px 0;
+      background: var(--azul-oscuro);
+      color: #cbdbe4;
+      text-align: center;
+    }
+
+    footer strong {
+      color: white;
+      font-size: 20px;
+    }
+
+    footer p {
+      margin-top: 8px;
+      font-size: 13px;
+    }
+
+    .whatsapp-floating {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 1500;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: #25D366;
+      color: white;
+      font-size: 25px;
+      box-shadow: 0 8px 25px rgba(0,0,0,.18);
+      transition: .2s ease;
+    }
+
+    .whatsapp-floating:hover {
+      transform: translateY(-3px) scale(1.03);
+    }
+
+    @media (max-width: 900px) {
+
+      nav {
+        display: none;
+      }
+
+      .intro-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .service-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .benefits-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .zone-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      section {
+        padding: 70px 0;
+      }
+    }
+
+    @media (max-width: 600px) {
+
+      .nav {
+        min-height: 68px;
+      }
+
+      .logo {
+        font-size: 20px;
+      }
+
+      .hero-content {
+        padding: 78px 0 70px;
+      }
+
+      .hero h1 {
+        font-size: 43px;
+        letter-spacing: -1.5px;
+      }
+
+      .hero p {
+        font-size: 16px;
+      }
+
+      .buttons {
+        width: 100%;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
+      .zone-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .cta-box {
+        padding: 42px 22px;
+      }
+
+      .whatsapp-floating {
+        right: 17px;
+        bottom: 17px;
+        width: 52px;
+        height: 52px;
+      }
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+<header>
+
+  <div class="container nav">
+
+    <a href="/" class="logo">
+      Sotofrau
+      <span>Propiedades</span>
+    </a>
+
+    <nav>
+
+      <a href="#servicios">
+        Servicio
+      </a>
+
+      <a href="#beneficios">
+        Beneficios
+      </a>
+
+      <a href="#zonas">
+        Zonas
+      </a>
+
+      <a href="#contacto" class="nav-contact">
+        Contacto
+      </a>
+
+    </nav>
+
+  </div>
+
+</header>
+
+
+<section class="hero">
+
+  <div class="container">
+
+    <div class="hero-content">
+
+      <div class="hero-label">
+        Administración de propiedades
+      </div>
+
+      <h1>
+        Administra tu propiedad en
+        <span>Viña del Mar</span>
+      </h1>
+
+      <p>
+        Delegar la gestión de una propiedad arrendada puede ayudarte
+        a ahorrar tiempo y mantener un seguimiento más ordenado de
+        pagos, comunicación y situaciones relacionadas con el inmueble.
+      </p>
+
+      <div class="buttons">
+
+        <a
+          href="#contacto"
+          class="btn btn-primary"
+        >
+          Consultar por administración
+        </a>
+
+        <a
+          href="/"
+          class="btn btn-light"
+        >
+          Conocer Sotofrau Propiedades
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="intro">
+
+  <div class="container">
+
+    <div class="intro-grid">
+
+      <div class="intro-content">
+
+        <span class="section-label">
+          Gestión para propietarios
+        </span>
+
+        <h2>
+          Tu propiedad sigue siendo tuya. Nosotros nos encargamos de gestionarla.
+        </h2>
+
+        <p>
+          En Sotofrau Propiedades ofrecemos un servicio de administración
+          orientado a propietarios que ya tienen una propiedad arrendada
+          y buscan delegar parte de su gestión cotidiana.
+        </p>
+
+        <p>
+          Coordinamos la comunicación con el arrendatario, seguimiento
+          del arriendo, mantenciones y otras gestiones administrativas
+          relacionadas con la propiedad.
+        </p>
+
+      </div>
+
+      <div class="highlight-box">
+
+        <strong>
+          Mayor tranquilidad
+        </strong>
+
+        <p>
+          El objetivo es que tengas información sobre lo que ocurre
+          con tu propiedad sin tener que encargarte personalmente de
+          cada coordinación.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="services" id="servicios">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span class="section-label">
+        Servicio de administración
+      </span>
+
+      <h2>
+        ¿Qué podemos gestionar?
+      </h2>
+
+      <p>
+        El alcance concreto del servicio se define de acuerdo con
+        las necesidades de cada propietario y propiedad.
+      </p>
+
+    </div>
+
+    <div class="service-grid">
+
+      <div class="service">
+
+        <div class="service-number">
+          01
+        </div>
+
+        <h3>
+          Cobro y seguimiento
+        </h3>
+
+        <p>
+          Seguimiento del pago del arriendo y comunicación relacionada
+          con el cumplimiento de las obligaciones correspondientes.
+        </p>
+
+      </div>
+
+      <div class="service">
+
+        <div class="service-number">
+          02
+        </div>
+
+        <h3>
+          Coordinación de mantenciones
+        </h3>
+
+        <p>
+          Coordinamos reparaciones, visitas técnicas y otras gestiones
+          necesarias para el mantenimiento de la propiedad.
+        </p>
+
+      </div>
+
+      <div class="service">
+
+        <div class="service-number">
+          03
+        </div>
+
+        <h3>
+          Comunicación con el arrendatario
+        </h3>
+
+        <p>
+          Centralizamos consultas y situaciones relacionadas con la
+          gestión cotidiana del inmueble.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="benefits" id="beneficios">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span class="section-label">
+        Para el propietario
+      </span>
+
+      <h2>
+        Una administración más ordenada
+      </h2>
+
+      <p>
+        El servicio busca facilitar la gestión y mantener una
+        comunicación clara entre propietario, administración y arrendatario.
+      </p>
+
+    </div>
+
+    <div class="benefits-grid">
+
+      <div class="benefit">
+
+        <h3>
+          Seguimiento mensual
+        </h3>
+
+        <p>
+          Mantienes información sobre los principales movimientos
+          y situaciones relacionadas con la propiedad.
+        </p>
+
+      </div>
+
+      <div class="benefit">
+
+        <h3>
+          Coordinación de mantenciones
+        </h3>
+
+        <p>
+          Te apoyamos coordinando proveedores y situaciones que
+          requieran atención en el inmueble.
+        </p>
+
+      </div>
+
+      <div class="benefit">
+
+        <h3>
+          Apoyo administrativo
+        </h3>
+
+        <p>
+          Organizamos tareas y comunicaciones para disminuir
+          la carga de gestión directa del propietario.
+        </p>
+
+      </div>
+
+      <div class="benefit">
+
+        <h3>
+          Comunicación clara
+        </h3>
+
+        <p>
+          Buscamos mantener un canal de comunicación ordenado
+          y oportuno respecto de la propiedad.
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="zones" id="zonas">
+
+  <div class="container">
+
+    <div class="section-header">
+
+      <span class="section-label">
+        Cobertura
+      </span>
+
+      <h2>
+        Administración de propiedades en la Región de Valparaíso
+      </h2>
+
+      <p>
+        Atendemos principalmente propietarios de propiedades
+        ubicadas en las siguientes zonas.
+      </p>
+
+    </div>
+
+    <div class="zone-grid">
+
+      <div class="zone">
+        <strong>Viña del Mar</strong>
+        <span>Administración y seguimiento de propiedades arrendadas.</span>
+      </div>
+
+      <div class="zone">
+        <strong>Concón</strong>
+        <span>Gestión de propiedades residenciales.</span>
+      </div>
+
+      <div class="zone">
+        <strong>Reñaca</strong>
+        <span>Administración de propiedades arrendadas.</span>
+      </div>
+
+      <div class="zone">
+        <strong>Valparaíso</strong>
+        <span>Apoyo en administración según propiedad y operación.</span>
+      </div>
+
+      <div class="zone">
+        <strong>Quilpué</strong>
+        <span>Gestión para propietarios.</span>
+      </div>
+
+      <div class="zone">
+        <strong>Villa Alemana</strong>
+        <span>Administración y coordinación de propiedades.</span>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="cta" id="contacto">
+
+  <div class="container">
+
+    <div class="cta-box">
+
+      <span class="section-label">
+        Propietarios
+      </span>
+
+      <h2>
+        ¿Tienes una propiedad arrendada?
+      </h2>
+
+      <p>
+        Cuéntame dónde está ubicada, qué tipo de propiedad es
+        y qué parte de la gestión deseas delegar. Podemos
+        conversar sobre el servicio de administración.
+      </p>
+
+      <div
+        class="buttons"
+        style="justify-content:center;"
+      >
+
+        <a
+          href="https://wa.me/56944844983?text=Hola%2C%20tengo%20una%20propiedad%20arrendada%20y%20quiero%20consultar%20por%20el%20servicio%20de%20administraci%C3%B3n."
+          target="_blank"
+          rel="noopener"
+          class="btn btn-primary"
+        >
+          Consultar por WhatsApp
+        </a>
+
+        <a
+          href="/"
+          class="btn"
+          style="background:var(--azul);color:white;"
+        >
+          Ver sitio principal
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <div class="container">
+
+    <strong>
+      Sotofrau Propiedades
+    </strong>
+
+    <p>
+      Compra · Venta · Arriendo · Administración
+    </p>
+
+    <p>
+      Viña del Mar · Concón · Reñaca · Valparaíso · Quilpué · Villa Alemana
+    </p>
+
+    <p>
+      © 2026 Sotofrau Propiedades · Todos los derechos reservados.
+    </p>
+
+  </div>
+
+</footer>
+
+
+<a
+  class="whatsapp-floating"
+  href="https://wa.me/56944844983?text=Hola%2C%20quiero%20consultar%20por%20el%20servicio%20de%20administraci%C3%B3n%20de%20propiedades."
+  target="_blank"
+  rel="noopener"
+  aria-label="Contactar por WhatsApp"
+>
+  ☎
+</a>
+
+</body>
+
+</html>
