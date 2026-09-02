@@ -2626,15 +2626,12 @@ function cargarPropiedades() {
 
 
   /*
-    FILTRAR SOLO LAS PROPIEDADES PUBLICADAS
-    Y ORDENAR AUTOMÁTICAMENTE:
-    
-    1. DISPONIBLES PRIMERO
-    2. DENTRO DE CADA GRUPO, ID MÁS ALTO PRIMERO
-    
-    De esta forma, cuando agregues una nueva
-    propiedad disponible con un ID mayor,
-    aparecerá automáticamente arriba.
+    MOSTRAR SOLO LAS PROPIEDADES PUBLICADAS
+
+    ORDEN:
+    1. Disponibles
+    2. Gestionadas / Arrendadas / Vendidas
+    3. ID más alto primero
   */
 
   const propiedadesPublicadas =
@@ -2661,12 +2658,6 @@ function cargarPropiedades() {
               : 1;
 
 
-          /*
-            Primero se comparan los estados.
-            0 = disponible
-            1 = gestionada / arrendada / vendida
-          */
-
           if (
             prioridadA !== prioridadB
           ) {
@@ -2676,11 +2667,6 @@ function cargarPropiedades() {
 
           }
 
-
-          /*
-            Si ambas tienen el mismo estado,
-            la de ID más alto aparece primero.
-          */
 
           return b.id -
             a.id;
@@ -2737,24 +2723,34 @@ function cargarPropiedades() {
 
 
       const caracteristicas =
-        propiedad.caracteristicas
-          .map(
-            function(caracteristica) {
+        Array.isArray(
+          propiedad.caracteristicas
+        )
+          ? propiedad.caracteristicas
+              .map(
+                function(caracteristica) {
 
-              return `
-                <span>
-                  ${caracteristica}
-                </span>
-              `;
+                  return `
+                    <span>
+                      ${caracteristica}
+                    </span>
+                  `;
 
-            }
-          )
-          .join("");
+                }
+              )
+              .join("")
+          : "";
 
 
       const enlace =
         "propiedad.html?id=" +
         propiedad.id;
+
+
+      const textoEnlace =
+        propiedad.estado === "disponible"
+          ? "Ver propiedad disponible"
+          : "Ver propiedad gestionada";
 
 
       tarjeta.innerHTML = `
@@ -2770,8 +2766,9 @@ function cargarPropiedades() {
 
           <img
             src="${propiedad.fotos[0]}"
-            alt="${propiedad.titulo}"
+            alt="${propiedad.titulo} en ${propiedad.ubicacion}"
             loading="lazy"
+            decoding="async"
           >
 
         </div>
@@ -2809,6 +2806,7 @@ function cargarPropiedades() {
           <a
             href="${enlace}"
             class="property-button"
+            aria-label="${textoEnlace}: ${propiedad.titulo} — ${propiedad.ubicacion}"
           >
             Ver propiedad
           </a>
@@ -2826,6 +2824,7 @@ function cargarPropiedades() {
   );
 
 }
+
 
 
 /* =====================================================
