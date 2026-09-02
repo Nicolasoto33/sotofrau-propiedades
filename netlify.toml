@@ -1,3 +1,24 @@
 [build]
   command = "node generate-sitemap.js"
   publish = "."
+
+# Redirecciones permanentes de las antiguas páginas de propiedades
+# hacia las URLs oficiales del sistema dinámico.
+
+[[redirects]]
+  from = "/propiedad-1.html"
+  to = "/propiedad.html?id=1"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/propiedad-2.html"
+  to = "/propiedad.html?id=2"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/propiedad-3.html"
+  to = "/propiedad.html?id=3"
+  status = 301
+  force = true
