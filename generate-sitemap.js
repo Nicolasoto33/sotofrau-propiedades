@@ -1,23 +1,32 @@
 const fs = require("fs");
 const path = require("path");
 
-const BASE_URL = "https://sotofraupropiedades.cl";
+const BASE_URL =
+  "https://sotofraupropiedades.cl";
 
-const propiedadesPath = path.join(
-  __dirname,
-  "propiedades.js"
-);
+const propiedadesPath =
+  path.join(__dirname, "propiedades.js");
 
-const sitemapPath = path.join(
-  __dirname,
-  "sitemap.xml"
-);
+const sitemapPath =
+  path.join(__dirname, "sitemap.xml");
+
+
+/* =====================================================
+   VERIFICAR ARCHIVOS
+===================================================== */
 
 if (!fs.existsSync(propiedadesPath)) {
+
   throw new Error(
     "No se encontró propiedades.js"
   );
+
 }
+
+
+/* =====================================================
+   LEER propiedades.js
+===================================================== */
 
 const codigo =
   fs.readFileSync(
@@ -25,177 +34,170 @@ const codigo =
     "utf8"
   );
 
-/*
-  Buscamos el arreglo:
-  const propiedades = [ ... ];
 
-  No ejecutamos propiedades.js.
-  Solo extraemos ID y estado publicada.
-*/
+/* =====================================================
+   EXTRAER PROPIEDADES
 
-const inicio =
-  codigo.indexOf(
-    "const propiedades = ["
-  );
-
-if (inicio === -1) {
-  throw new Error(
-    "No se encontró 'const propiedades = [' en propiedades.js"
-  );
-}
-
-const inicioArray =
-  codigo.indexOf(
-    "[",
-    inicio
-  );
-
-const finArray =
-  codigo.indexOf(
-    "];",
-    inicioArray
-  );
-
-if (inicioArray === -1) {
-  throw new Error(
-    "No se encontró el inicio del arreglo de propiedades."
-  );
-}
-
-if (finArray === -1) {
-  throw new Error(
-    "No se encontró el cierre del arreglo de propiedades."
-  );
-}
-
-const textoArray =
-  codigo.slice(
-    inicioArray,
-    finArray + 1
-  );
-
-/*
-  Extraemos cada propiedad que tenga:
-  id: número
-  publicada: true/false
-
-  La expresión busca desde un objeto que
-  comienza con id hasta antes del siguiente
-  objeto de propiedad.
-*/
+   Solo necesitamos:
+   - id
+   - publicada
+   - estado
+===================================================== */
 
 const propiedades = [];
 
-const bloques =
-  textoArray.match(
-    /{\s*id:\s*\d+,[\s\S]*?(?=\n\s*},|\n\s*})/g
-  );
+const expresion =
+  /{\s*id:\s*(\d+),[\s\S]*?publicada:\s*(true|false),[\s\S]*?estado:\s*"([^"]+)"/g;
 
-if (!bloques) {
-  throw new Error(
-    "No se encontraron propiedades dentro del arreglo."
-  );
-}
+let coincidencia;
 
-for (const bloque of bloques) {
-
-  const idMatch =
-    bloque.match(
-      /id:\s*(\d+)/
-    );
-
-  const publicadaMatch =
-    bloque.match(
-      /publicada:\s*(true|false)/
-    );
-
-  if (
-    !idMatch ||
-    !publicadaMatch
-  ) {
-    continue;
-  }
+while (
+  (coincidencia =
+    expresion.exec(codigo)) !== null
+) {
 
   propiedades.push({
+
     id:
       Number(
-        idMatch[1]
+        coincidencia[1]
       ),
 
     publicada:
-      publicadaMatch[1] ===
-      "true"
+      coincidencia[2] ===
+      "true",
+
+    estado:
+      coincidencia[3]
+
   });
 
 }
 
-/*
-  Eliminar posibles duplicados
-*/
 
-const idsPublicados =
-  [
-    ...new Set(
-      propiedades
-        .filter(
-          propiedad =>
-            propiedad.publicada === true
-        )
-        .map(
-          propiedad =>
-            propiedad.id
-        )
-    )
-  ];
+/* =====================================================
+   VERIFICAR QUE SE ENCONTRARON PROPIEDADES
+===================================================== */
 
-/*
-  URLs del sitemap
+if (
+  propiedades.length === 0
+) {
 
-  La página principal siempre se incluye.
-*/
-
-const urls = [
-  `${BASE_URL}/`
-];
-
-/*
-  Agregar solamente propiedades publicadas.
-*/
-
-idsPublicados
-  .forEach(
-    id => {
-
-      urls.push(
-        `${BASE_URL}/propiedad.html?id=${id}`
-      );
-
-    }
+  throw new Error(
+    "No se encontraron propiedades válidas en propiedades.js"
   );
 
-/*
-  Generar sitemap XML
-*/
+}
+
+
+/* =====================================================
+   PROPIEDADES DISPONIBLES
+
+   Se incluyen solamente las propiedades que:
+   1. están publicadas
+   2. tienen estado disponible
+===================================================== */
+
+const propiedadesDisponibles =
+  propiedades
+    .filter(
+      function(propiedad) {
+
+        return (
+          propiedad.publicada === true &&
+          propiedad.estado === "disponible"
+        );
+
+      }
+    )
+    .sort(
+      function(a, b) {
+
+        return b.id - a.id;
+
+      }
+    );
+
+
+/* =====================================================
+   GENERAR URLs
+===================================================== */
+
+const urls = [
+
+  `${BASE_URL}/`
+
+];
+
+
+propiedadesDisponibles.forEach(
+  function(propiedad) {
+
+    urls.push(
+      `${BASE_URL}/propiedad.html?id=${propiedad.id}`
+    );
+
+  }
+);
+
+
+/* =====================================================
+   ESCAPAR XML
+===================================================== */
+
+function escaparXML(texto) {
+
+  return String(texto)
+    .replace(
+      /&/g,
+      "&amp;"
+    )
+    .replace(
+      /</g,
+      "&lt;"
+    )
+    .replace(
+      />/g,
+      "&gt;"
+    )
+    .replace(
+      /"/g,
+      "&quot;"
+    )
+    .replace(
+      /'/g,
+      "&apos;"
+    );
+
+}
+
+
+/* =====================================================
+   GENERAR SITEMAP XML
+===================================================== */
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 ${urls
   .map(
-    url => `  <url>
-    <loc>${url}</loc>
-  </url>`
+    function(url) {
+
+      return `  <url>
+    <loc>${escaparXML(url)}</loc>
+  </url>`;
+
+    }
   )
   .join("\n\n")}
 
 </urlset>
 `;
 
-/*
-  Guardar sitemap.xml
-*/
+
+/* =====================================================
+   GUARDAR sitemap.xml
+===================================================== */
 
 fs.writeFileSync(
   sitemapPath,
@@ -203,10 +205,31 @@ fs.writeFileSync(
   "utf8"
 );
 
+
+/* =====================================================
+   MENSAJE DEL BUILD
+===================================================== */
+
 console.log(
-  `Sitemap generado correctamente con ${urls.length} URLs.`
+  "Sitemap generado correctamente."
 );
 
 console.log(
-  `Propiedades publicadas incluidas: ${idsPublicados.length}`
+  `URLs totales: ${urls.length}`
+);
+
+console.log(
+  `Propiedades disponibles incluidas: ${propiedadesDisponibles.length}`
+);
+
+console.log(
+  propiedadesDisponibles
+    .map(
+      function(propiedad) {
+
+        return `ID ${propiedad.id}`;
+
+      }
+    )
+    .join(", ")
 );
