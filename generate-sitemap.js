@@ -122,14 +122,20 @@ const propiedadesDisponibles =
 /* =====================================================
    GENERAR URLs
 
-   PÁGINAS SEO FIJAS
+   PÁGINAS PRINCIPALES + SEO
 ===================================================== */
 
 const urls = [
 
   `${BASE_URL}/`,
 
-  `${BASE_URL}/corredor-propiedades-vina-del-mar.html`
+  `${BASE_URL}/corredor-propiedades-vina-del-mar.html`,
+
+  `${BASE_URL}/venta-propiedades.html`,
+
+  `${BASE_URL}/arriendo-propiedades.html`,
+
+  `${BASE_URL}/administracion-propiedades.html`
 
 ];
 
