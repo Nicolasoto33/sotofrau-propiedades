@@ -1,22 +1,42 @@
 const fs = require("fs");
+const path = require("path");
 
-const propiedadesPath = "./propiedades.js";
+const BASE_URL = "https://sotofraupropiedades.cl";
+
+const propiedadesPath = path.join(
+  __dirname,
+  "propiedades.js"
+);
+
+const sitemapPath = path.join(
+  __dirname,
+  "sitemap.xml"
+);
 
 if (!fs.existsSync(propiedadesPath)) {
-  throw new Error("No se encontró propiedades.js");
+  throw new Error(
+    "No se encontró propiedades.js"
+  );
 }
 
-const codigo = fs.readFileSync(propiedadesPath, "utf8");
+const codigo =
+  fs.readFileSync(
+    propiedadesPath,
+    "utf8"
+  );
 
 /*
-  Buscamos únicamente el arreglo:
+  Buscamos el arreglo:
   const propiedades = [ ... ];
-  
-  Así NO ejecutamos el código del navegador
-  que contiene document.addEventListener(), etc.
+
+  No ejecutamos propiedades.js.
+  Solo extraemos ID y estado publicada.
 */
 
-const inicio = codigo.indexOf("const propiedades = [");
+const inicio =
+  codigo.indexOf(
+    "const propiedades = ["
+  );
 
 if (inicio === -1) {
   throw new Error(
@@ -24,9 +44,23 @@ if (inicio === -1) {
   );
 }
 
-const inicioArray = codigo.indexOf("[", inicio);
+const inicioArray =
+  codigo.indexOf(
+    "[",
+    inicio
+  );
 
-const finArray = codigo.indexOf("];", inicioArray);
+const finArray =
+  codigo.indexOf(
+    "];",
+    inicioArray
+  );
+
+if (inicioArray === -1) {
+  throw new Error(
+    "No se encontró el inicio del arreglo de propiedades."
+  );
+}
 
 if (finArray === -1) {
   throw new Error(
@@ -34,22 +68,28 @@ if (finArray === -1) {
   );
 }
 
-const textoArray = codigo.slice(
-  inicioArray,
-  finArray + 1
-);
+const textoArray =
+  codigo.slice(
+    inicioArray,
+    finArray + 1
+  );
 
 /*
-  Convertimos el arreglo JavaScript en un objeto.
-  Como aquí solo necesitamos id y publicada,
-  extraemos esos valores mediante expresión regular.
+  Extraemos cada propiedad que tenga:
+  id: número
+  publicada: true/false
+
+  La expresión busca desde un objeto que
+  comienza con id hasta antes del siguiente
+  objeto de propiedad.
 */
 
 const propiedades = [];
 
-const bloques = textoArray.match(
-  /{\s*id:\s*\d+,[\s\S]*?}/g
-);
+const bloques =
+  textoArray.match(
+    /{\s*id:\s*\d+,[\s\S]*?(?=\n\s*},|\n\s*})/g
+  );
 
 if (!bloques) {
   throw new Error(
@@ -58,54 +98,89 @@ if (!bloques) {
 }
 
 for (const bloque of bloques) {
-  const idMatch = bloque.match(
-    /id:\s*(\d+)/
-  );
 
-  const publicadaMatch = bloque.match(
-    /publicada:\s*(true|false)/
-  );
+  const idMatch =
+    bloque.match(
+      /id:\s*(\d+)/
+    );
 
-  if (!idMatch || !publicadaMatch) {
+  const publicadaMatch =
+    bloque.match(
+      /publicada:\s*(true|false)/
+    );
+
+  if (
+    !idMatch ||
+    !publicadaMatch
+  ) {
     continue;
   }
 
   propiedades.push({
-    id: Number(idMatch[1]),
-    publicada: publicadaMatch[1] === "true"
+    id:
+      Number(
+        idMatch[1]
+      ),
+
+    publicada:
+      publicadaMatch[1] ===
+      "true"
   });
+
 }
 
 /*
-  Generar URLs
+  Eliminar posibles duplicados
 */
 
-const baseUrl =
-  "https://sotofraupropiedades.cl";
+const idsPublicados =
+  [
+    ...new Set(
+      propiedades
+        .filter(
+          propiedad =>
+            propiedad.publicada === true
+        )
+        .map(
+          propiedad =>
+            propiedad.id
+        )
+    )
+  ];
+
+/*
+  URLs del sitemap
+
+  La página principal siempre se incluye.
+*/
 
 const urls = [
-  `${baseUrl}/`
+  `${BASE_URL}/`
 ];
 
-propiedades
-  .filter(
-    propiedad =>
-      propiedad.publicada === true
-  )
+/*
+  Agregar solamente propiedades publicadas.
+*/
+
+idsPublicados
   .forEach(
-    propiedad => {
+    id => {
+
       urls.push(
-        `${baseUrl}/propiedad.html?id=${propiedad.id}`
+        `${BASE_URL}/propiedad.html?id=${id}`
       );
+
     }
   );
 
 /*
-  Crear sitemap.xml
+  Generar sitemap XML
 */
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+>
 
 ${urls
   .map(
@@ -118,12 +193,20 @@ ${urls
 </urlset>
 `;
 
+/*
+  Guardar sitemap.xml
+*/
+
 fs.writeFileSync(
-  "./sitemap.xml",
+  sitemapPath,
   sitemap,
   "utf8"
 );
 
 console.log(
   `Sitemap generado correctamente con ${urls.length} URLs.`
+);
+
+console.log(
+  `Propiedades publicadas incluidas: ${idsPublicados.length}`
 );
