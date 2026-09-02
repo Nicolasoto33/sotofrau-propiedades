@@ -19,10 +19,10 @@
     content="Propiedad publicada por Sotofrau Propiedades."
   >
 
-  <link
-    id="canonicalLink"
-    rel="canonical"
-    href="https://sotofraupropiedades.cl/propiedad.html"
+  <meta
+    id="robotsMeta"
+    name="robots"
+    content="index, follow"
   >
 
   <meta
@@ -52,7 +52,7 @@
   <meta
     id="ogUrl"
     property="og:url"
-    content="https://sotofraupropiedades.cl/propiedad.html"
+    content="https://sotofraupropiedades.cl/"
   >
 
   <meta
@@ -106,12 +106,10 @@
   {}
   </script>
 
-
   <meta
     name="theme-color"
     content="#0d2f49"
   >
-
 
   <style>
 
@@ -2092,6 +2090,39 @@
       );
 
 
+
+    /* =================================================
+       CREAR CANONICAL DINÁMICA
+    ================================================= */
+
+    let canonicalLink =
+      document.querySelector(
+        'link[rel="canonical"]'
+      );
+
+
+    if (!canonicalLink) {
+
+      canonicalLink =
+        document.createElement(
+          "link"
+        );
+
+      canonicalLink.rel =
+        "canonical";
+
+      document.head.appendChild(
+        canonicalLink
+      );
+
+    }
+
+
+    canonicalLink.href =
+      urlCanonica;
+
+
+
     /* =================================================
        DESCRIPCIÓN PRINCIPAL
     ================================================= */
@@ -2201,6 +2232,7 @@
     }
 
 
+
     try {
 
       imagenSEO =
@@ -2238,19 +2270,6 @@
     ).setAttribute(
       "content",
       descripcionSEO
-    );
-
-
-
-    /* =================================================
-       URL CANÓNICA
-    ================================================= */
-
-    document.getElementById(
-      "canonicalLink"
-    ).setAttribute(
-      "href",
-      urlCanonica
     );
 
 
@@ -2358,6 +2377,7 @@
       String(
         propiedadActual.precio || ""
       );
+
 
 
     /* =================================================
