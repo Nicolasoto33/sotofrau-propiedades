@@ -25,10 +25,6 @@
     href="https://sotofraupropiedades.cl/corredor-propiedades-vina-del-mar.html"
   >
 
-  <!-- =====================================================
-       OPEN GRAPH
-  ===================================================== -->
-
   <meta
     property="og:title"
     content="Corredor de Propiedades en Viña del Mar | Sotofrau Propiedades"
@@ -42,11 +38,6 @@
   <meta
     property="og:image"
     content="https://sotofraupropiedades.cl/android-chrome-512x512.png"
-  >
-
-  <meta
-    property="og:image:alt"
-    content="Sotofrau Propiedades"
   >
 
   <meta
@@ -69,11 +60,6 @@
     content="es_CL"
   >
 
-
-  <!-- =====================================================
-       TWITTER
-  ===================================================== -->
-
   <meta
     name="twitter:card"
     content="summary_large_image"
@@ -95,65 +81,22 @@
   >
 
   <meta
-    name="twitter:image:alt"
-    content="Sotofrau Propiedades"
-  >
-
-
-  <meta
     name="theme-color"
     content="#0d2f49"
   >
 
+  <link rel="icon" href="/favicon.ico">
 
-  <!-- =====================================================
-       FAVICON
-  ===================================================== -->
+  <link rel="manifest" href="/site.webmanifest">
 
-  <link
-    rel="apple-touch-icon"
-    sizes="180x180"
-    href="/apple-touch-icon.png"
-  >
-
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="32x32"
-    href="/favicon-32x32.png"
-  >
-
-  <link
-    rel="icon"
-    type="image/png"
-    sizes="16x16"
-    href="/favicon-16x16.png"
-  >
-
-  <link
-    rel="icon"
-    href="/favicon.ico"
-  >
-
-  <link
-    rel="manifest"
-    href="/site.webmanifest"
-  >
-
-
-  <!-- =====================================================
-       DATOS ESTRUCTURADOS
-  ===================================================== -->
-
-  <script
-    type="application/ld+json"
-  >
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
     "name": "Sotofrau Propiedades",
     "url": "https://sotofraupropiedades.cl/",
     "telephone": "+56 9 4484 4983",
+    "email": "sotofraupropiedades@gmail.com",
     "areaServed": {
       "@type": "City",
       "name": "Viña del Mar"
@@ -164,65 +107,35 @@
   }
   </script>
 
-
   <style>
 
     :root {
-
-      --azul: #0d2f49;
-      --azul-2: #164968;
-      --azul-oscuro: #081f31;
-
-      --naranja: #e88925;
-      --naranja-hover: #d97818;
-
-      --blanco: #ffffff;
-
-      --gris-50: #fafbfc;
-      --gris-100: #f3f5f7;
-      --gris-200: #e6eaee;
-      --gris-500: #6b7781;
-      --gris-700: #37444e;
-
-      --verde: #238b57;
-
-      --sombra:
-        0 12px 35px rgba(13,47,73,.08);
-
-      --sombra-hover:
-        0 18px 45px rgba(13,47,73,.14);
-
-      --radio: 16px;
-
-      --ancho: 1180px;
-
+      --azul:#0d2f49;
+      --azul-2:#164968;
+      --azul-oscuro:#081f31;
+      --naranja:#e88925;
+      --naranja-hover:#d97818;
+      --blanco:#ffffff;
+      --gris-50:#fafbfc;
+      --gris-200:#e6eaee;
+      --gris-500:#6b7781;
+      --gris-700:#37444e;
+      --sombra:0 12px 35px rgba(13,47,73,.08);
+      --radio:16px;
+      --ancho:1180px;
     }
-
 
     * {
-
-      box-sizing:
-        border-box;
-
-      margin:
-        0;
-
-      padding:
-        0;
-
+      box-sizing:border-box;
+      margin:0;
+      padding:0;
     }
-
 
     html {
-
-      scroll-behavior:
-        smooth;
-
+      scroll-behavior:smooth;
     }
 
-
     body {
-
       font-family:
         Inter,
         -apple-system,
@@ -230,1416 +143,505 @@
         "Segoe UI",
         Arial,
         sans-serif;
-
-      color:
-        var(--gris-700);
-
-      background:
-        var(--blanco);
-
-      line-height:
-        1.6;
-
+      color:var(--gris-700);
+      background:white;
+      line-height:1.6;
     }
-
-
-    img {
-
-      max-width:
-        100%;
-
-    }
-
 
     a {
-
-      text-decoration:
-        none;
-
-      color:
-        inherit;
-
+      text-decoration:none;
+      color:inherit;
     }
-
 
     .container {
-
-      width:
-        min(
-          var(--ancho),
-          92%
-        );
-
-      margin:
-        auto;
-
+      width:min(var(--ancho),92%);
+      margin:auto;
     }
-
-
-    /* =====================================================
-       HEADER
-    ===================================================== */
 
     header {
-
-      position:
-        sticky;
-
-      top:
-        0;
-
-      z-index:
-        1000;
-
-      background:
-        rgba(255,255,255,.97);
-
-      backdrop-filter:
-        blur(14px);
-
-      border-bottom:
-        1px solid rgba(13,47,73,.08);
-
+      position:sticky;
+      top:0;
+      z-index:1000;
+      background:rgba(255,255,255,.97);
+      backdrop-filter:blur(14px);
+      border-bottom:1px solid rgba(13,47,73,.08);
     }
-
 
     .nav {
-
-      min-height:
-        78px;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        space-between;
-
-      gap:
-        30px;
-
+      min-height:78px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:30px;
     }
-
 
     .logo {
-
-      display:
-        inline-flex;
-
-      align-items:
-        center;
-
-      color:
-        var(--azul);
-
-      font-size:
-        23px;
-
-      font-weight:
-        800;
-
-      letter-spacing:
-        -.5px;
-
-      white-space:
-        nowrap;
-
+      display:inline-flex;
+      align-items:center;
+      color:var(--azul);
+      font-size:23px;
+      font-weight:800;
+      letter-spacing:-.5px;
+      white-space:nowrap;
     }
-
 
     .logo span {
-
-      color:
-        var(--naranja);
-
-      margin-left:
-        5px;
-
+      color:var(--naranja);
+      margin-left:5px;
     }
-
 
     nav {
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      gap:
-        26px;
-
-      font-size:
-        14px;
-
-      font-weight:
-        650;
-
+      display:flex;
+      align-items:center;
+      gap:20px;
+      font-size:13px;
+      font-weight:650;
     }
-
-
-    nav a {
-
-      color:
-        var(--azul);
-
-      transition:
-        .2s ease;
-
-    }
-
 
     nav a:hover {
-
-      color:
-        var(--naranja);
-
+      color:var(--naranja);
     }
-
 
     .nav-contact {
-
-      background:
-        var(--azul);
-
-      color:
-        white !important;
-
-      padding:
-        11px 18px;
-
-      border-radius:
-        9px;
-
+      background:var(--azul);
+      color:white!important;
+      padding:11px 18px;
+      border-radius:9px;
     }
-
-
-    .nav-contact:hover {
-
-      background:
-        var(--azul-2);
-
-    }
-
-
-    /* =====================================================
-       HERO
-    ===================================================== */
 
     .hero {
-
-      position:
-        relative;
-
-      overflow:
-        hidden;
-
-      color:
-        white;
-
+      position:relative;
+      overflow:hidden;
+      color:white;
       background:
-
         linear-gradient(
-
           90deg,
-
-          rgba(6,25,40,.97) 0%,
-
-          rgba(8,34,53,.90) 48%,
-
-          rgba(8,34,53,.72) 100%
-
+          rgba(6,25,40,.97),
+          rgba(8,34,53,.78)
         ),
-
         linear-gradient(
-
           135deg,
-
           var(--azul),
-
           var(--azul-2)
-
         );
-
     }
-
-
-    .hero::after {
-
-      content:
-        "";
-
-      position:
-        absolute;
-
-      width:
-        500px;
-
-      height:
-        500px;
-
-      right:
-        -180px;
-
-      bottom:
-        -240px;
-
-      border-radius:
-        50%;
-
-      background:
-        rgba(232,137,37,.14);
-
-    }
-
 
     .hero-content {
-
-      position:
-        relative;
-
-      z-index:
-        2;
-
-      max-width:
-        800px;
-
-      padding:
-        110px 0 100px;
-
+      max-width:800px;
+      padding:110px 0 100px;
     }
-
 
     .hero-label {
-
-      display:
-        inline-flex;
-
-      align-items:
-        center;
-
-      gap:
-        9px;
-
-      margin-bottom:
-        22px;
-
-      color:
-        #d9e9f2;
-
-      font-size:
-        13px;
-
-      font-weight:
-        750;
-
-      text-transform:
-        uppercase;
-
-      letter-spacing:
-        1.6px;
-
+      display:inline-flex;
+      gap:9px;
+      margin-bottom:22px;
+      color:#d9e9f2;
+      font-size:13px;
+      font-weight:750;
+      text-transform:uppercase;
+      letter-spacing:1.6px;
     }
-
 
     .hero-label::before {
-
-      content:
-        "";
-
-      width:
-        28px;
-
-      height:
-        2px;
-
-      background:
-        var(--naranja);
-
+      content:"";
+      width:28px;
+      height:2px;
+      background:var(--naranja);
+      margin-top:10px;
     }
-
 
     .hero h1 {
-
-      font-size:
-        clamp(
-          40px,
-          5.5vw,
-          66px
-        );
-
-      line-height:
-        1.04;
-
-      letter-spacing:
-        -2.3px;
-
-      margin-bottom:
-        25px;
-
+      font-size:clamp(40px,5.5vw,66px);
+      line-height:1.04;
+      letter-spacing:-2.3px;
+      margin-bottom:25px;
     }
-
 
     .hero h1 span {
-
-      color:
-        #f3a04b;
-
+      color:#f3a04b;
     }
-
 
     .hero p {
-
-      max-width:
-        700px;
-
-      color:
-        #e4eef3;
-
-      font-size:
-        18px;
-
-      line-height:
-        1.75;
-
-      margin-bottom:
-        34px;
-
+      max-width:700px;
+      color:#e4eef3;
+      font-size:18px;
+      line-height:1.75;
+      margin-bottom:34px;
     }
-
 
     .buttons {
-
-      display:
-        flex;
-
-      flex-wrap:
-        wrap;
-
-      gap:
-        12px;
-
+      display:flex;
+      flex-wrap:wrap;
+      gap:12px;
     }
-
 
     .btn {
-
-      display:
-        inline-flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
-
-      padding:
-        14px 22px;
-
-      border-radius:
-        9px;
-
-      font-size:
-        14px;
-
-      font-weight:
-        750;
-
-      transition:
-        .2s ease;
-
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 22px;
+      border-radius:9px;
+      font-size:14px;
+      font-weight:750;
     }
-
-
-    .btn:hover {
-
-      transform:
-        translateY(-2px);
-
-    }
-
 
     .btn-primary {
-
-      background:
-        var(--naranja);
-
-      color:
-        white;
-
-      box-shadow:
-        0 8px 22px
-        rgba(232,137,37,.22);
-
+      background:var(--naranja);
+      color:white;
     }
-
-
-    .btn-primary:hover {
-
-      background:
-        var(--naranja-hover);
-
-    }
-
 
     .btn-light {
-
-      background:
-        white;
-
-      color:
-        var(--azul);
-
+      background:white;
+      color:var(--azul);
     }
-
-
-    /* =====================================================
-       SECCIONES
-    ===================================================== */
 
     section {
-
-      padding:
-        90px 0;
-
+      padding:90px 0;
     }
-
 
     .section-header {
-
-      max-width:
-        760px;
-
-      margin:
-        0 auto 48px;
-
-      text-align:
-        center;
-
+      max-width:760px;
+      margin:0 auto 48px;
+      text-align:center;
     }
-
 
     .section-label {
-
-      display:
-        block;
-
-      margin-bottom:
-        9px;
-
-      color:
-        var(--naranja);
-
-      font-size:
-        12px;
-
-      font-weight:
-        800;
-
-      text-transform:
-        uppercase;
-
-      letter-spacing:
-        1.6px;
-
+      display:block;
+      margin-bottom:9px;
+      color:var(--naranja);
+      font-size:12px;
+      font-weight:800;
+      text-transform:uppercase;
+      letter-spacing:1.6px;
     }
-
 
     .section-header h2 {
-
-      color:
-        var(--azul);
-
-      font-size:
-        clamp(
-          30px,
-          4vw,
-          40px
-        );
-
-      line-height:
-        1.15;
-
-      letter-spacing:
-        -.8px;
-
-      margin-bottom:
-        15px;
-
+      color:var(--azul);
+      font-size:clamp(30px,4vw,40px);
+      line-height:1.15;
+      margin-bottom:15px;
     }
-
 
     .section-header p {
-
-      color:
-        var(--gris-500);
-
-      font-size:
-        16px;
-
+      color:var(--gris-500);
+      font-size:16px;
     }
-
-
-    /* =====================================================
-       INTRO
-    ===================================================== */
 
     .intro {
-
-      background:
-        white;
-
+      background:white;
     }
-
 
     .intro-grid {
-
-      display:
-        grid;
-
-      grid-template-columns:
-        1.25fr .75fr;
-
-      gap:
-        55px;
-
-      align-items:
-        center;
-
+      display:grid;
+      grid-template-columns:1.25fr .75fr;
+      gap:55px;
+      align-items:center;
     }
-
 
     .intro-content h2 {
-
-      color:
-        var(--azul);
-
-      font-size:
-        clamp(
-          31px,
-          4vw,
-          44px
-        );
-
-      line-height:
-        1.12;
-
-      letter-spacing:
-        -1px;
-
-      margin-bottom:
-        20px;
-
+      color:var(--azul);
+      font-size:clamp(31px,4vw,44px);
+      line-height:1.12;
+      margin-bottom:20px;
     }
-
 
     .intro-content p {
-
-      color:
-        var(--gris-500);
-
-      font-size:
-        16px;
-
-      line-height:
-        1.8;
-
-      margin-bottom:
-        16px;
-
+      color:var(--gris-500);
+      font-size:16px;
+      line-height:1.8;
+      margin-bottom:16px;
     }
-
 
     .highlight-box {
-
-      padding:
-        30px;
-
-      border:
-        1px solid var(--gris-200);
-
-      border-radius:
-        var(--radio);
-
-      background:
-        var(--gris-50);
-
-      box-shadow:
-        var(--sombra);
-
+      padding:30px;
+      border:1px solid var(--gris-200);
+      border-radius:var(--radio);
+      background:var(--gris-50);
+      box-shadow:var(--sombra);
     }
-
 
     .highlight-box strong {
-
-      display:
-        block;
-
-      margin-bottom:
-        10px;
-
-      color:
-        var(--azul);
-
-      font-size:
-        18px;
-
+      display:block;
+      margin-bottom:10px;
+      color:var(--azul);
+      font-size:18px;
     }
-
 
     .highlight-box p {
-
-      color:
-        var(--gris-500);
-
-      font-size:
-        14px;
-
+      color:var(--gris-500);
+      font-size:14px;
     }
-
-
-    /* =====================================================
-       SERVICIOS
-    ===================================================== */
 
     .services {
-
-      background:
-        var(--gris-50);
-
+      background:var(--gris-50);
     }
-
 
     .service-grid {
-
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap:
-        22px;
-
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
     }
-
 
     .service {
-
-      padding:
-        32px;
-
-      background:
-        white;
-
-      border:
-        1px solid var(--gris-200);
-
-      border-radius:
-        var(--radio);
-
-      box-shadow:
-        var(--sombra);
-
+      padding:32px;
+      background:white;
+      border:1px solid var(--gris-200);
+      border-radius:var(--radio);
+      box-shadow:var(--sombra);
     }
-
 
     .service-number {
-
-      margin-bottom:
-        18px;
-
-      color:
-        var(--naranja);
-
-      font-size:
-        12px;
-
-      font-weight:
-        850;
-
-      letter-spacing:
-        1px;
-
+      margin-bottom:18px;
+      color:var(--naranja);
+      font-size:12px;
+      font-weight:850;
+      letter-spacing:1px;
     }
-
 
     .service h3 {
-
-      color:
-        var(--azul);
-
-      font-size:
-        22px;
-
-      line-height:
-        1.25;
-
-      margin-bottom:
-        11px;
-
+      color:var(--azul);
+      font-size:22px;
+      margin-bottom:11px;
     }
 
+    .service h3 a:hover {
+      color:var(--naranja);
+    }
 
     .service p {
-
-      color:
-        var(--gris-500);
-
-      font-size:
-        14px;
-
-      line-height:
-        1.7;
-
+      color:var(--gris-500);
+      font-size:14px;
     }
-
-
-    /* =====================================================
-       ZONAS
-    ===================================================== */
 
     .zones {
-
-      background:
-        white;
-
+      background:white;
     }
-
 
     .zone-grid {
-
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(3, 1fr);
-
-      gap:
-        16px;
-
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:16px;
     }
-
 
     .zone {
-
-      padding:
-        20px;
-
-      border:
-        1px solid var(--gris-200);
-
-      border-radius:
-        12px;
-
-      background:
-        white;
-
-      color:
-        var(--azul);
-
-      font-size:
-        15px;
-
-      font-weight:
-        750;
-
-      box-shadow:
-        0 8px 22px
-        rgba(13,47,73,.05);
-
+      padding:20px;
+      border:1px solid var(--gris-200);
+      border-radius:12px;
+      box-shadow:var(--sombra);
     }
 
+    .zone strong {
+      display:block;
+      color:var(--azul);
+      font-size:17px;
+    }
 
     .zone span {
-
-      display:
-        block;
-
-      margin-top:
-        4px;
-
-      color:
-        var(--gris-500);
-
-      font-size:
-        12px;
-
-      font-weight:
-        500;
-
+      color:var(--gris-500);
+      font-size:13px;
     }
-
-
-    /* =====================================================
-       PROCESO
-    ===================================================== */
 
     .process {
-
-      background:
-        var(--azul);
-
-      color:
-        white;
-
+      background:var(--azul);
+      color:white;
     }
-
 
     .process .section-header h2 {
-
-      color:
-        white;
-
+      color:white;
     }
-
 
     .process .section-header p {
-
-      color:
-        #d5e3eb;
-
+      color:#d5e3eb;
     }
-
 
     .process-grid {
-
-      display:
-        grid;
-
-      grid-template-columns:
-        repeat(4, 1fr);
-
-      gap:
-        18px;
-
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
     }
-
 
     .process-item {
-
-      padding:
-        27px;
-
-      border:
-        1px solid rgba(255,255,255,.12);
-
-      border-radius:
-        var(--radio);
-
-      background:
-        rgba(255,255,255,.05);
-
+      padding:27px;
+      border:1px solid rgba(255,255,255,.12);
+      border-radius:var(--radio);
+      background:rgba(255,255,255,.05);
     }
-
 
     .process-number {
-
-      margin-bottom:
-        15px;
-
-      color:
-        #f2a053;
-
-      font-size:
-        13px;
-
-      font-weight:
-        850;
-
+      margin-bottom:15px;
+      color:#f2a053;
+      font-size:13px;
+      font-weight:850;
     }
-
 
     .process-item h3 {
-
-      margin-bottom:
-        9px;
-
-      color:
-        white;
-
-      font-size:
-        18px;
-
+      margin-bottom:9px;
+      color:white;
+      font-size:18px;
     }
-
 
     .process-item p {
-
-      color:
-        #d5e3eb;
-
-      font-size:
-        13px;
-
+      color:#d5e3eb;
+      font-size:13px;
     }
-
-
-    /* =====================================================
-       PROPIEDAD CTA
-    ===================================================== */
-
-    .property-owner {
-
-      background:
-        var(--gris-50);
-
-    }
-
 
     .owner-box {
-
-      max-width:
-        920px;
-
-      margin:
-        auto;
-
-      padding:
-        55px 45px;
-
-      border:
-        1px solid var(--gris-200);
-
-      border-radius:
-        20px;
-
-      background:
-        white;
-
-      text-align:
-        center;
-
-      box-shadow:
-        var(--sombra);
-
+      max-width:920px;
+      margin:auto;
+      padding:55px 45px;
+      border:1px solid var(--gris-200);
+      border-radius:20px;
+      background:white;
+      text-align:center;
+      box-shadow:var(--sombra);
     }
-
 
     .owner-box h2 {
-
-      color:
-        var(--azul);
-
-      font-size:
-        clamp(
-          30px,
-          4vw,
-          42px
-        );
-
-      line-height:
-        1.15;
-
-      margin-bottom:
-        14px;
-
+      color:var(--azul);
+      font-size:clamp(30px,4vw,42px);
+      line-height:1.15;
+      margin-bottom:14px;
     }
-
 
     .owner-box p {
-
-      max-width:
-        680px;
-
-      margin:
-        0 auto 28px;
-
-      color:
-        var(--gris-500);
-
-      font-size:
-        15px;
-
+      max-width:680px;
+      margin:0 auto 28px;
+      color:var(--gris-500);
+      font-size:15px;
     }
-
-
-    /* =====================================================
-       FAQ
-    ===================================================== */
-
-    .faq {
-
-      background:
-        white;
-
-    }
-
-
-    .faq-list {
-
-      max-width:
-        850px;
-
-      margin:
-        auto;
-
-      display:
-        grid;
-
-      gap:
-        14px;
-
-    }
-
-
-    .faq-item {
-
-      padding:
-        24px;
-
-      border:
-        1px solid var(--gris-200);
-
-      border-radius:
-        12px;
-
-      background:
-        white;
-
-    }
-
-
-    .faq-item h3 {
-
-      color:
-        var(--azul);
-
-      font-size:
-        18px;
-
-      margin-bottom:
-        8px;
-
-    }
-
-
-    .faq-item p {
-
-      color:
-        var(--gris-500);
-
-      font-size:
-        14px;
-
-      line-height:
-        1.7;
-
-    }
-
-
-    /* =====================================================
-       CONTACTO
-    ===================================================== */
 
     .contact {
-
-      background:
-        var(--gris-50);
-
-      text-align:
-        center;
-
+      background:var(--gris-50);
+      text-align:center;
     }
-
 
     .contact-box {
-
-      max-width:
-        800px;
-
-      margin:
-        auto;
-
+      max-width:850px;
+      margin:auto;
     }
-
 
     .contact-box h2 {
-
-      color:
-        var(--azul);
-
-      font-size:
-        clamp(
-          30px,
-          4vw,
-          42px
-        );
-
-      margin-bottom:
-        13px;
-
+      color:var(--azul);
+      font-size:clamp(30px,4vw,42px);
+      margin-bottom:13px;
     }
-
 
     .contact-box p {
-
-      color:
-        var(--gris-500);
-
-      margin-bottom:
-        25px;
-
+      color:var(--gris-500);
+      margin-bottom:20px;
     }
 
+    .contact-email {
+      display:inline-block;
+      color:var(--azul);
+      font-weight:700;
+      margin-bottom:25px;
+    }
 
-    /* =====================================================
-       FOOTER
-    ===================================================== */
+    .contact-email:hover {
+      color:var(--naranja);
+    }
 
     footer {
-
-      padding:
-        42px 0;
-
-      background:
-        var(--azul-oscuro);
-
-      color:
-        #cbdbe4;
-
-      text-align:
-        center;
-
+      padding:42px 0;
+      background:var(--azul-oscuro);
+      color:#cbdbe4;
+      text-align:center;
     }
-
 
     footer strong {
-
-      color:
-        white;
-
-      font-size:
-        20px;
-
+      color:white;
+      font-size:20px;
     }
-
 
     footer p {
-
-      margin-top:
-        8px;
-
-      font-size:
-        13px;
-
+      margin-top:8px;
+      font-size:13px;
     }
-
-
-    /* =====================================================
-       WHATSAPP
-    ===================================================== */
 
     .whatsapp-floating {
-
-      position:
-        fixed;
-
-      right:
-        22px;
-
-      bottom:
-        22px;
-
-      z-index:
-        1500;
-
-      display:
-        flex;
-
-      align-items:
-        center;
-
-      justify-content:
-        center;
-
-      width:
-        56px;
-
-      height:
-        56px;
-
-      border-radius:
-        50%;
-
-      background:
-        #25D366;
-
-      color:
-        white;
-
-      font-size:
-        25px;
-
-      box-shadow:
-        0 8px 25px
-        rgba(0,0,0,.18);
-
-      transition:
-        .2s ease;
-
+      position:fixed;
+      right:22px;
+      bottom:22px;
+      z-index:1500;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      width:56px;
+      height:56px;
+      border-radius:50%;
+      background:#25D366;
+      color:white;
+      font-size:25px;
+      box-shadow:0 8px 25px rgba(0,0,0,.18);
     }
 
-
-    .whatsapp-floating:hover {
-
-      transform:
-        translateY(-3px)
-        scale(1.03);
-
-    }
-
-
-    /* =====================================================
-       MOBILE
-    ===================================================== */
-
-    @media (max-width: 900px) {
+    @media (max-width:900px) {
 
       nav {
-
-        display:
-          none;
-
+        display:none;
       }
 
-
-      .intro-grid {
-
-        grid-template-columns:
-          1fr;
-
-      }
-
-
+      .intro-grid,
       .service-grid {
-
-        grid-template-columns:
-          1fr;
-
+        grid-template-columns:1fr;
       }
-
 
       .zone-grid {
-
-        grid-template-columns:
-          1fr 1fr;
-
+        grid-template-columns:1fr 1fr;
       }
-
 
       .process-grid {
-
-        grid-template-columns:
-          1fr 1fr;
-
+        grid-template-columns:1fr 1fr;
       }
 
-
       section {
-
-        padding:
-          70px 0;
-
+        padding:70px 0;
       }
 
     }
 
-
-    @media (max-width: 600px) {
+    @media (max-width:600px) {
 
       .nav {
-
-        min-height:
-          68px;
-
+        min-height:68px;
       }
-
 
       .logo {
-
-        font-size:
-          20px;
-
+        font-size:20px;
       }
-
 
       .hero-content {
-
-        padding:
-          78px 0 70px;
-
+        padding:78px 0 70px;
       }
-
 
       .hero h1 {
-
-        font-size:
-          43px;
-
-        letter-spacing:
-          -1.5px;
-
+        font-size:43px;
       }
-
 
       .hero p {
-
-        font-size:
-          16px;
-
+        font-size:16px;
       }
 
-
-      .buttons {
-
-        width:
-          100%;
-
-      }
-
-
+      .buttons,
       .btn {
-
-        width:
-          100%;
-
+        width:100%;
       }
-
 
       .zone-grid,
       .process-grid {
-
-        grid-template-columns:
-          1fr;
-
+        grid-template-columns:1fr;
       }
-
 
       .owner-box {
-
-        padding:
-          42px 22px;
-
+        padding:42px 22px;
       }
 
-
       .whatsapp-floating {
-
-        right:
-          17px;
-
-        bottom:
-          17px;
-
-        width:
-          52px;
-
-        height:
-          52px;
-
+        right:17px;
+        bottom:17px;
+        width:52px;
+        height:52px;
       }
 
     }
@@ -1652,45 +654,30 @@
 <body>
 
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
 <header>
 
   <div class="container nav">
 
-    <a
-      href="/"
-      class="logo"
-    >
+    <a href="/" class="logo">
       Sotofrau
       <span>Propiedades</span>
     </a>
 
-
     <nav>
 
-      <a href="#servicios">
-        Servicios
+      <a href="/venta-propiedades.html">
+        Venta
       </a>
 
-      <a href="#zonas">
-        Zonas
+      <a href="/arriendo-propiedades.html">
+        Arriendo
       </a>
 
-      <a href="#proceso">
-        Cómo trabajamos
+      <a href="/administracion-propiedades.html">
+        Administración
       </a>
 
-      <a href="#faq">
-        Preguntas
-      </a>
-
-      <a
-        href="#contacto"
-        class="nav-contact"
-      >
+      <a href="#contacto" class="nav-contact">
         Contacto
       </a>
 
@@ -1700,11 +687,6 @@
 
 </header>
 
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
 
 <section class="hero">
 
@@ -1716,12 +698,10 @@
         Sotofrau Propiedades
       </div>
 
-
       <h1>
         Corredor de propiedades en
         <span>Viña del Mar</span>
       </h1>
-
 
       <p>
         Corretaje de propiedades para quienes buscan
@@ -1730,21 +710,13 @@
         cercana y acompañamiento durante todo el proceso.
       </p>
 
-
       <div class="buttons">
 
-        <a
-          href="#contacto"
-          class="btn btn-primary"
-        >
+        <a href="#contacto" class="btn btn-primary">
           Quiero asesoría inmobiliaria
         </a>
 
-
-        <a
-          href="/"
-          class="btn btn-light"
-        >
+        <a href="/" class="btn btn-light">
           Ver propiedades
         </a>
 
@@ -1757,17 +729,11 @@
 </section>
 
 
-
-<!-- =====================================================
-     INTRO
-===================================================== -->
-
 <section class="intro">
 
   <div class="container">
 
     <div class="intro-grid">
-
 
       <div class="intro-content">
 
@@ -1775,11 +741,9 @@
           Corretaje inmobiliario en Viña del Mar
         </span>
 
-
         <h2>
           Una gestión cercana para tomar mejores decisiones inmobiliarias.
         </h2>
-
 
         <p>
           En Sotofrau Propiedades trabajamos como corredor de
@@ -1787,7 +751,6 @@
           compradores y arrendatarios durante las distintas etapas
           de una operación inmobiliaria.
         </p>
-
 
         <p>
           Nuestro objetivo es facilitar el proceso, mantener una
@@ -1798,13 +761,11 @@
 
       </div>
 
-
       <div class="highlight-box">
 
         <strong>
           Atención personalizada
         </strong>
-
 
         <p>
           Cada propiedad y cada cliente tienen necesidades
@@ -1815,7 +776,6 @@
 
       </div>
 
-
     </div>
 
   </div>
@@ -1823,15 +783,7 @@
 </section>
 
 
-
-<!-- =====================================================
-     SERVICIOS
-===================================================== -->
-
-<section
-  class="services"
-  id="servicios"
->
+<section class="services">
 
   <div class="container">
 
@@ -1841,22 +793,14 @@
         Servicios inmobiliarios
       </span>
 
-
       <h2>
         Soluciones para propietarios, compradores y arrendatarios
       </h2>
-
-
-      <p>
-        Podemos ayudarte en distintas etapas de una operación
-        inmobiliaria en Viña del Mar.
-      </p>
 
     </div>
 
 
     <div class="service-grid">
-
 
       <div class="service">
 
@@ -1864,16 +808,15 @@
           01
         </div>
 
-
         <h3>
-          Venta de propiedades
+          <a href="/venta-propiedades.html">
+            Venta de propiedades
+          </a>
         </h3>
-
 
         <p>
           Te ayudamos a comercializar tu propiedad, coordinar
-          consultas, gestionar interesados y acompañar el proceso
-          hasta el cierre de la operación.
+          consultas, gestionar interesados y acompañar el proceso.
         </p>
 
       </div>
@@ -1885,16 +828,15 @@
           02
         </div>
 
-
         <h3>
-          Arriendo de propiedades
+          <a href="/arriendo-propiedades.html">
+            Arriendo de propiedades
+          </a>
         </h3>
 
-
         <p>
-          Apoyamos la publicación, coordinación de visitas,
-          evaluación de antecedentes y gestión del proceso
-          de arriendo.
+          Apoyamos la publicación, coordinación de visitas y
+          gestión del proceso de arriendo.
         </p>
 
       </div>
@@ -1906,20 +848,18 @@
           03
         </div>
 
-
         <h3>
-          Administración de propiedades
+          <a href="/administracion-propiedades.html">
+            Administración de propiedades
+          </a>
         </h3>
 
-
         <p>
-          Para propietarios que buscan delegar la gestión
-          de su propiedad arrendada, con seguimiento del
-          arriendo, coordinación de mantenciones y reportes.
+          Gestión orientada a propietarios que buscan delegar
+          parte de la administración de su propiedad arrendada.
         </p>
 
       </div>
-
 
     </div>
 
@@ -1928,15 +868,7 @@
 </section>
 
 
-
-<!-- =====================================================
-     ZONAS
-===================================================== -->
-
-<section
-  class="zones"
-  id="zonas"
->
+<section class="zones">
 
   <div class="container">
 
@@ -1946,11 +878,9 @@
         Zona de atención
       </span>
 
-
       <h2>
         Corretaje de propiedades en la Región de Valparaíso
       </h2>
-
 
       <p>
         Trabajamos principalmente en Viña del Mar y distintas
@@ -1962,54 +892,35 @@
 
     <div class="zone-grid">
 
-
       <div class="zone">
-        Viña del Mar
-        <span>
-          Venta · Arriendo · Administración
-        </span>
+        <strong>Viña del Mar</strong>
+        <span>Venta · Arriendo · Administración</span>
       </div>
 
-
       <div class="zone">
-        Concón
-        <span>
-          Venta · Arriendo · Administración
-        </span>
+        <strong>Concón</strong>
+        <span>Venta · Arriendo · Administración</span>
       </div>
 
-
       <div class="zone">
-        Reñaca
-        <span>
-          Venta · Arriendo · Administración
-        </span>
+        <strong>Reñaca</strong>
+        <span>Venta · Arriendo · Administración</span>
       </div>
 
-
       <div class="zone">
-        Valparaíso
-        <span>
-          Venta · Arriendo
-        </span>
+        <strong>Valparaíso</strong>
+        <span>Venta · Arriendo</span>
       </div>
 
-
       <div class="zone">
-        Quilpué
-        <span>
-          Venta · Arriendo
-        </span>
+        <strong>Quilpué</strong>
+        <span>Venta · Arriendo</span>
       </div>
 
-
       <div class="zone">
-        Villa Alemana
-        <span>
-          Venta · Arriendo
-        </span>
+        <strong>Villa Alemana</strong>
+        <span>Venta · Arriendo</span>
       </div>
-
 
     </div>
 
@@ -2018,15 +929,7 @@
 </section>
 
 
-
-<!-- =====================================================
-     PROCESO
-===================================================== -->
-
-<section
-  class="process"
-  id="proceso"
->
+<section class="process">
 
   <div class="container">
 
@@ -2036,15 +939,12 @@
         Cómo trabajamos
       </span>
 
-
       <h2>
         Un proceso claro y acompañado
       </h2>
 
-
       <p>
-        Buscamos que conozcas cada etapa de la gestión
-        antes de avanzar.
+        Buscamos que conozcas cada etapa de la gestión.
       </p>
 
     </div>
@@ -2052,87 +952,37 @@
 
     <div class="process-grid">
 
-
       <div class="process-item">
-
-        <div class="process-number">
-          01
-        </div>
-
-
-        <h3>
-          Evaluamos la propiedad
-        </h3>
-
-
+        <div class="process-number">01</div>
+        <h3>Evaluamos la propiedad</h3>
         <p>
-          Revisamos las características de la propiedad,
-          su ubicación y antecedentes relevantes para definir
-          una estrategia adecuada.
+          Revisamos sus características, ubicación y antecedentes relevantes.
         </p>
-
       </div>
 
-
       <div class="process-item">
-
-        <div class="process-number">
-          02
-        </div>
-
-
-        <h3>
-          Definimos la estrategia
-        </h3>
-
-
+        <div class="process-number">02</div>
+        <h3>Definimos la estrategia</h3>
         <p>
-          Coordinamos la información necesaria y orientamos
-          la comercialización de acuerdo con el tipo de operación.
+          Organizamos la información necesaria para la operación.
         </p>
-
       </div>
 
-
       <div class="process-item">
-
-        <div class="process-number">
-          03
-        </div>
-
-
-        <h3>
-          Gestionamos interesados
-        </h3>
-
-
+        <div class="process-number">03</div>
+        <h3>Gestionamos interesados</h3>
         <p>
-          Coordinamos consultas, visitas y seguimiento de las
-          personas interesadas en la propiedad.
+          Coordinamos consultas, visitas y seguimiento.
         </p>
-
       </div>
 
-
       <div class="process-item">
-
-        <div class="process-number">
-          04
-        </div>
-
-
-        <h3>
-          Acompañamos el cierre
-        </h3>
-
-
+        <div class="process-number">04</div>
+        <h3>Acompañamos el cierre</h3>
         <p>
-          Coordinamos las etapas finales de la operación y
-          mantenemos comunicación durante el proceso.
+          Coordinamos las etapas finales del proceso.
         </p>
-
       </div>
-
 
     </div>
 
@@ -2141,14 +991,7 @@
 </section>
 
 
-
-<!-- =====================================================
-     PROPIETARIOS
-===================================================== -->
-
-<section
-  class="property-owner"
->
+<section>
 
   <div class="container">
 
@@ -2158,11 +1001,9 @@
         Propietarios
       </span>
 
-
       <h2>
         ¿Tienes una propiedad en Viña del Mar?
       </h2>
-
 
       <p>
         Si estás pensando en vender, arrendar o delegar la
@@ -2170,8 +1011,10 @@
         sus características y tus objetivos.
       </p>
 
-
-      <div class="buttons" style="justify-content:center;">
+      <div
+        class="buttons"
+        style="justify-content:center;"
+      >
 
         <a
           href="https://wa.me/56944844983?text=Hola%2C%20tengo%20una%20propiedad%20en%20Vi%C3%B1a%20del%20Mar%20y%20quiero%20consultar%20por%20los%20servicios%20de%20Sotofrau%20Propiedades."
@@ -2182,16 +1025,12 @@
           Consultar por WhatsApp
         </a>
 
-
         <a
-          href="/"
+          href="mailto:sotofraupropiedades@gmail.com"
           class="btn"
-          style="
-            background:var(--azul);
-            color:white;
-          "
+          style="background:var(--azul);color:white;"
         >
-          Ver propiedades
+          Enviar correo
         </a>
 
       </div>
@@ -2202,118 +1041,6 @@
 
 </section>
 
-
-
-<!-- =====================================================
-     FAQ
-===================================================== -->
-
-<section
-  class="faq"
-  id="faq"
->
-
-  <div class="container">
-
-    <div class="section-header">
-
-      <span class="section-label">
-        Preguntas frecuentes
-      </span>
-
-
-      <h2>
-        Corredor de propiedades en Viña del Mar
-      </h2>
-
-
-      <p>
-        Algunas preguntas habituales antes de iniciar una
-        operación inmobiliaria.
-      </p>
-
-    </div>
-
-
-    <div class="faq-list">
-
-
-      <div class="faq-item">
-
-        <h3>
-          ¿Qué hace un corredor de propiedades?
-        </h3>
-
-
-        <p>
-          El corredor de propiedades actúa como intermediario
-          y gestor de una operación inmobiliaria, coordinando
-          aspectos de comercialización, comunicación, visitas
-          y seguimiento entre las partes.
-        </p>
-
-      </div>
-
-
-      <div class="faq-item">
-
-        <h3>
-          ¿Puedo solicitar ayuda para vender una propiedad?
-        </h3>
-
-
-        <p>
-          Sí. Podemos conversar sobre las características de
-          la propiedad, revisar sus antecedentes disponibles
-          y evaluar una estrategia de comercialización.
-        </p>
-
-      </div>
-
-
-      <div class="faq-item">
-
-        <h3>
-          ¿También gestionan arriendos?
-        </h3>
-
-
-        <p>
-          Sí. Sotofrau Propiedades trabaja con operaciones de
-          arriendo y puede apoyar la publicación, coordinación
-          de visitas y gestión del proceso.
-        </p>
-
-      </div>
-
-
-      <div class="faq-item">
-
-        <h3>
-          ¿Trabajan fuera de Viña del Mar?
-        </h3>
-
-
-        <p>
-          Sí. Además de Viña del Mar, trabajamos principalmente
-          en Concón, Reñaca, Valparaíso, Quilpué y Villa Alemana,
-          según el tipo de operación y propiedad.
-        </p>
-
-      </div>
-
-
-    </div>
-
-  </div>
-
-</section>
-
-
-
-<!-- =====================================================
-     CONTACTO
-===================================================== -->
 
 <section
   class="contact"
@@ -2328,39 +1055,29 @@
         Sotofrau Propiedades
       </span>
 
-
       <h2>
         Hablemos sobre tu propiedad
       </h2>
 
-
       <p>
-        Escríbeme directamente para conversar sobre una
-        venta, arriendo, administración o consulta inmobiliaria.
+        WhatsApp: +56 9 4484 4983
       </p>
 
+      <a
+        class="contact-email"
+        href="mailto:sotofraupropiedades@gmail.com"
+      >
+        sotofraupropiedades@gmail.com
+      </a>
 
       <div class="buttons" style="justify-content:center;">
-
-        <a
-          href="https://wa.me/56944844983?text=Hola%2C%20quiero%20consultar%20por%20un%20servicio%20inmobiliario%20en%20Vi%C3%B1a%20del%20Mar."
-          target="_blank"
-          rel="noopener"
-          class="btn btn-primary"
-        >
-          Hablar por WhatsApp
-        </a>
-
 
         <a
           href="https://www.instagram.com/sotofrau_propiedades/"
           target="_blank"
           rel="noopener"
           class="btn"
-          style="
-            background:var(--azul);
-            color:white;
-          "
+          style="background:var(--azul);color:white;"
         >
           Instagram
         </a>
@@ -2374,11 +1091,6 @@
 </section>
 
 
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
 <footer>
 
   <div class="container">
@@ -2387,31 +1099,22 @@
       Sotofrau Propiedades
     </strong>
 
-
     <p>
       Corredor de Propiedades · Viña del Mar · Región de Valparaíso
     </p>
 
-
     <p>
-      Compra · Venta · Arriendo · Administración
+      sotofraupropiedades@gmail.com · +56 9 4484 4983
     </p>
 
-
     <p>
-      © 2026 Sotofrau Propiedades ·
-      Todos los derechos reservados.
+      © 2026 Sotofrau Propiedades · Todos los derechos reservados.
     </p>
 
   </div>
 
 </footer>
 
-
-
-<!-- =====================================================
-     WHATSAPP FLOTANTE
-===================================================== -->
 
 <a
   class="whatsapp-floating"
