@@ -125,15 +125,14 @@
     href="/site.webmanifest"
   >
 
-  <script
-    type="application/ld+json"
-  >
+  <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "RealEstateAgent",
     "name": "Sotofrau Propiedades",
     "url": "https://sotofraupropiedades.cl/",
     "telephone": "+56 9 4484 4983",
+    "email": "sotofraupropiedades@gmail.com",
     "areaServed": [
       {
         "@type": "City",
@@ -283,10 +282,6 @@
     }
 
 
-    /* =====================================================
-       HEADER
-    ===================================================== */
-
     header {
 
       position:
@@ -422,18 +417,6 @@
 
     }
 
-
-    .nav-contact:hover {
-
-      background:
-        var(--azul-2);
-
-    }
-
-
-    /* =====================================================
-       HERO
-    ===================================================== */
 
     .hero {
 
@@ -711,11 +694,6 @@
     }
 
 
-
-    /* =====================================================
-       SECCIONES
-    ===================================================== */
-
     section {
 
       padding:
@@ -798,11 +776,6 @@
 
     }
 
-
-
-    /* =====================================================
-       PROPIEDADES
-    ===================================================== */
 
     .properties-section {
 
@@ -1208,11 +1181,6 @@
     }
 
 
-
-    /* =====================================================
-       SERVICIOS
-    ===================================================== */
-
     .service-grid {
 
       display:
@@ -1316,6 +1284,22 @@
     }
 
 
+    .service h3 a {
+
+      color:
+        var(--azul);
+
+    }
+
+
+    .service h3 a:hover {
+
+      color:
+        var(--naranja);
+
+    }
+
+
     .service p {
 
       color:
@@ -1326,11 +1310,6 @@
 
     }
 
-
-
-    /* =====================================================
-       SEO LOCAL
-    ===================================================== */
 
     .local-seo {
 
@@ -1466,11 +1445,6 @@
 
     }
 
-
-
-    /* =====================================================
-       ADMINISTRACIÓN
-    ===================================================== */
 
     .administration {
 
@@ -1652,11 +1626,6 @@
     }
 
 
-
-    /* =====================================================
-       CAPTACIÓN
-    ===================================================== */
-
     .capture {
 
       background:
@@ -1735,11 +1704,6 @@
     }
 
 
-
-    /* =====================================================
-       CONTACTO
-    ===================================================== */
-
     .contact {
 
       background:
@@ -1754,7 +1718,7 @@
         grid;
 
       grid-template-columns:
-        repeat(3,1fr);
+        repeat(4,1fr);
 
       gap:
         20px;
@@ -1804,6 +1768,9 @@
       font-size:
         14px;
 
+      overflow-wrap:
+        anywhere;
+
     }
 
 
@@ -1814,11 +1781,6 @@
 
     }
 
-
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
 
     footer {
 
@@ -1858,11 +1820,6 @@
 
     }
 
-
-
-    /* =====================================================
-       WHATSAPP
-    ===================================================== */
 
     .whatsapp-floating {
 
@@ -1923,11 +1880,6 @@
 
     }
 
-
-
-    /* =====================================================
-       MOBILE
-    ===================================================== */
 
     @media (max-width: 900px) {
 
@@ -2108,10 +2060,6 @@
 <body>
 
 
-<!-- =====================================================
-     HEADER
-===================================================== -->
-
 <header>
 
   <div class="container nav">
@@ -2156,11 +2104,6 @@
 
 </header>
 
-
-
-<!-- =====================================================
-     HERO
-===================================================== -->
 
 <section
   class="hero"
@@ -2213,11 +2156,6 @@
 
 </section>
 
-
-
-<!-- =====================================================
-     PROPIEDADES
-===================================================== -->
 
 <section
   class="properties-section"
@@ -2306,11 +2244,6 @@
 </section>
 
 
-
-<!-- =====================================================
-     SERVICIOS
-===================================================== -->
-
 <section
   id="servicios"
 >
@@ -2368,7 +2301,9 @@
 
 
         <h3>
-          Venta de propiedades
+          <a href="/venta-propiedades.html">
+            Venta de propiedades
+          </a>
         </h3>
 
 
@@ -2388,7 +2323,9 @@
 
 
         <h3>
-          Arriendo de propiedades
+          <a href="/arriendo-propiedades.html">
+            Arriendo de propiedades
+          </a>
         </h3>
 
 
@@ -2405,11 +2342,6 @@
 
 </section>
 
-
-
-<!-- =====================================================
-     SEO LOCAL
-===================================================== -->
 
 <section
   class="local-seo"
@@ -2462,18 +2394,23 @@
         </a>
 
 
+        <a href="/venta-propiedades.html">
+          Venta de propiedades
+        </a>
+
+
+        <a href="/arriendo-propiedades.html">
+          Arriendo de propiedades
+        </a>
+
+
+        <a href="/administracion-propiedades.html">
+          Administración de propiedades
+        </a>
+
+
         <a href="#propiedades">
           Propiedades en venta y arriendo
-        </a>
-
-
-        <a href="#servicios">
-          Servicios inmobiliarios
-        </a>
-
-
-        <a href="#administracion">
-          Administración de propiedades
         </a>
 
 
@@ -2495,11 +2432,6 @@
 
 </section>
 
-
-
-<!-- =====================================================
-     ADMINISTRACIÓN
-===================================================== -->
 
 <section
   class="administration"
@@ -2575,14 +2507,20 @@
         </p>
 
 
-        <a
-          href="https://wa.me/56944844983?text=Hola%2C%20quiero%20consultar%20por%20el%20servicio%20de%20administraci%C3%B3n%20de%20propiedades."
-          target="_blank"
-          rel="noopener"
-          class="btn btn-primary"
-        >
-          Quiero conversar
-        </a>
+        <div class="buttons">
+
+          <a
+            href="/administracion-propiedades.html"
+            class="btn"
+            style="
+              background:var(--azul);
+              color:white;
+            "
+          >
+            Ver servicio de administración
+          </a>
+
+        </div>
 
       </div>
 
@@ -2592,11 +2530,6 @@
 
 </section>
 
-
-
-<!-- =====================================================
-     CAPTACIÓN
-===================================================== -->
 
 <section
   class="capture"
@@ -2661,11 +2594,6 @@
 </section>
 
 
-
-<!-- =====================================================
-     CONTACTO
-===================================================== -->
-
 <section
   class="contact"
   id="contacto"
@@ -2721,6 +2649,26 @@
       <div class="contact-item">
 
         <h3>
+          Correo
+        </h3>
+
+
+        <p>
+
+          <a
+            href="mailto:sotofraupropiedades@gmail.com"
+          >
+            sotofraupropiedades@gmail.com
+          </a>
+
+        </p>
+
+      </div>
+
+
+      <div class="contact-item">
+
+        <h3>
           Instagram
         </h3>
 
@@ -2761,11 +2709,6 @@
 </section>
 
 
-
-<!-- =====================================================
-     FOOTER
-===================================================== -->
-
 <footer>
 
   <div class="container">
@@ -2781,6 +2724,11 @@
 
 
     <p>
+      sotofraupropiedades@gmail.com · +56 9 4484 4983
+    </p>
+
+
+    <p>
       © 2026 Sotofrau Propiedades ·
       Todos los derechos reservados.
     </p>
@@ -2789,11 +2737,6 @@
 
 </footer>
 
-
-
-<!-- =====================================================
-     WHATSAPP FLOTANTE
-===================================================== -->
 
 <a
   class="whatsapp-floating"
@@ -2805,11 +2748,6 @@
   ☎
 </a>
 
-
-
-<!-- =====================================================
-     PROPIEDADES JAVASCRIPT
-===================================================== -->
 
 <script src="propiedades.js"></script>
 
