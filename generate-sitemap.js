@@ -37,11 +37,6 @@ const codigo =
 
 /* =====================================================
    EXTRAER PROPIEDADES
-
-   Solo necesitamos:
-   - id
-   - publicada
-   - estado
 ===================================================== */
 
 const propiedades = [];
@@ -76,7 +71,7 @@ while (
 
 
 /* =====================================================
-   VERIFICAR QUE SE ENCONTRARON PROPIEDADES
+   VERIFICAR PROPIEDADES
 ===================================================== */
 
 if (
@@ -92,10 +87,6 @@ if (
 
 /* =====================================================
    PROPIEDADES DISPONIBLES
-
-   Se incluyen solamente las propiedades que:
-   1. están publicadas
-   2. tienen estado disponible
 ===================================================== */
 
 const propiedadesDisponibles =
@@ -120,9 +111,7 @@ const propiedadesDisponibles =
 
 
 /* =====================================================
-   GENERAR URLs
-
-   PÁGINAS PRINCIPALES + SEO
+   URLS PRINCIPALES + SEO
 ===================================================== */
 
 const urls = [
@@ -187,7 +176,7 @@ function escaparXML(texto) {
 
 
 /* =====================================================
-   GENERAR SITEMAP XML
+   GENERAR SITEMAP
 ===================================================== */
 
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -221,7 +210,7 @@ fs.writeFileSync(
 
 
 /* =====================================================
-   MENSAJE DEL BUILD
+   MENSAJE
 ===================================================== */
 
 console.log(
