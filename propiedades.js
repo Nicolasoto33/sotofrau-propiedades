@@ -2633,21 +2633,21 @@ const propiedades = [
   imagen: "propiedades/32/1.jpg",
 
   fotos: [
-    "propiedades/32/1.jpg",
-    "propiedades/32/2.jpg",
-    "propiedades/32/3.jpg",
-    "propiedades/32/4.jpg",
-    "propiedades/32/5.jpg",
-    "propiedades/32/6.jpg",
-    "propiedades/32/7.jpg",
-    "propiedades/32/8.jpg",
-    "propiedades/32/9.jpg",
-    "propiedades/32/10.jpg",
-    "propiedades/32/11.jpg",
-    "propiedades/32/12.jpg",
-    "propiedades/32/13.jpg",
-    "propiedades/32/14.jpg",
-    "propiedades/32/15.jpg"
+    "propiedades/32/1.jpeg",
+    "propiedades/32/2.jpeg",
+    "propiedades/32/3.jpeg",
+    "propiedades/32/4.jpeg",
+    "propiedades/32/5.jpeg",
+    "propiedades/32/6.jpeg",
+    "propiedades/32/7.jpeg",
+    "propiedades/32/8.jpeg",
+    "propiedades/32/9.jpeg",
+    "propiedades/32/10.jpeg",
+    "propiedades/32/11.jpeg",
+    "propiedades/32/12.jpeg",
+    "propiedades/32/13.jpeg",
+    "propiedades/32/14.jpeg",
+    "propiedades/32/15.jpeg"
   ],
 
   descripcion: [
@@ -2724,18 +2724,18 @@ const propiedades = [
   imagen: "propiedades/33/1.jpg",
 
   fotos: [
-    "propiedades/33/1.jpg",
-    "propiedades/33/2.jpg",
-    "propiedades/33/3.jpg",
-    "propiedades/33/4.jpg",
-    "propiedades/33/5.jpg",
-    "propiedades/33/6.jpg",
-    "propiedades/33/7.jpg",
-    "propiedades/33/8.jpg",
-    "propiedades/33/9.jpg",
-    "propiedades/33/10.jpg",
-    "propiedades/33/11.jpg",
-    "propiedades/33/12.jpg"
+    "propiedades/33/1.jpeg",
+    "propiedades/33/2.jpeg",
+    "propiedades/33/3.jpeg",
+    "propiedades/33/4.jpeg",
+    "propiedades/33/5.jpeg",
+    "propiedades/33/6.jpeg",
+    "propiedades/33/7.jpeg",
+    "propiedades/33/8.jpeg",
+    "propiedades/33/9.jpeg",
+    "propiedades/33/10.jpeg",
+    "propiedades/33/11.jpeg",
+    "propiedades/33/12.jpeg"
   ],
 
   descripcion: [
