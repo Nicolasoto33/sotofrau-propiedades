@@ -2160,6 +2160,129 @@
     bottom: 20px;
   }
 }
+  /* =====================================================
+   BUSCADOR DINÁMICO DE PROPIEDADES
+===================================================== */
+
+.property-search {
+  max-width: 1120px;
+  margin: 0 auto 42px;
+  padding: 28px;
+  background: #ffffff;
+  border: 1px solid var(--gris-200);
+  border-radius: 18px;
+  box-shadow: var(--sombra);
+}
+
+.search-title {
+  margin-bottom: 20px;
+  color: var(--azul);
+  font-size: 20px;
+  font-weight: 800;
+}
+
+.search-grid {
+  display: grid;
+  grid-template-columns: 1.5fr repeat(4, 1fr);
+  gap: 14px;
+  align-items: end;
+}
+
+.search-field {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.search-field label {
+  color: var(--azul);
+  font-size: 12px;
+  font-weight: 750;
+}
+
+.search-field input,
+.search-field select {
+  width: 100%;
+  min-height: 46px;
+  padding: 0 13px;
+  border: 1px solid var(--gris-200);
+  border-radius: 9px;
+  background: white;
+  color: var(--gris-700);
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+  transition: .2s ease;
+}
+
+.search-field input:focus,
+.search-field select:focus {
+  border-color: var(--naranja);
+  box-shadow: 0 0 0 3px rgba(232,137,37,.10);
+}
+
+.search-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+
+.search-reset {
+  border: 0;
+  border-radius: 8px;
+  padding: 10px 17px;
+  background: var(--gris-100);
+  color: var(--azul);
+  cursor: pointer;
+  font-weight: 700;
+  font-size: 13px;
+}
+
+.search-reset:hover {
+  background: var(--gris-200);
+}
+
+.search-results-count {
+  margin-top: 16px;
+  color: var(--gris-500);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+@media (max-width: 1000px) {
+
+  .search-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search-field-wide {
+    grid-column: 1 / -1;
+  }
+}
+
+@media (max-width: 600px) {
+
+  .property-search {
+    padding: 20px;
+  }
+
+  .search-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .search-field-wide {
+    grid-column: auto;
+  }
+
+  .search-actions {
+    justify-content: stretch;
+  }
+
+  .search-reset {
+    width: 100%;
+  }
+}
   </style>
 
 </head>
