@@ -2599,7 +2599,7 @@ const propiedades = [
 
     whatsapp:
       "Hola, me gustaría consultar por el departamento en venta en Costa de Montemar, Av. Concón Reñaca 4357."
-  }
+  },
 
 
 {
@@ -2767,7 +2767,7 @@ const propiedades = [
     "Gastos comunes aprox. $120.000"
   ],
 
-  informacionImportante: [
+   informacionImportante: [
     "A solo 3 cuadras de la Universidad Técnica Federico Santa María",
     "Cercano a Av. España",
     "Conectividad hacia Valparaíso y Viña del Mar",
@@ -2779,6 +2779,7 @@ const propiedades = [
     "Cercano a comercio",
     "Cercano a servicios y locomoción"
   ]
+}
 ];
 /* =====================================================
    GENERAR TARJETAS EN INICIO
