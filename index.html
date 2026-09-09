@@ -2303,53 +2303,69 @@
     </div>
 
 
-    <div class="filters">
+<div class="property-search">
 
-      <button
-        class="filter active"
-        onclick="filtrar('todas', this)"
-        type="button"
+  <div class="search-title">
+    Encuentra tu propiedad
+  </div>
+
+  <div class="search-grid">
+
+    <div class="search-field search-field-wide">
+      <label for="buscarTexto">Buscar</label>
+      <input
+        type="text"
+        id="buscarTexto"
+        placeholder="Ej: Reñaca, Concón, departamento..."
       >
-        Todas
-      </button>
-
-
-      <button
-        class="filter"
-        onclick="filtrar('venta', this)"
-        type="button"
-      >
-        Venta
-      </button>
-
-
-      <button
-        class="filter"
-        onclick="filtrar('arriendo', this)"
-        type="button"
-      >
-        Arriendo
-      </button>
-
-
-      <button
-        class="filter"
-        onclick="filtrar('disponible', this)"
-        type="button"
-      >
-        Disponibles
-      </button>
-
-
-      <button
-        class="filter"
-        onclick="filtrar('gestionada', this)"
-        type="button"
-      >
-        Gestionadas
-      </button>
-
     </div>
+
+    <div class="search-field">
+      <label for="filtroOperacion">Operación</label>
+      <select id="filtroOperacion">
+        <option value="">Todas</option>
+      </select>
+    </div>
+
+    <div class="search-field">
+      <label for="filtroUbicacion">Ubicación</label>
+      <select id="filtroUbicacion">
+        <option value="">Todas</option>
+      </select>
+    </div>
+
+    <div class="search-field">
+      <label for="filtroDormitorios">Dormitorios</label>
+      <select id="filtroDormitorios">
+        <option value="">Todos</option>
+      </select>
+    </div>
+
+    <div class="search-field">
+      <label for="filtroEstado">Estado</label>
+      <select id="filtroEstado">
+        <option value="">Todos</option>
+      </select>
+    </div>
+
+    <div class="search-actions">
+      <button
+        type="button"
+        id="limpiarFiltros"
+        class="search-reset"
+      >
+        Limpiar filtros
+      </button>
+    </div>
+
+  </div>
+
+  <div
+    id="searchResultsCount"
+    class="search-results-count"
+  ></div>
+
+</div>
 
 
     <div
