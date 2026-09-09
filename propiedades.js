@@ -2604,6 +2604,184 @@ const propiedades = [
 ];
 
 
+{
+  id: 32,
+  publicada: true,
+
+  operacion: "Venta",
+  estado: "disponible",
+  estadoTexto: "Disponible",
+
+  titulo: "Departamento en Venta – Viña del Mar",
+
+  direccion: "Isla Picton 280 · Condominio Colinas del Mar 1",
+  ubicacion: "Viña del Mar",
+
+  precio: "$90.000.000",
+
+  superficie: "65 m²",
+
+  dormitorios: 3,
+  banos: 2,
+
+  estacionamientos: 1,
+
+  piso: "3er piso",
+
+  gastosComunes: "$85.000 aprox.",
+
+  mascotas: "Permitidas",
+
+  imagen: "propiedades/32/1.jpg",
+
+  fotos: [
+    "propiedades/32/1.jpg",
+    "propiedades/32/2.jpg",
+    "propiedades/32/3.jpg",
+    "propiedades/32/4.jpg",
+    "propiedades/32/5.jpg",
+    "propiedades/32/6.jpg",
+    "propiedades/32/7.jpg",
+    "propiedades/32/8.jpg",
+    "propiedades/32/9.jpg",
+    "propiedades/32/10.jpg",
+    "propiedades/32/11.jpg",
+    "propiedades/32/12.jpg",
+    "propiedades/32/13.jpg",
+    "propiedades/32/14.jpg",
+    "propiedades/32/15.jpg"
+  ],
+
+  descripcion: [
+    "Amplio y luminoso departamento de 65 m² ubicado en el Condominio Colinas del Mar 1, Viña del Mar, una excelente alternativa para quienes buscan comodidad, espacio y conectividad.",
+
+    "La propiedad cuenta con 3 dormitorios y 2 baños, además de living-comedor, cocina independiente, pasillo de distribución, closets y 1 estacionamiento techado.",
+
+    "Su ubicación destaca por encontrarse a solo 3 cuadras del Troncal Urbano, facilitando la conexión hacia Viña del Mar y Quilpué.",
+
+    "El condominio ofrece un entorno residencial y familiar con piscina, áreas verdes, quinchos, juegos infantiles, sala de eventos, estacionamientos de visita, acceso controlado, conserjería 24 horas y cámaras de vigilancia.",
+
+    "Además, se encuentra cercana a Jumbo, Easy, Universidad Santo Tomás, comercio, servicios y locomoción urbana.",
+
+    "Se permiten mascotas, convirtiendo esta propiedad en una alternativa atractiva para familias que buscan un espacio cómodo dentro de un condominio con servicios y áreas comunes.",
+
+    "Una excelente oportunidad para quienes buscan vivir en un entorno tranquilo, con buena conectividad y todo lo necesario para una vida familiar cómoda."
+  ],
+
+  caracteristicas: [
+    "65 m²",
+    "3 dormitorios",
+    "2 baños",
+    "3er piso",
+    "1 estacionamiento techado",
+    "Living-comedor",
+    "Cocina independiente",
+    "Closets",
+    "Mascotas permitidas",
+    "Gastos comunes aprox. $85.000"
+  ],
+
+  informacionImportante: [
+    "Condominio con piscina",
+    "Áreas verdes",
+    "Quinchos",
+    "Juegos infantiles",
+    "Sala de eventos",
+    "Estacionamientos de visita",
+    "Acceso controlado",
+    "Conserjería 24 horas",
+    "Cámaras de vigilancia",
+    "A 3 cuadras del Troncal Urbano",
+    "Cercano a Jumbo y Easy",
+    "Cercano a Universidad Santo Tomás"
+  ]
+},
+
+{
+  id: 33,
+  publicada: true,
+
+  operacion: "Venta",
+  estado: "disponible",
+  estadoTexto: "Disponible",
+
+  titulo: "Departamento en Venta en Cerro Placeres – Valparaíso",
+
+  direccion: "Cerro Placeres · Valparaíso",
+  ubicacion: "Cerro Placeres · Valparaíso",
+
+  precio: "$128.500.000",
+
+  superficie: "80 m²",
+
+  dormitorios: 3,
+  banos: 2,
+
+  estacionamientos: 1,
+
+  gastosComunes: "$120.000 aprox.",
+
+  mascotas: "Permitidas",
+
+  imagen: "propiedades/33/1.jpg",
+
+  fotos: [
+    "propiedades/33/1.jpg",
+    "propiedades/33/2.jpg",
+    "propiedades/33/3.jpg",
+    "propiedades/33/4.jpg",
+    "propiedades/33/5.jpg",
+    "propiedades/33/6.jpg",
+    "propiedades/33/7.jpg",
+    "propiedades/33/8.jpg",
+    "propiedades/33/9.jpg",
+    "propiedades/33/10.jpg",
+    "propiedades/33/11.jpg",
+    "propiedades/33/12.jpg"
+  ],
+
+  descripcion: [
+    "Amplio y luminoso departamento de 80 m² ubicado en Cerro Placeres, Valparaíso, ideal para quienes buscan espacio, comodidad y una ubicación estratégica.",
+
+    "La propiedad cuenta con 3 dormitorios y 2 baños, además de living-comedor, cocina independiente, terraza y 1 estacionamiento, ofreciendo una distribución práctica para la vida familiar.",
+
+    "Uno de sus principales atributos es su excelente conectividad: se encuentra a solo 3 cuadras de la Universidad Técnica Federico Santa María (UTFSM) y muy cerca de Av. España, con conexión hacia Valparaíso y Viña del Mar.",
+
+    "El condominio cuenta con piscina, áreas verdes, estacionamientos, ascensor y conserjería 24/7, proporcionando un entorno residencial cómodo y seguro.",
+
+    "Su ubicación también permite acceder fácilmente a comercio, servicios y locomoción, lo que suma comodidad para el día a día.",
+
+    "La combinación de 3 dormitorios, 2 baños, 80 m², terraza y estacionamiento convierte esta propiedad en una alternativa atractiva tanto para una familia como para quienes buscan una propiedad con potencial de inversión.",
+
+    "Una oportunidad para vivir en un sector conectado de Valparaíso, cerca de la UTFSM y con fácil acceso hacia Viña del Mar."
+  ],
+
+  caracteristicas: [
+    "80 m²",
+    "3 dormitorios",
+    "2 baños",
+    "Living-comedor",
+    "Cocina independiente",
+    "Terraza",
+    "1 estacionamiento",
+    "Ascensor",
+    "Mascotas permitidas",
+    "Gastos comunes aprox. $120.000"
+  ],
+
+  informacionImportante: [
+    "A solo 3 cuadras de la Universidad Técnica Federico Santa María",
+    "Cercano a Av. España",
+    "Conectividad hacia Valparaíso y Viña del Mar",
+    "Piscina",
+    "Áreas verdes",
+    "Conserjería 24/7",
+    "Estacionamientos",
+    "Ascensor",
+    "Cercano a comercio",
+    "Cercano a servicios y locomoción"
+  ]
+},
 /* =====================================================
    GENERAR TARJETAS EN INICIO
 ===================================================== */
