@@ -37,7 +37,7 @@
 
   <meta
     property="og:image"
-    content="https://sotofraupropiedades.cl/android-chrome-512x512.png"
+    content="https://sotofraupropiedades.cl/logo-sotofrau.png"
   >
 
   <meta
@@ -61,13 +61,44 @@
   >
 
   <meta
+    name="twitter:card"
+    content="summary_large_image"
+  >
+
+  <meta
+    name="twitter:title"
+    content="Arriendo de Propiedades en Viña del Mar | Sotofrau Propiedades"
+  >
+
+  <meta
+    name="twitter:description"
+    content="Servicio de arriendo de propiedades en Viña del Mar, Concón y la Región de Valparaíso."
+  >
+
+  <meta
+    name="twitter:image"
+    content="https://sotofraupropiedades.cl/logo-sotofrau.png"
+  >
+
+  <meta
+    name="twitter:image:alt"
+    content="Sotofrau Propiedades"
+  >
+
+  <meta
     name="theme-color"
     content="#0d2f49"
   >
 
-  <link rel="icon" href="/favicon.ico">
+  <link
+    rel="icon"
+    href="/favicon.ico"
+  >
 
-  <link rel="manifest" href="/site.webmanifest">
+  <link
+    rel="manifest"
+    href="/site.webmanifest"
+  >
 
   <script type="application/ld+json">
   {
@@ -146,15 +177,15 @@
     .logo {
       display:inline-flex;
       align-items:center;
-      color:var(--azul);
-      font-size:23px;
-      font-weight:800;
-      white-space:nowrap;
+      height:58px;
+      flex-shrink:0;
     }
 
-    .logo span {
-      color:var(--naranja);
-      margin-left:5px;
+    .logo img {
+      display:block;
+      width:auto;
+      height:54px;
+      object-fit:contain;
     }
 
     nav {
@@ -533,8 +564,8 @@
         min-height:68px;
       }
 
-      .logo {
-        font-size:20px;
+      .logo img {
+        height:48px;
       }
 
       .hero-content {
@@ -584,9 +615,17 @@
 
   <div class="container nav">
 
-    <a href="/" class="logo">
-      Sotofrau
-      <span>Propiedades</span>
+    <a
+      href="/"
+      class="logo"
+      aria-label="Sotofrau Propiedades"
+    >
+
+      <img
+        src="/logo-sotofrau.png"
+        alt="Sotofrau Propiedades"
+      >
+
     </a>
 
     <nav>
