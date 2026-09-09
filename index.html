@@ -3072,6 +3072,585 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  if (
+    typeof propiedades === "undefined" ||
+    !Array.isArray(propiedades)
+  ) {
+    return;
+  }
+
+  const inputTexto =
+    document.getElementById("buscarTexto");
+
+  const selectOperacion =
+    document.getElementById("filtroOperacion");
+
+  const selectUbicacion =
+    document.getElementById("filtroUbicacion");
+
+  const selectDormitorios =
+    document.getElementById("filtroDormitorios");
+
+  const selectEstado =
+    document.getElementById("filtroEstado");
+
+  const botonLimpiar =
+    document.getElementById("limpiarFiltros");
+
+  const contador =
+    document.getElementById("searchResultsCount");
+
+
+  if (
+    !inputTexto ||
+    !selectOperacion ||
+    !selectUbicacion ||
+    !selectDormitorios ||
+    !selectEstado ||
+    !botonLimpiar ||
+    !contador
+  ) {
+    return;
+  }
+
+
+  const propiedadesPublicadas =
+    propiedades.filter(function (propiedad) {
+
+      return propiedad.publicada === true;
+
+    });
+
+
+  /* =====================================================
+     NORMALIZAR TEXTO
+  ===================================================== */
+
+  function normalizar(texto) {
+
+    return String(texto || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .trim();
+
+  }
+
+
+  /* =====================================================
+     OBTENER DORMITORIOS
+  ===================================================== */
+
+  function obtenerDormitorios(propiedad) {
+
+    if (
+      propiedad.dormitorios !== undefined &&
+      propiedad.dormitorios !== null &&
+      propiedad.dormitorios !== ""
+    ) {
+
+      return Number(propiedad.dormitorios);
+
+    }
+
+
+    if (Array.isArray(propiedad.caracteristicas)) {
+
+      for (
+        let i = 0;
+        i < propiedad.caracteristicas.length;
+        i++
+      ) {
+
+        const texto =
+          normalizar(
+            propiedad.caracteristicas[i]
+          );
+
+
+        const coincidencia =
+          texto.match(
+            /(\d+)\s+dormitorio/
+          );
+
+
+        if (coincidencia) {
+
+          return Number(
+            coincidencia[1]
+          );
+
+        }
+
+      }
+
+    }
+
+
+    return null;
+
+  }
+
+
+  /* =====================================================
+     AGREGAR OPCIONES A SELECT
+  ===================================================== */
+
+  function agregarOpciones(
+    select,
+    valores
+  ) {
+
+    valores.forEach(function (valor) {
+
+      const opcion =
+        document.createElement("option");
+
+      opcion.value = valor;
+
+      opcion.textContent = valor;
+
+      select.appendChild(opcion);
+
+    });
+
+  }
+
+
+  /* =====================================================
+     OPERACIONES
+  ===================================================== */
+
+  const operaciones =
+    [
+      ...new Set(
+        propiedadesPublicadas
+          .map(function (propiedad) {
+
+            return propiedad.operacion;
+
+          })
+          .filter(Boolean)
+      )
+    ]
+    .sort(function (a, b) {
+
+      return a.localeCompare(
+        b,
+        "es"
+      );
+
+    });
+
+
+  agregarOpciones(
+    selectOperacion,
+    operaciones
+  );
+
+
+  /* =====================================================
+     UBICACIONES
+  ===================================================== */
+
+  const ubicaciones =
+    [
+      ...new Set(
+        propiedadesPublicadas
+          .map(function (propiedad) {
+
+            return propiedad.ubicacion;
+
+          })
+          .filter(Boolean)
+      )
+    ]
+    .sort(function (a, b) {
+
+      return a.localeCompare(
+        b,
+        "es"
+      );
+
+    });
+
+
+  agregarOpciones(
+    selectUbicacion,
+    ubicaciones
+  );
+
+
+  /* =====================================================
+     DORMITORIOS
+  ===================================================== */
+
+  const dormitorios =
+    [
+      ...new Set(
+        propiedadesPublicadas
+          .map(obtenerDormitorios)
+          .filter(function (valor) {
+
+            return (
+              valor !== null &&
+              !Number.isNaN(valor)
+            );
+
+          })
+      )
+    ]
+    .sort(function (a, b) {
+
+      return a - b;
+
+    });
+
+
+  dormitorios.forEach(
+    function (cantidad) {
+
+      const opcion =
+        document.createElement("option");
+
+      opcion.value =
+        String(cantidad);
+
+      opcion.textContent =
+        cantidad === 1
+          ? "1 dormitorio"
+          : cantidad + " dormitorios";
+
+      selectDormitorios.appendChild(
+        opcion
+      );
+
+    }
+  );
+
+
+  /* =====================================================
+     ESTADOS
+  ===================================================== */
+
+  const estados =
+    [
+      ...new Set(
+        propiedadesPublicadas
+          .map(function (propiedad) {
+
+            return propiedad.estado;
+
+          })
+          .filter(Boolean)
+      )
+    ];
+
+
+  function nombreEstado(estado) {
+
+    const estadoNormalizado =
+      normalizar(estado);
+
+
+    if (
+      estadoNormalizado ===
+      "disponible"
+    ) {
+
+      return "Disponibles";
+
+    }
+
+
+    if (
+      estadoNormalizado ===
+      "gestionada"
+    ) {
+
+      return "Gestionadas";
+
+    }
+
+
+    if (
+      estadoNormalizado ===
+      "vendida"
+    ) {
+
+      return "Vendidas";
+
+    }
+
+
+    if (
+      estadoNormalizado ===
+      "arrendada"
+    ) {
+
+      return "Arrendadas";
+
+    }
+
+
+    return (
+      String(estado)
+        .charAt(0)
+        .toUpperCase() +
+      String(estado).slice(1)
+    );
+
+  }
+
+
+  estados
+    .sort(function (a, b) {
+
+      return nombreEstado(a)
+        .localeCompare(
+          nombreEstado(b),
+          "es"
+        );
+
+    })
+    .forEach(function (estado) {
+
+      const opcion =
+        document.createElement("option");
+
+      opcion.value =
+        estado;
+
+      opcion.textContent =
+        nombreEstado(estado);
+
+      selectEstado.appendChild(
+        opcion
+      );
+
+    });
+
+
+  /* =====================================================
+     FILTRAR PROPIEDADES
+  ===================================================== */
+
+  function aplicarFiltros() {
+
+    const textoBuscado =
+      normalizar(
+        inputTexto.value
+      );
+
+
+    const operacion =
+      selectOperacion.value;
+
+
+    const ubicacion =
+      selectUbicacion.value;
+
+
+    const dormitoriosSeleccionados =
+      selectDormitorios.value;
+
+
+    const estado =
+      selectEstado.value;
+
+
+    let visibles = 0;
+
+
+    propiedadesPublicadas.forEach(
+      function (propiedad) {
+
+        const enlace =
+          document.querySelector(
+            '.property-button[href="propiedad.html?id=' +
+            propiedad.id +
+            '"]'
+          );
+
+
+        if (!enlace) {
+
+          return;
+
+        }
+
+
+        const tarjeta =
+          enlace.closest(
+            ".property-card"
+          );
+
+
+        if (!tarjeta) {
+
+          return;
+
+        }
+
+
+        const dormitoriosPropiedad =
+          obtenerDormitorios(
+            propiedad
+          );
+
+
+        const contenidoBusqueda =
+          normalizar(
+            [
+              propiedad.titulo,
+              propiedad.direccion,
+              propiedad.ubicacion,
+              propiedad.operacion,
+              propiedad.estadoTexto,
+              propiedad.precio,
+
+              Array.isArray(
+                propiedad.caracteristicas
+              )
+                ? propiedad.caracteristicas.join(" ")
+                : "",
+
+              Array.isArray(
+                propiedad.informacionImportante
+              )
+                ? propiedad.informacionImportante.join(" ")
+                : ""
+
+            ].join(" ")
+          );
+
+
+        const coincideTexto =
+          !textoBuscado ||
+          contenidoBusqueda.includes(
+            textoBuscado
+          );
+
+
+        const coincideOperacion =
+          !operacion ||
+          propiedad.operacion ===
+            operacion;
+
+
+        const coincideUbicacion =
+          !ubicacion ||
+          propiedad.ubicacion ===
+            ubicacion;
+
+
+        const coincideDormitorios =
+          !dormitoriosSeleccionados ||
+          dormitoriosPropiedad ===
+            Number(
+              dormitoriosSeleccionados
+            );
+
+
+        const coincideEstado =
+          !estado ||
+          propiedad.estado ===
+            estado;
+
+
+        const mostrar =
+          coincideTexto &&
+          coincideOperacion &&
+          coincideUbicacion &&
+          coincideDormitorios &&
+          coincideEstado;
+
+
+        tarjeta.classList.toggle(
+          "hidden",
+          !mostrar
+        );
+
+
+        if (mostrar) {
+
+          visibles++;
+
+        }
+
+      }
+    );
+
+
+    contador.textContent =
+      visibles === 1
+        ? "1 propiedad encontrada"
+        : visibles +
+          " propiedades encontradas";
+
+  }
+
+
+  /* =====================================================
+     EVENTOS DEL BUSCADOR
+  ===================================================== */
+
+  inputTexto.addEventListener(
+    "input",
+    aplicarFiltros
+  );
+
+
+  [
+    selectOperacion,
+    selectUbicacion,
+    selectDormitorios,
+    selectEstado
+  ].forEach(function (select) {
+
+    select.addEventListener(
+      "change",
+      aplicarFiltros
+    );
+
+  });
+
+
+  /* =====================================================
+     LIMPIAR FILTROS
+  ===================================================== */
+
+  botonLimpiar.addEventListener(
+    "click",
+    function () {
+
+      inputTexto.value = "";
+
+      selectOperacion.value = "";
+
+      selectUbicacion.value = "";
+
+      selectDormitorios.value = "";
+
+      selectEstado.value = "";
+
+      aplicarFiltros();
+
+    }
+  );
+
+
+  /* =====================================================
+     INICIAR BUSCADOR
+  ===================================================== */
+
+  aplicarFiltros();
+
+});
+</script>
 </body>
 
 </html>
