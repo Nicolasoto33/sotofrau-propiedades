@@ -2601,8 +2601,6 @@ const propiedades = [
       "Hola, me gustaría consultar por el departamento en venta en Costa de Montemar, Av. Concón Reñaca 4357."
   }
 
-];
-
 
 {
   id: 32,
@@ -2781,7 +2779,7 @@ const propiedades = [
     "Cercano a comercio",
     "Cercano a servicios y locomoción"
   ]
-},
+];
 /* =====================================================
    GENERAR TARJETAS EN INICIO
 ===================================================== */
