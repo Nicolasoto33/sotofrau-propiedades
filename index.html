@@ -37,7 +37,7 @@
 
   <meta
     property="og:image"
-    content="https://sotofraupropiedades.cl/android-chrome-512x512.png"
+    content="https://sotofraupropiedades.cl/logo-sotofrau.png"
   >
 
   <meta
@@ -82,7 +82,7 @@
 
   <meta
     name="twitter:image"
-    content="https://sotofraupropiedades.cl/android-chrome-512x512.png"
+    content="https://sotofraupropiedades.cl/logo-sotofrau.png"
   >
 
   <meta
@@ -333,31 +333,28 @@
       align-items:
         center;
 
-      color:
-        var(--azul);
+      height:
+        58px;
 
-      font-size:
-        23px;
-
-      font-weight:
-        800;
-
-      letter-spacing:
-        -.5px;
-
-      white-space:
-        nowrap;
+      flex-shrink:
+        0;
 
     }
 
 
-    .logo span {
+    .logo img {
 
-      color:
-        var(--naranja);
+      display:
+        block;
 
-      margin-left:
-        5px;
+      width:
+        auto;
+
+      height:
+        54px;
+
+      object-fit:
+        contain;
 
     }
 
@@ -1967,10 +1964,10 @@
       }
 
 
-      .logo {
+      .logo img {
 
-        font-size:
-          20px;
+        height:
+          48px;
 
       }
 
@@ -2067,9 +2064,14 @@
     <a
       href="#inicio"
       class="logo"
+      aria-label="Sotofrau Propiedades"
     >
-      Sotofrau
-      <span>Propiedades</span>
+
+      <img
+        src="/logo-sotofrau.png"
+        alt="Sotofrau Propiedades"
+      >
+
     </a>
 
 
