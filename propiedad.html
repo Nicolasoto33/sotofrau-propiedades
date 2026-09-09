@@ -2899,15 +2899,21 @@
        DESCRIPCIÓN
     ================================================= */
 
-    cargarDescripcion();
-
+    cargarInformacionImportante();
 
 
     /* =================================================
-       INFORMACIÓN IMPORTANTE
+       REQUISITOS DE ARRIENDO
     ================================================= */
 
-    cargarInformacionImportante();
+    cargarRequisitos();
+
+
+    /* =================================================
+       ÁREAS COMUNES
+    ================================================= */
+
+    cargarAreasComunes();
 
 
 
@@ -3492,6 +3498,68 @@
 
       }
     );
+
+  }
+
+ /* =====================================================
+     REQUISITOS DE ARRIENDO
+  ===================================================== */
+
+  function cargarRequisitos() {
+
+    const seccion =
+      document.getElementById(
+        "requirementsSection"
+      );
+
+    const lista =
+      document.getElementById(
+        "requisitos"
+      );
+
+    if (!seccion || !lista) {
+      return;
+    }
+
+    lista.innerHTML =
+      "";
+
+    const requisitos =
+      Array.isArray(
+        propiedadActual.requisitos
+      )
+        ? propiedadActual.requisitos
+        : [];
+
+    if (requisitos.length) {
+
+      requisitos.forEach(
+        function(item) {
+
+          const li =
+            document.createElement(
+              "li"
+            );
+
+          li.textContent =
+            item;
+
+          lista.appendChild(
+            li
+          );
+
+        }
+      );
+
+      seccion.style.display =
+        "";
+
+    } else {
+
+      seccion.style.display =
+        "none";
+
+    }
 
   }
 
