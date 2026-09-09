@@ -2667,17 +2667,17 @@ const propiedades = [
   ],
 
   caracteristicas: [
-    "65 m²",
-    "3 dormitorios",
-    "2 baños",
-    "3er piso",
-    "1 estacionamiento techado",
-    "Living-comedor",
-    "Cocina independiente",
-    "Closets",
-    "Mascotas permitidas",
-    "Gastos comunes aprox. $85.000"
-  ],
+  "📐 65 m²",
+  "🛏 3 dormitorios",
+  "🚿 2 baños",
+  "🏢 3er piso",
+  "🚗 1 estacionamiento techado",
+  "🛋 Living-comedor",
+  "🍳 Cocina independiente",
+  "🚪 Closets",
+  "🐾 Mascotas permitidas",
+  "💵 Gastos comunes aprox. $85.000"
+],
 
   informacionImportante: [
     "Condominio con piscina",
@@ -2755,17 +2755,17 @@ const propiedades = [
   ],
 
   caracteristicas: [
-    "80 m²",
-    "3 dormitorios",
-    "2 baños",
-    "Living-comedor",
-    "Cocina independiente",
-    "Terraza",
-    "1 estacionamiento",
-    "Ascensor",
-    "Mascotas permitidas",
-    "Gastos comunes aprox. $120.000"
-  ],
+  "📐 80 m²",
+  "🛏 3 dormitorios",
+  "🚿 2 baños",
+  "🛋 Living-comedor",
+  "🍳 Cocina independiente",
+  "🌅 Terraza",
+  "🚗 1 estacionamiento",
+  "🛗 Ascensor",
+  "🐾 Mascotas permitidas",
+  "💵 Gastos comunes aprox. $120.000"
+],
 
    informacionImportante: [
     "A solo 3 cuadras de la Universidad Técnica Federico Santa María",
@@ -2829,16 +2829,16 @@ const propiedades = [
     "La propiedad cuenta con disponibilidad inmediata."
   ],
 
-  caracteristicas: [
-    "2 dormitorios",
-    "2 baños",
-    "1 estacionamiento",
-    "Piso 17",
-    "Orientación poniente",
-    "Disponibilidad inmediata",
-    "Arriendo mensual: $630.000",
-    "Gastos comunes aprox. $120.000"
-  ],
+ caracteristicas: [
+  "🛏 2 dormitorios",
+  "🚿 2 baños",
+  "🚗 1 estacionamiento",
+  "🏢 Piso 17",
+  "🌅 Orientación poniente",
+  "✅ Disponibilidad inmediata",
+  "💰 Arriendo mensual: $630.000",
+  "💵 Gastos comunes aprox. $120.000"
+],
 
   informacionImportante: [
     "Piscina",
