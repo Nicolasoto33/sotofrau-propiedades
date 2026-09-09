@@ -2630,7 +2630,7 @@ const propiedades = [
 
   mascotas: "Permitidas",
 
-  imagen: "propiedades/32/1.jpg",
+  imagen: "propiedades/32/1.jpeg",
 
   fotos: [
     "propiedades/32/1.jpeg",
@@ -2721,7 +2721,7 @@ const propiedades = [
 
   mascotas: "Permitidas",
 
-  imagen: "propiedades/33/1.jpg",
+  imagen: "propiedades/33/1.jpeg",
 
   fotos: [
     "propiedades/33/1.jpeg",
