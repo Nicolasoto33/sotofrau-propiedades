@@ -2098,12 +2098,17 @@
 </header>
 
 
-<section
-  class="hero"
-  id="inicio"
->
+<section class="hero hero-slider" id="inicio">
 
-  <div class="container">
+  <div class="hero-slide active" style="background-image: url('hero/VALPO.jpg');"></div>
+
+  <div class="hero-slide" style="background-image: url('hero/VIÑA COSTA.jpeg');"></div>
+
+  <div class="hero-slide" style="background-image: url('hero/VIÑA.webp');"></div>
+
+  <div class="hero-overlay"></div>
+
+  <div class="container hero-container">
 
     <div class="hero-content">
 
@@ -2111,18 +2116,15 @@
         Sotofrau Propiedades
       </div>
 
-
       <h1>
         Corredor de propiedades en<br>
         <span>Viña del Mar y la V Región.</span>
       </h1>
 
-
       <p>
         Compra, vende, arrienda o administra tu propiedad
         con una atención cercana, transparente y personalizada.
       </p>
-
 
       <div class="buttons">
 
@@ -2132,7 +2134,6 @@
         >
           Ver propiedades
         </a>
-
 
         <a
           href="#captacion"
@@ -2147,8 +2148,13 @@
 
   </div>
 
-</section>
+  <div class="hero-dots">
+    <button class="hero-dot active" data-slide="0" aria-label="Imagen 1"></button>
+    <button class="hero-dot" data-slide="1" aria-label="Imagen 2"></button>
+    <button class="hero-dot" data-slide="2" aria-label="Imagen 3"></button>
+  </div>
 
+</section>
 
 <section
   class="properties-section"
