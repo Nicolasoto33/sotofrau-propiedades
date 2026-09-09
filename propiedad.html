@@ -99,13 +99,6 @@
     content="Sotofrau Propiedades"
   >
 
-  <script
-    id="propertyStructuredData"
-    type="application/ld+json"
-  >
-  {}
-  </script>
-
   <meta
     name="theme-color"
     content="#0d2f49"
@@ -281,31 +274,28 @@
       align-items:
         center;
 
-      color:
-        var(--azul);
+      height:
+        58px;
 
-      font-size:
-        23px;
-
-      font-weight:
-        800;
-
-      letter-spacing:
-        -.5px;
-
-      white-space:
-        nowrap;
+      flex-shrink:
+        0;
 
     }
 
 
-    .logo span {
+    .logo img {
 
-      color:
-        var(--naranja);
+      display:
+        block;
 
-      margin-left:
-        4px;
+      width:
+        auto;
+
+      height:
+        54px;
+
+      object-fit:
+        contain;
 
     }
 
@@ -1419,10 +1409,10 @@
       }
 
 
-      .logo {
+      .logo img {
 
-        font-size:
-          19px;
+        height:
+          48px;
 
       }
 
@@ -1574,10 +1564,13 @@
     <a
       href="index.html"
       class="logo"
+      aria-label="Sotofrau Propiedades"
     >
 
-      Sotofrau
-      <span>Propiedades</span>
+      <img
+        src="/logo-sotofrau.png"
+        alt="Sotofrau Propiedades"
+      >
 
     </a>
 
@@ -1860,6 +1853,7 @@
                 id="conectividad"
               >
               </ul>
+
 
             </aside>
 
@@ -2608,12 +2602,19 @@
        INSERTAR JSON-LD
     ================================================= */
 
-    document.getElementById(
-      "propertyStructuredData"
-    ).textContent =
-      JSON.stringify(
-        structuredData
+    const structuredDataElement =
+      document.getElementById(
+        "propertyStructuredData"
       );
+
+    if (structuredDataElement) {
+
+      structuredDataElement.textContent =
+        JSON.stringify(
+          structuredData
+        );
+
+    }
 
 
 
