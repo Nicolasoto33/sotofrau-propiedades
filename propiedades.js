@@ -2697,7 +2697,7 @@ const propiedades = [
 
 {
   id: 33,
-  publicada: true,
+  publicada: false,
 
   operacion: "Venta",
   estado: "disponible",
