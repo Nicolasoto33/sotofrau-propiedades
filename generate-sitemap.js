@@ -48,7 +48,7 @@ const codigo =
 const propiedades = [];
 
 const expresion =
-  /{\s*id:\s*(\d+),[\s\S]*?publicada:\s*(true|false),/g;
+  /\{\s*id:\s*(\d+),[\s\S]*?publicada:\s*(true|false),/g;
 
 let coincidencia;
 
