@@ -5,10 +5,16 @@ const BASE_URL =
   "https://sotofraupropiedades.cl";
 
 const propiedadesPath =
-  path.join(__dirname, "propiedades.js");
+  path.join(
+    __dirname,
+    "propiedades.js"
+  );
 
 const sitemapPath =
-  path.join(__dirname, "sitemap.xml");
+  path.join(
+    __dirname,
+    "sitemap.xml"
+  );
 
 
 /* =====================================================
@@ -42,13 +48,15 @@ const codigo =
 const propiedades = [];
 
 const expresion =
-  /{\s*id:\s*(\d+),[\s\S]*?publicada:\s*(true|false),[\s\S]*?estado:\s*"([^"]+)"/g;
+  /{\s*id:\s*(\d+),[\s\S]*?publicada:\s*(true|false),/g;
 
 let coincidencia;
 
 while (
-  (coincidencia =
-    expresion.exec(codigo)) !== null
+  (
+    coincidencia =
+      expresion.exec(codigo)
+  ) !== null
 ) {
 
   propiedades.push({
@@ -60,10 +68,7 @@ while (
 
     publicada:
       coincidencia[2] ===
-      "true",
-
-    estado:
-      coincidencia[3]
+      "true"
 
   });
 
@@ -86,17 +91,43 @@ if (
 
 
 /* =====================================================
-   PROPIEDADES DISPONIBLES
+   VERIFICAR IDS DUPLICADOS
 ===================================================== */
 
-const propiedadesDisponibles =
+const ids =
+  propiedades.map(
+    function(propiedad) {
+
+      return propiedad.id;
+
+    }
+  );
+
+const idsUnicos =
+  new Set(ids);
+
+if (
+  idsUnicos.size !== ids.length
+) {
+
+  throw new Error(
+    "Se encontraron IDs de propiedades duplicados."
+  );
+
+}
+
+
+/* =====================================================
+   PROPIEDADES PUBLICADAS
+===================================================== */
+
+const propiedadesPublicadas =
   propiedades
     .filter(
       function(propiedad) {
 
         return (
-          propiedad.publicada === true &&
-          propiedad.estado === "disponible"
+          propiedad.publicada === true
         );
 
       }
@@ -130,10 +161,10 @@ const urls = [
 
 
 /* =====================================================
-   AGREGAR PROPIEDADES DISPONIBLES
+   AGREGAR PROPIEDADES PUBLICADAS
 ===================================================== */
 
-propiedadesDisponibles.forEach(
+propiedadesPublicadas.forEach(
   function(propiedad) {
 
     urls.push(
@@ -142,6 +173,14 @@ propiedadesDisponibles.forEach(
 
   }
 );
+
+
+/* =====================================================
+   ELIMINAR POSIBLES URLS DUPLICADAS
+===================================================== */
+
+const urlsUnicas =
+  [...new Set(urls)];
 
 
 /* =====================================================
@@ -179,10 +218,11 @@ function escaparXML(texto) {
    GENERAR SITEMAP
 ===================================================== */
 
-const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+const sitemap =
+`<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-${urls
+${urlsUnicas
   .map(
     function(url) {
 
@@ -210,7 +250,7 @@ fs.writeFileSync(
 
 
 /* =====================================================
-   MENSAJE
+   MENSAJES DE CONTROL
 ===================================================== */
 
 console.log(
@@ -218,15 +258,23 @@ console.log(
 );
 
 console.log(
-  `URLs totales: ${urls.length}`
+  `URLs totales: ${urlsUnicas.length}`
 );
 
 console.log(
-  `Propiedades disponibles incluidas: ${propiedadesDisponibles.length}`
+  `Propiedades detectadas: ${propiedades.length}`
 );
 
 console.log(
-  propiedadesDisponibles
+  `Propiedades publicadas incluidas: ${propiedadesPublicadas.length}`
+);
+
+console.log(
+  "IDs incluidos:"
+);
+
+console.log(
+  propiedadesPublicadas
     .map(
       function(propiedad) {
 
