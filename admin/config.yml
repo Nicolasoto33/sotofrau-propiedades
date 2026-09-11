@@ -11,10 +11,21 @@ display_url: https://sotofraupropiedades.cl
 
 locale: es
 
+# =====================================================
+# ARCHIVOS MULTIMEDIA
+# =====================================================
+
+# Las imágenes nuevas se guardarán en la carpeta pública
+# "propiedades" del repositorio.
 media_folder: "propiedades"
 public_folder: "/propiedades"
 
 collections:
+
+  # =====================================================
+  # PROPIEDADES
+  # =====================================================
+
   - name: "propiedades"
     label: "🏠 Propiedades"
     label_singular: "Propiedad"
@@ -42,6 +53,7 @@ collections:
       - "estado"
 
     view_filters:
+
       - label: "Disponibles"
         field: "estado"
         pattern: "disponible"
@@ -73,18 +85,18 @@ collections:
         widget: "number"
         value_type: "int"
         min: 1
-        hint: "Número único de la propiedad. Este número también se utiliza en la URL de la ficha."
+        hint: "Número único de la propiedad. Este número se utiliza también en la URL de la ficha."
 
       - label: "Título"
         name: "titulo"
         widget: "string"
-        hint: "Título principal que verá el visitante en la publicación."
+        hint: "Título principal que verá el visitante."
 
       - label: "Visible en la página web"
         name: "publicada"
         widget: "boolean"
         default: true
-        hint: "Desactiva esta opción para ocultar la propiedad del sitio sin eliminarla."
+        hint: "Desactiva esta opción para ocultar la propiedad sin eliminarla."
 
       # =====================================================
       # OPERACIÓN Y ESTADO
@@ -96,12 +108,13 @@ collections:
         options:
           - "Arriendo"
           - "Venta"
-        hint: "Indica si la propiedad se publica para arriendo o venta."
+        hint: "Indica si la propiedad corresponde a arriendo o venta."
 
       - label: "Estado"
         name: "estado"
         widget: "select"
         options:
+
           - label: "Disponible"
             value: "disponible"
 
@@ -111,7 +124,7 @@ collections:
           - label: "Vendida"
             value: "vendida"
 
-        hint: "Este estado determina cómo se mostrará y ordenará la propiedad en la página."
+        hint: "Determina cómo se ordenará y mostrará la propiedad."
 
       - label: "Texto visible del estado"
         name: "estadoTexto"
@@ -121,7 +134,26 @@ collections:
           - "Arrendada"
           - "Vendida"
         default: "Disponible"
-        hint: "Texto que verá el visitante sobre la propiedad."
+        hint: "Texto que verá el visitante en la publicación."
+
+      # =====================================================
+      # TIPO DE PROPIEDAD
+      # =====================================================
+
+      - label: "Tipo de propiedad"
+        name: "tipoPropiedad"
+        widget: "select"
+        required: false
+        options:
+          - "Departamento"
+          - "Casa"
+          - "Parcela"
+          - "Terreno"
+          - "Oficina"
+          - "Local comercial"
+          - "Habitación"
+          - "Otro"
+        hint: "Selecciona el tipo de inmueble."
 
       # =====================================================
       # UBICACIÓN
@@ -131,7 +163,7 @@ collections:
         name: "direccion"
         widget: "string"
         required: false
-        hint: "Dirección, calle, edificio o referencia que quieras mostrar públicamente."
+        hint: "Dirección, calle, edificio o referencia que quieras mostrar."
 
       - label: "Ubicación"
         name: "ubicacion"
@@ -145,7 +177,7 @@ collections:
       - label: "Precio"
         name: "precio"
         widget: "string"
-        hint: "Puedes ingresar pesos o UF. Ejemplo: $550.000 o 3.998 UF."
+        hint: "Ejemplo: $550.000 o 3.998 UF."
 
       - label: "Gastos comunes"
         name: "gastosComunes"
@@ -157,10 +189,10 @@ collections:
         name: "totalMensual"
         widget: "string"
         required: false
-        hint: "Útil para arriendos cuando deseas mostrar canon más gastos comunes."
+        hint: "Útil cuando deseas mostrar canon más gastos comunes."
 
       # =====================================================
-      # CARACTERÍSTICAS NUMÉRICAS
+      # CARACTERÍSTICAS PRINCIPALES
       # =====================================================
 
       - label: "Superficie"
@@ -190,11 +222,24 @@ collections:
         min: 0
         required: false
 
+      - label: "Bodegas"
+        name: "bodegas"
+        widget: "number"
+        value_type: "int"
+        min: 0
+        required: false
+
       - label: "Piso"
         name: "piso"
         widget: "string"
         required: false
-        hint: "Ejemplo: 3er piso, Piso 16 o dejar vacío si no corresponde."
+        hint: "Ejemplo: Piso 3, 16° piso o dejar vacío."
+
+      - label: "Orientación"
+        name: "orientacion"
+        widget: "string"
+        required: false
+        hint: "Ejemplo: Norte, Poniente o Nororiente."
 
       - label: "Mascotas"
         name: "mascotas"
@@ -207,27 +252,32 @@ collections:
           - "Consultar"
 
       # =====================================================
-      # FOTOGRAFÍAS
+      # IMAGEN PRINCIPAL
       # =====================================================
 
       - label: "📷 Imagen principal"
         name: "imagen"
         widget: "image"
         required: false
-        hint: "Esta imagen será utilizada como fotografía principal de la propiedad."
+        choose_url: false
+        hint: "Fotografía principal que representará la propiedad."
+
+      # =====================================================
+      # GALERÍA
+      # =====================================================
 
       - label: "📸 Galería de fotografías"
         name: "fotos"
         widget: "list"
         required: false
         summary: "{{fields.foto}}"
+        hint: "Agrega todas las fotografías de la publicación."
 
         field:
           label: "Foto"
           name: "foto"
           widget: "image"
-
-        hint: "Agrega todas las fotografías que quieras mostrar en la galería."
+          choose_url: false
 
       # =====================================================
       # CARACTERÍSTICAS VISIBLES
@@ -237,13 +287,12 @@ collections:
         name: "caracteristicas"
         widget: "list"
         required: false
+        hint: "Ejemplo: 🛏 3 dormitorios, 🚿 2 baños, 📐 80 m²."
 
         field:
           label: "Característica"
           name: "caracteristica"
           widget: "string"
-
-        hint: "Ejemplo: 🛏 3 dormitorios, 🚿 2 baños, 📐 80 m²."
 
       # =====================================================
       # DESCRIPCIÓN
@@ -253,13 +302,12 @@ collections:
         name: "descripcion"
         widget: "list"
         required: false
+        hint: "Cada elemento corresponde a un párrafo de la descripción."
 
         field:
           label: "Párrafo"
           name: "parrafo"
           widget: "text"
-
-        hint: "Cada elemento corresponde a un párrafo de la descripción de la propiedad."
 
       # =====================================================
       # INFORMACIÓN IMPORTANTE
@@ -269,13 +317,12 @@ collections:
         name: "informacionImportante"
         widget: "list"
         required: false
+        hint: "Condiciones, valores, restricciones o elementos destacados."
 
         field:
-          label: "Punto"
+          label: "Punto importante"
           name: "punto"
           widget: "string"
-
-        hint: "Añade aquí condiciones, valores, detalles destacados u otros puntos relevantes."
 
       # =====================================================
       # ÁREAS COMUNES
@@ -285,13 +332,12 @@ collections:
         name: "areasComunes"
         widget: "list"
         required: false
+        hint: "Ejemplo: 🏊 Piscina, 🔥 Quinchos, 💪 Gimnasio."
 
         field:
           label: "Área común"
           name: "area"
           widget: "string"
-
-        hint: "Ejemplo: 🏊 Piscina, 🔥 Quinchos, 💪 Gimnasio, 🛡️ Conserjería."
 
       # =====================================================
       # CONECTIVIDAD
@@ -301,13 +347,27 @@ collections:
         name: "conectividad"
         widget: "list"
         required: false
+        hint: "Locomoción, servicios, universidades, playas, avenidas u otros puntos cercanos."
 
         field:
           label: "Punto de conectividad"
           name: "punto"
           widget: "string"
 
-        hint: "Ejemplo: cercano a supermercados, locomoción, universidades, playa o principales avenidas."
+      # =====================================================
+      # REQUISITOS DE ARRIENDO
+      # =====================================================
+
+      - label: "Requisitos de arriendo"
+        name: "requisitos"
+        widget: "list"
+        required: false
+        hint: "Déjalo vacío en publicaciones de venta si no corresponde."
+
+        field:
+          label: "Requisito"
+          name: "requisito"
+          widget: "string"
 
       # =====================================================
       # WHATSAPP
@@ -317,4 +377,14 @@ collections:
         name: "whatsapp"
         widget: "text"
         required: false
-        hint: "Este será el mensaje que recibirá Nicolás cuando una persona consulte por esta propiedad desde la web."
+        hint: "Mensaje automático que aparecerá cuando una persona consulte esta propiedad mediante WhatsApp."
+
+      # =====================================================
+      # NOTAS INTERNAS
+      # =====================================================
+
+      - label: "Notas internas"
+        name: "notasInternas"
+        widget: "text"
+        required: false
+        hint: "Información privada para administración. No deberá mostrarse públicamente en la web."
