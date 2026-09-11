@@ -1,0 +1,73 @@
+{
+  "id": 30,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "disponible",
+  "estadoTexto": "Disponible",
+  "titulo": "Departamento Amoblado en Costa de Montemar",
+  "direccion": "Entre Lomas 365",
+  "ubicacion": "Costa de Montemar · Concón",
+  "precio": "$550.000",
+  "gastosComunes": "$100.000 aprox. + consumo de agua caliente",
+  "totalMensual": "$650.000 aprox. + agua caliente",
+  "fotos": [
+    "propiedades/30/1.jpeg",
+    "propiedades/30/2.jpeg",
+    "propiedades/30/3.jpeg",
+    "propiedades/30/4.jpeg",
+    "propiedades/30/5.jpeg",
+    "propiedades/30/6.jpeg",
+    "propiedades/30/7.jpeg",
+    "propiedades/30/8.jpeg",
+    "propiedades/30/9.jpeg",
+    "propiedades/30/10.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 2 dormitorios",
+    "🚿 2 baños",
+    "📐 62 m²",
+    "🚗 1 estacionamiento",
+    "🛋 Amoblado",
+    "🌊 Vista al mar",
+    "🏢 Piso 16"
+  ],
+  "descripcion": [
+    "Departamento completamente amoblado ubicado en Costa de Montemar, Concón.",
+    "Cuenta con aproximadamente 62 m² totales, 2 dormitorios en suite, 2 baños, living-comedor, cocina americana equipada y terraza.",
+    "La terraza tiene aproximadamente 9 m² y cuenta con parrilla.",
+    "Dispone de vista al mar y dunas, estacionamiento y se encuentra en un edificio construido en 2019.",
+    "El edificio cuenta con piscina con solárium, gimnasio, cuatro quinchos, áreas verdes, salón multiuso y juegos infantiles.",
+    "El canon de arriendo es de $550.000 y los gastos comunes son aproximadamente $100.000 más consumo de agua caliente.",
+    "Se aceptan mascotas."
+  ],
+  "informacionImportante": [
+    "Arriendo mensual: $550.000",
+    "Gastos comunes: $100.000 aprox. + agua caliente",
+    "Total aproximado: $650.000 + agua caliente",
+    "2 dormitorios en suite",
+    "2 baños",
+    "62 m² totales aprox.",
+    "1 estacionamiento",
+    "Sin bodega",
+    "Amoblado",
+    "Se aceptan mascotas",
+    "Piso 16",
+    "Vista al mar y dunas"
+  ],
+  "areasComunes": [
+    "🏊 Piscina con solárium",
+    "💪 Gimnasio",
+    "🔥 4 quinchos",
+    "🌿 Áreas verdes",
+    "🎉 Salón multiuso",
+    "🛝 Juegos infantiles"
+  ],
+  "conectividad": [
+    "Cercano a playas",
+    "Cercano a supermercados",
+    "Cercano a restaurantes",
+    "Cercano a cafeterías",
+    "Buena conexión hacia Reñaca y Viña del Mar"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el departamento amoblado en Costa de Montemar, Entre Lomas 365, Concón."
+}

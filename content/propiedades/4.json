@@ -1,0 +1,63 @@
+{
+  "id": 4,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "Departamento Amoblado Quinta Claude",
+  "direccion": "Jackson · Torre Z",
+  "ubicacion": "Quinta Claude · Viña del Mar",
+  "precio": "$550.000",
+  "gastosComunes": "GGCC incluidos",
+  "totalMensual": "$550.000",
+  "fotos": [
+    "propiedades/4/1.jpeg",
+    "propiedades/4/2.jpeg",
+    "propiedades/4/3.jpeg",
+    "propiedades/4/4.jpeg",
+    "propiedades/4/5.jpeg",
+    "propiedades/4/6.jpeg",
+    "propiedades/4/7.jpeg",
+    "propiedades/4/8.jpeg",
+    "propiedades/4/9.jpeg",
+    "propiedades/4/10.jpeg",
+    "propiedades/4/11.jpeg",
+    "propiedades/4/12.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 3 dormitorios",
+    "🚿 1 baño",
+    "📐 90 m²",
+    "🚗 Estacionamientos comunitarios",
+    "🛋 Amoblado",
+    "🐾 Mascotas: consultar"
+  ],
+  "descripcion": [
+    "Departamento amoblado de 3 dormitorios ubicado en Quinta Claude, Viña del Mar.",
+    "La propiedad cuenta con 90 m², 1 baño y se entrega amoblada.",
+    "Dispone de 1 estacionamiento y no cuenta con bodega.",
+    "Los gastos comunes están incluidos en el canon de arriendo de $550.000 mensuales.",
+    "El conjunto cuenta con estacionamientos comunitarios.",
+    "Presenta buena conectividad hacia Viña del Mar y Quilpué.",
+    "Para consultar las condiciones de arriendo y la posibilidad de mascotas, puedes contactarnos directamente."
+  ],
+  "informacionImportante": [
+    "Arriendo mensual: $550.000",
+    "Gastos comunes incluidos",
+    "3 dormitorios",
+    "1 baño",
+    "90 m²",
+    "Estacionamientos ilimitados",
+    "Sin bodega",
+    "Departamento amoblado",
+    "Mascotas: consultar"
+  ],
+  "areasComunes": [
+    "🚗 Estacionamientos comunitarios"
+  ],
+  "conectividad": [
+    "Buena conectividad hacia Viña del Mar",
+    "Buena conectividad hacia Quilpué"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el departamento amoblado en Quinta Claude, Viña del Mar, Jackson Torre Z."
+}

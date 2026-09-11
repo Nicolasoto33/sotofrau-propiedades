@@ -1,0 +1,58 @@
+{
+  "id": 13,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "Casa Amoblada en Chorrillos",
+  "direccion": "Los Boldos 645",
+  "ubicacion": "Chorrillos · Viña del Mar",
+  "precio": "$450.000",
+  "gastosComunes": "Sin gastos comunes",
+  "totalMensual": "$450.000",
+  "fotos": [
+    "propiedades/13/1.jpeg",
+    "propiedades/13/2.jpeg",
+    "propiedades/13/3.jpeg",
+    "propiedades/13/4.jpeg",
+    "propiedades/13/5.jpeg",
+    "propiedades/13/6.jpeg",
+    "propiedades/13/7.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 1 dormitorio",
+    "🚿 1 baño",
+    "📐 60 m²",
+    "🏠 Casa independiente",
+    "🛋 Amoblada",
+    "🐾 Mascotas pequeñas"
+  ],
+  "descripcion": [
+    "Acogedora casa amoblada ubicada en Los Boldos 645, Chorrillos, Viña del Mar.",
+    "Cuenta con 60 m² construidos, 1 dormitorio amplio, 1 baño, hall de entrada, living-comedor y cocina totalmente equipada.",
+    "Es una casa independiente de un piso y se arrienda amoblada.",
+    "No cuenta con estacionamiento ni bodega.",
+    "Se aceptan mascotas pequeñas.",
+    "Cuenta con buena locomoción y cercanía a universidades, comercios y servicios."
+  ],
+  "informacionImportante": [
+    "Arriendo mensual: $450.000",
+    "Sin gastos comunes",
+    "1 dormitorio",
+    "1 baño",
+    "60 m²",
+    "Casa independiente de 1 piso",
+    "Sin estacionamiento",
+    "Sin bodega",
+    "Amoblada",
+    "Se aceptan mascotas pequeñas"
+  ],
+  "areasComunes": [],
+  "conectividad": [
+    "Cercana a Duoc UC",
+    "Cercana a Universidad Santo Tomás",
+    "Buena locomoción",
+    "Cercana a comercios y servicios"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por la casa amoblada en Los Boldos 645, Chorrillos, Viña del Mar."
+}

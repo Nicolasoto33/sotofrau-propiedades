@@ -1,0 +1,60 @@
+{
+  "id": 23,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "Departamento Álvarez 58",
+  "direccion": "Álvarez 58",
+  "ubicacion": "Centro · Viña del Mar",
+  "precio": "Desde $600.000",
+  "gastosComunes": "GGCC incluidos",
+  "totalMensual": "Desde $600.000",
+  "precioAlternativo": "$650.000 con estacionamiento + bodega",
+  "fotos": [
+    "propiedades/23/1.jpeg",
+    "propiedades/23/2.jpeg",
+    "propiedades/23/3.jpeg",
+    "propiedades/23/4.jpeg",
+    "propiedades/23/5.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 2 dormitorios",
+    "🚿 1 baño",
+    "📐 58 m²",
+    "🛗 Ascensor",
+    "🌿 Terraza cerrada"
+  ],
+  "descripcion": [
+    "Departamento de 2 dormitorios ubicado en Álvarez 58, Viña del Mar.",
+    "Cuenta con aproximadamente 58 m², 1 baño, terraza cerrada y ascensor.",
+    "Se arrienda sin amoblar.",
+    "Existe una alternativa de $600.000 mensuales con gastos comunes incluidos, sin estacionamiento ni bodega.",
+    "También existe una alternativa de $650.000 mensuales con gastos comunes incluidos, incorporando estacionamiento y bodega.",
+    "El edificio cuenta con conserjería 24/7 y estacionamientos de visitas.",
+    "No se admiten mascotas."
+  ],
+  "informacionImportante": [
+    "Opción 1: $600.000 con GGCC incluidos",
+    "Opción 1: sin estacionamiento ni bodega",
+    "Opción 2: $650.000 con GGCC incluidos",
+    "Opción 2: estacionamiento + bodega",
+    "2 dormitorios",
+    "1 baño",
+    "58 m² aprox.",
+    "No amoblado",
+    "No se aceptan mascotas"
+  ],
+  "areasComunes": [
+    "🔐 Conserjería 24/7",
+    "🛗 Ascensores",
+    "🚘 Estacionamientos de visitas"
+  ],
+  "conectividad": [
+    "Ubicación central",
+    "Cercano a comercio y servicios",
+    "Cercano a locomoción",
+    "Cercano a principales avenidas"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el departamento en Álvarez 58, Viña del Mar y sus alternativas de arriendo."
+}

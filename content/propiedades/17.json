@@ -1,0 +1,67 @@
+{
+  "id": 17,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "Departamento Quilpué Sector Los Pinos",
+  "direccion": "Altos de Manquehue 3194",
+  "ubicacion": "Quilpué · Sector Los Pinos",
+  "precio": "$420.000",
+  "gastosComunes": "GGCC incluidos",
+  "totalMensual": "$420.000",
+  "fotos": [
+    "propiedades/17/1.jpeg",
+    "propiedades/17/2.jpeg",
+    "propiedades/17/3.jpeg",
+    "propiedades/17/4.jpeg",
+    "propiedades/17/5.jpeg",
+    "propiedades/17/6.jpeg",
+    "propiedades/17/7.jpeg",
+    "propiedades/17/8.jpeg",
+    "propiedades/17/9.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 2 dormitorios",
+    "🚿 2 baños",
+    "📐 65 m²",
+    "🚗 1 estacionamiento",
+    "🏊 Piscina"
+  ],
+  "descripcion": [
+    "Departamento ubicado en Altos de Manquehue 3194, Quilpué, sector Los Pinos.",
+    "Cuenta con 65 m², 2 dormitorios, 2 baños, cocina semi cerrada a gas, conexión para lavadora, calefacción eléctrica y vista despejada.",
+    "Dispone de estacionamiento.",
+    "El condominio cuenta con acceso controlado, piscina, quinchos, sala multiuso, áreas verdes, juegos infantiles y estacionamientos en superficie.",
+    "Tiene buena conectividad hacia el centro de Quilpué, servicios, colegios y locomoción."
+  ],
+  "informacionImportante": [
+    "Arriendo mensual: $420.000",
+    "Gastos comunes incluidos",
+    "2 dormitorios",
+    "2 baños",
+    "65 m²",
+    "1 estacionamiento",
+    "Sin bodega",
+    "No amoblado",
+    "No se aceptan mascotas"
+  ],
+  "areasComunes": [
+    "🛡️ Acceso controlado",
+    "🏊 Piscina",
+    "🍖 2 quinchos",
+    "🎉 Sala multiuso",
+    "🏥 Sala de enfermería",
+    "🌳 Áreas verdes",
+    "👧 Juegos infantiles",
+    "🚘 Estacionamientos en superficie"
+  ],
+  "conectividad": [
+    "A pocos minutos del centro de Quilpué",
+    "Cercano a consultorio, hospital y clínicas",
+    "Cercano a supermercados y farmacias",
+    "Cerca de colegios y jardines",
+    "Locomoción a pasos"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el departamento en Altos de Manquehue 3194, Quilpué."
+}

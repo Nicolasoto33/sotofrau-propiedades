@@ -1,0 +1,61 @@
+{
+  "id": 15,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "Departamento Von Schroeder",
+  "direccion": "Von Schroeder 326 · Piso 6",
+  "ubicacion": "Viña del Mar",
+  "precio": "$550.000",
+  "gastosComunes": "$130.000",
+  "totalMensual": "$680.000",
+  "fotos": [
+    "propiedades/15/1.jpeg",
+    "propiedades/15/2.jpeg",
+    "propiedades/15/3.jpeg",
+    "propiedades/15/4.jpeg",
+    "propiedades/15/5.jpeg",
+    "propiedades/15/6.jpeg",
+    "propiedades/15/7.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 3 dormitorios",
+    "🚿 2 baños",
+    "📐 75 m²",
+    "🚗 1 estacionamiento",
+    "📦 1 bodega"
+  ],
+  "descripcion": [
+    "Departamento céntrico ubicado en Von Schroeder 326, piso 6, Viña del Mar, a pasos de Estación Miramar.",
+    "Cuenta con 75 m², 3 dormitorios, 2 baños, estacionamiento y bodega.",
+    "No admite mascotas.",
+    "El edificio cuenta con seguridad 24/7, recepción, ascensores y estacionamiento de visitas.",
+    "Excelente conectividad hacia comercio, supermercados, locomoción y servicios."
+  ],
+  "informacionImportante": [
+    "Arriendo mensual: $550.000",
+    "Gastos comunes: $130.000 aprox.",
+    "Total mensual: $680.000 aprox.",
+    "3 dormitorios",
+    "2 baños",
+    "75 m²",
+    "Piso 6",
+    "1 estacionamiento",
+    "1 bodega",
+    "No amoblado",
+    "No se aceptan mascotas"
+  ],
+  "areasComunes": [
+    "🛡️ Seguridad 24/7",
+    "🚪 Recepción",
+    "🛗 Ascensores",
+    "🚗 Estacionamiento de visitas"
+  ],
+  "conectividad": [
+    "A pasos de Estación Miramar",
+    "Cercano a supermercados",
+    "Cercano a locomoción"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el departamento en Von Schroeder 326, Viña del Mar."
+}

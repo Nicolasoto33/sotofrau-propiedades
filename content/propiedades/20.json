@@ -1,0 +1,63 @@
+{
+  "id": 20,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "Departamento Amoblado 3 Norte",
+  "direccion": "3 Norte 166",
+  "ubicacion": "Viña del Mar",
+  "precio": "$1.000.000",
+  "gastosComunes": "GGCC incluidos",
+  "totalMensual": "$1.000.000",
+  "fotos": [
+    "propiedades/20/1.jpeg",
+    "propiedades/20/2.jpeg",
+    "propiedades/20/3.jpeg",
+    "propiedades/20/4.jpeg",
+    "propiedades/20/5.jpeg",
+    "propiedades/20/6.jpeg",
+    "propiedades/20/7.jpeg",
+    "propiedades/20/8.jpeg",
+    "propiedades/20/9.jpeg",
+    "propiedades/20/10.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 3 dormitorios",
+    "🚿 2 baños",
+    "📐 130 m²",
+    "🚗 1 estacionamiento",
+    "🛋 Amoblado",
+    "🎓 Exclusivo estudiantes"
+  ],
+  "descripcion": [
+    "Amplio departamento amoblado ubicado en 3 Norte 166, Viña del Mar.",
+    "La propiedad cuenta con 3 dormitorios, 2 baños, 130 m², cocina totalmente equipada y lavadora y secadora.",
+    "Dispone de 3 terrazas y estacionamiento.",
+    "Incluye WiFi.",
+    "Se ubica a aproximadamente 2 cuadras del Casino de Viña del Mar y cerca de Playa Acapulco, Muelle Vergara, locomoción, bares y restaurantes.",
+    "La modalidad de arriendo indicada es de marzo a diciembre y está orientada a estudiantes."
+  ],
+  "informacionImportante": [
+    "Arriendo mensual: $1.000.000",
+    "Gastos comunes incluidos",
+    "3 dormitorios",
+    "2 baños",
+    "130 m²",
+    "3 terrazas",
+    "1 estacionamiento",
+    "Sin bodega",
+    "Amoblado",
+    "No se aceptan mascotas",
+    "Exclusivo estudiantes",
+    "Arriendo marzo a diciembre"
+  ],
+  "areasComunes": [],
+  "conectividad": [
+    "A aproximadamente 2 cuadras del Casino de Viña del Mar",
+    "Cercano a Playa Acapulco",
+    "Cercano a Muelle Vergara",
+    "Cercano a bares y restaurantes"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el departamento amoblado en 3 Norte 166, Viña del Mar."
+}

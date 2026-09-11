@@ -1,0 +1,64 @@
+{
+  "id": 25,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "Departamento Quilpué Sector Los Pinos",
+  "direccion": "Altos de Manquehue 3194 · 4° piso",
+  "ubicacion": "Quilpué · Sector Los Pinos",
+  "precio": "$420.000",
+  "gastosComunes": "GGCC incluidos",
+  "totalMensual": "$420.000",
+  "fotos": [
+    "propiedades/25/1.jpeg",
+    "propiedades/25/2.jpeg",
+    "propiedades/25/3.jpeg",
+    "propiedades/25/4.jpeg",
+    "propiedades/25/5.jpeg",
+    "propiedades/25/6.jpeg",
+    "propiedades/25/7.jpeg",
+    "propiedades/25/8.jpeg",
+    "propiedades/25/9.jpeg",
+    "propiedades/25/10.jpeg",
+    "propiedades/25/11.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 2 dormitorios",
+    "🚿 2 baños",
+    "📐 65 m²",
+    "🚗 1 estacionamiento",
+    "🏊 Piscina"
+  ],
+  "descripcion": [
+    "Departamento de 2 dormitorios y 2 baños ubicado en Altos de Manquehue 3194, cuarto piso, Quilpué.",
+    "Cuenta con 65 m², living-comedor luminoso, cocina funcional, balcón y estacionamiento incluido.",
+    "El condominio es cerrado y cuenta con conserjería, piscina y áreas verdes.",
+    "Tiene acceso directo a Troncal Sur y se encuentra a minutos de Viña del Mar, supermercados y servicios.",
+    "Los gastos comunes están incluidos."
+  ],
+  "informacionImportante": [
+    "Arriendo mensual: $420.000",
+    "Gastos comunes incluidos",
+    "2 dormitorios",
+    "2 baños",
+    "65 m²",
+    "4° piso",
+    "1 estacionamiento",
+    "Sin bodega",
+    "No amoblado",
+    "No se aceptan mascotas"
+  ],
+  "areasComunes": [
+    "🛡️ Conserjería",
+    "🏊 Piscina",
+    "🌳 Áreas verdes"
+  ],
+  "conectividad": [
+    "Acceso directo a Troncal Sur",
+    "A minutos de Viña del Mar",
+    "Cercano a supermercados y servicios",
+    "Locomoción cercana"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el departamento en Altos de Manquehue 3194, cuarto piso, Quilpué."
+}

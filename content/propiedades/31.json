@@ -1,0 +1,82 @@
+{
+  "id": 31,
+  "publicada": true,
+  "operacion": "Venta",
+  "estado": "disponible",
+  "estadoTexto": "Disponible",
+  "titulo": "Departamento en Venta Costa de Montemar",
+  "direccion": "Av. Concón Reñaca 4357",
+  "ubicacion": "Costa de Montemar · Concón",
+  "precio": "Desde 3.998 UF",
+  "precioBodega": "4.100 UF con bodega",
+  "gastosComunes": "$110.000 aprox.",
+  "totalMensual": "",
+  "fotos": [
+    "propiedades/31/1.jpeg",
+    "propiedades/31/2.jpeg",
+    "propiedades/31/3.jpeg",
+    "propiedades/31/4.jpeg",
+    "propiedades/31/5.jpeg",
+    "propiedades/31/6.jpeg",
+    "propiedades/31/7.jpeg",
+    "propiedades/31/8.jpeg",
+    "propiedades/31/9.jpeg",
+    "propiedades/31/10.jpeg",
+    "propiedades/31/11.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 2 dormitorios",
+    "🚿 1 baño",
+    "📐 53,5 m² útiles",
+    "📐 63 m² totales",
+    "🚗 Estacionamiento techado",
+    "🛋 Amoblado",
+    "🌊 Vista parcial al mar",
+    "🏢 Piso 16"
+  ],
+  "descripcion": [
+    "Departamento completamente amoblado y equipado en venta en Av. Concón Reñaca 4357, Costa de Montemar, Concón.",
+    "Se encuentra en el piso 16 y cuenta con orientación poniente.",
+    "Dispone de 53,5 m² útiles y 63 m² totales, 2 dormitorios, 1 baño y 2 terrazas independientes.",
+    "Cuenta con vista despejada al parque y vista parcial al mar, cocina americana integrada y living-comedor.",
+    "El dormitorio principal tiene walk-in closet.",
+    "Dispone de estacionamiento techado.",
+    "La propiedad se ofrece desde 3.998 UF y el valor es de 4.100 UF con bodega.",
+    "El edificio cuenta con piscina para adultos y niños, quinchos, gimnasio, lavandería, sala multiuso, salón gourmet y conserjería.",
+    "Excelente conectividad hacia Reñaca y Viña del Mar."
+  ],
+  "informacionImportante": [
+    "Precio desde: 3.998 UF",
+    "Precio con bodega: 4.100 UF",
+    "GGCC aprox.: $110.000 mensuales",
+    "2 dormitorios",
+    "1 baño",
+    "53,5 m² útiles",
+    "63 m² totales",
+    "2 terrazas",
+    "Estacionamiento techado",
+    "Bodega opcional",
+    "Amoblado",
+    "Se aceptan mascotas",
+    "Piso 16",
+    "Orientación poniente"
+  ],
+  "areasComunes": [
+    "🏊 Piscina adultos y niños",
+    "🔥 Quinchos",
+    "💪 Gimnasio",
+    "🧺 Lavandería",
+    "🎉 Sala multiuso",
+    "🍽️ Salón gourmet",
+    "🛡️ Conserjería y seguridad"
+  ],
+  "conectividad": [
+    "A pasos del campo dunar",
+    "Cercano a playas",
+    "Cercano a supermercados",
+    "Cercano a restaurantes y cafeterías",
+    "Excelente conectividad hacia Reñaca",
+    "Excelente conectividad hacia Viña del Mar"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el departamento en venta en Costa de Montemar, Av. Concón Reñaca 4357."
+}

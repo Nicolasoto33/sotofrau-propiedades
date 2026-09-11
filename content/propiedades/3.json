@@ -1,0 +1,66 @@
+{
+  "id": 3,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "Departamento Amoblado con Vista al Mar en Reñaca",
+  "direccion": "Las Golondrinas 1731",
+  "ubicacion": "Reñaca · Viña del Mar",
+  "precio": "$500.000",
+  "gastosComunes": "$70.000",
+  "totalMensual": "$570.000",
+  "fotos": [
+    "propiedades/3/1.jpg",
+    "propiedades/3/2.jpg",
+    "propiedades/3/3.jpg",
+    "propiedades/3/4.jpg",
+    "propiedades/3/5.jpg",
+    "propiedades/3/6.jpg",
+    "propiedades/3/7.jpg"
+  ],
+  "caracteristicas": [
+    "🛏 1 dormitorio",
+    "🚿 1 baño",
+    "🏢 Piso 13",
+    "🌅 Vista al mar",
+    "🚗 1 estacionamiento",
+    "📦 1 bodega"
+  ],
+  "descripcion": [
+    "Departamento amoblado con vista al mar ubicado en Las Golondrinas 1731, Reñaca, Viña del Mar. Se encuentra en el piso 13 y cuenta con orientación poniente, ofreciendo una excelente vista hacia el mar.",
+    "La propiedad dispone de 1 dormitorio, 1 baño, living y una terraza con vista al mar. Cuenta además con cocina de concepto abierto con comedor incorporado.",
+    "El departamento se entrega amoblado y dispone de 1 estacionamiento y 1 bodega.",
+    "El canon de arriendo es de $500.000 mensuales. Los gastos comunes corresponden a $70.000, alcanzando un total mensual de $570.000.",
+    "El edificio cuenta con piscina exterior, piscina temperada, gimnasio, quinchos, sala de juegos, sala de estar para niños y conserjería 24/7.",
+    "Excelente conectividad, a media cuadra de la locomoción colectiva y cercano a bancos, farmacias, supermercados, colegios, centros médicos y restaurantes."
+  ],
+  "informacionImportante": [
+    "Arriendo mensual: $500.000",
+    "Gastos comunes: $70.000",
+    "Total mensual: $570.000",
+    "Piso 13 · Orientación poniente",
+    "1 dormitorio y 1 baño",
+    "Departamento amoblado",
+    "Terraza con vista al mar",
+    "1 estacionamiento y 1 bodega"
+  ],
+  "areasComunes": [
+    "🏊 Piscina exterior",
+    "♨️ Piscina temperada",
+    "🏋️ Gimnasio",
+    "🍖 Quinchos",
+    "🎮 Sala de juegos",
+    "🧸 Sala de estar para niños",
+    "🛡️ Conserjería 24/7"
+  ],
+  "conectividad": [
+    "Locomoción colectiva a media cuadra",
+    "Cercano a supermercados",
+    "Cercano a farmacias y bancos",
+    "Cercano a colegios",
+    "Cercano a centros médicos",
+    "Cercano a restaurantes"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el departamento amoblado con vista al mar en Reñaca, Las Golondrinas 1731."
+}

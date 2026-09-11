@@ -1,0 +1,61 @@
+{
+  "id": 11,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "Departamento Amoblado Cercano a Sausalito",
+  "direccion": "Curaquilla",
+  "ubicacion": "Viña del Mar",
+  "precio": "$530.000",
+  "gastosComunes": "GGCC incluidos",
+  "totalMensual": "$530.000",
+  "fotos": [
+    "propiedades/11/1.jpeg",
+    "propiedades/11/2.jpeg",
+    "propiedades/11/3.jpeg",
+    "propiedades/11/4.jpeg",
+    "propiedades/11/5.jpeg",
+    "propiedades/11/6.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 3 dormitorios",
+    "🚿 1 baño",
+    "📐 68 m²",
+    "🅿️ Estacionamiento de visitas",
+    "🛋 Amoblado"
+  ],
+  "descripcion": [
+    "Departamento amoblado de 3 dormitorios ubicado en Curaquilla, Viña del Mar, cercano al sector de Sausalito.",
+    "Cuenta con 68 m², cocina equipada y se encuentra en primer piso.",
+    "El departamento se entrega amoblado y no incluye lavadora.",
+    "No se admiten mascotas.",
+    "El condominio dispone de áreas verdes, juegos infantiles, cancha de uso múltiple, salón de eventos y salón multiuso.",
+    "Cuenta con estacionamiento de visitas disponible."
+  ],
+  "informacionImportante": [
+    "Arriendo mensual: $530.000",
+    "Gastos comunes incluidos",
+    "3 dormitorios",
+    "1 baño",
+    "68 m²",
+    "Estacionamiento de visitas",
+    "Sin bodega",
+    "Amoblado",
+    "No se aceptan mascotas",
+    "Primer piso"
+  ],
+  "areasComunes": [
+    "🌿 Áreas verdes",
+    "🛝 Juegos infantiles",
+    "⚽ Cancha de uso múltiple",
+    "🎉 Salón de eventos",
+    "🧩 Salón multiuso"
+  ],
+  "conectividad": [
+    "Cercano a Campus Sausalito",
+    "Cercano a Universidad de las Américas",
+    "Cercano a Universidad Andrés Bello"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el departamento amoblado en Curaquilla, Viña del Mar."
+}

@@ -1,0 +1,59 @@
+{
+  "id": 26,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "Departamento en Reñaca Alto",
+  "direccion": "Estero Maitenlahue 1250 · Torre B · Piso 2",
+  "ubicacion": "Reñaca Alto · Viña del Mar",
+  "precio": "$350.000",
+  "gastosComunes": "GGCC incluidos",
+  "totalMensual": "$350.000",
+  "fotos": [
+    "propiedades/26/1.jpeg",
+    "propiedades/26/2.jpeg",
+    "propiedades/26/3.jpeg",
+    "propiedades/26/4.jpeg",
+    "propiedades/26/5.jpeg",
+    "propiedades/26/6.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 3 dormitorios",
+    "🚿 1 baño",
+    "📐 60 m²",
+    "🛗 Ascensor",
+    "🐾 Mascotas"
+  ],
+  "descripcion": [
+    "Departamento de 3 dormitorios ubicado en el Condominio Vista Santa Julia II, Viña del Mar.",
+    "Cuenta con 60 m², 1 baño, living-comedor, cocina, balcón y ascensor.",
+    "No cuenta con estacionamiento.",
+    "El condominio dispone de conserjería y seguridad 24/7, quincho y lavandería.",
+    "Presenta buena locomoción, cercanía a comercio y buena conectividad hacia distintos puntos de Viña del Mar.",
+    "Se aceptan mascotas."
+  ],
+  "informacionImportante": [
+    "Arriendo mensual: $350.000",
+    "Gastos comunes incluidos",
+    "3 dormitorios",
+    "1 baño",
+    "60 m²",
+    "Sin estacionamiento",
+    "Sin bodega",
+    "No amoblado",
+    "Se aceptan mascotas"
+  ],
+  "areasComunes": [
+    "🛡️ Conserjería y seguridad 24/7",
+    "🛗 Ascensor",
+    "🔥 Quincho",
+    "🧺 Lavandería"
+  ],
+  "conectividad": [
+    "Buena locomoción",
+    "Cercano a comercio y servicios",
+    "Buena conectividad hacia distintos puntos de Viña del Mar"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el departamento en Estero Maitenlahue 1250, Torre B, piso 2."
+}

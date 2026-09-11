@@ -1,0 +1,56 @@
+{
+  "id": 19,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "Departamento Amoblado 1 Norte",
+  "direccion": "1 Norte con 2 Oriente",
+  "ubicacion": "Viña del Mar",
+  "precio": "$760.000",
+  "gastosComunes": "GGCC incluidos",
+  "totalMensual": "$760.000",
+  "fotos": [
+    "propiedades/19/1.jpeg",
+    "propiedades/19/2.jpeg",
+    "propiedades/19/3.jpeg",
+    "propiedades/19/4.jpeg",
+    "propiedades/19/5.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 2 dormitorios",
+    "🚿 2 baños",
+    "📐 65 m²",
+    "🚗 1 estacionamiento",
+    "📦 1 bodega",
+    "🛋 Amoblado",
+    "🐾 Mascotas pequeñas"
+  ],
+  "descripcion": [
+    "Departamento amoblado de 2 dormitorios y 2 baños ubicado en 1 Norte, entre 1 y 2 Oriente, Viña del Mar.",
+    "Cuenta con 65 m², amplia terraza, estacionamiento y bodega.",
+    "Los dormitorios tienen distribución estilo mariposa.",
+    "El departamento es luminoso y soleado.",
+    "El edificio cuenta con piscina, gimnasio, quincho y sala de eventos.",
+    "Se aceptan mascotas pequeñas."
+  ],
+  "informacionImportante": [
+    "Arriendo mensual: $760.000",
+    "Gastos comunes incluidos",
+    "2 dormitorios",
+    "2 baños",
+    "65 m²",
+    "1 estacionamiento",
+    "1 bodega",
+    "Amoblado",
+    "Mascotas pequeñas"
+  ],
+  "areasComunes": [
+    "🏊 Piscina",
+    "🏋️ Gimnasio",
+    "🥩 Quincho",
+    "🎉 Sala de eventos"
+  ],
+  "conectividad": [],
+  "whatsapp": "Hola, me gustaría consultar por el departamento amoblado en 1 Norte con 2 Oriente, Viña del Mar."
+}

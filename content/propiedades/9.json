@@ -1,0 +1,53 @@
+{
+  "id": 9,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "Departamento Amoblado en Reñaca",
+  "direccion": "Los Sargazos 42",
+  "ubicacion": "Reñaca · Viña del Mar",
+  "precio": "$560.000",
+  "gastosComunes": "GGCC incluidos",
+  "totalMensual": "$560.000",
+  "fotos": [
+    "propiedades/9/1.jpeg",
+    "propiedades/9/2.jpeg",
+    "propiedades/9/3.jpeg",
+    "propiedades/9/4.jpeg",
+    "propiedades/9/5.jpeg",
+    "propiedades/9/6.jpeg",
+    "propiedades/9/7.jpeg",
+    "propiedades/9/8.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 2 dormitorios",
+    "🚿 1 baño",
+    "📐 70 m²",
+    "🛋 Amoblado"
+  ],
+  "descripcion": [
+    "Departamento amoblado en arriendo ubicado en Los Sargazos 42, Reñaca.",
+    "Cuenta con dos dormitorios, cocina americana equipada, comedor y living con sofá.",
+    "Incluye refrigerador, WiFi, TV cable, luz, agua y gastos comunes según la publicación.",
+    "El edificio cuenta con lavandería de pago.",
+    "Cada arrendatario paga su consumo de gas.",
+    "La publicación indica disponibilidad de año corrido."
+  ],
+  "informacionImportante": [
+    "Arriendo mensual: $560.000",
+    "Gastos comunes incluidos",
+    "2 dormitorios",
+    "1 baño",
+    "70 m²",
+    "Sin estacionamiento",
+    "Sin bodega",
+    "Amoblado",
+    "No se aceptan mascotas"
+  ],
+  "areasComunes": [
+    "🧺 Lavandería de pago"
+  ],
+  "conectividad": [],
+  "whatsapp": "Hola, me gustaría consultar por el departamento amoblado en Los Sargazos 42, Reñaca."
+}

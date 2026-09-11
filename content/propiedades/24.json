@@ -1,0 +1,51 @@
+{
+  "id": 24,
+  "publicada": true,
+  "operacion": "Venta",
+  "estado": "disponible",
+  "estadoTexto": "Disponible",
+  "titulo": "Parcelas de 5.000 m² en Quillota",
+  "direccion": "Camino Manzanar F360",
+  "ubicacion": "Quillota",
+  "precio": "1.500 UF",
+  "gastosComunes": "No aplica",
+  "totalMensual": "",
+  "fotos": [
+    "propiedades/24/1.jpeg",
+    "propiedades/24/2.jpeg",
+    "propiedades/24/3.jpeg",
+    "propiedades/24/4.jpeg",
+    "propiedades/24/5.jpeg",
+    "propiedades/24/6.jpeg"
+  ],
+  "caracteristicas": [
+    "🌳 Parcela",
+    "📐 5.000 m²",
+    "🚗 Estacionamiento",
+    "🐾 Mascotas"
+  ],
+  "descripcion": [
+    "Parcelas de 5.000 m² ubicadas en Camino Manzanar F360, Quillota.",
+    "Se encuentran regularizadas y listas para escriturar.",
+    "Están ubicadas a aproximadamente 10 minutos de Quillota, en un entorno natural, tranquilo y despejado.",
+    "Son una alternativa para vivienda, segunda casa o inversión.",
+    "Cuentan con buen asoleamiento y acceso por Camino Manzanar F360.",
+    "La publicación señala conectividad hacia Concón y Viña del Mar."
+  ],
+  "informacionImportante": [
+    "Precio: 1.500 UF",
+    "5.000 m²",
+    "Parcelas regularizadas",
+    "Listas para escriturar",
+    "Estacionamiento",
+    "Sin bodega",
+    "Mascotas: sí"
+  ],
+  "areasComunes": [],
+  "conectividad": [
+    "A 10 minutos de Quillota",
+    "A 15 minutos de Concón",
+    "Conectividad hacia Viña del Mar"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por las parcelas de 5.000 m² en Camino Manzanar F360, Quillota."
+}
