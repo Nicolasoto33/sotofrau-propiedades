@@ -16,30 +16,79 @@ public_folder: "/propiedades"
 
 collections:
   - name: "propiedades"
-    label: "Propiedades"
+    label: "🏠 Propiedades"
     label_singular: "Propiedad"
+
+    description: "Administra las propiedades publicadas en Sotofrau Propiedades."
+
     folder: "content/propiedades"
+
     create: true
+    delete: true
+
     extension: "json"
     format: "json"
+
     identifier_field: "titulo"
+
     slug: "{{id}}"
 
+    summary: "ID {{id}} · {{titulo}} · {{operacion}} · {{estadoTexto}}"
+
+    sortable_fields:
+      - "id"
+      - "titulo"
+      - "operacion"
+      - "estado"
+
+    view_filters:
+      - label: "Disponibles"
+        field: "estado"
+        pattern: "disponible"
+
+      - label: "Arrendadas / Gestionadas"
+        field: "estado"
+        pattern: "gestionada"
+
+      - label: "Vendidas"
+        field: "estado"
+        pattern: "vendida"
+
+      - label: "Arriendos"
+        field: "operacion"
+        pattern: "Arriendo"
+
+      - label: "Ventas"
+        field: "operacion"
+        pattern: "Venta"
+
     fields:
+
+      # =====================================================
+      # IDENTIFICACIÓN
+      # =====================================================
+
       - label: "ID"
         name: "id"
         widget: "number"
         value_type: "int"
         min: 1
+        hint: "Número único de la propiedad. Este número también se utiliza en la URL de la ficha."
 
       - label: "Título"
         name: "titulo"
         widget: "string"
+        hint: "Título principal que verá el visitante en la publicación."
 
-      - label: "Publicada"
+      - label: "Visible en la página web"
         name: "publicada"
         widget: "boolean"
         default: true
+        hint: "Desactiva esta opción para ocultar la propiedad del sitio sin eliminarla."
+
+      # =====================================================
+      # OPERACIÓN Y ESTADO
+      # =====================================================
 
       - label: "Operación"
         name: "operacion"
@@ -47,6 +96,7 @@ collections:
         options:
           - "Arriendo"
           - "Venta"
+        hint: "Indica si la propiedad se publica para arriendo o venta."
 
       - label: "Estado"
         name: "estado"
@@ -54,132 +104,217 @@ collections:
         options:
           - label: "Disponible"
             value: "disponible"
+
           - label: "Arrendada / Gestionada"
             value: "gestionada"
+
           - label: "Vendida"
             value: "vendida"
 
+        hint: "Este estado determina cómo se mostrará y ordenará la propiedad en la página."
+
       - label: "Texto visible del estado"
         name: "estadoTexto"
-        widget: "string"
+        widget: "select"
+        options:
+          - "Disponible"
+          - "Arrendada"
+          - "Vendida"
         default: "Disponible"
+        hint: "Texto que verá el visitante sobre la propiedad."
+
+      # =====================================================
+      # UBICACIÓN
+      # =====================================================
 
       - label: "Dirección"
         name: "direccion"
         widget: "string"
         required: false
+        hint: "Dirección, calle, edificio o referencia que quieras mostrar públicamente."
 
       - label: "Ubicación"
         name: "ubicacion"
         widget: "string"
+        hint: "Ejemplo: Costa de Montemar · Concón."
+
+      # =====================================================
+      # VALORES
+      # =====================================================
 
       - label: "Precio"
         name: "precio"
         widget: "string"
+        hint: "Puedes ingresar pesos o UF. Ejemplo: $550.000 o 3.998 UF."
 
       - label: "Gastos comunes"
         name: "gastosComunes"
         widget: "string"
         required: false
+        hint: "Ejemplo: $100.000 aprox., GGCC incluidos o No aplica."
 
       - label: "Total mensual"
         name: "totalMensual"
         widget: "string"
         required: false
+        hint: "Útil para arriendos cuando deseas mostrar canon más gastos comunes."
+
+      # =====================================================
+      # CARACTERÍSTICAS NUMÉRICAS
+      # =====================================================
 
       - label: "Superficie"
         name: "superficie"
         widget: "string"
         required: false
+        hint: "Ejemplo: 65 m², 80 m² o 5.000 m²."
 
       - label: "Dormitorios"
         name: "dormitorios"
         widget: "number"
         value_type: "int"
+        min: 0
         required: false
 
       - label: "Baños"
         name: "banos"
         widget: "number"
         value_type: "int"
+        min: 0
         required: false
 
       - label: "Estacionamientos"
         name: "estacionamientos"
         widget: "number"
         value_type: "int"
+        min: 0
         required: false
 
       - label: "Piso"
         name: "piso"
         widget: "string"
         required: false
+        hint: "Ejemplo: 3er piso, Piso 16 o dejar vacío si no corresponde."
 
       - label: "Mascotas"
         name: "mascotas"
-        widget: "string"
+        widget: "select"
         required: false
+        options:
+          - "Permitidas"
+          - "No permitidas"
+          - "Mascotas pequeñas"
+          - "Consultar"
 
-      - label: "Imagen principal"
+      # =====================================================
+      # FOTOGRAFÍAS
+      # =====================================================
+
+      - label: "📷 Imagen principal"
         name: "imagen"
         widget: "image"
         required: false
+        hint: "Esta imagen será utilizada como fotografía principal de la propiedad."
 
-      - label: "Fotografías"
+      - label: "📸 Galería de fotografías"
         name: "fotos"
         widget: "list"
         required: false
+        summary: "{{fields.foto}}"
+
         field:
           label: "Foto"
           name: "foto"
           widget: "image"
 
+        hint: "Agrega todas las fotografías que quieras mostrar en la galería."
+
+      # =====================================================
+      # CARACTERÍSTICAS VISIBLES
+      # =====================================================
+
       - label: "Características"
         name: "caracteristicas"
         widget: "list"
         required: false
+
         field:
           label: "Característica"
           name: "caracteristica"
           widget: "string"
 
+        hint: "Ejemplo: 🛏 3 dormitorios, 🚿 2 baños, 📐 80 m²."
+
+      # =====================================================
+      # DESCRIPCIÓN
+      # =====================================================
+
       - label: "Descripción"
         name: "descripcion"
         widget: "list"
         required: false
+
         field:
           label: "Párrafo"
           name: "parrafo"
           widget: "text"
 
+        hint: "Cada elemento corresponde a un párrafo de la descripción de la propiedad."
+
+      # =====================================================
+      # INFORMACIÓN IMPORTANTE
+      # =====================================================
+
       - label: "Información importante"
         name: "informacionImportante"
         widget: "list"
         required: false
+
         field:
           label: "Punto"
           name: "punto"
           widget: "string"
 
+        hint: "Añade aquí condiciones, valores, detalles destacados u otros puntos relevantes."
+
+      # =====================================================
+      # ÁREAS COMUNES
+      # =====================================================
+
       - label: "Áreas comunes"
         name: "areasComunes"
         widget: "list"
         required: false
+
         field:
           label: "Área común"
           name: "area"
           widget: "string"
 
+        hint: "Ejemplo: 🏊 Piscina, 🔥 Quinchos, 💪 Gimnasio, 🛡️ Conserjería."
+
+      # =====================================================
+      # CONECTIVIDAD
+      # =====================================================
+
       - label: "Conectividad"
         name: "conectividad"
         widget: "list"
         required: false
+
         field:
           label: "Punto de conectividad"
           name: "punto"
           widget: "string"
 
-      - label: "Mensaje de WhatsApp"
+        hint: "Ejemplo: cercano a supermercados, locomoción, universidades, playa o principales avenidas."
+
+      # =====================================================
+      # WHATSAPP
+      # =====================================================
+
+      - label: "💬 Mensaje de WhatsApp"
         name: "whatsapp"
         widget: "text"
         required: false
+        hint: "Este será el mensaje que recibirá Nicolás cuando una persona consulte por esta propiedad desde la web."
