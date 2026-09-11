@@ -1,3 +1,11 @@
+backend:
+  name: github
+  repo: Nicolasoto33/sotofrau-propiedades
+  branch: contenido-borradores
+  squash_merges: true
+
+publish_mode: editorial_workflow
+
 site_url: https://sotofraupropiedades.cl
 display_url: https://sotofraupropiedades.cl
 
