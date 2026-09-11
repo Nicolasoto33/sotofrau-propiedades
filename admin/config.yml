@@ -13,3 +13,173 @@ locale: es
 
 media_folder: "propiedades"
 public_folder: "/propiedades"
+
+collections:
+  - name: "propiedades"
+    label: "Propiedades"
+    label_singular: "Propiedad"
+    folder: "content/propiedades"
+    create: true
+    extension: "json"
+    format: "json"
+    identifier_field: "titulo"
+    slug: "{{id}}"
+
+    fields:
+      - label: "ID"
+        name: "id"
+        widget: "number"
+        value_type: "int"
+        min: 1
+
+      - label: "Título"
+        name: "titulo"
+        widget: "string"
+
+      - label: "Publicada"
+        name: "publicada"
+        widget: "boolean"
+        default: true
+
+      - label: "Operación"
+        name: "operacion"
+        widget: "select"
+        options:
+          - "Arriendo"
+          - "Venta"
+
+      - label: "Estado"
+        name: "estado"
+        widget: "select"
+        options:
+          - label: "Disponible"
+            value: "disponible"
+          - label: "Arrendada / Gestionada"
+            value: "gestionada"
+          - label: "Vendida"
+            value: "vendida"
+
+      - label: "Texto visible del estado"
+        name: "estadoTexto"
+        widget: "string"
+        default: "Disponible"
+
+      - label: "Dirección"
+        name: "direccion"
+        widget: "string"
+        required: false
+
+      - label: "Ubicación"
+        name: "ubicacion"
+        widget: "string"
+
+      - label: "Precio"
+        name: "precio"
+        widget: "string"
+
+      - label: "Gastos comunes"
+        name: "gastosComunes"
+        widget: "string"
+        required: false
+
+      - label: "Total mensual"
+        name: "totalMensual"
+        widget: "string"
+        required: false
+
+      - label: "Superficie"
+        name: "superficie"
+        widget: "string"
+        required: false
+
+      - label: "Dormitorios"
+        name: "dormitorios"
+        widget: "number"
+        value_type: "int"
+        required: false
+
+      - label: "Baños"
+        name: "banos"
+        widget: "number"
+        value_type: "int"
+        required: false
+
+      - label: "Estacionamientos"
+        name: "estacionamientos"
+        widget: "number"
+        value_type: "int"
+        required: false
+
+      - label: "Piso"
+        name: "piso"
+        widget: "string"
+        required: false
+
+      - label: "Mascotas"
+        name: "mascotas"
+        widget: "string"
+        required: false
+
+      - label: "Imagen principal"
+        name: "imagen"
+        widget: "image"
+        required: false
+
+      - label: "Fotografías"
+        name: "fotos"
+        widget: "list"
+        required: false
+        field:
+          label: "Foto"
+          name: "foto"
+          widget: "image"
+
+      - label: "Características"
+        name: "caracteristicas"
+        widget: "list"
+        required: false
+        field:
+          label: "Característica"
+          name: "caracteristica"
+          widget: "string"
+
+      - label: "Descripción"
+        name: "descripcion"
+        widget: "list"
+        required: false
+        field:
+          label: "Párrafo"
+          name: "parrafo"
+          widget: "text"
+
+      - label: "Información importante"
+        name: "informacionImportante"
+        widget: "list"
+        required: false
+        field:
+          label: "Punto"
+          name: "punto"
+          widget: "string"
+
+      - label: "Áreas comunes"
+        name: "areasComunes"
+        widget: "list"
+        required: false
+        field:
+          label: "Área común"
+          name: "area"
+          widget: "string"
+
+      - label: "Conectividad"
+        name: "conectividad"
+        widget: "list"
+        required: false
+        field:
+          label: "Punto de conectividad"
+          name: "punto"
+          widget: "string"
+
+      - label: "Mensaje de WhatsApp"
+        name: "whatsapp"
+        widget: "text"
+        required: false
