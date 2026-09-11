@@ -1,0 +1,7 @@
+site_url: https://sotofraupropiedades.cl
+display_url: https://sotofraupropiedades.cl
+
+locale: es
+
+media_folder: "propiedades"
+public_folder: "/propiedades"
