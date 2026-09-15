@@ -105,6 +105,12 @@ function cargarPropiedades() {
         );
     }
 
+    /* =====================================================
+       ELIMINAR DATOS PRIVADOS DEL ARCHIVO PÚBLICO
+    ===================================================== */
+
+    delete propiedad.notasInternas;
+
     propiedades.push(propiedad);
   });
 
@@ -149,6 +155,7 @@ function ordenarPropiedades(propiedades) {
 function generarArchivo(propiedades) {
   const encabezado = `/*
 =====================================================
+
 ARCHIVO GENERADO AUTOMÁTICAMENTE
 SOTOFRAU PROPIEDADES
 
@@ -156,6 +163,7 @@ NO EDITAR MANUALMENTE.
 
 Origen:
 content/propiedades/*.json
+
 =====================================================
 */
 
