@@ -1,0 +1,64 @@
+{
+  "id": 22,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "Departamento Calle Ecuador Amoblado",
+  "direccion": "Ecuador 130",
+  "ubicacion": "Centro · Viña del Mar",
+  "precio": "$480.000",
+  "gastosComunes": "$110.000 aprox.",
+  "totalMensual": "$590.000 aprox.",
+  "fotos": [
+    "propiedades/22/1.jpeg",
+    "propiedades/22/2.jpeg",
+    "propiedades/22/3.jpeg",
+    "propiedades/22/4.jpeg",
+    "propiedades/22/5.jpeg",
+    "propiedades/22/6.jpeg",
+    "propiedades/22/7.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 1 dormitorio",
+    "🚿 1 baño",
+    "📐 33 m²",
+    "🚗 1 estacionamiento",
+    "🛋 Amoblado",
+    "🐾 Mascotas pequeñas",
+    "🏢 Piso 6"
+  ],
+  "descripcion": [
+    "Departamento totalmente amoblado ubicado en Ecuador 130, en pleno centro de Viña del Mar.",
+    "Cuenta con 33 m², 1 dormitorio, 1 baño y estacionamiento.",
+    "Se encuentra en el piso 6.",
+    "El edificio cuenta con ascensor, recepción y conserjería.",
+    "Está cercano a supermercados, locomoción, bancos, restaurantes, playa y comercio.",
+    "Se aceptan mascotas pequeñas."
+  ],
+  "informacionImportante": [
+    "Arriendo mensual: $480.000",
+    "Gastos comunes: $110.000 aprox.",
+    "Total mensual: $590.000 aprox.",
+    "1 dormitorio",
+    "1 baño",
+    "33 m²",
+    "1 estacionamiento",
+    "Sin bodega",
+    "Amoblado",
+    "Mascotas pequeñas",
+    "Piso 6"
+  ],
+  "areasComunes": [
+    "🛡️ Conserjería",
+    "🛗 Ascensor"
+  ],
+  "conectividad": [
+    "Centro de Viña del Mar",
+    "Cercano a supermercados",
+    "Cercano a bancos",
+    "Cercano a restaurantes",
+    "Cercano a playa y comercio"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el departamento amoblado en Ecuador 130, Viña del Mar."
+}

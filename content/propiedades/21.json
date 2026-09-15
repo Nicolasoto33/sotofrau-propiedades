@@ -1,0 +1,61 @@
+{
+  "id": 21,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "Departamento en Quinta Claude",
+  "direccion": "Jackson 490 · Quinta Claude · Torre W",
+  "ubicacion": "Quinta Claude · Viña del Mar",
+  "precio": "$550.000",
+  "gastosComunes": "GGCC incluidos",
+  "totalMensual": "$550.000",
+  "fotos": [
+    "propiedades/21/1.jpeg",
+    "propiedades/21/2.jpeg",
+    "propiedades/21/3.jpeg",
+    "propiedades/21/4.jpeg",
+    "propiedades/21/5.jpeg",
+    "propiedades/21/6.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 3 dormitorios",
+    "🚿 1 baño",
+    "📐 75 m²",
+    "🚗 Estacionamiento libre",
+    "🌿 Parque privado"
+  ],
+  "descripcion": [
+    "Departamento de 3 dormitorios ubicado en el conjunto habitacional Quinta Claude, Jackson 490, Viña del Mar.",
+    "La propiedad cuenta con aproximadamente 75 m², 1 baño, cocina funcional, conexión para lavadora, living-comedor amplio y se encuentra remodelada.",
+    "Dispone de estacionamientos libres para residentes y visitas.",
+    "El conjunto cuenta con parque privado, quinchos y locales comerciales.",
+    "Presenta excelente conectividad hacia Viña del Mar y Valparaíso y se encuentra cerca de supermercados, comercio, farmacias y servicios.",
+    "No se admiten mascotas."
+  ],
+  "informacionImportante": [
+    "Arriendo mensual: $550.000",
+    "Gastos comunes incluidos",
+    "3 dormitorios",
+    "1 baño",
+    "75 m² aprox.",
+    "Estacionamiento libre",
+    "1 bodega",
+    "No amoblado",
+    "No se aceptan mascotas"
+  ],
+  "areasComunes": [
+    "🌿 Parque privado",
+    "🔥 Quinchos",
+    "🚘 Estacionamientos libres",
+    "🏪 Locales comerciales"
+  ],
+  "conectividad": [
+    "Excelente conectividad hacia Viña del Mar",
+    "Excelente conectividad hacia Valparaíso",
+    "Cercano a supermercados",
+    "Cercano a farmacias y servicios",
+    "Locomoción a pasos"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el departamento en Quinta Claude, Jackson 490, Torre W, Viña del Mar."
+}

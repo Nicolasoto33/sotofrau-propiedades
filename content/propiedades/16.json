@@ -1,0 +1,60 @@
+{
+  "id": 16,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "Departamento Cerro Placeres",
+  "direccion": "Mercedes 451",
+  "ubicacion": "Cerro Placeres · Valparaíso",
+  "precio": "$430.000",
+  "gastosComunes": "GGCC incluidos",
+  "totalMensual": "$430.000",
+  "fotos": [
+    "propiedades/16/1.jpeg",
+    "propiedades/16/2.jpeg",
+    "propiedades/16/3.jpeg",
+    "propiedades/16/4.jpeg",
+    "propiedades/16/5.jpeg",
+    "propiedades/16/6.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 1 dormitorio",
+    "🚿 1 baño",
+    "📐 37 m²",
+    "🏢 Piso 11",
+    "🛋 Amoblado"
+  ],
+  "descripcion": [
+    "Departamento ubicado en Mercedes 451, Cerro Placeres, Valparaíso.",
+    "Cuenta con 1 dormitorio y 1 baño, cocina americana y living con balcón.",
+    "Se encuentra en el piso 11.",
+    "Los gastos comunes están incluidos.",
+    "El edificio cuenta con sala multiuso, quincho y lavandería.",
+    "Se encuentra a aproximadamente 4 cuadras de la Universidad Santa María y cuenta con buena conectividad hacia Viña del Mar y Quilpué."
+  ],
+  "informacionImportante": [
+    "Arriendo mensual: $430.000",
+    "Gastos comunes incluidos",
+    "1 dormitorio",
+    "1 baño",
+    "37 m²",
+    "Piso 11",
+    "Sin estacionamiento",
+    "Sin bodega",
+    "Amoblado",
+    "No se aceptan mascotas"
+  ],
+  "areasComunes": [
+    "🧩 Sala multiuso",
+    "🍖 Quincho",
+    "🧺 Lavandería"
+  ],
+  "conectividad": [
+    "A aproximadamente 4 cuadras de la Universidad Santa María",
+    "Buena conectividad hacia Viña del Mar",
+    "Buena conectividad hacia Quilpué",
+    "Cercano a locomoción y supermercados"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el departamento en Mercedes 451, Cerro Placeres, Valparaíso."
+}

@@ -1,0 +1,58 @@
+{
+  "id": 8,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "Departamento a Pasos de la Quinta Vergara",
+  "direccion": "Álvarez 924",
+  "ubicacion": "Viña del Mar",
+  "precio": "$690.000",
+  "gastosComunes": "GGCC incluidos",
+  "totalMensual": "$690.000",
+  "fotos": [
+    "propiedades/8/1.jpeg",
+    "propiedades/8/2.jpeg",
+    "propiedades/8/3.jpeg",
+    "propiedades/8/4.jpeg",
+    "propiedades/8/5.jpeg",
+    "propiedades/8/6.jpeg",
+    "propiedades/8/7.jpeg",
+    "propiedades/8/8.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 3 dormitorios",
+    "🚿 2 baños",
+    "📐 90 m²",
+    "🚗 1 estacionamiento"
+  ],
+  "descripcion": [
+    "Departamento ubicado en Álvarez 924, Viña del Mar, a pasos de la Quinta Vergara y del centro de la ciudad.",
+    "Cuenta con 3 dormitorios, 2 baños, cocina independiente con refrigerador, logia y balcón.",
+    "Dispone de 1 estacionamiento privado.",
+    "El condominio cuenta con juegos infantiles, áreas verdes, seguridad 24/7 y conserjería.",
+    "Los gastos comunes están incluidos."
+  ],
+  "informacionImportante": [
+    "Arriendo mensual: $690.000",
+    "Gastos comunes incluidos",
+    "3 dormitorios",
+    "2 baños",
+    "90 m²",
+    "1 estacionamiento privado",
+    "Sin bodega",
+    "No amoblado",
+    "No se aceptan mascotas"
+  ],
+  "areasComunes": [
+    "🧒 Juegos infantiles",
+    "🌿 Áreas verdes",
+    "🛡️ Seguridad 24/7",
+    "🛎️ Conserjería"
+  ],
+  "conectividad": [
+    "A pasos de la Quinta Vergara",
+    "Cercano al centro de Viña del Mar"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el departamento en Álvarez 924, Viña del Mar."
+}

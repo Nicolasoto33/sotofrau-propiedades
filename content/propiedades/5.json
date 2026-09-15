@@ -1,0 +1,55 @@
+{
+  "id": 5,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "Departamento Villa Arcoiris",
+  "direccion": "Peumo 581",
+  "ubicacion": "Chorrillos · Viña del Mar",
+  "precio": "$450.000",
+  "gastosComunes": "GGCC incluidos",
+  "totalMensual": "$450.000",
+  "fotos": [
+    "propiedades/5/1.jpeg",
+    "propiedades/5/2.jpeg",
+    "propiedades/5/3.jpeg",
+    "propiedades/5/4.jpeg",
+    "propiedades/5/5.jpeg",
+    "propiedades/5/6.jpeg",
+    "propiedades/5/7.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 3 dormitorios",
+    "🚿 1 baño",
+    "📐 70 m²",
+    "🚗 Estacionamiento no exclusivo"
+  ],
+  "descripcion": [
+    "Departamento en arriendo ubicado en Peumo 581, Chorrillos, Viña del Mar, cercano a los edificios Quinta Claude.",
+    "La propiedad se encuentra en el 4° piso y cuenta con aproximadamente 70 m² construidos, 3 dormitorios, living-comedor amplio y luminoso, cocina tradicional y baño completo.",
+    "Dispone de derecho a estacionamiento no exclusivo.",
+    "Los gastos comunes están incluidos en el valor mensual de $450.000.",
+    "Cuenta con excelente conectividad, cercana a hospitales, estación de metro y locomoción colectiva a la puerta.",
+    "Arriendo bajo modalidad de año corrido."
+  ],
+  "informacionImportante": [
+    "Arriendo mensual: $450.000",
+    "Gastos comunes incluidos",
+    "3 dormitorios",
+    "1 baño",
+    "Aprox. 70 m² construidos",
+    "4° piso",
+    "Estacionamiento no exclusivo",
+    "Sin bodega",
+    "No amoblado",
+    "No se aceptan mascotas"
+  ],
+  "areasComunes": [],
+  "conectividad": [
+    "Cercano a hospitales",
+    "Cercano a estación de metro",
+    "Locomoción colectiva a la puerta"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el departamento en Peumo 581, Chorrillos, Viña del Mar."
+}
