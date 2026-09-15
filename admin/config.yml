@@ -31,7 +31,7 @@ collections:
     public_folder: "/propiedades/{{id}}"
 
     create: true
-    delete: true
+    delete: false
 
     extension: "json"
     format: "json"
