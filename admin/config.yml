@@ -27,7 +27,7 @@ collections:
 
     # Las fotografías nuevas se organizan por ID.
     # Ejemplo: propiedades/35/imagen.jpg
-    media_folder: "propiedades/{{id}}"
+    media_folder: "/propiedades/{{id}}"
     public_folder: "/propiedades/{{id}}"
 
     create: true
