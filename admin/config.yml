@@ -11,6 +11,15 @@ display_url: https://sotofraupropiedades.cl
 
 locale: es
 
+# =====================================================
+# ARCHIVOS MULTIMEDIA GLOBALES
+# Decap requiere media_folder a nivel global.
+# Las propiedades sobrescriben esta ruta por ID.
+# =====================================================
+
+media_folder: "propiedades"
+public_folder: "/propiedades"
+
 collections:
 
   # =====================================================
@@ -386,5 +395,3 @@ collections:
         widget: "text"
         required: false
         hint: "Mensaje automático que aparecerá cuando una persona consulte esta propiedad mediante WhatsApp."
-
-      
