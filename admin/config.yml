@@ -191,6 +191,18 @@ collections:
         required: false
         hint: "Útil cuando deseas mostrar canon más gastos comunes."
 
+      - label: "Precio alternativo"
+        name: "precioAlternativo"
+        widget: "string"
+        required: false
+        hint: "Úsalo cuando exista una segunda alternativa de precio. Ejemplo: $650.000 con estacionamiento + bodega."
+
+      - label: "Precio con bodega"
+        name: "precioBodega"
+        widget: "string"
+        required: false
+        hint: "Úsalo cuando exista un valor especial asociado a la inclusión de bodega. Ejemplo: 4.100 UF con bodega."
+
       # =====================================================
       # CARACTERÍSTICAS PRINCIPALES
       # =====================================================
