@@ -1,0 +1,60 @@
+{
+  "id": 27,
+  "publicada": true,
+  "operacion": "Venta",
+  "estado": "disponible",
+  "estadoTexto": "Disponible",
+  "titulo": "Departamento de Inversión en Reñaca Alto",
+  "direccion": "Estero Maitenlahue 1250 · Torre B · Piso 2",
+  "ubicacion": "Reñaca Alto · Viña del Mar",
+  "precio": "1.550 UF",
+  "gastosComunes": "$50.000 aprox.",
+  "totalMensual": "",
+  "fotos": [
+    "propiedades/27/1.jpeg",
+    "propiedades/27/2.jpeg",
+    "propiedades/27/3.jpeg",
+    "propiedades/27/4.jpeg",
+    "propiedades/27/5.jpeg",
+    "propiedades/27/6.jpeg",
+    "propiedades/27/7.jpeg",
+    "propiedades/27/8.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 3 dormitorios",
+    "🚿 1 baño",
+    "📐 62 m² aprox.",
+    "🏢 Piso 2",
+    "🛗 Ascensor",
+    "💼 Con arrendatarios",
+    "🐾 Mascotas"
+  ],
+  "descripcion": [
+    "Departamento de inversión ubicado en Estero Maitenlahue 1250, Torre B, piso 2, Viña del Mar.",
+    "Cuenta con aproximadamente 62 m², 3 dormitorios, 1 baño y ascensor.",
+    "Actualmente se encuentra arrendado, con contrato vigente hasta el 30 de junio de 2027.",
+    "El arriendo actual es de $350.000 mensuales con gastos comunes incluidos.",
+    "El precio de venta es de 1.550 UF.",
+    "Es una alternativa orientada a inversionistas que buscan adquirir una propiedad con arrendatarios vigentes."
+  ],
+  "informacionImportante": [
+    "Precio de venta: 1.550 UF",
+    "Arriendo actual: $350.000 mensuales",
+    "GGCC incluidos en el arriendo",
+    "GGCC aprox.: $50.000",
+    "Contrato vigente hasta 30 de junio de 2027",
+    "3 dormitorios",
+    "1 baño",
+    "62 m² aprox.",
+    "Sin estacionamiento",
+    "Sin bodega",
+    "No amoblado",
+    "Se aceptan mascotas"
+  ],
+  "areasComunes": [
+    "🛗 Ascensor",
+    "🛡️ Conserjería 24/7"
+  ],
+  "conectividad": [],
+  "whatsapp": "Hola, me gustaría consultar por el departamento de inversión en Estero Maitenlahue 1250, Torre B, Viña del Mar."
+}

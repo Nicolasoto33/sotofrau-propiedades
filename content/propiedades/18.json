@@ -1,0 +1,61 @@
+{
+  "id": 18,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "Departamento Cerro Placeres Marparaíso",
+  "direccion": "Paula Jaraquemada 580",
+  "ubicacion": "Cerro Placeres · Viña del Mar",
+  "precio": "$380.000",
+  "gastosComunes": "$65.000 + consumo de agua caliente",
+  "totalMensual": "$445.000 aprox. + agua caliente",
+  "fotos": [
+    "propiedades/18/1.jpeg",
+    "propiedades/18/2.jpeg",
+    "propiedades/18/3.jpeg",
+    "propiedades/18/4.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 1 dormitorio",
+    "🚿 1 baño",
+    "📐 38 m² útiles",
+    "📐 42 m² totales",
+    "🏢 Piso 10",
+    "🪑 Semi-amoblado",
+    "🌅 Terraza",
+    "🐾 Mascota pequeña conversable"
+  ],
+  "descripcion": [
+    "Departamento semi-amoblado ubicado en Paula Jaraquemada 580, Edificio Marparaíso I, Cerro Placeres.",
+    "Cuenta con 38 m² útiles y 42 m² totales, incluyendo terraza.",
+    "Dispone de 1 dormitorio, 1 baño, terraza con vista despejada, conexión para lavadora y se encuentra en el piso 10.",
+    "Es semi-amoblado y existe la posibilidad de retirar muebles básicos si el arrendatario lo requiere.",
+    "El edificio cuenta con conserjería y seguridad 24/7, ascensores y áreas comunes.",
+    "Mascota pequeña conversable."
+  ],
+  "informacionImportante": [
+    "Arriendo mensual: $380.000",
+    "GGCC aprox.: $65.000 + consumo de agua caliente",
+    "1 dormitorio",
+    "1 baño",
+    "38 m² útiles",
+    "42 m² totales",
+    "Piso 10",
+    "Semi-amoblado",
+    "Terraza",
+    "Sin estacionamiento",
+    "Sin bodega",
+    "Mascota pequeña conversable"
+  ],
+  "areasComunes": [
+    "🔒 Conserjería y seguridad 24/7",
+    "🛗 2 ascensores",
+    "🌳 Áreas comunes"
+  ],
+  "conectividad": [
+    "Excelente conectividad hacia el centro de Viña del Mar",
+    "Buena conexión hacia Valparaíso"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el departamento en Paula Jaraquemada 580, Edificio Marparaíso I."
+}

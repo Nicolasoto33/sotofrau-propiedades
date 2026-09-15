@@ -1,0 +1,43 @@
+{
+  "id": 1,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "Habitación en arriendo",
+  "direccion": "",
+  "ubicacion": "Valparaíso · Sector Yungay",
+  "precio": "$260.000",
+  "gastosComunes": "",
+  "totalMensual": "",
+  "fotos": [
+    "propiedades/1/1.jpeg",
+    "propiedades/1/2.jpeg",
+    "propiedades/1/3.jpeg",
+    "propiedades/1/4.jpeg",
+    "propiedades/1/5.jpeg",
+    "propiedades/1/6.jpeg",
+    "propiedades/1/7.jpeg",
+    "propiedades/1/8.jpeg",
+    "propiedades/1/9.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 1 dormitorio",
+    "🚿 1 baño",
+    "📐 72 m²",
+    "🛋 Amoblado"
+  ],
+  "descripcion": [
+    "Habitación en arriendo ubicada en el sector Yungay de Valparaíso.",
+    "Para conocer disponibilidad, condiciones y coordinar una visita, puedes contactarnos directamente."
+  ],
+  "informacionImportante": [
+    "1 dormitorio",
+    "1 baño",
+    "72 m²",
+    "Amoblado"
+  ],
+  "areasComunes": [],
+  "conectividad": [],
+  "whatsapp": "Hola, me gustaría consultar por la habitación en arriendo en Valparaíso, sector Yungay."
+}

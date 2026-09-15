@@ -1,0 +1,70 @@
+{
+  "id": 34,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "disponible",
+  "estadoTexto": "Disponible",
+  "titulo": "Departamento 2D/2B en el Centro de Viña del Mar",
+  "direccion": "Sector Viana · Frente al Terminal de Buses",
+  "ubicacion": "Centro · Viña del Mar",
+  "precio": "$630.000",
+  "gastosComunes": "$120.000 aprox.",
+  "totalMensual": "$750.000 aprox.",
+  "dormitorios": 2,
+  "banos": 2,
+  "estacionamientos": 1,
+  "piso": "Piso 17",
+  "orientacion": "Poniente",
+  "imagen": "propiedades/34/1.jpeg",
+  "fotos": [
+    "propiedades/34/1.jpeg",
+    "propiedades/34/2.jpeg",
+    "propiedades/34/3.jpeg",
+    "propiedades/34/4.jpeg",
+    "propiedades/34/5.jpeg",
+    "propiedades/34/6.jpeg",
+    "propiedades/34/7.jpeg",
+    "propiedades/34/8.jpeg",
+    "propiedades/34/9.jpeg"
+  ],
+  "descripcion": [
+    "Departamento en arriendo ubicado en el sector Viana, frente al Terminal de Buses de Viña del Mar, en una ubicación central y con excelente conectividad.",
+    "La propiedad cuenta con 2 dormitorios, 2 baños, 1 estacionamiento y se encuentra en el piso 17 con orientación poniente.",
+    "El canon de arriendo es de $630.000 mensuales y los gastos comunes son de aproximadamente $120.000, alcanzando un total mensual aproximado de $750.000.",
+    "El edificio cuenta con piscina, sala de eventos y conserjería 24/7.",
+    "Su ubicación permite acceder rápidamente al centro de Viña del Mar, comercio, supermercados, restaurantes, cafeterías, locomoción y distintos servicios.",
+    "La propiedad cuenta con disponibilidad inmediata."
+  ],
+  "caracteristicas": [
+    "🛏 2 dormitorios",
+    "🚿 2 baños",
+    "🚗 1 estacionamiento",
+    "🏢 Piso 17",
+    "🌅 Orientación poniente",
+    "✅ Disponibilidad inmediata",
+    "💰 Arriendo mensual: $630.000",
+    "💵 Gastos comunes aprox. $120.000"
+  ],
+  "informacionImportante": [
+    "Piscina",
+    "Sala de eventos",
+    "Conserjería 24/7",
+    "Frente al Terminal de Buses",
+    "A pasos del centro de Viña del Mar",
+    "Cercano a supermercados",
+    "Cercano a comercio y servicios",
+    "Cercano a restaurantes y cafeterías",
+    "Excelente conectividad y locomoción"
+  ],
+  "requisitos": [
+    "Carnet de identidad por ambos lados",
+    "Contrato de trabajo indefinido o certificado de antigüedad",
+    "3 últimas liquidaciones de sueldo",
+    "Certificado de cotizaciones AFP de los últimos 12 meses",
+    "Renta líquida mínima equivalente a 3 veces el valor del arriendo",
+    "Informe comercial DICOM 360 Platinum",
+    "Certificado de antecedentes para fines especiales",
+    "Se pueden complementar ingresos entre dos personas"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el departamento de 2 dormitorios y 2 baños en arriendo en el sector Viana, Viña del Mar."
+}

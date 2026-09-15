@@ -1,0 +1,61 @@
+{
+  "id": 10,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "Departamento Libertad Viña del Mar",
+  "direccion": "1 Norte con Libertad",
+  "ubicacion": "Viña del Mar",
+  "precio": "$700.000",
+  "gastosComunes": "$150.000",
+  "totalMensual": "$850.000",
+  "fotos": [
+    "propiedades/10/1.jpeg",
+    "propiedades/10/2.jpeg",
+    "propiedades/10/3.jpeg",
+    "propiedades/10/4.jpeg",
+    "propiedades/10/5.jpeg",
+    "propiedades/10/6.jpeg",
+    "propiedades/10/7.jpeg",
+    "propiedades/10/8.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 3 dormitorios",
+    "🚿 2 baños",
+    "📐 110 m²",
+    "🚗 1 estacionamiento",
+    "🏢 Piso 7"
+  ],
+  "descripcion": [
+    "Departamento ubicado en 1 Norte con Libertad, frente al Puente Libertad, en pleno centro de Viña del Mar.",
+    "Cuenta con 110 m², 3 dormitorios, 2 baños, cocina amoblada con logia y terraza.",
+    "Dispone de 1 estacionamiento subterráneo y se encuentra en el piso 7.",
+    "El edificio cuenta con portón eléctrico y conserjería 24/7.",
+    "Su ubicación ofrece cercanía a restaurantes, bancos, supermercados y locomoción."
+  ],
+  "informacionImportante": [
+    "Arriendo mensual: $700.000",
+    "Gastos comunes: $150.000",
+    "Total mensual: $850.000",
+    "3 dormitorios",
+    "2 baños",
+    "110 m²",
+    "Piso 7",
+    "1 estacionamiento subterráneo",
+    "Sin bodega",
+    "No amoblado",
+    "No se aceptan mascotas"
+  ],
+  "areasComunes": [
+    "🛡️ Conserjería 24/7"
+  ],
+  "conectividad": [
+    "Frente al Puente Libertad",
+    "Cercano a bancos",
+    "Cercano a supermercados",
+    "Cercano a restaurantes",
+    "Cercano a locomoción"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el departamento en 1 Norte con Libertad, Viña del Mar."
+}

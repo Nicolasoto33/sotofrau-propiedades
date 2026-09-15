@@ -1,0 +1,55 @@
+{
+  "id": 2,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "2° Piso Independiente en Arriendo",
+  "direccion": "Teniente Serrano",
+  "ubicacion": "Quilpué · Sector Teniente Serrano",
+  "precio": "$400.000",
+  "gastosComunes": "Sin gastos comunes",
+  "totalMensual": "$400.000",
+  "fotos": [
+    "propiedades/2/1.jpeg",
+    "propiedades/2/2.jpeg",
+    "propiedades/2/3.jpeg",
+    "propiedades/2/4.jpeg",
+    "propiedades/2/5.jpeg",
+    "propiedades/2/6.jpeg",
+    "propiedades/2/7.jpeg",
+    "propiedades/2/8.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 2 dormitorios",
+    "🚿 1 baño",
+    "📐 45 m²",
+    "🚗 1 estacionamiento",
+    "🍳 Cocina amoblada",
+    "🌿 Patio"
+  ],
+  "descripcion": [
+    "Se arrienda segundo piso independiente de una casa, ubicado en el sector de Teniente Serrano, Quilpué.",
+    "La propiedad cuenta con dos habitaciones, un baño, living-comedor amplio y cocina amoblada.",
+    "Además, dispone de logia techada, patio abierto y derecho a patio, junto con estacionamiento para un vehículo.",
+    "La propiedad no tiene gastos comunes. Los servicios básicos se dividen entre los residentes.",
+    "Cuenta con locomoción a la puerta y se encuentra cerca de supermercados y a pocos minutos del centro de Quilpué."
+  ],
+  "informacionImportante": [
+    "2 dormitorios",
+    "1 baño",
+    "45 m²",
+    "1 estacionamiento",
+    "Cocina amoblada",
+    "Patio",
+    "Sin gastos comunes",
+    "Servicios básicos divididos"
+  ],
+  "areasComunes": [],
+  "conectividad": [
+    "Locomoción a la puerta",
+    "Cercano a supermercados",
+    "A pocos minutos del centro de Quilpué"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el 2° piso independiente en arriendo en Teniente Serrano, Quilpué."
+}

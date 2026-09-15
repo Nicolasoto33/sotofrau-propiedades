@@ -4,10 +4,11 @@ const path = require("path");
 const BASE_URL =
   "https://sotofraupropiedades.cl";
 
-const propiedadesPath =
+const propiedadesDir =
   path.join(
     __dirname,
-    "propiedades.js"
+    "content",
+    "propiedades"
   );
 
 const sitemapPath =
@@ -18,61 +19,118 @@ const sitemapPath =
 
 
 /* =====================================================
-   VERIFICAR ARCHIVOS
+   VERIFICAR CARPETA
 ===================================================== */
 
-if (!fs.existsSync(propiedadesPath)) {
+if (!fs.existsSync(propiedadesDir)) {
 
   throw new Error(
-    "No se encontró propiedades.js"
+    "No se encontró content/propiedades"
   );
 
 }
 
 
 /* =====================================================
-   LEER propiedades.js
+   LEER ARCHIVOS JSON
 ===================================================== */
 
-const codigo =
-  fs.readFileSync(
-    propiedadesPath,
-    "utf8"
+const archivos =
+  fs.readdirSync(propiedadesDir)
+    .filter(function(archivo) {
+
+      return archivo.endsWith(".json");
+
+    });
+
+
+if (archivos.length === 0) {
+
+  throw new Error(
+    "No se encontraron archivos JSON en content/propiedades"
   );
+
+}
 
 
 /* =====================================================
-   EXTRAER PROPIEDADES
+   CARGAR PROPIEDADES
 ===================================================== */
 
 const propiedades = [];
 
-const expresion =
-  /\{\s*id:\s*(\d+),[\s\S]*?publicada:\s*(true|false),/g;
+archivos.forEach(
+  function(archivo) {
 
-let coincidencia;
+    const ruta =
+      path.join(
+        propiedadesDir,
+        archivo
+      );
 
-while (
-  (
-    coincidencia =
-      expresion.exec(codigo)
-  ) !== null
-) {
+    let propiedad;
 
-  propiedades.push({
+    try {
 
-    id:
-      Number(
-        coincidencia[1]
-      ),
+      propiedad =
+        JSON.parse(
+          fs.readFileSync(
+            ruta,
+            "utf8"
+          )
+        );
 
-    publicada:
-      coincidencia[2] ===
-      "true"
+    } catch (error) {
 
-  });
+      throw new Error(
+        "JSON inválido en " +
+        archivo +
+        ": " +
+        error.message
+      );
 
-}
+    }
+
+
+    if (
+      propiedad.id === undefined ||
+      propiedad.id === null
+    ) {
+
+      throw new Error(
+        "La propiedad " +
+        archivo +
+        " no tiene ID."
+      );
+
+    }
+
+
+    const id =
+      Number(propiedad.id);
+
+
+    if (Number.isNaN(id)) {
+
+      throw new Error(
+        "ID inválido en " +
+        archivo
+      );
+
+    }
+
+
+    propiedades.push({
+
+      id: id,
+
+      publicada:
+        propiedad.publicada === true
+
+    });
+
+  }
+);
 
 
 /* =====================================================
@@ -84,7 +142,7 @@ if (
 ) {
 
   throw new Error(
-    "No se encontraron propiedades válidas en propiedades.js"
+    "No se encontraron propiedades válidas."
   );
 
 }
@@ -105,6 +163,7 @@ const ids =
 
 const idsUnicos =
   new Set(ids);
+
 
 if (
   idsUnicos.size !== ids.length

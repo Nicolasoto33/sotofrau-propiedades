@@ -1,0 +1,67 @@
+{
+  "id": 28,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "disponible",
+  "estadoTexto": "Disponible",
+  "titulo": "Departamento en Viña con Vista al Casino",
+  "direccion": "San Martín 160",
+  "ubicacion": "Viña del Mar · Sector Poniente",
+  "precio": "$750.000",
+  "gastosComunes": "$180.000 aprox.",
+  "totalMensual": "$930.000 aprox.",
+  "fotos": [
+    "propiedades/28/1.jpeg",
+    "propiedades/28/2.jpeg",
+    "propiedades/28/3.jpeg",
+    "propiedades/28/4.jpeg",
+    "propiedades/28/5.jpeg",
+    "propiedades/28/6.jpeg",
+    "propiedades/28/7.jpeg",
+    "propiedades/28/8.jpeg",
+    "propiedades/28/9.jpeg",
+    "propiedades/28/10.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 4 dormitorios",
+    "🚿 3 baños",
+    "📐 120 m²",
+    "🐾 Mascotas"
+  ],
+  "descripcion": [
+    "Amplio departamento de 120 m² ubicado en Av. San Martín 160, Viña del Mar.",
+    "Cuenta con 4 dormitorios, 3 baños, living-comedor, cocina, refrigerador, terraza y conexión para lavadora.",
+    "El departamento no se arrienda amoblado.",
+    "No cuenta con estacionamiento.",
+    "El condominio es cerrado y dispone de conserjería, recepción, ascensor y áreas verdes.",
+    "Cuenta con orientación poniente y buena ubicación cerca del borde costero, restaurantes, comercio y locomoción.",
+    "Se admiten mascotas."
+  ],
+  "informacionImportante": [
+    "Arriendo mensual: $750.000",
+    "Gastos comunes: $180.000 aprox.",
+    "Total mensual: $930.000 aprox.",
+    "4 dormitorios",
+    "3 baños",
+    "120 m²",
+    "Sin estacionamiento",
+    "Sin bodega",
+    "No amoblado",
+    "Se aceptan mascotas",
+    "Orientación poniente"
+  ],
+  "areasComunes": [
+    "🔐 Condominio cerrado",
+    "🛡️ Conserjería",
+    "🌳 Áreas verdes",
+    "🛗 Ascensor"
+  ],
+  "conectividad": [
+    "Cercano al borde costero",
+    "Cercano a restaurantes y cafeterías",
+    "Cercano a comercio y servicios",
+    "Cercano a locomoción",
+    "Cercano al centro de Viña del Mar"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el departamento en San Martín 160, Viña del Mar."
+}

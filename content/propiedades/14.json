@@ -1,0 +1,59 @@
+{
+  "id": 14,
+  "publicada": true,
+  "operacion": "Arriendo",
+  "estado": "gestionada",
+  "estadoTexto": "Arrendada",
+  "titulo": "Departamento Amplio en el Corazón de Viña",
+  "direccion": "4 Norte con 1 Oriente",
+  "ubicacion": "Viña del Mar",
+  "precio": "$880.000",
+  "gastosComunes": "$180.000",
+  "totalMensual": "$1.060.000",
+  "fotos": [
+    "propiedades/14/1.jpeg",
+    "propiedades/14/2.jpeg",
+    "propiedades/14/3.jpeg",
+    "propiedades/14/4.jpeg",
+    "propiedades/14/5.jpeg",
+    "propiedades/14/6.jpeg",
+    "propiedades/14/7.jpeg"
+  ],
+  "caracteristicas": [
+    "🛏 4 dormitorios",
+    "🚿 3 baños",
+    "📐 140 m²",
+    "🚗 1 estacionamiento",
+    "🛋 Amoblado",
+    "🐾 Mascotas"
+  ],
+  "descripcion": [
+    "Amplio departamento amoblado ubicado en 4 Norte con 1 Oriente, en el corazón de Viña del Mar.",
+    "Cuenta con 140 m², 4 dormitorios, 3 baños y 1 estacionamiento privado.",
+    "Se encuentra en un piso alto y destaca por su amplitud y luminosidad.",
+    "Su ubicación es cercana a Avenida Libertad, centros comerciales, supermercados, colegios, universidades, restaurantes y locomoción.",
+    "Se aceptan mascotas."
+  ],
+  "informacionImportante": [
+    "Arriendo mensual: $880.000",
+    "Gastos comunes: $180.000",
+    "Total mensual: $1.060.000",
+    "4 dormitorios",
+    "3 baños",
+    "140 m²",
+    "1 estacionamiento",
+    "Sin bodega",
+    "Amoblado",
+    "Se aceptan mascotas"
+  ],
+  "areasComunes": [],
+  "conectividad": [
+    "A pasos de Av. Libertad",
+    "Cercano a centros comerciales",
+    "Cercano a supermercados",
+    "Cercano a colegios y universidades",
+    "Cercano a restaurantes y cafés",
+    "Excelente locomoción"
+  ],
+  "whatsapp": "Hola, me gustaría consultar por el departamento en 4 Norte con 1 Oriente, Viña del Mar."
+}

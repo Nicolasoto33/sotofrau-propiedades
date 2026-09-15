@@ -1,0 +1,390 @@
+backend:
+  name: github
+  repo: Nicolasoto33/sotofrau-propiedades
+  branch: contenido-borradores
+  squash_merges: true
+
+publish_mode: editorial_workflow
+
+site_url: https://sotofraupropiedades.cl
+display_url: https://sotofraupropiedades.cl
+
+locale: es
+
+collections:
+
+  # =====================================================
+  # PROPIEDADES
+  # =====================================================
+
+  - name: "propiedades"
+    label: "🏠 Propiedades"
+    label_singular: "Propiedad"
+
+    description: "Administra las propiedades publicadas en Sotofrau Propiedades."
+
+    folder: "content/propiedades"
+
+    # Las fotografías nuevas se organizan por ID.
+    # Ejemplo: propiedades/35/imagen.jpg
+    media_folder: "/propiedades/{{id}}"
+    public_folder: "/propiedades/{{id}}"
+
+    create: true
+    delete: false
+
+    extension: "json"
+    format: "json"
+
+    identifier_field: "titulo"
+
+    slug: "{{id}}"
+
+    summary: "ID {{id}} · {{titulo}} · {{operacion}} · {{estadoTexto}}"
+
+    sortable_fields:
+      - "id"
+      - "titulo"
+      - "operacion"
+      - "estado"
+
+    view_filters:
+
+      - label: "Disponibles"
+        field: "estado"
+        pattern: "disponible"
+
+      - label: "Arrendadas / Gestionadas"
+        field: "estado"
+        pattern: "gestionada"
+
+      - label: "Vendidas"
+        field: "estado"
+        pattern: "vendida"
+
+      - label: "Arriendos"
+        field: "operacion"
+        pattern: "Arriendo"
+
+      - label: "Ventas"
+        field: "operacion"
+        pattern: "Venta"
+
+    fields:
+
+      # =====================================================
+      # IDENTIFICACIÓN
+      # =====================================================
+
+      - label: "ID"
+        name: "id"
+        widget: "number"
+        value_type: "int"
+        min: 1
+        hint: "Número único de la propiedad. Este número se utiliza también en la URL de la ficha."
+
+      - label: "Título"
+        name: "titulo"
+        widget: "string"
+        hint: "Título principal que verá el visitante."
+
+      - label: "Visible en la página web"
+        name: "publicada"
+        widget: "boolean"
+        default: true
+        hint: "Desactiva esta opción para ocultar la propiedad sin eliminarla."
+
+      # =====================================================
+      # OPERACIÓN Y ESTADO
+      # =====================================================
+
+      - label: "Operación"
+        name: "operacion"
+        widget: "select"
+        options:
+          - "Arriendo"
+          - "Venta"
+        hint: "Indica si la propiedad corresponde a arriendo o venta."
+
+      - label: "Estado"
+        name: "estado"
+        widget: "select"
+        options:
+
+          - label: "Disponible"
+            value: "disponible"
+
+          - label: "Arrendada / Gestionada"
+            value: "gestionada"
+
+          - label: "Vendida"
+            value: "vendida"
+
+        hint: "Determina cómo se ordenará y mostrará la propiedad."
+
+      - label: "Texto visible del estado"
+        name: "estadoTexto"
+        widget: "select"
+        options:
+          - "Disponible"
+          - "Arrendada"
+          - "Vendida"
+        default: "Disponible"
+        hint: "Texto que verá el visitante en la publicación."
+
+      # =====================================================
+      # TIPO DE PROPIEDAD
+      # =====================================================
+
+      - label: "Tipo de propiedad"
+        name: "tipoPropiedad"
+        widget: "select"
+        required: false
+        options:
+          - "Departamento"
+          - "Casa"
+          - "Parcela"
+          - "Terreno"
+          - "Oficina"
+          - "Local comercial"
+          - "Habitación"
+          - "Otro"
+        hint: "Selecciona el tipo de inmueble."
+
+      # =====================================================
+      # UBICACIÓN
+      # =====================================================
+
+      - label: "Dirección"
+        name: "direccion"
+        widget: "string"
+        required: false
+        hint: "Dirección, calle, edificio o referencia que quieras mostrar."
+
+      - label: "Ubicación"
+        name: "ubicacion"
+        widget: "string"
+        hint: "Ejemplo: Costa de Montemar · Concón."
+
+      # =====================================================
+      # VALORES
+      # =====================================================
+
+      - label: "Precio"
+        name: "precio"
+        widget: "string"
+        hint: "Ejemplo: $550.000 o 3.998 UF."
+
+      - label: "Gastos comunes"
+        name: "gastosComunes"
+        widget: "string"
+        required: false
+        hint: "Ejemplo: $100.000 aprox., GGCC incluidos o No aplica."
+
+      - label: "Total mensual"
+        name: "totalMensual"
+        widget: "string"
+        required: false
+        hint: "Útil cuando deseas mostrar canon más gastos comunes."
+
+      - label: "Precio alternativo"
+        name: "precioAlternativo"
+        widget: "string"
+        required: false
+        hint: "Úsalo cuando exista una segunda alternativa de precio. Ejemplo: $650.000 con estacionamiento + bodega."
+
+      - label: "Precio con bodega"
+        name: "precioBodega"
+        widget: "string"
+        required: false
+        hint: "Úsalo cuando exista un valor especial asociado a la inclusión de bodega. Ejemplo: 4.100 UF con bodega."
+
+      # =====================================================
+      # CARACTERÍSTICAS PRINCIPALES
+      # =====================================================
+
+      - label: "Superficie"
+        name: "superficie"
+        widget: "string"
+        required: false
+        hint: "Ejemplo: 65 m², 80 m² o 5.000 m²."
+
+      - label: "Dormitorios"
+        name: "dormitorios"
+        widget: "number"
+        value_type: "int"
+        min: 0
+        required: false
+
+      - label: "Baños"
+        name: "banos"
+        widget: "number"
+        value_type: "int"
+        min: 0
+        required: false
+
+      - label: "Estacionamientos"
+        name: "estacionamientos"
+        widget: "number"
+        value_type: "int"
+        min: 0
+        required: false
+
+      - label: "Bodegas"
+        name: "bodegas"
+        widget: "number"
+        value_type: "int"
+        min: 0
+        required: false
+
+      - label: "Piso"
+        name: "piso"
+        widget: "string"
+        required: false
+        hint: "Ejemplo: Piso 3, 16° piso o dejar vacío."
+
+      - label: "Orientación"
+        name: "orientacion"
+        widget: "string"
+        required: false
+        hint: "Ejemplo: Norte, Poniente o Nororiente."
+
+      - label: "Mascotas"
+        name: "mascotas"
+        widget: "select"
+        required: false
+        options:
+          - "Permitidas"
+          - "No permitidas"
+          - "Mascotas pequeñas"
+          - "Consultar"
+
+      # =====================================================
+      # IMAGEN PRINCIPAL
+      # =====================================================
+
+      - label: "📷 Imagen principal"
+        name: "imagen"
+        widget: "image"
+        required: false
+        choose_url: false
+        hint: "Fotografía principal que representará la propiedad."
+
+      # =====================================================
+      # GALERÍA DE FOTOGRAFÍAS
+      # =====================================================
+
+      - label: "📸 Galería de fotografías"
+        name: "fotos"
+        widget: "list"
+        required: false
+        summary: "{{fields.foto}}"
+        hint: "Agrega todas las fotografías de la publicación."
+
+        field:
+          label: "Foto"
+          name: "foto"
+          widget: "image"
+          choose_url: false
+
+      # =====================================================
+      # CARACTERÍSTICAS VISIBLES
+      # =====================================================
+
+      - label: "Características"
+        name: "caracteristicas"
+        widget: "list"
+        required: false
+        hint: "Ejemplo: 🛏 3 dormitorios, 🚿 2 baños, 📐 80 m²."
+
+        field:
+          label: "Característica"
+          name: "caracteristica"
+          widget: "string"
+
+      # =====================================================
+      # DESCRIPCIÓN
+      # =====================================================
+
+      - label: "Descripción"
+        name: "descripcion"
+        widget: "list"
+        required: false
+        hint: "Cada elemento corresponde a un párrafo de la descripción."
+
+        field:
+          label: "Párrafo"
+          name: "parrafo"
+          widget: "text"
+
+      # =====================================================
+      # INFORMACIÓN IMPORTANTE
+      # =====================================================
+
+      - label: "Información importante"
+        name: "informacionImportante"
+        widget: "list"
+        required: false
+        hint: "Condiciones, valores, restricciones o elementos destacados."
+
+        field:
+          label: "Punto importante"
+          name: "punto"
+          widget: "string"
+
+      # =====================================================
+      # ÁREAS COMUNES
+      # =====================================================
+
+      - label: "Áreas comunes"
+        name: "areasComunes"
+        widget: "list"
+        required: false
+        hint: "Ejemplo: 🏊 Piscina, 🔥 Quinchos, 💪 Gimnasio."
+
+        field:
+          label: "Área común"
+          name: "area"
+          widget: "string"
+
+      # =====================================================
+      # CONECTIVIDAD
+      # =====================================================
+
+      - label: "Conectividad"
+        name: "conectividad"
+        widget: "list"
+        required: false
+        hint: "Locomoción, servicios, universidades, playas, avenidas u otros puntos cercanos."
+
+        field:
+          label: "Punto de conectividad"
+          name: "punto"
+          widget: "string"
+
+      # =====================================================
+      # REQUISITOS DE ARRIENDO
+      # =====================================================
+
+      - label: "Requisitos de arriendo"
+        name: "requisitos"
+        widget: "list"
+        required: false
+        hint: "Déjalo vacío en publicaciones de venta si no corresponde."
+
+        field:
+          label: "Requisito"
+          name: "requisito"
+          widget: "string"
+
+      # =====================================================
+      # WHATSAPP
+      # =====================================================
+
+      - label: "💬 Mensaje de WhatsApp"
+        name: "whatsapp"
+        widget: "text"
+        required: false
+        hint: "Mensaje automático que aparecerá cuando una persona consulte esta propiedad mediante WhatsApp."
+
+      
