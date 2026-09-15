@@ -11,15 +11,6 @@ display_url: https://sotofraupropiedades.cl
 
 locale: es
 
-# =====================================================
-# ARCHIVOS MULTIMEDIA
-# =====================================================
-
-# Las imágenes nuevas se guardarán en la carpeta pública
-# "propiedades" del repositorio.
-media_folder: "propiedades"
-public_folder: "/propiedades"
-
 collections:
 
   # =====================================================
@@ -33,6 +24,11 @@ collections:
     description: "Administra las propiedades publicadas en Sotofrau Propiedades."
 
     folder: "content/propiedades"
+
+    # Las fotografías nuevas se organizan por ID.
+    # Ejemplo: propiedades/35/imagen.jpg
+    media_folder: "propiedades/{{id}}"
+    public_folder: "/propiedades/{{id}}"
 
     create: true
     delete: true
@@ -275,7 +271,7 @@ collections:
         hint: "Fotografía principal que representará la propiedad."
 
       # =====================================================
-      # GALERÍA
+      # GALERÍA DE FOTOGRAFÍAS
       # =====================================================
 
       - label: "📸 Galería de fotografías"
