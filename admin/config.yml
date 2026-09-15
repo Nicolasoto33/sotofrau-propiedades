@@ -387,12 +387,4 @@ collections:
         required: false
         hint: "Mensaje automático que aparecerá cuando una persona consulte esta propiedad mediante WhatsApp."
 
-      # =====================================================
-      # NOTAS INTERNAS
-      # =====================================================
-
-      - label: "Notas internas"
-        name: "notasInternas"
-        widget: "text"
-        required: false
-        hint: "Información privada para administración. No deberá mostrarse públicamente en la web."
+      
