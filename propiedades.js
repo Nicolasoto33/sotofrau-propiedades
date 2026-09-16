@@ -1,4 +1,10 @@
 /* =====================================================
+   SOTOFRAU PROPIEDADES
+   LÓGICA DE PROPIEDADES
+===================================================== */
+
+
+/* =====================================================
    GENERAR TARJETAS EN INICIO
 ===================================================== */
 
@@ -10,9 +16,7 @@ function cargarPropiedades() {
     );
 
   if (!contenedor) {
-
     return;
-
   }
 
 
@@ -147,6 +151,43 @@ function cargarPropiedades() {
           : "Ver propiedad gestionada";
 
 
+      /*
+        IMAGEN PRINCIPAL
+
+        1. Usa la imagen principal seleccionada
+           en el panel administrativo.
+
+        2. Si no existe, utiliza la primera
+           fotografía de la galería.
+
+        3. Si tampoco existe una fotografía,
+           utiliza una imagen de respaldo.
+      */
+
+      let imagenPrincipal =
+        "/android-chrome-512x512.png";
+
+
+      if (
+        propiedad.imagen
+      ) {
+
+        imagenPrincipal =
+          propiedad.imagen;
+
+      } else if (
+        Array.isArray(
+          propiedad.fotos
+        ) &&
+        propiedad.fotos.length > 0
+      ) {
+
+        imagenPrincipal =
+          propiedad.fotos[0];
+
+      }
+
+
       tarjeta.innerHTML = `
 
         <div class="property-image">
@@ -159,7 +200,7 @@ function cargarPropiedades() {
 
 
           <img
-            src="${propiedad.fotos[0]}"
+            src="${imagenPrincipal}"
             alt="${propiedad.titulo} en ${propiedad.ubicacion}"
             loading="lazy"
             decoding="async"
