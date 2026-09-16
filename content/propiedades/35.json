@@ -1,0 +1,79 @@
+{
+  "informacionImportante": [
+    "$200.000.000",
+    "65 m² totales",
+    "2 dormitorios",
+    "2 baños",
+    "1 estacionamiento techado",
+    "1 bodega",
+    "Gastos comunes: $140.000 aprox., incluyendo agua caliente",
+    "Orientación Oriente",
+    "Año de construcción: 2008"
+  ],
+  "superficie": "65 m² totales",
+  "orientacion": "Oriente",
+  "areasComunes": [
+    "🏊 Piscina temperada",
+    "🏋️ Gimnasio",
+    "🧖 Sauna",
+    "🎉 Salón de eventos",
+    "🧺 Lavandería",
+    "🛡️ Conserjería 24 horas",
+    "🔐 Acceso controlado",
+    "🛗 Ascensores"
+  ],
+  "estado": "disponible",
+  "precio": "$200.000.000",
+  "gastosComunes": "$140.000 aprox. · incluye agua caliente",
+  "caracteristicas": [
+    "📐 65 m² totales",
+    "🛏 2 dormitorios",
+    "🚿 2 baños",
+    "🚗 1 estacionamiento techado",
+    "📦 1 bodega",
+    "🧭 Orientación Oriente"
+  ],
+  "bodegas": 1,
+  "descripcion": [
+    "Departamento en venta ubicado en el Sector Poniente de Viña del Mar, en Edificio Palmas del Mar, sector 7 Norte con 4 Poniente.",
+    "La propiedad cuenta con 65 m² totales, distribuidos en cómodos espacios, con 2 dormitorios y 2 baños.",
+    "Incluye estacionamiento techado y bodega, entregando mayor comodidad y capacidad de almacenamiento.",
+    "El edificio dispone de piscina temperada, gimnasio, sauna, salón de eventos, lavandería, ascensores, conserjería 24 horas y acceso controlado.",
+    "Destaca por su ubicación en uno de los sectores más consolidados y caminables de Viña del Mar, cercano a Avenida Libertad, Universidad Andrés Bello, centros comerciales, supermercados, restaurantes, comercio y diversos servicios.",
+    "Cuenta además con buena conectividad hacia distintos puntos de Viña del Mar y rápido acceso al borde costero y sus playas.",
+    "Una alternativa ideal para quienes buscan vivir o invertir en un sector céntrico, consolidado y con múltiples servicios a pocos minutos."
+  ],
+  "fotos": [
+    "/propiedades/35/2.jpeg",
+    "/propiedades/35/3.jpeg",
+    "/propiedades/35/4.jpeg",
+    "/propiedades/35/5.jpeg",
+    "/propiedades/35/6.jpeg",
+    "/propiedades/35/7.jpeg",
+    "/propiedades/35/8.png",
+    "/propiedades/35/9.jpeg"
+  ],
+  "direccion": "",
+  "whatsapp": "Hola, me gustaría recibir más información sobre el departamento en venta en el Sector Poniente de Viña del Mar, Edificio Palmas del Mar, publicado en $200.000.000.",
+  "estacionamientos": 1,
+  "banos": 1,
+  "imagen": "/propiedades/35/1.jpeg",
+  "tipoPropiedad": "Departamento",
+  "publicada": true,
+  "piso": "21",
+  "operacion": "Venta",
+  "dormitorios": 2,
+  "titulo": "Departamento en Venta – Sector Poniente, Viña del Mar",
+  "id": 35,
+  "estadoTexto": "Disponible",
+  "ubicacion": "Sector Poniente · Viña del Mar",
+  "conectividad": [
+    "Cercano a Avenida Libertad",
+    "Cercano a Universidad Andrés Bello",
+    "Cercano a centros comerciales",
+    "Cercano a supermercados y comercio",
+    "Cercano a restaurantes y servicios",
+    "Buena conectividad hacia distintos puntos de Viña del Mar",
+    "Rápido acceso al borde costero y playas"
+  ]
+}
