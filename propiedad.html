@@ -2285,6 +2285,13 @@
 
 
     if (
+      propiedadActual.imagen
+    ) {
+
+      imagenSEO =
+        propiedadActual.imagen;
+
+    } else if (
       Array.isArray(
         propiedadActual.fotos
       ) &&
@@ -2293,13 +2300,6 @@
 
       imagenSEO =
         propiedadActual.fotos[0];
-
-    } else if (
-      propiedadActual.imagen
-    ) {
-
-      imagenSEO =
-        propiedadActual.imagen;
 
     } else {
 
