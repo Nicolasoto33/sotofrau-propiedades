@@ -1,0 +1,67 @@
+{
+  "informacionImportante": [
+    "💰 Canon de arriendo: $950.000 mensuales",
+    "✅ Sin gastos comunes",
+    "📐 96 m² totales aprox.",
+    "🚗 1 estacionamiento exterior incluido",
+    "➕ Segundo estacionamiento opcional por $70.000 mensuales",
+    "⚡ Medidor independiente",
+    "🔹 Remarcador propio",
+    "🚻 2 baños, uno con ducha",
+    "📦 Bodega en piso -1"
+  ],
+  "estado": "disponible",
+  "precio": "950.000",
+  "gastosComunes": "NO PAGA GASTOS COMUNES",
+  "caracteristicas": [
+    "📍 1 Norte 1999, esquina Los Fresnos, Viña del Mar",
+    "📐 60 m² en primer nivel",
+    "⬇️ 36 m² en piso -1",
+    "📏 96 m² totales aprox.",
+    "🛋️ Amplia sala de recepción",
+    "🏢 1 oficina privada",
+    "🚻 2 baños",
+    "📦 Bodega en piso -1",
+    "🚗 1 estacionamiento exterior incluido",
+    "➕ Posibilidad de adicionar un segundo estacionamiento por $70.000 mensuales",
+    "⚡ Medidor independiente",
+    "🔹 Remarcador propio",
+    "✅ No paga gastos comunes",
+    "💰 Canon de arriendo: $950.000 mensuales"
+  ],
+  "bodegas": 1,
+  "descripcion": [
+    "Local Comercial en Arriendo – 1 Norte 1999, Viña del Mar\n\nExcelente local comercial ubicado en **1 Norte 1999, esquina Los Fresnos, Viña del Mar**, en un sector consolidado, de fácil acceso y con buena conectividad.\n\nLa propiedad cuenta con una superficie aproximada de **96 m² totales**, distribuidos en **60 m² en el primer nivel** y **36 m² en piso -1**, ofreciendo una distribución funcional para actividades comerciales, profesionales o de atención de público.\n\nEn el primer nivel dispone de una **amplia sala de recepción**, ideal para recibir clientes o pacientes, además de **una oficina privada** y **dos baños**, uno de ellos equipado con ducha.\n\nEn el piso -1 se encuentra una **bodega de buen tamaño**, que permite disponer de espacio adicional para almacenamiento, archivo o apoyo operativo.\n\nEl local incluye además **1 estacionamiento exterior**, con la posibilidad de adicionar un segundo estacionamiento por **$70.000 mensuales**.\n\n#### Características principales\n\n- 96 m² totales aprox.\n- 60 m² en primer nivel\n- 36 m² en piso -1\n- Amplia sala de recepción\n- 1 oficina privada\n- 2 baños\n- 1 baño con ducha\n- Bodega en piso -1\n- 1 estacionamiento exterior incluido\n- Segundo estacionamiento opcional por $70.000 mensuales\n- Medidor independiente\n- Remarcador propio\n- Sin gastos comunes\n\n💰 **Canon de arriendo: $950.000 mensuales**\n\nUna excelente alternativa para empresas, oficinas, consultas profesionales, centros de atención o actividades que requieran una combinación de **recepción, oficina privada, servicios y espacio de almacenamiento**, en una ubicación estratégica de Viña del Mar.\n\n**Sotofrau Propiedades**  \nContáctanos para recibir más información o coordinar una visita."
+  ],
+  "precioBodega": "CUENTA CON BODEGA INCLUIDA",
+  "fotos": [
+    "/propiedades/36/1.jpeg",
+    "/propiedades/36/2.jpeg",
+    "/propiedades/36/3.jpeg",
+    "/propiedades/36/4.jpeg",
+    "/propiedades/36/5.jpeg",
+    "/propiedades/36/6.jpeg",
+    "/propiedades/36/7.jpeg",
+    "/propiedades/36/8.jpeg",
+    "/propiedades/36/9.jpeg",
+    "/propiedades/36/10.jpeg"
+  ],
+  "direccion": "1 norte ",
+  "whatsapp": "Hola, estoy interesado(a) en el local comercial ubicado en 1 Norte 1999, esquina Los Fresnos, Viña del Mar, publicado por Sotofrau Propiedades.",
+  "estacionamientos": 1,
+  "banos": 2,
+  "imagen": "/propiedades/36/1.jpeg",
+  "tipoPropiedad": "Oficina",
+  "publicada": true,
+  "piso": "",
+  "operacion": "Arriendo",
+  "titulo": "Arriendo Oficina Comercial en 1 Norte Viña del Mar  ",
+  "id": 36,
+  "estadoTexto": "Disponible",
+  "ubicacion": "Viña del mar",
+  "conectividad": [
+    "📍 Ubicado en 1 Norte 1999, esquina Los Fresnos",
+    "🚗 Buena conectividad hacia distintos sectores de Viña del Mar",
+    "🏙️ Sector consolidado y de fácil acceso"
+  ]
+}
