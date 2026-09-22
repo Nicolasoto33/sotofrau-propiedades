@@ -1,0 +1,77 @@
+{
+  "informacionImportante": [
+    "💰 Valor de venta: $95.000.000",
+    "💵 Gastos comunes: $120.000 aprox.",
+    "🏗️ Año de construcción: 2022",
+    "✅ El departamento no paga contribuciones",
+    "🚗 Contribuciones del estacionamiento: $80.000 anuales aprox",
+    "🚗 Estacionamiento techado incluido",
+    "📦 Bodega incluida"
+  ],
+  "superficie": "64 m² totales",
+  "areasComunes": [
+    "🏊 Piscina exterior",
+    "🔥 Quinchos",
+    "🎉 Salón multiuso"
+  ],
+  "estado": "disponible",
+  "precio": "$95.000.000",
+  "gastosComunes": "$120.000 aprox.",
+  "caracteristicas": [
+    "🛏️ 2 dormitorios, ambos en suite",
+    "🛁 2 baños con tina",
+    "📐 64 m² totales",
+    "🏢 Piso 18",
+    "🌅 Terraza con vista al valle y vista parcial al mar",
+    "🍳 Cocina integrada eléctrica con horno",
+    "🧺 Conexión para lavadora",
+    "🚗 1 estacionamiento techado",
+    "📦 1 bodega",
+    "🏗️ Edificio año 2022"
+  ],
+  "bodegas": 1,
+  "descripcion": [
+    "Departamento en venta ubicado en sector Canal Kirke, Viña del Mar, emplazado en un entorno residencial y tranquilo, con buena conexión hacia Camino Internacional y distintos sectores de la ciudad.  \nLa propiedad cuenta con 64 m² totales y una cómoda distribución de 2 dormitorios, ambos en suite, y 2 baños con tina, entregando privacidad e independencia a cada dormitorio.  \nEl living cuenta con salida directa a una terraza ubicada en el piso 18, desde donde se obtiene una agradable vista hacia el valle y vista parcial al mar.  \nDispone además de cocina integrada eléctrica con horno, conexión para lavadora, estacionamiento techado y bodega, conformando una propiedad funcional tanto para uso residencial como para quien busca adquirir un departamento relativamente nuevo en Viña del Mar."
+  ],
+  "fotos": [
+    "/propiedades/37/1.jpeg",
+    "/propiedades/37/2.jpeg",
+    "/propiedades/37/3.jpeg",
+    "/propiedades/37/4.jpeg",
+    "/propiedades/37/5.jpeg",
+    "/propiedades/37/6.jpeg",
+    "/propiedades/37/7.jpeg",
+    "/propiedades/37/8.jpeg",
+    "/propiedades/37/9.jpeg",
+    "/propiedades/37/10.jpeg",
+    "/propiedades/37/11.jpeg",
+    "/propiedades/37/12.jpeg",
+    "/propiedades/37/13.jpeg",
+    "/propiedades/37/14.jpeg",
+    "/propiedades/37/15.jpeg",
+    "/propiedades/37/16.jpeg",
+    "/propiedades/37/17.jpeg",
+    "/propiedades/37/18.jpeg",
+    "/propiedades/37/19.jpeg"
+  ],
+  "direccion": "Canal Kirke, Viña del Mar",
+  "whatsapp": "Hola, estoy interesado(a) en el departamento en venta de 2 dormitorios y 2 baños ubicado en Canal Kirke, Viña del Mar, publicado en $95.000.000 por Sotofrau Propiedades. ¿Me puedes enviar más información y coordinar una visita?",
+  "estacionamientos": 1,
+  "banos": 2,
+  "imagen": "/propiedades/37/1.jpeg",
+  "tipoPropiedad": "Departamento",
+  "publicada": true,
+  "piso": "18",
+  "operacion": "Venta",
+  "dormitorios": 2,
+  "titulo": "Departamento en Venta 2D 2B con Estacionamiento y Bodega | Canal Kirke, Viña del Mar",
+  "id": 37,
+  "estadoTexto": "Disponible",
+  "ubicacion": "Canal Kirke, Viña del Mar",
+  "conectividad": [
+    "📍 Sector Canal Kirke, Viña del Mar",
+    "🚗 Buena conexión hacia Camino Internacional",
+    "🏡 Sector residencial y tranquilo",
+    "🚙 Acceso hacia distintos puntos de Viña del Mar"
+  ]
+}
