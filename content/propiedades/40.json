@@ -1,0 +1,69 @@
+{
+  "informacionImportante": [
+    "Honorarios de corretaje: 2% sobre el precio de venta.",
+    "Gastos comunes: $80.000 mensuales.",
+    "Propiedad informada como exenta de contribuciones.",
+    "Incluye estacionamiento en superficie y bodega.",
+    "  Edificio construido en 2006, de 22 pisos."
+  ],
+  "superficie": "30 m² más terraza.",
+  "orientacion": "Oriente.",
+  "areasComunes": [
+    "🏊 Piscinas.",
+    "🔥 Quinchos.",
+    "👥 Salones para reuniones.",
+    "💪 Gimnasio.",
+    "🧖 Sauna.",
+    "🛁 Jacuzzi."
+  ],
+  "estado": "disponible",
+  "precio": "2.990 UF",
+  "gastosComunes": "$80.000 mensuales.",
+  "caracteristicas": [
+    "🛏️ 1 dormitorio con ampliación.",
+    "🚿 1 baño en suite.",
+    "📐 30 m² más terraza.",
+    "🌇 Terraza con vista hacia el oriente.",
+    "🍽️ Cocina americana amoblada.",
+    "🚗 1 estacionamiento en superficie.",
+    "📦 1 bodega.",
+    "Ubicado en el piso 16 de un edificio de 22 pisos."
+  ],
+  "bodegas": 1,
+  "descripcion": [
+    "Vive en pleno centro de Viña del Mar y disfruta de una terraza con vista hacia el oriente desde el piso 16. Ubicado en calle Viana, entre Etchevers y Villanelo, este departamento reúne una ubicación céntrica, estacionamiento y bodega.\n\nCuenta con 30 m² más terraza, un dormitorio con ampliación, baño en suite y cocina americana amoblada. Una distribución práctica para quienes buscan un espacio propio en el centro de la ciudad.\n\nEl edificio, construido en 2006, ofrece variadas áreas comunes para disfrutar sin salir de casa: piscinas, quinchos, salones para reuniones, gimnasio, sauna y jacuzzi.\n\nLa propiedad incluye un estacionamiento en superficie y una bodega, complementos que aportan comodidad y espacio de almacenamiento. Coordina tu visita con Soto Frau Propiedades y conoce este departamento en el corazón de Viña del Mar."
+  ],
+  "fotos": [
+    "/propiedades/40/1.jpeg",
+    "/propiedades/40/2.jpeg",
+    "/propiedades/40/3.jpg",
+    "/propiedades/40/4.jpeg",
+    "/propiedades/40/5.jpeg",
+    "/propiedades/40/6.jpeg",
+    "/propiedades/40/7.jpeg",
+    "/propiedades/40/8.jpeg",
+    "/propiedades/40/9.jpeg",
+    "/propiedades/40/10.jpeg",
+    "/propiedades/40/11.jpeg",
+    "/propiedades/40/12.jpeg",
+    "/propiedades/40/13.jpeg"
+  ],
+  "direccion": "Calle Viana, entre Etchevers y Villanelo.",
+  "whatsapp": "Hola, vi en Soto Frau Propiedades el departamento en venta en calle Viana, centro de Viña del Mar, de 1 dormitorio con terraza, estacionamiento y bodega. Me gustaría conocer su precio y coordinar una visita.",
+  "estacionamientos": 1,
+  "banos": 1,
+  "imagen": "/propiedades/40/1.jpeg",
+  "tipoPropiedad": "Departamento",
+  "publicada": true,
+  "piso": "16",
+  "operacion": "Venta",
+  "dormitorios": 1,
+  "titulo": "Departamento en venta con terraza en pleno centro de Viña del Mar · 1 dormitorio, estacionamiento y bodega",
+  "id": 40,
+  "estadoTexto": "Disponible",
+  "ubicacion": "Centro · Viña del Mar.",
+  "conectividad": [
+    "📍 En pleno centro de Viña del Mar.",
+    "Ubicado en calle Viana, entre Etchevers y Villanelo."
+  ]
+}
