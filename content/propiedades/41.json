@@ -1,0 +1,83 @@
+{
+  "informacionImportante": [
+    "Valor de venta: 2.692 UF.",
+    "Comisión de corretaje: 2% más IVA.",
+    "Propiedad apta para crédito hipotecario, según la información proporcionada.",
+    "Se vende amoblado e incluye bodega.",
+    "Departamento exento de contribuciones.",
+    "La bodega paga $3.000 trimestrales de contribuciones.",
+    "Edificio construido en 2006, de 22 pisos.",
+    "Seguridad las 24 horas y acceso único por portería.",
+    "Cuatro ascensores."
+  ],
+  "superficie": "37 m² totales: 30 m² útiles y 7 m² de terraza.",
+  "orientacion": "Nororiente.",
+  "areasComunes": [
+    "🏊 2 piscinas.",
+    "🧖 Sauna.",
+    "🛁 Jacuzzi.",
+    "💪 Gimnasio.",
+    "🎬 Sala de cine.",
+    "🧺 Lavandería.",
+    "🔥 Quincho.",
+    "🎉 Sala de eventos."
+  ],
+  "estado": "disponible",
+  "precio": "2.692 UF",
+  "caracteristicas": [
+    "🛋️ Departamento amoblado.",
+    "🛏️ 1 dormitorio principal con baño en suite.",
+    "📐 37 m² totales: 30 m² útiles y 7 m² de terraza.",
+    "☀️ Orientación nororiente y luz natural durante gran parte del día.",
+    "🪟 Terraza de 7 m².",
+    "🍽️ Cocina americana equipada y comedor diario.",
+    "Clósets integrados.",
+    "🔥 Calefacción mediante radiador a gas.",
+    "Servicio de gas natural.",
+    "Conectividad de fibra óptica.",
+    "Citófono o intercomunicador.",
+    "📦 1 bodega."
+  ],
+  "bodegas": 1,
+  "descripcion": [
+    "Disfruta de una ubicación céntrica en Viña del Mar, con Metro, comercio y servicios cercanos. Este departamento amoblado en el sector Viana combina una distribución práctica con una terraza de 7 m² y orientación nororiente, que aporta luz natural durante gran parte del día.\n\nUbicado en el piso 11, cuenta con 30 m² útiles y 37 m² totales. Sus espacios incluyen sala de estar, comedor diario, cocina americana equipada, clósets integrados y un dormitorio principal con baño en suite. La terraza amplía el espacio para disfrutar de una pausa al aire libre.\n\nLa propiedad incluye bodega y dispone de calefacción mediante radiador a gas, gas natural, conectividad de fibra óptica y citófono. Se encuentra en un edificio construido en 2006, de 22 pisos, con seguridad las 24 horas, cuatro ascensores y acceso único por portería.\n\nSus áreas comunes ofrecen alternativas para descansar, ejercitarse y compartir: dos piscinas, sauna, jacuzzi, gimnasio, sala de cine, lavandería, quincho y sala de eventos.\n\nUna opción para quienes buscan un departamento amoblado con terraza y buena conectividad en Viña del Mar. Contacta a Soto Frau Propiedades y coordina tu visita."
+  ],
+  "fotos": [
+    "/propiedades/41/1.jpeg",
+    "/propiedades/41/2.jpeg",
+    "/propiedades/41/3.jpeg",
+    "/propiedades/41/4.jpeg",
+    "/propiedades/41/5.jpeg",
+    "/propiedades/41/6.jpeg",
+    "/propiedades/41/7.jpeg",
+    "/propiedades/41/8.jpeg",
+    "/propiedades/41/9.jpeg",
+    "/propiedades/41/10.jpeg",
+    "/propiedades/41/11.jpeg",
+    "/propiedades/41/13.jpeg",
+    "/propiedades/41/14.jpeg",
+    "/propiedades/41/15.jpeg",
+    "/propiedades/41/16.jpeg"
+  ],
+  "direccion": "Sector Viana.",
+  "whatsapp": "Hola, vi en Soto Frau Propiedades el departamento amoblado en venta en el sector Viana, Viña del Mar, por 2.692 UF, con 1 dormitorio, terraza y bodega. Me gustaría recibir más información y coordinar una visita.",
+  "banos": 1,
+  "imagen": "/propiedades/41/1.jpeg",
+  "tipoPropiedad": "Departamento",
+  "publicada": true,
+  "piso": "Piso 11.",
+  "operacion": "Venta",
+  "dormitorios": 1,
+  "titulo": "Departamento amoblado en venta cerca del Metro en Viña del Mar · 1 dormitorio, terraza y bodega",
+  "id": 41,
+  "estadoTexto": "Disponible",
+  "ubicacion": "Sector Viana · Viña del Mar.",
+  "conectividad": [
+    "🚇 Cercano a estación de Metro y transporte público",
+    "🎓 Cercano a colegios y universidades.",
+    "🛍️ Próximo a zonas comerciales y de entretención.",
+    "🌳 Cercano a parques como la Quinta Vergara.",
+    "🏖️ Cercano a playas de Viña del Mar.",
+    "🏥 Próximo a clínicas y al Hospital IST."
+  ]
+}
