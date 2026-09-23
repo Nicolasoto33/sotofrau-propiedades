@@ -1,0 +1,81 @@
+{
+  "informacionImportante": [
+    "Valor de venta: $175.000.000.",
+    "Honorarios de corretaje: 2% adicional al valor de venta.",
+    "Estacionamiento y bodega incluidos en la venta.",
+    "  Gastos comunes: $126.000 mensuales aprox., sujetos a variaciones.",
+    "El departamento, el estacionamiento y la bodega pagan contribuciones en cuotas trimestrales.",
+    "Edificio construido en 1984, con 23 niveles y dos subterráneos.",
+    "Conserjería 24/7, acceso controlado y circuito de cámaras de seguridad.",
+    "Tres accesos y cuatro ascensores que atienden niveles pares e impares.",
+    "Visitas con al menos un día de anticipación, previa coordinación.",
+    "Las visitas se realizarán únicamente con clientes que cuenten con presupuesto para compra al contado ",
+    "Se reciben ofertas serias de compra al contado."
+  ],
+  "superficie": "53 m² más terraza",
+  "orientacion": "NORPONIENTE",
+  "areasComunes": [
+    "🧺 Lavandería.",
+    "👥 Sala de reuniones."
+  ],
+  "estado": "disponible",
+  "precio": "$175.000.000",
+  "gastosComunes": "$126.000 mensuales aprox.",
+  "caracteristicas": [
+    "🛏️ 2 dormitorios, principal en suite.",
+    "🚿 2 baños completos.",
+    "📐 53 m² más terraza.",
+    "🌊 Vista al mar, la playa y el sector del muelle Vergara.",
+    "☀️ Orientación norponiente y excelente iluminación natural.",
+    "🪟 Terraza cerrada.",
+    "🛏️ Dormitorio principal con terraza independiente cerrada y vista al mar.",
+    "🚪 Segundo dormitorio de tamaño mediano, con clóset y vista al mar.",
+    "🍽️ Cocina americana equipada.",
+    "🚗 1 estacionamiento subterráneo en nivel −2.",
+    "📦 1 bodega pequeña en nivel −1."
+  ],
+  "bodegas": 1,
+  "descripcion": [
+    "Disfruta de la vista al mar desde un piso 22 en el Edificio Plaza del Mar, ubicado en Avenida San Martín, en pleno sector costero de Viña del Mar. Una propiedad que reúne luminosidad, vistas y una ubicación junto a las playas y al entorno turístico de la ciudad.\n\nSus 53 m² más terraza ofrecen un living comedor con vista hacia la playa y el sector del muelle Vergara, cocina americana equipada y terraza cerrada. La orientación norponiente favorece una excelente iluminación natural y permite disfrutar del paisaje costero desde distintos espacios del departamento.\n\nCuenta con dos dormitorios y dos baños completos. El dormitorio principal en suite destaca por su vista al mar y su terraza independiente cerrada, un espacio ideal para disfrutar de un momento de tranquilidad. El segundo dormitorio, de tamaño mediano, también tiene vista al mar y dispone de clóset.\n\nLa propiedad incluye un estacionamiento subterráneo y una bodega pequeña. El edificio cuenta con conserjería las 24 horas, acceso controlado, cámaras de seguridad, lavandería y sala de reuniones.\n\nUna oportunidad para quienes buscan vivir frente al mar en Viña del Mar, con las playas y el entorno de San Martín como parte de su día a día. Coordina tu visita y conoce sus vistas y espacios."
+  ],
+  "fotos": [
+    "/propiedades/38/1.jpg",
+    "/propiedades/38/2.jpg",
+    "/propiedades/38/3.jpg",
+    "/propiedades/38/4.jpg",
+    "/propiedades/38/5.jpg",
+    "/propiedades/38/6.jpg",
+    "/propiedades/38/7.jpg",
+    "/propiedades/38/8.jpg",
+    "/propiedades/38/9.jpg",
+    "/propiedades/38/10.jpg",
+    "/propiedades/38/11.jpg",
+    "/propiedades/38/12.jpg",
+    "/propiedades/38/13.jpg",
+    "/propiedades/38/14.jpg",
+    "/propiedades/38/15.jpg",
+    "/propiedades/38/16.jpg",
+    "/propiedades/38/17.jpg",
+    "/propiedades/38/18.jpg",
+    "/propiedades/38/19.jpg"
+  ],
+  "direccion": "San Martín 787, Edificio Plaza del Mar.",
+  "whatsapp": "Hola, vi en Soto Frau Propiedades el departamento en venta frente al mar en San Martín 787, Viña del Mar, por $175.000.000, con 2 dormitorios, 2 baños, estacionamiento y bodega. Me gustaría saber si sigue disponible y coordinar una visita.",
+  "estacionamientos": 0,
+  "banos": 2,
+  "imagen": "/propiedades/38/1.jpg",
+  "tipoPropiedad": "Departamento",
+  "publicada": true,
+  "piso": "22",
+  "operacion": "Venta",
+  "dormitorios": 2,
+  "titulo": "Departamento en venta frente al mar en San Martín, Viña del Mar · 2 dormitorios, 2 baños, estacionamiento y bodega",
+  "id": 38,
+  "estadoTexto": "Disponible",
+  "ubicacion": "Sector San Martín · Viña del Mar.",
+  "conectividad": [
+    "📍 Ubicación en Avenida San Martín, sector poniente de Viña del Mar.",
+    "🏖️ Frente al mar y junto a las playas del sector.",
+    "🚶 Entorno turístico del borde costero de Viña del Mar."
+  ]
+}
