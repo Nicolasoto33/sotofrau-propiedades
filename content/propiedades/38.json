@@ -65,7 +65,7 @@
   "banos": 2,
   "imagen": "/propiedades/38/1.jpg",
   "tipoPropiedad": "Departamento",
-  "publicada": true,
+  "publicada": false,
   "piso": "22",
   "operacion": "Venta",
   "dormitorios": 2,
