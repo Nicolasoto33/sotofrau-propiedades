@@ -1,0 +1,70 @@
+{
+  "superficie": "76 m² construidos. Terraza de 4,8 m².",
+  "areasComunes": [
+    "🏊 Piscina.",
+    "🧺 Lavandería.",
+    "🎉 2 salones de eventos.",
+    "🛝 Juegos infantiles.",
+    "🐾 Sector cerrado para paseo de mascotas.",
+    "🌅 Azotea con vista panorámica de 360°."
+  ],
+  "estado": "disponible",
+  "precio": "4.500 UF",
+  "gastosComunes": "$160.000 mensuales aprox., incluyendo agua caliente.",
+  "caracteristicas": [
+    "🌊 Vista panorámica hacia la bahía, Valparaíso, Viña del Mar, Reñaca y Concón.",
+    "✨ Departamento renovado y luminoso.",
+    "📐 76 m² construidos.",
+    "🪟 Terraza de 4,8 m² con vista al mar.",
+    "🛏️ 3 dormitorios con clóset.",
+    "🚿 2 baños, uno en suite.",
+    "🌅 Dormitorio principal con clóset doble, vista al mar y salida directa a la terraza.",
+    "🛋️ Living-comedor con excelente iluminación y acceso a la terraza.",
+    "🍳 Cocina independiente con ventilación natural y buen espacio de almacenamiento.",
+    "🧺 Conexión para lavadora.",
+    "🍽️ Instalación para lavavajillas.",
+    "🚗 1 estacionamiento.",
+    "📦 1 bodega."
+  ],
+  "bodegas": 1,
+  "descripcion": [
+    "Una vista que transforma cada día. Este departamento renovado en Av. Altamirano ofrece una panorámica de la bahía que abarca Valparaíso, Viña del Mar, Reñaca y Concón. Sus espacios luminosos y su conexión con el paisaje costero lo convierten en una atractiva alternativa para vivir en Playa Ancha.\n\nCuenta con 76 m² construidos y una terraza de 4,8 m². El living-comedor destaca por su excelente iluminación y salida directa a la terraza, un espacio para descansar y disfrutar del mar como parte de la vida cotidiana.\n\nDispone de tres dormitorios con clóset y dos baños. El dormitorio principal cuenta con baño en suite, clóset doble y acceso directo a la terraza, además de una vista al mar que se disfruta desde la propia habitación.\n\nLa cocina independiente ofrece ventilación natural, buen espacio de almacenamiento y conexiones para lavadora y lavavajillas. La propiedad incluye un estacionamiento y una bodega.\n\nEl condominio complementa sus espacios con piscina, dos salones de eventos, juegos infantiles, lavandería y un sector cerrado para pasear mascotas. Su azotea con vista panorámica de 360° permite apreciar el entorno desde una perspectiva especial, mientras que la conserjería y vigilancia las 24 horas, las cámaras y el acceso biométrico aportan seguridad.\n\nUbicado cerca de Caleta El Membrillo, restaurantes, universidades y paseos costeros, reúne amplitud, comodidad y una vista privilegiada de la bahía. Contacta a Soto Frau Propiedades y coordina tu visita"
+  ],
+  "fotos": [
+    "/propiedades/44/1.png",
+    "/propiedades/44/02.png",
+    "/propiedades/44/3.png",
+    "/propiedades/44/04.png",
+    "/propiedades/44/05.png",
+    "/propiedades/44/06.png",
+    "/propiedades/44/07.png",
+    "/propiedades/44/08.png",
+    "/propiedades/44/09.png",
+    "/propiedades/44/10.png",
+    "/propiedades/44/11.png",
+    "/propiedades/44/12.png",
+    "/propiedades/44/13.png",
+    "/propiedades/44/14.png"
+  ],
+  "direccion": "Av. Altamirano 1419.",
+  "whatsapp": "Hola, vi en Soto Frau Propiedades el departamento renovado en venta en Av. Altamirano 1419, Playa Ancha, por 4.500 UF, con vista panorámica al mar, 3 dormitorios, 2 baños, estacionamiento y bodega. Me gustaría recibir más información y coordinar una visita.",
+  "estacionamientos": 1,
+  "banos": 2,
+  "imagen": "/propiedades/44/14.png",
+  "tipoPropiedad": "Departamento",
+  "publicada": true,
+  "operacion": "Venta",
+  "dormitorios": 3,
+  "titulo": "Departamento renovado en venta con vista panorámica al mar en Playa Ancha, Valparaíso · 3 dormitorios, 2 baños, estacionamiento y bodega",
+  "id": 44,
+  "estadoTexto": "Disponible",
+  "ubicacion": "Playa Ancha · Valparaíso",
+  "conectividad": [
+    "📍 Ubicado en Av. Altamirano, Playa Ancha, Valparaíso.",
+    "⚓ Cercano a Caleta El Membrillo.",
+    "🍽️ Cercano a restaurantes.",
+    "🎓 Próximo a universidades y a la Escuela Naval.",
+    "Cercano al Regimiento Maipo.",
+    "🌊 Acceso a paseos costeros y miradores del sector."
+  ]
+}

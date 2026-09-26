@@ -1,0 +1,77 @@
+{
+  "superficie": "98 m² totales.",
+  "areasComunes": [
+    " 🏊 Piscina con vista panorámica.",
+    "🔥 Quincho.",
+    "💪 Gimnasio.",
+    "🎉 Sala multiuso.",
+    "🌅 Terraza en azotea.",
+    "🧺 Lavandería.",
+    "🌳 Áreas verdes.",
+    "🚗 Estacionamientos de visita."
+  ],
+  "estado": "disponible",
+  "precio": "$800.000 mensuales.",
+  "gastosComunes": "$290.000 mensuales aprox.",
+  "caracteristicas": [
+    "📐 98 m² totales.",
+    "🛏️ 3 dormitorios con piso flotante.",
+    "🚿 2 baños.",
+    "👗 Dormitorio principal en suite con walk-in closet.",
+    "🌅 Balcón en el dormitorio principal.",
+    "🛋️ Amplio living-comedor con salida a terraza.",
+    "🍳 Cocina independiente con buen espacio de almacenamiento.",
+    "🧺 Logia.",
+    "🚗 2 estacionamientos techados.",
+    "📦 1 bodega.",
+    "🏠 Se arrienda sin amoblar.",
+    "🚫 No se aceptan mascotas."
+  ],
+  "bodegas": 1,
+  "descripcion": [
+    "Amplitud y comodidad para vivir todo el año en el plan de Viña del Mar. Este departamento de 98 m², ubicado en el Edificio Viña Libertad, ofrece tres dormitorios, dos baños y la ventaja de contar con dos estacionamientos techados y una bodega.\n\nSu amplio living-comedor tiene salida a una terraza, un espacio para descansar y compartir en familia. Los dormitorios cuentan con piso flotante, mientras que el principal dispone de baño en suite, walk-in closet y balcón propio.\n\nLa cocina independiente ofrece buen espacio de almacenamiento y una cómoda logia, facilitando la organización de las tareas diarias. Se arrienda sin amoblar, para que puedas adaptar cada ambiente a tu estilo.\n\nEl edificio cuenta con piscina con vista panorámica, quincho, gimnasio, sala multiuso y terraza en azotea, además de lavandería, áreas verdes y estacionamientos de visita. Dispone de acceso controlado las 24 horas, circuito cerrado de cámaras y generador eléctrico de emergencia.\n\nSu ubicación en 2 Oriente permite estar cerca de Plaza Vergara, el Casino de Viña del Mar, Avenida Perú, el borde costero, comercio y locomoción. Contacta a Soto Frau Propiedades y coordina tu visita."
+  ],
+  "fotos": [
+    "/propiedades/47/1.jpeg",
+    "/propiedades/47/2.jpeg",
+    "/propiedades/47/3.jpeg",
+    "/propiedades/47/4.jpeg",
+    "/propiedades/47/5.jpeg",
+    "/propiedades/47/6.jpeg",
+    "/propiedades/47/7.jpeg",
+    "/propiedades/47/8.jpeg",
+    "/propiedades/47/9.jpeg",
+    "/propiedades/47/10.jpeg",
+    "/propiedades/47/11.jpeg"
+  ],
+  "direccion": "2 Oriente 133, Edificio Viña Libertad.",
+  "requisitos": [
+    "Trabajadores dependientes: renta líquida mínima de $2.400.000 mensuales, equivalente a tres veces el valor del arriendo.",
+    "Contrato de trabajo vigente o certificado de antigüedad.",
+    "Tres últimas liquidaciones de sueldo.",
+    "Doce últimas cotizaciones de AFP.",
+    "Informe DICOM."
+  ],
+  "whatsapp": "Hola, vi en Soto Frau Propiedades el departamento en arriendo año corrido en 2 Oriente 133, Viña del Mar, por $800.000 mensuales más gastos comunes, con 3 dormitorios, 2 baños, 2 estacionamientos techados y bodega. Me gustaría recibir más información y coordinar una visita.",
+  "estacionamientos": 2,
+  "banos": 2,
+  "imagen": "/propiedades/47/1.jpeg",
+  "tipoPropiedad": "Departamento",
+  "publicada": true,
+  "operacion": "Arriendo",
+  "dormitorios": 3,
+  "titulo": "Departamento en arriendo en el plan de Viña del Mar · 3 dormitorios, 2 baños, 2 estacionamientos techados y bodega",
+  "id": 47,
+  "mascotas": "No permitidas",
+  "estadoTexto": "Disponible",
+  "ubicacion": "Plan de Viña del Mar · Viña del Mar.",
+  "totalMensual": "$1.090.000 aprox., incluyendo arriendo y gastos comunes.",
+  "conectividad": [
+    "📍 Ubicado en el plan de Viña del Mar.",
+    "🚶 Cercano a Plaza Vergara.",
+    "🎰 Cercano al Casino de Viña del Mar.",
+    "🌊 Próximo a Avenida Perú y al borde costero.",
+    "🛍️ Cercano a comercio y servicios.",
+    "🚌 Acceso a locomoción y buena conectividad."
+  ]
+}
