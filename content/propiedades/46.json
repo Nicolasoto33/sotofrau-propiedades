@@ -1,0 +1,64 @@
+{
+  "superficie": "57 m².",
+  "orientacion": "Norte.",
+  "areasComunes": [
+    "🏊 Piscina.",
+    "💪 Gimnasio.",
+    "🧖 Sauna.",
+    "🎬 Sala de cine.",
+    "🧺 Lavandería.",
+    "🎮 Área de juegos.",
+    "🛎️ Recepción."
+  ],
+  "estado": "disponible",
+  "precio": "$110.000.000",
+  "gastosComunes": "$70.000 mensuales aprox.",
+  "caracteristicas": [
+    "🛋️ Se vende amoblado.",
+    "🛏️ 1 dormitorio con baño en suite.",
+    "🚿 1 baño.",
+    "📐 Superficie informada de 57 m².",
+    "🏢 Ubicado en el piso 23.",
+    "☀️ Orientación norte y excelente luminosidad natural.",
+    "🛋️ Living-comedor.",
+    "🍳 Cocina con refrigerador incluido.",
+    "🌿 Balcón.",
+    "🚪 Clósets.",
+    "Sin estacionamiento ni bodega."
+  ],
+  "bodegas": 0,
+  "descripcion": [
+    "Una alternativa para invertir con un arriendo vigente o proyectar tu próximo hogar en Viña del Mar. Este departamento amoblado, ubicado en el piso 23, destaca por su orientación norte, excelente luminosidad natural y cercanía al Hospital Gustavo Fricke, Metro Viña del Mar, comercio y servicios.\n\nCuenta con una superficie informada de 57 m², un dormitorio con baño en suite, living-comedor, cocina, clósets y balcón. Se vende amoblado e incluye refrigerador, ofreciendo espacios equipados para el uso cotidiano.\n\nActualmente se encuentra arrendado por $520.000 mensuales, con contrato vigente. Los arrendatarios pagan adicionalmente los gastos comunes y servicios básicos, lo que permite evaluar la compra con una renta actual conocida.\n\nEl edificio ofrece piscina, gimnasio, sauna, sala de cine, lavandería y área de juegos, además de recepción, seguridad y ascensores.\n\nSi buscas la propiedad para vivir, existe la posibilidad informada de entrega disponible para ocupación, previa coordinación con el propietario y los arrendatarios. Contacta a Soto Frau Propiedades para conocer las condiciones y coordinar una visita.\n\n"
+  ],
+  "fotos": [
+    "/propiedades/46/1.jpeg",
+    "/propiedades/46/2.jpeg",
+    "/propiedades/46/3.jpeg",
+    "/propiedades/46/4.jpeg",
+    "/propiedades/46/5.jpeg",
+    "/propiedades/46/6.jpeg",
+    "/propiedades/46/7.jpeg",
+    "/propiedades/46/8.jpeg",
+    "/propiedades/46/9.jpeg",
+    "/propiedades/46/10.jpeg"
+  ],
+  "whatsapp": "Hola, vi en Soto Frau Propiedades el departamento amoblado en venta en Viña del Mar por $110.000.000, de 1 dormitorio, con balcón y arriendo vigente de $520.000 mensuales. Me gustaría recibir más información sobre la propiedad y coordinar una visita.",
+  "estacionamientos": 0,
+  "banos": 1,
+  "imagen": "/propiedades/46/1.jpeg",
+  "tipoPropiedad": "Departamento",
+  "publicada": true,
+  "piso": "Piso 23.",
+  "operacion": "Venta",
+  "dormitorios": 1,
+  "titulo": "Departamento amoblado en venta con arriendo vigente en Viña del Mar · 1 dormitorio, balcón y orientación norte",
+  "id": 46,
+  "estadoTexto": "Disponible",
+  "ubicacion": "Viña del Mar · Cercano al Hospital Gustavo Fricke y Metro Viña del Mar.",
+  "conectividad": [
+    "🏥 Cercano al Hospital Gustavo Fricke.",
+    "🚇 Cercano a Metro Hospital.",
+    "🛒 Próximo a supermercados.",
+    "🛍️ Cercano a comercio y servicios."
+  ]
+}
