@@ -22,20 +22,20 @@
     "Una distribución cómoda para vivir y una alternativa para evaluar como inversión. Este departamento de dos dormitorios y dos baños ofrece aproximadamente 60 m² totales, con espacios que se adaptan a distintas necesidades de vivienda.\n\nUbicado en el piso 5, cuenta con aproximadamente 58 m² interiores y una terraza de 2 m², un espacio al aire libre que complementa la distribución del departamento.\n\nEl edificio dispone de ascensor, conserjería las 24 horas y estacionamientos comunitarios. Tiene ocho pisos, con seis departamentos por piso, y una antigüedad aproximada de 60 años.\n\nSu distribución de dos dormitorios y dos baños permite considerarlo tanto para uso propio como para evaluar una inversión destinada al arriendo. Cualquier modalidad de corta estadía deberá revisarse previamente según el reglamento de copropiedad y la normativa aplicable.\n\nContacta a Soto Frau Propiedades para recibir más información y coordinar una visita."
   ],
   "fotos": [
-    "/propiedades/1.jpeg",
-    "/propiedades/2.jpeg",
-    "/propiedades/3.jpeg",
-    "/propiedades/4.jpeg",
-    "/propiedades/5.jpeg",
-    "/propiedades/6.jpeg",
-    "/propiedades/7.jpeg",
-    "/propiedades/8.jpeg"
+    "/propiedades/45/1.jpeg",
+    "/propiedades/45/2.jpeg",
+    "/propiedades/45/3.jpeg",
+    "/propiedades/45/4.jpeg",
+    "/propiedades/45/5.jpeg",
+    "/propiedades/45/6.jpeg",
+    "/propiedades/45/7.jpeg",
+    "/propiedades/45/8.jpeg"
   ],
+  "imagen": "/propiedades/45/1.jpeg",
   "direccion": "San Martín",
   "whatsapp": "Hola, vi en Soto Frau Propiedades el departamento en venta por 3.660 UF, de 2 dormitorios y 2 baños, con terraza y ubicado en el piso 5. Me gustaría conocer su ubicación y coordinar una visita.",
   "estacionamientos": 1,
   "banos": 2,
-  "imagen": "/propiedades/1.jpeg",
   "tipoPropiedad": "Departamento",
   "publicada": true,
   "piso": "Piso 5.",
@@ -44,5 +44,5 @@
   "titulo": "Departamento en San Martín de 2 dormitorios y 2 baños con terraza · 60 m² aprox.",
   "id": 45,
   "estadoTexto": "Disponible",
-  "ubicacion": "San Martín ,Viña del mar"
+  "ubicacion": "San Martín, Viña del Mar"
 }
