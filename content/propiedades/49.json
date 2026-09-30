@@ -1,0 +1,48 @@
+{
+  "informacionImportante": [],
+  "estado": "disponible",
+  "precio": "$125.000.000",
+  "gastosComunes": "$70.000 mensuales aprox.",
+  "caracteristicas": [
+    "🛏️ 2 dormitorios.",
+    "🚿 1 baño.",
+    "🚗 1 estacionamiento.",
+    "📦 1 bodega.",
+    "📍 Ubicación en el sector Álvarez con Agua Santa, Viña del Mar."
+  ],
+  "descripcion": [
+    "Una ubicación conectada para vivir o evaluar tu próxima inversión en Viña del Mar. Este departamento en el sector Álvarez con Agua Santa cuenta con dos dormitorios, un baño, estacionamiento y bodega, combinando espacios para el uso cotidiano con la comodidad de disponer de almacenamiento adicional y estacionamiento propio.\n\nSu distribución de dos dormitorios ofrece alternativas para quienes buscan compartir vivienda, disponer de una habitación adicional o destinar la propiedad al arriendo año corrido. Puede resultar atractiva para estudiantes universitarios, parejas o profesionales que valoran la conexión con distintos puntos de la ciudad.\n\nCon gastos comunes aproximados de $70.000 mensuales, es una opción para considerar tanto para uso residencial como para inversión inmobiliaria.\n\nContacta a Soto Frau Propiedades para recibir más información y coordinar una visita."
+  ],
+  "fotos": [
+    "/propiedades/49/13.jpeg",
+    "/propiedades/49/2.jpeg",
+    "/propiedades/49/3.jpeg",
+    "/propiedades/49/4.jpeg",
+    "/propiedades/49/5.jpeg",
+    "/propiedades/49/6.jpeg",
+    "/propiedades/49/7.jpeg",
+    "/propiedades/49/8.jpeg",
+    "/propiedades/49/9.jpeg",
+    "/propiedades/49/10.jpeg",
+    "/propiedades/49/11.jpeg",
+    "/propiedades/49/12.jpeg",
+    "/propiedades/49/1.jpeg"
+  ],
+  "direccion": "Sector Álvarez con Agua Santa.",
+  "whatsapp": "Hola, vi en Soto Frau Propiedades el departamento en venta en el sector Álvarez con Agua Santa, Viña del Mar, por $125.000.000, con 2 dormitorios, 1 baño, estacionamiento y bodega. Me gustaría recibir más información y coordinar una visita.",
+  "estacionamientos": 1,
+  "banos": 1,
+  "imagen": "/propiedades/49/1.jpeg",
+  "tipoPropiedad": "Departamento",
+  "publicada": true,
+  "operacion": "Venta",
+  "dormitorios": 2,
+  "titulo": "Departamento en venta en Álvarez con Agua Santa, Viña del Mar · 2 dormitorios, estacionamiento y bodega",
+  "id": 49,
+  "estadoTexto": "Disponible",
+  "ubicacion": "Sector Álvarez con Agua Santa · Viña del Mar.",
+  "conectividad": [
+    "📍 Ubicado en el sector Álvarez con Agua Santa.",
+    "🚌 Buena conexión hacia distintos puntos de Viña del Mar."
+  ]
+}
