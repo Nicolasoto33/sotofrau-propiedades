@@ -1,0 +1,73 @@
+{
+  "superficie": "62 m² totales.",
+  "orientacion": "Norponiente.",
+  "areasComunes": [
+    "🏊 Piscina exterior.",
+    "🔥 Quinchos.",
+    "💪 Gimnasio.",
+    "👥 Sala de reuniones."
+  ],
+  "estado": "disponible",
+  "precio": "$680.000 mensuales.",
+  "gastosComunes": "$130.000 mensuales aprox.",
+  "caracteristicas": [
+    "🛋️ Completamente amoblado.",
+    "🛏️ Distribución estilo mariposa: 2 dormitorios, ambos en suite y con clóset.",
+    "🛁 2 baños con tina.",
+    "📐 62 m² totales.",
+    "🏢 Ubicado en el piso 7.",
+    "☀️ Orientación norponiente.",
+    "🌊 Amplia terraza cerrada con vista parcial al mar.",
+    "🪟 Living con salida directa a la terraza.",
+    "🍳 Cocina abierta completamente equipada.",
+    "Horno eléctrico, microondas y refrigerador incluidos.",
+    "🧺 Área de lavado con lavadora.",
+    "🚗 1 estacionamiento subterráneo.",
+    "📦 1 bodega."
+  ],
+  "bodegas": 1,
+  "descripcion": [
+    "Disfruta de la comodidad de vivir en Costa de Montemar en este moderno departamento completamente amoblado, disponible para arriendo año corrido. Su distribución estilo mariposa, con dos dormitorios en suite, ofrece privacidad y una organización práctica de los espacios.\n\nUbicado en el piso 7 y con orientación norponiente, cuenta con 62 m² totales y una amplia terraza cerrada con vista parcial al mar. El living tiene salida directa a la terraza, que amplía las posibilidades para descansar y compartir.\n\nAmbos dormitorios disponen de clóset y baño privado con tina. La cocina abierta está completamente equipada e incluye horno eléctrico, microondas y refrigerador. Además, cuenta con un área de lavado con lavadora, un estacionamiento subterráneo y una bodega.\n\nEl edificio ofrece piscina exterior, quinchos, gimnasio y sala de reuniones. Su ubicación permite estar cerca de parques, supermercados, comercio, servicios y playas de Concón.\n\nUna alternativa cómoda para instalarte y disfrutar de Costa de Montemar durante todo el año. Contacta a Soto Frau Propiedades y coordina tu visita.\n\n"
+  ],
+  "fotos": [
+    "/propiedades/48/1.jpeg",
+    "/propiedades/48/2.jpeg",
+    "/propiedades/48/3.jpeg",
+    "/propiedades/48/4.jpeg",
+    "/propiedades/48/5.jpeg",
+    "/propiedades/48/6.jpeg",
+    "/propiedades/48/7.jpeg",
+    "/propiedades/48/8.jpeg",
+    "/propiedades/48/9.jpeg",
+    "/propiedades/48/10.jpeg",
+    "/propiedades/48/11.jpeg"
+  ],
+  "requisitos": [
+    "Trabajadores dependientes: renta líquida mínima de $2.040.000 mensuales, equivalente a tres veces el canon de arriendo.",
+    "Contrato de trabajo vigente o certificado de antigüedad.",
+    "Tres últimas liquidaciones de sueldo.",
+    "Doce últimas cotizaciones de AFP.",
+    "Informe DICOM."
+  ],
+  "whatsapp": "Hola, vi en Soto Frau Propiedades el departamento amoblado en arriendo año corrido en Costa de Montemar, Concón, por $680.000 mensuales más gastos comunes, con 2 dormitorios en suite, terraza cerrada, estacionamiento y bodega. Me gustaría recibir más información y coordinar una visita.",
+  "estacionamientos": 1,
+  "banos": 2,
+  "imagen": "/propiedades/48/1.jpeg",
+  "tipoPropiedad": "Departamento",
+  "publicada": true,
+  "piso": "Piso 7",
+  "operacion": "Arriendo",
+  "dormitorios": 2,
+  "titulo": "Departamento amoblado en arriendo en Costa de Montemar, Concón · 2 dormitorios en suite, terraza cerrada, estacionamiento y bodega",
+  "id": 48,
+  "estadoTexto": "Disponible",
+  "ubicacion": "Costa de Montemar · Concón.",
+  "totalMensual": "$810.000 aprox., incluyendo arriendo y gastos comunes.",
+  "conectividad": [
+    "📍 Ubicado en Costa de Montemar, Concón.",
+    "🌳 Cercano a parques.",
+    "🛒 Cercano a supermercados.",
+    "🛍️ Próximo a comercio y servicios.",
+    "🏖️ Cercano a playas."
+  ]
+}
