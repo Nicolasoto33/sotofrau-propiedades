@@ -1,26 +1,19 @@
 {
-  "id": 29,
-  "publicada": true,
-  "operacion": "Arriendo",
+  "informacionImportante": [
+    "Arriendo mensual: $950.000",
+    "Gastos comunes incluidos",
+    "3 dormitorios",
+    "2 baños",
+    "120 m²",
+    "1 estacionamiento",
+    "Sin bodega",
+    "Amoblado",
+    "No se aceptan mascotas"
+  ],
+  "areasComunes": [],
   "estado": "disponible",
-  "estadoTexto": "Disponible",
-  "titulo": "Departamento Amoblado en 3 Norte",
-  "direccion": "3 Norte Poniente",
-  "ubicacion": "Viña del Mar · Sector Poniente",
   "precio": "$950.000",
   "gastosComunes": "GGCC incluidos",
-  "totalMensual": "$950.000",
-  "fotos": [
-    "propiedades/29/1.jpeg",
-    "propiedades/29/2.jpeg",
-    "propiedades/29/3.jpeg",
-    "propiedades/29/4.jpeg",
-    "propiedades/29/5.jpeg",
-    "propiedades/29/6.jpeg",
-    "propiedades/29/7.jpeg",
-    "propiedades/29/8.jpeg",
-    "propiedades/29/9.jpeg"
-  ],
   "caracteristicas": [
     "🛏 3 dormitorios",
     "🚿 2 baños",
@@ -35,24 +28,32 @@
     "La propiedad está en un sector consolidado del Poniente de Viña del Mar, cercano a playa, supermercados, comercio, restaurantes y colegios.",
     "Los gastos comunes están incluidos en el valor mensual de $950.000."
   ],
-  "informacionImportante": [
-    "Arriendo mensual: $950.000",
-    "Gastos comunes incluidos",
-    "3 dormitorios",
-    "2 baños",
-    "120 m²",
-    "1 estacionamiento",
-    "Sin bodega",
-    "Amoblado",
-    "No se aceptan mascotas"
+  "fotos": [
+    "propiedades/29/1.jpeg",
+    "propiedades/29/2.jpeg",
+    "propiedades/29/3.jpeg",
+    "propiedades/29/4.jpeg",
+    "propiedades/29/5.jpeg",
+    "propiedades/29/6.jpeg",
+    "propiedades/29/7.jpeg",
+    "propiedades/29/8.jpeg",
+    "propiedades/29/9.jpeg"
   ],
-  "areasComunes": [],
+  "direccion": "3 Norte Poniente",
+  "whatsapp": "Hola, me gustaría consultar por el departamento amoblado en 3 Norte Poniente, Viña del Mar.",
+  "tipoPropiedad": "Departamento",
+  "publicada": true,
+  "operacion": "Arriendo",
+  "titulo": "Departamento Amoblado en 3 Norte MARZO a DICIEMBRE 2027",
+  "id": 29,
+  "estadoTexto": "Disponible",
+  "ubicacion": "Viña del Mar · Sector Poniente",
+  "totalMensual": "$950.000",
   "conectividad": [
     "A minutos de la playa",
     "Cercano a supermercados",
     "Cercano a restaurantes y cafés",
     "Cercano a colegios",
     "Excelente conectividad"
-  ],
-  "whatsapp": "Hola, me gustaría consultar por el departamento amoblado en 3 Norte Poniente, Viña del Mar."
+  ]
 }
