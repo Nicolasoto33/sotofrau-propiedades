@@ -1,0 +1,67 @@
+{
+  "superficie": "70 m² ",
+  "orientacion": "Norponiente.",
+  "areasComunes": [
+    "🧺 Lavandería.",
+    "🌳 Áreas verdes cuidadas."
+  ],
+  "estado": "disponible",
+  "precio": "5.500 UF",
+  "gastosComunes": "$80.000 mensuales.",
+  "caracteristicas": [
+    "🌊 Ubicación en primera línea frente al mar.",
+    "🛏️ 3 dormitorios, principal con vista al mar.",
+    "🚿 2 baños.",
+    "🏢 Ubicado en el piso 16.",
+    "☀️ Orientación norponiente.",
+    "🛋️ Living-comedor.",
+    "🍽️ Cocina semiabierta amoblada.",
+    "🧺 Conexión para lavadora.",
+    "🚗 1 estacionamiento subterráneo.",
+    "📦 1 bodega."
+  ],
+  "bodegas": 1,
+  "descripcion": [
+    "Disfruta de una vista privilegiada al mar desde el piso 16, en primera línea de Avenida San Martín. Este departamento de tres dormitorios combina una ubicación costera, orientación norponiente y cercanía a comercio y servicios de Viña del Mar.\n\nSu distribución contempla living-comedor, cocina semiabierta amoblada y dos baños. El dormitorio principal destaca por su vista al mar, un atractivo para quienes buscan incorporar el paisaje costero a su vida cotidiana.\n\nLa propiedad cuenta con calefont y conexión para lavadora, además de un estacionamiento subterráneo y una bodega que aportan comodidad y espacio de almacenamiento.\n\nEl edificio, construido en 1981, dispone de conserjería y seguridad las 24 horas, dos ascensores panorámicos, lavandería y cuidadas áreas verdes comunes.\n\nA pocas cuadras de centros comerciales, supermercados, clínicas, centros médicos y bancos, es una alternativa para vivir frente al mar con servicios cercanos. Contacta a Soto Frau Propiedades y coordina tu visita."
+  ],
+  "fotos": [
+    "/propiedades/50/1.jpeg",
+    "/propiedades/50/2.jpeg",
+    "/propiedades/50/3.jpeg",
+    "/propiedades/50/4.jpeg",
+    "/propiedades/50/5.jpeg",
+    "/propiedades/50/6.jpeg",
+    "/propiedades/50/7.jpeg",
+    "/propiedades/50/8.jpeg",
+    "/propiedades/50/9.jpeg",
+    "/propiedades/50/10.jpeg",
+    "/propiedades/50/11.jpeg",
+    "/propiedades/50/12.jpeg",
+    "/propiedades/50/13.jpeg",
+    "/propiedades/50/14.jpeg",
+    "/propiedades/50/15.jpeg",
+    "/propiedades/50/16.jpeg",
+    "/propiedades/50/17.jpeg"
+  ],
+  "direccion": "Avenida San Martín.",
+  "whatsapp": "Hola, vi en Soto Frau Propiedades el departamento D0184 en venta frente al mar en Avenida San Martín, Viña del Mar, por 5.500 UF, con 3 dormitorios, 2 baños, estacionamiento subterráneo y bodega. Me gustaría recibir más información y coordinar una visita.",
+  "estacionamientos": 1,
+  "banos": 2,
+  "imagen": "/propiedades/50/17.jpeg",
+  "tipoPropiedad": "Departamento",
+  "publicada": true,
+  "piso": "Piso 16",
+  "operacion": "Venta",
+  "dormitorios": 3,
+  "titulo": "Departamento en venta en primera línea frente al mar en San Martín, Viña del Mar · 3 dormitorios, 2 baños, estacionamiento y bodega",
+  "id": 50,
+  "estadoTexto": "Disponible",
+  "ubicacion": "Sector San Martín · Viña del Mar.",
+  "conectividad": [
+    "📍 Ubicado en Avenida San Martín, frente al mar.",
+    "🛍️ A pocas cuadras de centros comerciales.",
+    "🛒 Cercano a supermercados.",
+    "🏥 Cercano a clínicas y centros médicos.",
+    "🏦 Próximo a bancos y servicios."
+  ]
+}
