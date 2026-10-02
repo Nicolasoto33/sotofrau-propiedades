@@ -1,0 +1,68 @@
+{
+  "superficie": "65 m² totales.",
+  "orientacion": "Poniente",
+  "areasComunes": [
+    "🌳 Jardín.",
+    "🚗 Estacionamientos de visita.",
+    "🏖️ Acceso privado directo a Playa Acapulco y Playa El Sol."
+  ],
+  "estado": "disponible",
+  "precio": "4.990 UF",
+  "gastosComunes": "$130.000 mensuales.",
+  "caracteristicas": [
+    "🌊 Vista panorámica en primera línea al mar.",
+    "✨ Departamento renovado.",
+    "📐 65 m² totales.",
+    "🛏️ 3 dormitorios, principal en suite.",
+    "🚿 2 baños.",
+    "🛋️ Living-comedor con vista al mar.",
+    "🌿 Terraza.",
+    "☀️ Orientación poniente.",
+    "🍳 Cocina independiente con conexión a gas y almacenamiento.",
+    "🔥 Calefacción central y gas central.",
+    "🌐 Acceso a internet por fibra óptica.",
+    "🚗 1 estacionamiento tipo box con portón individual.",
+    "🏖️ Acceso privado directo desde el edificio a Playa Acapulco y Playa El Sol."
+  ],
+  "descripcion": [
+    "Disfruta del mar como parte de tu día a día en este departamento renovado de Avenida San Martín. Su vista panorámica en primera línea, orientación poniente y ubicación junto a las playas ofrecen un entorno atractivo para vivir en Viña del Mar.\n\nCuenta con 65 m² totales, living-comedor con vista al océano, terraza y cocina independiente con conexión a gas y espacio de almacenamiento. Sus ventanales favorecen la entrada de luz natural y la conexión visual con el paisaje costero.\n\nDispone de tres dormitorios y dos baños. El principal tiene clóset y baño en suite con ducha; el segundo ofrece espacio para cama doble y clóset. La tercera habitación permite habilitar una oficina o un dormitorio con camarote, según tus necesidades.\n\nIncluye un estacionamiento tipo box con portón individual. El edificio cuenta con ascensor, acceso para silla de ruedas, jardín y estacionamientos de visita, además de acceso privado directo a Playa Acapulco y Playa El Sol.\n\nCon restaurantes, comercio, servicios y locomoción cercanos, esta propiedad combina vida de playa y comodidad urbana. Contacta a Soto Frau Propiedades y coordina tu visita."
+  ],
+  "fotos": [
+    "/propiedades/51/01.png",
+    "/propiedades/51/02.png",
+    "/propiedades/51/03.png",
+    "/propiedades/51/04.png",
+    "/propiedades/51/05.png",
+    "/propiedades/51/06.png",
+    "/propiedades/51/07.png",
+    "/propiedades/51/08.png",
+    "/propiedades/51/09.png",
+    "/propiedades/51/10.png",
+    "/propiedades/51/11.png",
+    "/propiedades/51/12.png",
+    "/propiedades/51/13.png"
+  ],
+  "direccion": "Avenida San Martín.",
+  "whatsapp": "Hola, vi en Soto Frau Propiedades el departamento renovado en venta frente al mar en Avenida San Martín, Viña del Mar, por 4.990 UF, con 3 dormitorios, 2 baños, terraza y estacionamiento tipo box. Me gustaría recibir más información y coordinar una visita.",
+  "estacionamientos": 1,
+  "banos": 2,
+  "imagen": "/propiedades/51/10.png",
+  "tipoPropiedad": "Departamento",
+  "publicada": true,
+  "operacion": "Venta",
+  "dormitorios": 3,
+  "titulo": "Departamento renovado en venta frente al mar en San Martín, Viña del Mar · 3 dormitorios, 2 baños, terraza y estacionamiento privado",
+  "id": 51,
+  "estadoTexto": "Disponible",
+  "ubicacion": "Sector San Martín · Viña del Mar.",
+  "conectividad": [
+    "📍 Ubicado en Avenida San Martín, frente al mar.",
+    "🌊 Cercano a Playa Blanca, Avenida Perú y el Casino de Viña del Mar.",
+    "🍽️ Próximo a restaurantes y cafeterías.",
+    "🛒 Cercano a supermercados, bancos, farmacias, comercio y servicios.",
+    "🎓 Acceso a establecimientos educacionales y universidades.",
+    "🏥 Conectividad hacia centros médicos y servicios de salud.",
+    "🚌 Locomoción colectiva cercana.",
+    "🚗 Conexión hacia el centro de Viña del Mar, Avenida Libertad, Agua Santa, Recreo, Valparaíso y Concón."
+  ]
+}
