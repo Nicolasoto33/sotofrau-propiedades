@@ -1609,6 +1609,7 @@
 
   </style>
 
+<link rel="stylesheet" href="precios-uf.css">
 </head>
 
 
@@ -2027,6 +2028,7 @@
      CARGAR DATOS
 ===================================================== -->
 
+<script src="precios-uf.js"></script>
 <script src="propiedades.generated.js"></script>
 
 
@@ -2760,6 +2762,7 @@
       "precio"
     ).textContent =
       propiedadActual.precio;
+    PreciosUF.mount(document.getElementById("precio"), propiedadActual.precio, propiedadActual.id);
 
 
 
