@@ -57,7 +57,7 @@
   "banos": 2,
   "imagen": "/propiedades/47/1.jpeg",
   "tipoPropiedad": "Departamento",
-  "publicada": true,
+  "publicada": false,
   "operacion": "Arriendo",
   "dormitorios": 3,
   "titulo": "Departamento en arriendo en el plan de Viña del Mar · 3 dormitorios, 2 baños, 2 estacionamientos techados y bodega",
