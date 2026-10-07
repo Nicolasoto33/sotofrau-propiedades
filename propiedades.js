@@ -5,6 +5,440 @@
 
 
 /* =====================================================
+   VALOR UF
+===================================================== */
+
+/*
+  Se consulta una sola vez el valor vigente de la UF.
+
+  Si la consulta falla:
+  - las propiedades siguen funcionando normalmente
+  - simplemente no se muestra la conversión
+*/
+
+let promesaValorUF = null;
+
+
+function obtenerValorUF() {
+
+  if (promesaValorUF) {
+    return promesaValorUF;
+  }
+
+
+  promesaValorUF = fetch(
+    "https://mindicador.cl/api/uf"
+  )
+    .then(
+      function(respuesta) {
+
+        if (!respuesta.ok) {
+          throw new Error(
+            "No fue posible obtener el valor de la UF."
+          );
+        }
+
+        return respuesta.json();
+
+      }
+    )
+    .then(
+      function(datos) {
+
+        if (
+          !datos ||
+          !Array.isArray(datos.serie) ||
+          datos.serie.length === 0 ||
+          !datos.serie[0].valor
+        ) {
+
+          throw new Error(
+            "El valor de la UF no está disponible."
+          );
+
+        }
+
+
+        return Number(
+          datos.serie[0].valor
+        );
+
+      }
+    )
+    .catch(
+      function(error) {
+
+        console.warn(
+          "Conversión UF/CLP no disponible:",
+          error
+        );
+
+        return null;
+
+      }
+    );
+
+
+  return promesaValorUF;
+
+}
+
+
+
+/* =====================================================
+   FORMATEAR CLP
+===================================================== */
+
+function formatearCLP(valor) {
+
+  return new Intl.NumberFormat(
+    "es-CL",
+    {
+      style: "currency",
+      currency: "CLP",
+      maximumFractionDigits: 0
+    }
+  ).format(
+    Math.round(valor)
+  );
+
+}
+
+
+
+/* =====================================================
+   FORMATEAR UF
+===================================================== */
+
+function formatearUF(valor) {
+
+  return new Intl.NumberFormat(
+    "es-CL",
+    {
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 2
+    }
+  ).format(valor);
+
+}
+
+
+
+/* =====================================================
+   OBTENER NÚMERO DESDE PRECIO UF
+===================================================== */
+
+function obtenerNumeroUF(precio) {
+
+  const texto =
+    String(
+      precio || ""
+    )
+      .toUpperCase()
+      .trim();
+
+
+  if (
+    !texto.includes("UF")
+  ) {
+
+    return null;
+
+  }
+
+
+  const coincidencia =
+    texto.match(
+      /([\d.]+(?:,\d+)?)\s*UF/i
+    );
+
+
+  if (!coincidencia) {
+
+    const coincidenciaInvertida =
+      texto.match(
+        /UF\s*([\d.]+(?:,\d+)?)/i
+      );
+
+
+    if (!coincidenciaInvertida) {
+      return null;
+    }
+
+
+    const numero =
+      coincidenciaInvertida[1]
+        .replace(/\./g, "")
+        .replace(",", ".");
+
+
+    const valor =
+      Number(numero);
+
+
+    return Number.isNaN(valor)
+      ? null
+      : valor;
+
+  }
+
+
+  const numero =
+    coincidencia[1]
+      .replace(/\./g, "")
+      .replace(",", ".");
+
+
+  const valor =
+    Number(numero);
+
+
+  return Number.isNaN(valor)
+    ? null
+    : valor;
+
+}
+
+
+
+/* =====================================================
+   OBTENER NÚMERO DESDE PRECIO CLP
+===================================================== */
+
+function obtenerNumeroCLP(precio) {
+
+  const texto =
+    String(
+      precio || ""
+    )
+      .trim();
+
+
+  if (
+    texto.toUpperCase().includes("UF")
+  ) {
+
+    return null;
+
+  }
+
+
+  const coincidencia =
+    texto.match(
+      /\$?\s*([\d.]+)/
+    );
+
+
+  if (!coincidencia) {
+    return null;
+  }
+
+
+  const numero =
+    coincidencia[1]
+      .replace(/\./g, "");
+
+
+  const valor =
+    Number(numero);
+
+
+  return Number.isNaN(valor)
+    ? null
+    : valor;
+
+}
+
+
+
+/* =====================================================
+   GENERAR CONVERSIÓN PARA VENTA
+===================================================== */
+
+async function obtenerConversionPrecio(
+  propiedad
+) {
+
+  /*
+    SOLO SE MUESTRA EN VENTAS
+  */
+
+  if (
+    !propiedad ||
+    String(
+      propiedad.operacion || ""
+    ).toLowerCase() !== "venta"
+  ) {
+
+    return "";
+
+  }
+
+
+  const valorUF =
+    await obtenerValorUF();
+
+
+  if (
+    !valorUF ||
+    valorUF <= 0
+  ) {
+
+    return "";
+
+  }
+
+
+  const precioTexto =
+    String(
+      propiedad.precio || ""
+    );
+
+
+  /*
+    PRECIO ORIGINAL EN UF
+    → CONVERTIR A CLP
+  */
+
+  if (
+    precioTexto
+      .toUpperCase()
+      .includes("UF")
+  ) {
+
+    const cantidadUF =
+      obtenerNumeroUF(
+        precioTexto
+      );
+
+
+    if (
+      cantidadUF === null
+    ) {
+
+      return "";
+
+    }
+
+
+    const valorCLP =
+      cantidadUF *
+      valorUF;
+
+
+    return (
+      "≈ " +
+      formatearCLP(
+        valorCLP
+      )
+    );
+
+  }
+
+
+  /*
+    PRECIO ORIGINAL EN CLP
+    → CONVERTIR A UF
+  */
+
+  const cantidadCLP =
+    obtenerNumeroCLP(
+      precioTexto
+    );
+
+
+  if (
+    cantidadCLP === null
+  ) {
+
+    return "";
+
+  }
+
+
+  const cantidadUF =
+    cantidadCLP /
+    valorUF;
+
+
+  return (
+    "≈ " +
+    formatearUF(
+      cantidadUF
+    ) +
+    " UF"
+  );
+
+}
+
+
+
+/* =====================================================
+   MOSTRAR CONVERSIÓN EN TARJETA
+===================================================== */
+
+function cargarConversionTarjeta(
+  propiedad,
+  tarjeta
+) {
+
+  if (
+    !propiedad ||
+    String(
+      propiedad.operacion || ""
+    ).toLowerCase() !== "venta"
+  ) {
+
+    return;
+
+  }
+
+
+  const contenedorConversion =
+    tarjeta.querySelector(
+      ".price-conversion"
+    );
+
+
+  if (
+    !contenedorConversion
+  ) {
+
+    return;
+
+  }
+
+
+  obtenerConversionPrecio(
+    propiedad
+  ).then(
+    function(texto) {
+
+      if (!texto) {
+
+        contenedorConversion.style.display =
+          "none";
+
+        return;
+
+      }
+
+
+      contenedorConversion.textContent =
+        texto;
+
+
+      contenedorConversion.style.display =
+        "block";
+
+    }
+  );
+
+}
+
+
+
+/* =====================================================
    GENERAR TARJETAS EN INICIO
 ===================================================== */
 
@@ -14,6 +448,7 @@ function cargarPropiedades() {
     document.getElementById(
       "propertyGrid"
     );
+
 
   if (!contenedor) {
     return;
@@ -188,6 +623,39 @@ function cargarPropiedades() {
       }
 
 
+      /*
+        La conversión queda inicialmente oculta.
+
+        Solo se mostrará si:
+        - la operación es Venta
+        - se obtiene correctamente el valor UF
+      */
+
+      const mostrarEspacioConversion =
+        String(
+          propiedad.operacion || ""
+        ).toLowerCase() === "venta";
+
+
+      const bloqueConversion =
+        mostrarEspacioConversion
+          ? `
+            <div
+              class="price-conversion"
+              style="
+                display:none;
+                margin-top:4px;
+                margin-bottom:2px;
+                color:#6b7781;
+                font-size:13px;
+                font-weight:600;
+                line-height:1.3;
+              "
+            ></div>
+          `
+          : "";
+
+
       tarjeta.innerHTML = `
 
         <div class="property-image">
@@ -231,6 +699,9 @@ function cargarPropiedades() {
           </div>
 
 
+          ${bloqueConversion}
+
+
           <div class="features">
 
             ${caracteristicas}
@@ -252,6 +723,17 @@ function cargarPropiedades() {
 
 
       contenedor.appendChild(
+        tarjeta
+      );
+
+
+      /*
+        CARGAR CONVERSIÓN
+        SOLO PARA VENTAS
+      */
+
+      cargarConversionTarjeta(
+        propiedad,
         tarjeta
       );
 
