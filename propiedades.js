@@ -575,9 +575,20 @@ function cargarPropiedades() {
           : "";
 
 
+      /*
+        NUEVA URL INDIVIDUAL
+
+        Antes:
+        propiedad.html?id=45
+
+        Ahora:
+        /propiedad/45/
+      */
+
       const enlace =
-        "propiedad.html?id=" +
-        propiedad.id;
+        "/propiedad/" +
+        propiedad.id +
+        "/";
 
 
       const textoEnlace =
