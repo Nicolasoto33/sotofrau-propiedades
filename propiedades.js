@@ -576,19 +576,16 @@ function cargarPropiedades() {
 
 
       /*
-        NUEVA URL INDIVIDUAL
+        URL INDIVIDUAL DE LA PROPIEDAD
 
-        Antes:
-        propiedad.html?id=45
-
-        Ahora:
-        /propiedad/45/
+        ?v=2 ayuda a evitar la caché antigua
+        de vista previa de WhatsApp / Meta.
       */
 
       const enlace =
         "/propiedad/" +
         propiedad.id +
-        "/";
+        "/?v=2";
 
 
       const textoEnlace =
