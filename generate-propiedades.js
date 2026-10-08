@@ -1,5 +1,6 @@
 const fs = require("fs");
 const path = require("path");
+const crypto = require("crypto");
 
 
 /* =====================================================
@@ -60,6 +61,196 @@ function normalizarRutaImagen(ruta) {
     /^\/+/,
     ""
   );
+
+}
+
+
+
+/* =====================================================
+   OBTENER RUTA DE IMAGEN PRINCIPAL
+===================================================== */
+
+function obtenerRutaImagenPrincipal(
+  propiedad
+) {
+
+  let rutaImagen =
+    "";
+
+
+  /*
+    1. Imagen principal elegida
+       en el administrador.
+  */
+
+  if (
+    propiedad.imagen
+  ) {
+
+    rutaImagen =
+      propiedad.imagen;
+
+  }
+
+
+  /*
+    2. Primera fotografía
+       de la galería.
+  */
+
+  else if (
+    Array.isArray(
+      propiedad.fotos
+    ) &&
+    propiedad.fotos.length > 0
+  ) {
+
+    rutaImagen =
+      propiedad.fotos[0];
+
+  }
+
+
+  /*
+    3. Imagen de respaldo.
+  */
+
+  else {
+
+    rutaImagen =
+      "android-chrome-512x512.png";
+
+  }
+
+
+  return normalizarRutaImagen(
+    rutaImagen
+  );
+
+}
+
+
+
+/* =====================================================
+   GENERAR VERSIÓN SOCIAL AUTOMÁTICA
+===================================================== */
+
+/*
+  Esta versión sirve para evitar que
+  WhatsApp / Meta reutilicen una vista previa
+  antigua de una propiedad.
+
+  La versión cambia automáticamente cuando:
+  - cambia la información de la propiedad;
+  - cambia la ruta de la imagen;
+  - cambia el contenido real de la foto principal.
+
+  Ejemplo:
+
+  /propiedad/44/?v=a1b2c3d4e5
+
+  /propiedades/44/14.png?v=a1b2c3d4e5
+*/
+
+function generarVersionSocial(
+  propiedad
+) {
+
+  const hash =
+    crypto.createHash(
+      "sha256"
+    );
+
+
+  /*
+    Incorporar los datos públicos
+    de la propiedad.
+  */
+
+  const datosVersion =
+    Object.assign(
+      {},
+      propiedad
+    );
+
+
+  /*
+    Evitar que la propia versión
+    intervenga en el cálculo.
+  */
+
+  delete datosVersion.versionSocial;
+
+
+  hash.update(
+    JSON.stringify(
+      datosVersion
+    )
+  );
+
+
+  /*
+    Incorporar el contenido REAL
+    de la imagen principal.
+
+    Esto es importante porque una imagen
+    podría reemplazarse conservando
+    exactamente el mismo nombre.
+  */
+
+  const rutaImagen =
+    obtenerRutaImagenPrincipal(
+      propiedad
+    );
+
+
+  const rutaLocalImagen =
+    path.join(
+      __dirname,
+      rutaImagen
+    );
+
+
+  if (
+    fs.existsSync(
+      rutaLocalImagen
+    )
+  ) {
+
+    const estadisticas =
+      fs.statSync(
+        rutaLocalImagen
+      );
+
+
+    if (
+      estadisticas.isFile()
+    ) {
+
+      hash.update(
+        fs.readFileSync(
+          rutaLocalImagen
+        )
+      );
+
+    }
+
+  }
+
+
+  /*
+    10 caracteres son suficientes
+    como identificador de versión.
+  */
+
+  return hash
+    .digest(
+      "hex"
+    )
+    .substring(
+      0,
+      10
+    );
 
 }
 
@@ -216,6 +407,16 @@ function cargarPropiedades() {
       ================================================= */
 
       delete propiedad.notasInternas;
+
+
+      /* =================================================
+         VERSIÓN AUTOMÁTICA PARA WHATSAPP / META
+      ================================================= */
+
+      propiedad.versionSocial =
+        generarVersionSocial(
+          propiedad
+        );
 
 
       propiedades.push(
@@ -486,7 +687,8 @@ function obtenerDescripcionSocial(
       descripcion.substring(
         0,
         217
-      ) + "...";
+      ) +
+      "...";
 
   }
 
@@ -502,67 +704,42 @@ function obtenerDescripcionSocial(
 ===================================================== */
 
 function obtenerImagenPrincipal(
-  propiedad
+  propiedad,
+  versionSocial
 ) {
 
-  let rutaImagen =
-    "";
-
-
-  /*
-    1. Imagen principal elegida en el administrador
-  */
-
-  if (
-    propiedad.imagen
-  ) {
-
-    rutaImagen =
-      propiedad.imagen;
-
-  }
-
-
-  /*
-    2. Primera imagen de la galería
-  */
-
-  else if (
-    Array.isArray(
-      propiedad.fotos
-    ) &&
-    propiedad.fotos.length > 0
-  ) {
-
-    rutaImagen =
-      propiedad.fotos[0];
-
-  }
-
-
-  /*
-    3. Imagen de respaldo
-  */
-
-  else {
-
-    rutaImagen =
-      "android-chrome-512x512.png";
-
-  }
-
-
-  rutaImagen =
-    normalizarRutaImagen(
-      rutaImagen
+  const rutaImagen =
+    obtenerRutaImagenPrincipal(
+      propiedad
     );
 
 
-  return (
+  let urlImagen =
     dominio +
     "/" +
-    rutaImagen
-  );
+    rutaImagen;
+
+
+  /*
+    Agregar versión automática
+    para romper caché antigua
+    de WhatsApp / Meta.
+  */
+
+  if (
+    versionSocial
+  ) {
+
+    urlImagen +=
+      "?v=" +
+      encodeURIComponent(
+        versionSocial
+      );
+
+  }
+
+
+  return urlImagen;
 
 }
 
@@ -757,7 +934,9 @@ function fijarIdPropiedad(
   return html.replace(
     patron,
     "const id = " +
-      Number(id) +
+      Number(
+        id
+      ) +
       ";"
   );
 
@@ -774,11 +953,39 @@ function generarPaginaPropiedad(
   propiedad
 ) {
 
-  const url =
+  /*
+    URL limpia para Google / SEO.
+  */
+
+  const urlCanonica =
     dominio +
     "/propiedad/" +
     propiedad.id +
     "/";
+
+
+  /*
+    Versión automática para redes sociales.
+  */
+
+  const versionSocial =
+    propiedad.versionSocial ||
+    String(
+      propiedad.id
+    );
+
+
+  /*
+    URL que verá WhatsApp / Meta
+    dentro de Open Graph.
+  */
+
+  const urlSocial =
+    urlCanonica +
+    "?v=" +
+    encodeURIComponent(
+      versionSocial
+    );
 
 
   const titulo =
@@ -797,7 +1004,8 @@ function generarPaginaPropiedad(
 
   const imagen =
     obtenerImagenPrincipal(
-      propiedad
+      propiedad,
+      versionSocial
     );
 
 
@@ -819,9 +1027,9 @@ function generarPaginaPropiedad(
     );
 
 
-  /*
-    TÍTULO
-  */
+  /* =================================================
+     TÍTULO
+  ================================================= */
 
   html =
     html.replace(
@@ -834,9 +1042,9 @@ function generarPaginaPropiedad(
     );
 
 
-  /*
-    META DESCRIPTION
-  */
+  /* =================================================
+     META DESCRIPTION
+  ================================================= */
 
   html =
     actualizarMeta(
@@ -846,9 +1054,9 @@ function generarPaginaPropiedad(
     );
 
 
-  /*
-    OPEN GRAPH
-  */
+  /* =================================================
+     OPEN GRAPH
+  ================================================= */
 
   html =
     actualizarMeta(
@@ -887,13 +1095,13 @@ function generarPaginaPropiedad(
     actualizarMeta(
       html,
       "ogUrl",
-      url
+      urlSocial
     );
 
 
-  /*
-    TWITTER / X
-  */
+  /* =================================================
+     TWITTER / X
+  ================================================= */
 
   html =
     actualizarMeta(
@@ -928,14 +1136,14 @@ function generarPaginaPropiedad(
     );
 
 
-  /*
-    CANONICAL
-  */
+  /* =================================================
+     CANONICAL PARA GOOGLE
+  ================================================= */
 
   html =
     insertarCanonical(
       html,
-      url
+      urlCanonica
     );
 
 
@@ -943,6 +1151,7 @@ function generarPaginaPropiedad(
     FIJAR ID.
 
     Esto permite que la página:
+
     /propiedad/45/
 
     cargue directamente la propiedad 45
@@ -1022,6 +1231,11 @@ function generarPaginasPropiedades(
     }
   );
 
+
+  /*
+    GENERAR ÚNICAMENTE
+    PROPIEDADES PUBLICADAS.
+  */
 
   const publicadas =
     propiedades.filter(
