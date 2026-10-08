@@ -1,8 +1,10 @@
 const fs = require("fs");
 const path = require("path");
 
+
 const BASE_URL =
   "https://sotofraupropiedades.cl";
+
 
 const propiedadesDir =
   path.join(
@@ -10,6 +12,7 @@ const propiedadesDir =
     "content",
     "propiedades"
   );
+
 
 const sitemapPath =
   path.join(
@@ -22,7 +25,11 @@ const sitemapPath =
    VERIFICAR CARPETA
 ===================================================== */
 
-if (!fs.existsSync(propiedadesDir)) {
+if (
+  !fs.existsSync(
+    propiedadesDir
+  )
+) {
 
   throw new Error(
     "No se encontró content/propiedades"
@@ -36,15 +43,24 @@ if (!fs.existsSync(propiedadesDir)) {
 ===================================================== */
 
 const archivos =
-  fs.readdirSync(propiedadesDir)
-    .filter(function(archivo) {
+  fs
+    .readdirSync(
+      propiedadesDir
+    )
+    .filter(
+      function(archivo) {
 
-      return archivo.endsWith(".json");
+        return archivo.endsWith(
+          ".json"
+        );
 
-    });
+      }
+    );
 
 
-if (archivos.length === 0) {
+if (
+  archivos.length === 0
+) {
 
   throw new Error(
     "No se encontraron archivos JSON en content/propiedades"
@@ -59,6 +75,7 @@ if (archivos.length === 0) {
 
 const propiedades = [];
 
+
 archivos.forEach(
   function(archivo) {
 
@@ -68,7 +85,9 @@ archivos.forEach(
         archivo
       );
 
+
     let propiedad;
+
 
     try {
 
@@ -84,9 +103,9 @@ archivos.forEach(
 
       throw new Error(
         "JSON inválido en " +
-        archivo +
-        ": " +
-        error.message
+          archivo +
+          ": " +
+          error.message
       );
 
     }
@@ -99,35 +118,43 @@ archivos.forEach(
 
       throw new Error(
         "La propiedad " +
-        archivo +
-        " no tiene ID."
+          archivo +
+          " no tiene ID."
       );
 
     }
 
 
     const id =
-      Number(propiedad.id);
+      Number(
+        propiedad.id
+      );
 
 
-    if (Number.isNaN(id)) {
+    if (
+      Number.isNaN(
+        id
+      )
+    ) {
 
       throw new Error(
         "ID inválido en " +
-        archivo
+          archivo
       );
 
     }
 
 
-    propiedades.push({
+    propiedades.push(
+      {
 
-      id: id,
+        id: id,
 
-      publicada:
-        propiedad.publicada === true
+        publicada:
+          propiedad.publicada === true
 
-    });
+      }
+    );
 
   }
 );
@@ -161,12 +188,16 @@ const ids =
     }
   );
 
+
 const idsUnicos =
-  new Set(ids);
+  new Set(
+    ids
+  );
 
 
 if (
-  idsUnicos.size !== ids.length
+  idsUnicos.size !==
+  ids.length
 ) {
 
   throw new Error(
@@ -221,13 +252,22 @@ const urls = [
 
 /* =====================================================
    AGREGAR PROPIEDADES PUBLICADAS
+
+   NUEVAS URLS:
+
+   /propiedad/45/
+   /propiedad/46/
+   /propiedad/47/
+
+   Se incluyen únicamente las propiedades
+   con publicada = true.
 ===================================================== */
 
 propiedadesPublicadas.forEach(
   function(propiedad) {
 
     urls.push(
-      `${BASE_URL}/propiedad.html?id=${propiedad.id}`
+      `${BASE_URL}/propiedad/${propiedad.id}/`
     );
 
   }
@@ -239,16 +279,24 @@ propiedadesPublicadas.forEach(
 ===================================================== */
 
 const urlsUnicas =
-  [...new Set(urls)];
+  [
+    ...new Set(
+      urls
+    )
+  ];
 
 
 /* =====================================================
    ESCAPAR XML
 ===================================================== */
 
-function escaparXML(texto) {
+function escaparXML(
+  texto
+) {
 
-  return String(texto)
+  return String(
+    texto
+  )
     .replace(
       /&/g,
       "&amp;"
@@ -316,28 +364,35 @@ console.log(
   "Sitemap generado correctamente."
 );
 
+
 console.log(
   `URLs totales: ${urlsUnicas.length}`
 );
+
 
 console.log(
   `Propiedades detectadas: ${propiedades.length}`
 );
 
+
 console.log(
   `Propiedades publicadas incluidas: ${propiedadesPublicadas.length}`
 );
 
+
 console.log(
   "IDs incluidos:"
 );
+
 
 console.log(
   propiedadesPublicadas
     .map(
       function(propiedad) {
 
-        return `ID ${propiedad.id}`;
+        return (
+          `ID ${propiedad.id}`
+        );
 
       }
     )
