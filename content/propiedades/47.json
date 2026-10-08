@@ -10,7 +10,7 @@
     "🌳 Áreas verdes.",
     "🚗 Estacionamientos de visita."
   ],
-  "estado": "disponible",
+  "estado": "gestionada",
   "precio": "$800.000 mensuales.",
   "gastosComunes": "$290.000 mensuales aprox.",
   "caracteristicas": [
@@ -63,7 +63,7 @@
   "titulo": "Departamento en arriendo en el plan de Viña del Mar · 3 dormitorios, 2 baños, 2 estacionamientos techados y bodega",
   "id": 47,
   "mascotas": "No permitidas",
-  "estadoTexto": "Disponible",
+  "estadoTexto": "Arrendada",
   "ubicacion": "Plan de Viña del Mar · Viña del Mar.",
   "totalMensual": "$1.090.000 aprox., incluyendo arriendo y gastos comunes.",
   "conectividad": [
