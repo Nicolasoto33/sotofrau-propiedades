@@ -575,17 +575,27 @@ function cargarPropiedades() {
           : "";
 
 
-      /*
-        URL INDIVIDUAL DE LA PROPIEDAD
+      /* =================================================
+         URL SOCIAL AUTOMÁTICA
 
-        ?v=2 ayuda a evitar la caché antigua
-        de vista previa de WhatsApp / Meta.
-      */
+         Cada propiedad recibe su propia versión.
+         Ya no usamos ?v=2 de manera fija.
+      ================================================= */
+
+      const versionSocial =
+        propiedad.versionSocial ||
+        String(
+          propiedad.id
+        );
+
 
       const enlace =
         "/propiedad/" +
         propiedad.id +
-        "/?v=2";
+        "/?v=" +
+        encodeURIComponent(
+          versionSocial
+        );
 
 
       const textoEnlace =
