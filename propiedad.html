@@ -910,6 +910,32 @@
     }
 
 
+    .price-conversion {
+
+      display:
+        none;
+
+      margin-top:
+        -2px;
+
+      margin-bottom:
+        10px;
+
+      color:
+        var(--gris-500);
+
+      font-size:
+        14px;
+
+      font-weight:
+        650;
+
+      line-height:
+        1.35;
+
+    }
+
+
     .monthly {
 
       color:
@@ -1813,6 +1839,13 @@
 
 
         <div
+          class="price-conversion"
+          id="conversionPrecio"
+        >
+        </div>
+
+
+        <div
           class="monthly"
           id="mensual"
         >
@@ -2042,6 +2075,383 @@
   let fotos = [];
 
   let fotoActual = 1;
+
+
+
+  /* =====================================================
+     CONVERSIÓN UF / CLP
+     SOLO PARA PROPIEDADES EN VENTA
+  ===================================================== */
+
+  let promesaValorUF = null;
+
+
+  function obtenerValorUF() {
+
+    if (promesaValorUF) {
+
+      return promesaValorUF;
+
+    }
+
+
+    promesaValorUF = fetch(
+      "https://www.mindicador.cl/api/uf"
+    )
+      .then(
+        function(respuesta) {
+
+          if (!respuesta.ok) {
+
+            throw new Error(
+              "No fue posible obtener el valor de la UF."
+            );
+
+          }
+
+
+          return respuesta.json();
+
+        }
+      )
+      .then(
+        function(datos) {
+
+          if (
+            !datos ||
+            !Array.isArray(datos.serie) ||
+            datos.serie.length === 0 ||
+            !datos.serie[0].valor
+          ) {
+
+            throw new Error(
+              "El valor de la UF no está disponible."
+            );
+
+          }
+
+
+          return Number(
+            datos.serie[0].valor
+          );
+
+        }
+      )
+      .catch(
+        function(error) {
+
+          console.warn(
+            "Conversión UF/CLP no disponible:",
+            error
+          );
+
+
+          return null;
+
+        }
+      );
+
+
+    return promesaValorUF;
+
+  }
+
+
+
+  function formatearCLP(valor) {
+
+    return new Intl.NumberFormat(
+      "es-CL",
+      {
+        style: "currency",
+        currency: "CLP",
+        maximumFractionDigits: 0
+      }
+    ).format(
+      Math.round(valor)
+    );
+
+  }
+
+
+
+  function formatearUF(valor) {
+
+    return new Intl.NumberFormat(
+      "es-CL",
+      {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 2
+      }
+    ).format(valor);
+
+  }
+
+
+
+  function obtenerNumeroUF(precio) {
+
+    const texto =
+      String(
+        precio || ""
+      )
+        .toUpperCase()
+        .trim();
+
+
+    if (
+      !texto.includes("UF")
+    ) {
+
+      return null;
+
+    }
+
+
+    let coincidencia =
+      texto.match(
+        /([\d.]+(?:,\d+)?)\s*UF/i
+      );
+
+
+    if (!coincidencia) {
+
+      coincidencia =
+        texto.match(
+          /UF\s*([\d.]+(?:,\d+)?)/i
+        );
+
+    }
+
+
+    if (!coincidencia) {
+
+      return null;
+
+    }
+
+
+    const numero =
+      coincidencia[1]
+        .replace(/\./g, "")
+        .replace(",", ".");
+
+
+    const valor =
+      Number(numero);
+
+
+    return Number.isNaN(valor)
+      ? null
+      : valor;
+
+  }
+
+
+
+  function obtenerNumeroCLP(precio) {
+
+    const texto =
+      String(
+        precio || ""
+      )
+        .trim();
+
+
+    if (
+      texto
+        .toUpperCase()
+        .includes("UF")
+    ) {
+
+      return null;
+
+    }
+
+
+    const coincidencia =
+      texto.match(
+        /\$?\s*([\d.]+)/
+      );
+
+
+    if (!coincidencia) {
+
+      return null;
+
+    }
+
+
+    const numero =
+      coincidencia[1]
+        .replace(/\./g, "");
+
+
+    const valor =
+      Number(numero);
+
+
+    return Number.isNaN(valor)
+      ? null
+      : valor;
+
+  }
+
+
+
+  function cargarConversionPrecio() {
+
+    const conversion =
+      document.getElementById(
+        "conversionPrecio"
+      );
+
+
+    if (!conversion) {
+
+      return;
+
+    }
+
+
+    conversion.textContent =
+      "";
+
+
+    conversion.style.display =
+      "none";
+
+
+    /*
+      SOLO EN VENTAS
+    */
+
+    if (
+      !propiedadActual ||
+      String(
+        propiedadActual.operacion || ""
+      ).toLowerCase() !== "venta"
+    ) {
+
+      return;
+
+    }
+
+
+    obtenerValorUF()
+      .then(
+        function(valorUF) {
+
+          if (
+            !valorUF ||
+            valorUF <= 0
+          ) {
+
+            return;
+
+          }
+
+
+          const precioTexto =
+            String(
+              propiedadActual.precio || ""
+            );
+
+
+          let textoConversion =
+            "";
+
+
+          /*
+            PRECIO EN UF → CLP
+          */
+
+          if (
+            precioTexto
+              .toUpperCase()
+              .includes("UF")
+          ) {
+
+            const cantidadUF =
+              obtenerNumeroUF(
+                precioTexto
+              );
+
+
+            if (
+              cantidadUF === null
+            ) {
+
+              return;
+
+            }
+
+
+            const cantidadCLP =
+              cantidadUF *
+              valorUF;
+
+
+            textoConversion =
+              "≈ " +
+              formatearCLP(
+                cantidadCLP
+              );
+
+          } else {
+
+            /*
+              PRECIO EN CLP → UF
+            */
+
+            const cantidadCLP =
+              obtenerNumeroCLP(
+                precioTexto
+              );
+
+
+            if (
+              cantidadCLP === null
+            ) {
+
+              return;
+
+            }
+
+
+            const cantidadUF =
+              cantidadCLP /
+              valorUF;
+
+
+            textoConversion =
+              "≈ " +
+              formatearUF(
+                cantidadUF
+              ) +
+              " UF";
+
+          }
+
+
+          if (!textoConversion) {
+
+            return;
+
+          }
+
+
+          conversion.textContent =
+            textoConversion;
+
+
+          conversion.style.display =
+            "block";
+
+        }
+      );
+
+  }
 
 
 
@@ -2760,6 +3170,14 @@
       "precio"
     ).textContent =
       propiedadActual.precio;
+
+
+    /* =================================================
+       CONVERSIÓN UF / CLP
+       SOLO PARA VENTAS
+    ================================================= */
+
+    cargarConversionPrecio();
 
 
 
