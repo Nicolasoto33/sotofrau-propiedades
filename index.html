@@ -17,7 +17,7 @@
 
   <meta
     name="description"
-    content="Sotofrau Propiedades: corredor de propiedades en Viña del Mar, Concón y Reñaca. Venta, arriendo, administración, tasación y estudio de títulos."
+    content="Sotofrau Propiedades: corredor de propiedades en Viña del Mar, Concón y Reñaca. Venta, arriendo y administración de propiedades."
   >
 
   <link
@@ -2161,7 +2161,7 @@
   }
   }
   /* =====================================================
-   BUSCADOR DINÁMICO DE PROPIEDADES
+   BUSCADOR AVANZADO DE PROPIEDADES
 ===================================================== */
 
 .property-search {
@@ -2174,24 +2174,66 @@
   box-shadow: var(--sombra);
 }
 
+.search-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.search-header-text {
+  max-width: 700px;
+}
+
+.search-eyebrow {
+  margin-bottom: 5px;
+  color: var(--naranja);
+  font-size: 11px;
+  font-weight: 850;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+}
+
 .search-title {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   color: var(--azul);
-  font-size: 20px;
-  font-weight: 800;
+  font-size: 23px;
+  line-height: 1.2;
+  font-weight: 850;
+}
+
+.search-description {
+  color: var(--gris-500);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.search-count-pill {
+  flex-shrink: 0;
+  padding: 9px 13px;
+  border-radius: 30px;
+  background: var(--gris-100);
+  color: var(--azul);
+  font-size: 12px;
+  font-weight: 750;
 }
 
 .search-grid {
   display: grid;
-  grid-template-columns: 1.5fr repeat(4, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 14px;
-  align-items: end;
 }
 
 .search-field {
   display: flex;
   flex-direction: column;
   gap: 7px;
+  min-width: 0;
+}
+
+.search-field-wide {
+  grid-column: span 2;
 }
 
 .search-field label {
@@ -2221,66 +2263,199 @@
   box-shadow: 0 0 0 3px rgba(232,137,37,.10);
 }
 
+.search-field input::placeholder {
+  color: #929ca3;
+}
+
+.search-price-group {
+  display: grid;
+  grid-template-columns: .72fr 1fr 1fr;
+  gap: 10px;
+  grid-column: span 2;
+}
+
+.search-advanced {
+  grid-column: 1 / -1;
+  margin-top: 3px;
+  border: 1px solid var(--gris-200);
+  border-radius: 12px;
+  background: var(--gris-50);
+  overflow: hidden;
+}
+
+.search-advanced summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 48px;
+  padding: 0 15px;
+  cursor: pointer;
+  color: var(--azul);
+  font-size: 13px;
+  font-weight: 800;
+  list-style: none;
+}
+
+.search-advanced summary::-webkit-details-marker {
+  display: none;
+}
+
+.search-advanced summary::after {
+  content: "+";
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.search-advanced[open] summary::after {
+  content: "−";
+}
+
+.search-advanced-content {
+  padding: 4px 15px 16px;
+}
+
+.search-advanced-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
 .search-actions {
   grid-column: 1 / -1;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
-  margin-top: 4px;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.search-submit,
+.search-reset {
+  min-height: 45px;
+  padding: 0 20px;
+  border-radius: 9px;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 800;
+  transition: .2s ease;
+}
+
+.search-submit {
+  border: 1px solid var(--azul);
+  background: var(--azul);
+  color: white;
+}
+
+.search-submit:hover {
+  background: var(--azul-oscuro);
+  border-color: var(--azul-oscuro);
+  transform: translateY(-1px);
 }
 
 .search-reset {
-  border: 0;
-  border-radius: 8px;
-  padding: 10px 17px;
+  border: 1px solid var(--gris-200);
   background: var(--gris-100);
   color: var(--azul);
-  cursor: pointer;
-  font-weight: 700;
-  font-size: 13px;
 }
 
 .search-reset:hover {
   background: var(--gris-200);
 }
 
-.search-results-count {
+.search-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
   margin-top: 16px;
+}
+
+.search-active-filters {
   color: var(--gris-500);
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 650;
 }
 
-@media (max-width: 1000px) {
+.search-notice {
+  color: var(--gris-500);
+  font-size: 11px;
+  text-align: right;
+}
 
-  .search-grid {
+.search-empty {
+  margin: 30px auto 5px;
+  padding: 30px 20px;
+  border: 1px dashed var(--gris-200);
+  border-radius: 14px;
+  background: var(--gris-50);
+  text-align: center;
+  color: var(--gris-500);
+}
+
+.search-empty strong {
+  display: block;
+  margin-bottom: 5px;
+  color: var(--azul);
+  font-size: 17px;
+}
+
+@media (max-width: 1000px) {
+  .search-grid,
+  .search-advanced-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .search-field-wide {
+  .search-field-wide,
+  .search-price-group {
     grid-column: 1 / -1;
   }
 }
 
-@media (max-width: 600px) {
-
+@media (max-width: 650px) {
   .property-search {
-    padding: 20px;
+    padding: 20px 16px;
   }
 
-  .search-grid {
+  .search-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .search-count-pill {
+    align-self: flex-start;
+  }
+
+  .search-grid,
+  .search-advanced-grid {
     grid-template-columns: 1fr;
   }
 
-  .search-field-wide {
+  .search-field-wide,
+  .search-price-group {
     grid-column: auto;
   }
 
-  .search-actions {
-    justify-content: stretch;
+  .search-price-group {
+    grid-template-columns: 1fr;
   }
 
+  .search-actions {
+    flex-direction: column;
+  }
+
+  .search-submit,
   .search-reset {
     width: 100%;
+  }
+
+  .search-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .search-notice {
+    text-align: left;
   }
 }
   </style>
@@ -2426,52 +2601,418 @@
     </div>
 
 
-<div class="property-search">
+<div
+  class="property-search"
+  id="buscadorPropiedades"
+>
 
-  <div class="search-title">
-    Encuentra tu propiedad
+  <div class="search-header">
+
+    <div class="search-header-text">
+
+      <div class="search-eyebrow">
+        Buscador avanzado
+      </div>
+
+      <div class="search-title">
+        Encuentra tu propiedad
+      </div>
+
+      <p class="search-description">
+        Combina ubicación, precio, dormitorios,
+        características y otros criterios para
+        encontrar las propiedades que mejor se
+        ajusten a tu búsqueda.
+      </p>
+
+    </div>
+
+    <div
+      id="searchResultsCount"
+      class="search-count-pill"
+      aria-live="polite"
+    >
+      Cargando propiedades...
+    </div>
+
   </div>
 
-  <div class="search-grid">
+  <form
+    id="propertySearchForm"
+    class="search-grid"
+    novalidate
+  >
 
     <div class="search-field search-field-wide">
-      <label for="buscarTexto">Buscar</label>
+
+      <label for="buscarTexto">
+        ¿Qué estás buscando?
+      </label>
+
       <input
-        type="text"
+        type="search"
         id="buscarTexto"
-        placeholder="Ej: Reñaca, Concón, departamento..."
+        autocomplete="off"
+        placeholder="Ej: Reñaca, San Martín, vista mar, piscina..."
       >
+
     </div>
 
     <div class="search-field">
-      <label for="filtroOperacion">Operación</label>
+
+      <label for="filtroOperacion">
+        Operación
+      </label>
+
       <select id="filtroOperacion">
-        <option value="">Todas</option>
+        <option value="">
+          Venta y arriendo
+        </option>
+        <option value="venta">
+          Venta
+        </option>
+        <option value="arriendo">
+          Arriendo
+        </option>
       </select>
+
     </div>
 
     <div class="search-field">
-      <label for="filtroUbicacion">Ubicación</label>
-      <select id="filtroUbicacion">
-        <option value="">Todas</option>
-      </select>
-    </div>
 
-    <div class="search-field">
-      <label for="filtroDormitorios">Dormitorios</label>
-      <select id="filtroDormitorios">
-        <option value="">Todos</option>
-      </select>
-    </div>
+      <label for="filtroEstado">
+        Estado
+      </label>
 
-    <div class="search-field">
-      <label for="filtroEstado">Estado</label>
       <select id="filtroEstado">
-        <option value="">Todos</option>
+        <option value="">
+          Todos
+        </option>
+        <option value="disponible">
+          Disponibles
+        </option>
+        <option value="gestionada">
+          Gestionadas
+        </option>
+        <option value="vendida">
+          Vendidas
+        </option>
+        <option value="arrendada">
+          Arrendadas
+        </option>
       </select>
+
     </div>
+
+    <div class="search-field">
+
+      <label for="filtroUbicacion">
+        Ubicación
+      </label>
+
+      <select id="filtroUbicacion">
+        <option value="">
+          Todas las ubicaciones
+        </option>
+      </select>
+
+    </div>
+
+    <div class="search-field">
+
+      <label for="filtroTipo">
+        Tipo de propiedad
+      </label>
+
+      <select id="filtroTipo">
+        <option value="">
+          Todos los tipos
+        </option>
+      </select>
+
+    </div>
+
+    <div class="search-field">
+
+      <label for="filtroDormitorios">
+        Dormitorios
+      </label>
+
+      <select id="filtroDormitorios">
+        <option value="">
+          Cualquier cantidad
+        </option>
+        <option value="1">
+          1 o más
+        </option>
+        <option value="2">
+          2 o más
+        </option>
+        <option value="3">
+          3 o más
+        </option>
+        <option value="4">
+          4 o más
+        </option>
+      </select>
+
+    </div>
+
+    <div class="search-field">
+
+      <label for="filtroBanos">
+        Baños
+      </label>
+
+      <select id="filtroBanos">
+        <option value="">
+          Cualquier cantidad
+        </option>
+        <option value="1">
+          1 o más
+        </option>
+        <option value="2">
+          2 o más
+        </option>
+        <option value="3">
+          3 o más
+        </option>
+      </select>
+
+    </div>
+
+    <div class="search-price-group">
+
+      <div class="search-field">
+
+        <label for="filtroMoneda">
+          Moneda
+        </label>
+
+        <select id="filtroMoneda">
+          <option value="CLP">
+            $
+          </option>
+          <option value="UF">
+            UF
+          </option>
+        </select>
+
+      </div>
+
+      <div class="search-field">
+
+        <label for="filtroPrecioMin">
+          Precio mínimo
+        </label>
+
+        <input
+          type="text"
+          inputmode="numeric"
+          id="filtroPrecioMin"
+          placeholder="Ej: 400.000"
+        >
+
+      </div>
+
+      <div class="search-field">
+
+        <label for="filtroPrecioMax">
+          Precio máximo
+        </label>
+
+        <input
+          type="text"
+          inputmode="numeric"
+          id="filtroPrecioMax"
+          placeholder="Ej: 850.000"
+        >
+
+      </div>
+
+    </div>
+
+    <details
+      class="search-advanced"
+      id="filtrosAvanzados"
+    >
+
+      <summary>
+        Más filtros
+      </summary>
+
+      <div class="search-advanced-content">
+
+        <div class="search-advanced-grid">
+
+          <div class="search-field">
+            <label for="filtroEstacionamiento">
+              Estacionamiento
+            </label>
+            <select id="filtroEstacionamiento">
+              <option value="">
+                Indiferente
+              </option>
+              <option value="si">
+                Con estacionamiento
+              </option>
+              <option value="no">
+                Sin estacionamiento
+              </option>
+            </select>
+          </div>
+
+          <div class="search-field">
+            <label for="filtroBodega">
+              Bodega
+            </label>
+            <select id="filtroBodega">
+              <option value="">
+                Indiferente
+              </option>
+              <option value="si">
+                Con bodega
+              </option>
+              <option value="no">
+                Sin bodega
+              </option>
+            </select>
+          </div>
+
+          <div class="search-field">
+            <label for="filtroAmoblado">
+              Amoblado
+            </label>
+            <select id="filtroAmoblado">
+              <option value="">
+                Indiferente
+              </option>
+              <option value="si">
+                Amoblado
+              </option>
+              <option value="no">
+                Sin amoblar
+              </option>
+            </select>
+          </div>
+
+          <div class="search-field">
+            <label for="filtroMascotas">
+              Mascotas
+            </label>
+            <select id="filtroMascotas">
+              <option value="">
+                Indiferente
+              </option>
+              <option value="si">
+                Permitidas
+              </option>
+              <option value="consultar">
+                Consultar
+              </option>
+              <option value="no">
+                No permitidas
+              </option>
+            </select>
+          </div>
+
+          <div class="search-field">
+            <label for="filtroTerraza">
+              Terraza / balcón
+            </label>
+            <select id="filtroTerraza">
+              <option value="">
+                Indiferente
+              </option>
+              <option value="si">
+                Con terraza o balcón
+              </option>
+              <option value="no">
+                Sin terraza ni balcón
+              </option>
+            </select>
+          </div>
+
+          <div class="search-field">
+            <label for="filtroOrientacion">
+              Orientación
+            </label>
+            <select id="filtroOrientacion">
+              <option value="">
+                Todas
+              </option>
+            </select>
+          </div>
+
+          <div class="search-field">
+            <label for="filtroSuperficieMin">
+              Superficie mínima
+            </label>
+            <input
+              type="number"
+              min="0"
+              step="1"
+              id="filtroSuperficieMin"
+              placeholder="Ej: 60"
+            >
+          </div>
+
+          <div class="search-field">
+            <label for="filtroSuperficieMax">
+              Superficie máxima
+            </label>
+            <input
+              type="number"
+              min="0"
+              step="1"
+              id="filtroSuperficieMax"
+              placeholder="Ej: 100"
+            >
+          </div>
+
+          <div class="search-field">
+            <label for="filtroGastosComunes">
+              GGCC máximos
+            </label>
+            <input
+              type="text"
+              inputmode="numeric"
+              id="filtroGastosComunes"
+              placeholder="Ej: 150.000"
+            >
+          </div>
+
+          <div class="search-field">
+            <label for="filtroOrden">
+              Ordenar por
+            </label>
+            <select id="filtroOrden">
+              <option value="recomendadas">
+                Recomendadas
+              </option>
+              <option value="recientes">
+                Más recientes
+              </option>
+              <option value="precioAsc">
+                Menor precio
+              </option>
+              <option value="precioDesc">
+                Mayor precio
+              </option>
+              <option value="superficieDesc">
+                Mayor superficie
+              </option>
+            </select>
+          </div>
+
+        </div>
+
+      </div>
+
+    </details>
 
     <div class="search-actions">
+
       <button
         type="button"
         id="limpiarFiltros"
@@ -2479,14 +3020,49 @@
       >
         Limpiar filtros
       </button>
+
+      <button
+        type="submit"
+        class="search-submit"
+      >
+        Buscar propiedades
+      </button>
+
     </div>
+
+  </form>
+
+  <div class="search-footer">
+
+    <div
+      id="searchActiveFilters"
+      class="search-active-filters"
+    >
+      Sin filtros aplicados
+    </div>
+
+    <div
+      id="searchNotice"
+      class="search-notice"
+      aria-live="polite"
+    ></div>
 
   </div>
 
   <div
-    id="searchResultsCount"
-    class="search-results-count"
-  ></div>
+    id="searchEmptyState"
+    class="search-empty"
+    hidden
+  >
+
+    <strong>
+      No encontramos propiedades con esos criterios.
+    </strong>
+
+    Prueba ampliando el precio, ubicación
+    o alguna de las características seleccionadas.
+
+  </div>
 
 </div>
 
@@ -3074,7 +3650,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
   <script>
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener(
+  "DOMContentLoaded",
+  function () {
+
+    requestAnimationFrame(
+      inicializarBuscadorPropiedades
+    );
+
+  }
+);
+
+
+function inicializarBuscadorPropiedades() {
 
   if (
     typeof propiedades === "undefined" ||
@@ -3083,20 +3671,69 @@ document.addEventListener("DOMContentLoaded", function () {
     return;
   }
 
+
+  const formulario =
+    document.getElementById("propertySearchForm");
+
   const inputTexto =
     document.getElementById("buscarTexto");
 
-  const selectOperacion =
+  const operacion =
     document.getElementById("filtroOperacion");
 
-  const selectUbicacion =
+  const estado =
+    document.getElementById("filtroEstado");
+
+  const ubicacion =
     document.getElementById("filtroUbicacion");
 
-  const selectDormitorios =
+  const tipo =
+    document.getElementById("filtroTipo");
+
+  const dormitorios =
     document.getElementById("filtroDormitorios");
 
-  const selectEstado =
-    document.getElementById("filtroEstado");
+  const banos =
+    document.getElementById("filtroBanos");
+
+  const moneda =
+    document.getElementById("filtroMoneda");
+
+  const precioMin =
+    document.getElementById("filtroPrecioMin");
+
+  const precioMax =
+    document.getElementById("filtroPrecioMax");
+
+  const estacionamiento =
+    document.getElementById("filtroEstacionamiento");
+
+  const bodega =
+    document.getElementById("filtroBodega");
+
+  const amoblado =
+    document.getElementById("filtroAmoblado");
+
+  const mascotas =
+    document.getElementById("filtroMascotas");
+
+  const terraza =
+    document.getElementById("filtroTerraza");
+
+  const orientacion =
+    document.getElementById("filtroOrientacion");
+
+  const superficieMin =
+    document.getElementById("filtroSuperficieMin");
+
+  const superficieMax =
+    document.getElementById("filtroSuperficieMax");
+
+  const gastosComunes =
+    document.getElementById("filtroGastosComunes");
+
+  const orden =
+    document.getElementById("filtroOrden");
 
   const botonLimpiar =
     document.getElementById("limpiarFiltros");
@@ -3104,31 +3741,38 @@ document.addEventListener("DOMContentLoaded", function () {
   const contador =
     document.getElementById("searchResultsCount");
 
+  const filtrosActivos =
+    document.getElementById("searchActiveFilters");
+
+  const aviso =
+    document.getElementById("searchNotice");
+
+  const sinResultados =
+    document.getElementById("searchEmptyState");
+
+  const filtrosAvanzados =
+    document.getElementById("filtrosAvanzados");
+
+  const grilla =
+    document.getElementById("propertyGrid");
+
 
   if (
+    !formulario ||
     !inputTexto ||
-    !selectOperacion ||
-    !selectUbicacion ||
-    !selectDormitorios ||
-    !selectEstado ||
-    !botonLimpiar ||
-    !contador
+    !grilla
   ) {
     return;
   }
 
 
   const propiedadesPublicadas =
-    propiedades.filter(function (propiedad) {
+    propiedades.filter(
+      function (propiedad) {
+        return propiedad.publicada === true;
+      }
+    );
 
-      return propiedad.publicada === true;
-
-    });
-
-
-  /* =====================================================
-     NORMALIZAR TEXTO
-  ===================================================== */
 
   function normalizar(texto) {
 
@@ -3136,53 +3780,281 @@ document.addEventListener("DOMContentLoaded", function () {
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "")
       .toLowerCase()
+      .replace(/\s+/g, " ")
       .trim();
 
   }
 
 
-  /* =====================================================
-     OBTENER DORMITORIOS
-  ===================================================== */
+  function textoPropiedad(propiedad) {
 
-  function obtenerDormitorios(propiedad) {
+    const partes = [
+      propiedad.titulo,
+      propiedad.direccion,
+      propiedad.ubicacion,
+      propiedad.operacion,
+      propiedad.estado,
+      propiedad.estadoTexto,
+      propiedad.precio,
+      propiedad.gastosComunes,
+      propiedad.totalMensual,
+      propiedad.superficie,
+      propiedad.orientacion,
+      propiedad.mascotas
+    ];
+
+
+    [
+      "caracteristicas",
+      "descripcion",
+      "informacionImportante",
+      "areasComunes",
+      "conectividad"
+    ].forEach(
+      function (campo) {
+
+        if (
+          Array.isArray(
+            propiedad[campo]
+          )
+        ) {
+
+          partes.push(
+            propiedad[campo].join(" ")
+          );
+
+        }
+
+      }
+    );
+
+
+    return normalizar(
+      partes.join(" ")
+    );
+
+  }
+
+
+  function numeroChileno(valor) {
 
     if (
-      propiedad.dormitorios !== undefined &&
-      propiedad.dormitorios !== null &&
-      propiedad.dormitorios !== ""
+      valor === undefined ||
+      valor === null ||
+      valor === ""
+    ) {
+      return null;
+    }
+
+
+    let texto =
+      String(valor)
+        .replace(/[^\d.,]/g, "")
+        .trim();
+
+
+    if (!texto) {
+      return null;
+    }
+
+
+    if (
+      texto.includes(",")
     ) {
 
-      return Number(propiedad.dormitorios);
+      texto =
+        texto
+          .replace(/\./g, "")
+          .replace(",", ".");
+
+    } else {
+
+      const partes =
+        texto.split(".");
+
+
+      if (
+        partes.length > 2 ||
+        (
+          partes.length === 2 &&
+          partes[1].length === 3
+        )
+      ) {
+
+        texto =
+          texto.replace(/\./g, "");
+
+      }
 
     }
 
 
-    if (Array.isArray(propiedad.caracteristicas)) {
+    const numero =
+      Number(texto);
+
+
+    return Number.isFinite(numero)
+      ? numero
+      : null;
+
+  }
+
+
+  function obtenerCantidad(
+    propiedad,
+    campo,
+    palabra
+  ) {
+
+    const directo =
+      Number(
+        propiedad[campo]
+      );
+
+
+    if (
+      Number.isFinite(directo) &&
+      directo >= 0
+    ) {
+
+      return directo;
+
+    }
+
+
+    const texto =
+      textoPropiedad(
+        propiedad
+      );
+
+
+    const expresion =
+      new RegExp(
+        "(\\d+)\\s*" +
+        palabra,
+        "i"
+      );
+
+
+    const coincidencia =
+      texto.match(
+        expresion
+      );
+
+
+    return coincidencia
+      ? Number(
+          coincidencia[1]
+        )
+      : null;
+
+  }
+
+
+  function obtenerDormitorios(propiedad) {
+    return obtenerCantidad(
+      propiedad,
+      "dormitorios",
+      "dormitorio"
+    );
+  }
+
+
+  function obtenerBanos(propiedad) {
+    return obtenerCantidad(
+      propiedad,
+      "banos",
+      "bano"
+    );
+  }
+
+
+  function obtenerSuperficie(propiedad) {
+
+    const campos = [
+      propiedad.superficie,
+      propiedad.superficieUtil,
+      propiedad.superficieTotal,
+      propiedad.metrosCuadrados
+    ];
+
+
+    for (
+      let i = 0;
+      i < campos.length;
+      i++
+    ) {
+
+      const numero =
+        numeroChileno(
+          campos[i]
+        );
+
+
+      if (
+        numero !== null &&
+        numero > 0
+      ) {
+
+        return numero;
+
+      }
+
+    }
+
+
+    const listas = [
+      propiedad.caracteristicas,
+      propiedad.informacionImportante
+    ];
+
+
+    for (
+      let i = 0;
+      i < listas.length;
+      i++
+    ) {
+
+      if (
+        !Array.isArray(
+          listas[i]
+        )
+      ) {
+        continue;
+      }
+
 
       for (
-        let i = 0;
-        i < propiedad.caracteristicas.length;
-        i++
+        let j = 0;
+        j < listas[i].length;
+        j++
       ) {
 
         const texto =
-          normalizar(
-            propiedad.caracteristicas[i]
+          String(
+            listas[i][j]
           );
 
 
         const coincidencia =
           texto.match(
-            /(\d+)\s+dormitorio/
+            /(\d+(?:[.,]\d+)?)\s*m(?:²|2)/i
           );
 
 
         if (coincidencia) {
 
-          return Number(
-            coincidencia[1]
-          );
+          const numero =
+            numeroChileno(
+              coincidencia[1]
+            );
+
+
+          if (
+            numero !== null
+          ) {
+            return numero;
+          }
 
         }
 
@@ -3196,378 +4068,1165 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
 
-  /* =====================================================
-     AGREGAR OPCIONES A SELECT
-  ===================================================== */
+  function obtenerTipo(propiedad) {
+
+    if (
+      propiedad.tipo
+    ) {
+      return String(
+        propiedad.tipo
+      );
+    }
+
+
+    if (
+      propiedad.tipoPropiedad
+    ) {
+      return String(
+        propiedad.tipoPropiedad
+      );
+    }
+
+
+    const texto =
+      textoPropiedad(
+        propiedad
+      );
+
+
+    if (
+      texto.includes("departamento")
+    ) {
+      return "Departamento";
+    }
+
+    if (
+      texto.includes("casa")
+    ) {
+      return "Casa";
+    }
+
+    if (
+      texto.includes("oficina")
+    ) {
+      return "Oficina";
+    }
+
+    if (
+      texto.includes("local comercial") ||
+      texto.includes("local ")
+    ) {
+      return "Local comercial";
+    }
+
+    if (
+      texto.includes("parcela")
+    ) {
+      return "Parcela";
+    }
+
+    if (
+      texto.includes("terreno")
+    ) {
+      return "Terreno";
+    }
+
+
+    return "Otro";
+
+  }
+
+
+  function tieneEstacionamiento(propiedad) {
+
+    if (
+      propiedad.estacionamientos !==
+        undefined &&
+      propiedad.estacionamientos !==
+        null &&
+      propiedad.estacionamientos !== ""
+    ) {
+
+      const cantidad =
+        Number(
+          propiedad.estacionamientos
+        );
+
+
+      if (
+        Number.isFinite(
+          cantidad
+        )
+      ) {
+
+        return cantidad > 0;
+
+      }
+
+    }
+
+
+    const texto =
+      textoPropiedad(
+        propiedad
+      );
+
+
+    if (
+      texto.includes("sin estacionamiento") ||
+      texto.includes("no cuenta con estacionamiento")
+    ) {
+      return false;
+    }
+
+
+    if (
+      texto.includes("estacionamiento")
+    ) {
+      return true;
+    }
+
+
+    return null;
+
+  }
+
+
+  function tieneBodega(propiedad) {
+
+    const texto =
+      textoPropiedad(
+        propiedad
+      );
+
+
+    if (
+      texto.includes("sin bodega") ||
+      texto.includes("no cuenta con bodega")
+    ) {
+      return false;
+    }
+
+
+    if (
+      texto.includes("bodega")
+    ) {
+      return true;
+    }
+
+
+    return null;
+
+  }
+
+
+  function estaAmoblado(propiedad) {
+
+    const texto =
+      textoPropiedad(
+        propiedad
+      );
+
+
+    if (
+      texto.includes("no amoblado") ||
+      texto.includes("sin amoblar")
+    ) {
+      return false;
+    }
+
+
+    if (
+      texto.includes("amoblado") ||
+      texto.includes("amoblada") ||
+      texto.includes("semi amoblado") ||
+      texto.includes("semi-amoblado")
+    ) {
+      return true;
+    }
+
+
+    return null;
+
+  }
+
+
+  function tieneTerraza(propiedad) {
+
+    const texto =
+      textoPropiedad(
+        propiedad
+      );
+
+
+    if (
+      texto.includes("sin terraza") &&
+      texto.includes("sin balcon")
+    ) {
+      return false;
+    }
+
+
+    if (
+      texto.includes("terraza") ||
+      texto.includes("balcon")
+    ) {
+      return true;
+    }
+
+
+    return null;
+
+  }
+
+
+  function obtenerMascotas(propiedad) {
+
+    const texto =
+      textoPropiedad(
+        propiedad
+      );
+
+
+    if (
+      texto.includes("no se aceptan mascotas") ||
+      texto.includes("no admite mascotas") ||
+      texto.includes("mascotas no permitidas")
+    ) {
+      return "no";
+    }
+
+
+    if (
+      texto.includes("mascotas: consultar") ||
+      texto.includes("consultar mascotas")
+    ) {
+      return "consultar";
+    }
+
+
+    if (
+      texto.includes("mascotas permitidas") ||
+      texto.includes("se aceptan mascotas") ||
+      texto.includes("admite mascotas") ||
+      texto.includes("mascotas pequenas")
+    ) {
+      return "si";
+    }
+
+
+    return null;
+
+  }
+
+
+  function obtenerOrientacion(propiedad) {
+
+    if (
+      propiedad.orientacion
+    ) {
+
+      return String(
+        propiedad.orientacion
+      ).trim();
+
+    }
+
+
+    const texto =
+      textoPropiedad(
+        propiedad
+      );
+
+
+    const orientaciones = [
+      ["norponiente", "Norponiente"],
+      ["nororiente", "Nororiente"],
+      ["surponiente", "Surponiente"],
+      ["suroriente", "Suroriente"],
+      ["poniente", "Poniente"],
+      ["oriente", "Oriente"],
+      ["norte", "Norte"],
+      ["sur", "Sur"]
+    ];
+
+
+    for (
+      let i = 0;
+      i < orientaciones.length;
+      i++
+    ) {
+
+      if (
+        texto.includes(
+          "orientacion " +
+          orientaciones[i][0]
+        )
+      ) {
+        return orientaciones[i][1];
+      }
+
+    }
+
+
+    return "";
+
+  }
+
+
+  function obtenerGastosComunes(propiedad) {
+
+    const texto =
+      String(
+        propiedad.gastosComunes ||
+        ""
+      );
+
+
+    if (
+      normalizar(texto)
+        .includes("incluido")
+    ) {
+      return 0;
+    }
+
+
+    return numeroChileno(
+      texto
+    );
+
+  }
+
+
+  function obtenerPrecioNativo(propiedad) {
+
+    const texto =
+      String(
+        propiedad.precio ||
+        ""
+      );
+
+
+    const coincidencia =
+      texto.match(
+        /([\d.]+(?:,\d+)?)/
+      );
+
+
+    if (
+      !coincidencia
+    ) {
+      return null;
+    }
+
+
+    return numeroChileno(
+      coincidencia[1]
+    );
+
+  }
+
+
+  function precioEsUF(propiedad) {
+
+    return /UF/i.test(
+      String(
+        propiedad.precio ||
+        ""
+      )
+    );
+
+  }
+
+
+  let promesaUFBuscador =
+    null;
+
+
+  function cargarUFBuscador() {
+
+    if (
+      promesaUFBuscador
+    ) {
+      return promesaUFBuscador;
+    }
+
+
+    if (
+      typeof obtenerValorUF ===
+      "function"
+    ) {
+
+      promesaUFBuscador =
+        obtenerValorUF();
+
+      return promesaUFBuscador;
+
+    }
+
+
+    promesaUFBuscador =
+      fetch(
+        "https://mindicador.cl/api/uf"
+      )
+        .then(
+          function (respuesta) {
+
+            if (
+              !respuesta.ok
+            ) {
+              return null;
+            }
+
+
+            return respuesta.json();
+
+          }
+        )
+        .then(
+          function (datos) {
+
+            if (
+              !datos ||
+              !Array.isArray(
+                datos.serie
+              ) ||
+              !datos.serie[0]
+            ) {
+              return null;
+            }
+
+
+            return Number(
+              datos.serie[0].valor
+            );
+
+          }
+        )
+        .catch(
+          function () {
+            return null;
+          }
+        );
+
+
+    return promesaUFBuscador;
+
+  }
+
+
+  function obtenerPrecioCLP(
+    propiedad,
+    valorUF
+  ) {
+
+    const precio =
+      obtenerPrecioNativo(
+        propiedad
+      );
+
+
+    if (
+      precio === null
+    ) {
+      return null;
+    }
+
+
+    if (
+      precioEsUF(
+        propiedad
+      )
+    ) {
+
+      if (
+        !valorUF
+      ) {
+        return null;
+      }
+
+
+      return (
+        precio *
+        valorUF
+      );
+
+    }
+
+
+    return precio;
+
+  }
+
+
+  const tarjetasPorId =
+    new Map();
+
+
+  document
+    .querySelectorAll(
+      ".property-card"
+    )
+    .forEach(
+      function (tarjeta) {
+
+        const enlace =
+          tarjeta.querySelector(
+            ".property-button"
+          );
+
+
+        if (
+          !enlace
+        ) {
+          return;
+        }
+
+
+        const href =
+          enlace.getAttribute(
+            "href"
+          ) || "";
+
+
+        const coincidenciaNueva =
+          href.match(
+            /(?:^|\/)propiedad\/(\d+)\//
+          );
+
+
+        const coincidenciaAntigua =
+          href.match(
+            /[?&]id=(\d+)/
+          );
+
+
+        const coincidencia =
+          coincidenciaNueva ||
+          coincidenciaAntigua;
+
+
+        if (
+          !coincidencia
+        ) {
+          return;
+        }
+
+
+        tarjetasPorId.set(
+          Number(
+            coincidencia[1]
+          ),
+          tarjeta
+        );
+
+      }
+    );
+
 
   function agregarOpciones(
     select,
     valores
   ) {
 
-    valores.forEach(function (valor) {
+    valores.forEach(
+      function (valor) {
 
-      const opcion =
-        document.createElement("option");
+        const opcion =
+          document.createElement(
+            "option"
+          );
 
-      opcion.value = valor;
 
-      opcion.textContent = valor;
+        opcion.value =
+          valor;
 
-      select.appendChild(opcion);
 
-    });
+        opcion.textContent =
+          valor;
 
-  }
 
+        select.appendChild(
+          opcion
+        );
 
-  /* =====================================================
-     OPERACIONES
-  ===================================================== */
-
-  const operaciones =
-    [
-      ...new Set(
-        propiedadesPublicadas
-          .map(function (propiedad) {
-
-            return propiedad.operacion;
-
-          })
-          .filter(Boolean)
-      )
-    ]
-    .sort(function (a, b) {
-
-      return a.localeCompare(
-        b,
-        "es"
-      );
-
-    });
-
-
-  agregarOpciones(
-    selectOperacion,
-    operaciones
-  );
-
-
-  /* =====================================================
-     UBICACIONES
-  ===================================================== */
-
-  const ubicaciones =
-    [
-      ...new Set(
-        propiedadesPublicadas
-          .map(function (propiedad) {
-
-            return propiedad.ubicacion;
-
-          })
-          .filter(Boolean)
-      )
-    ]
-    .sort(function (a, b) {
-
-      return a.localeCompare(
-        b,
-        "es"
-      );
-
-    });
-
-
-  agregarOpciones(
-    selectUbicacion,
-    ubicaciones
-  );
-
-
-  /* =====================================================
-     DORMITORIOS
-  ===================================================== */
-
-  const dormitorios =
-    [
-      ...new Set(
-        propiedadesPublicadas
-          .map(obtenerDormitorios)
-          .filter(function (valor) {
-
-            return (
-              valor !== null &&
-              !Number.isNaN(valor)
-            );
-
-          })
-      )
-    ]
-    .sort(function (a, b) {
-
-      return a - b;
-
-    });
-
-
-  dormitorios.forEach(
-    function (cantidad) {
-
-      const opcion =
-        document.createElement("option");
-
-      opcion.value =
-        String(cantidad);
-
-      opcion.textContent =
-        cantidad === 1
-          ? "1 dormitorio"
-          : cantidad + " dormitorios";
-
-      selectDormitorios.appendChild(
-        opcion
-      );
-
-    }
-  );
-
-
-  /* =====================================================
-     ESTADOS
-  ===================================================== */
-
-  const estados =
-    [
-      ...new Set(
-        propiedadesPublicadas
-          .map(function (propiedad) {
-
-            return propiedad.estado;
-
-          })
-          .filter(Boolean)
-      )
-    ];
-
-
-  function nombreEstado(estado) {
-
-    const estadoNormalizado =
-      normalizar(estado);
-
-
-    if (
-      estadoNormalizado ===
-      "disponible"
-    ) {
-
-      return "Disponibles";
-
-    }
-
-
-    if (
-      estadoNormalizado ===
-      "gestionada"
-    ) {
-
-      return "Gestionadas";
-
-    }
-
-
-    if (
-      estadoNormalizado ===
-      "vendida"
-    ) {
-
-      return "Vendidas";
-
-    }
-
-
-    if (
-      estadoNormalizado ===
-      "arrendada"
-    ) {
-
-      return "Arrendadas";
-
-    }
-
-
-    return (
-      String(estado)
-        .charAt(0)
-        .toUpperCase() +
-      String(estado).slice(1)
+      }
     );
 
   }
 
 
-  estados
-    .sort(function (a, b) {
-
-      return nombreEstado(a)
-        .localeCompare(
-          nombreEstado(b),
-          "es"
-        );
-
-    })
-    .forEach(function (estado) {
-
-      const opcion =
-        document.createElement("option");
-
-      opcion.value =
-        estado;
-
-      opcion.textContent =
-        nombreEstado(estado);
-
-      selectEstado.appendChild(
-        opcion
+  const ubicaciones =
+    [
+      ...new Set(
+        propiedadesPublicadas
+          .map(
+            function (propiedad) {
+              return propiedad.ubicacion;
+            }
+          )
+          .filter(Boolean)
+      )
+    ]
+      .sort(
+        function (a, b) {
+          return a.localeCompare(
+            b,
+            "es"
+          );
+        }
       );
 
-    });
+
+  agregarOpciones(
+    ubicacion,
+    ubicaciones
+  );
 
 
-  /* =====================================================
-     FILTRAR PROPIEDADES
-  ===================================================== */
+  const tipos =
+    [
+      ...new Set(
+        propiedadesPublicadas
+          .map(obtenerTipo)
+          .filter(Boolean)
+      )
+    ]
+      .sort(
+        function (a, b) {
+          return a.localeCompare(
+            b,
+            "es"
+          );
+        }
+      );
 
-  function aplicarFiltros() {
 
-    const textoBuscado =
+  agregarOpciones(
+    tipo,
+    tipos
+  );
+
+
+  const orientaciones =
+    [
+      ...new Set(
+        propiedadesPublicadas
+          .map(obtenerOrientacion)
+          .filter(Boolean)
+      )
+    ]
+      .sort(
+        function (a, b) {
+          return a.localeCompare(
+            b,
+            "es"
+          );
+        }
+      );
+
+
+  agregarOpciones(
+    orientacion,
+    orientaciones
+  );
+
+
+  function coincideBooleano(
+    filtro,
+    valor
+  ) {
+
+    if (
+      !filtro
+    ) {
+      return true;
+    }
+
+
+    if (
+      valor === null
+    ) {
+      return false;
+    }
+
+
+    return filtro === "si"
+      ? valor === true
+      : valor === false;
+
+  }
+
+
+  function contarFiltrosActivos() {
+
+    const valores = [
+      inputTexto.value,
+      operacion.value,
+      estado.value,
+      ubicacion.value,
+      tipo.value,
+      dormitorios.value,
+      banos.value,
+      precioMin.value,
+      precioMax.value,
+      estacionamiento.value,
+      bodega.value,
+      amoblado.value,
+      mascotas.value,
+      terraza.value,
+      orientacion.value,
+      superficieMin.value,
+      superficieMax.value,
+      gastosComunes.value
+    ];
+
+
+    return valores.filter(
+      function (valor) {
+        return String(
+          valor || ""
+        ).trim() !== "";
+      }
+    ).length;
+
+  }
+
+
+  async function aplicarFiltros() {
+
+    aviso.textContent =
+      "";
+
+
+    const texto =
       normalizar(
         inputTexto.value
       );
 
 
-    const operacion =
-      selectOperacion.value;
+    const palabras =
+      texto
+        .split(" ")
+        .filter(Boolean);
 
 
-    const ubicacion =
-      selectUbicacion.value;
+    const minimoDormitorios =
+      dormitorios.value
+        ? Number(
+            dormitorios.value
+          )
+        : null;
 
 
-    const dormitoriosSeleccionados =
-      selectDormitorios.value;
+    const minimoBanos =
+      banos.value
+        ? Number(
+            banos.value
+          )
+        : null;
 
 
-    const estado =
-      selectEstado.value;
+    const minSuperficie =
+      superficieMin.value
+        ? Number(
+            superficieMin.value
+          )
+        : null;
 
 
-    let visibles = 0;
+    const maxSuperficie =
+      superficieMax.value
+        ? Number(
+            superficieMax.value
+          )
+        : null;
+
+
+    const maxGGCC =
+      gastosComunes.value
+        ? numeroChileno(
+            gastosComunes.value
+          )
+        : null;
+
+
+    const hayPrecio =
+      precioMin.value.trim() !== "" ||
+      precioMax.value.trim() !== "";
+
+
+    const ordenarPorPrecio =
+      orden.value === "precioAsc" ||
+      orden.value === "precioDesc";
+
+
+    let valorUF =
+      null;
+
+
+    if (
+      hayPrecio ||
+      ordenarPorPrecio
+    ) {
+      valorUF =
+        await cargarUFBuscador();
+    }
+
+
+    let precioMinimoCLP =
+      null;
+
+
+    let precioMaximoCLP =
+      null;
+
+
+    const minimoIngresado =
+      precioMin.value
+        ? numeroChileno(
+            precioMin.value
+          )
+        : null;
+
+
+    const maximoIngresado =
+      precioMax.value
+        ? numeroChileno(
+            precioMax.value
+          )
+        : null;
+
+
+    if (
+      moneda.value === "UF"
+    ) {
+
+      if (
+        hayPrecio &&
+        !valorUF
+      ) {
+
+        aviso.textContent =
+          "No fue posible obtener la UF. Intenta nuevamente.";
+
+        return;
+
+      }
+
+
+      precioMinimoCLP =
+        minimoIngresado !== null
+          ? minimoIngresado *
+            valorUF
+          : null;
+
+
+      precioMaximoCLP =
+        maximoIngresado !== null
+          ? maximoIngresado *
+            valorUF
+          : null;
+
+    } else {
+
+      precioMinimoCLP =
+        minimoIngresado;
+
+
+      precioMaximoCLP =
+        maximoIngresado;
+
+    }
+
+
+    const resultados =
+      [];
 
 
     propiedadesPublicadas.forEach(
       function (propiedad) {
 
-        const enlace =
-          document.querySelector(
-            '.property-button[href="propiedad.html?id=' +
-            propiedad.id +
-            '"]'
-          );
-
-
-        if (!enlace) {
-
-          return;
-
-        }
-
-
         const tarjeta =
-          enlace.closest(
-            ".property-card"
+          tarjetasPorId.get(
+            Number(
+              propiedad.id
+            )
           );
 
 
-        if (!tarjeta) {
-
+        if (
+          !tarjeta
+        ) {
           return;
+        }
+
+
+        const contenido =
+          textoPropiedad(
+            propiedad
+          );
+
+
+        const coincideTexto =
+          palabras.every(
+            function (palabra) {
+              return contenido.includes(
+                palabra
+              );
+            }
+          );
+
+
+        const coincideOperacion =
+          !operacion.value ||
+          normalizar(
+            propiedad.operacion
+          ) ===
+          normalizar(
+            operacion.value
+          );
+
+
+        const estadosPropiedad = [
+          normalizar(
+            propiedad.estado
+          ),
+          normalizar(
+            propiedad.estadoTexto
+          )
+        ];
+
+
+        let coincideEstado =
+          true;
+
+
+        if (
+          estado.value
+        ) {
+
+          if (
+            estado.value ===
+            "gestionada"
+          ) {
+
+            coincideEstado =
+              estadosPropiedad.includes(
+                "gestionada"
+              ) ||
+              estadosPropiedad.includes(
+                "arrendada"
+              ) ||
+              estadosPropiedad.includes(
+                "vendida"
+              );
+
+          } else {
+
+            coincideEstado =
+              estadosPropiedad.includes(
+                normalizar(
+                  estado.value
+                )
+              );
+
+          }
 
         }
 
 
-        const dormitoriosPropiedad =
+        const coincideUbicacion =
+          !ubicacion.value ||
+          normalizar(
+            propiedad.ubicacion
+          ) ===
+          normalizar(
+            ubicacion.value
+          );
+
+
+        const coincideTipo =
+          !tipo.value ||
+          normalizar(
+            obtenerTipo(
+              propiedad
+            )
+          ) ===
+          normalizar(
+            tipo.value
+          );
+
+
+        const cantidadDormitorios =
           obtenerDormitorios(
             propiedad
           );
 
 
-        const contenidoBusqueda =
-          normalizar(
-            [
-              propiedad.titulo,
-              propiedad.direccion,
-              propiedad.ubicacion,
-              propiedad.operacion,
-              propiedad.estadoTexto,
-              propiedad.precio,
-
-              Array.isArray(
-                propiedad.caracteristicas
-              )
-                ? propiedad.caracteristicas.join(" ")
-                : "",
-
-              Array.isArray(
-                propiedad.informacionImportante
-              )
-                ? propiedad.informacionImportante.join(" ")
-                : ""
-
-            ].join(" ")
-          );
-
-
-        const coincideTexto =
-          !textoBuscado ||
-          contenidoBusqueda.includes(
-            textoBuscado
-          );
-
-
-        const coincideOperacion =
-          !operacion ||
-          propiedad.operacion ===
-            operacion;
-
-
-        const coincideUbicacion =
-          !ubicacion ||
-          propiedad.ubicacion ===
-            ubicacion;
-
-
         const coincideDormitorios =
-          !dormitoriosSeleccionados ||
-          dormitoriosPropiedad ===
-            Number(
-              dormitoriosSeleccionados
-            );
+          minimoDormitorios === null ||
+          (
+            cantidadDormitorios !== null &&
+            cantidadDormitorios >=
+              minimoDormitorios
+          );
 
 
-        const coincideEstado =
-          !estado ||
-          propiedad.estado ===
-            estado;
+        const cantidadBanos =
+          obtenerBanos(
+            propiedad
+          );
+
+
+        const coincideBanos =
+          minimoBanos === null ||
+          (
+            cantidadBanos !== null &&
+            cantidadBanos >=
+              minimoBanos
+          );
+
+
+        const superficie =
+          obtenerSuperficie(
+            propiedad
+          );
+
+
+        const coincideSuperficieMin =
+          minSuperficie === null ||
+          (
+            superficie !== null &&
+            superficie >=
+              minSuperficie
+          );
+
+
+        const coincideSuperficieMax =
+          maxSuperficie === null ||
+          (
+            superficie !== null &&
+            superficie <=
+              maxSuperficie
+          );
+
+
+        const precioCLP =
+          obtenerPrecioCLP(
+            propiedad,
+            valorUF
+          );
+
+
+        const coincidePrecioMin =
+          precioMinimoCLP === null ||
+          (
+            precioCLP !== null &&
+            precioCLP >=
+              precioMinimoCLP
+          );
+
+
+        const coincidePrecioMax =
+          precioMaximoCLP === null ||
+          (
+            precioCLP !== null &&
+            precioCLP <=
+              precioMaximoCLP
+          );
+
+
+        const ggcc =
+          obtenerGastosComunes(
+            propiedad
+          );
+
+
+        const coincideGGCC =
+          maxGGCC === null ||
+          (
+            ggcc !== null &&
+            ggcc <=
+              maxGGCC
+          );
+
+
+        const coincideEstacionamiento =
+          coincideBooleano(
+            estacionamiento.value,
+            tieneEstacionamiento(
+              propiedad
+            )
+          );
+
+
+        const coincideBodega =
+          coincideBooleano(
+            bodega.value,
+            tieneBodega(
+              propiedad
+            )
+          );
+
+
+        const coincideAmoblado =
+          coincideBooleano(
+            amoblado.value,
+            estaAmoblado(
+              propiedad
+            )
+          );
+
+
+        const coincideTerraza =
+          coincideBooleano(
+            terraza.value,
+            tieneTerraza(
+              propiedad
+            )
+          );
+
+
+        const coincideMascotas =
+          !mascotas.value ||
+          obtenerMascotas(
+            propiedad
+          ) ===
+          mascotas.value;
+
+
+        const coincideOrientacion =
+          !orientacion.value ||
+          normalizar(
+            obtenerOrientacion(
+              propiedad
+            )
+          ) ===
+          normalizar(
+            orientacion.value
+          );
 
 
         const mostrar =
           coincideTexto &&
           coincideOperacion &&
+          coincideEstado &&
           coincideUbicacion &&
+          coincideTipo &&
           coincideDormitorios &&
-          coincideEstado;
+          coincideBanos &&
+          coincideSuperficieMin &&
+          coincideSuperficieMax &&
+          coincidePrecioMin &&
+          coincidePrecioMax &&
+          coincideGGCC &&
+          coincideEstacionamiento &&
+          coincideBodega &&
+          coincideAmoblado &&
+          coincideTerraza &&
+          coincideMascotas &&
+          coincideOrientacion;
 
 
         tarjeta.classList.toggle(
@@ -3576,9 +5235,22 @@ document.addEventListener("DOMContentLoaded", function () {
         );
 
 
-        if (mostrar) {
+        if (
+          mostrar
+        ) {
 
-          visibles++;
+          resultados.push(
+            {
+              propiedad:
+                propiedad,
+              tarjeta:
+                tarjeta,
+              precio:
+                precioCLP,
+              superficie:
+                superficie
+            }
+          );
 
         }
 
@@ -3586,57 +5258,232 @@ document.addEventListener("DOMContentLoaded", function () {
     );
 
 
+    resultados.sort(
+      function (a, b) {
+
+        if (
+          orden.value ===
+          "recientes"
+        ) {
+
+          return (
+            Number(
+              b.propiedad.id
+            ) -
+            Number(
+              a.propiedad.id
+            )
+          );
+
+        }
+
+
+        if (
+          orden.value ===
+          "precioAsc"
+        ) {
+
+          if (
+            a.precio === null
+          ) {
+            return 1;
+          }
+
+
+          if (
+            b.precio === null
+          ) {
+            return -1;
+          }
+
+
+          return (
+            a.precio -
+            b.precio
+          );
+
+        }
+
+
+        if (
+          orden.value ===
+          "precioDesc"
+        ) {
+
+          if (
+            a.precio === null
+          ) {
+            return 1;
+          }
+
+
+          if (
+            b.precio === null
+          ) {
+            return -1;
+          }
+
+
+          return (
+            b.precio -
+            a.precio
+          );
+
+        }
+
+
+        if (
+          orden.value ===
+          "superficieDesc"
+        ) {
+
+          return (
+            Number(
+              b.superficie || 0
+            ) -
+            Number(
+              a.superficie || 0
+            )
+          );
+
+        }
+
+
+        const disponibleA =
+          normalizar(
+            a.propiedad.estado
+          ) ===
+          "disponible"
+            ? 0
+            : 1;
+
+
+        const disponibleB =
+          normalizar(
+            b.propiedad.estado
+          ) ===
+          "disponible"
+            ? 0
+            : 1;
+
+
+        if (
+          disponibleA !==
+          disponibleB
+        ) {
+
+          return (
+            disponibleA -
+            disponibleB
+          );
+
+        }
+
+
+        return (
+          Number(
+            b.propiedad.id
+          ) -
+          Number(
+            a.propiedad.id
+          )
+        );
+
+      }
+    );
+
+
+    resultados.forEach(
+      function (resultado) {
+
+        grilla.appendChild(
+          resultado.tarjeta
+        );
+
+      }
+    );
+
+
+    const cantidad =
+      resultados.length;
+
+
     contador.textContent =
-      visibles === 1
+      cantidad === 1
         ? "1 propiedad encontrada"
-        : visibles +
+        : cantidad +
           " propiedades encontradas";
+
+
+    const cantidadFiltros =
+      contarFiltrosActivos();
+
+
+    filtrosActivos.textContent =
+      cantidadFiltros === 0
+        ? "Sin filtros aplicados"
+        : cantidadFiltros === 1
+          ? "1 filtro aplicado"
+          : cantidadFiltros +
+            " filtros aplicados";
+
+
+    sinResultados.hidden =
+      cantidad !== 0;
+
+
+    if (
+      valorUF &&
+      (
+        hayPrecio ||
+        ordenarPorPrecio
+      )
+    ) {
+
+      aviso.textContent =
+        "Comparación UF/CLP actualizada con la UF vigente.";
+
+    }
 
   }
 
 
-  /* =====================================================
-     EVENTOS DEL BUSCADOR
-  ===================================================== */
+  function actualizarPrecioPlaceholder() {
 
-  inputTexto.addEventListener(
-    "input",
-    aplicarFiltros
+    if (
+      moneda.value === "UF"
+    ) {
+
+      precioMin.placeholder =
+        "Ej: 3.500";
+
+      precioMax.placeholder =
+        "Ej: 5.000";
+
+    } else {
+
+      precioMin.placeholder =
+        "Ej: 400.000";
+
+      precioMax.placeholder =
+        "Ej: 850.000";
+
+    }
+
+  }
+
+
+  moneda.addEventListener(
+    "change",
+    actualizarPrecioPlaceholder
   );
 
 
-  [
-    selectOperacion,
-    selectUbicacion,
-    selectDormitorios,
-    selectEstado
-  ].forEach(function (select) {
+  formulario.addEventListener(
+    "submit",
+    function (evento) {
 
-    select.addEventListener(
-      "change",
-      aplicarFiltros
-    );
-
-  });
-
-
-  /* =====================================================
-     LIMPIAR FILTROS
-  ===================================================== */
-
-  botonLimpiar.addEventListener(
-    "click",
-    function () {
-
-      inputTexto.value = "";
-
-      selectOperacion.value = "";
-
-      selectUbicacion.value = "";
-
-      selectDormitorios.value = "";
-
-      selectEstado.value = "";
+      evento.preventDefault();
 
       aplicarFiltros();
 
@@ -3644,13 +5491,33 @@ document.addEventListener("DOMContentLoaded", function () {
   );
 
 
-  /* =====================================================
-     INICIAR BUSCADOR
-  ===================================================== */
+  botonLimpiar.addEventListener(
+    "click",
+    function () {
+
+      formulario.reset();
+
+      actualizarPrecioPlaceholder();
+
+      if (
+        filtrosAvanzados
+      ) {
+        filtrosAvanzados.open =
+          false;
+      }
+
+
+      aplicarFiltros();
+
+    }
+  );
+
+
+  actualizarPrecioPlaceholder();
 
   aplicarFiltros();
 
-});
+}
 </script>
 </body>
 
