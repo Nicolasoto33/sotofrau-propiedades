@@ -1394,6 +1394,58 @@
     }
 
 
+    .schedule-visit {
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      flex-shrink:
+        0;
+
+      padding:
+        14px 22px;
+
+      border:
+        0;
+
+      border-radius:
+        9px;
+
+      background:
+        var(--naranja);
+
+      color:
+        white;
+
+      font-size:
+        14px;
+
+      font-weight:
+        800;
+
+      transition:
+        .2s ease;
+
+    }
+
+
+    .schedule-visit:hover {
+
+      background:
+        var(--naranja-hover);
+
+      transform:
+        translateY(-2px);
+
+    }
+
+
     .whatsapp {
 
       display:
@@ -1498,6 +1550,7 @@
     }
 
 
+    .schedule-visit:focus-visible,
     .share-property:focus-visible,
     .whatsapp:focus-visible {
 
@@ -1748,6 +1801,7 @@
       }
 
 
+      .schedule-visit,
       .whatsapp,
       .share-property {
 
@@ -2296,6 +2350,17 @@
 
 
           <div class="contact-actions">
+
+            <a
+              id="scheduleVisit"
+              class="schedule-visit"
+              href="#"
+              target="_blank"
+              rel="noopener"
+            >
+              Agendar visita
+            </a>
+
 
             <a
               id="whatsapp"
@@ -3847,6 +3912,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
     /* =================================================
+       AGENDAR VISITA
+    ================================================= */
+
+    cargarAgendarVisita();
+
+
+    /* =================================================
        COMPARTIR PROPIEDAD
     ================================================= */
 
@@ -4658,6 +4730,86 @@ document.addEventListener("DOMContentLoaded", function () {
       "whatsapp"
     ).href =
       enlace;
+
+  }
+
+
+
+  /* =====================================================
+     AGENDAR VISITA
+  ===================================================== */
+
+  function cargarAgendarVisita() {
+
+    const boton =
+      document.getElementById(
+        "scheduleVisit"
+      );
+
+
+    if (
+      !boton ||
+      !propiedadActual
+    ) {
+
+      return;
+
+    }
+
+
+    const urlPropiedad =
+      obtenerUrlCompartir();
+
+
+    const partesMensaje =
+      [
+        "Hola Nicolás, vi esta propiedad en Sotofrau Propiedades y me gustaría agendar una visita:",
+        "",
+        propiedadActual.titulo || "Propiedad"
+      ];
+
+
+    if (
+      propiedadActual.ubicacion
+    ) {
+
+      partesMensaje.push(
+        propiedadActual.ubicacion
+      );
+
+    }
+
+
+    if (
+      propiedadActual.precio
+    ) {
+
+      partesMensaje.push(
+        propiedadActual.precio
+      );
+
+    }
+
+
+    partesMensaje.push(
+      "",
+      urlPropiedad,
+      "",
+      "¿Qué horarios tienes disponibles?"
+    );
+
+
+    const mensaje =
+      partesMensaje.join(
+        "\n"
+      );
+
+
+    boton.href =
+      "https://wa.me/56973497611?text=" +
+      encodeURIComponent(
+        mensaje
+      );
 
   }
 
