@@ -1,0 +1,63 @@
+{
+  "areasComunes": [
+    "🏊 Piscina.",
+    "🔥 Quincho.",
+    "💪 Gimnasio.",
+    "🎬 Sala de cine.",
+    "🎉 Sala multiuso.",
+    "🛎️ Recepción."
+  ],
+  "estado": "disponible",
+  "precio": "$550.000 mensuales.",
+  "gastosComunes": "$120.000 mensuales aprox.",
+  "caracteristicas": [
+    "🛏️ 3 dormitorios.",
+    "🚿 1 baño.",
+    "🏢 Ubicado en el piso 2.",
+    "🛋️ Se arrienda semiamoblado.",
+    "🍳 Cocina abierta con vista despejada.",
+    "🌿 Terraza.",
+    "🚗 1 estacionamiento."
+  ],
+  "descripcion": [
+    "Comodidad y buena conectividad para tu día a día en Viña del Mar. Este departamento semiamoblado, ubicado en Eduardo Titus 410, sector Camino Troncal, ofrece tres dormitorios y una distribución funcional para organizar tus espacios según tus necesidades.\n\nSituado en el piso 2, cuenta con un baño, cocina abierta con vista despejada y terraza. Incluye un estacionamiento, un complemento práctico para quienes se desplazan en vehículo.\n\nEl edificio dispone de piscina, quincho, gimnasio, sala de cine y sala multiuso, ofreciendo alternativas para descansar, ejercitarse y compartir. Además, cuenta con recepción y seguridad las 24 horas.\n\nSu ubicación permite acceder a locomoción colectiva a pocos pasos y estar cerca de Jumbo y universidades. El centro de Viña del Mar se encuentra a aproximadamente ocho minutos en auto, según las condiciones del tránsito.\n\nContacta a Soto Frau Propiedades para recibir más información y coordinar tu visita."
+  ],
+  "fotos": [
+    "/propiedades/53/1.jpeg",
+    "/propiedades/53/2.jpeg",
+    "/propiedades/53/3.jpeg",
+    "/propiedades/53/4.jpeg",
+    "/propiedades/53/5.jpeg",
+    "/propiedades/53/6.jpeg",
+    "/propiedades/53/7.jpeg",
+    "/propiedades/53/8.jpeg",
+    "/propiedades/53/9.jpeg",
+    "/propiedades/53/10.jpeg"
+  ],
+  "direccion": "Eduardo Titus 410",
+  "requisitos": [
+    "equisitos de arriendo  Trabajadores dependientes: renta líquida mínima de $1.650.000 mensuales, equivalente a tres veces el canon.  Contrato de trabajo vigente o acreditación de antigüedad laboral.  Tres últimas liquidaciones de sueldo.  Doce últimas cotizaciones de AFP.  Informe DICOM.",
+    "Trabajadores independientes: carpeta tributaria.  Boletas y/o antecedentes que acrediten ingresos.  Informe DICOM.  Todos los antecedentes quedan sujetos a evaluación."
+  ],
+  "whatsapp": "Hola, vi en Soto Frau Propiedades el departamento semiamoblado en arriendo en Eduardo Titus 410, Viña del Mar, por $550.000 mensuales más gastos comunes, con 3 dormitorios, terraza y estacionamiento. Me gustaría recibir más información y coordinar una visita.",
+  "estacionamientos": 1,
+  "banos": 1,
+  "imagen": "/propiedades/53/1.jpeg",
+  "tipoPropiedad": "Departamento",
+  "publicada": true,
+  "piso": "Piso 2.",
+  "operacion": "Arriendo",
+  "dormitorios": 3,
+  "titulo": "Departamento semiamoblado en arriendo en Viña del Mar · 3 dormitorios, terraza y estacionamiento",
+  "id": 53,
+  "estadoTexto": "Disponible",
+  "ubicacion": "Sector Camino Troncal · Viña del Mar.",
+  "totalMensual": "$670.000 aprox., incluyendo arriendo y gastos comunes.",
+  "conectividad": [
+    "📍 Ubicado en el sector Camino Troncal, Viña del Mar.",
+    "🚌 A pasos de locomoción colectiva.",
+    "🛒 Cercano a Jumbo.",
+    "🎓 Cercano a universidades.",
+    "🚗 Aproximadamente ocho minutos en auto del centro de Viña del Mar, según el tránsito."
+  ]
+}
