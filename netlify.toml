@@ -2,23 +2,49 @@
 command = "node generate-propiedades.js && node generate-sitemap.js"
 publish = "."
 
-# Redirecciones permanentes de las antiguas páginas de propiedades
-# hacia las URLs oficiales del sistema dinámico.
+# =====================================================
+# REDIRECCIONES DE PROPIEDADES ANTIGUAS
+# =====================================================
+
+# Antiguas páginas estáticas
+# /propiedad-1.html
+# /propiedad-2.html
+# /propiedad-3.html
+#
+# Ahora redirigen directamente a las nuevas URLs oficiales.
 
 [[redirects]]
 from = "/propiedad-1.html"
-to = "/propiedad.html?id=1"
+to = "/propiedad/1/"
 status = 301
 force = true
 
 [[redirects]]
 from = "/propiedad-2.html"
-to = "/propiedad.html?id=2"
+to = "/propiedad/2/"
 status = 301
 force = true
 
 [[redirects]]
 from = "/propiedad-3.html"
-to = "/propiedad.html?id=3"
+to = "/propiedad/3/"
 status = 301
 force = true
+
+
+# =====================================================
+# REDIRECCIÓN DEL SISTEMA ANTIGUO CON ?id=
+# =====================================================
+
+# Ejemplo:
+# /propiedad.html?id=44
+#
+# redirige a:
+# /propiedad/44/
+
+[[redirects]]
+from = "/propiedad.html"
+to = "/propiedad/:id/"
+status = 301
+force = true
+query = { id = ":id" }
