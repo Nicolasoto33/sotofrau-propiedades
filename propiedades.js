@@ -522,19 +522,35 @@ function cargarPropiedades() {
 
 
       tarjeta.dataset.operation =
-        propiedad.operacion.toLowerCase();
+        String(
+          propiedad.operacion || ""
+        ).toLowerCase();
 
 
       tarjeta.dataset.status =
-        propiedad.estado.toLowerCase();
+        String(
+          propiedad.estado || ""
+        ).toLowerCase();
+
+
+      tarjeta.dataset.propertyId =
+        String(
+          propiedad.id
+        );
 
 
       let claseEstado =
         "status-arrendada";
 
 
+      const estadoNormalizado =
+        String(
+          propiedad.estado || ""
+        ).toLowerCase();
+
+
       if (
-        propiedad.estado.toLowerCase() ===
+        estadoNormalizado ===
         "disponible"
       ) {
 
@@ -545,7 +561,7 @@ function cargarPropiedades() {
 
 
       if (
-        propiedad.estado.toLowerCase() ===
+        estadoNormalizado ===
         "vendida"
       ) {
 
@@ -598,10 +614,35 @@ function cargarPropiedades() {
         );
 
 
-      const textoEnlace =
-        propiedad.estado === "disponible"
-          ? "Ver propiedad disponible"
-          : "Ver propiedad gestionada";
+      let textoEnlace =
+        "Ver propiedad";
+
+
+      if (
+        estadoNormalizado ===
+        "disponible"
+      ) {
+
+        textoEnlace =
+          "Ver propiedad disponible";
+
+      } else if (
+        estadoNormalizado ===
+        "vendida"
+      ) {
+
+        textoEnlace =
+          "Ver propiedad vendida";
+
+      } else if (
+        estadoNormalizado ===
+        "gestionada"
+      ) {
+
+        textoEnlace =
+          "Ver propiedad gestionada";
+
+      }
 
 
       /*
