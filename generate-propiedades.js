@@ -518,11 +518,32 @@ content/propiedades/*.json
 `;
 
 
+  /*
+    El archivo que consume el sitio público
+    debe contener únicamente propiedades publicadas.
+
+    De esta forma una propiedad con:
+    "publicada": false
+
+    no queda expuesta dentro de propiedades.generated.js
+    aunque permanezca guardada en content/propiedades.
+  */
+
+  const propiedadesPublicadas =
+    propiedades.filter(
+      function(propiedad) {
+
+        return propiedad.publicada === true;
+
+      }
+    );
+
+
   const contenido =
     encabezado +
     "const propiedades = " +
     JSON.stringify(
-      propiedades,
+      propiedadesPublicadas,
       null,
       2
     ) +
@@ -976,16 +997,13 @@ function generarPaginaPropiedad(
 
 
   /*
-    URL que verá WhatsApp / Meta
-    dentro de Open Graph.
-  */
+    La URL canónica permanece estable.
 
-  const urlSocial =
-    urlCanonica +
-    "?v=" +
-    encodeURIComponent(
-      versionSocial
-    );
+    La versión social se utiliza en el enlace
+    compartido desde propiedades.js y en og:image,
+    evitando convertir og:url en una URL distinta
+    cada vez que cambia una propiedad.
+  */
 
 
   const titulo =
@@ -1095,7 +1113,7 @@ function generarPaginaPropiedad(
     actualizarMeta(
       html,
       "ogUrl",
-      urlSocial
+      urlCanonica
     );
 
 
@@ -1347,6 +1365,18 @@ try {
   console.log(
     "Total de propiedades: " +
       propiedades.length
+  );
+
+
+  console.log(
+    "Propiedades publicadas: " +
+      propiedades.filter(
+        function(propiedad) {
+
+          return propiedad.publicada === true;
+
+        }
+      ).length
   );
 
 
