@@ -2927,19 +2927,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
           const fechaUF = tasaUF.date.split("-").reverse().join("/");
           conversion.appendChild(
-            document.createTextNode(" · UF del " + fechaUF + " · Fuente: ")
+            document.createTextNode(" · UF del ")
           );
 
-          const enlaceFuente = document.createElement("a");
-          enlaceFuente.href = tasaUF.source === "mindicador.cl"
+          const enlaceFechaUF = document.createElement("a");
+          enlaceFechaUF.href = tasaUF.source === "mindicador.cl"
             ? "https://mindicador.cl/"
             : "https://indicadores.cl/api/";
-          enlaceFuente.target = "_blank";
-          enlaceFuente.rel = "noopener noreferrer";
-          enlaceFuente.textContent = tasaUF.source || "indicadores.cl";
-          enlaceFuente.style.textDecoration = "underline";
-          enlaceFuente.style.textUnderlineOffset = "2px";
-          conversion.appendChild(enlaceFuente);
+          enlaceFechaUF.target = "_blank";
+          enlaceFechaUF.rel = "noopener noreferrer";
+          enlaceFechaUF.title = "Consultar el valor UF usado";
+          enlaceFechaUF.textContent = fechaUF;
+          enlaceFechaUF.style.textDecoration = "underline";
+          enlaceFechaUF.style.textUnderlineOffset = "2px";
+          conversion.appendChild(enlaceFechaUF);
 
 
           conversion.style.display =
