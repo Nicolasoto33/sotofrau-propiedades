@@ -251,8 +251,6 @@ function cargarPropiedades() {
       `;
 
 
-      PreciosUF.mount(tarjeta.querySelector(".price"), propiedad.precio, propiedad.id);
-
       contenedor.appendChild(
         tarjeta
       );
