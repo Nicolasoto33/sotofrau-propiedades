@@ -796,6 +796,15 @@ function cargarPropiedades() {
         tarjeta
       );
 
+      if (window.PreciosUF) {
+        window.PreciosUF.mount(
+          tarjeta.querySelector(".price"),
+          propiedad.precio,
+          propiedad.id,
+          { operation: propiedad.operacion, salesOnly: true }
+        );
+      }
+
     }
   );
 
