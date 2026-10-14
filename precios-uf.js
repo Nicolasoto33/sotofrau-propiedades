@@ -1,7 +1,7 @@
 (function (root) {
   "use strict";
   const zone = "America/Santiago";
-  const cacheKey = "sotofrau-uf-v1";
+  const cacheKey = "sotofrau-uf-v2";
   const targets = new Map();
   let pending;
   let current;
@@ -41,32 +41,55 @@
     if (validLatestRate(current, today)) return current;
     try {
       const cached = JSON.parse(root.localStorage.getItem(cacheKey));
-      if (validLatestRate(cached, today)) return (current = cached);
+      if (validLatestRate(cached, today) && cached.source) return (current = cached);
     } catch (_) { /* Storage may be blocked. */ }
     if (pending) return pending;
     pending = (async () => {
-      const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 8000);
-      try {
-        const response = await root.fetch("https://mindicador.cl/api/uf", { signal: controller.signal });
-        if (!response.ok) throw new Error("UF unavailable");
-        const data = await response.json();
-        if (data.codigo !== "uf" || !Array.isArray(data.serie)) throw new Error("Invalid UF response");
-        // Some dates, including non-business days, have no new UF value.
-        // Show the date of the most recent published value used for conversion.
-        const entry = data.serie.find(item =>
-          typeof item.fecha === "string" &&
-          /^\d{4}-\d{2}-\d{2}T/.test(item.fecha) &&
-          item.fecha.slice(0, 10) <= today &&
-          Number.isFinite(item.valor) &&
-          item.valor > 0
-        );
-        const rate = entry && { date: entry.fecha.slice(0, 10), value: entry.valor };
-        if (!validLatestRate(rate, today)) throw new Error("UF unavailable");
-        current = rate;
-        try { root.localStorage.setItem(cacheKey, JSON.stringify(rate)); } catch (_) {}
-        return rate;
-      } finally { clearTimeout(timeout); }
+      const providers = [
+        async signal => {
+          const response = await root.fetch("https://indicadores.cl/api/v1/uf.json", { signal });
+          if (!response.ok) throw new Error("UF unavailable");
+          const data = await response.json();
+          const rate = data && data.indicador === "uf"
+            ? { date: data.fecha, value: Number(data.valor), source: "indicadores.cl" }
+            : null;
+          if (!validLatestRate(rate, today)) throw new Error("Invalid UF response");
+          return rate;
+        },
+        async signal => {
+          const response = await root.fetch("https://mindicador.cl/api/uf", { signal });
+          if (!response.ok) throw new Error("UF unavailable");
+          const data = await response.json();
+          if (data.codigo !== "uf" || !Array.isArray(data.serie)) throw new Error("Invalid UF response");
+          const entry = data.serie.find(item => {
+            const date = typeof item.fecha === "string" && item.fecha.match(/^(\d{4}-\d{2}-\d{2})(?:T.*)?$/);
+            return date && date[1] <= today && Number.isFinite(Number(item.valor)) && Number(item.valor) > 0;
+          });
+          const rate = entry && {
+            date: entry.fecha.slice(0, 10),
+            value: Number(entry.valor),
+            source: "mindicador.cl"
+          };
+          if (!validLatestRate(rate, today)) throw new Error("UF unavailable");
+          return rate;
+        }
+      ];
+      let lastError;
+      for (const provider of providers) {
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 5000);
+        try {
+          const rate = await provider(controller.signal);
+          current = rate;
+          try { root.localStorage.setItem(cacheKey, JSON.stringify(rate)); } catch (_) {}
+          return rate;
+        } catch (error) {
+          lastError = error;
+        } finally {
+          clearTimeout(timeout);
+        }
+      }
+      throw lastError || new Error("UF unavailable");
     })();
     try { return await pending; } finally { pending = null; }
   }
@@ -81,12 +104,25 @@
     return `${price.from ? "Desde " : ""}≈ ${price.currency === "UF" ? "$" + formatted + " CLP" : formatted + " UF"}${price.monthly ? " mensuales" : ""} · UF del ${date}`;
   }
 
+  function renderEquivalence(element, price, rate) {
+    element.replaceChildren(root.document.createTextNode(equivalence(price, rate)));
+    const source = root.document.createElement("a");
+    source.href = rate.source === "mindicador.cl"
+      ? "https://mindicador.cl/"
+      : "https://indicadores.cl/api/";
+    source.target = "_blank";
+    source.rel = "noopener noreferrer";
+    source.textContent = ` · Fuente: ${rate.source || "indicadores.cl"}`;
+    element.appendChild(source);
+  }
+
   async function refresh() {
     let rate;
     try { rate = await fetchRate(); } catch (_) {}
     for (const [element, price] of targets) {
       if (!element.isConnected) { targets.delete(element); continue; }
-      element.textContent = validLatestRate(rate, day()) ? equivalence(price, rate) : "Equivalencia no disponible · UF sin confirmar";
+      if (validLatestRate(rate, day())) renderEquivalence(element, price, rate);
+      else element.textContent = "Equivalencia no disponible · UF sin confirmar";
     }
   }
 
