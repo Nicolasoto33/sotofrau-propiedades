@@ -6,3 +6,9 @@
   line-height: 1.5;
   overflow-wrap: anywhere;
 }
+
+.price-equivalence a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
