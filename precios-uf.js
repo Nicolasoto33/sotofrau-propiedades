@@ -105,15 +105,26 @@
   }
 
   function renderEquivalence(element, price, rate) {
-    element.replaceChildren(root.document.createTextNode(equivalence(price, rate)));
-    const source = root.document.createElement("a");
-    source.href = rate.source === "mindicador.cl"
+    const text = equivalence(price, rate);
+    const marker = " · UF del ";
+    const dateStart = text.lastIndexOf(marker);
+    if (dateStart < 0) {
+      element.textContent = text;
+      return;
+    }
+    element.replaceChildren(
+      root.document.createTextNode(text.slice(0, dateStart) + marker)
+    );
+    const date = text.slice(dateStart + marker.length);
+    const dateLink = root.document.createElement("a");
+    dateLink.href = rate.source === "mindicador.cl"
       ? "https://mindicador.cl/"
       : "https://indicadores.cl/api/";
-    source.target = "_blank";
-    source.rel = "noopener noreferrer";
-    source.textContent = ` · Fuente: ${rate.source || "indicadores.cl"}`;
-    element.appendChild(source);
+    dateLink.target = "_blank";
+    dateLink.rel = "noopener noreferrer";
+    dateLink.title = "Consultar el valor UF usado";
+    dateLink.textContent = date;
+    element.appendChild(dateLink);
   }
 
   async function refresh() {
