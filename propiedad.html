@@ -2591,6 +2591,7 @@ document.addEventListener("DOMContentLoaded", function () {
 ===================================================== -->
 
 <script src="propiedades.generated.js"></script>
+<script src="/precios-uf.js"></script>
 
 
 
@@ -2619,73 +2620,21 @@ document.addEventListener("DOMContentLoaded", function () {
   function obtenerValorUF() {
 
     if (promesaValorUF) {
-
       return promesaValorUF;
-
     }
 
+    const cargaUF = window.PreciosUF && typeof window.PreciosUF.fetchRate === "function"
+      ? window.PreciosUF.fetchRate()
+      : Promise.reject(new Error("Conversor UF no disponible."));
 
-    promesaValorUF = fetch(
-      "https://mindicador.cl/api/uf"
-    )
-      .then(
-        function(respuesta) {
-
-          if (!respuesta.ok) {
-
-            throw new Error(
-              "No fue posible obtener el valor de la UF."
-            );
-
-          }
-
-
-          return respuesta.json();
-
-        }
-      )
-      .then(
-        function(datos) {
-
-          if (
-            !datos ||
-            !Array.isArray(datos.serie) ||
-            datos.serie.length === 0 ||
-            !datos.serie[0].valor
-          ) {
-
-            throw new Error(
-              "El valor de la UF no está disponible."
-            );
-
-          }
-
-
-          return Number(
-            datos.serie[0].valor
-          );
-
-        }
-      )
-      .catch(
-        function(error) {
-
-          console.warn(
-            "Conversión UF/CLP no disponible:",
-            error
-          );
-
-
-          return null;
-
-        }
-      );
-
+    promesaValorUF = cargaUF.catch(function(error) {
+      console.warn("Conversión UF/CLP no disponible:", error);
+      return null;
+    });
 
     return promesaValorUF;
 
   }
-
 
 
   function formatearCLP(valor) {
@@ -2870,7 +2819,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     obtenerValorUF()
       .then(
-        function(valorUF) {
+        function(tasaUF) {
+
+          const valorUF = tasaUF && tasaUF.value;
 
           if (
             !valorUF ||
@@ -2973,6 +2924,22 @@ document.addEventListener("DOMContentLoaded", function () {
 
           conversion.textContent =
             textoConversion;
+
+          const fechaUF = tasaUF.date.split("-").reverse().join("/");
+          conversion.appendChild(
+            document.createTextNode(" · UF del " + fechaUF + " · Fuente: ")
+          );
+
+          const enlaceFuente = document.createElement("a");
+          enlaceFuente.href = tasaUF.source === "mindicador.cl"
+            ? "https://mindicador.cl/"
+            : "https://indicadores.cl/api/";
+          enlaceFuente.target = "_blank";
+          enlaceFuente.rel = "noopener noreferrer";
+          enlaceFuente.textContent = tasaUF.source || "indicadores.cl";
+          enlaceFuente.style.textDecoration = "underline";
+          enlaceFuente.style.textUnderlineOffset = "2px";
+          conversion.appendChild(enlaceFuente);
 
 
           conversion.style.display =
