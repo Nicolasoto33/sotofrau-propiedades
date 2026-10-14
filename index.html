@@ -4769,71 +4769,27 @@ function inicializarBuscadorPropiedades() {
 
   function cargarUFBuscador() {
 
-    if (
-      promesaUFBuscador
-    ) {
+    if (promesaUFBuscador) {
       return promesaUFBuscador;
     }
 
-
-    if (
-      typeof obtenerValorUF ===
-      "function"
-    ) {
-
-      promesaUFBuscador =
-        obtenerValorUF();
-
+    if (typeof obtenerValorUF === "function") {
+      promesaUFBuscador = obtenerValorUF();
       return promesaUFBuscador;
-
     }
 
+    if (window.PreciosUF && typeof window.PreciosUF.fetchRate === "function") {
+      promesaUFBuscador = window.PreciosUF.fetchRate()
+        .then(function (rate) {
+          return rate.value;
+        })
+        .catch(function () {
+          return null;
+        });
+      return promesaUFBuscador;
+    }
 
-    promesaUFBuscador =
-      fetch(
-        "https://mindicador.cl/api/uf"
-      )
-        .then(
-          function (respuesta) {
-
-            if (
-              !respuesta.ok
-            ) {
-              return null;
-            }
-
-
-            return respuesta.json();
-
-          }
-        )
-        .then(
-          function (datos) {
-
-            if (
-              !datos ||
-              !Array.isArray(
-                datos.serie
-              ) ||
-              !datos.serie[0]
-            ) {
-              return null;
-            }
-
-
-            return Number(
-              datos.serie[0].valor
-            );
-
-          }
-        )
-        .catch(
-          function () {
-            return null;
-          }
-        );
-
-
+    promesaUFBuscador = Promise.resolve(null);
     return promesaUFBuscador;
 
   }

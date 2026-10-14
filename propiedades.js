@@ -25,69 +25,21 @@ function obtenerValorUF() {
     return promesaValorUF;
   }
 
+  const cargaUF = window.PreciosUF && typeof window.PreciosUF.fetchRate === "function"
+    ? window.PreciosUF.fetchRate().then(function (rate) {
+        return rate.value;
+      })
+    : Promise.reject(new Error("Conversor UF no disponible."));
 
-  promesaValorUF = fetch(
-    "https://mindicador.cl/api/uf"
-  )
-    .then(
-      function(respuesta) {
-
-        if (!respuesta.ok) {
-          throw new Error(
-            "No fue posible obtener el valor de la UF."
-          );
-        }
-
-        return respuesta.json();
-
-      }
-    )
-    .then(
-      function(datos) {
-
-        if (
-          !datos ||
-          !Array.isArray(datos.serie) ||
-          datos.serie.length === 0 ||
-          !datos.serie[0].valor
-        ) {
-
-          throw new Error(
-            "El valor de la UF no está disponible."
-          );
-
-        }
-
-
-        return Number(
-          datos.serie[0].valor
-        );
-
-      }
-    )
-    .catch(
-      function(error) {
-
-        console.warn(
-          "Conversión UF/CLP no disponible:",
-          error
-        );
-
-        return null;
-
-      }
-    );
-
+  promesaValorUF = cargaUF.catch(function (error) {
+    console.warn("Conversión UF/CLP no disponible:", error);
+    return null;
+  });
 
   return promesaValorUF;
 
 }
 
-
-
-/* =====================================================
-   FORMATEAR CLP
-===================================================== */
 
 function formatearCLP(valor) {
 
