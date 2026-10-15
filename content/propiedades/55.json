@@ -1,0 +1,56 @@
+{
+  "superficie": "52 m².",
+  "orientacion": "Poniente.",
+  "areasComunes": [
+    "🌳 Jardines y áreas verdes bien mantenidos"
+  ],
+  "estado": "disponible",
+  "precio": "$118.000.000",
+  "gastosComunes": "Entre $80.000 y $100.000 mensuales aprox.",
+  "caracteristicas": [
+    "🛏️ 2 dormitorios.",
+    "🚿 1 baño.",
+    "📐 Superficie informada de 52 m².",
+    "🍳 Cocina amoblada.",
+    "🏢 Ubicado en el piso 5.",
+    "☀️ Orientación poniente.",
+    "🚗 1 estacionamiento.",
+    "Depto Remodelado"
+  ],
+  "descripcion": [
+    "Comodidad y conectividad en un entorno tranquilo de Viña del Mar. Este departamento de 52 m², ubicado en calle Limache, ofrece una alternativa para vivir o evaluar como inversión, con acceso cercano a transporte público, educación, salud y comercio.\n\nSituado en el piso 5 y con orientación poniente, cuenta con dos dormitorios, un baño y cocina amoblada. La propiedad incluye un estacionamiento y admite mascotas, sumando comodidad para tu día a día.\n\nEl condominio destaca por su ambiente residencial y familiar, sus jardines bien mantenidos y la conserjería y seguridad las 24 horas.\n\nSu ubicación facilita la conexión con locomoción colectiva y Metro, además de estar cerca del Hospital Dr. Gustavo Fricke, Duoc UC, Colegio Seminario San Rafael, supermercados y servicios.\n\nContacta a Soto Frau Propiedades para recibir más información y coordinar una visita."
+  ],
+  "fotos": [
+    "/propiedades/55/1.png",
+    "/propiedades/55/2.png",
+    "/propiedades/55/3.png",
+    "/propiedades/55/4.png",
+    "/propiedades/55/5.png",
+    "/propiedades/55/6.png",
+    "/propiedades/55/7.png",
+    "/propiedades/55/8.png",
+    "/propiedades/55/9.png"
+  ],
+  "direccion": "Calle Limache.",
+  "whatsapp": "Hola, vi en Soto Frau Propiedades el departamento en venta en calle Limache, Viña del Mar, por $118.000.000, de 52 m², con 2 dormitorios, 1 baño y estacionamiento. Me gustaría recibir más información y coordinar una visita.",
+  "estacionamientos": 1,
+  "banos": 1,
+  "imagen": "/propiedades/55/2.png",
+  "tipoPropiedad": "Departamento",
+  "publicada": true,
+  "piso": "Piso 5.",
+  "operacion": "Venta",
+  "dormitorios": 2,
+  "titulo": "Título Departamento en venta en calle Limache, Viña del Mar · 2 dormitorios, estacionamiento y excelente conectividad",
+  "id": 55,
+  "estadoTexto": "Disponible",
+  "ubicacion": "Sector calle Limache · Viña del Mar.",
+  "conectividad": [
+    "📍 Ubicado en calle Limache, Viña del Mar.",
+    "🚌 Acceso cercano a locomoción colectiva.",
+    "🚇 Buena conexión con Metro.",
+    "🏥 Cercano al Hospital Dr. Gustavo Fricke.",
+    "🎓 Próximo a Duoc UC y al Colegio Seminario San Rafael.",
+    "🛒 Cercano a supermercados, comercio y servicios."
+  ]
+}
