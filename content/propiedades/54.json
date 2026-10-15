@@ -1,0 +1,55 @@
+{
+  "superficie": "90 m²",
+  "orientacion": "Oriente",
+  "areasComunes": [
+    "🚗 Estacionamientos comunitarios.",
+    "🔥 Quinchos",
+    "🌿 Parque Privado",
+    "🎉 Sala multiuso."
+  ],
+  "estado": "disponible",
+  "precio": "$120.000.000",
+  "gastosComunes": "$115.000",
+  "caracteristicas": [
+    "🛏️ 3 dormitorios.",
+    "🚿 1 baño.",
+    "📐 Superficie informada de 90 m².",
+    "🛋️ Posibilidad de compra amoblado o sin amoblar.",
+    "🚗 Estacionamientos comunitarios.",
+    "bodega"
+  ],
+  "bodegas": 1,
+  "descripcion": [
+    "Espacio para vivir a tu manera en Quinta Claude. Este departamento de 90 m² y tres dormitorios ofrece una alternativa para quienes buscan amplitud y buena conectividad en Viña del Mar.\n\nUbicado en Jackson, Torre Z, cuenta con un baño y la posibilidad de adquirirse amoblado o sin amoblar, según acuerdo. Las fotografías muestran la propiedad sin muebles, permitiendo apreciar sus espacios e imaginar cómo adaptarlos a tu estilo.\n\nEl conjunto dispone de estacionamientos comunitarios y presenta buena conectividad hacia Viña del Mar y Quilpué, facilitando los desplazamientos entre ambas ciudades.\n\nDisponible en venta por $120.000.000. Contacta a Soto Frau Propiedades para conocer las condiciones y coordinar una visita."
+  ],
+  "fotos": [
+    "/propiedades/54/1.png",
+    "/propiedades/54/2.png",
+    "/propiedades/54/3.png",
+    "/propiedades/54/4.png",
+    "/propiedades/54/5.png",
+    "/propiedades/54/6.png",
+    "/propiedades/54/7.png",
+    "/propiedades/54/8.png",
+    "/propiedades/54/9.png",
+    "/propiedades/54/10.png",
+    "/propiedades/54/11.jpeg",
+    "/propiedades/54/12.jpeg"
+  ],
+  "direccion": "Jackson, Torre Z, Quinta Claude.",
+  "whatsapp": "Hola, vi en Soto Frau Propiedades el departamento en venta en Quinta Claude, Viña del Mar, por $120.000.000, de 3 dormitorios y 90 m². Me gustaría recibir más información sobre la opción amoblada o sin amoblar y coordinar una visita.",
+  "banos": 1,
+  "imagen": "/propiedades/54/2.png",
+  "tipoPropiedad": "Departamento",
+  "publicada": true,
+  "piso": "Piso 16",
+  "operacion": "Venta",
+  "dormitorios": 3,
+  "titulo": "Departamento en venta en Quinta Claude, Viña del Mar · 3 dormitorios y 90 m² · Amoblado o sin amoblar",
+  "id": 54,
+  "estadoTexto": "Disponible",
+  "ubicacion": "Quinta Claude · Viña del Mar.",
+  "conectividad": [
+    "Buena conectividad hacia distintos sectores de Viña del Mar."
+  ]
+}
