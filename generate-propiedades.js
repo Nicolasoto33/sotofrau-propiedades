@@ -725,8 +725,7 @@ function obtenerDescripcionSocial(
 ===================================================== */
 
 function obtenerImagenPrincipal(
-  propiedad,
-  versionSocial
+  propiedad
 ) {
 
   const rutaImagen =
@@ -735,32 +734,37 @@ function obtenerImagenPrincipal(
     );
 
 
-  let urlImagen =
-    dominio +
-    "/" +
-    rutaImagen;
-
-
   /*
-    Agregar versión automática
-    para romper caché antigua
-    de WhatsApp / Meta.
+    Usar Netlify Image CDN para la imagen social.
+
+    Esto entrega a WhatsApp / Facebook una imagen:
+    - JPEG
+    - 1200 x 630 px
+    - optimizada y mucho más liviana que las fotos originales
+
+    La fuente sigue siendo la imagen principal elegida
+    para cada propiedad.
   */
 
-  if (
-    versionSocial
-  ) {
-
-    urlImagen +=
-      "?v=" +
-      encodeURIComponent(
-        versionSocial
-      );
-
-  }
+  const rutaFuente =
+    "/" +
+    normalizarRutaImagen(
+      rutaImagen
+    );
 
 
-  return urlImagen;
+  return (
+    dominio +
+    "/.netlify/images?url=" +
+    encodeURIComponent(
+      rutaFuente
+    ) +
+    "&w=1200" +
+    "&h=630" +
+    "&fit=cover" +
+    "&fm=jpg" +
+    "&q=82"
+  );
 
 }
 
@@ -1022,8 +1026,7 @@ function generarPaginaPropiedad(
 
   const imagen =
     obtenerImagenPrincipal(
-      propiedad,
-      versionSocial
+      propiedad
     );
 
 
