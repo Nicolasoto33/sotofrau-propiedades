@@ -16,27 +16,38 @@
   - simplemente no se muestra la conversión
 */
 
-let promesaValorUF = null;
-
-
 function obtenerValorUF() {
 
-  if (promesaValorUF) {
-    return promesaValorUF;
-  }
+  const cargaUF =
+    window.PreciosUF &&
+    typeof window.PreciosUF.fetchRate === "function"
+      ? window.PreciosUF.fetchRate()
+          .then(
+            function(rate) {
 
-  const cargaUF = window.PreciosUF && typeof window.PreciosUF.fetchRate === "function"
-    ? window.PreciosUF.fetchRate().then(function (rate) {
-        return rate.value;
-      })
-    : Promise.reject(new Error("Conversor UF no disponible."));
+              return rate.value;
 
-  promesaValorUF = cargaUF.catch(function (error) {
-    console.warn("Conversión UF/CLP no disponible:", error);
-    return null;
-  });
+            }
+          )
+      : Promise.reject(
+          new Error(
+            "Conversor UF no disponible."
+          )
+        );
 
-  return promesaValorUF;
+
+  return cargaUF.catch(
+    function(error) {
+
+      console.warn(
+        "Conversión UF/CLP no disponible:",
+        error
+      );
+
+      return null;
+
+    }
+  );
 
 }
 
