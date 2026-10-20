@@ -2620,25 +2620,31 @@ document.addEventListener("DOMContentLoaded", function () {
      SOLO PARA PROPIEDADES EN VENTA
   ===================================================== */
 
-  let promesaValorUF = null;
-
-
   function obtenerValorUF() {
 
-    if (promesaValorUF) {
-      return promesaValorUF;
-    }
+    const cargaUF =
+      window.PreciosUF &&
+      typeof window.PreciosUF.fetchRate === "function"
+        ? window.PreciosUF.fetchRate()
+        : Promise.reject(
+            new Error(
+              "Conversor UF no disponible."
+            )
+          );
 
-    const cargaUF = window.PreciosUF && typeof window.PreciosUF.fetchRate === "function"
-      ? window.PreciosUF.fetchRate()
-      : Promise.reject(new Error("Conversor UF no disponible."));
 
-    promesaValorUF = cargaUF.catch(function(error) {
-      console.warn("Conversión UF/CLP no disponible:", error);
-      return null;
-    });
+    return cargaUF.catch(
+      function(error) {
 
-    return promesaValorUF;
+        console.warn(
+          "Conversión UF/CLP no disponible:",
+          error
+        );
+
+        return null;
+
+      }
+    );
 
   }
 
