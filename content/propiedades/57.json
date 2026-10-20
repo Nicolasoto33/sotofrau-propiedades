@@ -1,0 +1,62 @@
+{
+  "superficie": "80 m².",
+  "areasComunes": [
+    "🌳 Jardines y senderos interiores.",
+    "🛝 Juegos infantiles.",
+    "🚗 Estacionamientos de visita."
+  ],
+  "estado": "disponible",
+  "precio": "$600.000 mensuales.",
+  "gastosComunes": "$98.000 mensuales aprox.",
+  "caracteristicas": [
+    "📐 Superficie de 80 m².",
+    "🛏️ 2 dormitorios.",
+    "🚿 1 baño.",
+    "🏢 Ubicado en primer piso.",
+    "☀️ Amplio living-comedor con grandes ventanales.",
+    "🪟 Ventanas termopanel.",
+    "🍳 Cocina independiente amoblada.",
+    "🧺 Conexión para lavadora.",
+    "🚗 1 estacionamiento.",
+    "🐾 Se acepta mascota pequeña."
+  ],
+  "descripcion": [
+    "Amplitud, luz natural y un entorno residencial con jardines en el sector Poniente de Viña del Mar. Este departamento de 80 m², ubicado en 9 Norte 570, ofrece espacios cómodos y disponibilidad inmediata para tu próximo hogar.\n\nSituado en primer piso, cuenta con dos dormitorios, un baño y un amplio living-comedor con grandes ventanales. Las ventanas termopanel complementan la comodidad de sus espacios interiores.\n\nSu cocina independiente amoblada permite mantener un ambiente separado para cocinar y organizar el día a día. Además, dispone de conexión para lavadora e incluye un estacionamiento. Se acepta mascota pequeña.\n\nEl condominio cuenta con jardines, senderos interiores, juegos infantiles y estacionamientos de visita, junto con conserjería y seguridad las 24 horas.\n\nSu ubicación en 9 Norte permite acceder a comercio, restaurantes, servicios y distintos sectores de Viña del Mar. Contacta a Soto Frau Propiedades y coordina tu visita."
+  ],
+  "fotos": [
+    "/propiedades/57/1.jpeg",
+    "/propiedades/57/2.jpeg",
+    "/propiedades/57/3.jpeg",
+    "/propiedades/57/4.jpeg",
+    "/propiedades/57/5.jpeg",
+    "/propiedades/57/6.jpeg",
+    "/propiedades/57/7.jpeg",
+    "/propiedades/57/8.jpeg",
+    "/propiedades/57/9.jpeg"
+  ],
+  "direccion": "9 Norte 570.",
+  "requisitos": [
+    "Trabajadores dependientes: renta líquida mínima de $1.800.000 mensuales, equivalente a tres veces el canon.  Contrato de trabajo vigente.  Tres últimas liquidaciones de sueldo.  Doce últimas cotizaciones de AFP.  Informe DICOM.  Trabajadores independientes: carpeta tributaria.  Antecedentes que acrediten ingresos.  Informe DICOM.  Toda la documentación queda sujeta a evaluación."
+  ],
+  "whatsapp": "Hola, vi en Soto Frau Propiedades el departamento en arriendo en 9 Norte 570, Viña del Mar, por $600.000 mensuales más gastos comunes, de 80 m², con 2 dormitorios y estacionamiento. Me gustaría consultar disponibilidad y coordinar una visita.",
+  "estacionamientos": 1,
+  "banos": 1,
+  "imagen": "/propiedades/57/1.jpeg",
+  "tipoPropiedad": "Departamento",
+  "publicada": true,
+  "piso": "Primer piso.",
+  "operacion": "Arriendo",
+  "dormitorios": 2,
+  "titulo": "Departamento en arriendo en sector Poniente de Viña del Mar · 80 m², 2 dormitorios y estacionamiento",
+  "id": 57,
+  "mascotas": "Mascotas pequeñas",
+  "estadoTexto": "Disponible",
+  "ubicacion": "Sector Poniente · Viña del Mar.",
+  "totalMensual": "$698.000 aprox., incluyendo arriendo y gastos comunes.",
+  "conectividad": [
+    "📍 Ubicado en 9 Norte, sector Poniente de Viña del Mar.",
+    "🛍️ Acceso cercano a comercio y servicios.",
+    "🍽️ Cercano a restaurantes.",
+    "🚗 Conexión hacia distintos sectores de la ciudad."
+  ]
+}
