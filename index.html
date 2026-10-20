@@ -3148,10 +3148,10 @@
             </label>
             <select id="filtroOrden">
               <option value="recomendadas">
-                Recomendadas
+                Disponibles primero
               </option>
               <option value="recientes">
-                Más recientes
+                Últimas incorporadas
               </option>
               <option value="precioAsc">
                 Menor precio
@@ -4307,10 +4307,35 @@ function inicializarBuscadorPropiedades() {
       i++
     ) {
 
-      const numero =
-        numeroChileno(
+      if (
+        campos[i] === undefined ||
+        campos[i] === null ||
+        campos[i] === ""
+      ) {
+        continue;
+      }
+
+
+      const textoCampo =
+        String(
           campos[i]
         );
+
+
+      const coincidenciaMetros =
+        textoCampo.match(
+          /(\d+(?:[.,]\d+)?)\s*m(?:²|2)/i
+        );
+
+
+      const numero =
+        coincidenciaMetros
+          ? numeroChileno(
+              coincidenciaMetros[1]
+            )
+          : numeroChileno(
+              textoCampo
+            );
 
 
       if (
@@ -4503,6 +4528,28 @@ function inicializarBuscadorPropiedades() {
 
 
     if (
+      /\b\d+\s+estacionamiento(?:s)?\b/.test(
+        texto
+      ) ||
+      texto.includes("con estacionamiento") ||
+      texto.includes("estacionamiento privado") ||
+      texto.includes("estacionamiento techado") ||
+      texto.includes("estacionamiento tipo box") ||
+      texto.includes("estacionamiento incluido")
+    ) {
+      return true;
+    }
+
+
+    if (
+      texto.includes("estacionamientos de visita") ||
+      texto.includes("estacionamiento de visita")
+    ) {
+      return null;
+    }
+
+
+    if (
       texto.includes("estacionamiento")
     ) {
       return true;
@@ -4516,6 +4563,31 @@ function inicializarBuscadorPropiedades() {
 
   function tieneBodega(propiedad) {
 
+    if (
+      propiedad.bodegas !== undefined &&
+      propiedad.bodegas !== null &&
+      propiedad.bodegas !== ""
+    ) {
+
+      const cantidad =
+        Number(
+          propiedad.bodegas
+        );
+
+
+      if (
+        Number.isFinite(
+          cantidad
+        )
+      ) {
+
+        return cantidad > 0;
+
+      }
+
+    }
+
+
     const texto =
       textoPropiedad(
         propiedad
@@ -4527,6 +4599,16 @@ function inicializarBuscadorPropiedades() {
       texto.includes("no cuenta con bodega")
     ) {
       return false;
+    }
+
+
+    if (
+      /\b\d+\s+bodega(?:s)?\b/.test(
+        texto
+      ) ||
+      texto.includes("con bodega")
+    ) {
+      return true;
     }
 
 
