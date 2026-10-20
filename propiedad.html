@@ -43,6 +43,10 @@
     content="https://sotofraupropiedades.cl/android-chrome-512x512.png"
   >
 
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
+
   <meta
     id="ogImageAlt"
     property="og:image:alt"
@@ -2093,6 +2097,8 @@
             id="mainImage"
             src=""
             alt=""
+            decoding="async"
+            fetchpriority="high"
           >
 
 
@@ -3900,6 +3906,90 @@ document.addEventListener("DOMContentLoaded", function () {
      GALERÍA
   ===================================================== */
 
+  function optimizarImagen(
+    ruta,
+    ancho,
+    alto,
+    recortar
+  ) {
+
+    if (!ruta) {
+      return "";
+    }
+
+
+    const texto =
+      String(
+        ruta
+      );
+
+
+    /*
+      Si en el futuro una imagen fuese remota,
+      se conserva sin modificar para no depender
+      de una lista externa de dominios.
+    */
+
+    if (
+      /^https?:\/\//i.test(
+        texto
+      )
+    ) {
+      return texto;
+    }
+
+
+    const fuente =
+      "/" +
+      texto.replace(
+        /^\/+/, 
+        ""
+      );
+
+
+    let url =
+      "/.netlify/images?url=" +
+      encodeURIComponent(
+        fuente
+      ) +
+      "&w=" +
+      Number(
+        ancho || 1600
+      );
+
+
+    if (
+      alto
+    ) {
+
+      url +=
+        "&h=" +
+        Number(
+          alto
+        );
+
+    }
+
+
+    if (
+      recortar
+    ) {
+
+      url +=
+        "&fit=cover";
+
+    }
+
+
+    url +=
+      "&fm=webp&q=84";
+
+
+    return url;
+
+  }
+
+
   function cargarGaleria() {
 
     const thumbnails =
@@ -3997,7 +4087,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
         imagen.src =
-          foto;
+          optimizarImagen(
+            foto,
+            260,
+            180,
+            true
+          );
 
 
         imagen.alt =
@@ -4008,6 +4103,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
         imagen.loading =
           "lazy";
+
+
+        imagen.decoding =
+          "async";
 
 
         boton.appendChild(
@@ -4088,9 +4187,14 @@ document.addEventListener("DOMContentLoaded", function () {
     document.getElementById(
       "mainImage"
     ).src =
-      fotos[
-        numero - 1
-      ];
+      optimizarImagen(
+        fotos[
+          numero - 1
+        ],
+        1600,
+        null,
+        false
+      );
 
 
     document.getElementById(
