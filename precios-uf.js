@@ -1,7 +1,7 @@
 (function (root) {
   "use strict";
   const zone = "America/Santiago";
-  const cacheKey = "sotofrau-uf-v2";
+  const cacheKey = "sotofrau-uf-v3";
   const targets = new Map();
   let pending;
   let current;
@@ -33,7 +33,7 @@
 
   function validLatestRate(rate, today = day()) {
     return rate && /^\d{4}-\d{2}-\d{2}$/.test(rate.date) &&
-      rate.date <= today && Number.isFinite(rate.value) && rate.value > 0;
+      rate.date === today && Number.isFinite(rate.value) && rate.value > 0;
   }
 
   async function fetchRate() {
@@ -47,30 +47,49 @@
     pending = (async () => {
       const providers = [
         async signal => {
-          const response = await root.fetch("https://indicadores.cl/api/v1/uf.json", { signal });
+          const response = await root.fetch(
+            "https://mindicador.cl/api/uf?ts=" + Date.now(),
+            { signal, cache: "no-store" }
+          );
           if (!response.ok) throw new Error("UF unavailable");
           const data = await response.json();
-          const rate = data && data.indicador === "uf"
-            ? { date: data.fecha, value: Number(data.valor), source: "indicadores.cl" }
-            : null;
-          if (!validLatestRate(rate, today)) throw new Error("Invalid UF response");
-          return rate;
-        },
-        async signal => {
-          const response = await root.fetch("https://mindicador.cl/api/uf", { signal });
-          if (!response.ok) throw new Error("UF unavailable");
-          const data = await response.json();
-          if (data.codigo !== "uf" || !Array.isArray(data.serie)) throw new Error("Invalid UF response");
+          if (data.codigo !== "uf" || !Array.isArray(data.serie)) {
+            throw new Error("Invalid UF response");
+          }
           const entry = data.serie.find(item => {
-            const date = typeof item.fecha === "string" && item.fecha.match(/^(\d{4}-\d{2}-\d{2})(?:T.*)?$/);
-            return date && date[1] <= today && Number.isFinite(Number(item.valor)) && Number(item.valor) > 0;
+            const date = typeof item.fecha === "string" &&
+              item.fecha.match(/^(\d{4}-\d{2}-\d{2})(?:T.*)?$/);
+            return date && date[1] === today &&
+              Number.isFinite(Number(item.valor)) &&
+              Number(item.valor) > 0;
           });
           const rate = entry && {
             date: entry.fecha.slice(0, 10),
             value: Number(entry.valor),
             source: "mindicador.cl"
           };
-          if (!validLatestRate(rate, today)) throw new Error("UF unavailable");
+          if (!validLatestRate(rate, today)) {
+            throw new Error("UF vigente no disponible en mindicador.cl");
+          }
+          return rate;
+        },
+        async signal => {
+          const response = await root.fetch(
+            "https://indicadores.cl/api/v1/uf.json?ts=" + Date.now(),
+            { signal, cache: "no-store" }
+          );
+          if (!response.ok) throw new Error("UF unavailable");
+          const data = await response.json();
+          const rate = data && data.indicador === "uf"
+            ? {
+                date: String(data.fecha || "").slice(0, 10),
+                value: Number(data.valor),
+                source: "indicadores.cl"
+              }
+            : null;
+          if (!validLatestRate(rate, today)) {
+            throw new Error("UF vigente no disponible en indicadores.cl");
+          }
           return rate;
         }
       ];
