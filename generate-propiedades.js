@@ -11,6 +11,18 @@ const dominio =
   "https://sotofraupropiedades.cl";
 
 
+/*
+  Versión del esquema de vista previa social.
+
+  Se incrementa cuando cambia la forma en que
+  generamos Open Graph, para obligar a WhatsApp /
+  Meta a solicitar una URL nueva y no reutilizar
+  una vista previa antigua.
+*/
+const VERSION_ESQUEMA_SOCIAL =
+  "social-preview-v3";
+
+
 const carpetaPropiedades =
   path.join(
     __dirname,
@@ -160,6 +172,17 @@ function generarVersionSocial(
     crypto.createHash(
       "sha256"
     );
+
+
+  /*
+    Incluir la versión del esquema para que
+    los cambios técnicos de la vista previa
+    también renueven el parámetro ?v=.
+  */
+
+  hash.update(
+    VERSION_ESQUEMA_SOCIAL
+  );
 
 
   /*
