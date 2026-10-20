@@ -326,71 +326,6 @@ async function obtenerConversionPrecio(
 
 
 /* =====================================================
-   MOSTRAR CONVERSIÓN EN TARJETA
-===================================================== */
-
-function cargarConversionTarjeta(
-  propiedad,
-  tarjeta
-) {
-
-  if (
-    !propiedad ||
-    String(
-      propiedad.operacion || ""
-    ).toLowerCase() !== "venta"
-  ) {
-
-    return;
-
-  }
-
-
-  const contenedorConversion =
-    tarjeta.querySelector(
-      ".price-conversion"
-    );
-
-
-  if (
-    !contenedorConversion
-  ) {
-
-    return;
-
-  }
-
-
-  obtenerConversionPrecio(
-    propiedad
-  ).then(
-    function(texto) {
-
-      if (!texto) {
-
-        contenedorConversion.style.display =
-          "none";
-
-        return;
-
-      }
-
-
-      contenedorConversion.textContent =
-        texto;
-
-
-      contenedorConversion.style.display =
-        "block";
-
-    }
-  );
-
-}
-
-
-
-/* =====================================================
    GENERAR TARJETAS EN INICIO
 ===================================================== */
 
@@ -634,37 +569,31 @@ function cargarPropiedades() {
       }
 
 
-      /*
-        La conversión queda inicialmente oculta.
+      if (
+        imagenPrincipal &&
+        !/^https?:\/\//i.test(
+          imagenPrincipal
+        )
+      ) {
 
-        Solo se mostrará si:
-        - la operación es Venta
-        - se obtiene correctamente el valor UF
-      */
+        const fuenteImagen =
+          "/" +
+          String(
+            imagenPrincipal
+          ).replace(
+            /^\/+/, 
+            ""
+          );
 
-      const mostrarEspacioConversion =
-        String(
-          propiedad.operacion || ""
-        ).toLowerCase() === "venta";
 
+        imagenPrincipal =
+          "/.netlify/images?url=" +
+          encodeURIComponent(
+            fuenteImagen
+          ) +
+          "&w=760&h=520&fit=cover&fm=webp&q=82";
 
-      const bloqueConversion =
-        mostrarEspacioConversion
-          ? `
-            <div
-              class="price-conversion"
-              style="
-                display:none;
-                margin-top:4px;
-                margin-bottom:2px;
-                color:#6b7781;
-                font-size:13px;
-                font-weight:600;
-                line-height:1.3;
-              "
-            ></div>
-          `
-          : "";
+      }
 
 
       tarjeta.innerHTML = `
@@ -710,9 +639,6 @@ function cargarPropiedades() {
           </div>
 
 
-          ${bloqueConversion}
-
-
           <div class="features">
 
             ${caracteristicas}
@@ -739,14 +665,9 @@ function cargarPropiedades() {
 
 
       /*
-        CARGAR CONVERSIÓN
-        SOLO PARA VENTAS
+        CARGAR UNA SOLA EQUIVALENCIA UF / CLP,
+        CON FECHA DEL VALOR UTILIZADO.
       */
-
-      cargarConversionTarjeta(
-        propiedad,
-        tarjeta
-      );
 
       if (window.PreciosUF) {
         window.PreciosUF.mount(
