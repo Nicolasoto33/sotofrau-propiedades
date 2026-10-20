@@ -49,7 +49,7 @@
   "banos": 1,
   "imagen": "/propiedades/52/1.jpeg",
   "tipoPropiedad": "Departamento",
-  "publicada": true,
+  "publicada": false,
   "operacion": "Arriendo",
   "dormitorios": 3,
   "titulo": "Departamento en arriendo en Reñaca Alto, Viña del Mar · 3 dormitorios, balcón y estacionamiento techado",
