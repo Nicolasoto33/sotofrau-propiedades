@@ -47,7 +47,7 @@
   "banos": 1,
   "imagen": "/propiedades/46/1.jpeg",
   "tipoPropiedad": "Departamento",
-  "publicada": true,
+  "publicada": false,
   "piso": "Piso 23.",
   "operacion": "Venta",
   "dormitorios": 1,
