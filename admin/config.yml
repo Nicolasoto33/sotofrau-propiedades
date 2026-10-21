@@ -30,7 +30,10 @@ collections:
     label: "🏠 Propiedades"
     label_singular: "Propiedad"
 
-    description: "Administra las propiedades publicadas en Sotofrau Propiedades."
+    description: "Guarda tus cambios como borrador y revísalos. Publicar aquí actualiza contenido-borradores; para verlos en la web deben pasar a main y al despliegue de Netlify."
+    editor:
+      preview: true
+    preview_path: "propiedad.html?id={{id}}"
 
     folder: "content/propiedades"
 
@@ -90,18 +93,19 @@ collections:
         widget: "number"
         value_type: "int"
         min: 1
-        hint: "Número único de la propiedad. Este número se utiliza también en la URL de la ficha."
+        hint: "Completa un ID único antes de subir fotos. No cambies el ID de una propiedad existente: determina su URL y carpeta."
 
       - label: "Título"
         name: "titulo"
         widget: "string"
-        hint: "Título principal que verá el visitante."
+        pattern: [".*\\S.*", "Escribe un título; no uses solo espacios."]
+        hint: "Título principal que verá el visitante. Describe tipo de inmueble, sector y atributo principal."
 
       - label: "Visible en la página web"
         name: "publicada"
         widget: "boolean"
         default: true
-        hint: "Desactiva esta opción para ocultar la propiedad sin eliminarla."
+        hint: "Desactiva para ocultar sin eliminar. Activar esta opción no publica automáticamente el sitio: requiere pasar los cambios a main y desplegar."
 
       # =====================================================
       # OPERACIÓN Y ESTADO
@@ -269,32 +273,27 @@ collections:
           - "Consultar"
 
       # =====================================================
-      # IMAGEN PRINCIPAL
-      # =====================================================
-
-      - label: "📷 Imagen principal"
-        name: "imagen"
-        widget: "image"
-        required: false
-        choose_url: false
-        hint: "Fotografía principal que representará la propiedad."
-
-      # =====================================================
       # GALERÍA DE FOTOGRAFÍAS
       # =====================================================
 
       - label: "📸 Galería de fotografías"
         name: "fotos"
-        widget: "list"
+        widget: "sotofrau-gallery"
         required: false
-        summary: "{{fields.foto}}"
-        hint: "Agrega todas las fotografías de la publicación."
+        hint: "Selecciona todas las fotos en una sola operación. Reordena con las flechas y elige abajo la imagen principal. Guarda el borrador al terminar."
 
-        field:
-          label: "Foto"
-          name: "foto"
-          widget: "image"
-          choose_url: false
+      # =====================================================
+      # IMAGEN PRINCIPAL
+      # =====================================================
+
+      - label: "📷 Imagen principal"
+        name: "imagen"
+        widget: "sotofrau-cover"
+        required: false
+        choose_url: false
+        media_library:
+          allow_multiple: false
+        hint: "Portada del catálogo. Puedes elegir una foto de la galería sin volver a subirla. Es independiente del orden de la galería."
 
       # =====================================================
       # CARACTERÍSTICAS VISIBLES
@@ -303,6 +302,7 @@ collections:
       - label: "Características"
         name: "caracteristicas"
         widget: "list"
+        collapsed: true
         required: false
         hint: "Ejemplo: 🛏 3 dormitorios, 🚿 2 baños, 📐 80 m²."
 
@@ -318,6 +318,7 @@ collections:
       - label: "Descripción"
         name: "descripcion"
         widget: "list"
+        collapsed: true
         required: false
         hint: "Cada elemento corresponde a un párrafo de la descripción."
 
@@ -333,6 +334,7 @@ collections:
       - label: "Información importante"
         name: "informacionImportante"
         widget: "list"
+        collapsed: true
         required: false
         hint: "Condiciones, valores, restricciones o elementos destacados."
 
@@ -348,6 +350,7 @@ collections:
       - label: "Áreas comunes"
         name: "areasComunes"
         widget: "list"
+        collapsed: true
         required: false
         hint: "Ejemplo: 🏊 Piscina, 🔥 Quinchos, 💪 Gimnasio."
 
@@ -363,6 +366,7 @@ collections:
       - label: "Conectividad"
         name: "conectividad"
         widget: "list"
+        collapsed: true
         required: false
         hint: "Locomoción, servicios, universidades, playas, avenidas u otros puntos cercanos."
 
@@ -378,6 +382,7 @@ collections:
       - label: "Requisitos de arriendo"
         name: "requisitos"
         widget: "list"
+        collapsed: true
         required: false
         hint: "Déjalo vacío en publicaciones de venta si no corresponde."
 
