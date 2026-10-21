@@ -2,76 +2,904 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="robots" content="noindex, nofollow, noarchive">
+  <meta name="theme-color" content="#0d2f49">
 
   <title>Panel de Administración | Sotofrau Propiedades</title>
 
   <link rel="icon" href="/favicon-32x32.png">
 
   <style>
+    :root {
+      --sf-azul: #0d2f49;
+      --sf-azul-2: #164968;
+      --sf-naranja: #e88925;
+      --sf-naranja-hover: #d97818;
+      --sf-gris: #f4f7f9;
+      --sf-borde: #dde5ea;
+      --sf-texto: #34434e;
+      --sf-verde: #238b57;
+      --sf-sombra: 0 18px 50px rgba(13, 47, 73, .16);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     html,
     body {
       margin: 0;
-      padding: 0;
       min-height: 100%;
-      background: #f5f7f9;
-      font-family: Arial, Helvetica, sans-serif;
+      background: var(--sf-gris);
+      font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        Arial,
+        sans-serif;
+      color: var(--sf-texto);
+    }
+
+    body {
+      padding-bottom: env(safe-area-inset-bottom);
     }
 
     .admin-loading {
-      min-height: 100vh;
+      position: fixed;
+      inset: 0;
+      z-index: 9999999;
       display: flex;
       align-items: center;
       justify-content: center;
+      padding: 28px;
+      background:
+        radial-gradient(circle at top right, rgba(232,137,37,.12), transparent 34%),
+        linear-gradient(145deg, #f8fafb, #edf3f6);
       text-align: center;
-      padding: 24px;
-      box-sizing: border-box;
-      color: #0d2f49;
+      transition: opacity .28s ease, visibility .28s ease;
+    }
+
+    .admin-loading.is-hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .admin-loading-card {
+      width: min(430px, 100%);
+      padding: 38px 30px;
+      border: 1px solid rgba(13,47,73,.08);
+      border-radius: 22px;
+      background: rgba(255,255,255,.96);
+      box-shadow: var(--sf-sombra);
     }
 
     .admin-loading img {
-      width: 110px;
+      width: 150px;
       height: auto;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
     }
 
     .admin-loading h1 {
       margin: 0 0 8px;
-      font-size: 26px;
+      color: var(--sf-azul);
+      font-size: 27px;
+      line-height: 1.2;
+      letter-spacing: -.5px;
     }
 
     .admin-loading p {
       margin: 0;
-      color: #5f6f7c;
-      font-size: 15px;
+      color: #677783;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .admin-loading-badge {
+      display: inline-flex;
+      margin-top: 18px;
+      padding: 7px 11px;
+      border-radius: 999px;
+      background: #eef7f2;
+      color: #20714b;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .35px;
+      text-transform: uppercase;
+    }
+
+    .sf-admin-dock {
+      position: fixed;
+      right: 18px;
+      bottom: calc(18px + env(safe-area-inset-bottom));
+      z-index: 999999;
+      width: 235px;
+      border: 1px solid rgba(13,47,73,.1);
+      border-radius: 16px;
+      background: rgba(255,255,255,.97);
+      box-shadow: var(--sf-sombra);
+      overflow: hidden;
+      backdrop-filter: blur(12px);
+    }
+
+    .sf-admin-dock-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      width: 100%;
+      padding: 13px 14px;
+      border: 0;
+      background: var(--sf-azul);
+      color: white;
+      cursor: pointer;
+      font: inherit;
+      text-align: left;
+    }
+
+    .sf-admin-dock-header strong {
+      font-size: 13px;
+      line-height: 1.2;
+    }
+
+    .sf-admin-dock-header span {
+      font-size: 18px;
+      line-height: 1;
+      transition: transform .2s ease;
+    }
+
+    .sf-admin-dock.is-collapsed .sf-admin-dock-header span {
+      transform: rotate(180deg);
+    }
+
+    .sf-admin-dock-content {
+      display: grid;
+      gap: 8px;
+      padding: 10px;
+    }
+
+    .sf-admin-dock.is-collapsed .sf-admin-dock-content {
+      display: none;
+    }
+
+    .sf-admin-action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 39px;
+      padding: 9px 12px;
+      border: 1px solid var(--sf-borde);
+      border-radius: 9px;
+      background: white;
+      color: var(--sf-azul);
+      text-decoration: none;
+      font-size: 12px;
+      font-weight: 750;
+      cursor: pointer;
+      transition: .18s ease;
+    }
+
+    .sf-admin-action:hover {
+      border-color: var(--sf-naranja);
+      color: var(--sf-naranja-hover);
+      transform: translateY(-1px);
+    }
+
+    .sf-admin-action-primary {
+      border-color: var(--sf-naranja);
+      background: var(--sf-naranja);
+      color: white;
+    }
+
+    .sf-admin-action-primary:hover {
+      background: var(--sf-naranja-hover);
+      color: white;
+    }
+
+    .sf-admin-note {
+      padding: 9px 10px 3px;
+      color: #71808a;
+      font-size: 10.5px;
+      line-height: 1.45;
+      text-align: center;
+    }
+
+    .sf-help-backdrop {
+      position: fixed;
+      inset: 0;
+      z-index: 1000000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 22px;
+      background: rgba(5,24,38,.58);
+      backdrop-filter: blur(5px);
+    }
+
+    .sf-help-backdrop.is-open {
+      display: flex;
+    }
+
+    .sf-help {
+      width: min(620px, 100%);
+      max-height: min(720px, 90vh);
+      overflow: auto;
+      border-radius: 20px;
+      background: white;
+      box-shadow: 0 24px 70px rgba(0,0,0,.25);
+    }
+
+    .sf-help-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 24px 25px 18px;
+      border-bottom: 1px solid var(--sf-borde);
+    }
+
+    .sf-help-header h2 {
+      margin: 0 0 5px;
+      color: var(--sf-azul);
+      font-size: 22px;
+      line-height: 1.2;
+    }
+
+    .sf-help-header p {
+      margin: 0;
+      color: #6c7b85;
+      font-size: 13px;
+    }
+
+    .sf-help-close {
+      width: 38px;
+      height: 38px;
+      flex: 0 0 auto;
+      border: 1px solid var(--sf-borde);
+      border-radius: 9px;
+      background: white;
+      color: var(--sf-azul);
+      cursor: pointer;
+      font-size: 20px;
+    }
+
+    .sf-help-body {
+      padding: 22px 25px 26px;
+    }
+
+    .sf-help-steps {
+      display: grid;
+      gap: 12px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      counter-reset: steps;
+    }
+
+    .sf-help-steps li {
+      position: relative;
+      padding: 14px 14px 14px 50px;
+      border: 1px solid var(--sf-borde);
+      border-radius: 12px;
+      background: #fafcfd;
+      color: #45545e;
+      font-size: 13px;
+      line-height: 1.55;
+      counter-increment: steps;
+    }
+
+    .sf-help-steps li::before {
+      content: counter(steps);
+      position: absolute;
+      left: 13px;
+      top: 13px;
+      display: grid;
+      place-items: center;
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: var(--sf-azul);
+      color: white;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .sf-help-alert {
+      margin-top: 16px;
+      padding: 13px 14px;
+      border-radius: 11px;
+      background: #fff7ed;
+      color: #80511f;
+      font-size: 12px;
+      line-height: 1.5;
+    }
+
+    @media (max-width: 700px) {
+      .sf-admin-dock {
+        right: 10px;
+        left: 10px;
+        bottom: calc(10px + env(safe-area-inset-bottom));
+        width: auto;
+      }
+
+      .sf-admin-dock-content {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .sf-admin-note {
+        grid-column: 1 / -1;
+      }
+
+      .sf-help-backdrop {
+        padding: 10px;
+      }
+
+      .sf-help {
+        max-height: 92vh;
+        border-radius: 16px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <div class="admin-loading" id="admin-loading">
-    <div>
+  <div class="admin-loading" id="adminLoading" aria-live="polite">
+    <div class="admin-loading-card">
       <img src="/logo-sotofrau.png" alt="Sotofrau Propiedades">
       <h1>Panel de Administración</h1>
-      <p>Cargando Sotofrau Propiedades...</p>
+      <p>
+        Preparando propiedades, fotografías y flujo editorial.
+      </p>
+      <span class="admin-loading-badge">
+        Entorno de borradores
+      </span>
+    </div>
+  </div>
+
+  <div class="sf-admin-dock is-collapsed" id="sfAdminDock">
+    <button
+      class="sf-admin-dock-header"
+      id="sfAdminDockToggle"
+      type="button"
+      aria-expanded="false"
+      aria-controls="sfAdminDockContent"
+    >
+      <strong>Accesos rápidos</strong>
+      <span aria-hidden="true">⌃</span>
+    </button>
+
+    <div class="sf-admin-dock-content" id="sfAdminDockContent">
+      <a class="sf-admin-action sf-admin-action-primary" href="#/collections/propiedades/new">
+        + Nueva propiedad
+      </a>
+
+      <a class="sf-admin-action" href="#/collections/propiedades">
+        Ver propiedades
+      </a>
+
+      <a class="sf-admin-action" href="#/workflow">
+        Flujo editorial
+      </a>
+
+      <a class="sf-admin-action" href="/" target="_blank" rel="noopener">
+        Ver sitio web
+      </a>
+
+      <button class="sf-admin-action" id="sfHelpOpen" type="button">
+        Guía rápida
+      </button>
+
+      <div class="sf-admin-note">
+        Guardar en el panel no publica automáticamente en el sitio.
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="sf-help-backdrop"
+    id="sfHelpBackdrop"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="sfHelpTitle"
+  >
+    <div class="sf-help">
+      <div class="sf-help-header">
+        <div>
+          <h2 id="sfHelpTitle">Publicar una propiedad sin errores</h2>
+          <p>Checklist rápido de Sotofrau Propiedades.</p>
+        </div>
+
+        <button
+          class="sf-help-close"
+          id="sfHelpClose"
+          type="button"
+          aria-label="Cerrar guía"
+        >
+          ×
+        </button>
+      </div>
+
+      <div class="sf-help-body">
+        <ol class="sf-help-steps">
+          <li>
+            Usa un <strong>ID único</strong>. No reutilices el número de otra propiedad.
+          </li>
+          <li>
+            Revisa <strong>operación, estado, ubicación y precio</strong>. El precio siempre debe indicar $/CLP o UF.
+          </li>
+          <li>
+            Selecciona una <strong>imagen principal</strong>: será la foto más importante de la ficha y de las vistas previas al compartir.
+          </li>
+          <li>
+            Ordena la <strong>galería</strong> desde las mejores fotografías hacia las secundarias.
+          </li>
+          <li>
+            Completa características, descripción, conectividad y requisitos solo cuando correspondan.
+          </li>
+          <li>
+            Guarda el borrador y utiliza la <strong>vista previa</strong> antes de llevarlo a publicación.
+          </li>
+        </ol>
+
+        <div class="sf-help-alert">
+          Las fotografías nuevas se optimizan automáticamente al subirlas desde este panel:
+          se mantiene el encuadre original, se reduce el peso y se guardan en un formato web más eficiente.
+        </div>
+      </div>
     </div>
   </div>
 
   <script src="https://unpkg.com/decap-cms@3.15.1/dist/decap-cms.js"></script>
 
   <script>
-    window.addEventListener("load", function () {
-      const loading = document.getElementById("admin-loading");
+    (function () {
+      "use strict";
 
-      setTimeout(function () {
-        if (loading) {
-          loading.style.display = "none";
+      var previewStyles = `
+        :root {
+          --azul: #0d2f49;
+          --naranja: #e88925;
+          --borde: #e1e8ec;
+          --gris: #667680;
         }
-      }, 1200);
-    });
+
+        * {
+          box-sizing: border-box;
+        }
+
+        body {
+          margin: 0;
+          padding: 24px;
+          background: #f4f7f9;
+          font-family:
+            Inter,
+            -apple-system,
+            BlinkMacSystemFont,
+            "Segoe UI",
+            Arial,
+            sans-serif;
+          color: #35444f;
+        }
+
+        .sf-preview {
+          max-width: 980px;
+          margin: 0 auto;
+          overflow: hidden;
+          border: 1px solid var(--borde);
+          border-radius: 18px;
+          background: white;
+          box-shadow: 0 18px 45px rgba(13,47,73,.10);
+        }
+
+        .sf-preview-image {
+          width: 100%;
+          aspect-ratio: 16 / 9;
+          object-fit: cover;
+          display: block;
+          background: #e8eef2;
+        }
+
+        .sf-preview-image-empty {
+          display: grid;
+          place-items: center;
+          min-height: 300px;
+          background: linear-gradient(135deg, #eaf0f3, #dce7ed);
+          color: #71818b;
+          font-weight: 700;
+        }
+
+        .sf-preview-content {
+          padding: 30px;
+        }
+
+        .sf-preview-topline {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          gap: 8px;
+          margin-bottom: 13px;
+        }
+
+        .sf-preview-chip {
+          display: inline-flex;
+          padding: 6px 10px;
+          border-radius: 999px;
+          background: #eef3f6;
+          color: var(--azul);
+          font-size: 11px;
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: .4px;
+        }
+
+        .sf-preview-chip.status {
+          background: #eef8f2;
+          color: #227049;
+        }
+
+        .sf-preview-chip.hidden {
+          background: #fff1f0;
+          color: #9d413d;
+        }
+
+        .sf-preview h1 {
+          margin: 0 0 10px;
+          color: var(--azul);
+          font-size: clamp(28px, 5vw, 42px);
+          line-height: 1.08;
+          letter-spacing: -1px;
+        }
+
+        .sf-preview-location {
+          margin-bottom: 19px;
+          color: var(--gris);
+          font-size: 14px;
+        }
+
+        .sf-preview-price {
+          margin-bottom: 22px;
+          color: var(--azul);
+          font-size: 30px;
+          font-weight: 850;
+        }
+
+        .sf-preview-stats {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 9px;
+          margin-bottom: 24px;
+        }
+
+        .sf-preview-stat {
+          padding: 9px 12px;
+          border: 1px solid var(--borde);
+          border-radius: 9px;
+          background: #fafcfd;
+          font-size: 12px;
+          font-weight: 700;
+        }
+
+        .sf-preview-description {
+          display: grid;
+          gap: 12px;
+          color: #52616b;
+          font-size: 14px;
+          line-height: 1.7;
+        }
+
+        .sf-preview-description p {
+          margin: 0;
+        }
+
+        .sf-preview-features {
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 8px;
+          margin-top: 24px;
+        }
+
+        .sf-preview-feature {
+          padding: 10px 12px;
+          border-radius: 9px;
+          background: #f6f8fa;
+          font-size: 12px;
+          line-height: 1.45;
+        }
+
+        @media (max-width: 620px) {
+          body {
+            padding: 10px;
+          }
+
+          .sf-preview-content {
+            padding: 22px 18px;
+          }
+
+          .sf-preview-features {
+            grid-template-columns: 1fr;
+          }
+        }
+      `;
+
+      CMS.registerPreviewStyle(
+        previewStyles,
+        { raw: true }
+      );
+
+      var PropiedadPreview = createClass({
+        render: function () {
+          var entry = this.props.entry;
+          var data = entry && entry.get
+            ? entry.get("data")
+            : null;
+
+          function value(name, fallback) {
+            var result = data && data.get
+              ? data.get(name)
+              : null;
+
+            if (
+              result === undefined ||
+              result === null ||
+              result === ""
+            ) {
+              return fallback || "";
+            }
+
+            return result;
+          }
+
+          function list(name) {
+            var result = data && data.get
+              ? data.get(name)
+              : null;
+
+            if (!result) {
+              return [];
+            }
+
+            if (typeof result.toJS === "function") {
+              return result.toJS();
+            }
+
+            return Array.isArray(result)
+              ? result
+              : [];
+          }
+
+          var image = value("imagen", "");
+          var photos = list("fotos");
+
+          if (!image && photos.length) {
+            image = photos[0];
+          }
+
+          if (image && this.props.getAsset) {
+            try {
+              var asset = this.props.getAsset(image);
+              if (asset) {
+                image = asset.toString();
+              }
+            } catch (_) {}
+          }
+
+          var title = value("titulo", "Título de la propiedad");
+          var operation = value("operacion", "Operación");
+          var status = value("estadoTexto", value("estado", "Estado"));
+          var location = value("ubicacion", "Ubicación pendiente");
+          var address = value("direccion", "");
+          var price = value("precio", "Precio pendiente");
+          var published = value("publicada", false);
+
+          var stats = [
+            value("dormitorios", "") !== "" ? value("dormitorios") + " dorm." : "",
+            value("banos", "") !== "" ? value("banos") + " baños" : "",
+            value("estacionamientos", "") !== "" ? value("estacionamientos") + " estac." : "",
+            value("bodegas", "") !== "" ? value("bodegas") + " bodega(s)" : "",
+            value("superficie", "")
+          ].filter(Boolean);
+
+          var description = list("descripcion");
+          var features = list("caracteristicas").slice(0, 8);
+
+          return h(
+            "article",
+            { className: "sf-preview" },
+
+            image
+              ? h("img", {
+                  className: "sf-preview-image",
+                  src: image,
+                  alt: title
+                })
+              : h(
+                  "div",
+                  { className: "sf-preview-image-empty" },
+                  "Selecciona una imagen principal"
+                ),
+
+            h(
+              "div",
+              { className: "sf-preview-content" },
+
+              h(
+                "div",
+                { className: "sf-preview-topline" },
+                h("span", { className: "sf-preview-chip" }, operation),
+                h("span", { className: "sf-preview-chip status" }, status),
+                h(
+                  "span",
+                  {
+                    className:
+                      "sf-preview-chip" +
+                      (published ? "" : " hidden")
+                  },
+                  published ? "Visible en web" : "Oculta en web"
+                )
+              ),
+
+              h("h1", {}, title),
+
+              h(
+                "div",
+                { className: "sf-preview-location" },
+                (address ? "📍 " + address + " · " : "📍 ") + location
+              ),
+
+              h("div", { className: "sf-preview-price" }, price),
+
+              h(
+                "div",
+                { className: "sf-preview-stats" },
+                stats.map(function (item, index) {
+                  return h(
+                    "span",
+                    {
+                      className: "sf-preview-stat",
+                      key: "stat-" + index
+                    },
+                    item
+                  );
+                })
+              ),
+
+              h(
+                "div",
+                { className: "sf-preview-description" },
+                description.slice(0, 3).map(function (paragraph, index) {
+                  return h(
+                    "p",
+                    { key: "paragraph-" + index },
+                    paragraph
+                  );
+                })
+              ),
+
+              h(
+                "div",
+                { className: "sf-preview-features" },
+                features.map(function (feature, index) {
+                  return h(
+                    "div",
+                    {
+                      className: "sf-preview-feature",
+                      key: "feature-" + index
+                    },
+                    feature
+                  );
+                })
+              )
+            )
+          );
+        }
+      });
+
+      CMS.registerPreviewTemplate(
+        "propiedades",
+        PropiedadPreview
+      );
+    })();
+  </script>
+
+  <script>
+    (function () {
+      "use strict";
+
+      var loading =
+        document.getElementById("adminLoading");
+
+      var dock =
+        document.getElementById("sfAdminDock");
+
+      var dockToggle =
+        document.getElementById("sfAdminDockToggle");
+
+      var helpBackdrop =
+        document.getElementById("sfHelpBackdrop");
+
+      var helpOpen =
+        document.getElementById("sfHelpOpen");
+
+      var helpClose =
+        document.getElementById("sfHelpClose");
+
+      function hideLoading() {
+        if (loading) {
+          loading.classList.add("is-hidden");
+        }
+      }
+
+      window.addEventListener("load", function () {
+        window.setTimeout(hideLoading, 800);
+      });
+
+      window.setTimeout(hideLoading, 5000);
+
+      if (dock && dockToggle) {
+        dockToggle.addEventListener("click", function () {
+          var collapsed =
+            dock.classList.toggle("is-collapsed");
+
+          dockToggle.setAttribute(
+            "aria-expanded",
+            collapsed ? "false" : "true"
+          );
+        });
+      }
+
+      function openHelp() {
+        if (!helpBackdrop) {
+          return;
+        }
+
+        helpBackdrop.classList.add("is-open");
+
+        if (helpClose) {
+          helpClose.focus();
+        }
+      }
+
+      function closeHelp() {
+        if (!helpBackdrop) {
+          return;
+        }
+
+        helpBackdrop.classList.remove("is-open");
+
+        if (helpOpen) {
+          helpOpen.focus();
+        }
+      }
+
+      if (helpOpen) {
+        helpOpen.addEventListener("click", openHelp);
+      }
+
+      if (helpClose) {
+        helpClose.addEventListener("click", closeHelp);
+      }
+
+      if (helpBackdrop) {
+        helpBackdrop.addEventListener("click", function (event) {
+          if (event.target === helpBackdrop) {
+            closeHelp();
+          }
+        });
+      }
+
+      document.addEventListener("keydown", function (event) {
+        if (
+          event.key === "Escape" &&
+          helpBackdrop &&
+          helpBackdrop.classList.contains("is-open")
+        ) {
+          closeHelp();
+        }
+      });
+    })();
   </script>
 
 </body>
