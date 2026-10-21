@@ -452,7 +452,7 @@
     </div>
   </div>
 
-  <script src="https://unpkg.com/decap-cms@3.15.1/dist/decap-cms.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/decap-cms@3.16.3/dist/decap-cms.js"></script>
 
   <script>
     (function () {
@@ -628,6 +628,77 @@
         previewStyles,
         { raw: true }
       );
+
+
+      /*
+        AUTOMATIZACIONES DE CALIDAD
+
+        Antes de guardar:
+        - sincroniza el texto visible del estado;
+        - usa la primera foto como imagen principal si falta;
+        - limpia espacios accidentales en campos críticos.
+      */
+      CMS.registerEventListener({
+        name: "preSave",
+        handler: function (context) {
+          var entry = context && context.entry;
+
+          if (!entry || !entry.get) {
+            return;
+          }
+
+          var data = entry.get("data");
+
+          if (!data || !data.get || !data.set) {
+            return data;
+          }
+
+          var estado = String(
+            data.get("estado") || ""
+          ).toLowerCase();
+
+          if (estado === "disponible") {
+            data = data.set("estadoTexto", "Disponible");
+          } else if (estado === "vendida") {
+            data = data.set("estadoTexto", "Vendida");
+          } else if (estado === "gestionada") {
+            data = data.set("estadoTexto", "Arrendada");
+          }
+
+          var imagen = data.get("imagen");
+          var fotos = data.get("fotos");
+
+          if (!imagen && fotos) {
+            var primeraFoto = "";
+
+            if (typeof fotos.get === "function") {
+              primeraFoto = fotos.get(0) || "";
+            } else if (Array.isArray(fotos)) {
+              primeraFoto = fotos[0] || "";
+            }
+
+            if (primeraFoto) {
+              data = data.set("imagen", primeraFoto);
+            }
+          }
+
+          ["titulo", "direccion", "ubicacion", "precio"].forEach(
+            function (campo) {
+              var valor = data.get(campo);
+
+              if (typeof valor === "string") {
+                data = data.set(
+                  campo,
+                  valor.split(/\\s+/).join(" ").trim()
+                );
+              }
+            }
+          );
+
+          return data;
+        }
+      });
+
 
       var PropiedadPreview = createClass({
         render: function () {
