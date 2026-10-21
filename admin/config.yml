@@ -174,13 +174,8 @@ collections:
 
       - label: "Texto visible del estado"
         name: "estadoTexto"
-        widget: "select"
-        options:
-          - "Disponible"
-          - "Arrendada"
-          - "Vendida"
+        widget: "hidden"
         default: "Disponible"
-        hint: "Debe coincidir con el estado anterior: Disponible, Arrendada o Vendida."
 
       # =====================================================
       # TIPO DE PROPIEDAD
@@ -320,6 +315,7 @@ collections:
         widget: "image"
         required: false
         choose_url: false
+        allow_multiple: false
         media_library:
           config:
             max_file_size: 20000000
@@ -343,6 +339,7 @@ collections:
           name: "foto"
           widget: "image"
           choose_url: false
+          allow_multiple: false
           media_library:
             config:
               max_file_size: 20000000
