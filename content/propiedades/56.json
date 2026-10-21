@@ -1,0 +1,59 @@
+{
+  "superficie": "60 m² aprox.",
+  "estado": "disponible",
+  "precio": "$450.000 mensuales.",
+  "gastosComunes": "$100.000 mensuales aprox.",
+  "caracteristicas": [
+    "🛏️ 3 dormitorios.",
+    "🚿 1 baño.",
+    "📐 Superficie aproximada de 60 m².",
+    "🛋️ Living-comedor.",
+    "🍳 Cocina independiente.",
+    "🏢 Ubicado en el tercer piso.",
+    "Edificio sin ascensor.",
+    "Sin estacionamiento "
+  ],
+  "descripcion": [
+    "Vive en pleno centro de Viña del Mar, con comercio, servicios y transporte cerca de casa. Este departamento en calle Valparaíso ofrece tres dormitorios y aproximadamente 60 m², ahora con un canon rebajado de $450.000 mensuales.\n\nSu distribución contempla living-comedor, cocina independiente y un baño. Los tres dormitorios permiten organizar espacios de descanso y disponer de una habitación adicional para estudio o trabajo, según tus necesidades.\n\nSe encuentra en el tercer piso de un edificio sin ascensor ni conserjería. La propiedad no cuenta con estacionamiento ni bodega, y su ubicación resulta práctica para quienes se desplazan caminando o en transporte público.\n\nCon acceso a Metro Miramar, locomoción colectiva, supermercados, bancos, farmacias y restaurantes, permite resolver gran parte de la rutina diaria en el centro de la ciudad.\n\nContacta a Soto Frau Propiedades para consultar disponibilidad y coordinar una visita"
+  ],
+  "fotos": [
+    "/propiedades/56/1.jpeg",
+    "/propiedades/56/2.jpeg",
+    "/propiedades/56/3.jpeg",
+    "/propiedades/56/4.jpeg",
+    "/propiedades/56/5.jpeg",
+    "/propiedades/56/6.jpeg",
+    "/propiedades/56/7.jpeg",
+    "/propiedades/56/8.jpeg",
+    "/propiedades/56/9.jpeg",
+    "/propiedades/56/10.jpeg"
+  ],
+  "direccion": "Calle Valparaíso.",
+  "requisitos": [
+    "Trabajadores dependientes: renta líquida mínima de $1.350.000 mensuales, equivalente a tres veces el canon.  Contrato de trabajo vigente o certificado de antigüedad.  Tres últimas liquidaciones de sueldo.  Doce últimas cotizaciones de AFP.  Informe DICOM.  Trabajadores independientes: carpeta tributaria.  Boletas y/o antecedentes que acrediten ingresos.  Informe DICOM.  Todos los antecedentes quedan sujetos a evaluación."
+  ],
+  "whatsapp": "Hola, vi en Soto Frau Propiedades el departamento en arriendo en calle Valparaíso, Viña Centro, por $450.000 mensuales más gastos comunes, con 3 dormitorios y aproximadamente 60 m². Me gustaría consultar disponibilidad y coordinar una visita.",
+  "estacionamientos": 0,
+  "banos": 1,
+  "imagen": "/propiedades/56/1.jpeg",
+  "tipoPropiedad": "Departamento",
+  "publicada": true,
+  "piso": "Piso 3, sin ascensor.",
+  "operacion": "Arriendo",
+  "dormitorios": 3,
+  "titulo": "Departamento en arriendo a precio rebajado en Viña Centro · 3 dormitorios y 60 m² aprox.",
+  "id": 56,
+  "estadoTexto": "Disponible",
+  "ubicacion": "Viña Centro · Viña del Mar.",
+  "totalMensual": "$550.000 aprox., incluyendo arriendo y gastos comunes.",
+  "conectividad": [
+    "📍 Ubicado en calle Valparaíso, en pleno centro de Viña del Mar.",
+    "🚇 Fácil acceso a estación Metro Miramar.",
+    "🚌 Locomoción colectiva cercana.",
+    "🛒 Cercano a supermercados y comercio.",
+    "🏦 Acceso a bancos y servicios.",
+    "💊 Farmacias cercanas.",
+    "🍽️ Restaurantes en el sector.",
+    "🚗 Conexión hacia Valparaíso y otros sectores de Viña del Mar."
+  ]
+}
