@@ -94,25 +94,6 @@
     return "https://www.sii.cl/valores_y_fechas/uf/uf" + day().slice(0, 4) + ".htm";
   }
 
-  function renderStatus(rate) {
-    for (const element of root.document.querySelectorAll("[data-uf-status]")) {
-      element.replaceChildren();
-      const text = validLatestRate(rate, day())
-        ? "UF del " + rate.date.split("-").reverse().join("/") + ": $" + new Intl.NumberFormat("es-CL", {minimumFractionDigits:2, maximumFractionDigits:2}).format(rate.value) + " · "
-        : "No se pudo consultar la UF del día. Reintentaremos automáticamente. ";
-      element.appendChild(root.document.createTextNode(text));
-      const link = root.document.createElement("a");
-      link.href = officialLink(); link.target = "_blank"; link.rel = "noopener noreferrer";
-      link.textContent = "Consultar UF en el SII"; element.appendChild(link);
-      if (rate && rate.source) {
-        const source = root.document.createElement("a");
-        source.href = rate.source === "indicadores.cl" ? "https://indicadores.cl/api/" : "https://mindicador.cl/";
-        source.target = "_blank"; source.rel = "noopener noreferrer";
-        source.textContent = " · Fuente: " + rate.source; element.appendChild(source);
-      }
-    }
-  }
-
   function equivalence(price, rate) {
     const value = price.currency === "UF" ? price.amount * rate.value : price.amount / rate.value;
     const formatted = new Intl.NumberFormat("es-CL", {
@@ -136,12 +117,10 @@
     );
     const date = text.slice(dateStart + marker.length);
     const dateLink = root.document.createElement("a");
-    dateLink.href = rate.source === "mindicador.cl"
-      ? "https://mindicador.cl/"
-      : "https://indicadores.cl/api/";
+    dateLink.href = officialLink();
     dateLink.target = "_blank";
     dateLink.rel = "noopener noreferrer";
-    dateLink.title = "Consultar el valor UF usado";
+    dateLink.title = "Consultar UF oficial en el SII. Datos: " + rate.source;
     dateLink.textContent = date;
     element.appendChild(dateLink);
   }
@@ -149,7 +128,6 @@
   async function refresh() {
     let rate;
     try { rate = await fetchRate(); } catch (_) {}
-    renderStatus(rate);
     for (const [element, price] of targets) {
       if (!element.isConnected) { targets.delete(element); continue; }
       if (validLatestRate(rate, day())) renderEquivalence(element, price, rate);
@@ -196,8 +174,8 @@
     root.addEventListener("online", refresh);
     // Refresh on return to the page and across midnight without a new deployment.
     root.document.addEventListener("visibilitychange", () => {
-      if (!root.document.hidden && (targets.size || root.document.querySelector("[data-uf-status]"))) refresh();
+      if (!root.document.hidden && targets.size) refresh();
     });
-    root.setInterval(() => { if (!root.document.hidden && (targets.size || root.document.querySelector("[data-uf-status]"))) refresh(); }, 60000);
+    root.setInterval(() => { if (!root.document.hidden && targets.size) refresh(); }, 60000);
   }
 })(typeof window !== "undefined" ? window : globalThis);

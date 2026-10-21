@@ -10,7 +10,8 @@ for(const file of fs.readdirSync('content/propiedades').filter(x=>x.endsWith('.j
  const image=html.match(/property="og:image"\s+content="([^"]+)"/);
  assert.ok(image,'Missing social image '+p.id);
  if(p.imagen) assert.ok(decodeURIComponent(image[1]).includes(p.imagen.replace(/^\/+/,'')),'Wrong social photo '+p.id);
- assert.ok(html.includes('data-uf-status'),'Missing UF status '+p.id);
+ assert.ok(!html.includes('data-uf-status'),'UF must stay out of contact actions '+p.id);
+ assert.ok(html.includes('id="sharePhoto"'),'Missing share photo '+p.id);
 }
 const config=fs.readFileSync('admin/config.yml','utf8');
 assert.ok(config.includes('branch: contenido-borradores'));
