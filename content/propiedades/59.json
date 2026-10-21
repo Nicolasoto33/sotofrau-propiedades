@@ -1,0 +1,72 @@
+{
+  "superficie": "71 m² totales",
+  "orientacion": "Poniente",
+  "areasComunes": [
+    "🌳 Amplios jardines y áreas verdes",
+    "🛎️ Conserjería 24 horas",
+    "🔐 Acceso controlado",
+    "📹 Cámaras de seguridad",
+    "🧺 Lavandería",
+    "🚲 Bicicletero",
+    "🚪 Accesos por Avenida San Martín, 12 Norte y 14 Norte"
+  ],
+  "estado": "disponible",
+  "precio": "$185.000.000",
+  "gastosComunes": "$166.000 aprox.",
+  "caracteristicas": [
+    "🌊 Primera línea frente al mar",
+    "🌅 Vista panorámica a Playa El Sol, Muelle Vergara y la bahía de Valparaíso",
+    "🛏️ 3 dormitorios",
+    "🚿 2 baños completos",
+    "📐 71 m² totales",
+    "🏢 Piso 10",
+    "☀️ Orientación poniente",
+    "🌇 Vista privilegiada de los atardeceres",
+    "🛋️ Amplio living-comedor con vista al mar",
+    "🍳 Cocina equipada",
+    "🛏️ Dormitorio principal en suite con vista al mar",
+    "🚗 1 estacionamiento",
+    "📦 1 bodega"
+  ],
+  "bodegas": 1,
+  "descripcion": [
+    "Descubre la experiencia de vivir frente al mar en uno de los sectores costeros más atractivos de Viña del Mar. Ubicado en Avenida San Martín 1270, frente a Playa El Sol y próximo al emblemático Muelle Vergara, este departamento ofrece una combinación privilegiada de ubicación, comodidad y vistas panorámicas.\n\nSituado en el piso 10 y con orientación poniente, la propiedad permite contemplar el océano Pacífico, Muelle Vergara y la bahía de Valparaíso, disfrutando de espectaculares atardeceres desde la comodidad del hogar.\n\nEl departamento cuenta con 71 m² totales, distribuidos en 3 dormitorios y 2 baños completos. Su living-comedor ofrece una agradable vista hacia la playa, mientras que el dormitorio principal dispone de baño en suite y vista al mar. La propiedad incluye cocina equipada, un estacionamiento y una bodega.\n\nEl condominio dispone de amplios jardines y áreas verdes, conserjería las 24 horas, acceso controlado, cámaras de seguridad, lavandería y bicicletero, además de accesos por Avenida San Martín, 12 Norte y 14 Norte.\n\nSu excelente ubicación permite disfrutar de la cercanía a playas, restaurantes, supermercados, Mall Marina y Avenida Libertad, facilitando tanto la vida cotidiana como las actividades recreativas.\n\nUna atractiva oportunidad para quienes desean establecer su hogar frente al mar, adquirir una segunda vivienda o evaluar una inversión inmobiliaria en un sector consolidado y de alta demanda de Viña del Mar."
+  ],
+  "fotos": [
+    "/propiedades/59/1.webp",
+    "/propiedades/59/2.webp",
+    "/propiedades/59/3.webp",
+    "/propiedades/59/4.webp",
+    "/propiedades/59/5.webp",
+    "/propiedades/59/6.webp",
+    "/propiedades/59/7.webp",
+    "/propiedades/59/8.webp",
+    "/propiedades/59/9.webp",
+    "/propiedades/59/10.webp"
+  ],
+  "direccion": "Av. San Martín 1270",
+  "whatsapp": "Hola, buenas tardes. Estoy interesado/a en el departamento en venta frente al mar, ubicado en Av. San Martín 1270, sector Muelle Vergara de Viña del Mar, publicado en $185.000.000. Me gustaría recibir más información y coordinar una visita. ¡Muchas gracias!",
+  "estacionamientos": 1,
+  "banos": 2,
+  "imagen": "/propiedades/59/1.webp",
+  "tipoPropiedad": "Departamento",
+  "publicada": true,
+  "piso": "10",
+  "operacion": "Venta",
+  "dormitorios": 3,
+  "titulo": "Departamento en venta frente al mar en San Martín, Viña del Mar",
+  "id": 59,
+  "mascotas": null,
+  "estadoTexto": "Disponible",
+  "ubicacion": "Muelle Vergara · Viña del Mar",
+  "conectividad": [
+    "🏖️ Ubicación frente a Playa El Sol.",
+    "🌊 Cercanía inmediata a Muelle Vergara.",
+    "🛍️ Aproximadamente a 2 cuadras de Mall Marina.",
+    "🚶 Próximo a Avenida Libertad y Plaza O'Higgins.",
+    "🍽️ Cercano a restaurantes, cafeterías y comercio.",
+    "🛒 Acceso a supermercados y diversos servicios.",
+    "🚗 Conectividad mediante Avenida San Martín, 12 Norte y 14 Norte.",
+    "🌅 Emplazamiento privilegiado en el borde costero de Viña del Mar."
+  ]
+}
