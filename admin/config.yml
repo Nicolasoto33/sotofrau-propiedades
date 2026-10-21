@@ -3,12 +3,6 @@ backend:
   repo: Nicolasoto33/sotofrau-propiedades
   branch: contenido-borradores
   squash_merges: true
-  commit_messages:
-    create: 'Crear {{collection}} “{{slug}}”'
-    update: 'Actualizar {{collection}} “{{slug}}”'
-    delete: 'Eliminar {{collection}} “{{slug}}”'
-    uploadMedia: 'Subir imagen “{{path}}”'
-    deleteMedia: 'Eliminar imagen “{{path}}”'
 
 publish_mode: editorial_workflow
 
@@ -16,25 +10,6 @@ site_url: https://sotofraupropiedades.cl
 display_url: https://sotofraupropiedades.cl
 
 locale: es
-
-logo:
-  src: https://sotofraupropiedades.cl/logo-sotofrau.png
-  show_in_header: true
-
-show_preview_links: true
-search: true
-
-# Optimización automática SOLO para imágenes nuevas subidas desde el panel.
-# Mantiene el encuadre original: no se recorta la fotografía.
-media_processing:
-  enabled: true
-  format:
-    enabled: true
-    default: webp
-  quality: 86
-  strip_metadata: true
-  width: 2000
-  height: null
 
 # =====================================================
 # ARCHIVOS MULTIMEDIA GLOBALES
@@ -55,7 +30,10 @@ collections:
     label: "🏠 Propiedades"
     label_singular: "Propiedad"
 
-    description: "Crea, revisa y administra las propiedades de Sotofrau. Los cambios se guardan primero en el flujo editorial antes de llegar al sitio público."
+    description: "Guarda tus cambios como borrador y revísalos. Publicar aquí actualiza contenido-borradores; para verlos en la web deben pasar a main y al despliegue de Netlify."
+    editor:
+      preview: true
+    preview_path: "propiedad.html?id={{id}}"
 
     folder: "content/propiedades"
 
@@ -74,12 +52,9 @@ collections:
 
     slug: "{{id}}"
 
-    preview_path: "propiedad/{{id}}/"
-
-    summary: "ID {{id}} · {{operacion}} · {{estadoTexto}} · {{titulo}}"
+    summary: "ID {{id}} · {{titulo}} · {{operacion}} · {{estadoTexto}}"
 
     sortable_fields:
-      - "commit_date"
       - "id"
       - "titulo"
       - "operacion"
@@ -107,42 +82,30 @@ collections:
         field: "operacion"
         pattern: "Venta"
 
-    view_groups:
-
-      - label: "Agrupar por operación"
-        field: "operacion"
-
-      - label: "Agrupar por estado"
-        field: "estado"
-
-      - label: "Agrupar por visibilidad"
-        field: "publicada"
-
     fields:
 
       # =====================================================
       # IDENTIFICACIÓN
       # =====================================================
 
-      - label: "🔑 ID único"
+      - label: "ID"
         name: "id"
         widget: "number"
         value_type: "int"
         min: 1
-        step: 1
-        hint: "**No repitas un ID existente.** Este número identifica la propiedad y forma parte de su URL."
+        hint: "Completa un ID único antes de subir fotos. No cambies el ID de una propiedad existente: determina su URL y carpeta."
 
-      - label: "📝 Título de la propiedad"
+      - label: "Título"
         name: "titulo"
         widget: "string"
-        pattern: ['.{12,}', "Escribe un título descriptivo de al menos 12 caracteres."]
-        hint: "Debe describir claramente qué se ofrece y dónde. Ejemplo: **Departamento en venta frente al mar en San Martín, Viña del Mar**."
+        pattern: [".*\\S.*", "Escribe un título; no uses solo espacios."]
+        hint: "Título principal que verá el visitante. Describe tipo de inmueble, sector y atributo principal."
 
-      - label: "🌐 Visible en la página web"
+      - label: "Visible en la página web"
         name: "publicada"
         widget: "boolean"
         default: true
-        hint: "Actívalo solo cuando la ficha esté lista. Puedes desactivarlo para ocultar una propiedad sin eliminarla."
+        hint: "Desactiva para ocultar sin eliminar. Activar esta opción no publica automáticamente el sitio: requiere pasar los cambios a main y desplegar."
 
       # =====================================================
       # OPERACIÓN Y ESTADO
@@ -170,12 +133,17 @@ collections:
           - label: "Vendida"
             value: "vendida"
 
-        hint: "Usa **Disponible** mientras se ofrece. En un arriendo cerrado usa **Arrendada / Gestionada**; en una venta cerrada usa **Vendida**."
+        hint: "Determina cómo se ordenará y mostrará la propiedad."
 
       - label: "Texto visible del estado"
         name: "estadoTexto"
-        widget: "hidden"
+        widget: "select"
+        options:
+          - "Disponible"
+          - "Arrendada"
+          - "Vendida"
         default: "Disponible"
+        hint: "Texto que verá el visitante en la publicación."
 
       # =====================================================
       # TIPO DE PROPIEDAD
@@ -200,27 +168,25 @@ collections:
       # UBICACIÓN
       # =====================================================
 
-      - label: "📍 Dirección"
+      - label: "Dirección"
         name: "direccion"
         widget: "string"
         required: false
-        hint: "Calle, número, edificio o referencia que quieras mostrar públicamente."
+        hint: "Dirección, calle, edificio o referencia que quieras mostrar."
 
-      - label: "🗺️ Ubicación / sector"
+      - label: "Ubicación"
         name: "ubicacion"
         widget: "string"
-        pattern: ['.{3,}', "Indica una ubicación o sector válido."]
-        hint: "Usa un formato consistente. Ejemplo: **Costa de Montemar · Concón**."
+        hint: "Ejemplo: Costa de Montemar · Concón."
 
       # =====================================================
       # VALORES
       # =====================================================
 
-      - label: "💰 Precio"
+      - label: "Precio"
         name: "precio"
         widget: "string"
-        pattern: ['.*(UF|uf|CLP|clp|[$]).*', "Indica siempre la moneda: $, CLP o UF."]
-        hint: "Escribe siempre la moneda. Ejemplos: **$550.000 mensuales** o **4.500 UF**."
+        hint: "Ejemplo: $550.000 o 3.998 UF."
 
       - label: "Gastos comunes"
         name: "gastosComunes"
@@ -254,7 +220,7 @@ collections:
         name: "superficie"
         widget: "string"
         required: false
-        hint: "Escribe primero la superficie principal. Ejemplo: **76 m² construidos. Terraza de 4,8 m².**"
+        hint: "Ejemplo: 65 m², 80 m² o 5.000 m²."
 
       - label: "Dormitorios"
         name: "dormitorios"
@@ -307,42 +273,27 @@ collections:
           - "Consultar"
 
       # =====================================================
-      # IMAGEN PRINCIPAL
-      # =====================================================
-
-      - label: "⭐ Imagen principal"
-        name: "imagen"
-        widget: "image"
-        required: false
-        choose_url: false
-        allow_multiple: false
-        media_library:
-          config:
-            max_file_size: 20000000
-        hint: "**Muy importante:** esta fotografía representa la propiedad en las tarjetas y se utiliza para la vista previa al compartir por WhatsApp y redes."
-
-      # =====================================================
       # GALERÍA DE FOTOGRAFÍAS
       # =====================================================
 
       - label: "📸 Galería de fotografías"
         name: "fotos"
-        widget: "list"
+        widget: "sotofrau-gallery"
         required: false
-        collapsed: true
-        minimize_collapsed: true
-        summary: "{{fields.foto}}"
-        hint: "Agrega las fotografías en el orden en que quieres que el cliente las recorra."
+        hint: "Selecciona todas las fotos en una sola operación. Reordena con las flechas y elige abajo la imagen principal. Guarda el borrador al terminar."
 
-        field:
-          label: "Foto"
-          name: "foto"
-          widget: "image"
-          choose_url: false
+      # =====================================================
+      # IMAGEN PRINCIPAL
+      # =====================================================
+
+      - label: "📷 Imagen principal"
+        name: "imagen"
+        widget: "sotofrau-cover"
+        required: false
+        choose_url: false
+        media_library:
           allow_multiple: false
-          media_library:
-            config:
-              max_file_size: 20000000
+        hint: "Portada del catálogo. Puedes elegir una foto de la galería sin volver a subirla. Es independiente del orden de la galería."
 
       # =====================================================
       # CARACTERÍSTICAS VISIBLES
@@ -352,7 +303,6 @@ collections:
         name: "caracteristicas"
         widget: "list"
         collapsed: true
-        minimize_collapsed: true
         required: false
         hint: "Ejemplo: 🛏 3 dormitorios, 🚿 2 baños, 📐 80 m²."
 
@@ -369,7 +319,6 @@ collections:
         name: "descripcion"
         widget: "list"
         collapsed: true
-        minimize_collapsed: true
         required: false
         hint: "Cada elemento corresponde a un párrafo de la descripción."
 
@@ -386,7 +335,6 @@ collections:
         name: "informacionImportante"
         widget: "list"
         collapsed: true
-        minimize_collapsed: true
         required: false
         hint: "Condiciones, valores, restricciones o elementos destacados."
 
@@ -403,7 +351,6 @@ collections:
         name: "areasComunes"
         widget: "list"
         collapsed: true
-        minimize_collapsed: true
         required: false
         hint: "Ejemplo: 🏊 Piscina, 🔥 Quinchos, 💪 Gimnasio."
 
@@ -420,7 +367,6 @@ collections:
         name: "conectividad"
         widget: "list"
         collapsed: true
-        minimize_collapsed: true
         required: false
         hint: "Locomoción, servicios, universidades, playas, avenidas u otros puntos cercanos."
 
@@ -437,14 +383,13 @@ collections:
         name: "requisitos"
         widget: "list"
         collapsed: true
-        minimize_collapsed: true
         required: false
         hint: "Déjalo vacío en publicaciones de venta si no corresponde."
 
         field:
           label: "Requisito"
           name: "requisito"
-          widget: "text"
+          widget: "string"
 
       # =====================================================
       # WHATSAPP
@@ -454,4 +399,4 @@ collections:
         name: "whatsapp"
         widget: "text"
         required: false
-        hint: "Mensaje prellenado que recibirá el interesado al tocar **Consultar por WhatsApp**. Incluye el tipo de propiedad, sector, precio y una invitación a coordinar visita."
+        hint: "Mensaje automático que aparecerá cuando una persona consulte esta propiedad mediante WhatsApp."

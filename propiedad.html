@@ -1971,6 +1971,27 @@
 
     }
 
+
+    /* Keep every action inside its card at intermediate desktop widths too. */
+    .contact-box { flex-wrap: wrap; }
+    .contact-box > div:first-child { flex: 1 1 240px; min-width: 0; }
+    .contact-actions { flex: 1 1 560px; min-width: 0; max-width: 100%; }
+    .contact-actions > a, .contact-actions > button { max-width: 100%; white-space: normal; text-align: center; }
+    .property-share-dialog { margin: auto; width: min(460px, calc(100% - 32px)); max-height: calc(100dvh - 40px); overflow: auto; border: 0; border-radius: 18px; padding: 24px; color: #0d2f49; box-shadow: 0 20px 80px #0005; }
+    .property-share-dialog::backdrop { background: #071d2db3; }
+    .property-share-dialog [hidden] { display: none; }
+    .property-share-dialog img { width: 100%; height: 190px; object-fit: cover; border-radius: 10px; margin: 16px 0; }
+    .property-share-dialog h2 { font-size: 22px; padding-right: 32px; }
+    .property-share-dialog h3 { font-size: 17px; line-height: 1.4; }
+    .property-share-dialog p { margin: 10px 0; font-size: 14px; }
+    .property-share-dialog .share-close { position: absolute; right: 16px; top: 12px; border: 0; background: transparent; font-size: 28px; cursor: pointer; padding: 4px 10px; }
+    .share-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
+    .share-options a, .share-options button { padding: 12px; border: 1px solid #dce3e9; border-radius: 8px; background: #f4f7f9; color: #0d2f49; font: inherit; font-size: 14px; text-align: center; cursor: pointer; }
+    .share-options a:first-child { background: #087d42; color: white; }
+    .share-options button:last-child { grid-column: 1 / -1; }
+    .property-share-dialog label { display: flex; align-items: center; gap: 8px; font-size: 14px; margin-top: 14px; }
+    @media(max-width:900px) { .contact-actions { flex-basis: auto; } }
+
   </style>
 
 </head>
@@ -2377,8 +2398,6 @@
             >
               Consultar por WhatsApp
             </a>
-
-
             <button
               id="shareProperty"
               class="share-property"
@@ -2597,6 +2616,22 @@ document.addEventListener("DOMContentLoaded", function () {
 ===================================================== -->
 
 <script src="propiedades.generated.js"></script>
+
+<dialog id="propertyShareDialog" class="property-share-dialog" aria-labelledby="shareDialogTitle">
+  <button type="button" class="share-close" aria-label="Cerrar">×</button>
+  <h2 id="shareDialogTitle">Compartir propiedad</h2>
+  <img id="sharePhoto" alt="">
+  <h3 id="shareTitle"></h3>
+  <p id="sharePrice"></p>
+  <label id="sharePhotoOption" hidden><input type="checkbox" id="includeSharePhoto" checked> Adjuntar foto al usar «Más opciones»</label>
+  <div class="share-options">
+    <a id="shareWhatsApp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <button type="button" id="shareCopy">Copiar enlace</button>
+    <button type="button" id="shareMore">Más opciones para compartir</button>
+  </div>
+  <p id="shareDialogFeedback" role="status" aria-live="polite"></p>
+</dialog>
+
 <script src="/precios-uf.js"></script>
 
 
@@ -2791,179 +2826,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   function cargarConversionPrecio() {
-
-    const conversion =
-      document.getElementById(
-        "conversionPrecio"
-      );
-
-
-    if (!conversion) {
-
-      return;
-
+    const conversion = document.getElementById("conversionPrecio");
+    if (!conversion || !propiedadActual) return;
+    conversion.style.display = "none";
+    if (String(propiedadActual.operacion || "").toLowerCase() === "venta") {
+      window.PreciosUF.bind(conversion, propiedadActual.precio, propiedadActual.id);
     }
-
-
-    conversion.textContent =
-      "";
-
-
-    conversion.style.display =
-      "none";
-
-
-    /*
-      SOLO EN VENTAS
-    */
-
-    if (
-      !propiedadActual ||
-      String(
-        propiedadActual.operacion || ""
-      ).toLowerCase() !== "venta"
-    ) {
-
-      return;
-
-    }
-
-
-    obtenerValorUF()
-      .then(
-        function(tasaUF) {
-
-          const valorUF = tasaUF && tasaUF.value;
-
-          if (
-            !valorUF ||
-            valorUF <= 0
-          ) {
-
-            return;
-
-          }
-
-
-          const precioTexto =
-            String(
-              propiedadActual.precio || ""
-            );
-
-
-          let textoConversion =
-            "";
-
-
-          /*
-            PRECIO EN UF → CLP
-          */
-
-          if (
-            precioTexto
-              .toUpperCase()
-              .includes("UF")
-          ) {
-
-            const cantidadUF =
-              obtenerNumeroUF(
-                precioTexto
-              );
-
-
-            if (
-              cantidadUF === null
-            ) {
-
-              return;
-
-            }
-
-
-            const cantidadCLP =
-              cantidadUF *
-              valorUF;
-
-
-            textoConversion =
-              "≈ " +
-              formatearCLP(
-                cantidadCLP
-              );
-
-          } else {
-
-            /*
-              PRECIO EN CLP → UF
-            */
-
-            const cantidadCLP =
-              obtenerNumeroCLP(
-                precioTexto
-              );
-
-
-            if (
-              cantidadCLP === null
-            ) {
-
-              return;
-
-            }
-
-
-            const cantidadUF =
-              cantidadCLP /
-              valorUF;
-
-
-            textoConversion =
-              "≈ " +
-              formatearUF(
-                cantidadUF
-              ) +
-              " UF";
-
-          }
-
-
-          if (!textoConversion) {
-
-            return;
-
-          }
-
-
-          conversion.textContent =
-            textoConversion;
-
-          const fechaUF = tasaUF.date.split("-").reverse().join("/");
-          conversion.appendChild(
-            document.createTextNode(" · UF del ")
-          );
-
-          const enlaceFechaUF = document.createElement("a");
-          enlaceFechaUF.href = tasaUF.source === "mindicador.cl"
-            ? "https://mindicador.cl/"
-            : "https://indicadores.cl/api/";
-          enlaceFechaUF.target = "_blank";
-          enlaceFechaUF.rel = "noopener noreferrer";
-          enlaceFechaUF.title = "Consultar el valor UF usado";
-          enlaceFechaUF.textContent = fechaUF;
-          enlaceFechaUF.style.textDecoration = "underline";
-          enlaceFechaUF.style.textUnderlineOffset = "2px";
-          conversion.appendChild(enlaceFechaUF);
-
-
-          conversion.style.display =
-            "block";
-
-        }
-      );
-
   }
-
-
 
   /* =====================================================
      OBTENER ID
@@ -5142,99 +5011,50 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
   function cargarCompartirPropiedad() {
-
-    const boton =
-      document.getElementById(
-        "shareProperty"
-      );
-
-
-    if (
-      !boton ||
-      !propiedadActual
-    ) {
-
-      return;
-
-    }
-
-
-    boton.addEventListener(
-      "click",
-      async function() {
-
-        const url =
-          obtenerUrlCompartir();
-
-
-        const datosCompartir = {
-
-          title:
-            propiedadActual.titulo +
-            " | Sotofrau Propiedades",
-
-          text:
-            obtenerTextoCompartir(),
-
-          url:
-            url
-
-        };
-
-
-        if (
-          typeof navigator.share ===
-          "function"
-        ) {
-
-          try {
-
-            await navigator.share(
-              datosCompartir
-            );
-
-            return;
-
-          } catch (error) {
-
-            /*
-              Si la persona cierra voluntariamente
-              el menú de compartir, no hacemos nada.
-            */
-
-            if (
-              error &&
-              error.name ===
-              "AbortError"
-            ) {
-
-              return;
-
-            }
-
+    const button = document.getElementById("shareProperty");
+    const dialog = document.getElementById("propertyShareDialog");
+    if (!button || !dialog || !propiedadActual) return;
+    const feedback = document.getElementById("shareDialogFeedback");
+    const more = document.getElementById("shareMore");
+    const url = obtenerUrlCompartir();
+    const photo = document.getElementById("sharePhoto");
+    const imagePath = propiedadActual.imagen || (propiedadActual.fotos || [])[0];
+    const photoURL = imagePath ? new URL(imagePath.startsWith("http") ? imagePath : "/" + imagePath.replace(/^\/+/, ""), location.origin).href : "";
+    let photoFile = null, loadingPhoto = false;
+    photo.alt = propiedadActual.titulo;
+    if (photoURL) photo.src = photoURL; else photo.hidden = true;
+    document.getElementById("shareTitle").textContent = propiedadActual.titulo;
+    document.getElementById("sharePrice").textContent = [propiedadActual.precio, propiedadActual.ubicacion].filter(Boolean).join(" · ");
+    document.getElementById("shareWhatsApp").href = "https://wa.me/?text=" + encodeURIComponent(obtenerTextoCompartir() + "\n" + url);
+    more.hidden = typeof navigator.share !== "function";
+    dialog.querySelector(".share-close").onclick = () => dialog.close();
+    button.onclick = () => {
+      feedback.textContent = "";
+      dialog.showModal();
+      // Prepare the optional attachment before the next user gesture.
+      if (photoURL && navigator.canShare && !loadingPhoto) {
+        loadingPhoto = true;
+        fetch(photoURL).then(r => { if (!r.ok) throw Error(); return r.blob(); }).then(blob => {
+          if (!/^image\/(jpeg|png|webp|avif)$/.test(blob.type) || blob.size > 15 * 1024 * 1024) return;
+          const ext = blob.type.split("/")[1];
+          const file = new File([blob], "propiedad-" + propiedadActual.id + "." + ext, {type: blob.type});
+          if (navigator.canShare({files:[file]})) {
+            photoFile = file;
+            document.getElementById("sharePhotoOption").hidden = false;
           }
-
-        }
-
-
-        try {
-
-          await copiarEnlacePropiedad(
-            url
-          );
-
-        } catch (error) {
-
-          window.prompt(
-            "Copia este enlace para compartir la propiedad:",
-            url
-          );
-
-        }
-
+        }).catch(() => { loadingPhoto = false; });
       }
-    );
-
+    };
+    document.getElementById("shareCopy").onclick = async () => {
+      try { await copiarEnlacePropiedad(url); feedback.textContent = "Enlace copiado."; }
+      catch (_) { feedback.textContent = "No se pudo copiar. Usa la opción WhatsApp o vuelve a intentarlo."; }
+    };
+    more.onclick = async () => {
+      const data = {title: propiedadActual.titulo + " | Sotofrau Propiedades", text: obtenerTextoCompartir(), url};
+      if (photoFile && document.getElementById("includeSharePhoto").checked) data.files = [photoFile];
+      try { await navigator.share(data); }
+      catch (error) { if (error.name !== "AbortError") feedback.textContent = "No se pudo abrir el menú. Puedes copiar el enlace o compartir por WhatsApp."; }
+    };
   }
 
 </script>

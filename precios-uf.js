@@ -1,7 +1,8 @@
 (function (root) {
   "use strict";
   const zone = "America/Santiago";
-  const cacheKey = "sotofrau-uf-v3";
+  const cacheKey = "sotofrau-uf-v4";
+  let published = {};
   const targets = new Map();
   let pending;
   let current;
@@ -36,81 +37,61 @@
       rate.date === today && Number.isFinite(rate.value) && rate.value > 0;
   }
 
+  function readSeries(data, source) {
+    if (!data || (data.indicador !== "uf" && data.codigo !== "uf")) throw new Error("Invalid UF response");
+    const rows = Array.isArray(data.serie) ? data.serie.concat(data) : [data];
+    for (const item of rows) {
+      const date = String(item.fecha || "").slice(0, 10);
+      const value = Number(item.valor);
+      if (/^\d{4}-\d{2}-\d{2}$/.test(date) && Number.isFinite(value) && value > 0) {
+        published[date] = { date, value, source };
+      }
+    }
+  }
+
   async function fetchRate() {
     const today = day();
     if (validLatestRate(current, today)) return current;
     try {
       const cached = JSON.parse(root.localStorage.getItem(cacheKey));
-      if (validLatestRate(cached, today) && cached.source) return (current = cached);
+      if (cached && typeof cached === "object") published = { ...cached, ...published };
     } catch (_) { /* Storage may be blocked. */ }
+    if (validLatestRate(published[today], today)) return (current = published[today]);
     if (pending) return pending;
     pending = (async () => {
+      // The annual series includes future dates already published by the SII.
+      // Never estimate tomorrow's UF from yesterday's value.
       const providers = [
-        async signal => {
-          const response = await root.fetch(
-            "https://mindicador.cl/api/uf?ts=" + Date.now(),
-            { signal, cache: "no-store" }
-          );
-          if (!response.ok) throw new Error("UF unavailable");
-          const data = await response.json();
-          if (data.codigo !== "uf" || !Array.isArray(data.serie)) {
-            throw new Error("Invalid UF response");
-          }
-          const entry = data.serie.find(item => {
-            const date = typeof item.fecha === "string" &&
-              item.fecha.match(/^(\d{4}-\d{2}-\d{2})(?:T.*)?$/);
-            return date && date[1] === today &&
-              Number.isFinite(Number(item.valor)) &&
-              Number(item.valor) > 0;
-          });
-          const rate = entry && {
-            date: entry.fecha.slice(0, 10),
-            value: Number(entry.valor),
-            source: "mindicador.cl"
-          };
-          if (!validLatestRate(rate, today)) {
-            throw new Error("UF vigente no disponible en mindicador.cl");
-          }
-          return rate;
-        },
-        async signal => {
-          const response = await root.fetch(
-            "https://indicadores.cl/api/v1/uf.json?ts=" + Date.now(),
-            { signal, cache: "no-store" }
-          );
-          if (!response.ok) throw new Error("UF unavailable");
-          const data = await response.json();
-          const rate = data && data.indicador === "uf"
-            ? {
-                date: String(data.fecha || "").slice(0, 10),
-                value: Number(data.valor),
-                source: "indicadores.cl"
-              }
-            : null;
-          if (!validLatestRate(rate, today)) {
-            throw new Error("UF vigente no disponible en indicadores.cl");
-          }
-          return rate;
-        }
+        ["https://indicadores.cl/api/v1/historico/uf/" + today.slice(0, 4) + ".json", "indicadores.cl"],
+        ["https://mindicador.cl/api/uf", "mindicador.cl"],
+        ["https://indicadores.cl/api/v1/uf.json", "indicadores.cl"]
       ];
       let lastError;
-      for (const provider of providers) {
+      for (const [url, source] of providers) {
         const controller = new AbortController();
         const timeout = setTimeout(() => controller.abort(), 5000);
         try {
-          const rate = await provider(controller.signal);
+          const response = await root.fetch(url + "?ts=" + Date.now(), { signal: controller.signal, cache: "no-store" });
+          if (!response.ok) throw new Error("UF unavailable");
+          readSeries(await response.json(), source);
+          // Retain only this month and upcoming published dates, bounded to 62 days.
+          const limit = new Date(Date.now() + 62 * 86400000).toISOString().slice(0, 10);
+          published = Object.fromEntries(Object.entries(published).filter(([date]) => date >= today && date <= limit));
+          const rate = published[day()];
+          if (!validLatestRate(rate, day())) throw new Error("UF del día no disponible");
           current = rate;
-          try { root.localStorage.setItem(cacheKey, JSON.stringify(rate)); } catch (_) {}
+          try { root.localStorage.setItem(cacheKey, JSON.stringify(published)); } catch (_) {}
           return rate;
-        } catch (error) {
-          lastError = error;
-        } finally {
-          clearTimeout(timeout);
-        }
+        } catch (error) { lastError = error; }
+        finally { clearTimeout(timeout); }
       }
       throw lastError || new Error("UF unavailable");
     })();
     try { return await pending; } finally { pending = null; }
+  }
+
+  function officialLink() {
+    return "https://www.sii.cl/valores_y_fechas/uf/uf" + day().slice(0, 4) + ".htm";
   }
 
   function equivalence(price, rate) {
@@ -136,12 +117,10 @@
     );
     const date = text.slice(dateStart + marker.length);
     const dateLink = root.document.createElement("a");
-    dateLink.href = rate.source === "mindicador.cl"
-      ? "https://mindicador.cl/"
-      : "https://indicadores.cl/api/";
+    dateLink.href = officialLink();
     dateLink.target = "_blank";
     dateLink.rel = "noopener noreferrer";
-    dateLink.title = "Consultar el valor UF usado";
+    dateLink.title = "Consultar UF oficial en el SII. Datos: " + rate.source;
     dateLink.textContent = date;
     element.appendChild(dateLink);
   }
@@ -178,10 +157,21 @@
     refresh();
   }
 
-  const api = { mount, parsePrice, propertyPrice, day, equivalence, validRate, validLatestRate, fetchRate, refresh };
+  function bind(element, text, id) {
+    const price = propertyPrice(text, id);
+    if (!element || !price) return;
+    element.style.display = "block";
+    targets.set(element, price);
+    refresh();
+  }
+
+  const api = { bind, mount, parsePrice, propertyPrice, day, equivalence, validRate, validLatestRate, fetchRate, refresh };
   if (typeof module !== "undefined" && module.exports) module.exports = api;
   else {
     root.PreciosUF = api;
+    if (root.document.readyState === "loading") root.document.addEventListener("DOMContentLoaded", refresh);
+    else refresh();
+    root.addEventListener("online", refresh);
     // Refresh on return to the page and across midnight without a new deployment.
     root.document.addEventListener("visibilitychange", () => {
       if (!root.document.hidden && targets.size) refresh();

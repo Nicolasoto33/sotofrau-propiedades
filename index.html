@@ -4852,37 +4852,10 @@ function inicializarBuscadorPropiedades() {
   }
 
 
-  let promesaUFBuscador =
-    null;
-
-
   function cargarUFBuscador() {
-
-    if (promesaUFBuscador) {
-      return promesaUFBuscador;
-    }
-
-    if (typeof obtenerValorUF === "function") {
-      promesaUFBuscador = obtenerValorUF();
-      return promesaUFBuscador;
-    }
-
-    if (window.PreciosUF && typeof window.PreciosUF.fetchRate === "function") {
-      promesaUFBuscador = window.PreciosUF.fetchRate()
-        .then(function (rate) {
-          return rate.value;
-        })
-        .catch(function () {
-          return null;
-        });
-      return promesaUFBuscador;
-    }
-
-    promesaUFBuscador = Promise.resolve(null);
-    return promesaUFBuscador;
-
+    // The shared service deduplicates concurrent requests and validates today's date.
+    return window.PreciosUF.fetchRate().then(rate => rate.value).catch(() => null);
   }
-
 
   function obtenerPrecioCLP(
     propiedad,

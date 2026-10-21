@@ -1,5 +1,5 @@
 [build]
-command = "node generate-propiedades.js && node generate-sitemap.js"
+command = "node generate-propiedades.js && node generate-sitemap.js && node tests/site-contract.cjs && node --test tests/uf.test.cjs"
 publish = "."
 
 # =====================================================
