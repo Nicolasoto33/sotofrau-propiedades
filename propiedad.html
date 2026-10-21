@@ -43,6 +43,10 @@
     content="https://sotofraupropiedades.cl/android-chrome-512x512.png"
   >
 
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/jpeg">
+
   <meta
     id="ogImageAlt"
     property="og:image:alt"
@@ -310,6 +314,9 @@
 
     .nav {
 
+      position:
+        relative;
+
       min-height:
         76px;
 
@@ -394,6 +401,61 @@
 
 
     nav a:hover {
+
+      color:
+        var(--naranja);
+
+    }
+
+
+    .menu-toggle {
+
+      display:
+        none;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      width:
+        44px;
+
+      height:
+        44px;
+
+      padding:
+        0;
+
+      border:
+        1px solid var(--gris-200);
+
+      border-radius:
+        9px;
+
+      background:
+        white;
+
+      color:
+        var(--azul);
+
+      cursor:
+        pointer;
+
+      font-size:
+        24px;
+
+      line-height:
+        1;
+
+    }
+
+
+    .menu-toggle:hover {
+
+      border-color:
+        var(--naranja);
 
       color:
         var(--naranja);
@@ -910,6 +972,32 @@
     }
 
 
+    .price-conversion {
+
+      display:
+        none;
+
+      margin-top:
+        -2px;
+
+      margin-bottom:
+        10px;
+
+      color:
+        var(--gris-500);
+
+      font-size:
+        14px;
+
+      font-weight:
+        650;
+
+      line-height:
+        1.35;
+
+    }
+
+
     .monthly {
 
       color:
@@ -1287,6 +1375,81 @@
     }
 
 
+    .contact-actions {
+
+      display:
+        flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        flex-end;
+
+      flex-wrap:
+        wrap;
+
+      gap:
+        10px;
+
+      flex-shrink:
+        0;
+
+    }
+
+
+    .schedule-visit {
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      flex-shrink:
+        0;
+
+      padding:
+        14px 22px;
+
+      border:
+        0;
+
+      border-radius:
+        9px;
+
+      background:
+        var(--naranja);
+
+      color:
+        white;
+
+      font-size:
+        14px;
+
+      font-weight:
+        800;
+
+      transition:
+        .2s ease;
+
+    }
+
+
+    .schedule-visit:hover {
+
+      background:
+        var(--naranja-hover);
+
+      transform:
+        translateY(-2px);
+
+    }
+
+
     .whatsapp {
 
       display:
@@ -1332,6 +1495,106 @@
 
       transform:
         translateY(-2px);
+
+    }
+
+
+    .share-property {
+
+      display:
+        inline-flex;
+
+      align-items:
+        center;
+
+      justify-content:
+        center;
+
+      flex-shrink:
+        0;
+
+      padding:
+        14px 22px;
+
+      border:
+        1px solid rgba(255,255,255,.32);
+
+      border-radius:
+        9px;
+
+      background:
+        white;
+
+      color:
+        var(--azul);
+
+      font-size:
+        14px;
+
+      font-weight:
+        800;
+
+      cursor:
+        pointer;
+
+      transition:
+        .2s ease;
+
+    }
+
+
+    .share-property:hover {
+
+      background:
+        #f4f7f9;
+
+      transform:
+        translateY(-2px);
+
+    }
+
+
+    .schedule-visit:focus-visible,
+    .share-property:focus-visible,
+    .whatsapp:focus-visible {
+
+      outline:
+        3px solid rgba(232,137,37,.45);
+
+      outline-offset:
+        3px;
+
+    }
+
+
+    .share-feedback {
+
+      position:
+        absolute;
+
+      width:
+        1px;
+
+      height:
+        1px;
+
+      padding:
+        0;
+
+      margin:
+        -1px;
+
+      overflow:
+        hidden;
+
+      clip:
+        rect(0,0,0,0);
+
+      white-space:
+        nowrap;
+
+      border:
+        0;
 
     }
 
@@ -1387,10 +1650,98 @@
 
     @media (max-width: 900px) {
 
+      .menu-toggle {
+
+        display:
+          inline-flex;
+
+      }
+
+
       nav {
+
+        position:
+          absolute;
+
+        top:
+          calc(100% + 1px);
+
+        left:
+          0;
+
+        right:
+          0;
 
         display:
           none;
+
+        flex-direction:
+          column;
+
+        align-items:
+          stretch;
+
+        gap:
+          0;
+
+        padding:
+          10px;
+
+        background:
+          white;
+
+        border:
+          1px solid var(--gris-200);
+
+        border-top:
+          0;
+
+        border-radius:
+          0 0 14px 14px;
+
+        box-shadow:
+          0 14px 30px rgba(13,47,73,.12);
+
+      }
+
+
+      nav.mobile-open {
+
+        display:
+          flex;
+
+      }
+
+
+      nav a {
+
+        width:
+          100%;
+
+        padding:
+          12px 14px;
+
+        border-radius:
+          8px;
+
+      }
+
+
+      nav a:hover {
+
+        background:
+          var(--gris-50);
+
+      }
+
+
+      nav .nav-contact {
+
+        margin-top:
+          4px;
+
+        text-align:
+          center;
 
       }
 
@@ -1443,7 +1794,20 @@
       }
 
 
-      .whatsapp {
+      .contact-actions {
+
+        width:
+          100%;
+
+        flex-direction:
+          column;
+
+      }
+
+
+      .schedule-visit,
+      .whatsapp,
+      .share-property {
 
         width:
           100%;
@@ -1607,6 +1971,27 @@
 
     }
 
+
+    /* Keep every action inside its card at intermediate desktop widths too. */
+    .contact-box { flex-wrap: wrap; }
+    .contact-box > div:first-child { flex: 1 1 240px; min-width: 0; }
+    .contact-actions { flex: 1 1 560px; min-width: 0; max-width: 100%; }
+    .contact-actions > a, .contact-actions > button { max-width: 100%; white-space: normal; text-align: center; }
+    .property-share-dialog { margin: auto; width: min(460px, calc(100% - 32px)); max-height: calc(100dvh - 40px); overflow: auto; border: 0; border-radius: 18px; padding: 24px; color: #0d2f49; box-shadow: 0 20px 80px #0005; }
+    .property-share-dialog::backdrop { background: #071d2db3; }
+    .property-share-dialog [hidden] { display: none; }
+    .property-share-dialog img { width: 100%; height: 190px; object-fit: cover; border-radius: 10px; margin: 16px 0; }
+    .property-share-dialog h2 { font-size: 22px; padding-right: 32px; }
+    .property-share-dialog h3 { font-size: 17px; line-height: 1.4; }
+    .property-share-dialog p { margin: 10px 0; font-size: 14px; }
+    .property-share-dialog .share-close { position: absolute; right: 16px; top: 12px; border: 0; background: transparent; font-size: 28px; cursor: pointer; padding: 4px 10px; }
+    .share-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px; }
+    .share-options a, .share-options button { padding: 12px; border: 1px solid #dce3e9; border-radius: 8px; background: #f4f7f9; color: #0d2f49; font: inherit; font-size: 14px; text-align: center; cursor: pointer; }
+    .share-options a:first-child { background: #087d42; color: white; }
+    .share-options button:last-child { grid-column: 1 / -1; }
+    .property-share-dialog label { display: flex; align-items: center; gap: 8px; font-size: 14px; margin-top: 14px; }
+    @media(max-width:900px) { .contact-actions { flex-basis: auto; } }
+
   </style>
 
 </head>
@@ -1624,7 +2009,7 @@
   <div class="container nav">
 
     <a
-      href="index.html"
+      href="/"
       class="logo"
       aria-label="Sotofrau Propiedades"
     >
@@ -1637,26 +2022,38 @@
     </a>
 
 
-    <nav>
+    <button
+      class="menu-toggle"
+      id="menuToggle"
+      type="button"
+      aria-label="Abrir menú de navegación"
+      aria-controls="mainNavigation"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
 
-      <a href="index.html#propiedades">
+
+    <nav id="mainNavigation">
+
+      <a href="/#propiedades">
         Propiedades
       </a>
 
-      <a href="index.html#servicios">
+      <a href="/#servicios">
         Servicios
       </a>
 
-      <a href="index.html#administracion">
+      <a href="/#administracion">
         Administración
       </a>
 
-      <a href="index.html#captacion">
+      <a href="/#captacion">
         Vende / Arrienda
       </a>
 
       <a
-        href="index.html#contacto"
+        href="/#contacto"
         class="nav-contact"
       >
         Contacto
@@ -1681,7 +2078,7 @@
 
     <div class="breadcrumb">
 
-      <a href="index.html">
+      <a href="/">
         Inicio
       </a>
 
@@ -1689,7 +2086,7 @@
         ›
       </span>
 
-      <a href="index.html#propiedades">
+      <a href="/#propiedades">
         Propiedades
       </a>
 
@@ -1721,6 +2118,8 @@
             id="mainImage"
             src=""
             alt=""
+            decoding="async"
+            fetchpriority="high"
           >
 
 
@@ -1808,6 +2207,13 @@
         <div
           class="price"
           id="precio"
+        >
+        </div>
+
+
+        <div
+          class="price-conversion"
+          id="conversionPrecio"
         >
         </div>
 
@@ -1970,15 +2376,46 @@
           </div>
 
 
-          <a
-            id="whatsapp"
-            class="whatsapp"
-            href="#"
-            target="_blank"
-            rel="noopener"
-          >
-            Consultar por WhatsApp
-          </a>
+          <div class="contact-actions">
+
+            <a
+              id="scheduleVisit"
+              class="schedule-visit"
+              href="#"
+              target="_blank"
+              rel="noopener"
+            >
+              Agendar visita
+            </a>
+
+
+            <a
+              id="whatsapp"
+              class="whatsapp"
+              href="#"
+              target="_blank"
+              rel="noopener"
+            >
+              Consultar por WhatsApp
+            </a>
+            <button
+              id="shareProperty"
+              class="share-property"
+              type="button"
+              aria-describedby="shareFeedback"
+            >
+              Compartir propiedad
+            </button>
+
+
+            <span
+              id="shareFeedback"
+              class="share-feedback"
+              role="status"
+              aria-live="polite"
+            ></span>
+
+          </div>
 
 
         </div>
@@ -2024,10 +2461,178 @@
 
 
 <!-- =====================================================
+     MENÚ MÓVIL
+===================================================== -->
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const botonMenu =
+    document.getElementById("menuToggle");
+
+  const navegacion =
+    document.getElementById("mainNavigation");
+
+
+  if (
+    !botonMenu ||
+    !navegacion
+  ) {
+    return;
+  }
+
+
+  function cerrarMenu() {
+
+    navegacion.classList.remove(
+      "mobile-open"
+    );
+
+    botonMenu.setAttribute(
+      "aria-expanded",
+      "false"
+    );
+
+    botonMenu.setAttribute(
+      "aria-label",
+      "Abrir menú de navegación"
+    );
+
+  }
+
+
+  function abrirMenu() {
+
+    navegacion.classList.add(
+      "mobile-open"
+    );
+
+    botonMenu.setAttribute(
+      "aria-expanded",
+      "true"
+    );
+
+    botonMenu.setAttribute(
+      "aria-label",
+      "Cerrar menú de navegación"
+    );
+
+  }
+
+
+  botonMenu.addEventListener(
+    "click",
+    function () {
+
+      const abierto =
+        navegacion.classList.contains(
+          "mobile-open"
+        );
+
+      if (abierto) {
+        cerrarMenu();
+      } else {
+        abrirMenu();
+      }
+
+    }
+  );
+
+
+  navegacion
+    .querySelectorAll("a")
+    .forEach(function (enlace) {
+
+      enlace.addEventListener(
+        "click",
+        cerrarMenu
+      );
+
+    });
+
+
+  document.addEventListener(
+    "keydown",
+    function (evento) {
+
+      if (
+        evento.key === "Escape"
+      ) {
+        cerrarMenu();
+      }
+
+    }
+  );
+
+
+  document.addEventListener(
+    "click",
+    function (evento) {
+
+      if (
+        !navegacion.classList.contains(
+          "mobile-open"
+        )
+      ) {
+        return;
+      }
+
+      if (
+        navegacion.contains(
+          evento.target
+        ) ||
+        botonMenu.contains(
+          evento.target
+        )
+      ) {
+        return;
+      }
+
+      cerrarMenu();
+
+    }
+  );
+
+
+  window.addEventListener(
+    "resize",
+    function () {
+
+      if (
+        window.innerWidth > 900
+      ) {
+        cerrarMenu();
+      }
+
+    }
+  );
+
+});
+</script>
+
+
+<!-- =====================================================
      CARGAR DATOS
 ===================================================== -->
 
 <script src="propiedades.generated.js"></script>
+
+<dialog id="propertyShareDialog" class="property-share-dialog" aria-labelledby="shareDialogTitle">
+  <button type="button" class="share-close" aria-label="Cerrar">×</button>
+  <h2 id="shareDialogTitle">Compartir propiedad</h2>
+  <img id="sharePhoto" alt="">
+  <h3 id="shareTitle"></h3>
+  <p id="sharePrice"></p>
+  <label id="sharePhotoOption" hidden><input type="checkbox" id="includeSharePhoto" checked> Adjuntar foto al usar «Más opciones»</label>
+  <div class="share-options">
+    <a id="shareWhatsApp" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    <button type="button" id="shareCopy">Copiar enlace</button>
+    <button type="button" id="shareMore">Más opciones para compartir</button>
+  </div>
+  <p id="shareDialogFeedback" role="status" aria-live="polite"></p>
+</dialog>
+
+<script src="/precios-uf.js"></script>
 
 
 
@@ -2044,6 +2649,190 @@
   let fotoActual = 1;
 
 
+
+  /* =====================================================
+     CONVERSIÓN UF / CLP
+     SOLO PARA PROPIEDADES EN VENTA
+  ===================================================== */
+
+  function obtenerValorUF() {
+
+    const cargaUF =
+      window.PreciosUF &&
+      typeof window.PreciosUF.fetchRate === "function"
+        ? window.PreciosUF.fetchRate()
+        : Promise.reject(
+            new Error(
+              "Conversor UF no disponible."
+            )
+          );
+
+
+    return cargaUF.catch(
+      function(error) {
+
+        console.warn(
+          "Conversión UF/CLP no disponible:",
+          error
+        );
+
+        return null;
+
+      }
+    );
+
+  }
+
+
+  function formatearCLP(valor) {
+
+    return new Intl.NumberFormat(
+      "es-CL",
+      {
+        style: "currency",
+        currency: "CLP",
+        maximumFractionDigits: 0
+      }
+    ).format(
+      Math.round(valor)
+    );
+
+  }
+
+
+
+  function formatearUF(valor) {
+
+    return new Intl.NumberFormat(
+      "es-CL",
+      {
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 2
+      }
+    ).format(valor);
+
+  }
+
+
+
+  function obtenerNumeroUF(precio) {
+
+    const texto =
+      String(
+        precio || ""
+      )
+        .toUpperCase()
+        .trim();
+
+
+    if (
+      !texto.includes("UF")
+    ) {
+
+      return null;
+
+    }
+
+
+    let coincidencia =
+      texto.match(
+        /([\d.]+(?:,\d+)?)\s*UF/i
+      );
+
+
+    if (!coincidencia) {
+
+      coincidencia =
+        texto.match(
+          /UF\s*([\d.]+(?:,\d+)?)/i
+        );
+
+    }
+
+
+    if (!coincidencia) {
+
+      return null;
+
+    }
+
+
+    const numero =
+      coincidencia[1]
+        .replace(/\./g, "")
+        .replace(",", ".");
+
+
+    const valor =
+      Number(numero);
+
+
+    return Number.isNaN(valor)
+      ? null
+      : valor;
+
+  }
+
+
+
+  function obtenerNumeroCLP(precio) {
+
+    const texto =
+      String(
+        precio || ""
+      )
+        .trim();
+
+
+    if (
+      texto
+        .toUpperCase()
+        .includes("UF")
+    ) {
+
+      return null;
+
+    }
+
+
+    const coincidencia =
+      texto.match(
+        /\$?\s*([\d.]+)/
+      );
+
+
+    if (!coincidencia) {
+
+      return null;
+
+    }
+
+
+    const numero =
+      coincidencia[1]
+        .replace(/\./g, "");
+
+
+    const valor =
+      Number(numero);
+
+
+    return Number.isNaN(valor)
+      ? null
+      : valor;
+
+  }
+
+
+
+  function cargarConversionPrecio() {
+    const conversion = document.getElementById("conversionPrecio");
+    if (!conversion || !propiedadActual) return;
+    conversion.style.display = "none";
+    if (String(propiedadActual.operacion || "").toLowerCase() === "venta") {
+      window.PreciosUF.bind(conversion, propiedadActual.precio, propiedadActual.id);
+    }
+  }
 
   /* =====================================================
      OBTENER ID
@@ -2120,7 +2909,7 @@
 
 
           <a
-            href="index.html#propiedades"
+            href="/#propiedades"
             style="
               display:inline-block;
               margin-top:20px;
@@ -2162,10 +2951,11 @@
 
     const urlCanonica =
       dominio +
-      "/propiedad.html?id=" +
+      "/propiedad/" +
       encodeURIComponent(
         propiedadActual.id
-      );
+      ) +
+      "/";
 
 
 
@@ -2324,6 +3114,25 @@
       imagenSEO =
         dominio +
         "/android-chrome-512x512.png";
+
+    }
+
+
+    if (
+      propiedadActual.versionSocial
+    ) {
+
+      const separador =
+        imagenSEO.includes("?")
+          ? "&"
+          : "?";
+
+      imagenSEO +=
+        separador +
+        "v=" +
+        encodeURIComponent(
+          propiedadActual.versionSocial
+        );
 
     }
 
@@ -2762,6 +3571,14 @@
       propiedadActual.precio;
 
 
+    /* =================================================
+       CONVERSIÓN UF / CLP
+       SOLO PARA VENTAS
+    ================================================= */
+
+    cargarConversionPrecio();
+
+
 
     /* =================================================
        GASTOS COMUNES
@@ -2942,6 +3759,20 @@
 
     cargarWhatsApp();
 
+
+    /* =================================================
+       AGENDAR VISITA
+    ================================================= */
+
+    cargarAgendarVisita();
+
+
+    /* =================================================
+       COMPARTIR PROPIEDAD
+    ================================================= */
+
+    cargarCompartirPropiedad();
+
   }
 
 
@@ -2949,6 +3780,90 @@
   /* =====================================================
      GALERÍA
   ===================================================== */
+
+  function optimizarImagen(
+    ruta,
+    ancho,
+    alto,
+    recortar
+  ) {
+
+    if (!ruta) {
+      return "";
+    }
+
+
+    const texto =
+      String(
+        ruta
+      );
+
+
+    /*
+      Si en el futuro una imagen fuese remota,
+      se conserva sin modificar para no depender
+      de una lista externa de dominios.
+    */
+
+    if (
+      /^https?:\/\//i.test(
+        texto
+      )
+    ) {
+      return texto;
+    }
+
+
+    const fuente =
+      "/" +
+      texto.replace(
+        /^\/+/, 
+        ""
+      );
+
+
+    let url =
+      "/.netlify/images?url=" +
+      encodeURIComponent(
+        fuente
+      ) +
+      "&w=" +
+      Number(
+        ancho || 1600
+      );
+
+
+    if (
+      alto
+    ) {
+
+      url +=
+        "&h=" +
+        Number(
+          alto
+        );
+
+    }
+
+
+    if (
+      recortar
+    ) {
+
+      url +=
+        "&fit=cover";
+
+    }
+
+
+    url +=
+      "&fm=webp&q=84";
+
+
+    return url;
+
+  }
+
 
   function cargarGaleria() {
 
@@ -3047,7 +3962,12 @@
 
 
         imagen.src =
-          foto;
+          optimizarImagen(
+            foto,
+            260,
+            180,
+            true
+          );
 
 
         imagen.alt =
@@ -3058,6 +3978,10 @@
 
         imagen.loading =
           "lazy";
+
+
+        imagen.decoding =
+          "async";
 
 
         boton.appendChild(
@@ -3138,9 +4062,14 @@
     document.getElementById(
       "mainImage"
     ).src =
-      fotos[
-        numero - 1
-      ];
+      optimizarImagen(
+        fotos[
+          numero - 1
+        ],
+        1600,
+        null,
+        false
+      );
 
 
     document.getElementById(
@@ -3737,9 +4666,11 @@
     }
 
 
-   const enlace =
-  "https://wa.me/56973497611?text=" +
-  encodeURIComponent(mensaje);
+    const enlace =
+      "https://wa.me/56973497611?text=" +
+      encodeURIComponent(
+        mensaje
+      );
 
 
     document.getElementById(
@@ -3747,6 +4678,383 @@
     ).href =
       enlace;
 
+  }
+
+
+
+  /* =====================================================
+     AGENDAR VISITA
+  ===================================================== */
+
+  function cargarAgendarVisita() {
+
+    const boton =
+      document.getElementById(
+        "scheduleVisit"
+      );
+
+
+    if (
+      !boton ||
+      !propiedadActual
+    ) {
+
+      return;
+
+    }
+
+
+    const urlPropiedad =
+      obtenerUrlCompartir();
+
+
+    const partesMensaje =
+      [
+        "Hola Nicolás, vi esta propiedad en Sotofrau Propiedades y me gustaría agendar una visita:",
+        "",
+        propiedadActual.titulo || "Propiedad"
+      ];
+
+
+    if (
+      propiedadActual.ubicacion
+    ) {
+
+      partesMensaje.push(
+        propiedadActual.ubicacion
+      );
+
+    }
+
+
+    if (
+      propiedadActual.precio
+    ) {
+
+      partesMensaje.push(
+        propiedadActual.precio
+      );
+
+    }
+
+
+    partesMensaje.push(
+      "",
+      urlPropiedad,
+      "",
+      "¿Qué horarios tienes disponibles?"
+    );
+
+
+    const mensaje =
+      partesMensaje.join(
+        "\n"
+      );
+
+
+    boton.href =
+      "https://wa.me/56973497611?text=" +
+      encodeURIComponent(
+        mensaje
+      );
+
+  }
+
+
+
+  /* =====================================================
+     COMPARTIR PROPIEDAD
+  ===================================================== */
+
+  function obtenerUrlCompartir() {
+
+    const urlBase =
+      "https://sotofraupropiedades.cl/propiedad/" +
+      encodeURIComponent(
+        propiedadActual.id
+      ) +
+      "/";
+
+
+    if (
+      propiedadActual.versionSocial
+    ) {
+
+      return (
+        urlBase +
+        "?v=" +
+        encodeURIComponent(
+          propiedadActual.versionSocial
+        )
+      );
+
+    }
+
+
+    return urlBase;
+
+  }
+
+
+
+  function obtenerTextoCompartir() {
+
+    const partes =
+      [];
+
+
+    if (
+      propiedadActual.operacion
+    ) {
+
+      partes.push(
+        propiedadActual.operacion
+      );
+
+    }
+
+
+    if (
+      propiedadActual.precio
+    ) {
+
+      partes.push(
+        propiedadActual.precio
+      );
+
+    }
+
+
+    if (
+      propiedadActual.ubicacion
+    ) {
+
+      partes.push(
+        propiedadActual.ubicacion
+      );
+
+    }
+
+
+    return partes.join(
+      " · "
+    );
+
+  }
+
+
+
+  function informarEnlaceCopiado() {
+
+    const boton =
+      document.getElementById(
+        "shareProperty"
+      );
+
+
+    const feedback =
+      document.getElementById(
+        "shareFeedback"
+      );
+
+
+    if (feedback) {
+
+      feedback.textContent =
+        "Enlace de la propiedad copiado.";
+
+    }
+
+
+    if (!boton) {
+
+      return;
+
+    }
+
+
+    const textoOriginal =
+      "Compartir propiedad";
+
+
+    boton.textContent =
+      "Enlace copiado ✓";
+
+
+    window.setTimeout(
+      function() {
+
+        boton.textContent =
+          textoOriginal;
+
+        if (feedback) {
+
+          feedback.textContent =
+            "";
+
+        }
+
+      },
+      2200
+    );
+
+  }
+
+
+
+  function copiarEnlacePropiedad(
+    url
+  ) {
+
+    if (
+      navigator.clipboard &&
+      window.isSecureContext
+    ) {
+
+      return navigator.clipboard
+        .writeText(
+          url
+        )
+        .then(
+          function() {
+
+            informarEnlaceCopiado();
+
+          }
+        );
+
+    }
+
+
+    return new Promise(
+      function(resolve, reject) {
+
+        const campo =
+          document.createElement(
+            "textarea"
+          );
+
+
+        campo.value =
+          url;
+
+
+        campo.setAttribute(
+          "readonly",
+          ""
+        );
+
+
+        campo.style.position =
+          "fixed";
+
+
+        campo.style.opacity =
+          "0";
+
+
+        document.body.appendChild(
+          campo
+        );
+
+
+        campo.select();
+
+
+        try {
+
+          const copiado =
+            document.execCommand(
+              "copy"
+            );
+
+
+          document.body.removeChild(
+            campo
+          );
+
+
+          if (!copiado) {
+
+            reject(
+              new Error(
+                "No fue posible copiar el enlace."
+              )
+            );
+
+            return;
+
+          }
+
+
+          informarEnlaceCopiado();
+
+          resolve();
+
+        } catch (error) {
+
+          document.body.removeChild(
+            campo
+          );
+
+          reject(
+            error
+          );
+
+        }
+
+      }
+    );
+
+  }
+
+
+
+  function cargarCompartirPropiedad() {
+    const button = document.getElementById("shareProperty");
+    const dialog = document.getElementById("propertyShareDialog");
+    if (!button || !dialog || !propiedadActual) return;
+    const feedback = document.getElementById("shareDialogFeedback");
+    const more = document.getElementById("shareMore");
+    const url = obtenerUrlCompartir();
+    const photo = document.getElementById("sharePhoto");
+    const imagePath = propiedadActual.imagen || (propiedadActual.fotos || [])[0];
+    const photoURL = imagePath ? new URL(imagePath.startsWith("http") ? imagePath : "/" + imagePath.replace(/^\/+/, ""), location.origin).href : "";
+    let photoFile = null, loadingPhoto = false;
+    photo.alt = propiedadActual.titulo;
+    if (photoURL) photo.src = photoURL; else photo.hidden = true;
+    document.getElementById("shareTitle").textContent = propiedadActual.titulo;
+    document.getElementById("sharePrice").textContent = [propiedadActual.precio, propiedadActual.ubicacion].filter(Boolean).join(" · ");
+    document.getElementById("shareWhatsApp").href = "https://wa.me/?text=" + encodeURIComponent(obtenerTextoCompartir() + "\n" + url);
+    more.hidden = typeof navigator.share !== "function";
+    dialog.querySelector(".share-close").onclick = () => dialog.close();
+    button.onclick = () => {
+      feedback.textContent = "";
+      dialog.showModal();
+      // Prepare the optional attachment before the next user gesture.
+      if (photoURL && navigator.canShare && !loadingPhoto) {
+        loadingPhoto = true;
+        fetch(photoURL).then(r => { if (!r.ok) throw Error(); return r.blob(); }).then(blob => {
+          if (!/^image\/(jpeg|png|webp|avif)$/.test(blob.type) || blob.size > 15 * 1024 * 1024) return;
+          const ext = blob.type.split("/")[1];
+          const file = new File([blob], "propiedad-" + propiedadActual.id + "." + ext, {type: blob.type});
+          if (navigator.canShare({files:[file]})) {
+            photoFile = file;
+            document.getElementById("sharePhotoOption").hidden = false;
+          }
+        }).catch(() => { loadingPhoto = false; });
+      }
+    };
+    document.getElementById("shareCopy").onclick = async () => {
+      try { await copiarEnlacePropiedad(url); feedback.textContent = "Enlace copiado."; }
+      catch (_) { feedback.textContent = "No se pudo copiar. Usa la opción WhatsApp o vuelve a intentarlo."; }
+    };
+    more.onclick = async () => {
+      const data = {title: propiedadActual.titulo + " | Sotofrau Propiedades", text: obtenerTextoCompartir(), url};
+      if (photoFile && document.getElementById("includeSharePhoto").checked) data.files = [photoFile];
+      try { await navigator.share(data); }
+      catch (error) { if (error.name !== "AbortError") feedback.textContent = "No se pudo abrir el menú. Puedes copiar el enlace o compartir por WhatsApp."; }
+    };
   }
 
 </script>
