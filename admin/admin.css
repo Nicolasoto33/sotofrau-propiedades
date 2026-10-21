@@ -1,0 +1,37 @@
+html,body { margin:0; background:#f3f6f7; font-family:Arial,Helvetica,sans-serif; }
+[hidden] { display:none !important; }
+.admin-loading { max-width:520px; margin:15vh auto; padding:24px; text-align:center; color:#153c4a; }
+.admin-loading img { width:110px; }
+#sf-shortcuts { position:fixed; bottom:12px; left:20px; z-index:300; display:flex; align-items:center; gap:10px; padding:10px 14px; border:1px solid #cbd9dc; border-radius:12px; background:#fff; box-shadow:0 5px 24px #12343b22; font-size:13px; }
+#sf-shortcuts select { max-width:160px; min-height:40px; border:1px solid #abc0c4; border-radius:6px; background:white; }
+#sf-shortcuts a { color:#126054; }
+#nc-root .sf-section-start { padding-top:22px; scroll-margin-top:20px; }
+.sf-section-start::before { content:attr(data-section-title); display:block; margin:0 0 18px; padding:12px 0; border-bottom:2px solid #bad7d0; color:#164d48; font-weight:700; font-size:18px; }
+.sf-gallery .sf-actions { display:flex; gap:6px; flex-wrap:wrap; align-items:center; }
+.sf-gallery button,.sf-cover button { min-height:44px; padding:8px 12px; border:1px solid #b9cccb; border-radius:7px; background:white; color:#174943; cursor:pointer; font:inherit; }
+.sf-gallery button:disabled { opacity:.45; cursor:default; }
+.sf-gallery button:focus-visible,.sf-cover button:focus-visible,.sf-upload:focus-within { outline:3px solid #168d80; outline-offset:3px; }
+.sf-upload { display:inline-flex; position:relative; align-items:center; min-height:44px; padding:0 15px; border-radius:8px; background:#17695e; color:white; cursor:pointer; }
+.sf-upload input { position:absolute; inset:0; width:100%; height:100%; opacity:0; cursor:pointer; }
+.sf-upload[aria-disabled=true] { opacity:.5; cursor:default; }
+.sf-help { color:#53686c; font-size:13px; line-height:1.6; }
+.sf-errors { background:#fff1ed; color:#9d301b; padding:14px 14px 14px 30px; overflow-wrap:anywhere; }
+.sf-photo-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:12px; margin:14px 0; }
+.sf-photo { border:1px solid #d4e0e1; border-radius:8px; padding:8px; background:#f8fafb; min-width:0; }
+.sf-photo img,.sf-cover-choice img { width:100%; height:120px; object-fit:cover; border-radius:5px; display:block; }
+.sf-caption { display:block; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; padding:8px 0; font-size:12px; }
+.sf-cover summary { padding:14px 0; cursor:pointer; font-weight:bold; color:#174943; }
+.sf-cover-choice[aria-pressed=true] { border:3px solid #17695e; background:#e9f4ef; }
+.sf-editor-container, #nc-root [class*="-EditorContainer"] { min-width:0 !important; }
+#nc-root .Pane1 { padding-bottom:80px; box-sizing:border-box; }
+@media(max-width:760px) {
+  #sf-shortcuts { left:8px; right:8px; bottom:8px; padding:6px 10px; justify-content:space-between; }
+  #sf-shortcuts label { display:none; }
+  #nc-root .SplitPane.vertical { flex-direction:column !important; }
+  #nc-root .SplitPane.vertical > .Pane { width:100% !important; min-width:0 !important; flex:1 1 50% !important; height:50% !important; min-height:0; }
+  #nc-root .SplitPane.vertical > .Pane1 { padding-bottom:0; }
+  #nc-root .Resizer.vertical { display:none; }
+  .sf-photo-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .sf-photo .sf-actions { gap:4px; }
+  .sf-photo button { padding:6px 8px; }
+}

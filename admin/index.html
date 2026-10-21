@@ -1,78 +1,27 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <meta name="robots" content="noindex, nofollow">
-
-  <title>Panel de Administración | Sotofrau Propiedades</title>
-
-  <link rel="icon" href="/favicon-32x32.png">
-
-  <style>
-    html,
-    body {
-      margin: 0;
-      padding: 0;
-      min-height: 100%;
-      background: #f5f7f9;
-      font-family: Arial, Helvetica, sans-serif;
-    }
-
-    .admin-loading {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 24px;
-      box-sizing: border-box;
-      color: #0d2f49;
-    }
-
-    .admin-loading img {
-      width: 110px;
-      height: auto;
-      margin-bottom: 22px;
-    }
-
-    .admin-loading h1 {
-      margin: 0 0 8px;
-      font-size: 26px;
-    }
-
-    .admin-loading p {
-      margin: 0;
-      color: #5f6f7c;
-      font-size: 15px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Panel de Administración | Sotofrau Propiedades</title>
+<link rel="icon" href="/favicon-32x32.png">
+<link rel="stylesheet" href="/admin/admin.css">
 </head>
-
 <body>
-
-  <div class="admin-loading" id="admin-loading">
-    <div>
-      <img src="/logo-sotofrau.png" alt="Sotofrau Propiedades">
-      <h1>Panel de Administración</h1>
-      <p>Cargando Sotofrau Propiedades...</p>
-    </div>
-  </div>
-
-  <script src="https://unpkg.com/decap-cms@3.15.1/dist/decap-cms.js"></script>
-
-  <script>
-    window.addEventListener("load", function () {
-      const loading = document.getElementById("admin-loading");
-
-      setTimeout(function () {
-        if (loading) {
-          loading.style.display = "none";
-        }
-      }, 1200);
-    });
-  </script>
-
-</body>
-</html>
+<div class="admin-loading" id="admin-loading" role="status">
+<img src="/logo-sotofrau.png" alt="Sotofrau Propiedades"><h1>Panel de Administración</h1>
+<p>Cargando Sotofrau Propiedades… Si este mensaje continúa, revisa tu conexión y recarga la página.</p>
+</div>
+<noscript>Activa JavaScript para administrar las propiedades.</noscript>
+<nav id="sf-shortcuts" aria-label="Accesos rápidos del formulario" hidden>
+<label for="sf-jump">Ir a sección</label><select id="sf-jump">
+<option value="">Seleccionar…</option><option value="id">Identificación</option><option value="operacion">Operación y estado</option>
+<option value="direccion">Ubicación</option><option value="precio">Valores</option><option value="superficie">Características</option>
+<option value="fotos">Fotografías</option><option value="caracteristicas">Detalles</option><option value="requisitos">Requisitos y contacto</option>
+</select><a href="https://sotofraupropiedades.cl" target="_blank" rel="noopener noreferrer">Ver sitio ↗</a>
+</nav>
+<script>window.CMS_MANUAL_INIT = true;</script>
+<script src="https://unpkg.com/decap-cms@3.15.1/dist/decap-cms.js"></script>
+<script src="/admin/gallery-utils.js"></script><script src="/admin/admin.js"></script>
+</body></html>
