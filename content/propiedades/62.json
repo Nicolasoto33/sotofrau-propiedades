@@ -1,0 +1,62 @@
+{
+  "superficie": "47 m² totales aprox. 44 m² útiles y balcón de 3,1 m².",
+  "areasComunes": [
+    "🏊 Piscina exterior.",
+    "💪 Gimnasio equipado.",
+    "🔥 Quincho.",
+    "🎬 Sala de cine.",
+    "🎉 Salón multiuso.",
+    "🛝 Juegos infantiles."
+  ],
+  "estado": "disponible",
+  "precio": "$390.000 mensuales.",
+  "gastosComunes": "$80.000 mensuales aprox.",
+  "caracteristicas": [
+    "🛏️ 2 dormitorios con clósets.",
+    "🚿 1 baño completo.",
+    "📐 Aproximadamente 47 m² totales.",
+    "🌤️ Balcón privado de 3,1 m².",
+    "🛋️ Living-comedor.",
+    "🍽️ Cocina integrada.",
+    "🏢 Ubicado en el segundo piso.",
+    "🚗 Estacionamiento opcional por $30.000 mensuales adicionales.",
+    "🏠 Se arrienda sin amoblar.",
+    "🚫 No se admiten mascotas."
+  ],
+  "descripcion": [
+    "Tu próximo hogar en Villa Dulce, con espacios cómodos y áreas comunes para disfrutar. Este luminoso departamento del Edificio Dulce Horizonte, ubicado en Eduardo Titus 410, está disponible para entrega inmediata y se arrienda sin amoblar.\n\nSituado en el segundo piso, cuenta con dos dormitorios con clósets, un baño completo, living-comedor y cocina integrada. Su balcón privado de 3,1 m² ofrece un espacio al aire libre para complementar la vida diaria.\n\nEl canon mensual es de $390.000, con gastos comunes aproximados de $80.000. Si necesitas estacionamiento, puedes incorporarlo por $30.000 mensuales adicionales.\n\nEl condominio dispone de piscina exterior, gimnasio equipado, quincho, sala de cine, salón multiuso y juegos infantiles, además de conserjería y seguridad las 24 horas.\n\nCon buena conectividad hacia Viña del Mar y Quilpué, y cercanía a comercio, servicios y áreas verdes, reúne comodidad y una ubicación práctica. Contacta a Soto Frau Propiedades y coordina tu visita."
+  ],
+  "fotos": [
+    "/propiedades/62/1-eb4daffc-241f-496e-8e91-46a34e62c4fe.jpeg",
+    "/propiedades/62/2-821c7ca9-a22d-4618-bfbd-efbc383fd458.jpeg",
+    "/propiedades/62/3-db76a0d0-fa2f-49be-8eff-32148d77cf2f.jpeg",
+    "/propiedades/62/4-76711fa1-e462-4e14-b41d-cb31fcea9157.jpeg",
+    "/propiedades/62/5-ef6ada44-24fa-4615-97fa-1feb743fbf1f.jpeg",
+    "/propiedades/62/6-ab4e000f-fce9-485d-892e-f6a6e44e587c.jpeg",
+    "/propiedades/62/7-768cb1d0-2130-4aef-8dee-89f4d2863e41.jpeg",
+    "/propiedades/62/8-a1600848-8138-4998-906c-ffb2ea5342cd.jpeg",
+    "/propiedades/62/9-b59153f4-8fe5-4d08-8eef-924ffa7fb1e2.jpeg",
+    "/propiedades/62/10-ebe4ac9d-f627-4bbe-9c0c-11175830df66.jpeg"
+  ],
+  "direccion": "Eduardo Titus 410, Edificio Dulce Horizonte.",
+  "precioAlternativo": "$420.000 mensuales con estacionamiento, más gastos comunes.",
+  "whatsapp": "Acreditar ingresos mínimos de $1.170.000 mensuales, equivalentes a tres veces el canon base.\n\nContrato de trabajo.\n\nTres últimas liquidaciones de sueldo.\n\nCertificado DICOM.",
+  "banos": 1,
+  "imagen": "/propiedades/62/1.jpeg",
+  "tipoPropiedad": "Departamento",
+  "publicada": true,
+  "piso": "Piso 2",
+  "operacion": "Arriendo",
+  "dormitorios": 2,
+  "titulo": "Departamento en arriendo en Villa Dulce, Viña del Mar · 2 dormitorios, balcón y estacionamiento opcional",
+  "id": 62,
+  "estadoTexto": "Disponible",
+  "ubicacion": "Villa Dulce · Viña del Mar.",
+  "totalMensual": "$470.000 aprox., incluyendo arriendo y gastos comunes, sin estacionamiento.",
+  "conectividad": [
+    "📍 Ubicado en Villa Dulce, Viña del Mar.",
+    "🚗 Buena conectividad hacia Viña del Mar y Quilpué.",
+    "🛍️ Cercano a comercio y servicios.",
+    "🌳 Cercano a áreas verdes."
+  ]
+}
